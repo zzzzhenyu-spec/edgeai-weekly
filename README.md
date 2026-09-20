@@ -50,40 +50,6 @@ powershell -ExecutionPolicy Bypass -File scripts\check_dblp.ps1     # -> data\pa
 
 > 提示：脚本生成的 `.ps1` 需保持 **UTF-8 with BOM** 编码（PowerShell 5.1 才能正确读取中文注释）。
 
-## 部署到云端（任选其一，均为免费）
-
-> 上传时**不需要** `data/` 文件夹（那是脚本生成的筛选候选，不参与页面渲染）；其余全部文件保持相对路径不变即可。
-
-### 方案一：GitHub Pages（推荐长期使用，每周更新方便）
-
-1. 注册/登录 [github.com](https://github.com)；
-2. 右上角 **+** → **New repository**，名称如 `edgeai-weekly`，选 **Public**，创建；
-3. 在空仓库页面点击 **uploading an existing file**，把本项目文件（index.html、css/、js/、scripts/、README.md）拖进去，**Commit changes**；
-4. 仓库页 **Settings** → **Pages** → Source 选 **Deploy from a branch**，分支 `main`、目录 `/ (root)`，保存；
-5. 等约 1 分钟，页面顶部会出现公开地址：`https://你的用户名.github.io/edgeai-weekly/`；
-6. **每周更新**：进入仓库文件列表 → 点开 `js/data.js` → 铅笔图标编辑 → 粘贴新一期数据 → Commit，1 分钟后线上自动生效。
-
-### 方案二：Cloudflare Pages（拖拽即用，国内访问通常更稳）
-
-1. 注册/登录 [dash.cloudflare.com](https://dash.cloudflare.com)；
-2. 左侧 **Workers 和 Pages** → **创建** → **Pages** → **上传资产**；
-3. 给项目起名（如 `edgeai-weekly`），把项目文件夹整体拖入，部署；
-4. 得到 `https://项目名.pages.dev` 公开链接；更新时在项目页 **创建新部署** 重新拖入即可。
-
-### 方案三：Netlify Drop（最快，拖完就有链接）
-
-1. 打开 [app.netlify.com/drop](https://app.netlify.com/drop)；
-2. 把整个文件夹拖进去，几秒后得到 `https://随机名.netlify.app`；
-3. 建议注册个免费账号把站点保存下来，否则临时链接会过期。
-
-### 本地预览
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts\serve.ps1   # http://127.0.0.1:8080/
-```
-
-或直接双击 `index.html`（数据以内联 JS 加载，无需服务器）。
-
 ## 自定义
 
 - **配色**：`css/style.css` 顶部 `:root` 中的 CSS 变量；
