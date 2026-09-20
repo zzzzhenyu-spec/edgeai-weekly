@@ -108,25 +108,26 @@ a:hover { text-decoration: underline; }
   font-style: normal;
   background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.hero-desc { margin-top: 16px; color: var(--text-dim); font-size: 17px; max-width: 640px; }
+.hero-desc { margin-top: 12px; color: var(--text-dim); font-size: 16px; max-width: 640px; }
 
-.hero-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 34px; align-items: stretch; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; align-items: stretch; }
 .stat {
-  min-width: 150px; padding: 16px 20px; border-radius: var(--radius);
+  display: flex; align-items: baseline; gap: 7px;
+  padding: 8px 14px; border-radius: 12px; min-width: 0; flex: 1 1 130px;
   background: var(--panel); border: 1px solid var(--border);
   transition: border-color 0.3s, box-shadow 0.3s;
 }
-.stat:hover { border-color: var(--border-glow); box-shadow: 0 0 26px -6px rgba(129,140,248,0.4); }
-.stat b { font-size: 30px; font-weight: 800; font-family: var(--mono); background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.stat span { display: block; font-size: 13px; color: var(--text-faint); margin-top: 2px; }
+.stat:hover { border-color: var(--border-glow); box-shadow: 0 0 22px -8px rgba(129,140,248,0.4); }
+.stat b { font-size: 21px; font-weight: 800; font-family: var(--mono); background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stat span { font-size: 12px; color: var(--text-faint); white-space: nowrap; }
 
 .editors-note {
-  margin-top: 26px; padding: 20px 24px; border-radius: var(--radius);
+  margin-top: 16px; padding: 16px 20px; border-radius: var(--radius);
   background: linear-gradient(135deg, rgba(34,211,238,0.06), rgba(129,140,248,0.06));
   border: 1px solid rgba(129, 140, 248, 0.25);
-  font-size: 15px; color: var(--text-dim);
+  font-size: 13.5px; color: var(--text-dim); line-height: 1.8;
 }
-.editors-note b { color: var(--text); display: block; margin-bottom: 8px; font-size: 15px; }
+.editors-note b { color: var(--text); display: block; margin-bottom: 6px; font-size: 13.5px; }
 .editors-note b::before { content: "📝 "; }
 
 /* ---------------- Hero 可视化面板 ---------------- */
@@ -458,10 +459,10 @@ body.panel-open { overflow: hidden; }
   .site-header { padding: 12px 16px; gap: 12px; flex-wrap: wrap; }
   .issue-chip { order: 3; }
   .site-nav { order: 2; margin-left: 0; width: 100%; }
-  .hero { padding: 48px 18px 30px; }
+  .hero { padding: 44px 18px 26px; }
   main { padding: 20px 18px 50px; }
   .grid { grid-template-columns: 1fr; }
-  .hero-meta { gap: 10px; }
-  .stat { flex: 1 1 40%; min-width: 120px; }
+  .hero-meta { gap: 8px; }
+  .stat { flex: 1 1 calc(50% - 8px); }
   .panel-body { padding: 26px 22px 40px; }
 }
