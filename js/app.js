@@ -62,6 +62,142 @@
   $("stat-weeks").textContent = (D.meta.issue.match(/\d+(?= *期)/) || ["—"])[0];
 
   /* ============================================================
+   * Hero 可视化：词云（Canvas 实时渲染）+ 资讯构成 / 论文方向图
+   * 全部从 data.js 自动统计，每周换数据后自动更新
+   * ============================================================ */
+  var VIZ_COLORS = ["#22d3ee", "#818cf8", "#e879f9", "#fbbf24", "#34d399", "#f87171"];
+  var NEWS_CAT_COLORS = { "芯片厂商": "#22d3ee", "手机厂商": "#818cf8", "大模型厂商": "#e879f9", "行业动态": "#fbbf24" };
+
+  function buildCloudWords() {
+    var parts = [];
+    D.news.concat(D.papers).forEach(function (it) {
+      parts.push(it.title || "", it.summary || "", it.detail || "", (it.tags || []).join(" "));
+    });
+    var text = parts.join(" ").toLowerCase();
+    var map = {};
+    function add(w) {
+      w = String(w || "").trim();
+      if (w && w.length <= 14 && !map[w]) map[w] = { w: w, tagN: 0, n: 0 };
+    }
+    D.news.forEach(function (n) { (n.tags || []).forEach(add); });
+    D.papers.forEach(function (p) { (p.tags || []).forEach(add); });
+    Object.keys(map).forEach(function (k) {
+      var o = map[k], c = 0;
+      D.news.concat(D.papers).forEach(function (it) {
+        (it.tags || []).forEach(function (t) { if (t === o.w) c++; });
+      });
+      o.tagN = c;
+      var idx = 0, s = 0, lw = k.toLowerCase();
+      while ((idx = text.indexOf(lw, idx)) !== -1) { s++; idx += lw.length; }
+      o.n = c * 2 + s;
+    });
+    return Object.keys(map).map(function (k) { return map[k]; })
+      .filter(function (o) { return o.n >= 3; })
+      .sort(function (a, b) { return b.n - a.n; })
+      .slice(0, 26);
+  }
+
+  function renderCloud() {
+    var cv = document.getElementById("word-cloud");
+    if (!cv) return;
+    var box = cv.parentNode.getBoundingClientRect();
+    var W = Math.max(280, Math.floor(box.width) - 10), H = 240;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cv.width = W * dpr; cv.height = H * dpr;
+    cv.style.height = H + "px";
+    var ctx = cv.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    var words = buildCloudWords();
+    if (!words.length) return;
+    var maxN = words[0].n, minN = words[words.length - 1].n, rects = [];
+    words.forEach(function (o, i) {
+      var k = maxN === minN ? 0.6 : (o.n - minN) / (maxN - minN);
+      var fs = Math.round(13 + k * 19);
+      ctx.font = "700 " + fs + 'px "Microsoft YaHei", "PingFang SC", sans-serif';
+      var w = ctx.measureText(o.w).width + 10, h = Math.round(fs * 1.3);
+      var cx = W / 2 + Math.cos(i * 2.39996) * (W / 5) * ((i % 3) / 2.5);
+      var cy = H / 2 + Math.sin(i * 2.39996) * (H / 7) * ((i % 2 === 0) ? 1 : 0.5);
+      for (var t = 0; t < 900; t++) {
+        var r = 0.55 * t, a = t * 0.26;
+        var x = cx + r * Math.cos(a) - w / 2, y = cy + r * Math.sin(a) - h / 2;
+        if (x < 2 || y < 2 || x + w > W - 2 || y + h > H - 2) continue;
+        var hit = false;
+        for (var j = 0; j < rects.length; j++) {
+          var q = rects[j];
+          if (x < q.x + q.w && x + w > q.x && y < q.y + q.h && y + h > q.y) { hit = true; break; }
+        }
+        if (hit) continue;
+        rects.push({ x: x, y: y, w: w, h: h });
+        var color = VIZ_COLORS[i % VIZ_COLORS.length];
+        ctx.globalAlpha = i < 6 ? 1 : 0.8;
+        if (i < 3) { ctx.shadowColor = color; ctx.shadowBlur = 16; }
+        ctx.fillStyle = color;
+        ctx.fillText(o.w, x + 5, y + h / 2 + fs * 0.36);
+        ctx.shadowBlur = 0; ctx.globalAlpha = 1;
+        break;
+      }
+    });
+  }
+
+  function donutSVG(items) {
+    var total = items.reduce(function (s, x) { return s + x.value; }, 0) || 1;
+    var r = 46, C = 2 * Math.PI * r, deg = 0;
+    var segs = items.map(function (it) {
+      var len = C * it.value / total;
+      var s = '<circle r="' + r + '" cx="60" cy="60" fill="none" stroke="' + it.color +
+        '" stroke-width="13" stroke-linecap="butt" stroke-dasharray="' + Math.max(len - 2, 0.5) + " " + (C - len + 2) +
+        '" transform="rotate(' + (deg - 90) + ' 60 60)"/>';
+      deg += 360 * it.value / total;
+      return s;
+    }).join("");
+    var legend = items.map(function (it) {
+      return '<div class="dg-item"><i style="background:' + it.color + '"></i>' + esc(it.label) + "<b>" + it.value + "</b></div>";
+    }).join("");
+    return '<div class="donut-wrap"><svg viewBox="0 0 120 120" class="donut" role="img" aria-label="资讯分类构成">' + segs +
+      '<text x="60" y="58" text-anchor="middle" class="donut-num">' + total + '</text>' +
+      '<text x="60" y="73" text-anchor="middle" class="donut-label">资讯</text></svg>' +
+      '<div class="donut-legend">' + legend + "</div></div>";
+  }
+
+  function barsHTML(items) {
+    var max = Math.max.apply(null, items.map(function (x) { return x.value; })) || 1;
+    return items.map(function (it) {
+      return '<div class="bar-row"><span class="bar-label">' + esc(it.label) + "</span>" +
+        '<span class="bar-track"><i style="width:' + Math.round(it.value / max * 100) + "%;color:" + it.color + ';background:' + it.color + '"></i></span>' +
+        '<span class="bar-val">' + it.value + "</span></div>";
+    }).join("");
+  }
+
+  function buildViz() {
+    var host = document.getElementById("hero-viz");
+    if (!host) return;
+    var newsItems = Object.keys(NEWS_CAT_COLORS).map(function (c) {
+      return { label: c, color: NEWS_CAT_COLORS[c], value: D.news.filter(function (n) { return n.cat === c; }).length };
+    }).filter(function (x) { return x.value > 0; });
+    var paperItems = Object.keys(CAT_COLOR).map(function (c) {
+      return { label: c, color: CAT_COLOR[c], value: D.papers.filter(function (p) { return p.cat === c; }).length };
+    }).filter(function (x) { return x.value > 0; });
+    host.innerHTML =
+      '<div class="viz-card">' +
+        '<div class="viz-title">📊 本期数据速览</div>' +
+        '<div class="viz-cloud-box"><canvas id="word-cloud"></canvas></div>' +
+        '<div class="viz-row">' +
+          '<div class="viz-block"><h5>资讯构成</h5>' + donutSVG(newsItems) + "</div>" +
+          '<div class="viz-block"><h5>论文方向</h5><div class="bars">' + barsHTML(paperItems) + "</div></div>" +
+        "</div>" +
+      "</div>";
+    renderCloud();
+    var vc = host.querySelector(".viz-card");
+    if (vc) { vc.classList.add("reveal"); revealIO.observe(vc); }
+  }
+  var resizeTimer = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(renderCloud, 200);
+  });
+
+  /* ============================================================
    * 板块一：资讯
    * ============================================================ */
   var NEWS_CATS = ["全部", "芯片厂商", "手机厂商", "大模型厂商", "行业动态"];
@@ -334,6 +470,7 @@
   renderNewsChips(); renderNews();
   renderPaperChips(); renderPapers();
   renderComments();
+  buildViz();
   spotlight($("news-grid"));
   spotlight($("papers-grid"));
   bindCards($("news-grid"), "news");

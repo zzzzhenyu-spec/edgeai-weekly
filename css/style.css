@@ -129,6 +129,47 @@ a:hover { text-decoration: underline; }
 .editors-note b { color: var(--text); display: block; margin-bottom: 8px; font-size: 15px; }
 .editors-note b::before { content: "📝 "; }
 
+/* ---------------- Hero 可视化面板 ---------------- */
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr); gap: 46px; align-items: start; }
+
+.viz-card {
+  padding: 22px 22px 18px; border-radius: var(--radius);
+  background: var(--panel); border: 1px solid var(--border);
+  position: relative; overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.viz-card:hover { border-color: rgba(129, 140, 248, 0.4); box-shadow: 0 0 40px -12px rgba(129, 140, 248, 0.35); }
+.viz-card::before {
+  content: ""; position: absolute; top: -70px; right: -60px; width: 240px; height: 240px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.15), transparent 70%); pointer-events: none;
+}
+.viz-title { font-size: 14px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.viz-title::after { content: "由本期数据自动生成"; margin-left: auto; font-size: 10.5px; font-weight: 400; color: var(--text-faint); font-family: var(--mono); }
+.viz-cloud-box { border-radius: 14px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); padding: 4px 4px 0; }
+.viz-cloud-box canvas { display: block; width: 100%; }
+.viz-row { display: grid; grid-template-columns: 1fr 1.15fr; gap: 18px; margin-top: 16px; }
+.viz-block h5 { font-size: 12.5px; color: var(--text-dim); font-weight: 600; margin-bottom: 10px; }
+
+.donut-wrap { display: flex; align-items: center; gap: 12px; }
+.donut { width: 108px; height: 108px; flex: none; }
+.donut circle { transition: stroke-dasharray 0.6s ease; }
+.donut-num { fill: var(--text); font-size: 21px; font-weight: 800; }
+.donut-label { fill: var(--text-faint); font-size: 9.5px; }
+.donut-legend { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.dg-item { font-size: 11.5px; color: var(--text-dim); display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.dg-item i { width: 8px; height: 8px; border-radius: 3px; flex: none; }
+.dg-item b { font-family: var(--mono); color: var(--text); padding-left: 2px; }
+
+.bars { display: flex; flex-direction: column; gap: 8px; padding-top: 2px; }
+.bar-row { display: flex; align-items: center; gap: 8px; }
+.bar-label { font-size: 11px; color: var(--text-dim); flex: 0 0 62px; white-space: nowrap; }
+.bar-track { flex: 1; height: 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.05); overflow: hidden; }
+.bar-track i { display: block; height: 100%; border-radius: 4px; box-shadow: 0 0 10px -2px currentColor; }
+.bar-val { font-size: 11px; font-family: var(--mono); color: var(--text-faint); flex: 0 0 14px; text-align: right; }
+
+@media (max-width: 1024px) { .hero-grid { grid-template-columns: 1fr; } .viz-card { max-width: 640px; } }
+@media (max-width: 520px) { .viz-row { grid-template-columns: 1fr; } }
+
 /* ---------------- 板块通用 ---------------- */
 main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .board { margin-top: 58px; }
