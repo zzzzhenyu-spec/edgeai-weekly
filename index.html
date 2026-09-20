@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>端侧AI每周情报站 · Edge AI Weekly</title>
+  <meta name="description" content="端侧 AI 每周情报：硬件厂商、手机厂商、端侧大模型动态 + 科研论文精选 + 知识分享" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='.5' stop-color='%23818cf8'/%3E%3Cstop offset='1' stop-color='%23e879f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='67' font-size='46' text-anchor='middle' fill='%2305070d' font-weight='bold' font-family='sans-serif'%3E%E7%AB%AF%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-fx" aria-hidden="true"></div>
+
+  <!-- ================= 顶部导航 ================= -->
+  <header class="site-header">
+    <div class="logo">
+      <span class="mark">端</span>
+      <span>端侧AI每周情报站<span class="en">EDGE AI WEEKLY</span></span>
+    </div>
+    <nav class="site-nav" id="site-nav">
+      <a href="#news" data-sec="news">本周资讯</a>
+      <a href="#papers" data-sec="papers">科研前沿</a>
+      <a href="#knowledge" data-sec="knowledge">知识分享</a>
+      <a href="#comments" data-sec="comments">评论区</a>
+    </nav>
+    <span class="issue-chip" id="issue-chip"></span>
+  </header>
+
+  <!-- ================= Hero ================= -->
+  <section class="hero">
+    <p class="kicker" id="hero-kicker"></p>
+    <h1>跑在设备上的 AI<br /><em>每周情报站</em></h1>
+    <p class="hero-desc">硬件厂商 · 手机厂商 · 端侧大模型 · 学术前沿 —— 一页看懂端侧 AI 的这一周。</p>
+    <div class="hero-meta">
+      <div class="stat"><b id="stat-news">0</b><span>本周资讯</span></div>
+      <div class="stat"><b id="stat-papers">0</b><span>科研论文</span></div>
+      <div class="stat"><b id="stat-res">0</b><span>知识资源</span></div>
+      <div class="stat"><b id="stat-weeks">38</b><span>本期期数 / 2026</span></div>
+    </div>
+    <div class="editors-note" id="editors-note"></div>
+  </section>
+
+  <main>
+    <!-- ================= 板块一：本周资讯 ================= -->
+    <section id="news" class="board" data-sec="news">
+      <div class="board-head">
+        <h2><span class="no">01</span>本周资讯</h2>
+        <span class="board-sub">芯片厂商 · 手机厂商 · 大模型厂商 · 行业动态（RSS 订阅 + 人工择要）</span>
+      </div>
+      <div class="chips" id="news-chips"></div>
+      <div class="grid" id="news-grid"></div>
+    </section>
+
+    <!-- ================= 板块二：科研前沿 ================= -->
+    <section id="papers" class="board" data-sec="papers">
+      <div class="board-head">
+        <h2><span class="no">02</span>科研前沿</h2>
+        <span class="board-sub">端侧大模型 · 端侧 Agent · 推理系统 · 安全与能效</span>
+      </div>
+      <div class="board-rule">SCI 二区以上期刊 / CCF-B 以上会议正式发表；本周 arXiv 新作以「预印本」标记跟踪，录用后转入已发表（DBLP 核对）</div>
+      <div class="chips" id="papers-chips"></div>
+      <div class="grid" id="papers-grid"></div>
+    </section>
+
+    <!-- ================= 板块三：知识分享 ================= -->
+    <section id="knowledge" class="board" data-sec="knowledge">
+      <div class="board-head">
+        <h2><span class="no">03</span>知识分享</h2>
+        <span class="board-sub">端侧 AI 发展史 · 科学家博客与一手信源</span>
+      </div>
+      <h3 class="sub-h">端侧 AI 简史（2016 → 2026）</h3>
+      <div class="timeline" id="timeline"></div>
+      <h3 class="sub-h">博客 · 人物 · 信源</h3>
+      <div class="res-grid" id="res-grid"></div>
+    </section>
+
+    <!-- ================= 板块四：评论区 ================= -->
+    <section id="comments" class="board" data-sec="comments">
+      <div class="board-head">
+        <h2><span class="no">04</span>评论区</h2>
+        <span class="board-sub">聊端侧 AI · 补充线索 · 推荐论文与新闻</span>
+      </div>
+      <div class="comment-wrap">
+        <form class="comment-form" id="comment-form">
+          <div class="form-row">
+            <input type="text" id="c-name" maxlength="24" placeholder="昵称（必填）" required />
+          </div>
+          <textarea id="c-text" maxlength="2000" placeholder="说点什么…（支持多行，2000 字以内）" required></textarea>
+          <button type="submit" class="btn-submit">发表评论</button>
+        </form>
+        <div class="comment-list" id="comment-list"></div>
+        <p class="comment-tip">⚠ 评论保存在<strong>当前浏览器本地</strong>（localStorage），换浏览器/设备不可见；若部署为公开站点并希望评论互通，可接入 <a href="https://giscus.app" target="_blank" rel="noopener">giscus</a>（基于 GitHub Discussions）。</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 页脚 ================= -->
+  <footer class="site-footer">
+    <div class="f-links">
+      <a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a>
+      <a href="https://dblp.org" target="_blank" rel="noopener">DBLP</a>
+      <a href="https://www.qualcomm.com/news" target="_blank" rel="noopener">Qualcomm</a>
+      <a href="https://www.mediatek.com/press-room" target="_blank" rel="noopener">MediaTek</a>
+      <a href="https://machinelearning.apple.com" target="_blank" rel="noopener">Apple ML</a>
+      <a href="https://www.jiqizhixin.com" target="_blank" rel="noopener">机器之心</a>
+    </div>
+    <div id="footer-meta"></div>
+    <div style="margin-top:6px">本页为纯静态页面（零构建、零依赖），可直接部署到 GitHub Pages / Vercel / 任意静态托管</div>
+  </footer>
+
+  <!-- ================= 详情抽屉 ================= -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="detail-panel" id="detail-panel" aria-label="详情面板">
+    <div class="panel-glow"></div>
+    <button class="panel-close" id="panel-close" aria-label="关闭">✕</button>
+    <div class="panel-body" id="panel-body"></div>
+  </aside>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
