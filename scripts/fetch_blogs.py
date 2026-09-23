@@ -40,10 +40,10 @@ SEARCH_SITES = {
     "面壁智能数据洞察": "面壁智能 MiniCPM",
     "Qualcomm AI Hub & Blog": "Qualcomm Snapdragon AI",
 }
-# GitHub 数据源: 近期活跃仓库（值为 API 路径）
-GITHUB_REPOS = {
-    "Georgi Gerganov": "orgs/ggml-org/repos?sort=pushed&per_page=12",
-    "Tianqi Chen 陈天奇": "users/tqchen/repos?sort=pushed&per_page=12",
+# GitHub 数据源: 项目版本发布说明（Release Notes 含具体技术变化，比"仓库更新"有信息量）
+GITHUB_RELEASES = {
+    "Georgi Gerganov": ["ggml-org/llama.cpp", "ggml-org/whisper.cpp", "ggml-org/ggml"],
+    "Tianqi Chen 陈天奇": ["mlc-ai/mlc-llm", "apache/tvm"],
 }
 # 手工指定高质量 logo（RSS image 抓不到或太丑的）
 LOGO_OVERRIDES = {
@@ -253,19 +253,39 @@ def github_posts(user, repo, posts_dir):
     return posts
 
 
-def github_repos(api_path):
-    """近期活跃仓库 -> 动态列表"""
-    url = f"https://api.github.com/{api_path}"
-    try:
-        data = json.loads(http_get(url, timeout=30))
-    except Exception:
-        return []
+def github_releases(repos):
+    """项目 Release Notes -> 技术动态列表（标题=版本号, 摘要=发布说明要点）"""
     posts = []
-    for r in data:
-        d = (r.get("pushed_at") or "")[:10]
-        desc = (r.get("description") or "")[:80]
-        posts.append({"t": r.get("name", "") + "（仓库更新）", "u": r.get("html_url", ""),
-                      "d": d, "s": desc})
+    for repo in repos:
+        try:
+            data = json.loads(http_get(f"https://api.github.com/repos/{repo}/releases?per_page=5", timeout=30))
+        except Exception:
+            continue
+        name = repo.split("/")[-1]
+        for rel in data:
+            if rel.get("draft"):
+                continue
+            body = rel.get("body") or ""
+            skip = ("what's changed", "full changelog", "new contributor", "release notes")
+            lines = []
+            for ln in body.split("\n"):
+                ln = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", ln)      # 去链接留文字
+                ln = re.sub(r"<[^>]+>", " ", ln)                        # 去 HTML 标签
+                ln = re.sub(r"[*`>#]+", "", ln)
+                ln = re.sub(r"by @[\w-]+ in .*$", "", ln)               # 去 PR 作者尾巴
+                ln = ln.replace("\r", "").strip(" -_:")
+                if len(ln) < 12 or any(ln.lower().startswith(s) for s in skip):
+                    continue
+                lines.append(ln)
+                if len(lines) >= 2:
+                    break
+            posts.append({
+                "t": f"{name} {rel.get('tag_name', '')} 发布",
+                "u": rel.get("html_url") or f"https://github.com/{repo}/releases",
+                "d": (rel.get("published_at") or "")[:10],
+                "s": "；".join(lines)[:110],
+            })
+        time.sleep(0.8)
     return posts
 
 
@@ -311,8 +331,8 @@ def main():
             logo, posts = parse_feed(FEEDS[name])
         elif name in HTML_SITES:
             logo, posts = parse_html(*HTML_SITES[name])
-        elif name in GITHUB_REPOS:
-            posts = github_repos(GITHUB_REPOS[name])
+        elif name in GITHUB_RELEASES:
+            posts = github_releases(GITHUB_RELEASES[name])
         elif name in SEARCH_SITES:
             posts = bing_news_posts(SEARCH_SITES[name])
         logo = LOGO_OVERRIDES.get(name, "") or logo
