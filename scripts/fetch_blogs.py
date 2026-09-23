@@ -40,10 +40,10 @@ SEARCH_SITES = {
     "面壁智能数据洞察": "面壁智能 MiniCPM",
     "Qualcomm AI Hub & Blog": "Qualcomm Snapdragon AI",
 }
-# GitHub 数据源: 近期活跃仓库（动态列表）
+# GitHub 数据源: 近期活跃仓库（值为 API 路径）
 GITHUB_REPOS = {
-    "Georgi Gerganov": "ggerganov",
-    "Tianqi Chen 陈天奇": "tqchen",
+    "Georgi Gerganov": "orgs/ggml-org/repos?sort=pushed&per_page=12",
+    "Tianqi Chen 陈天奇": "users/tqchen/repos?sort=pushed&per_page=12",
 }
 # 手工指定高质量 logo（RSS image 抓不到或太丑的）
 LOGO_OVERRIDES = {
@@ -56,6 +56,24 @@ EDGE_KEYS = ["端侧", "on-device", "on device", "edge ai", "edge-side", "npu", 
              "snapdragon", "dimensity", "ai手机", "ai 眼镜", "ai眼镜", "小模型", "slm",
              "quantiz", "量化", "llama.cpp", "gguf", "local llm", "本地大模型", "本地部署",
              "inference", "推理", "mobile", "手机", "mobilecpm", "agentic", "智能体", "端云"]
+
+# AI 相关性过滤: 非 AI 内容一律不收录(英文用词边界匹配, 中文子串匹配)
+AI_KEYS_SUB = ["人工智能", "大模型", "小模型", "模型", "机器学习", "深度学习", "神经网络", "智能体",
+               "推理", "算力", "量化", "多模态", "语音识别", "具身", "自动驾驶", "微调", "训练",
+               "ai手机", "智能座舱", "copilot", "token"]
+AI_KEYS_RE = re.compile(
+    r"\b(ai|a\.i\.|llm|llms|gpt|claude|gemini|qwen|deepseek|openai|anthropic|mistral|llama|"
+    r"transformer|agent|agents|agentic|inference|gpu|npu|tpu|robot|rag|diffusion|multimodal|"
+    r"finetun|fine-tun|quantiz|machine learning|deep learning|neural|model|models|chatbot|"
+    r"copilot|vlm|slm|moe|vllm|attention|flashattention|pytorch|torch|tensorflow|jax|"
+    r"cuda|tensor|onnx|ggml|gguf|whisper|stable diffusion|sdxl|bert|vit|mamba|kimi|glm|"
+    r"deepseek|gemini|tokens?|embedding|prompt|context window|scaling law)\b", re.I)
+
+
+def is_ai(text):
+    if any(k in text for k in AI_KEYS_SUB):
+        return True
+    return bool(AI_KEYS_RE.search(text))
 
 MAX_RSS = 30
 MAX_HTML = 25
@@ -235,9 +253,9 @@ def github_posts(user, repo, posts_dir):
     return posts
 
 
-def github_repos(user):
+def github_repos(api_path):
     """近期活跃仓库 -> 动态列表"""
-    url = f"https://api.github.com/users/{user}/repos?sort=pushed&per_page=10"
+    url = f"https://api.github.com/{api_path}"
     try:
         data = json.loads(http_get(url, timeout=30))
     except Exception:
@@ -298,6 +316,7 @@ def main():
         elif name in SEARCH_SITES:
             posts = bing_news_posts(SEARCH_SITES[name])
         logo = LOGO_OVERRIDES.get(name, "") or logo
+        posts = [p for p in posts if is_ai(p["t"] + " " + p.get("s", ""))]   # 只留 AI 相关
         for p in posts:
             p["d"] = norm_date(p["d"])
             p["e"] = is_edge(p["t"] + " " + p.get("s", ""))
