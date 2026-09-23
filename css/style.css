@@ -343,7 +343,11 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .res-logo::before { content: attr(data-letter); font-weight: 800; color: var(--text-dim); font-size: 17px; }
 .res-logo.noimg { background: var(--grad); }
 .res-logo.noimg::before { color: #05070d; }
-.res-logo img { position: absolute; inset: 3px; width: calc(100% - 6px); height: calc(100% - 6px); object-fit: contain; }
+.res-logo img, .panel-logo img {
+  position: absolute; inset: 3px; width: calc(100% - 6px); height: calc(100% - 6px);
+  object-fit: contain; background: #fff; border-radius: 8px; padding: 2px;
+}
+.panel-logo img { inset: 5px; width: calc(100% - 10px); height: calc(100% - 10px); border-radius: 10px; }
 
 /* 博客详情面板: 头部 + 文章列表 + 分页 */
 .res-detail-head { display: flex; gap: 14px; align-items: center; margin: 2px 0 14px; }
@@ -354,7 +358,6 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .panel-logo.noimg { background: var(--grad); }
 .panel-logo.noimg::before { color: #05070d; }
 .panel-logo img { position: absolute; inset: 5px; width: calc(100% - 10px); height: calc(100% - 10px); object-fit: contain; }
-
 .post-head { display: flex; align-items: baseline; gap: 10px; margin: 18px 0 10px; font-size: 15px; font-weight: 700; }
 .post-head span { font-size: 11.5px; color: var(--text-faint); font-weight: 400; }
 .post-item { display: flex; gap: 10px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,0.025); margin-bottom: 8px; text-decoration: none; transition: border-color 0.25s, transform 0.25s; }

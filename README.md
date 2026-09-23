@@ -54,11 +54,9 @@
 | 2026-09-23 | [端侧 AI 加速落地：多厂商密集发布新一代操作系统](https://news.qq.com/rain/a/20260923A05I6700) | 腾讯新闻 |
 | 2026-09-20 | [阶跃星辰发布 Step 5 Preview：600B MoE 旗舰，10 月 15 日开源](https://www.163.com/tech/article/L78VD8I600098IEO.html) | 网易科技 / 腾讯新闻 |
 
-## 科研前沿（15 篇）
+## 科研前沿（10 篇）
 
 - **arXiv 新作跟踪（10 篇，预印本）**：[End-to-End Latency-Minimizing and Load-Balanced Request Sc…](https://arxiv.org/abs/2609.17193)；[CIDERS: Cloud-Edge LLM Collaborative Learning via Accelera…](https://arxiv.org/abs/2609.15664)；[Understanding the Security Boundary of Obfuscation-based O…](https://arxiv.org/abs/2609.10117)；[PELM: Power Efficient On-Device LLM Inference with Specula…](https://arxiv.org/abs/2609.09662)；[From Fixed Keys to Readable Schemas: Small Language Models…](https://arxiv.org/abs/2609.09476)；[Beyond Fluent Generation: A CPU Reliability Benchmark for …](https://arxiv.org/abs/2609.07370)；[LeanStream: A Speculate-and-Refine Streaming Framework for…](https://arxiv.org/abs/2609.03079)；[How Do Prompt Variations Affect Energy Consumption in On-D…](https://arxiv.org/abs/2609.01798)；[Triple-Bottom-Line Sustainability of Language Models for E…](https://arxiv.org/abs/2609.00665)；[mzCache: On-Device LLM Memory Management under Multitaskin…](https://arxiv.org/abs/2609.01338)
-
-- **已发表精选（5 篇，CCF-A / 顶会）**：[LLM in a Flash: Efficient Large Language Model Inference w…](https://arxiv.org/abs/2312.11514))；[PowerInfer: Fast Large Language Model Inference with Consu…](https://arxiv.org/abs/2312.12456))；[ArrowCloak: TEE-Shielded LLM Partitioning with Obfuscation](https://www.usenix.org/conference/usenixsecurity25))；[TSQP: Efficient and Secure LLM Inference through TEE-based…](https://sp2025.ieee-security.org))；[LoRO: Low-Rank Obfuscation for TEE-Assisted DNN/LLM Infere…](https://neurips.cc))
 
 ## 页面板块
 

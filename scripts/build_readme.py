@@ -62,10 +62,12 @@ def main():
     recent = [p for p in papers if p["group"] == "recent"]
     pub = [p for p in papers if p["group"] == "published"]
     L.append(f"## 科研前沿（{len(papers)} 篇）\n")
-    L.append(f"- **arXiv 新作跟踪（{len(recent)} 篇，预印本）**：" + "；".join(
-        f"[{p['title'][:58]}{'…' if len(p['title']) > 58 else ''}]({p['url']})" for p in recent) + "\n")
-    L.append(f"- **已发表精选（{len(pub)} 篇，CCF-A / 顶会）**：" + "；".join(
-        f"[{p['title'][:58]}{'…' if len(p['title']) > 58 else ''}]({p['url']}))" for p in pub) + "\n")
+    if recent:
+        L.append(f"- **arXiv 新作跟踪（{len(recent)} 篇，预印本）**：" + "；".join(
+            f"[{p['title'][:58]}{'…' if len(p['title']) > 58 else ''}]({p['url']})" for p in recent) + "\n")
+    if pub:
+        L.append(f"- **已发表精选（{len(pub)} 篇，CCF-A / 顶会）**：" + "；".join(
+            f"[{p['title'][:58]}{'…' if len(p['title']) > 58 else ''}]({p['url']})" for p in pub) + "\n")
     L.append("## 页面板块\n")
     L.append("① 本周资讯（分类筛选卡片，点击看详情与配图）② 科研前沿（原文扩写中文介绍 + 论文结构图）③ 知识分享（端侧 AI 发展史 + 厂商/个人/中文媒体三分区博客库）④ 评论区\n")
     L.append("## 说明\n")

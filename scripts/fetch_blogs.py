@@ -9,6 +9,7 @@
 #       端侧相关且无摘要的文章自动抓 og:description 作为介绍
 # ============================================================
 import sys, json, re, time, html as H
+import urllib.parse
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -29,12 +30,26 @@ FEEDS = {
 # HTML 解析: 名称 -> (列表页URL, 站点根, 链接正则)；列表页可以是 HTML 或 sitemap.xml
 HTML_SITES = {
     "Apple Machine Learning Research": ("https://machinelearning.apple.com/", "https://machinelearning.apple.com", r"^/research/[a-z0-9-]+$"),
-    "Tianqi Chen 陈天奇": ("https://tqchen.github.io/sitemap.xml", "https://tqchen.github.io", r"^/blog/\d{4}/"),
-    "Georgi Gerganov": ("https://ggerganov.com", "https://ggerganov.com", r"/blog"),
     "Andrej Karpathy": ("https://karpathy.github.io", "https://karpathy.github.io", r"^/\d{4}/"),
     "Tri Dao": ("https://tridao.me", "https://tridao.me", r"/(blog|notes|p)/"),
-    "机器之心": ("https://www.jiqizhixin.com/articles", "https://www.jiqizhixin.com", r"^/articles/\d+"),
     "电子工程专辑 EETimes China": ("https://www.eet-china.com", "https://www.eet-china.com", r"/(mp|news)/a?\d"),
+}
+# Bing News RSS 站内搜索（无 RSS 且 JS 渲染的站点）: 名称 -> 查询词
+SEARCH_SITES = {
+    "36氪": "site:36kr.com AI",
+    "面壁智能数据洞察": "面壁智能 MiniCPM",
+    "Qualcomm AI Hub & Blog": "Qualcomm Snapdragon AI",
+}
+# GitHub 数据源: 近期活跃仓库（动态列表）
+GITHUB_REPOS = {
+    "Georgi Gerganov": "ggerganov",
+    "Tianqi Chen 陈天奇": "tqchen",
+}
+# 手工指定高质量 logo（RSS image 抓不到或太丑的）
+LOGO_OVERRIDES = {
+    "Google DeepMind / Developers Blog": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+    "IT之家": "https://img.ithome.com/images/logo.png",
+    "36氪": "https://img.36krcdn.com/20200828/719c4c8d5eb2de09d4e2b6cc3d1e2d0f.png",
 }
 
 EDGE_KEYS = ["端侧", "on-device", "on device", "edge ai", "edge-side", "npu", "天玑", "骁龙",
@@ -199,6 +214,68 @@ def fetch_desc(post):
         pass
 
 
+def github_posts(user, repo, posts_dir):
+    """读博客仓库 _posts 目录 -> 文章列表（文件名含日期）"""
+    url = f"https://api.github.com/repos/{user}/{repo}/contents/{posts_dir}"
+    try:
+        data = json.loads(http_get(url, timeout=30))
+    except Exception:
+        return []
+    posts = []
+    for f in data:
+        name = f.get("name", "")
+        m = re.match(r"(\d{4})-(\d{2})-(\d{2})-(.+)\.(md|markdown|html)$", name)
+        if not m:
+            continue
+        slug = m.group(4)
+        # tqchen 博客 URL 形如 /blog/YYYY/MM/DD/slug
+        link = f"https://{repo}/blog/{m.group(1)}/{m.group(2)}/{m.group(3)}/{slug}"
+        posts.append({"t": slug.replace("-", " ")[:90], "u": link,
+                      "d": f"{m.group(1)}-{m.group(2)}-{m.group(3)}", "s": ""})
+    return posts
+
+
+def github_repos(user):
+    """近期活跃仓库 -> 动态列表"""
+    url = f"https://api.github.com/users/{user}/repos?sort=pushed&per_page=10"
+    try:
+        data = json.loads(http_get(url, timeout=30))
+    except Exception:
+        return []
+    posts = []
+    for r in data:
+        d = (r.get("pushed_at") or "")[:10]
+        desc = (r.get("description") or "")[:80]
+        posts.append({"t": r.get("name", "") + "（仓库更新）", "u": r.get("html_url", ""),
+                      "d": d, "s": desc})
+    return posts
+
+
+def bing_news_posts(query):
+    """Bing News RSS 站内搜索 -> 文章列表"""
+    url = "https://www.bing.com/news/search?q=" + urllib.parse.quote(query) + "&format=RSS"
+    try:
+        xml = http_get(url, timeout=30).decode("utf-8", "ignore")
+        root = ET.fromstring(xml)
+    except Exception:
+        return []
+    posts = []
+    for it in root.iter("item"):
+        link = (it.findtext("link") or "")
+        m = re.search(r"[?&]url=([^&]+)", link)
+        if m:
+            link = urllib.parse.unquote(m.group(1))
+        if not link.startswith("http"):
+            continue
+        posts.append({"t": H.unescape(it.findtext("title") or "").strip(),
+                      "u": link,
+                      "d": norm_date(it.findtext("pubDate") or ""),
+                      "s": strip_tags(H.unescape(it.findtext("description") or ""))[:80]})
+        if len(posts) >= MAX_RSS:
+            break
+    return posts
+
+
 def sort_key(p):
     dated = bool(re.match(r"\d{4}", p["d"]))
     return (0 if dated else 1, p["d"] or "0",)
@@ -216,6 +293,11 @@ def main():
             logo, posts = parse_feed(FEEDS[name])
         elif name in HTML_SITES:
             logo, posts = parse_html(*HTML_SITES[name])
+        elif name in GITHUB_REPOS:
+            posts = github_repos(GITHUB_REPOS[name])
+        elif name in SEARCH_SITES:
+            posts = bing_news_posts(SEARCH_SITES[name])
+        logo = LOGO_OVERRIDES.get(name, "") or logo
         for p in posts:
             p["d"] = norm_date(p["d"])
             p["e"] = is_edge(p["t"] + " " + p.get("s", ""))

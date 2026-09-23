@@ -295,57 +295,7 @@ const WEEKLY_DATA = {
       tags: ["内存管理", "多任务", "llama.cpp"],
       url: "https://arxiv.org/abs/2609.01338"
     },
-    {
-      id: "p11", group: "published", cat: "推理与系统", date: "2024-01-01",
-      title: "LLM in a Flash: Efficient Large Language Model Inference with Limited Memory",
-      authors: "Keivan Alizadeh Sharifi, Iman Mirzadeh 等（Apple）",
-      venue: "ICLR 2024", level: "顶会",
-      summary: "苹果经典工作：利用激活稀疏性与投影层「闪存驻留」，把超过可用 DRAM 的大模型推理搬到手机上，是端侧大模型存储卸载路线的奠基之作。",
-      detail: "研究背景：LLM 的参数量远超手机等设备的 DRAM 容量，如何「在有限内存下跑超内存大小的模型」是端侧部署的根本问题。苹果团队的答案是：不把整个模型装进 DRAM，而是把大部分权重留在闪存（NAND）上，推理时按需读取。\n两大核心技术：其一是稀疏感知（sparsity-aware）的加载——利用前馈层激活的稀疏性，只读取非零激活对应的权重行，大幅减少闪存读取量；其二是「带投影层的低秩读取」——为每层存储一组小的「锚点」神经元及其投影（低秩近似），先读锚点再投影出其余输出，进一步压缩需要搬运的数据量。两者叠加在准确率几乎无损的前提下显著降低时延。\n效果与影响：该方法使超出 DRAM 容量 2 倍以上的 LLM 能在移动设备上高效运行，直接影响了 Apple Intelligence 的端侧推理栈；此后所有「闪存/SSD 卸载」方向的研究（包括近期的 LeanStream）都以它为对照基线。",
-      tags: ["闪存卸载", "稀疏性", "奠基工作"],
-      url: "https://arxiv.org/abs/2312.11514"
-    },
-    {
-      id: "p12", group: "published", cat: "推理与系统", date: "2024-01-01",
-      title: "PowerInfer: Fast Large Language Model Inference with Consumer-grade GPUs",
-      authors: "Yixin Song, Zeyu Mi, Haotian Xie 等（上海交大 IPADS）",
-      venue: "MLSys 2024", level: "系统顶会",
-      summary: "利用 LLM 推理的激活局部性，热神经元驻 GPU、冷神经元留 CPU，消费级 GPU 上最高 11.7× 加速；后续 PowerInfer-2 把该路线带上手机，首次在智能手机跑超百亿参数模型。",
-      detail: "关键观察：LLM 推理存在显著的「激活局部性」——少量「热」神经元贡献了大部分激活值，而大多数「冷」神经元很少被激活。传统推理引擎把所有权重放在同一设备，白白浪费了这一性质。\n方法（PowerInfer）：构建 GPU-CPU 混合推理引擎——自适应地把热神经元放进 GPU 显存并缓存，冷神经元留在 CPU 内存与 GPU 之间按需换入换出；配合细粒度流水线隐藏跨设备通信。针对 MLP 层与注意力层分别设计了利用局部性的算子。\n结果：在 RTX 4090 等消费级 GPU 上，相对 llama.cpp 最高取得 11.69× 加速，同时保持生成质量。\n后续影响：其手机端续作 PowerInfer-2（2024）通过异构神经网络计算、细粒度权重复用与中心化 KV 缓存，首次在智能手机上运行超百亿参数模型，成为端侧大模型系统化的标志性成果；「热冷分离」也成为端侧推理的通用设计模式。",
-      tags: ["激活局部性", "混合推理", "手机部署"],
-      url: "https://arxiv.org/abs/2312.12456"
-    },
-    {
-      id: "p13", group: "published", cat: "安全与隐私", date: "2025-01-01",
-      title: "ArrowCloak: TEE-Shielded LLM Partitioning with Obfuscation",
-      authors: "ArrowCloak 作者团队",
-      venue: "USENIX Security 2025", level: "CCF-A",
-      summary: "TEE 保护的端侧 LLM 推理：以代数混淆变换把计算密集层安全卸载到 GPU、仅轻量运算留在 TEE，兼顾模型知识产权保护与性能。",
-      detail: "研究背景：端侧部署的 LLM 面临模型权重（核心知识产权）被窃取的风险；TEE 能提供强隔离但算力有限，无法承载 LLM 的全部矩阵运算。\n方法（ArrowCloak）：属于「TEE-Shielded LLM Partition」路线的代表工作——对 LLM 中计算密集的层施加可证明的（provable）混淆变换后，安全地卸载到不受信任的 GPU 执行；只把轻量且敏感的运算保留在 TEE 内。混淆变换在数学上保证 GPU 侧无法从变换后的计算中恢复权重信息，从而以远小于纯 TEE 执行的开销，获得接近的机密性保证。\n效果：在保护权重机密性的同时，推理性能显著优于把全部计算放进 TEE 的基线。\n后续：本周预印本《Understanding the Security Boundary…》（p3）提出的 Collapse 攻击揭示了此类混淆方案的共性漏洞，ArrowCloak 亦在其列——建议与本板块 p3 对照阅读，关注作者的修补版本。",
-      tags: ["TEE", "混淆", "USENIX Sec'25"],
-      url: "https://www.usenix.org/conference/usenixsecurity25"
-    },
-    {
-      id: "p14", group: "published", cat: "安全与隐私", date: "2025-01-01",
-      title: "TSQP: Efficient and Secure LLM Inference through TEE-based Spatial Quantization Partitioning",
-      authors: "TSQP 作者团队",
-      venue: "IEEE S&P 2025", level: "CCF-A",
-      summary: "面向量化 LLM 的 TEE 防护：将推理按空间切分，敏感计算保留 TEE、量化等重负载卸载 GPU，兼顾安全与效率；与 ArrowCloak 同属 TSLP 路线。",
-      detail: "研究背景：与 ArrowCloak 同属「TEE-Shielded LLM Partition（TSLP）」技术路线，但聚焦量化 LLM 场景——量化是端侧部署的标配，而量化运算的算力需求使纯 TEE 执行不现实。\n方法（TSQP）：把量化 LLM 的推理计算图按「空间」切分：安全敏感的计算保留在 TEE 内，计算繁重的量化矩阵乘等卸载到不受信任的 GPU 加速；通过特定的空间划分与数据变换，保证卸载部分不泄露权重信息，同时把 TEE 内的计算与通信开销控制在可用范围。\n效果：相较纯 TEE 方案大幅提升性能，相较无保护卸载显著提升机密性，在安全-效率曲线上取得更好的平衡点。\n后续：本周 Collapse 攻击（见 p3）指出其特定架构实现存在可利用的攻击面，说明 TSLP 路线仍需形式化的安全边界分析——这正是 p3 的贡献方向。",
-      tags: ["TEE", "量化", "IEEE S&P'25"],
-      url: "https://sp2025.ieee-security.org"
-    },
-    {
-      id: "p15", group: "published", cat: "安全与隐私", date: "2025-01-01",
-      title: "LoRO: Low-Rank Obfuscation for TEE-Assisted DNN/LLM Inference on Untrusted GPUs",
-      authors: "LoRO 作者团队",
-      venue: "NeurIPS 2025", level: "CCF-A",
-      summary: "以低秩（low-rank）变换为混淆原语保护端侧模型权重知识产权的 TEE-GPU 协同推理方案，低秩结构带来更小的 TEE 内计算与通信开销。",
-      detail: "研究背景：TEE 辅助 + 不可信 GPU 加速的混合推理中，如何在卸载计算的同时隐藏模型权重，是该路线的核心问题；已有混淆方案的开销与安全强度各有短板。\n方法（LoRO）：把「低秩（low-rank）变换」作为核心混淆原语——对需要卸载到 GPU 的计算施加低秩分解形式的变换，使 GPU 侧观察到的是经变换后的中间表示而非原始权重；低秩结构同时把 TEE 内需要完成的计算与通信量压到很低，兼顾安全与端侧可接受的延迟。\n适用范围：面向 DNN/LLM 的 TEE 辅助推理设计，对线性层密集的 transformer 结构尤其友好。\n后续：作为 NeurIPS 2025 发表的 TSLP 代表方案，其低秩原语组合同样被本周 Collapse 攻击（p3）证明存在可利用的安全边界——与 p3 提出的 O_ext 新原语对照阅读，能完整看到这条研究线的攻防演进。",
-      tags: ["低秩混淆", "TEE", "NeurIPS'25"],
-      url: "https://neurips.cc"
-    }
-  ],
+      ],
 
   /* ---------------- 板块三：知识分享 ----------------
    * resources 按 group 分区显示: 厂商官方博客 / 个人博客 / 中文媒体 · 公众号

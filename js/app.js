@@ -282,6 +282,7 @@
       var cnt = D.papers.filter(function (p) {
         return c === "全部" || (c === "已发表·高质量" ? p.group === "published" : p.cat === c);
       }).length;
+      if (c !== "全部" && cnt === 0) return "";   // 无内容的分类不显示
       return '<button class="chip' + (c === paperFilter ? " on" : "") + '" data-cat="' + esc(c) + '">' + esc(c) + '<span class="cnt">' + cnt + "</span></button>";
     }).join("");
     $("papers-chips").addEventListener("click", function (e) {
@@ -363,10 +364,10 @@
       '<div class="res-detail-head">' +
         resLogoHTML(rc, "panel-logo") +
         "<div><h3>" + esc(rc.name) + "</h3>" +
-        '<div class="res-sub">端侧相关文章 ' + edgeN + " 篇" + (posts.length !== edgeN ? " / 近期共 " + posts.length + " 篇" : "") + "</div></div>" +
+        '<div class="res-sub">端侧相关 ' + edgeN + " 篇置顶" + (posts.length - edgeN ? " · 其他 " + (posts.length - edgeN) + " 篇" : "") + "</div></div>" +
       "</div>" +
       '<div class="panel-detail">' + paras + "</div>" +
-      '<div class="post-head">端侧相关文章<span>按时间排序 · 柔光高亮</span></div>' +
+      '<div class="post-head">文章列表<span>端侧相关置顶并流光高亮 · 其余按时间排列</span></div>' +
       '<div id="post-zone"></div>' +
       '<div class="panel-actions"><a class="btn-src" href="' + esc(rc.url) + '" target="_blank" rel="noopener">访问 ' + esc(hostOf(rc.url)) + " ↗</a></div>";
   }
@@ -374,15 +375,16 @@
   function renderResPosts(rc, page) {
     var f = FEEDS[rc.name] || {};
     var all = f.posts || [];
-    var posts = all.filter(function (p) { return p.e; });   // 只展示端侧相关
-    var zone = document.getElementById("post-zone");
-    if (!zone) return;
-    if (!posts.length) {
-      zone.innerHTML = '<div class="post-empty">近期未检测到端侧 AI 相关文章' +
-        (all.length ? "（该博客近期 " + all.length + " 篇均非端侧主题）" : "（该站点无公开 RSS）") +
-        "，点击下方按钮直接访问网站</div>";
+    if (!all.length) {
+      var zone0 = document.getElementById("post-zone");
+      if (zone0) zone0.innerHTML = '<div class="post-empty">暂未收录近期文章（该站点为 JS 渲染且无公开 RSS），点击下方按钮直接访问网站</div>';
       return;
     }
+    // 端侧相关置顶（按时间倒序），其余普通展示（按时间倒序）
+    var posts = all.filter(function (p) { return p.e; }).concat(
+                 all.filter(function (p) { return !p.e; }));
+    var zone = document.getElementById("post-zone");
+    if (!zone) return;
     var pages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
     page = Math.min(Math.max(1, page), pages);
     resPage = page;
