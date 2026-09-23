@@ -1,29 +1,26 @@
 /* ============================================================
  * 端侧AI每周情报站 · 数据文件（2026 第 39 期 · 09.17–09.23）
- * 每周更新流程：
- *   1) scripts\fetch_papers.ps1     arXiv 论文候选
- *   2) scripts\fetch_news.ps1       RSS 资讯候选
- *   3) scripts\check_dblp.ps1       DBLP 核对 venue
- *   4) scripts\find_article.ps1     定位真实文章 URL
- *   5) scripts\fetch_paper_figs.ps1 抓取论文结构图(arXiv HTML版)
- *   6) 人工筛选后整理进本文件
- * 字段：url=阅读原文(用具体文章页)；image=详情配图(og:image或论文图,
- *       无则前端自动生成兜底封面)；imageCap=配图说明；
- *       resources[].intro=博客简介(点击卡片弹出)
+ * 每周更新流程（Python 脚本，本地需 Python 3.10+）：
+ *   python scripts\fetch_papers.py      # arXiv 论文候选
+ *   python scripts\fetch_news.py        # RSS 资讯候选(默认近7天)
+ *   python scripts\check_dblp.py        # DBLP 核对 venue
+ *   python scripts\find_article.py "关键词..."  # 定位真实文章URL
+ *   python scripts\fetch_paper_figs.py  # 抓取论文结构图(arXiv HTML版)
+ * 收录规则：资讯只收最近一周(运行日往前7天)的事件，超出窗口的
+ * 厂商动态不放卡片(由厂商雷达标注覆盖)；来源只用简体中文或英文。
+ * 字段：url=阅读原文(具体文章页)；image=详情配图(og:image或论文图,
+ *       无则前端自动生成兜底封面)；imageCap=配图说明
  * ============================================================ */
 const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 39 期",
-    weekRange: "2026.09.17 — 09.23",
+    weekRange: "2026.09.16 — 09.23",
     updated: "2026-09-23",
-    editorsNote: "本期窗口 09.17–09.23：骁龙峰会 9·22 开幕，8 Elite Gen 6 正式发布，主题直指「智能体时代来临」；「哑巴 AI」Jev 三天刷屏硅谷，不生成文本的「系统一模型」引发范式讨论；阶跃星辰 600B 旗舰宣布 10 月开源；机构报告称系统级 Agent 进入加速期。盘面背景：天玑 9600 Pro 领跑 2nm、豆包 AI 手机量产、麒麟 9050 Pro 回归。学术侧本周端侧方向集中于推理系统、SLM 工具调用与 TEE 安全。"
+    editorsNote: "本期只收录最近一周动态：骁龙峰会 9·22 开幕，8 Elite Gen 6 正式发布，主题直指「智能体时代来临」；「哑巴 AI」Jev 三天刷屏硅谷，引发范式讨论；联发科 CX C10 Max 将驱动谷歌 Googlebook 计划；Google Home 开放 MCP 协议，OpenClaw 等智能体可直接控制智能家居；机构报告称系统级 Agent 进入加速期；阶跃星辰 600B 旗舰宣布 10 月开源；豆包 AI 手机开售、小米 18 Fold 携 MiMo 端侧模型上市。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。"
   },
 
-  /* ---------------- 板块一：本周资讯 ----------------
-   * 分类：端侧Agent / 芯片厂商 / 手机厂商 / 大模型厂商 / 行业动态
-   * 超出本期窗口的重要事件以「背景」性质收录
-   */
+  /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
     {
       id: "n2", cat: "芯片厂商", source: "Qualcomm / XDA-Developers", date: "2026-09-22",
@@ -37,13 +34,13 @@ const WEEKLY_DATA = {
       highlight: true
     },
     {
-      id: "n11", cat: "大模型厂商", source: "unwire.pro / 36氪 / TechCrunch", date: "2026-09-21",
+      id: "n11", cat: "大模型厂商", source: "36氪 / TechCrunch", date: "2026-09-21",
       title: "「哑巴 AI」Jev 刷屏：不生成文本的「系统一模型」，决策快 200 倍",
       summary: "前 OpenAI 研究员创办的 TypeSafe AI 发布 Jev：不做对话、直接输出类型安全的概率化决策，70ms 级响应、快约 200 倍、便宜约 400 倍；上线 3 天获 Vercel / Cloudflare / LangChain 整合。",
-      detail: "Jev 是 TypeSafe AI（前 OpenAI 研究员 Diogo Almeida 创办）9 月 15 日开放早期访问的新模型，被媒体称为「哑巴 AI」：\n它基于 transformer 架构，但不是 LLM——不写文章、不写代码、不陪聊，放弃逐 token 的文本生成，直接输出「类型安全的概率化决策」并内置校准（calibration），对标心理学中快思考的「系统一」能力。因此它高速、轻量，官方与第三方评测称在相关决策任务上比传统 LLM 快约 200 倍、便宜约 400 倍，且从机制上避免幻觉。\n有多轰动：发布 3 天内获 Vercel、Cloudflare、LangChain 等主流平台整合；内测开放不到 36 小时涌入 14 万开发者；同日公司宣布完成 DCVC 领投的 4000 万美元种子轮。TechCrunch 评价其为「一种新型 AI 模型」，Wikipedia 已收录词条。\n争议同样存在：36氪发文《一个「不说话」的 AI 刷屏，Jev 真是新范式吗？》讨论其在企业自动化中的真实边界；其轻量高速的特性也让业界开始讨论与端侧模型的组合可能。",
+      detail: "Jev 是 TypeSafe AI（前 OpenAI 研究员 Diogo Almeida 创办）9 月 15 日开放早期访问的新模型，被媒体称为「哑巴 AI」：\n它基于 transformer 架构，但不是 LLM——不写文章、不写代码、不陪聊，放弃逐 token 的文本生成，直接输出「类型安全的概率化决策」并内置校准（calibration），对标心理学中快思考的「系统一」能力。因此它高速、轻量，官方与第三方评测称在相关决策任务上比传统 LLM 快约 200 倍、便宜约 400 倍，且从机制上避免幻觉。\n有多轰动：发布 3 天内获 Vercel、Cloudflare、LangChain 等主流平台整合；内测开放不到 36 小时涌入 14 万开发者；同日公司宣布完成 DCVC 领投的 4000 万美元种子轮。TechCrunch 评价其为「一种新型 AI 模型」，Wikipedia 已收录词条。\n36氪追问《Jev 真是新范式吗？》：它在企业自动化（分类、风控、路由等结构化决策）中优势明显，但复杂推理与开放生成仍需与传统 LLM 配合——「快系统 + 慢系统」的组合成为新的工程范式。",
       tags: ["Jev", "TypeSafe AI", "系统一模型", "决策模型"],
-      url: "https://unwire.pro/2026/09/21/jev-system-one-model-typesafe-ai/news/",
-      image: "https://cdn.unwire.pro/wp-content/uploads/2026/09/fb_photo20260920t155.png",
+      url: "https://www.36kr.com/p/3988372551990276",
+      image: "https://img.36krcdn.com/hsossms/20260918/v2_cfa5dfb20fde4be3b974bd19767f8254@000000@ai_oswg679481oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
       imageCap: "配图来自原文页面",
       highlight: true
     },
@@ -51,12 +48,22 @@ const WEEKLY_DATA = {
       id: "n12", cat: "端侧Agent", source: "东吴证券（腾讯新闻） / 36氪", date: "2026-09-21",
       title: "系统级 Agent 进入加速期：豆包、荣耀、vivo、OPPO 密集落地",
       summary: "机构报告：豆包手机助手消费者版量产落地，荣耀、vivo、OPPO 系统级智能体密集跟进；开源侧 OpenClaw（「小龙虾」）成为 2026 现象级端侧 Agent，腾讯 WorkBuddy 等衍生适配崛起。",
-      detail: "东吴证券 9 月 21 日报告指出：系统级 Agent 进入加速期——豆包手机助手消费者版随努比亚 NaviX Ultra 实现量产落地，荣耀、vivo、OPPO 密集布局系统级智能体；执行框架 Harness 开始系统级商用，GUI（图形界面操作）与 A2A（智能体间通信）两条路线并行演进，成为下半年最确定的产业主线。\n开源侧，本地优先（local-first）、模型无关的 OpenClaw 成为 2026 年最现象级的开源端侧 Agent（社区昵称「小龙虾」）：三层架构，支持 Windows / macOS / Linux 及移动端，可直接与 LM Studio、Ollama 等本地模型协同，官方文档见 docs.openclaw.ai；腾讯 3 月发布的 WorkBuddy 完全兼容其技能生态，主打国内场景适配，两者常被并列对比。\n学术侧本周亦有呼应：MCP 式工具调用在单板机上的可靠性基准（论文板块 p6）、车载 SLM 函数调用（p5）均指向同一问题——让小模型在端侧可靠地「动手」。",
+      detail: "东吴证券 9 月 21 日报告指出：系统级 Agent 进入加速期——豆包手机助手消费者版随努比亚 NaviX Ultra 实现量产落地，荣耀、vivo、OPPO 密集布局系统级智能体；执行框架 Harness 开始系统级商用，GUI（图形界面操作）与 A2A（智能体间通信）两条路线并行演进，成为下半年最确定的产业主线。\n开源侧，本地优先（local-first）、模型无关的 OpenClaw 成为 2026 年最现象级的开源端侧 Agent（社区昵称「小龙虾」）：三层架构，支持 Windows / macOS / Linux 及移动端，可直接与 LM Studio、Ollama 等本地模型协同，官方文档见 docs.openclaw.ai；腾讯 WorkBuddy 完全兼容其技能生态，主打国内场景适配，两者常被并列对比。\n学术侧本周亦有呼应：MCP 式工具调用在单板机上的可靠性基准（论文板块 p6）、车载 SLM 函数调用（p5）均指向同一问题——让小模型在端侧可靠地「动手」。",
       tags: ["系统级Agent", "OpenClaw", "WorkBuddy", "手机智能体"],
       url: "https://news.qq.com/rain/a/20260921A046EN00",
       image: "https://inews.gtimg.com/om_ls/On-vObCIUNjBT2QmAbIIetUc87uUIwDooLRvnRrAl6QSwAA_640330/0",
       imageCap: "配图来自原文页面",
       highlight: true
+    },
+    {
+      id: "n18", cat: "芯片厂商", source: "9to5Google / Tom's Hardware", date: "2026-09-21",
+      title: "联发科 Dimensity CX C10 Max 亮相：将驱动谷歌 Googlebook 计划，联想首发",
+      summary: "联发科旗舰笔记本 SoC 天玑 CX C10 Max（3nm）正式亮相，将驱动谷歌新推出的 Googlebook 计划，联想首发搭载；规格对标 Kompanio Ultra，主打 Chromebook Plus 级 AI 体验。",
+      detail: "据 9to5Google 与 Tom's Hardware 9 月 21 日报道，联发科下一代旗舰笔记本芯片 Dimensity CX C10 Max 正式亮相：3nm 制程，规格与 Kompanio Ultra 相近（NPU 算力面向 Chromebook Plus 级 AI 任务），将驱动谷歌新发起的 Googlebook 产品计划，联想率先推出搭载机型。\n这是联发科在手机旗舰（天玑 9600 Pro）之外，向 PC / ChromeOS 端侧 AI 市场的又一次进攻——与高通骁龙 X、MediaTek/NVIDIA 合作路线形成三方竞逐。\n配合上周发布的天玑 9600 Pro（首款 2nm 手机 SoC、支持 30B 端侧模型），联发科本周在端侧 AI 芯片两端（手机 + 笔记本）全面落子。",
+      tags: ["联发科", "Dimensity CX C10 Max", "Googlebook", "AI PC"],
+      url: "https://9to5google.com/2026/09/21/mediatek-googlebook-dimensity-cx-c10-max/",
+      image: "https://9to5google.com/wp-content/uploads/sites/4/2026/09/mediatek-dimensity-cx-c10-max-2.jpg",
+      imageCap: "配图来自原文页面"
     },
     {
       id: "n10", cat: "行业动态", source: "网易科技 / 腾讯新闻", date: "2026-09-20",
@@ -70,131 +77,37 @@ const WEEKLY_DATA = {
       id: "n3", cat: "手机厂商", source: "巨潮资讯（搜狐号）/ 新浪财经", date: "2026-09-17",
       title: "「端侧AI之战正式打响」：字节豆包 AI 手机 NaviX Ultra 亮相",
       summary: "努比亚 NaviX Ultra（豆包手机二代）9 月 16 日正式发布，5499 元起，搭载豆包手机助手消费者版，被称为全球首款规模量产的 AI 智能体手机。",
-      detail: "《端侧AI之战正式打响｜巨潮》一文盘点近期端侧 AI 整机动态：努比亚 NaviX Ultra（豆包手机二代）于 9 月 16 日正式发布并开售，5499 元起（12GB+512GB，16GB+1TB 版 7499 元），由中兴通讯努比亚全链路主导、与字节跳动合作，搭载第五代骁龙8至尊版平台与豆包手机助手消费者版。\n产品核心是把 AI 智能体技术从工程样机推进到规模化量产商用：围绕「听得懂、能干活、记得住、够安全」四大能力，支持全场景自然语义理解，可自主跨应用完成比价下单、行程规划等多步骤任务——手机从「你操作它」变成「它帮你办事」。该机此前在 WAIC 2026 亮相并获 SAIL 卓越人工智能引领者奖。\n同场竞争：苹果 Apple 智能 + 全新 Siri AI 已在 WWDC26 发布；刚上市的小米 18 Fold 内置 Xiaomi 端侧模型。文章判断：跳出耗资巨大的云端大模型军备竞赛、转向端侧模型研发，正成为更多企业深度参与 AI 浪潮的路径。",
+      detail: "《端侧AI之战正式打响｜巨潮》一文盘点端侧 AI 整机动态：努比亚 NaviX Ultra（豆包手机二代）于 9 月 16 日正式发布并开售，5499 元起（12GB+512GB，16GB+1TB 版 7499 元），由中兴通讯努比亚全链路主导、与字节跳动合作，搭载第五代骁龙8至尊版平台与豆包手机助手消费者版。\n产品核心是把 AI 智能体技术从工程样机推进到规模化量产商用：围绕「听得懂、能干活、记得住、够安全」四大能力，支持全场景自然语义理解，可自主跨应用完成比价下单、行程规划等多步骤任务——手机从「你操作它」变成「它帮你办事」。该机此前在 WAIC 2026 亮相并获 SAIL 卓越人工智能引领者奖。\n同场竞争：苹果 Apple 智能 + 全新 Siri AI 已在 WWDC26 发布；刚上市的小米 18 Fold 内置 Xiaomi 端侧模型。文章判断：跳出耗资巨大的云端大模型军备竞赛、转向端侧模型研发，正成为更多企业深度参与 AI 浪潮的路径。",
       tags: ["豆包", "NaviX Ultra", "AI智能体手机", "努比亚"],
       url: "https://www.sohu.com/a/1077629065_122014422",
       image: "https://q3.itc.cn/q_70/images03/20260918/8e7d8da3bcd743c8b9362d1748862d0b.png",
       imageCap: "配图来自原文页面"
     },
     {
-      id: "n1", cat: "芯片厂商", source: "联发科新闻室", date: "2026-09-15",
-      title: "联发科发布天玑 9600 Pro：全球首款 2nm 手机芯片，双 NPU 面向端侧智能体",
-      summary: "首发 2nm 工艺，多核功耗降低 61%、单核性能提升约 17%；全新双 NPU AI 引擎专为端侧与 Agentic AI 负载设计，支持最高 300 亿参数端侧模型。",
-      detail: "联发科 9 月 15 日于新竹宣布推出 Dimensity 9600 Pro，成为全球首款量产 2nm 手机 SoC（台积电代工），也是首款采用 Arm 下一代 C2 核心 CPU 与新一代 GPU 设计的芯片。\n性能与能效：多核功耗降低 61%，单核性能提升约 17%；新一代 GPU 峰值性能提升最高 27%、峰值功耗降低 24%、光线追踪性能提升 18%。\n端侧 AI：全新双 NPU AI 引擎针对生成式与智能体（Agentic）AI 工作负载优化，支持最高 30B 参数的端侧模型与多模态推理——这是手机芯片首次官方宣称支持 300 亿参数级端侧模型；影像与游戏体验同步升级。\n首批搭载机型预计 2026 年四季度亮相。2nm 制程 + 原生智能体算力，把端侧 AI 竞赛同时推向新高度。",
-      tags: ["天玑 9600 Pro", "2nm", "双NPU", "30B端侧模型"],
-      url: "https://www.mediatek.com/press-room/mediatek-dimensity-9600-pro-sets-new-standard-for-flagship-smartphone-chips",
-      image: "https://www.mediatek.com/hubfs/MediaTek%20Assets/Images/Static%20Images/Ghosted%20M%201200X%20630.jpg",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n17", cat: "芯片厂商", source: "腾讯新闻（慧甚/财报解读）", date: "2026-09-14",
-      title: "全志科技：毛利率跳升 10 个百分点，端侧 AI 红利初步兑现",
-      summary: "全志科技最新财报显示毛利率同比跳升约 10 个百分点，端侧 AI 平台化战略初步验证；公司正从「平板之王」转型为端侧 AI 平台型供应商，AI 视觉生态全面提速。",
-      detail: "全志科技正处在从传统平板/盒子 SoC 供应商向端侧 AI 平台化供应商的转型通道：最新财报毛利率同比跳升约 10 个百分点，被市场解读为端侧 AI 红利的初步兑现；但存货去化节奏偏慢，制约了估值修复的速度。\n产品与生态侧，7 月收官的「智慧视界」生态创新大会聚焦 AI 视觉，推动智慧视觉领域生态建设加速；在「AI 硬件风口向端侧迁移」的行业叙事下，全志与瑞芯微分别代表两条平台化路线，年内均被机构密集跟踪对比。\n公司此前以平板 SoC 起家（「平板之王」），当前产品矩阵覆盖智能硬件、智能视觉、工业等多场景，端侧 AI 平台化是其估值故事的核心变量。",
-      tags: ["全志科技", "端侧AI红利", "AI视觉", "国产芯片"],
-      url: "https://news.qq.com/rain/a/20260914A0BS6J00",
-      image: "https://inews.gtimg.com/om_ls/OCNhgKhT1pzn6wblg3AALr0EM1f7Qu1XBubxn0bFXy7NsAA_640330/0",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n4", cat: "手机厂商", source: "电脑王阿达 / 爱范儿（综合）", date: "2026-09-16",
+      id: "n4", cat: "手机厂商", source: "爱范儿（腾讯新闻）", date: "2026-09-17",
       title: "小米 18 Fold 上市：首款搭载 MiMo 端侧模型，自研玄戒 O3 + 澎湃 OS4 集结",
-      summary: "小米 18 Fold 首发集结自研玄戒 O3 芯片、澎湃 OS4 与端侧大模型三大自研科技；端侧模型内存与带宽占用直降约 30%，是首款搭载 MiMo 端侧模型的手机。",
-      detail: "小米 18 Fold 是小米首款「中折叠」形态旗舰：折叠态宽 83.6mm，展开 163.8mm、7.58 吋内屏，重 219g，被评价为「合上是护照、展开是小平板」；9 月上旬发布后于本期内上市，起售价约万元档。\n自研三件套集结：首发小米自研玄戒 O3 旗舰 SoC、澎湃 OS4 与端侧大模型——这也是首款搭载 MiMo 端侧模型的手机。评测普遍认可其折痕控制、续航（6000mAh 金沙江电池 + LPDDR6）与竖屏大屏体验；相机快门与部分系统细节仍有短板。\n端侧看点：配合 LPDDR6 内存的高带宽，理论上可支撑更大规模端侧模型运行；端侧模型对内存和带宽的占用直降约 30%，精度几乎无损。行业层面，2026 下半年国产旗舰普遍进入「百亿参数端侧模型 + 专用 NPU」配置区间。",
+      summary: "小米 18 Fold 本周开售：首发集结自研玄戒 O3 芯片、澎湃 OS4 与端侧大模型三大自研科技；端侧模型内存与带宽占用直降约 30%，是首款搭载 MiMo 端侧模型的手机。",
+      detail: "小米 18 Fold 是小米首款「中折叠」形态旗舰：折叠态宽 83.6mm，展开 163.8mm、7.58 吋内屏，重 219g；本周上市，起售价约万元档。\n爱范儿评测《敢卖一万元的小米手机，底气在哪里》给出判断：自研三件套（玄戒 O3 旗舰 SoC、澎湃 OS4、端侧大模型）是真正底气——这也是首款搭载 MiMo 端侧模型的手机；配合长鑫 LPDDR6 国产内存的高带宽，理论上可支撑更大规模端侧模型运行，端侧模型对内存和带宽的占用直降约 30%，精度几乎无损。\n评测同时指出短板：相机快门偏慢、部分系统细节仍需打磨——「一万元买的是自研栈的未来期权，而不是完美成品」。",
       tags: ["小米 18 Fold", "MiMo 端侧模型", "玄戒 O3", "折叠屏"],
-      url: "https://www.kocpc.com.tw/archives/668074",
-      image: "https://www.kocpc.com.tw/wp-content/uploads/2026/09/20260908003901_0_3e24d8.jpg",
+      url: "https://news.qq.com/rain/a/20260908A058I900",
+      image: "https://inews.gtimg.com/om_ls/Oz34X0_1P_EVn8dpkXPX80UbZBgS-3x0Rit6ZAPdPn4yoAA_640330/0",
       imageCap: "配图来自原文页面"
     },
     {
-      id: "n15", cat: "芯片厂商", source: "腾讯新闻 / 瑞芯微官网", date: "2026-09-09",
-      title: "瑞芯微：端侧 AI 撞上「内存墙」，RK182X 用 3D 堆叠抢先作答",
-      summary: "端侧大模型推理瓶颈正从算力转向内存带宽；瑞芯微 RK182X 以 3D 堆叠 DRAM + 20 TOPS NPU 支持 3B/7B 模型端侧百 token/s 输出、可多颗叠加；上半年营收 +40.6%、净利 +61.7%。",
-      detail: "端侧大模型上量后，「内存墙」成为行业共识性瓶颈——限制推理速度的不再是 NPU 算力而是内存带宽。瑞芯微被业界视作提前押注正确路线的样本，其思路是把内存堆到算力旁边：\nRK182X 系列是全球首颗 3D 架构 AI 协处理器（与兆易创新合作）：多核 RISC-V CPU + 3D 堆叠高带宽 DRAM（2.5/5GB）+ 20 TOPS INT8 NPU，支持 3B/7B 大模型端侧推理并突破百 token/s 输出，端到端延迟低；采用「主控 SoC + AI 协处理器」双芯架构，可按终端算力需求叠加一颗或多颗，给传统工业设备等存量终端补 AI 能力，已落地十余行业、300+ 客户项目。\n动态：WAIC 2026 上以「端侧 AI 领跑者」姿态展示成熟方案，新一代端侧 AI 协处理器已完成核心验证（预计 Q3 发布）；车载侧与面壁智能合作 AI BOX 座舱方案；2026 半年报营收 +40.6%、净利 +61.7%，端侧 AI 战略全面兑现。",
-      tags: ["瑞芯微", "RK182X", "内存墙", "AIoT"],
-      url: "https://news.qq.com/rain/a/20260909A08KQZ00",
-      image: "https://inews.gtimg.com/om_ls/Oq-w6dl74buF-Ll3-XrlSPSRHDVETxoR6TNFx_CbLJNqwAA_640330/0",
+      id: "n19", cat: "端侧Agent", source: "9to5Google", date: "2026-09-16",
+      title: "Google Home 开放 MCP：Claude、OpenClaw 等智能体可直接控制智能家居",
+      summary: "Google Home 正式支持 MCP 协议：Antigravity、Claude、OpenClaw 等第三方智能体可跨生态控制智能家居设备——本地优先智能体与 MCP 工具调用生态的标志性落地。",
+      detail: "据 9to5Google 9 月 16 日报道，Google Home 正式开放 MCP（Model Context Protocol）支持：第三方智能体——包括 Anthropic 的 Claude、谷歌自家的 Antigravity、开源的 OpenClaw 等——现在可以直接控制 Google Home 生态中的智能家居设备（灯光、温控、安防等）。\n意义在于「智能体互操作」：MCP 正在成为智能体接入真实世界设备的通用协议——手机厂商的系统级 Agent、开源的本地优先智能体（如 OpenClaw）与智能家居中枢，第一次可以通过同一协议对话。\n这与本周学术侧的两篇论文（MCP 工具调用在单板机上的可靠性基准 p6、车载 SLM 函数调用 p5）形成产业-学术共振：让小模型在端侧可靠地调用工具，是 2026 下半年最确定的主线。",
+      tags: ["Google Home", "MCP", "OpenClaw", "智能家居"],
+      url: "https://9to5google.com/2026/09/16/google-home-mcp/",
+      image: "https://9to5google.com/wp-content/uploads/sites/4/2026/09/Google-Home-MCP-cover.jpg",
       imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n6", cat: "大模型厂商", source: "新浪财经 / 时代周报", date: "2026-09-09",
-      title: "面壁智能开源 MiniCPM5-2B：AA 榜单 4B 以下第一，初具端侧通用 Agent 能力",
-      summary: "面壁智能开源 MiniCPM5-2B：AA 指数登顶全球 4B 以下、初具端侧通用 Agent 能力并完成多款主流芯片适配；7 月 WAIC 还发布了具身智能系列 MiniCPM-Robot。",
-      detail: "面壁智能 9 月 9 日正式开源 MiniCPM5-2B 端侧文本大模型（联合 OpenBMB 发布）：在 Artificial Analysis 综合指数以 17 分登顶，位列全球 4B 参数以下第一；在综合知识、数学推理、代码、指令遵循与智能体能力五个维度做到同尺寸领先，初具端侧通用 Agent 能力，并完成多款主流芯片平台适配。\n背景：7 月 WAIC 2026「智在终端，惠及千行」论坛上，面壁已发布该模型与公司首个具身智能系列 MiniCPM-Robot（含通用 VLA 模型 RobotManip 等），并联合中国信通院启动相关标准工作。\n商业化与生态：MiniCPM 系列端侧模型将搭载三星数款旗舰机型上市；截至 6 月底开源系列累计下载突破 3800 万次，覆盖文本、视觉、语音全模态。公司 8 月启动上市辅导，被称为「中国最大端侧 AI 独角兽」。",
-      tags: ["MiniCPM5-2B", "面壁智能", "开源", "端侧Agent"],
-      url: "https://finance.sina.com.cn/roll/2026-09-09/doc-inirfqcs5705758.shtml",
-      image: "https://n.sinaimg.cn/spider20260909/66/w1716h750/20260909/2a73-28986079a0f82f5a2ee7aba0325736a1.jpg",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n13", cat: "手机厂商", source: "凤凰科技 / 雷达财经", date: "2026-09-07",
-      title: "华为 Mate XT2 首发「全新麒麟 9050 Pro」：端侧跑 300 亿参数 MoE 模型",
-      summary: "9 月 7 日华为发布三折叠 Mate XT2 与阔直板 Pura X View，全系首发麒麟 9050 Pro（时隔数年的全新麒麟）；基于达芬奇架构 NPU，率先实现总参数 300 亿、激活 20 亿的 MoE 端侧模型。",
-      detail: "华为 9 月 7 日在广州举办全场景新品发布会，一次推出两款形态极端的新机：第三代三折叠 Mate XT2 与阔直板 Pura X View（业界首发可折叠灵盾防窥屏）。\n芯片是最大看点：全系首发麒麟 9050 Pro——继 Mate 40 之后时隔数年的全新麒麟芯片，首拆显示丝印「2035」；搭配 HarmonyOS 7，整机性能较上代提升 42%。日媒评价其「已摆脱美国限制」。\n端侧 AI：基于达芬奇架构 NPU 的端侧算力跃升，率先实现总参数 300 亿、激活参数 20 亿的 MoE 端侧大模型；华为小艺 AI 大模型亦在国家网信办首批手机端侧模型备案名单中。海思路线重新回到端侧 AI 竞争主牌桌。",
-      tags: ["华为", "Mate XT2", "麒麟9050 Pro", "MoE端侧模型"],
-      url: "https://tech.ifeng.com/c/8wF7D0O9uAg",
-      image: "https://x0.ifengimg.com/ucms/2026_37/280077E2FA4F36712B112D361F101C1FBC1D37D7_size983_w1300_h720.png",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n14", cat: "手机厂商", source: "观察者网（腾讯新闻）/ EETimes China", date: "2026-09",
-      title: "9 月旗舰 AI 手机扎堆：vivo X500 / OPPO Find X10 / 荣耀 Magic9 / 小米 18 Pro",
-      summary: "9 月被称为「机圈史上最激烈新品月」：vivo X500、OPPO Find X10、荣耀 Magic9、小米 18 Pro 集中发布；MagicOS 11、原系统 7、ColorOS 17 相继升级，「AI 智能体手机」成为发布会核心标签。",
-      detail: "9 月旗舰扎堆：苹果秋季发布会（A20 系列芯片）、vivo X500、OPPO Find X10、荣耀 Magic9、小米 18 Pro 与小米 18 Fold（玄戒 O3）、华为（麒麟 + 韬定律芯片）同台对决，媒体称激烈程度「史无前例」。\n系统层同步换代：荣耀 MagicOS 11、vivo 原系统 7、OPPO ColorOS 17 相继发布，全部把「AI 智能体手机」作为核心标签；隐私策略上荣耀、vivo、OPPO 均采用「端侧本地处理优先 + 加密云端上传」的组合。\n供给侧：网信办 7 月首次以独立类目公布 7 款手机端侧生成式 AI 备案（华为小艺、OPPO AndesGPT、vivo 蓝心、Apple 智能、小米、努比亚豆包、三星）。\n也有冷静声音：钛媒体《AI 手机的「皇帝新衣」》指出厂商 PPT 宏大但用户端功能（AI 消除/摘要/转写）体验与宣传存在落差——行业需要在「发布会 AI」与「日常可用 AI」之间补齐差距。",
-      tags: ["AI手机", "vivo X500", "OPPO Find X10", "荣耀 Magic9"],
-      url: "https://news.qq.com/rain/a/20260826A0DRLH00"
-    },
-    {
-      id: "n16", cat: "芯片厂商", source: "新浪科技 / 展锐官网", date: "2026-08-14",
-      title: "紫光展锐：三大核心能力构筑 AI 新基建，平台化端侧 AI + 5G",
-      summary: "展锐以「AI+5G」平台化端侧 AI 方案服务消费电子：从软件栈到异构计算平台提供端侧算力与连接基座；5G SoC 进入全球头部品牌供应链，新紫光集团把端侧 AI 芯片列入四大研发方向。",
-      detail: "紫光展锐的端侧 AI 路线是「平台化」：以端侧算力平台、AI 软件栈、5G 连接三大核心能力为消费电子提供端侧 AI 算力与稳定连接基座。AWE 2026 上以「芯联世界，万物 AI+」为主题展示 AI+5G 解决方案，MWC 2026 亦展出从软件栈到异构计算平台的 UNISOC 端侧 AI 方案。\n市场侧，展锐 5G SoC 已进入全球头部品牌供应链（小米部分海外机型搭载并出货印度等市场），被评价为「终于熬出了头」——5G 能力开始被全球市场验证。\n集团层面：新紫光集团 5 月成立后确立四大重点研发方向，端侧 AI 芯片与 AI 工具位列其中，同时布局面向 AGI 的全链路研发；展锐作为集团端侧算力核心平台，承担「AI 新基建」角色。",
-      tags: ["紫光展锐", "AI+5G", "端侧AI平台", "UNISOC"],
-      url: "https://finance.sina.com.cn/tech/roll/2026-08-14/doc-ininfvzv2967822.shtml",
-      image: "https://n.sinaimg.cn/spider20260814/56/w548h308/20260814/1f26-36f61bf716602006fbff276faf15db20.jpg",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n8", cat: "芯片厂商", source: "Qualcomm Newsroom / TechPowerUp", date: "2026-08-31",
-      title: "高通与 HUMAIN 推出 Horizon Ultra AI PC：首发 18 核骁龙 X2 Elite，面向端侧 Agentic AI",
-      summary: "LEAP 2026 上高通与沙特 HUMAIN 发布 Horizon Ultra AI PC：首发 18 核心骁龙 X2 Elite 平台，CPU+GPU+NPU 融合面向端侧 AI 与智能体，企业版 9 月 20 日起可用。",
-      detail: "高通与沙特 HUMAIN（公共投资基金 PIF 旗下 AI 公司）在 LEAP 2026 联合发布 Horizon Ultra AI PC，作为 Horizon 产品线新旗舰：首发搭载 18 核心骁龙 X2 Elite 平台，把 CPU、GPU 与 NPU 算力聚合面向端侧 AI 工作负载（报道称 NPU 算力达 80 TOPS 级），主打 Agentic AI 场景与 Snapdragon Developer Workspace 开发者体验，首发合作微软平台，企业版于 9 月 20 日开放。\n同期高通还宣布在 HUMAIN 设立 AI 工程中心，深化沙特本地化 AI 基础设施合作。\n该产品延续骁龙 X 系列在 PC 端侧 AI 的路线——「端侧 AI」战场正从手机扩展到 PC、机器人与边缘整机等多形态终端。",
-      tags: ["AI PC", "骁龙 X2 Elite", "HUMAIN", "LEAP 2026"],
-      url: "https://www.techpowerup.com/352216/qualcomm-and-humain-unveil-horizon-ultra-ai-pc-at-leap-2026"
-    },
-    {
-      id: "n5", cat: "大模型厂商", source: "Apple Machine Learning Research", date: "2026-06-08",
-      title: "苹果 AFM 3 家族：20B 稀疏模型全端侧运行，Foundation Models 框架大升级",
-      summary: "WWDC26 发布第三代基础模型：AFM 3 Core（约 3B 稠密端侧）与 AFM 3 Core Advanced（约 20B 稀疏架构、激活仅 1–4B）全端侧运行；另有三款云端模型跑在私有云计算上。",
-      detail: "苹果在 WWDC26（6 月 8 日）发表《Introducing the Third Generation of Apple's Foundation Models》，公开第三代基础模型 AFM 3 家族的架构与评估细节：\n端侧两款——AFM 3 Core 为约 3B 参数稠密模型，为 Apple 芯片优化、低延迟运行；AFM 3 Core Advanced 是头条：约 20B 总参数的稀疏（MoE）架构，每次推理仅激活约 1–4B 参数，完全在设备端运行，是苹果迄今最强大的端侧模型，仅在最强 Apple 芯片机型上解锁。在其约 10 亿激活参数档位上，人类评估 Overall Quality 偏好率 44.7% vs 17.6% 领先对比模型。\n云端三款模型全部运行于私有云计算（Private Cloud Compute）：用户数据不存储、苹果不可访问。另有报道称该家族训练与 Google 有合作，但苹果澄清 Siri 不由 Gemini 驱动。\n开发者侧：Foundation Models 框架（Swift 原生 API）大升级——新增私有云计算访问、第三方与开源模型接入、引导式生成（guided generation）与工具调用；Siri AI 全面重构，Siri Expressive Voices 完全端侧实时合成语音。",
-      tags: ["AFM3", "Apple Intelligence", "Siri AI", "稀疏MoE"],
-      url: "https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models",
-      image: "https://mlr.cdn-apple.com/media/hero_AFM_7f9df52a3e.png",
-      imageCap: "配图来自 Apple ML Research"
-    },
-    {
-      id: "n7", cat: "大模型厂商", source: "Qwen 官方 / Hugging Face", date: "2026-03-02",
-      title: "Qwen 端侧侧写：Qwen3.5 小尺寸系列开源（0.8B–9B 原生多模态）",
-      summary: "通义千问开源 Qwen3.5-0.8B/2B/4B/9B 四款小尺寸模型，原生多模态训练，0.8B/2B 面向手机与 IoT 等端侧场景；马斯克点评「惊人的智能」。",
-      detail: "阿里通义千问 3 月 2 日晚开源 4 款 Qwen3.5 小尺寸模型（0.8B / 2B / 4B / 9B）：官方强调这不是大模型的简单缩小版，而是基于 Qwen3.5 基础模型构建、原生多模态训练——轻量模型也具备视觉理解能力，能直接处理图像与文本，采用高智能密度设计与 MoE 机制提升计算效率。\n定位分工：0.8B 与 2B 体积极小、推理速度极快，面向移动设备、IoT 等端侧场景；4B / 9B 满足服务器端与多样化部署。Qwen3.5 家族（0.8B–397B）发布后在 Hugging Face 开源榜包揽前四，马斯克点赞称其拥有「惊人的智能」。\n模型权重在 Hugging Face / ModelScope 开放下载，已成为国产端侧生态（手机、车机与第三方固件适配）的重要模型供给；后续 Qwen3.8-Flash-Next（8 月底）作为 Qwen4 架构预览延续了这条开源路线。",
-      tags: ["Qwen3.5", "开源小模型", "原生多模态", "IoT"],
-      url: "https://huggingface.co/Qwen/Qwen3.5-0.8B",
-      image: "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Qwen/Qwen3.5-0.8B.png",
-      imageCap: "模型卡来自 Hugging Face"
-    },
-    {
-      id: "n9", cat: "行业动态", source: "新京报 / 新浪财经", date: "2026-07-28",
-      title: "行业观察：《端侧智能2026：规模化落地元年》报告发布，端云协同成主流叙事",
-      summary: "行业报告宣告「告别云端军备竞赛」：端侧智能从概念验证迈向规模化落地；高通同场发声「端云协同是个人 AI 的必然方向，分布式推理将重构终端算力体系」。",
-      detail: "近期产业信号密集：面壁智能联合产业方发布《端侧智能2026：规模化落地元年》报告，核心判断是端侧 AI 正「告别云端军备竞赛」，从概念验证与 Demo 阶段进入规模化落地阶段——2025 年国内端侧大模型备案已超 200 款，2026 年预计达 360 款。\n车载场景的转向最具代表性：从单纯比拼端侧参数量，转向「云端处理复杂推理 + 车机运行小模型」的端云协同架构；算力、模型、网络等要素在 2026 年同期接近成熟，被业内称为智能汽车端云协同的「分水岭」。\n高通中国朱元堃 7 月底表态：「端云协同是个人 AI 的必然方向，分布式推理将重构终端算力体系」——与本周天玑 9600 Pro、骁龙 8 Elite Gen 6 把 NPU 面向智能体重构的取向一致。",
-      tags: ["行业观察", "端云协同", "规模化落地", "分布式推理"],
-      url: "https://www.bjnews.com.cn/detail/1784964485129329.html"
     }
   ],
 
   /* ---------------- 板块二：科研前沿 ----------------
    * 收录标准：SCI 二区以上期刊 / CCF-B 以上会议论文（group=published）
-   * 本周 arXiv 新作作为预印本收录跟踪（group=recent），录用后转入已发表
+   * 近期 arXiv 新作作为预印本收录跟踪（group=recent），录用后转入已发表
    * detail 为按论文原文（摘要）忠实扩写的中文介绍
    * image=论文结构图(自动抓取自 arXiv HTML 版, 无 HTML 版时前端生成兜底封面)
    */
@@ -311,7 +224,7 @@ const WEEKLY_DATA = {
       authors: "Keivan Alizadeh Sharifi, Iman Mirzadeh 等（Apple）",
       venue: "ICLR 2024", level: "顶会",
       summary: "苹果经典工作：利用激活稀疏性与投影层「闪存驻留」，把超过可用 DRAM 的大模型推理搬到手机上，是端侧大模型存储卸载路线的奠基之作。",
-      detail: "研究背景：LLM 的参数量远超手机等设备的 DRAM 容量，如何「在有限内存下跑超内存大小的模型」是端侧部署的根本问题。苹果团队的答案是：不把整个模型装进 DRAM，而是把大部分权重留在闪存（NAND）上，推理时按需读取。\n两大核心技术：其一是稀疏感知（sparsity-aware）的加载——利用前馈层激活的稀疏性，只读取非零激活对应的权重行，大幅减少闪存读取量；其二是「带投影层的低秩读取」——为每层存储一组小的「锚点」神经元及其投影（低秩近似），先读锚点再投影出其余输出，进一步压缩需要搬运的数据量。两者叠加在准确率几乎无损的前提下显著降低时延。\n效果与影响：该方法使超出 DRAM 容量 2 倍以上的 LLM 能在移动设备上高效运行，直接影响了 Apple Intelligence 的端侧推理栈；此后所有「闪存/SSD 卸载」方向的研究（包括本周的 LeanStream）都以它为对照基线。",
+      detail: "研究背景：LLM 的参数量远超手机等设备的 DRAM 容量，如何「在有限内存下跑超内存大小的模型」是端侧部署的根本问题。苹果团队的答案是：不把整个模型装进 DRAM，而是把大部分权重留在闪存（NAND）上，推理时按需读取。\n两大核心技术：其一是稀疏感知（sparsity-aware）的加载——利用前馈层激活的稀疏性，只读取非零激活对应的权重行，大幅减少闪存读取量；其二是「带投影层的低秩读取」——为每层存储一组小的「锚点」神经元及其投影（低秩近似），先读锚点再投影出其余输出，进一步压缩需要搬运的数据量。两者叠加在准确率几乎无损的前提下显著降低时延。\n效果与影响：该方法使超出 DRAM 容量 2 倍以上的 LLM 能在移动设备上高效运行，直接影响了 Apple Intelligence 的端侧推理栈；此后所有「闪存/SSD 卸载」方向的研究（包括近期的 LeanStream）都以它为对照基线。",
       tags: ["闪存卸载", "稀疏性", "奠基工作"],
       url: "https://arxiv.org/abs/2312.11514"
     },
@@ -341,7 +254,7 @@ const WEEKLY_DATA = {
       authors: "TSQP 作者团队",
       venue: "IEEE S&P 2025", level: "CCF-A",
       summary: "面向量化 LLM 的 TEE 防护：将推理按空间切分，敏感计算保留 TEE、量化等重负载卸载 GPU，兼顾安全与效率；与 ArrowCloak 同属 TSLP 路线。",
-      detail: "研究背景：与 ArrowCloak 同属「TEE-Shielded LLM Partition（TSLP）」技术路线，但聚焦量化 LLM 场景——量化是端侧部署的标配，而量化运算的算力需求使纯 TEE 执行不现实。\n方法（TSQP）：把量化 LLM 的推理计算图按「空间」切分：安全敏感的计算（如部分线性层的密钥相关运算）保留在 TEE 内，计算繁重的量化矩阵乘等卸载到不受信任的 GPU 加速；通过特定的空间划分与数据变换，保证卸载部分不泄露权重信息，同时把 TEE 内的计算与通信开销控制在可用范围。\n效果：相较纯 TEE 方案大幅提升性能，相较无保护卸载显著提升机密性，在安全-效率曲线上取得更好的平衡点。\n后续：本周 Collapse 攻击（见 p3）指出其特定架构实现存在可利用的攻击面，说明 TSLP 路线仍需形式化的安全边界分析——这正是 p3 的贡献方向。",
+      detail: "研究背景：与 ArrowCloak 同属「TEE-Shielded LLM Partition（TSLP）」技术路线，但聚焦量化 LLM 场景——量化是端侧部署的标配，而量化运算的算力需求使纯 TEE 执行不现实。\n方法（TSQP）：把量化 LLM 的推理计算图按「空间」切分：安全敏感的计算保留在 TEE 内，计算繁重的量化矩阵乘等卸载到不受信任的 GPU 加速；通过特定的空间划分与数据变换，保证卸载部分不泄露权重信息，同时把 TEE 内的计算与通信开销控制在可用范围。\n效果：相较纯 TEE 方案大幅提升性能，相较无保护卸载显著提升机密性，在安全-效率曲线上取得更好的平衡点。\n后续：本周 Collapse 攻击（见 p3）指出其特定架构实现存在可利用的攻击面，说明 TSLP 路线仍需形式化的安全边界分析——这正是 p3 的贡献方向。",
       tags: ["TEE", "量化", "IEEE S&P'25"],
       url: "https://sp2025.ieee-security.org"
     },
@@ -375,7 +288,7 @@ const WEEKLY_DATA = {
       { group: "厂商官方博客", name: "Apple Machine Learning Research", type: "厂商研究博客", letter: "A",
         text: "AFM 系列技术报告、端侧训练与适配的一手资料。",
         url: "https://machinelearning.apple.com",
-        intro: "苹果的官方机器学习研究博客，发表 Apple Intelligence 背后的基础模型（AFM 系列）技术报告、端侧优化的第一手细节，以及 ML 团队的论文解读。\n代表作：《Introducing Apple's On-Device and Server Foundation Models》（2024，首次公开 3B 端侧模型的架构与训练后优化）、《Updates to Apple's Foundation Models》（2025）与本周收录的 AFM 3 第三代报告（2026）。\n适合谁：想了解工业界最强端侧模型如何炼成（后训练、蒸馏、适配器、评测方法）的工程师与研究者。文章全部免费、无需注册。" },
+        intro: "苹果的官方机器学习研究博客，发表 Apple Intelligence 背后的基础模型（AFM 系列）技术报告、端侧优化的第一手细节，以及 ML 团队的论文解读。\n代表作：《Introducing Apple's On-Device and Server Foundation Models》（2024，首次公开 3B 端侧模型的架构与训练后优化）、《Updates to Apple's Foundation Models》（2025）与 AFM 3 第三代报告（2026）。\n适合谁：想了解工业界最强端侧模型如何炼成（后训练、蒸馏、适配器、评测方法）的工程师与研究者。文章全部免费、无需注册。" },
       { group: "厂商官方博客", name: "Qualcomm AI Hub & Blog", type: "厂商研究博客", letter: "Q",
         text: "数百个端侧优化模型一键部署到骁龙平台，量化、编译与异构计算的工程实践大全。",
         url: "https://aihub.qualcomm.com",
@@ -383,7 +296,7 @@ const WEEKLY_DATA = {
       { group: "厂商官方博客", name: "Google DeepMind / Developers Blog", type: "厂商研究博客", letter: "G",
         text: "Gemini Nano、AICore 与 Android 端侧 AI 的官方进展；AICORE API 与 ML Kit 的端侧能力说明中心。",
         url: "https://blog.google/technology/ai/",
-        intro: "Google 官方 AI 博客（DeepMind + Developers 合流），端侧相关内容集中在：Gemini Nano 与 Android AICore 的每次更新、ML Kit / MediaPipe 的端侧能力（推荐用Generative AI API 一行代码调用内置小模型）、以及 Gemma 开源系列的发布说明。\n看点：Gemma 系列开源模型的发布与变体（含面向端侧的轻量版）、Chrome / Android 内置 AI 能力路线图。\n适合谁：安卓生态开发者，以及跟踪「系统级内置模型」路线的从业者。" },
+        intro: "Google 官方 AI 博客（DeepMind + Developers 合流），端侧相关内容集中在：Gemini Nano 与 Android AICore 的每次更新、ML Kit / MediaPipe 的端侧能力（Generative AI API 一行代码调用内置小模型）、以及 Gemma 开源系列的发布说明。\n看点：Gemma 系列开源模型的发布与变体（含面向端侧的轻量版）、Chrome / Android 内置 AI 能力路线图。\n适合谁：安卓生态开发者，以及跟踪「系统级内置模型」路线的从业者。" },
       { group: "厂商官方博客", name: "面壁智能数据洞察", type: "厂商研究博客", letter: "面",
         text: "MiniCPM 技术解读与「知识密度」路线的持续输出，国产端侧模型的第一视角。",
         url: "https://www.modelbest.cn",
@@ -427,11 +340,11 @@ const WEEKLY_DATA = {
       { group: "中文媒体 · 公众号", name: "电子工程专辑 EETimes China", type: "中文媒体 · 公众号同名", letter: "电",
         text: "半导体产业深度媒体，端侧芯片（瑞芯微 / 展锐 / 全志 / 海思）动态与供应链跟踪的首选中文信源。",
         url: "https://www.eet-china.com",
-        intro: "老牌半导体产业媒体（微信公众号同名），强项在芯片层：SoC 架构解析、NPU 算力对比、供应链与工艺节点报道，国产端侧芯片厂商（瑞芯微、紫光展锐、全志、海思）的动态跟踪密度远高于泛科技媒体。\n看点：新品发布的技术拆解、工程师社区讨论、供应链数据；本站多条芯片厂商条目（如 9 月机圈混战）即源于此。\n适合谁：需要看懂「端侧 AI 的算力从哪来」的硬件工程师与产业分析师。" },
+        intro: "老牌半导体产业媒体（微信公众号同名），强项在芯片层：SoC 架构解析、NPU 算力对比、供应链与工艺节点报道，国产端侧芯片厂商（瑞芯微、紫光展锐、全志、海思）的动态跟踪密度远高于泛科技媒体。\n看点：新品发布的技术拆解、工程师社区讨论、供应链数据。\n适合谁：需要看懂「端侧 AI 的算力从哪来」的硬件工程师与产业分析师。" },
       { group: "中文媒体 · 公众号", name: "IT之家", type: "中文媒体 · 微信公众号同名", letter: "I",
         text: "消费科技快讯，手机厂商端侧 AI 功能与新机动态的快速信源。",
         url: "https://www.ithome.com",
-        intro: "国内更新最快的消费科技资讯站之一（微信公众号同名），手机厂商的端侧 AI 功能上线、系统更新（ColorOS/原系统/MagicOS 的 AI 特性）、新机曝光与发布第一手快讯多源于此。\n看点：更新频率极高、带官方配图；适合作为 RSS 订阅源做每日扫描（本站 fetch_news 脚本已收录其 RSS）。\n适合谁：关注「端侧 AI 功能今天上了什么新」的产品与运营同学。" }
+        intro: "国内更新最快的消费科技资讯站之一（微信公众号同名），手机厂商的端侧 AI 功能上线、系统更新（ColorOS/原系统/MagicOS 的 AI 特性）、新机曝光与发布第一手快讯多源于此。\n看点：更新频率极高、带官方配图；适合作为 RSS 订阅源做每日扫描（本站 fetch_news.py 已收录其 RSS）。\n适合谁：关注「端侧 AI 功能今天上了什么新」的产品与运营同学。" }
     ]
   }
 };
