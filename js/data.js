@@ -137,12 +137,12 @@ const WEEKLY_DATA = {
       imageCap: "配图来自原文页面"
     },
     {
-      id: "n14", cat: "手机厂商", source: "EETimes China / 观察者网", date: "2026-09",
+      id: "n14", cat: "手机厂商", source: "观察者网（腾讯新闻）/ EETimes China", date: "2026-09",
       title: "9 月旗舰 AI 手机扎堆：vivo X500 / OPPO Find X10 / 荣耀 Magic9 / 小米 18 Pro",
       summary: "9 月被称为「机圈史上最激烈新品月」：vivo X500、OPPO Find X10、荣耀 Magic9、小米 18 Pro 集中发布；MagicOS 11、原系统 7、ColorOS 17 相继升级，「AI 智能体手机」成为发布会核心标签。",
       detail: "9 月旗舰扎堆：苹果秋季发布会（A20 系列芯片）、vivo X500、OPPO Find X10、荣耀 Magic9、小米 18 Pro 与小米 18 Fold（玄戒 O3）、华为（麒麟 + 韬定律芯片）同台对决，媒体称激烈程度「史无前例」。\n系统层同步换代：荣耀 MagicOS 11、vivo 原系统 7、OPPO ColorOS 17 相继发布，全部把「AI 智能体手机」作为核心标签；隐私策略上荣耀、vivo、OPPO 均采用「端侧本地处理优先 + 加密云端上传」的组合。\n供给侧：网信办 7 月首次以独立类目公布 7 款手机端侧生成式 AI 备案（华为小艺、OPPO AndesGPT、vivo 蓝心、Apple 智能、小米、努比亚豆包、三星）。\n也有冷静声音：钛媒体《AI 手机的「皇帝新衣」》指出厂商 PPT 宏大但用户端功能（AI 消除/摘要/转写）体验与宣传存在落差——行业需要在「发布会 AI」与「日常可用 AI」之间补齐差距。",
       tags: ["AI手机", "vivo X500", "OPPO Find X10", "荣耀 Magic9"],
-      url: "https://www.eet-china.com/mp/a520119.html"
+      url: "https://news.qq.com/rain/a/20260826A0DRLH00"
     },
     {
       id: "n16", cat: "芯片厂商", source: "新浪科技 / 展锐官网", date: "2026-08-14",
@@ -400,10 +400,10 @@ const WEEKLY_DATA = {
         text: "从 nanoGPT 到 LLM101n，把大模型拆到最小可运行单元；理解小模型训练原理的最佳入门材料。",
         url: "https://karpathy.github.io",
         intro: "前特斯拉 AI 总监、OpenAI 创始成员 Karpathy 的博客与公开课合集。虽然不专门写「端侧」，但他把 transformer 训练拆到最小可运行单元的讲解方式，是理解小模型（也是端侧模型）原理的最佳起点。\n代表作：《The Unreasonable Effectiveness of Recurrent Neural Networks》、nanoGPT（约 300 行训练出 GPT-2）、视频课《Let's build GPT》与《Deep Dive into LLMs》、以及教学项目 LLM101n。\n适合谁：需要补齐「模型内部原理」基础的端侧工程师；所有材料免费。" },
-      { group: "个人博客", name: "Horace He", type: "个人博客", letter: "H",
-        text: "PyTorch 核心 contributor，专注推理效率与 ML 系统；写端侧 / 推理优化最深入的个人博客之一。",
-        url: "https://horacehe.gg",
-        intro: "Horace He（PyTorch / TorchInference 核心 contributor）的个人博客，主题集中在推理效率与 ML 系统的交叉点：注意力变体、量化误差分析、Kernel 融合、动态批处理等。\n代表作：《Fast Attention》系列的测算与思考（对 FlashAttention 一代的背景理解极有帮助）、关于 LLM 推理栈瓶颈的系统性分析。\n适合谁：做推理优化（云端或端侧）的研究者与内核工程师——文章以「把问题算清楚」著称，公式与实测并重。" },
+      { group: "个人博客", name: "Tri Dao", type: "个人博客", letter: "T",
+        text: "FlashAttention 作者，专注高效注意力与推理 Kernel；端侧推理框架大量复用他的工作。",
+        url: "https://tridao.me",
+        intro: "Tri Dao（普林斯顿，FlashAttention / FlashDecoding / Mamba 共同作者）的个人主页与博客，主题是高效深度学习：注意力变体、IO 感知的 Kernel 设计、长上下文推理优化。\n看点：FlashAttention 系列论文与博客讲解——端侧推理框架（llama.cpp、MLC 等）的注意力实现大量建立在他的工作之上；对理解「推理为什么快/慢」的底层逻辑极有价值。\n适合谁：做推理 Kernel 与模型架构优化的工程师与研究者。" },
       { group: "个人博客", name: "Simon Willison", type: "个人博客", letter: "S",
         text: "LLM 应用实践的一手笔记，工具调用、提示工程与安全议题跟踪，更新勤、观点实。",
         url: "https://simonwillison.net",
