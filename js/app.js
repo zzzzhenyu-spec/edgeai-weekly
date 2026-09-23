@@ -46,13 +46,19 @@
   $("footer-meta").textContent = D.meta.issue + " · 数据更新于 " + D.meta.updated + " · 资讯 " + D.news.length + " 条 / 论文 " + D.papers.length + " 篇 / 资源 " + D.knowledge.resources.length + " 个";
 
   function countUp(el, target, suffix) {
-    var t0 = null, dur = 900;
+    var t0 = null, dur = 900, done = false;
+    function finish() {
+      if (!done) { done = true; el.textContent = target + (suffix || ""); }
+    }
+    var timer = setTimeout(finish, dur + 350);   // rAF 被后台节流时的兜底
     function step(t) {
+      if (done) return;
       if (!t0) t0 = t;
       var k = Math.min((t - t0) / dur, 1);
       k = 1 - Math.pow(1 - k, 3);
       el.textContent = Math.round(target * k) + (suffix || "");
       if (k < 1) requestAnimationFrame(step);
+      else { done = true; clearTimeout(timer); }
     }
     requestAnimationFrame(step);
   }
@@ -66,7 +72,7 @@
    * 全部从 data.js 自动统计，每周换数据后自动更新
    * ============================================================ */
   var VIZ_COLORS = ["#22d3ee", "#818cf8", "#e879f9", "#fbbf24", "#34d399", "#f87171"];
-  var NEWS_CAT_COLORS = { "芯片厂商": "#22d3ee", "手机厂商": "#818cf8", "大模型厂商": "#e879f9", "行业动态": "#fbbf24" };
+  var NEWS_CAT_COLORS = { "端侧Agent": "#34d399", "芯片厂商": "#22d3ee", "手机厂商": "#818cf8", "大模型厂商": "#e879f9", "行业动态": "#fbbf24" };
 
   function buildCloudWords() {
     var parts = [];
@@ -200,7 +206,7 @@
   /* ============================================================
    * 板块一：资讯
    * ============================================================ */
-  var NEWS_CATS = ["全部", "芯片厂商", "手机厂商", "大模型厂商", "行业动态"];
+  var NEWS_CATS = ["全部", "端侧Agent", "芯片厂商", "手机厂商", "大模型厂商", "行业动态"];
   var newsFilter = "全部";
 
   function newsCard(n) {
@@ -303,7 +309,7 @@
       "<p>" + esc(t.text) + "</p></div>";
   }).join("");
 
-  $("res-grid").innerHTML = D.knowledge.resources.map(function (r) {
+  function resCard(r) {
     return '<div class="res-card reveal">' +
       '<div class="res-head">' +
         '<span class="res-avatar">' + esc(r.letter || r.name.charAt(0)) + "</span>" +
@@ -312,15 +318,117 @@
       "<p>" + esc(r.text) + "</p>" +
       '<a class="res-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">访问 ↗</a>' +
       "</div>";
+  }
+  var RES_GROUPS = ["厂商官方博客", "个人博客", "中文媒体 · 公众号"];
+  var RES_GROUP_COLORS = { "厂商官方博客": "#22d3ee", "个人博客": "#818cf8", "中文媒体 · 公众号": "#fbbf24" };
+  $("res-zone").innerHTML = RES_GROUPS.map(function (g) {
+    var items = D.knowledge.resources.filter(function (r) { return r.group === g; });
+    if (!items.length) return "";
+    return '<h3 class="sub-h">' + esc(g) + "</h3>" +
+      '<div class="res-grid">' + items.map(resCard).join("") + "</div>";
   }).join("");
+
+  /* 博客卡片点击 -> 简介面板 */
+  function hostOf(u) {
+    var m = String(u || "").match(/^https?:\/\/([^\/]+)/);
+    return m ? m[1] : "原文";
+  }
+  function resCoverSVG(rc, color) {
+    return '<svg viewBox="0 0 640 260" role="img" aria-label="封面图">' +
+      '<defs><linearGradient id="covbg2" x1="0" y1="0" x2="1" y2="1">' +
+      '<stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/></linearGradient></defs>' +
+      '<rect width="640" height="260" fill="url(#covbg2)"/>' +
+      '<circle cx="560" cy="36" r="110" fill="' + color + '" opacity="0.16"/>' +
+      '<circle cx="70" cy="240" r="90" fill="' + color + '" opacity="0.10"/>' +
+      '<text x="320" y="120" text-anchor="middle" font-size="86" font-weight="800" fill="' + color + '" opacity="0.9">' + esc(rc.letter || rc.name.charAt(0)) + "</text>" +
+      '<text x="320" y="196" text-anchor="middle" font-size="21" font-weight="700" fill="#e8ecf6">' + esc(rc.name.slice(0, 26)) + "</text>" +
+      '<text x="320" y="226" text-anchor="middle" font-size="14" fill="#64708a">' + esc(rc.type) + "</text>" +
+      "</svg>";
+  }
+  function resPanelHTML(rc) {
+    var color = RES_GROUP_COLORS[rc.group] || "#818cf8";
+    var paras = String(rc.intro || rc.text).split("\n").filter(Boolean)
+      .map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
+    return '<div class="panel-kicker">' +
+        '<span class="src-badge" style="color:' + color + ';border-color:' + color + '55;background:' + color + '12">' + esc(rc.group) + "</span>" +
+        '<span class="card-date">' + esc(rc.type) + "</span>" +
+      "</div>" +
+      "<h3>" + esc(rc.name) + "</h3>" +
+      '<div class="panel-fig">' + resCoverSVG(rc, color) + "</div>" +
+      '<div class="panel-detail">' + paras + "</div>" +
+      '<div class="panel-actions"><a class="btn-src" href="' + esc(rc.url) + '" target="_blank" rel="noopener">访问 ' + esc(hostOf(rc.url)) + " ↗</a></div>";
+  }
+  $("res-zone").addEventListener("click", function (e) {
+    if (e.target.closest("a")) return;
+    var card = e.target.closest(".res-card");
+    if (!card) return;
+    var name = card.querySelector("h4").textContent;
+    var rc = D.knowledge.resources.filter(function (x) { return x.name === name; })[0];
+    if (!rc) return;
+    panelBody.innerHTML = resPanelHTML(rc);
+    panelBody.scrollTop = 0;
+    panel.classList.add("open");
+    overlay.classList.add("show");
+    document.body.classList.add("panel-open");
+  });
 
   /* ============================================================
    * 详情抽屉
    * ============================================================ */
   var panel = $("detail-panel"), overlay = $("overlay"), panelBody = $("panel-body");
 
-  function openPanel(html) {
-    panelBody.innerHTML = html;
+  /* ---------- 详情配图：真实图片 + 生成式兜底封面 ---------- */
+  function coverLines(title) {
+    var s = String(title || ""), out = [], cur = "", w = 0;
+    for (var i = 0; i < s.length && out.length < 2; i++) {
+      var ch = s.charAt(i);
+      var cw = ch.charCodeAt(0) > 255 ? 1 : 0.55;
+      if (w + cw > 19.5) { out.push(cur); cur = ""; w = 0; }
+      cur += ch; w += cw;
+    }
+    if (out.length < 2 && cur) out.push(cur);
+    if (out.length === 2 && s.length > (out[0] + out[1]).length) {
+      out[1] = out[1].replace(/.{1,3}$/, "") + "…";
+    }
+    if (!out.length) out.push("");
+    return out;
+  }
+
+  function coverSVG(item, type) {
+    var color = type === "news" ? (NEWS_CAT_COLORS[item.cat] || "#818cf8") : (CAT_COLOR[item.cat] || "#818cf8");
+    var L = coverLines(item.title);
+    var label = type === "news" ? ("EDGE AI WEEKLY · " + item.cat) : ("PAPER · " + (item.venue || ""));
+    var sub = (item.date || "") + (item.source ? " · " + item.source : "");
+    return '<svg viewBox="0 0 640 360" role="img" aria-label="封面图">' +
+      '<defs><linearGradient id="covbg" x1="0" y1="0" x2="1" y2="1">' +
+      '<stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/></linearGradient></defs>' +
+      '<rect width="640" height="360" fill="url(#covbg)"/>' +
+      '<circle cx="560" cy="46" r="150" fill="' + color + '" opacity="0.16"/>' +
+      '<circle cx="76" cy="330" r="110" fill="' + color + '" opacity="0.10"/>' +
+      '<rect x="48" y="88" width="56" height="4" rx="2" fill="' + color + '"/>' +
+      '<text x="48" y="64" font-size="17" letter-spacing="3" fill="' + color + '" font-family="Consolas, monospace">' + esc(label.slice(0, 40)) + "</text>" +
+      '<text x="48" y="152" font-size="30" font-weight="700" fill="#e8ecf6">' + esc(L[0]) + "</text>" +
+      '<text x="48" y="198" font-size="30" font-weight="700" fill="#e8ecf6">' + esc(L[1] || "") + "</text>" +
+      '<text x="48" y="322" font-size="16" fill="#64708a">' + esc(sub.slice(0, 52)) + "</text>" +
+      "</svg>";
+  }
+
+  function figureHTML(item, type) {
+    var cap = item.imageCap ? '<div class="fig-cap">' + esc(item.imageCap) + "</div>" : "";
+    if (item.image) {
+      return '<div class="panel-fig"><img src="' + esc(item.image) + '" alt="' + esc(item.title) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer">' + cap + "</div>";
+    }
+    return '<div class="panel-fig">' + coverSVG(item, type) + "</div>";
+  }
+
+  function openPanel(type, item) {
+    panelBody.innerHTML = detailHTML(type, item);
+    var img = panelBody.querySelector(".panel-fig img");
+    if (img) {
+      img.addEventListener("error", function () {
+        img.parentElement.innerHTML = coverSVG(item, type);
+      });
+    }
     panelBody.scrollTop = 0;
     panel.classList.add("open");
     overlay.classList.add("show");
@@ -354,6 +462,7 @@
       .map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
     return '' +
       '<div class="panel-kicker">' + kicker + "</div>" +
+      figureHTML(item, type) +
       "<h3>" + esc(item.title) + "</h3>" +
       '<div class="panel-meta">' + meta + "</div>" +
       '<div class="panel-tags">' + (item.tags || []).map(function (t) { return '<span class="tag"># ' + esc(t) + '</span>'; }).join("") + "</div>" +
@@ -365,7 +474,7 @@
       var card = e.target.closest(".card"); if (!card) return;
       var id = card.dataset.id;
       var item = (type === "news" ? D.news : D.papers).filter(function (x) { return x.id === id; })[0];
-      if (item) openPanel(detailHTML(type, item));
+      if (item) openPanel(type, item);
     });
     grid.addEventListener("keydown", function (e) {
       if (e.key !== "Enter") return;

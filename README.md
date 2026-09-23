@@ -36,10 +36,15 @@ weekly_info/
 
 ```powershell
 cd D:\Code\weekly_info
-powershell -ExecutionPolicy Bypass -File scripts\fetch_papers.ps1   # -> data\papers_candidates.json
-powershell -ExecutionPolicy Bypass -File scripts\fetch_news.ps1     # -> data\news_candidates.json
-powershell -ExecutionPolicy Bypass -File scripts\check_dblp.ps1     # -> data\papers_dblp.json (核对venue)
+powershell -ExecutionPolicy Bypass -File scripts\fetch_papers.ps1      # -> data\papers_candidates.json
+powershell -ExecutionPolicy Bypass -File scripts\fetch_news.ps1        # -> data\news_candidates.json
+powershell -ExecutionPolicy Bypass -File scripts\check_dblp.ps1        # -> data\papers_dblp.json (核对venue)
+powershell -ExecutionPolicy Bypass -File scripts\find_article.ps1      # -> 定位真实文章URL(Bing新闻)
+powershell -ExecutionPolicy Bypass -File scripts\fetch_paper_figs.ps1  # -> data\paper_figs.json (论文结构图)
 ```
+
+> 芯片/手机厂商官方新闻室大多没有 RSS（联发科/高通/瑞芯微/展锐/全志/华为等），
+> 每周对重点厂商做定向搜索（参照 `find_article.ps1`）即可；RSS 源列表见 `scripts/sources.json`。
 
 然后在 `js/data.js` 中人工整理：
 

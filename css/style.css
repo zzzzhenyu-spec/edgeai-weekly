@@ -239,7 +239,19 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .src-芯片厂商 { color: var(--accent); border-color: rgba(34,211,238,0.4); background: rgba(34,211,238,0.08); }
 .src-手机厂商 { color: var(--accent2); border-color: rgba(129,140,248,0.4); background: rgba(129,140,248,0.08); }
 .src-大模型厂商 { color: var(--accent3); border-color: rgba(232,121,249,0.4); background: rgba(232,121,249,0.08); }
+.src-端侧Agent { color: #34d399; border-color: rgba(52, 211, 153, 0.4); background: rgba(52, 211, 153, 0.08); }
 .src-行业动态 { color: var(--gold); border-color: rgba(251,191,36,0.4); background: rgba(251,191,36,0.07); }
+
+.coverage {
+  margin: 10px 0 0; font-size: 12px; line-height: 1.9; color: var(--text-faint);
+  padding: 10px 16px; border: 1px dashed rgba(255, 255, 255, 0.12); border-radius: 12px;
+}
+.coverage strong { color: var(--text-dim); font-weight: 600; }
+
+.fig-cap {
+  font-size: 11px; color: var(--text-faint); padding: 6px 12px 7px;
+  border-top: 1px solid var(--border); font-family: var(--mono); letter-spacing: 0.02em;
+}
 
 .card-date { margin-left: auto; font-family: var(--mono); font-size: 12px; color: var(--text-faint); white-space: nowrap; }
 
@@ -308,7 +320,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .res-card {
   padding: 20px; border-radius: var(--radius); background: var(--panel); border: 1px solid var(--border);
   transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), border-color 0.3s, box-shadow 0.3s;
-  position: relative; overflow: hidden;
+  position: relative; overflow: hidden; cursor: pointer;
 }
 .res-card::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -418,6 +430,12 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 }
 .panel-body { padding: 34px 34px 44px; overflow-y: auto; flex: 1; }
 .panel-kicker { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.panel-fig {
+  margin-bottom: 18px; border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--border); background: rgba(255, 255, 255, 0.03);
+}
+.panel-fig img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.panel-fig svg { display: block; width: 100%; height: auto; }
 .panel-body h3 { font-size: 21px; font-weight: 800; line-height: 1.5; margin-bottom: 14px; overflow-wrap: anywhere; }
 .panel-meta { display: flex; flex-direction: column; gap: 5px; padding: 14px 16px; border-radius: 14px; background: rgba(255,255,255,0.035); border: 1px solid var(--border); margin-bottom: 18px; }
 .panel-meta div { font-size: 13px; color: var(--text-dim); display: flex; gap: 8px; }

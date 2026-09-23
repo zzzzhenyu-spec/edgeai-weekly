@@ -25,7 +25,9 @@ $keywords = @(
     '端侧', '端侧ai', '端侧大模型', 'on-device', 'on device', 'edge ai', 'edge-side',
     'edge llm', 'npu', 'ai手机', 'ai phone', '小模型', 'slm', 'small language model',
     'mobile ai', 'local ai', 'offline ai', 'agentic ai', 'inference',
-    'apple intelligence', 'gemini nano', '天玑', '骁龙', 'snapdragon', 'dimensity'
+    'apple intelligence', 'gemini nano', 'galaxy ai', '天玑', '骁龙', 'snapdragon', 'dimensity',
+    '瑞芯微', 'rk1828', '展锐', '全志', '海思', '麒麟', '玄戒', '蓝心', '小艺', 'andresgpt',
+    'openclaw', 'workbuddy', 'jev', 'typesafe', 'minicpm', '端云协同'
 )
 
 $since = (Get-Date).AddDays(-$Days)
