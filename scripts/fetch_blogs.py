@@ -75,6 +75,34 @@ def is_ai(text):
         return True
     return bool(AI_KEYS_RE.search(text))
 
+
+# ---- 翻译: 英文/繁体 -> 简体中文 (Google 免费接口, 失败时保留原文) ----
+# 仅收录简体中不使用的繁体专有字形（避免简繁同形字误判）
+TRAD_CHARS = set("們個來對時說話學國會體點經員讓覺聽讀寫沒這為麼後發問將從與實現區網際資訊"
+                 "軟體記憶運鏡螢續龍鳳鳥塵滅絕灣衛織鎖鑽鐵銀銅錄鑑藝術佈釋處腳蹤轟鴻曆")
+
+
+def need_translate(text):
+    if not text:
+        return False
+    has_cjk = any("\u4e00" <= ch <= "\u9fff" for ch in text)
+    if not has_cjk:
+        return True                       # 纯英文/数字
+    return any(ch in TRAD_CHARS for ch in text)   # 含繁体
+
+
+def gtranslate(text):
+    if not text:
+        return text
+    try:
+        url = ("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-CN&dt=t&q="
+               + urllib.parse.quote(text[:450]))
+        data = json.loads(http_get(url, timeout=20).decode("utf-8", "ignore"))
+        out = "".join(seg[0] for seg in (data[0] or []) if seg and seg[0])
+        return out.strip() or text
+    except Exception:
+        return text
+
 MAX_RSS = 30
 MAX_HTML = 25
 MAX_DESC_FETCH = 60
@@ -336,9 +364,17 @@ def main():
         elif name in SEARCH_SITES:
             posts = bing_news_posts(SEARCH_SITES[name])
         logo = LOGO_OVERRIDES.get(name, "") or logo
+        # 英文/繁体 -> 简体中文
+        for p in posts:
+            if need_translate(p["t"]):
+                p["t"] = gtranslate(p["t"]); time.sleep(0.25)
+            if need_translate(p.get("s", "")):
+                p["s"] = gtranslate(p["s"]); time.sleep(0.25)
+            p["orig"] = p["t"]   # 翻译后原文丢弃前先留给过滤判定
         posts = [p for p in posts if is_ai(p["t"] + " " + p.get("s", ""))]   # 只留 AI 相关
         for p in posts:
             p["d"] = norm_date(p["d"])
+            p.pop("orig", None)
             p["e"] = is_edge(p["t"] + " " + p.get("s", ""))
         posts.sort(key=sort_key, reverse=True)
         # 端侧相关但无摘要的 -> 抓 og:description（全局限量）
