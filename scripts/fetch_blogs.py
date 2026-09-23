@@ -34,11 +34,11 @@ HTML_SITES = {
     "Tri Dao": ("https://tridao.me", "https://tridao.me", r"/(blog|notes|p)/"),
     "电子工程专辑 EETimes China": ("https://www.eet-china.com", "https://www.eet-china.com", r"/(mp|news)/a?\d"),
 }
-# Bing News RSS 站内搜索（无 RSS 且 JS 渲染的站点）: 名称 -> 查询词
+# Bing News RSS 站内搜索: 仅用于补充无 RSS 的媒体站文章列表。
+# 注意: 厂商动态类新闻（高通/面壁等）不放博客库——那是资讯板块的内容，
+# 每周更新资讯时用 find_article.py 定向搜索择要收录。
 SEARCH_SITES = {
     "36氪": "site:36kr.com AI",
-    "面壁智能数据洞察": "面壁智能 MiniCPM",
-    "Qualcomm AI Hub & Blog": "Qualcomm Snapdragon AI",
 }
 # GitHub 数据源: 项目版本发布说明（Release Notes 含具体技术变化，比"仓库更新"有信息量）
 GITHUB_RELEASES = {

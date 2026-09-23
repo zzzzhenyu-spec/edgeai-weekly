@@ -377,7 +377,7 @@
     var all = f.posts || [];
     if (!all.length) {
       var zone0 = document.getElementById("post-zone");
-      if (zone0) zone0.innerHTML = '<div class="post-empty">暂未收录近期文章（该站点为 JS 渲染且无公开 RSS），点击下方按钮直接访问网站</div>';
+      if (zone0) zone0.innerHTML = '<div class="post-empty">该厂商官方博客无公开 RSS，动态已收录在「本周资讯」板块；技术模型与部署实践可点击下方按钮访问 AI Hub</div>';
       return;
     }
     // 端侧相关置顶（按时间倒序），其余普通展示（按时间倒序）
