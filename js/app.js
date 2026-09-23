@@ -74,6 +74,9 @@
   var VIZ_COLORS = ["#22d3ee", "#818cf8", "#e879f9", "#fbbf24", "#34d399", "#f87171"];
   var NEWS_CAT_COLORS = { "端侧Agent": "#34d399", "芯片厂商": "#22d3ee", "手机厂商": "#818cf8", "大模型厂商": "#e879f9", "行业动态": "#fbbf24" };
 
+  /* 词云停用词: 剔除无信息量的泛化标签 */
+  var CLOUD_STOP = ["开源", "发布", "上市", "评测", "旗舰", "行业观察", "国产芯片", "新品", "动态"];
+
   function buildCloudWords() {
     var parts = [];
     D.news.concat(D.papers).forEach(function (it) {
@@ -83,7 +86,8 @@
     var map = {};
     function add(w) {
       w = String(w || "").trim();
-      if (w && w.length <= 14 && !map[w]) map[w] = { w: w, tagN: 0, n: 0 };
+      if (!w || w.length > 14 || map[w] || CLOUD_STOP.indexOf(w) >= 0) return;
+      map[w] = { w: w, tagN: 0, n: 0 };
     }
     D.news.forEach(function (n) { (n.tags || []).forEach(add); });
     D.papers.forEach(function (p) { (p.tags || []).forEach(add); });
