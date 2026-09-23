@@ -313,10 +313,19 @@
       "<p>" + esc(t.text) + "</p></div>";
   }).join("");
 
+  var FEEDS = (typeof BLOG_FEEDS !== "undefined") ? BLOG_FEEDS : {};
+  function resLogoHTML(r, cls) {
+    var letter = esc(r.letter || r.name.charAt(0));
+    var f = FEEDS[r.name];
+    if (f && f.logo) {
+      return '<span class="' + cls + '" data-letter="' + letter + '"><img src="' + esc(f.logo) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></span>';
+    }
+    return '<span class="' + cls + ' noimg" data-letter="' + letter + '">' + letter + "</span>";
+  }
   function resCard(r) {
     return '<div class="res-card reveal">' +
       '<div class="res-head">' +
-        '<span class="res-avatar">' + esc(r.letter || r.name.charAt(0)) + "</span>" +
+        resLogoHTML(r, "res-avatar res-logo") +
         "<div><h4>" + esc(r.name) + '</h4><div class="res-type">' + esc(r.type) + "</div></div>" +
       "</div>" +
       "<p>" + esc(r.text) + "</p>" +
@@ -332,36 +341,74 @@
       '<div class="res-grid">' + items.map(resCard).join("") + "</div>";
   }).join("");
 
-  /* 博客卡片点击 -> 简介面板 */
+  /* 博客卡片点击 -> 简介面板（logo + 近期文章分页列表，端侧相关背光高亮） */
   function hostOf(u) {
     var m = String(u || "").match(/^https?:\/\/([^\/]+)/);
     return m ? m[1] : "原文";
   }
-  function resCoverSVG(rc, color) {
-    return '<svg viewBox="0 0 640 260" role="img" aria-label="封面图">' +
-      '<defs><linearGradient id="covbg2" x1="0" y1="0" x2="1" y2="1">' +
-      '<stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/></linearGradient></defs>' +
-      '<rect width="640" height="260" fill="url(#covbg2)"/>' +
-      '<circle cx="560" cy="36" r="110" fill="' + color + '" opacity="0.16"/>' +
-      '<circle cx="70" cy="240" r="90" fill="' + color + '" opacity="0.10"/>' +
-      '<text x="320" y="120" text-anchor="middle" font-size="86" font-weight="800" fill="' + color + '" opacity="0.9">' + esc(rc.letter || rc.name.charAt(0)) + "</text>" +
-      '<text x="320" y="196" text-anchor="middle" font-size="21" font-weight="700" fill="#e8ecf6">' + esc(rc.name.slice(0, 26)) + "</text>" +
-      '<text x="320" y="226" text-anchor="middle" font-size="14" fill="#64708a">' + esc(rc.type) + "</text>" +
-      "</svg>";
-  }
+  var POSTS_PER_PAGE = 6;
+  var resCur = null, resPage = 1;
+
   function resPanelHTML(rc) {
     var color = RES_GROUP_COLORS[rc.group] || "#818cf8";
+    var f = FEEDS[rc.name] || {};
+    var posts = f.posts || [];
+    var edgeN = posts.filter(function (p) { return p.e; }).length;
     var paras = String(rc.intro || rc.text).split("\n").filter(Boolean)
       .map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
     return '<div class="panel-kicker">' +
         '<span class="src-badge" style="color:' + color + ';border-color:' + color + '55;background:' + color + '12">' + esc(rc.group) + "</span>" +
         '<span class="card-date">' + esc(rc.type) + "</span>" +
       "</div>" +
-      "<h3>" + esc(rc.name) + "</h3>" +
-      '<div class="panel-fig">' + resCoverSVG(rc, color) + "</div>" +
+      '<div class="res-detail-head">' +
+        resLogoHTML(rc, "panel-logo") +
+        "<div><h3>" + esc(rc.name) + "</h3>" +
+        '<div class="res-sub">端侧相关文章 ' + edgeN + " 篇" + (posts.length !== edgeN ? " / 近期共 " + posts.length + " 篇" : "") + "</div></div>" +
+      "</div>" +
       '<div class="panel-detail">' + paras + "</div>" +
+      '<div class="post-head">端侧相关文章<span>按时间排序 · 柔光高亮</span></div>' +
+      '<div id="post-zone"></div>' +
       '<div class="panel-actions"><a class="btn-src" href="' + esc(rc.url) + '" target="_blank" rel="noopener">访问 ' + esc(hostOf(rc.url)) + " ↗</a></div>";
   }
+
+  function renderResPosts(rc, page) {
+    var f = FEEDS[rc.name] || {};
+    var all = f.posts || [];
+    var posts = all.filter(function (p) { return p.e; });   // 只展示端侧相关
+    var zone = document.getElementById("post-zone");
+    if (!zone) return;
+    if (!posts.length) {
+      zone.innerHTML = '<div class="post-empty">近期未检测到端侧 AI 相关文章' +
+        (all.length ? "（该博客近期 " + all.length + " 篇均非端侧主题）" : "（该站点无公开 RSS）") +
+        "，点击下方按钮直接访问网站</div>";
+      return;
+    }
+    var pages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+    page = Math.min(Math.max(1, page), pages);
+    resPage = page;
+    var slice = posts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
+    var list = slice.map(function (p) {
+      return '<a class="post-item' + (p.e ? " edge" : "") + '" href="' + esc(p.u) + '" target="_blank" rel="noopener">' +
+        '<span class="post-date">' + esc(p.d || "—") + "</span>" +
+        '<span class="post-main"><b class="post-title">' + esc(p.t) + "</b>" +
+        (p.s ? '<i class="post-desc">' + esc(p.s) + "</i>" : "") + "</span>" +
+        (p.e ? '<span class="post-flag">端侧</span>' : "") + "</a>";
+    }).join("");
+    var pager = "";
+    if (pages > 1) {
+      pager = '<div class="pager">';
+      pager += '<button class="pg-btn" data-pg="' + (page - 1) + '"' + (page === 1 ? " disabled" : "") + ">‹</button>";
+      var from = Math.max(1, page - 2), to = Math.min(pages, from + 4);
+      from = Math.max(1, Math.min(from, to - 4));
+      for (var i = from; i <= to; i++) {
+        pager += '<button class="pg-btn' + (i === page ? " on" : "") + '" data-pg="' + i + '">' + i + "</button>";
+      }
+      pager += '<button class="pg-btn" data-pg="' + (page + 1) + '"' + (page === pages ? " disabled" : "") + ">›</button>";
+      pager += '<span class="pg-info">' + page + " / " + pages + "</span></div>";
+    }
+    zone.innerHTML = list + pager;
+  }
+
   $("res-zone").addEventListener("click", function (e) {
     if (e.target.closest("a")) return;
     var card = e.target.closest(".res-card");
@@ -369,11 +416,23 @@
     var name = card.querySelector("h4").textContent;
     var rc = D.knowledge.resources.filter(function (x) { return x.name === name; })[0];
     if (!rc) return;
+    resCur = rc;
     panelBody.innerHTML = resPanelHTML(rc);
     panelBody.scrollTop = 0;
     panel.classList.add("open");
     overlay.classList.add("show");
     document.body.classList.add("panel-open");
+    renderResPosts(rc, 1);
+  });
+
+  /* 面板内分页按钮（document 级委托，panelBody 在后方定义） */
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".pg-btn");
+    if (!btn || btn.disabled || !resCur || !document.getElementById("post-zone")) return;
+    e.preventDefault();
+    renderResPosts(resCur, parseInt(btn.dataset.pg, 10) || 1);
+    var head = panelBody.querySelector(".post-head");
+    panelBody.scrollTop = head ? head.offsetTop - 20 : 0;
   });
 
   /* ============================================================
