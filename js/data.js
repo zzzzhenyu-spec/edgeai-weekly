@@ -17,21 +17,41 @@ const WEEKLY_DATA = {
     issue: "2026 · 第 39 期",
     weekRange: "2026.09.16 — 09.23",
     updated: "2026-09-23",
-    editorsNote: "本期只收录最近一周动态：骁龙峰会 9·22 开幕，8 Elite Gen 6 正式发布，主题直指「智能体时代来临」；「哑巴 AI」Jev 三天刷屏硅谷，引发范式讨论；联发科 CX C10 Max 将驱动谷歌 Googlebook 计划；Google Home 开放 MCP 协议，OpenClaw 等智能体可直接控制智能家居；机构报告称系统级 Agent 进入加速期；阶跃星辰 600B 旗舰宣布 10 月开源；豆包 AI 手机开售、小米 18 Fold 携 MiMo 端侧模型上市。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。"
+    editorsNote: "本期只收录最近一周（09.16–09.23）动态：高通正式发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型，小米 18 Pro 明日首发）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI 三款；云栖大会 AI 新品密集、斑马推出全模态座舱端侧模型 AutoOmni 2.0；「哑巴 AI」Jev 三天刷屏硅谷；联发科 CX C10 Max 将驱动谷歌 Googlebook；Google Home 开放 MCP；阶跃 600B 旗舰宣布 10 月开源；豆包 AI 手机与小米 18 Fold 开售。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
     {
-      id: "n2", cat: "芯片厂商", source: "Qualcomm / XDA-Developers", date: "2026-09-22",
-      title: "骁龙峰会开幕：8 Elite Gen 6 正式发布，主题「智能体时代来临」",
-      summary: "9 月 22 日毛伊岛峰会正式公布 8 Elite Gen 6 两档旗舰：2nm 制程、Oryon CPU 最高 5.11GHz，Hexagon NPU 新增 Element Accelerator 与更大共享内存，原生面向端侧智能体。",
-      detail: "Snapdragon Summit 2026（9 月 22–24 日，夏威夷毛伊岛）以「The agentic age is here（智能体时代来临）」为主题开幕，正式公布新一代旗舰平台 Snapdragon 8 Elite Gen 6，并提供更高定位的 Extreme 档。\n规格要点：首次采用 2nm 制程；Oryon CPU 核心频率最高 5.11GHz，两档均可达到 5GHz 级；GPU 性能大幅提升，Extreme 档为 GPU 增加更多 AI 功能；泄露定价约 320 美元，首发机型预计年底前亮相。\n端侧 AI 是本届峰会绝对主角：新一代 Hexagon NPU 完全围绕智能体（Agentic）工作负载重构——新增 Element Accelerator（元素加速器）、显著增大的共享内存，此前高通已披露其支撑端侧运行 30B 级大模型的目标；同时强调把更多算力、内存与 AI 能力留在手机本地。\n峰会其余议程（9·23–24）还将发布骁龙 X 系列 PC 平台与智能体开发工具链更新。",
-      tags: ["Snapdragon Summit 2026", "8 Elite Gen 6", "Hexagon NPU", "2nm"],
-      url: "https://www.xda-developers.com/qualcomms-new-snapdragon-8-elite-gen-6-chip-lineup-powerful-ultra-premium-tier/",
-      image: "https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2026/09/snapdragon-8-elite-gen-6-header.jpg",
+      id: "n2", cat: "芯片厂商", source: "腾讯新闻 / Qualcomm", date: "2026-09-23",
+      title: "高通正式发布第六代骁龙8双旗舰：2nm 制程，端侧可跑 300 亿参数模型",
+      summary: "骁龙峰会正式发布 8 Elite Gen 6 双旗舰：2nm 制程、Oryon CPU 最高 5.11GHz，Hexagon NPU 面向智能体重构，端侧可运行 300 亿参数模型；小米 18 Pro 将于 9·24 首发登场。",
+      detail: "9 月 22–24 日骁龙峰会（毛伊岛）进行中，高通正式发布第六代骁龙8双旗舰处理器（8 Elite Gen 6 与更高档的 Extreme），官方口径「正式迈入端侧智能体 AI 新时代」。\n规格：2nm 制程；Oryon CPU 最高 5.11GHz；Hexagon NPU 新增 Element Accelerator（元素加速器）与更大共享内存，端侧可运行最高 300 亿参数模型；GPU 性能大幅提升，Extreme 档面向超旗舰机型。\n落地：小米 18 Pro 将于 9 月 24 日首发搭载骁龙8E6 登场；泄露定价约 320 美元，首发机型年底前密集亮相。\n配合此前联发科天玑 9600 Pro（同样宣称 30B 端侧模型），「2nm + 端侧智能体」已成为本轮旗舰 SoC 的共同卖点。",
+      tags: ["骁龙8 Elite Gen 6", "2nm", "Hexagon NPU", "端侧智能体"],
+      url: "https://news.qq.com/rain/a/20260923A038CO00",
+      image: "https://inews.gtimg.com/om_ls/Orkpllb6bRi833C9vvqznHvULMUg3qfyylgzlyfcb1Kb0AA_640330/0",
       imageCap: "配图来自原文页面",
       highlight: true
+    },
+    {
+      id: "n20", cat: "端侧Agent", source: "腾讯新闻", date: "2026-09-23",
+      title: "手机端侧AI备案新增 3 款：荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI 在列",
+      summary: "网信办手机端侧生成式 AI 备案新增 3 款：荣耀 YOYO Claw、小米 miclaw 与阶跃终端 AI——「Claw」系命名密集出现，端侧智能体成为手机厂商的标配产品线。",
+      detail: "9 月 23 日消息，手机端侧AI备案名单新增 3 款：荣耀 YOYO Claw、小米 miclaw 与阶跃终端 AI。\n两个信号值得注意：其一，「Claw」式命名在荣耀与小米之间撞名，说明「端侧智能体助手」已成手机厂商的标配产品线，竞争进入命名与定位层面的贴身战；其二，阶跃星辰的终端 AI 榜上有名——与本周其 600B 旗舰 Step 5 Preview 发布形成「云端旗舰 + 终端模型」的两翼布局。\n结合此前首批 7 款手机端侧模型备案（华为小艺、OPPO AndesGPT、vivo 蓝心、Apple 智能、小米、努比亚豆包、三星），名单正快速扩容，端侧生成式 AI 进入规模化合规落地阶段。",
+      tags: ["端侧AI备案", "YOYO Claw", "miclaw", "阶跃终端AI"],
+      url: "https://news.qq.com/rain/a/20260923A0BOJU00",
+      image: "https://inews.gtimg.com/om_ls/Oa689SH8m5hjUH8ytR5dYdoVJwCTyPLgJpOQwPCr09aPwAA_640330/0",
+      imageCap: "配图来自原文页面"
+    },
+    {
+      id: "n21", cat: "行业动态", source: "搜狐科技 / MSN", date: "2026-09-23",
+      title: "云栖大会 AI 新品密集发布，斑马智行推出全模态端侧大模型 AutoOmni 2.0",
+      summary: "云栖大会期间 AI 新品密集：斑马智行发布全模态端侧大模型 AutoOmni 2.0（面向智能座舱），行业观察称 AI 端侧算力「全面爆发」。",
+      detail: "9 月 23 日行业动态：云栖大会密集发布 AI 新品，AI 端侧算力被业内评价为「全面爆发」。\n端侧侧亮点是斑马智行（上汽×阿里背景）发布的全模态端侧大模型 AutoOmni 2.0：面向智能座舱场景，主打全模态理解与个性化体验——车载是端侧大模型落地最快的场景之一（云端复杂推理 + 车机小模型的端云协同架构）。\n同期苹果新款 Mac 开始发货（自研芯片 + 端侧 AI 能力同步上量），端侧算力在手机、车机、PC 三条线同步进入密集落地期。",
+      tags: ["云栖大会", "AutoOmni 2.0", "智能座舱", "端侧算力"],
+      url: "https://www.sohu.com/a/1080020318_122014422",
+      image: "https://q4.itc.cn/q_70/images03/20260923/55192c23e0ee4e77930a80888b30c07e.png",
+      imageCap: "配图来自原文页面"
     },
     {
       id: "n11", cat: "大模型厂商", source: "36氪 / TechCrunch", date: "2026-09-21",

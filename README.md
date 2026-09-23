@@ -56,6 +56,18 @@ python scripts\serve.py                        # 6. 本地预览 http://127.0.0.
 
 > 提示：芯片/手机厂商官方新闻室大多没有 RSS，每周用 `find_article.py` 对重点厂商做定向搜索；本机 Python 若不在 PATH，用完整路径运行。
 
+### 接入微信公众号内容（可选）
+
+微信没有开放的内容 API，但 GitHub 上有成熟的自建方案，把公众号转成标准 RSS 后即可被 `fetch_news.py` 直接消费：
+
+| 项目 | 地址 | 说明 |
+|------|------|------|
+| WeWe RSS | github.com/cooderl/wewe-rss | 最流行；基于微信读书接口订阅公众号，Docker 一键部署，输出标准 RSS |
+| we-mp-rss | github.com/rachelos/we-mp-rss | 公众号转 Markdown/PDF + 定时更新 + 生成 RSS |
+| wechat2rss | wechat2rss.xlab.app | 托管服务，部分免费额度 |
+
+部署 WeWe RSS（`docker run -d -p 4000:4000 cooderl/wewe-rss`）后，把你关注的公众号（量子位、机器之心、新智元等）生成的 `http://localhost:4000/feeds/xxx.atom` 填进 `scripts/sources.json`，之后每周 `fetch_news.py` 就会自动抓公众号文章。注意这类方案依赖个人微信读书账号，有风控风险，建议小规模使用。
+
 ## 部署到云端（任选其一，均为免费）
 
 > 上传时**不需要** `data/` 文件夹（脚本生成的筛选候选，不参与页面渲染）。
