@@ -68,6 +68,18 @@ python scripts\serve.py                        # 6. 本地预览 http://127.0.0.
 
 部署 WeWe RSS（`docker run -d -p 4000:4000 cooderl/wewe-rss`）后，把你关注的公众号（量子位、机器之心、新智元等）生成的 `http://localhost:4000/feeds/xxx.atom` 填进 `scripts/sources.json`，之后每周 `fetch_news.py` 就会自动抓公众号文章。注意这类方案依赖个人微信读书账号，有风控风险，建议小规模使用。
 
+### 接入小红书内容（可选）
+
+小红书同样没有开放 API，GitHub 上主流方案（都需要**小号扫码登录**，注意风控）：
+
+| 项目 | 地址 | 说明 |
+|------|------|------|
+| MediaCrawler | github.com/NanmiCoder/MediaCrawler | ~25k star；小红书/抖音/快手/B站/微博/知乎多平台爬虫，CDP 连真实 Chrome，支持关键词搜索与评论抓取 |
+| xhs-mcp | github.com/jobsonlook/xhs-mcp | 小红书 MCP 服务（x-s/x-t 签名逆向），可接入 Claude Desktop 等 |
+| XHS-Downloader 等 | 见知乎「小红书爬虫开源神器」整理 | 笔记下载/搜索类工具 |
+
+小红书对 AI 硬件（AI 眼镜、AI 耳机、AI 玩具）的**真实用户体验内容**是独有补充：用 MediaCrawler 按「端侧AI / AI眼镜 / AI硬件」关键词抓笔记，输出 JSON 后即可并入每周候选池。
+
 ## 部署到云端（任选其一，均为免费）
 
 > 上传时**不需要** `data/` 文件夹（脚本生成的筛选候选，不参与页面渲染）。

@@ -15,13 +15,42 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 39 期",
-    weekRange: "2026.09.16 — 09.23",
-    updated: "2026-09-23",
-    editorsNote: "本期只收录最近一周（09.16–09.23）动态：高通正式发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型，小米 18 Pro 即将首发）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；AI硬件赛道升温——豆包做手机、阿里造平板、千问办公硬件曝光、AI眼镜混战；「哑巴 AI」Jev 刷屏硅谷；云栖大会 AI 新品密集；联发科 CX C10 Max 将驱动 Googlebook；Google Home 开放 MCP；阶跃 600B 旗舰宣布 10 月开源。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。"
+    weekRange: "2026.09.17 — 09.24",
+    updated: "2026-09-24",
+    editorsNote: "本期只收录最近一周（09.17–09.24）动态：小米 18 Pro 今日全球首发 2nm 骁龙8E6 Pro；Rokid 二代 AI 眼镜今日数贸会首秀；高通正式发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型，小米 18 Pro 即将首发）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；AI硬件赛道升温——豆包做手机、阿里造平板、千问办公硬件曝光、AI眼镜混战；「哑巴 AI」Jev 刷屏硅谷；云栖大会 AI 新品密集；联发科 CX C10 Max 将驱动 Googlebook；Google Home 开放 MCP；阶跃 600B 旗舰宣布 10 月开源。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n26", cat: "手机厂商", source: "MSN 科技 / 快科技", date: "2026-09-24",
+      title: "小米 18 Pro 今日登场：全球首发 2nm 骁龙8E6 Pro，跑分出炉",
+      summary: "小米 18 Pro 今日（9·24）发布：全球首发 2nm 骁龙8E6 Pro，跑分显示安卓单核最高分；5999 元起档位，配防窥屏与双 2 亿像素——2nm 端侧 AI 旗舰正式到达消费者手中。",
+      detail: "小米 18 Pro 系列今日登场，全球首发 2nm 制程的骁龙8E6 Pro（8 Elite Gen 6 Pro）。\n发布会前跑分已出炉：骁龙8E6 系列拿下安卓单核最高分，配合 LPDDR6 内存与澎湃 OS4；影像上配备双 2 亿像素与防窥屏，起售档 5999 元（全系较上代上涨约千元）。\n意义：这是 2nm 制程 + 面向智能体的 Hexagon NPU 首次到达消费者手中——高通本周在骁龙峰会上主讲的「端侧智能体时代」，从今天开始可以被真实买到。",
+      tags: ["小米 18 Pro", "骁龙8E6 Pro", "2nm", "安卓单核纪录"],
+      url: "https://www.msn.cn/zh-cn/news/other/%E5%85%A8%E7%90%83%E9%A6%96%E5%8F%912nm%E9%AA%81%E9%BE%998e6-pro-%E5%B0%8F%E7%B1%B318-pro%E8%B7%91%E5%88%86%E5%87%BA%E7%82%89/ar-AA2cxWZu",
+      highlight: true
+    },
+    {
+      id: "n27", cat: "AI硬件", source: "搜狐科技", date: "2026-09-24",
+      title: "Rokid 二代 AI 眼镜今日全球首秀：第五届数贸会登场",
+      summary: "Rokid（乐奇）第二代 AI 眼镜今日（9·24）在第五届数贸会全球首秀——AI 眼镜赛道再添重磅玩家，与 Meta / 小米 / 雷鸟的混战继续升级。",
+      detail: "Rokid 二代 AI 眼镜于 9 月 24 日在杭州第五届全球数字贸易博览会上全球首秀。\nRokid 是国内 AR / AI 眼镜头部玩家之一，一代产品已与支付宝等生态深度整合；二代产品预计在光学显示、端侧多模态理解与佩戴形态上继续迭代（以首秀发布为准）。\n结合本周 AI 眼镜行业盘点（见本板块另一条）：Meta 领跑出货、国内厂商密集发布，「下一代端侧 AI 入口」之争正进入产品密度最高的阶段。",
+      tags: ["Rokid", "AI眼镜", "数贸会", "全球首秀"],
+      url: "https://www.sohu.com/a/1079659740_447547",
+      image: "https://q2.itc.cn/q_70/images03/20260923/616a701b1b4046d993ed57c46e409b06.jpeg",
+      imageCap: "配图来自原文页面"
+    },
+    {
+      id: "n28", cat: "AI硬件", source: "腾讯新闻 / 新浪财经", date: "2026-09-17",
+      title: "OPPO 发布「心力球」：全天候主动式 AI 硬件，年内到来",
+      summary: "OPPO 公开全新品类——全天候主动式 AI 硬件「心力球」，预计今年晚些时候上市：AI 硬件从「被动工具」走向「主动智能体」。",
+      detail: "OPPO 发布全天候主动式 AI 硬件「心力球」，预计今年晚些时候到来。\n新品类的关键词是「主动式」：不再等待用户指令，而是全天候感知场景并主动给出建议——端侧智能体需要一个常在的物理载体，这与此轮 AI OS 换代、系统级 Agent 落地是同一逻辑。\n行业语境：豆包做手机、阿里造平板、OPPO 做主动式硬件——模型厂商与手机厂商都在探索「App 之外」的 AI 硬件形态。",
+      tags: ["OPPO", "心力球", "主动式AI硬件", "新品类"],
+      url: "https://news.qq.com/rain/a/20260917A0AMVQ00",
+      image: "https://n.sinaimg.cn/spider20260917/328/w660h468/20260917/c755-7cd5ebbefefefe578f1beb8079dfa7a9.jpg",
+      imageCap: "配图来自原文页面"
+    },
     {
       id: "n2", cat: "芯片厂商", source: "腾讯新闻 / Qualcomm", date: "2026-09-23",
       title: "高通正式发布第六代骁龙8双旗舰：2nm 制程，端侧可跑 300 亿参数模型",
@@ -149,16 +178,6 @@ const WEEKLY_DATA = {
       tags: ["小米 18 Fold", "MiMo 端侧模型", "玄戒 O3", "折叠屏"],
       url: "https://news.qq.com/rain/a/20260908A058I900",
       image: "https://inews.gtimg.com/om_ls/Oz34X0_1P_EVn8dpkXPX80UbZBgS-3x0Rit6ZAPdPn4yoAA_640330/0",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n19", cat: "端侧Agent", source: "9to5Google", date: "2026-09-16",
-      title: "Google Home 开放 MCP：Claude、OpenClaw 等智能体可直接控制智能家居",
-      summary: "Google Home 正式支持 MCP 协议：Antigravity、Claude、OpenClaw 等第三方智能体可跨生态控制智能家居设备——本地优先智能体与 MCP 工具调用生态的标志性落地。",
-      detail: "据 9to5Google 9 月 16 日报道，Google Home 正式开放 MCP（Model Context Protocol）支持：智能体现在可以直接控制 Google Home 生态中的智能家居设备（灯光、温控、安防等），报道中列举的接入方包括 Claude、谷歌 Antigravity 与 OpenClaw 等。\n关键变化在于「智能体互操作」：过去每家智能体都要为每个设备生态单独做集成，MCP 把智能家居中枢变成智能体可统一调用的「工具」——这是 MCP 从开发者工具协议走向消费级设备互操作标准的标志性一步。\n端侧视角：家居设备控制天然发生在本地网络，配合手机端的系统级 Agent（见本板块另一条），「端侧发起 → 本地执行」的智能体闭环越来越完整。",
-      tags: ["Google Home", "MCP", "智能家居"],
-      url: "https://9to5google.com/2026/09/16/google-home-mcp/",
-      image: "https://9to5google.com/wp-content/uploads/sites/4/2026/09/Google-Home-MCP-cover.jpg",
       imageCap: "配图来自原文页面"
     }
   ],
