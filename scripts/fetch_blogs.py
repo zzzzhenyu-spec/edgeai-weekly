@@ -34,16 +34,9 @@ HTML_SITES = {
     "Tri Dao": ("https://tridao.me", "https://tridao.me", r"/(blog|notes|p)/"),
     "电子工程专辑 EETimes China": ("https://www.eet-china.com", "https://www.eet-china.com", r"/(mp|news)/a?\d"),
 }
-# Bing News RSS 站内搜索: 仅用于补充无 RSS 的媒体站文章列表。
-# 注意: 厂商动态类新闻（高通/面壁等）不放博客库——那是资讯板块的内容，
-# 每周更新资讯时用 find_article.py 定向搜索择要收录。
+# Bing News RSS 站内搜索: 仅用于媒体站文章（返回的 URL 必须是该官网自己的文章）。
 SEARCH_SITES = {
     "36氪": "site:36kr.com AI",
-}
-# GitHub 数据源: 项目版本发布说明（Release Notes 含具体技术变化，比"仓库更新"有信息量）
-GITHUB_RELEASES = {
-    "Georgi Gerganov": ["ggml-org/llama.cpp", "ggml-org/whisper.cpp", "ggml-org/ggml"],
-    "Tianqi Chen 陈天奇": ["mlc-ai/mlc-llm", "apache/tvm"],
 }
 # 手工指定高质量 logo（RSS image 抓不到或太丑的）
 LOGO_OVERRIDES = {
@@ -359,10 +352,9 @@ def main():
             logo, posts = parse_feed(FEEDS[name])
         elif name in HTML_SITES:
             logo, posts = parse_html(*HTML_SITES[name])
-        elif name in GITHUB_RELEASES:
-            posts = github_releases(GITHUB_RELEASES[name])
         elif name in SEARCH_SITES:
             posts = bing_news_posts(SEARCH_SITES[name])
+        # 官网无公开 RSS 的博客(陈天奇/Gerganov/高通/面壁等): 不做替代填充, 前端显示指引
         logo = LOGO_OVERRIDES.get(name, "") or logo
         # 英文/繁体 -> 简体中文
         for p in posts:
