@@ -1,114 +1,71 @@
 # 端侧AI每周情报站 · Edge AI Weekly
 
-一个**纯静态、零构建、零依赖**的端侧 AI 每周信息汇总网页。双击 `index.html` 即可打开，可直接分享或部署到任意静态托管（GitHub Pages / Vercel / Netlify）。
+> 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 页面结构（四个板块）
+## 2026 · 第 39 期（2026.09.17 — 09.24）
 
-| 板块 | 内容 | 数据来源 |
-|------|------|----------|
-| 01 本周资讯 | 端侧Agent / 芯片厂商 / 手机厂商 / 大模型厂商 / 行业动态，方格卡片 + 悬浮光晕，点击右侧弹出详情 | RSS + 定向检索 + 人工择要 |
-| 02 科研前沿 | 端侧大模型、端侧 Agent、推理系统、安全与能效论文，详情按原文扩写中文介绍 + 论文结构图 | arXiv API + DBLP 核对 |
-| 03 知识分享 | 端侧 AI 发展史时间线 + 分区博客库（厂商官方 / 个人 / 中文媒体公众号），点击卡片看简介再跳原文 | 人工维护 |
-| 04 评论区 | 昵称 + 内容，本地 localStorage 存储 | 浏览器本地 |
+**本期导读**：本期只收录最近一周（09.17–09.24）动态：小米 18 Pro 今日全球首发 2nm 骁龙8E6 Pro；Rokid 二代 AI 眼镜今日数贸会首秀；高通正式发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型，小米 18 Pro 即将首发）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；AI硬件赛道升温——豆包做手机、阿里造平板、千问办公硬件曝光、AI眼镜混战；「哑巴 AI」Jev 刷屏硅谷；云栖大会 AI 新品密集；联发科 CX C10 Max 将驱动 Googlebook；Google Home 开放 MCP；阶跃 600B 旗舰宣布 10 月开源。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。
 
-**收录规则**：资讯只收**最近一周**（运行日往前 7 天）的事件，超出窗口的厂商动态不放卡片（由页面顶部「厂商雷达」标注覆盖）；来源只用**简体中文或英文**；论文收录 SCI 二区以上期刊 / CCF-B 以上会议（带 `CCF-A` / `顶会` 徽章），近期 arXiv 新作以 `预印本` 标记跟踪，DBLP 核对到正式 venue 后转入已发表。
+## 本期速览
 
-## 目录结构
+### 端侧Agent（2 条）
 
-```
-weekly_info/
-├── index.html              # 页面入口
-├── css/style.css           # 样式（暗色主题 / 光晕 / 抽屉）
-├── js/app.js               # 交互逻辑（渲染 / 筛选 / 词云 / 评论区）
-├── js/data.js              # ★ 本期数据（每周更新这个文件）
-├── scripts/                # Python 3.10+，全部零第三方依赖
-│   ├── fetch_papers.py     # arXiv 论文候选        -> data/papers_candidates.json
-│   ├── fetch_news.py       # RSS 资讯候选(近7天)   -> data/news_candidates.json
-│   ├── check_dblp.py       # DBLP 核对 venue       -> data/papers_dblp.json
-│   ├── find_article.py     # Bing新闻定位文章URL    -> data/articles.json
-│   ├── fetch_paper_figs.py # 论文结构图(arXiv HTML)-> data/paper_figs.json
-│   ├── serve.py            # 本地预览服务器(禁缓存)
-│   └── sources.json        # RSS 订阅源列表（自行增删）
-├── data/                   # 脚本生成的候选文件（gitignore，不参与渲染）
-└── README.md
-```
-
-## 每周更新流程
-
-本地需要 Python 3.10+（无需 pip 安装任何东西）：
-
-```powershell
-cd D:\Code\weekly_info
-python scripts\fetch_papers.py                 # 1. arXiv 论文候选
-python scripts\fetch_news.py                   # 2. RSS 资讯候选（默认近 7 天）
-python scripts\check_dblp.py                   # 3. DBLP 核对正式 venue
-python scripts\find_article.py "关键词" "关键词" # 4. 定位真实文章 URL（选简中/英文源）
-python scripts\fetch_paper_figs.py             # 5. 抓论文结构图（可选）
-python scripts\serve.py                        # 6. 本地预览 http://127.0.0.1:8080
-```
-
-然后在 `js/data.js` 中人工整理：
-
-1. **meta**：期数、日期范围（运行日往前 7 天）、本期导读；
-2. **news[]**：只收窗口内的事件，撰写 `summary`（卡片摘要）与 `detail`（详情，`\n` 分段）；`url` 用具体文章页；`image` 填 og:image（无则留空，前端自动生成兜底封面）；
-3. **papers[]**：预印本保留 `group:"recent"`；查到正式 venue（二区+/CCF-B+）的改 `group:"published"` 并更新 `venue`/`level`；
-4. 保存刷新页面即可。
-
-> 提示：芯片/手机厂商官方新闻室大多没有 RSS，每周用 `find_article.py` 对重点厂商做定向搜索；本机 Python 若不在 PATH，用完整路径运行。
-
-### 接入微信公众号内容（可选）
-
-微信没有开放的内容 API，但 GitHub 上有成熟的自建方案，把公众号转成标准 RSS 后即可被 `fetch_news.py` 直接消费：
-
-| 项目 | 地址 | 说明 |
+| 日期 | 要闻 | 来源 |
 |------|------|------|
-| WeWe RSS | github.com/cooderl/wewe-rss | 最流行；基于微信读书接口订阅公众号，Docker 一键部署，输出标准 RSS |
-| we-mp-rss | github.com/rachelos/we-mp-rss | 公众号转 Markdown/PDF + 定时更新 + 生成 RSS |
-| wechat2rss | wechat2rss.xlab.app | 托管服务，部分免费额度 |
+| 2026-09-23 | [手机端侧AI备案新增 3 款：荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI 在列](https://news.qq.com/rain/a/20260923A0BOJU00) | 腾讯新闻 |
+| 2026-09-21 | [系统级 Agent 进入加速期：豆包、荣耀、vivo、OPPO 密集落地](https://news.qq.com/rain/a/20260921A046EN00) | 东吴证券（腾讯新闻） / 36氪 |
 
-部署 WeWe RSS（`docker run -d -p 4000:4000 cooderl/wewe-rss`）后，把你关注的公众号（量子位、机器之心、新智元等）生成的 `http://localhost:4000/feeds/xxx.atom` 填进 `scripts/sources.json`，之后每周 `fetch_news.py` 就会自动抓公众号文章。注意这类方案依赖个人微信读书账号，有风控风险，建议小规模使用。
+### AI硬件（5 条）
 
-### 接入小红书内容（可选）
-
-小红书同样没有开放 API，GitHub 上主流方案（都需要**小号扫码登录**，注意风控）：
-
-| 项目 | 地址 | 说明 |
+| 日期 | 要闻 | 来源 |
 |------|------|------|
-| MediaCrawler | github.com/NanmiCoder/MediaCrawler | ~25k star；小红书/抖音/快手/B站/微博/知乎多平台爬虫，CDP 连真实 Chrome，支持关键词搜索与评论抓取 |
-| xhs-mcp | github.com/jobsonlook/xhs-mcp | 小红书 MCP 服务（x-s/x-t 签名逆向），可接入 Claude Desktop 等 |
-| XHS-Downloader 等 | 见知乎「小红书爬虫开源神器」整理 | 笔记下载/搜索类工具 |
+| 2026-09-24 | [Rokid 二代 AI 眼镜今日全球首秀：第五届数贸会登场](https://www.sohu.com/a/1079659740_447547) | 搜狐科技 |
+| 2026-09-23 | [豆包做手机、阿里造平板：AI 开始争夺硬件控制权](https://finance.sina.com.cn/wm/2026-09-23/doc-inisvivv6005017.shtml) | 新浪财经 |
+| 2026-09-21 | [独家：阿里首款千问办公 AI 硬件将推出，售价或在千元级](https://www.sohu.com/a/1079171780_553580) | 搜狐科技（独家） |
+| 2026-09-17 | [OPPO 发布「心力球」：全天候主动式 AI 硬件，年内到来](https://news.qq.com/rain/a/20260917A0AMVQ00) | 腾讯新闻 / 新浪财经 |
+| 2026-09-16 | [AI 眼镜混战：谁能拿下「下一代端侧 AI 入口」](https://news.qq.com/rain/a/20260916A03V6P00) | 腾讯新闻 |
 
-小红书对 AI 硬件（AI 眼镜、AI 耳机、AI 玩具）的**真实用户体验内容**是独有补充：用 MediaCrawler 按「端侧AI / AI眼镜 / AI硬件」关键词抓笔记，输出 JSON 后即可并入每周候选池。
+### 芯片厂商（2 条）
 
-## 部署到云端（任选其一，均为免费）
+| 日期 | 要闻 | 来源 |
+|------|------|------|
+| 2026-09-23 | [高通正式发布第六代骁龙8双旗舰：2nm 制程，端侧可跑 300 亿参数模型](https://news.qq.com/rain/a/20260923A038CO00) | 腾讯新闻 / Qualcomm |
+| 2026-09-21 | [联发科 Dimensity CX C10 Max 亮相：将驱动谷歌 Googlebook 计划，联想首发](https://9to5google.com/2026/09/21/mediatek-googlebook-dimensity-cx-c10-max/) | 9to5Google / Tom's Hardware |
 
-> 上传时**不需要** `data/` 文件夹（脚本生成的筛选候选，不参与页面渲染）。
+### 手机厂商（3 条）
 
-### 方案一：GitHub Pages（推荐长期使用，每周更新方便）
+| 日期 | 要闻 | 来源 |
+|------|------|------|
+| 2026-09-24 | [小米 18 Pro 今日登场：全球首发 2nm 骁龙8E6 Pro，跑分出炉](https://www.msn.cn/zh-cn/news/other/%E5%85%A8%E7%90%83%E9%A6%96%E5%8F%912nm%E9%AA%81%E9%BE%998e6-pro-%E5%B0%8F%E7%B1%B318-pro%E8%B7%91%E5%88%86%E5%87%BA%E7%82%89/ar-AA2cxWZu) | MSN 科技 / 快科技 |
+| 2026-09-17 | [「端侧AI之战正式打响」：字节豆包 AI 手机 NaviX Ultra 亮相](https://www.sohu.com/a/1077629065_122014422) | 巨潮资讯（搜狐号）/ 新浪财经 |
+| 2026-09-17 | [小米 18 Fold 上市：首款搭载 MiMo 端侧模型，自研玄戒 O3 + 澎湃 OS4 集结](https://news.qq.com/rain/a/20260908A058I900) | 爱范儿（腾讯新闻） |
 
-1. 注册/登录 [github.com](https://github.com)，新建 **Public** 仓库（如 `edgeai-weekly`）；
-2. 空仓库页点 **uploading an existing file**，把 `index.html`、`css/`、`js/`、`scripts/`、`README.md` 拖进去提交；
-3. **Settings → Pages** → Source 选 **Deploy from a branch**，分支 `main`、目录 `/ (root)`，保存；
-4. 约 1 分钟后得到 `https://你的用户名.github.io/edgeai-weekly/`；
-5. **每周更新**：仓库里直接编辑 `js/data.js` 提交，或本地 `git push`，线上 1 分钟自动生效。
+### 大模型厂商（1 条）
 
-### 方案二：Cloudflare Pages（拖拽即用，国内访问通常更稳）
+| 日期 | 要闻 | 来源 |
+|------|------|------|
+| 2026-09-21 | [「哑巴 AI」Jev 刷屏：不生成文本的「系统一模型」，决策快 200 倍](https://www.36kr.com/p/3988372551990276) | 36氪 / TechCrunch |
 
-[dash.cloudflare.com](https://dash.cloudflare.com) → Workers 和 Pages → 创建 → Pages → 上传资产，拖入项目文件夹即得 `https://项目名.pages.dev`。
+### 行业动态（3 条）
 
-### 方案三：Netlify Drop（最快）
+| 日期 | 要闻 | 来源 |
+|------|------|------|
+| 2026-09-23 | [云栖大会 AI 新品密集发布，斑马智行推出全模态端侧大模型 AutoOmni 2.0](https://www.sohu.com/a/1080020318_122014422) | 搜狐科技 / MSN |
+| 2026-09-23 | [端侧 AI 加速落地：多厂商密集发布新一代操作系统](https://news.qq.com/rain/a/20260923A05I6700) | 腾讯新闻 |
+| 2026-09-20 | [阶跃星辰发布 Step 5 Preview：600B MoE 旗舰，10 月 15 日开源](https://www.163.com/tech/article/L78VD8I600098IEO.html) | 网易科技 / 腾讯新闻 |
 
-[app.netlify.com/drop](https://app.netlify.com/drop) 拖入文件夹，几秒出链接；注册免费账号保存站点。
+## 科研前沿（15 篇）
 
-## 自定义
+- **arXiv 新作跟踪（10 篇，预印本）**：[End-to-End Latency-Minimizing and Load-Balanced Request Sc…](https://arxiv.org/abs/2609.17193)；[CIDERS: Cloud-Edge LLM Collaborative Learning via Accelera…](https://arxiv.org/abs/2609.15664)；[Understanding the Security Boundary of Obfuscation-based O…](https://arxiv.org/abs/2609.10117)；[PELM: Power Efficient On-Device LLM Inference with Specula…](https://arxiv.org/abs/2609.09662)；[From Fixed Keys to Readable Schemas: Small Language Models…](https://arxiv.org/abs/2609.09476)；[Beyond Fluent Generation: A CPU Reliability Benchmark for …](https://arxiv.org/abs/2609.07370)；[LeanStream: A Speculate-and-Refine Streaming Framework for…](https://arxiv.org/abs/2609.03079)；[How Do Prompt Variations Affect Energy Consumption in On-D…](https://arxiv.org/abs/2609.01798)；[Triple-Bottom-Line Sustainability of Language Models for E…](https://arxiv.org/abs/2609.00665)；[mzCache: On-Device LLM Memory Management under Multitaskin…](https://arxiv.org/abs/2609.01338)
 
-- **配色**：`css/style.css` 顶部 `:root` 变量；
-- **RSS 源 / 关键词**：`scripts/sources.json` 与 `fetch_news.py` 的 `KEYWORDS`；
-- **论文检索词**：`scripts/fetch_papers.py` 的 `QUERIES` / `KEYWORDS`；
-- **评论区共享化**：当前评论仅存本地浏览器；需多人互通推荐接入 [giscus](https://giscus.app)。
+- **已发表精选（5 篇，CCF-A / 顶会）**：[LLM in a Flash: Efficient Large Language Model Inference w…](https://arxiv.org/abs/2312.11514))；[PowerInfer: Fast Large Language Model Inference with Consu…](https://arxiv.org/abs/2312.12456))；[ArrowCloak: TEE-Shielded LLM Partitioning with Obfuscation](https://www.usenix.org/conference/usenixsecurity25))；[TSQP: Efficient and Secure LLM Inference through TEE-based…](https://sp2025.ieee-security.org))；[LoRO: Low-Rank Obfuscation for TEE-Assisted DNN/LLM Infere…](https://neurips.cc))
 
-## 数据说明
+## 页面板块
 
-- 本期（2026 年第 39 期）数据采集于 2026-09-23，来自公开新闻检索与 arXiv API，论文摘要翻译为中文解读；
-- `data/` 目录为脚本原始候选输出，仅供每周筛选参考，不参与页面渲染；
-- 本项目仅供学习交流，新闻与论文版权归原作者所有。
+① 本周资讯（分类筛选卡片，点击看详情与配图）② 科研前沿（原文扩写中文介绍 + 论文结构图）③ 知识分享（端侧 AI 发展史 + 厂商/个人/中文媒体三分区博客库）④ 评论区
+
+## 说明
+
+- 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
+- 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
+- 本期数据更新于 2026-09-24；本 README 由 `scripts/build_readme.py` 自动生成。

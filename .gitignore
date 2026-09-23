@@ -5,5 +5,8 @@ data/
 __pycache__/
 *.pyc
 
+# 本地运维手册（线上 README 由 build_readme.py 生成）
+DEVELOPMENT.md
+
 # 本地杂项
 *.log
