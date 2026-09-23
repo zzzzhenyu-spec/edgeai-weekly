@@ -17,7 +17,7 @@ const WEEKLY_DATA = {
     issue: "2026 · 第 39 期",
     weekRange: "2026.09.17 — 09.24",
     updated: "2026-09-24",
-    editorsNote: "本期只收录最近一周（09.17–09.24）动态：小米 18 Pro 今日全球首发 2nm 骁龙8E6 Pro；Rokid 二代 AI 眼镜今日数贸会首秀；高通正式发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型，小米 18 Pro 即将首发）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；AI硬件赛道升温——豆包做手机、阿里造平板、千问办公硬件曝光、AI眼镜混战；「哑巴 AI」Jev 刷屏硅谷；云栖大会 AI 新品密集；联发科 CX C10 Max 将驱动 Googlebook；Google Home 开放 MCP；阶跃 600B 旗舰宣布 10 月开源。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。"
+    editorsNote: "本期只收录最近一周（09.17–09.24）动态：小米 18 Pro 今日全球首发 2nm 骁龙8E6 Pro；Rokid 二代 AI 眼镜今日数贸会首秀；高通正式发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型，小米 18 Pro 即将首发）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；AI硬件赛道升温——豆包做手机、阿里造平板、千问办公硬件曝光、AI眼镜混战；「哑巴 AI」Jev 刷屏硅谷；云栖大会 AI 新品密集；高通×谷歌联手推出首批骁龙 X Elite Googlebook（戴尔惠普开售），联发科 CX C10 Max 亦将驱动 Googlebook；Google Home 开放 MCP；阶跃 600B 旗舰宣布 10 月开源。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -111,6 +111,17 @@ const WEEKLY_DATA = {
       url: "https://www.sohu.com/a/1079171780_553580",
       image: "https://q7.itc.cn/q_70/images03/20260921/43bc4f6ae13f400699272bf498964ac0.jpeg",
       imageCap: "配图来自原文页面"
+    },
+    {
+      id: "n29", cat: "芯片厂商", source: "腾讯新闻（手机中国）", date: "2026-09-22",
+      title: "高通携手谷歌推出首批 Googlebook：骁龙 X Elite 赋能 Gemini Intelligence 笔记本",
+      summary: "高通宣布与谷歌合作，将骁龙 X Elite 平台引入首批 Googlebook 笔记本——谷歌今年 5 月推出的高端安卓本品类、定位高于 Chromebook，内置 Gemini Intelligence 主动提供个性化帮助；戴尔、惠普率先开售，联想在首批名单之列。",
+      detail: "据腾讯新闻 9 月 22 日报道，高通技术公司宣布与谷歌展开合作，将骁龙 X Elite 平台引入首批 Googlebook 笔记本电脑。\nGooglebook 是谷歌今年 5 月正式推出的全新旗舰级笔记本品类：运行安卓系统、定位高于 Chromebook，类似「安卓版的 MacBook」；产品内置 Gemini Intelligence，可为用户主动提供个性化帮助——这是「系统级端侧 AI」在笔记本上的落地。\n首批机型：戴尔、惠普的骁龙 X Elite 版 Googlebook 率先开售，联想也在首批名单中（首批均定位 1200 美元档高端市场）；另据 Digital Trends，后续低价款 Googlebook 拟采用老款骁龙平台，把价位下探至约 700 美元。\n官方动作同步：高通官方博客同日发布《Qualcomm × Cartesia 联手为骁龙 X 系列的 Googlebook 带来语音 AI》。\n背景：谷歌本周还宣布了联发科 CX C10 Max 驱动 Googlebook 的合作路线（见本板块另一条）——Googlebook 作为「端侧 AI 笔记本」新品类，已形成高通 / 联发科双平台竞逐的格局。",
+      tags: ["Googlebook", "骁龙 X Elite", "Gemini Intelligence", "高通×谷歌"],
+      url: "https://news.qq.com/rain/a/20260922A03CRB00",
+      image: "https://inews.gtimg.com/om_ls/Op9IiQxeF066H1lYzfYWV9vB-FmpNs0cl8PhSiZL_WxH4AA_640330/0",
+      imageCap: "配图来自原文页面",
+      highlight: true
     },
     {
       id: "n24", cat: "AI硬件", source: "腾讯新闻", date: "2026-09-16",

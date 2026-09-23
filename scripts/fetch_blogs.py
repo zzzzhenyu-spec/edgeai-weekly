@@ -5,7 +5,7 @@
 # 博客清单读取 js/data.js 的 knowledge.resources（按 name 匹配）
 # 输出: js/blogs.js —— const BLOG_FEEDS = {名称: {logo, posts:[{t,u,d,s,e}]}}
 #   t=标题 u=链接 d=日期 s=摘要 e=端侧相关(前端高亮)
-# 规则: RSS 源取最近 30 条；HTML 解析源取 25 条；
+# 规则: RSS 源取最近 30 条；HTML 解析源取 25 条；sitemap 源取 12 条；
 #       端侧相关且无摘要的文章自动抓 og:description 作为介绍
 # ============================================================
 import sys, json, re, time, html as H
@@ -38,11 +38,22 @@ HTML_SITES = {
 SEARCH_SITES = {
     "36氪": "site:36kr.com AI",
 }
+# Sitemap 通道: 官网无 RSS 且列表页 JS 渲染时，走官方 sitemap.xml 拿 (url, lastmod)，
+# 再逐篇抓文章页 og:title / og:description（文章页 meta 是服务端渲染的，可直接读）。
+# 厂商动态类新闻不在博客库收录，由资讯板块择要（fetch_news / 人工择要）。
+SITEMAP_SITES = {
+    "Qualcomm AI Hub & Blog": {
+        "sitemap": "https://www.qualcomm.com/sitemap.xml",
+        "prefix": "/developer/blog/",
+        "max": 12,
+    },
+}
 # 手工指定高质量 logo（RSS image 抓不到或太丑的）
 LOGO_OVERRIDES = {
     "Google DeepMind / Developers Blog": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
     "IT之家": "https://img.ithome.com/images/logo.png",
     "36氪": "https://img.36krcdn.com/20200828/719c4c8d5eb2de09d4e2b6cc3d1e2d0f.png",
+    "Qualcomm AI Hub & Blog": "https://www.google.com/s2/favicons?domain=qualcomm.com&sz=128",
 }
 
 EDGE_KEYS = ["端侧", "on-device", "on device", "edge ai", "edge-side", "npu", "天玑", "骁龙",
@@ -335,6 +346,33 @@ def bing_news_posts(query):
     return posts
 
 
+def sitemap_posts(cfg):
+    """官方 sitemap.xml -> (文章URL, lastmod) 按时间倒序 -> 逐篇抓 og:title / og:description"""
+    try:
+        xml = http_get(cfg["sitemap"], timeout=30, headers=UA).decode("utf-8", "ignore")
+    except Exception as e:
+        print("  sitemap 获取失败:", str(e)[:70])
+        return []
+    pre = re.escape(cfg["prefix"])
+    pairs = re.findall(r"<loc>(https?://[^<]*" + pre + r"[^<]*)</loc><lastmod>(\d{4}-\d{2}-\d{2})", xml)
+    pairs.sort(key=lambda x: x[1], reverse=True)
+    posts = []
+    for u, d in pairs[: cfg["max"]]:
+        try:
+            page = http_get(u, timeout=25, headers=UA).decode("utf-8", "ignore")
+            mt = re.search(r'property="og:title" content="([^"]+)"', page)
+            if not mt:
+                continue
+            md = re.search(r'property="og:description" content="([^"]+)"', page, re.S)
+            posts.append({"t": H.unescape(mt.group(1)).strip(),
+                          "u": u, "d": d,
+                          "s": H.unescape(md.group(1)).strip()[:100] if md else ""})
+            time.sleep(0.6)
+        except Exception:
+            continue
+    return posts
+
+
 def sort_key(p):
     dated = bool(re.match(r"\d{4}", p["d"]))
     return (0 if dated else 1, p["d"] or "0",)
@@ -354,7 +392,9 @@ def main():
             logo, posts = parse_html(*HTML_SITES[name])
         elif name in SEARCH_SITES:
             posts = bing_news_posts(SEARCH_SITES[name])
-        # 官网无公开 RSS 的博客(陈天奇/Gerganov/高通/面壁等): 不做替代填充, 前端显示指引
+        elif name in SITEMAP_SITES:
+            posts = sitemap_posts(SITEMAP_SITES[name])
+        # 官网无公开 RSS 的博客(陈天奇/Gerganov/面壁等): 不做替代填充, 前端显示指引
         logo = LOGO_OVERRIDES.get(name, "") or logo
         # 英文/繁体 -> 简体中文
         for p in posts:

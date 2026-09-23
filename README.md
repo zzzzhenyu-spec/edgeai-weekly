@@ -4,7 +4,7 @@
 
 ## 2026 · 第 39 期（2026.09.17 — 09.24）
 
-**本期导读**：本期只收录最近一周（09.17–09.24）动态：小米 18 Pro 今日全球首发 2nm 骁龙8E6 Pro；Rokid 二代 AI 眼镜今日数贸会首秀；高通正式发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型，小米 18 Pro 即将首发）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；AI硬件赛道升温——豆包做手机、阿里造平板、千问办公硬件曝光、AI眼镜混战；「哑巴 AI」Jev 刷屏硅谷；云栖大会 AI 新品密集；联发科 CX C10 Max 将驱动 Googlebook；Google Home 开放 MCP；阶跃 600B 旗舰宣布 10 月开源。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。
+**本期导读**：本期只收录最近一周（09.17–09.24）动态：小米 18 Pro 今日全球首发 2nm 骁龙8E6 Pro；Rokid 二代 AI 眼镜今日数贸会首秀；高通正式发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型，小米 18 Pro 即将首发）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；AI硬件赛道升温——豆包做手机、阿里造平板、千问办公硬件曝光、AI眼镜混战；「哑巴 AI」Jev 刷屏硅谷；云栖大会 AI 新品密集；高通×谷歌联手推出首批骁龙 X Elite Googlebook（戴尔惠普开售），联发科 CX C10 Max 亦将驱动 Googlebook；Google Home 开放 MCP；阶跃 600B 旗舰宣布 10 月开源。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。
 
 ## 本期速览
 
@@ -25,11 +25,12 @@
 | 2026-09-17 | [OPPO 发布「心力球」：全天候主动式 AI 硬件，年内到来](https://news.qq.com/rain/a/20260917A0AMVQ00) | 腾讯新闻 / 新浪财经 |
 | 2026-09-16 | [AI 眼镜混战：谁能拿下「下一代端侧 AI 入口」](https://news.qq.com/rain/a/20260916A03V6P00) | 腾讯新闻 |
 
-### 芯片厂商（2 条）
+### 芯片厂商（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-09-23 | [高通正式发布第六代骁龙8双旗舰：2nm 制程，端侧可跑 300 亿参数模型](https://news.qq.com/rain/a/20260923A038CO00) | 腾讯新闻 / Qualcomm |
+| 2026-09-22 | [高通携手谷歌推出首批 Googlebook：骁龙 X Elite 赋能 Gemini Intelligence 笔记本](https://news.qq.com/rain/a/20260922A03CRB00) | 腾讯新闻（手机中国） |
 | 2026-09-21 | [联发科 Dimensity CX C10 Max 亮相：将驱动谷歌 Googlebook 计划，联想首发](https://9to5google.com/2026/09/21/mediatek-googlebook-dimensity-cx-c10-max/) | 9to5Google / Tom's Hardware |
 
 ### 手机厂商（3 条）
