@@ -17,11 +17,32 @@ const WEEKLY_DATA = {
     issue: "2026 · 第 39 期",
     weekRange: "2026.09.17 — 09.24",
     updated: "2026-09-24",
-    editorsNote: "本期只收录最近一周（09.17–09.24）动态：小米 18 Pro 9·23 晚全球首发 2nm 骁龙8E6、发布即开售，首销数据出炉的 18 Fold 同款自研栈获市场验证；Rokid 二代 AI 眼镜定档 9·24 数贸会首秀，Q2 全球智能眼镜出货 +35%；高通正式发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；AI硬件赛道升温——豆包做手机、阿里造平板、千问办公硬件曝光、OPPO 心力球；苹果新款 Mac 发货主打端侧 AI 省 token 费；「哑巴 AI」Jev 刷屏硅谷；云栖大会 AI 新品密集；高通×谷歌联手推出首批骁龙 X Elite Googlebook（戴尔惠普开售），联发科 CX C10 Max 亦将驱动 Googlebook；Google Home MCP 面向所有智能体开放；阶跃 600B 旗舰宣布 10 月开源。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。"
+    editorsNote: "本期只收录最近一周（09.17–09.24）动态：Meta Connect 开幕，Muse 全面接入 AI 眼镜、百款眼镜矩阵与 Muse Charm 终端齐发；Rokid 二代 AI 眼镜 9·24 数贸会完成全球首秀；千问 AI 眼镜 N1 系列亮相云栖（10·13 开售）；Q2 全球智能眼镜出货 +35%。小米 18 Pro 9·23 晚全球首发 2nm 骁龙8E6、发布即开售，18 Fold 首销激活近 8 万台；高通发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；斑马智能发布端侧大模型 AutoOmni 2.0-23B-A3B；苹果新款 Mac 发货主打端侧 AI 省 token 费；豆包做手机、阿里造平板、OPPO 心力球——AI 硬件赛道全面升温；「哑巴 AI」Jev 刷屏硅谷；高通×谷歌联手推出首批骁龙 X Elite Googlebook，联发科 CX C10 Max 亦将驱动 Googlebook；Google Home MCP 面向所有智能体开放；阶跃 600B 旗舰宣布 10 月开源。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n32", cat: "AI硬件", source: "站长之家（AIbase）/ 新浪财经", date: "2026-09-24",
+      title: "Meta Connect 开幕：智能体 Muse 全面接入 AI 眼镜，硬件矩阵齐发",
+      summary: "Meta Connect 2026（当地时间 9·23）开幕：个人智能体 Muse 成为全场核心——接入智能眼镜、拥有自己的邮箱、Mac 端可操作电脑；同场发布无摄像头 Audio 眼镜（$349）、Gen 3（$449）、100g VR 眼镜与独立终端 Muse Charm，年底 AI 眼镜将超 100 款。",
+      detail: "Meta Connect 2026 于当地时间 9 月 23 日开幕，站长之家（AIbase）9 月 24 日报道：个人智能体 Muse 贯穿全场，扎克伯格称要让数十亿人用上「超级智能」。\nMuse 生态：「Hey Muse」全面接入智能眼镜；Muse 拥有自己的邮箱（可直接替用户收发处理）；Mac 端 Muse App 可直接操作电脑——从语音助手升级为「全面智能体」。Muse 9 月 8 日推出后已登顶美区 App Store 与 Google Play 免费榜。\n硬件矩阵：Ray-Ban Meta Audio Glasses（无摄像头、43g、12 小时续航 + 充电盒 48 小时，$349）主打隐私形态；Ray-Ban Meta Gen 3（$449，12MP 摄像头、6 麦克风、通话降噪 90%、9 小时续航）；入门线 Meta Adventurer $249 起——2026 年底三大产品线合计将超 100 款 AI 眼镜。\n更远一步：Meta VR Glasses 重量仅 100g（约为 Quest 3 的 1/5），采用「眼镜 + 口袋计算单元」形态，2027 年春上市（$1299）；另公布电子宠物形态的独立 Muse 终端 Muse Charm（内置小屏 / 麦克风 / 扬声器，年底前推出）与眼镜听力增强能力。",
+      tags: ["Meta Connect", "Muse", "AI眼镜", "智能体"],
+      url: "https://www.chinaz.com/ainews/31346.shtml",
+      image: "https://n.sinaimg.cn/spider20260924/155/w660h295/20260924/36e9-20c2ba611e35c3a2649f53d623dc854e.jpg",
+      imageCap: "配图来自原文页面",
+      highlight: true
+    },
+    {
+      id: "n27", cat: "AI硬件", source: "腾讯新闻（AR圈）/ 搜狐科技", date: "2026-09-24",
+      title: "第二代乐奇（Rokid）AI 眼镜数贸会首秀：更潮、更强、更舒适",
+      summary: "Rokid 第二代乐奇 AI 眼镜 9 月 24 日在杭州数贸会全球首秀，现场体验的三个关键词：更潮、更强、更舒适——设计理念「不减配」：先定框形与佩戴，再让光学与重量去适配。",
+      detail: "9 月 24 日，第二代乐奇（Rokid）AI 眼镜在第五届数贸会全球首秀，AR圈在现场体验后给出三个关键词：更潮、更强、更舒适。\n方法论看点是「不减配」：带显示的 AI 眼镜通常先定电子件再包一个壳，二代乐奇把顺序反过来——先定框形与佩戴，再让光学与重量适配，把 AI 眼镜「做回一副眼镜」。\n行业背景：Q2 全球智能眼镜出货同比 +35%（见本板块另一条），Meta Connect 同日发布多款新品——Rokid 代表的中国玩家与 Meta 在「下一代端侧 AI 入口」上正面竞速。",
+      tags: ["Rokid", "乐奇二代", "AI眼镜", "数贸会"],
+      url: "https://news.qq.com/rain/a/20260924A09SWC00",
+      image: "https://inews.gtimg.com/om_ls/Onebi6GvNnxq_zXqA_k_IiUTTp1_N4uR8y_QVPZ6py5E0AA_640330/0",
+      imageCap: "配图来自原文页面"
+    },
     {
       id: "n26", cat: "手机厂商", source: "腾讯新闻 / 新浪财经", date: "2026-09-23",
       title: "小米 18 Pro 系列正式发布：首发 2nm 骁龙8E6，5999 元起、发布即开售",
@@ -32,16 +53,6 @@ const WEEKLY_DATA = {
       image: "https://inews.gtimg.com/om_ls/OKuU0fqca7EVcsSxL7UByEwTtbeNlwlhfknP5NhmYcpacAA_640330/0",
       imageCap: "配图来自原文页面",
       highlight: true
-    },
-    {
-      id: "n27", cat: "AI硬件", source: "搜狐科技", date: "2026-09-23",
-      title: "Rokid 二代 AI 眼镜定档第五届数贸会：9 月 24 日全球首秀",
-      summary: "Rokid（乐奇）第二代 AI 眼镜定档 9 月 24 日在第五届数贸会全球首秀——AI 眼镜赛道再添重磅玩家，与 Meta / 小米 / 雷鸟的混战继续升级。",
-      detail: "据搜狐科技 9 月 23 日报道，Rokid 二代 AI 眼镜定档 9 月 24 日在杭州第五届全球数字贸易博览会上全球首秀。\nRokid 是国内 AR / AI 眼镜头部玩家之一，一代产品已与支付宝等生态深度整合；二代产品预计在光学显示、端侧多模态理解与佩戴形态上继续迭代（以首秀发布为准）。\n行业背景：Q2 全球智能眼镜出货已同比增超 35%（见本板块另一条），Meta 领跑、国内厂商密集发布，「下一代端侧 AI 入口」之争正进入产品密度最高的阶段。",
-      tags: ["Rokid", "AI眼镜", "数贸会", "全球首秀"],
-      url: "https://www.sohu.com/a/1079659740_447547",
-      image: "https://q2.itc.cn/q_70/images03/20260923/616a701b1b4046d993ed57c46e409b06.jpeg",
-      imageCap: "配图来自原文页面"
     },
     {
       id: "n28", cat: "AI硬件", source: "腾讯新闻 / 新浪财经", date: "2026-09-17",
@@ -75,13 +86,13 @@ const WEEKLY_DATA = {
       imageCap: "配图来自原文页面"
     },
     {
-      id: "n21", cat: "行业动态", source: "搜狐科技 / MSN", date: "2026-09-23",
-      title: "云栖大会 AI 新品密集发布，斑马智行推出全模态端侧大模型 AutoOmni 2.0",
-      summary: "云栖大会期间 AI 新品密集：斑马智行发布全模态端侧大模型 AutoOmni 2.0（面向智能座舱），行业观察称 AI 端侧算力「全面爆发」。",
-      detail: "9 月 23 日行业动态：云栖大会密集发布 AI 新品，AI 端侧算力被业内评价为「全面爆发」。\n端侧侧亮点是斑马智行（上汽×阿里背景）发布的全模态端侧大模型 AutoOmni 2.0：面向智能座舱场景，主打全模态理解与个性化体验——车载是端侧大模型落地最快的场景之一（云端复杂推理 + 车机小模型的端云协同架构）。\n同期苹果新款 Mac 开始发货（自研芯片 + 端侧 AI 能力同步上量），端侧算力在手机、车机、PC 三条线同步进入密集落地期。",
-      tags: ["云栖大会", "AutoOmni 2.0", "智能座舱", "端侧算力"],
-      url: "https://www.sohu.com/a/1080020318_122014422",
-      image: "https://q4.itc.cn/q_70/images03/20260923/55192c23e0ee4e77930a80888b30c07e.png",
+      id: "n21", cat: "行业动态", source: "央广网（腾讯新闻）/ 搜狐科技", date: "2026-09-24",
+      title: "斑马智能发布全模态端侧大模型 AutoOmni 2.0-23B-A3B：座舱任务比肩 10 倍级云模型",
+      summary: "云栖大会期间，斑马智能发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B（MoE 架构）：智能座舱普通任务处理能力堪比 10 倍参数量级的云模型；AutoClaw 2.0 智舱协作实车方案同步亮相。",
+      detail: "央广网 9 月 24 日报道：9 月 23 日云栖大会期间，斑马智能正式发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B，AutoClaw 2.0 智舱协作服务实车方案同步亮相。\n技术要点：模型采用 MoE 混合专家架构（命名中的 A3B 即激活参数约 3B 量级的稀疏架构），官方称在智能座舱场景下普通任务处理能力堪比 10 倍参数量级的云模型，复杂任务端云协同处理。\n行业语境：车载是端侧大模型落地最快的场景之一（车规算力 + 私密性强 + 交互高频）；同期云栖大会 AI 新品密集发布，端侧算力被业内评价为「全面爆发」。",
+      tags: ["云栖大会", "AutoOmni 2.0", "智能座舱", "MoE"],
+      url: "https://news.qq.com/rain/a/20260924A07A9800",
+      image: "https://inews.gtimg.com/om_ls/OgUErLUkrqPgOv1hN-ljbN8wvZoECL9qAdZsuHRFHioAYAA_640330/0",
       imageCap: "配图来自原文页面"
     },
     {
@@ -122,6 +133,16 @@ const WEEKLY_DATA = {
       image: "https://inews.gtimg.com/om_ls/Op9IiQxeF066H1lYzfYWV9vB-FmpNs0cl8PhSiZL_WxH4AA_640330/0",
       imageCap: "配图来自原文页面",
       highlight: true
+    },
+    {
+      id: "n33", cat: "AI硬件", source: "新浪财经 / 富途资讯", date: "2026-09-22",
+      title: "阿里千问 AI 眼镜 N1 系列亮相云栖：眼动追踪 + 虹膜支付，10 月 13 日开售",
+      summary: "云栖大会期间，阿里推出新一代千问 AI 眼镜 N1 系列，支持眼动追踪与虹膜支付，10 月 13 日开售——大模型厂商做 AI 硬件再下一城。",
+      detail: "9 月 22 日消息：阿里在云栖大会期间推出新一代千问 AI 眼镜 N1 系列，10 月 13 日开售。\n差异化能力集中在「眼睛」：眼动追踪交互与虹膜支付——把生物识别与交互都收进眼镜形态，配合千问端侧模型的多模态理解能力。\n放在本周语境里：千问 AI 眼镜 + 此前曝出的千问平板与千元级千问办公硬件——「千问」正从模型品牌变成一条完整的 AI 硬件产品线，与豆包做手机形成大模型厂商硬件化的两条代表路线。",
+      tags: ["千问AI眼镜", "N1 系列", "眼动追踪", "虹膜支付"],
+      url: "https://finance.sina.com.cn/tech/roll/2026-09-22/doc-inisspzf8887020.shtml",
+      image: "https://n.sinaimg.cn/spider20260922/200/w600h400/20260922/1460-c181d25bcbc3c4ba6b6012d0510fc11a.png",
+      imageCap: "配图来自原文页面"
     },
     {
       id: "n24", cat: "AI硬件", source: "腾讯新闻（盘中雷达）", date: "2026-09-17",
