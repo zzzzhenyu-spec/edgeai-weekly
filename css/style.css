@@ -12,7 +12,7 @@
   --border-glow: rgba(129, 140, 248, 0.55);
   --text: #e8ecf6;
   --text-dim: #9aa5bd;
-  --text-faint: #64708a;
+  --text-faint: #7e8aa6;
   --accent: #22d3ee;
   --accent2: #818cf8;
   --accent3: #e879f9;
@@ -57,6 +57,7 @@ a:hover { text-decoration: underline; }
     radial-gradient(700px 600px at 55% 110%, rgba(232, 121, 249, 0.07), transparent 60%),
     var(--bg);
 }
+#bg-particles { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.9; }
 .bg-fx::after {
   content: ""; position: absolute; inset: 0;
   background-image:
@@ -206,8 +207,8 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 }
 .chip:hover { color: var(--text); border-color: rgba(129,140,248,0.4); transform: translateY(-1px); }
 .chip.on {
-  color: #fff; border-color: transparent;
-  background: linear-gradient(120deg, rgba(34,211,238,0.85), rgba(129,140,248,0.85), rgba(232,121,249,0.8));
+  color: #05070d; border-color: transparent; font-weight: 600;
+  background: linear-gradient(120deg, rgba(34,211,238,0.92), rgba(129,140,248,0.92), rgba(232,121,249,0.88));
   box-shadow: 0 4px 18px -4px rgba(129,140,248,0.55);
 }
 .chip .cnt { font-family: var(--mono); font-size: 11px; opacity: 0.75; margin-left: 4px; }
@@ -326,6 +327,69 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .tl-item p { font-size: 13.5px; color: var(--text-dim); max-width: 760px; }
 
 .res-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+
+/* ---------------- 板块三：双栏（知识分享 | GitHub 高星仓库） ---------------- */
+.knowledge-split {
+  display: grid; grid-template-columns: minmax(0, 1fr) 370px;
+  gap: 34px; align-items: start; margin-top: 6px;
+}
+.k-right { position: sticky; top: 88px; }
+
+/* 概念速查：词条式排版（细分割线，非卡片堆） */
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); column-gap: 30px; }
+.concept {
+  padding: 13px 2px 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex; flex-direction: column; gap: 5px;
+  transition: border-color 0.25s, background 0.25s;
+}
+.concept:hover { border-color: rgba(34, 211, 238, 0.35); }
+.c-term { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 0.02em; }
+.concept p { font-size: 13px; color: var(--text-dim); line-height: 1.66; }
+
+/* GitHub 高星仓库面板 */
+.gh-panel {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(129, 140, 248, 0.05), rgba(10, 15, 28, 0.4)), var(--panel);
+  padding: 18px 18px 14px; overflow: hidden; position: relative;
+}
+.gh-panel::before {
+  content: ""; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.55), transparent);
+}
+.gh-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+.gh-head h4 { font-size: 15.5px; }
+.gh-updated { font-family: var(--mono); font-size: 10.5px; color: var(--text-faint); white-space: nowrap; }
+.gh-list { display: flex; flex-direction: column; }
+.gh-repo {
+  display: block; padding: 11px 10px; margin: 0 -10px; border-radius: 12px;
+  text-decoration: none; border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  transition: background 0.22s, transform 0.22s;
+}
+.gh-repo:last-child { border-bottom: none; }
+.gh-repo:hover { background: rgba(129, 140, 248, 0.08); transform: translateX(3px); text-decoration: none; }
+.gh-name { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.gh-name b {
+  font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--text);
+  min-width: 0; flex: 0 1 auto;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.gh-count { margin-left: auto; flex: none; font-family: var(--mono); font-size: 11.5px; color: #fbbf24; }
+.gh-repo p {
+  font-size: 12px; color: var(--text-dim); line-height: 1.55; margin: 4px 0 5px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.gh-meta { display: flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 10.5px; color: var(--text-faint); }
+.gh-meta i { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+.gh-meta span { opacity: 0.8; }
+
+/* ---------------- 富文本强调（摘要/导读可读性） ---------------- */
+.rp-b { color: var(--text); font-weight: 700; }
+.rp-mark {
+  color: #7dd3fc;
+  background: linear-gradient(transparent 72%, rgba(34, 211, 238, 0.25) 72%);
+  padding: 0 1px; border-radius: 2px;
+}
+.rp-q { color: #a5b4fc; }
 .res-card {
   padding: 20px; border-radius: var(--radius); background: var(--panel); border: 1px solid var(--border);
   transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), border-color 0.3s, box-shadow 0.3s;
@@ -375,29 +439,15 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .post-title { font-size: 13.5px; font-weight: 600; color: var(--text); line-height: 1.5; overflow-wrap: anywhere; }
 .post-desc { font-size: 12px; font-style: normal; color: var(--text-faint); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .post-flag { flex: none; align-self: center; font-size: 10px; color: #05070d; font-weight: 700; background: linear-gradient(120deg, #22d3ee, #818cf8); padding: 2px 8px; border-radius: 999px; }
-/* 端侧相关: 柔和的流光背光 */
+/* 端侧相关: 静态高级背光（细描边 + 冷色内晕，无动画扫描） */
 .post-item.edge {
-  position: relative; overflow: hidden;
-  border-color: rgba(34, 211, 238, 0.42);
-  background: linear-gradient(100deg,
-    rgba(34, 211, 238, 0.05) 0%, rgba(129, 140, 248, 0.12) 30%,
-    rgba(34, 211, 238, 0.06) 55%, rgba(129, 140, 248, 0.11) 80%, rgba(34, 211, 238, 0.05) 100%);
-  background-size: 220% 100%;
-  animation: edgeFlow 7s linear infinite;
-  box-shadow: inset 0 0 24px -12px rgba(103, 232, 249, 0.7), 0 0 18px -8px rgba(34, 211, 238, 0.35);
+  border-color: rgba(34, 211, 238, 0.34);
+  background:
+    linear-gradient(180deg, rgba(34, 211, 238, 0.055), rgba(34, 211, 238, 0.015)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: inset 0 1px 0 rgba(148, 233, 255, 0.14), inset 0 0 22px -14px rgba(103, 232, 249, 0.55);
 }
-.post-item.edge::after {
-  content: ""; position: absolute; top: 0; bottom: 0; left: -18%;
-  width: 16%;
-  background: linear-gradient(100deg, transparent, rgba(148, 233, 255, 0.14), transparent);
-  animation: edgeSweep 5.5s ease-in-out infinite;
-  pointer-events: none;
-}
-@keyframes edgeFlow { 0% { background-position: 0% 0; } 100% { background-position: -220% 0; } }
-@keyframes edgeSweep { 0% { left: -18%; } 55% { left: 108%; } 100% { left: 108%; } }
-@media (prefers-reduced-motion: reduce) {
-  .post-item.edge, .post-item.edge::after { animation: none; }
-}
+.post-item.edge:hover { border-color: rgba(34, 211, 238, 0.6); }
 .post-empty { padding: 26px; text-align: center; color: var(--text-faint); font-size: 13px; border: 1px dashed var(--border); border-radius: 12px; }
 
 .pager { display: flex; gap: 6px; align-items: center; justify-content: center; margin-top: 12px; }
@@ -435,7 +485,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .comment-form input { flex: 0 0 220px; }
 .comment-form textarea { flex: 1; min-height: 96px; resize: vertical; }
 .btn-submit {
-  align-self: flex-end; font-family: var(--font); font-size: 14px; font-weight: 700; color: #fff;
+  align-self: flex-end; font-family: var(--font); font-size: 14px; font-weight: 700; color: #05070d;
   padding: 11px 30px; border: none; border-radius: 12px; cursor: pointer;
   background: linear-gradient(120deg, #22d3ee, #818cf8, #e879f9);
   box-shadow: 0 6px 22px -6px rgba(129,140,248,0.65);
@@ -545,9 +595,15 @@ body.panel-open { overflow: hidden; }
 }
 
 /* ---------------- 响应式 ---------------- */
+@media (max-width: 1180px) {
+  .knowledge-split { grid-template-columns: 1fr; }
+  .k-right { position: static; }
+  .gh-panel { max-width: 720px; }
+}
 @media (max-width: 860px) {
   .site-header { padding: 12px 16px; gap: 12px; flex-wrap: wrap; }
   .issue-chip { order: 3; }
+  .issue-select { order: 4; }
   .site-nav { order: 2; margin-left: 0; width: 100%; }
   .hero { padding: 44px 18px 26px; }
   main { padding: 20px 18px 50px; }

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="bg-fx" aria-hidden="true"></div>
+  <div class="bg-fx" aria-hidden="true"><canvas id="bg-particles"></canvas></div>
 
   <!-- ================= 顶部导航 ================= -->
   <header class="site-header">
@@ -23,7 +23,6 @@
       <a href="#knowledge" data-sec="knowledge">知识分享</a>
       <a href="#comments" data-sec="comments">评论区</a>
     </nav>
-    <span class="issue-chip" id="issue-chip"></span>
     <select id="issue-select" class="issue-select" aria-label="选择期数（含历史期存档）" title="切换历史期数"></select>
   </header>
 
@@ -73,11 +72,19 @@
     <section id="knowledge" class="board" data-sec="knowledge">
       <div class="board-head">
         <h2><span class="no">03</span>知识分享</h2>
-        <span class="board-sub">端侧 AI 发展史 · 科学家博客与一手信源</span>
+        <span class="board-sub">端侧 AI 概念速查 · 博客库 · GitHub 高星 AI 仓库</span>
       </div>
-      <h3 class="sub-h">端侧 AI 简史（2016 → 2026）</h3>
-      <div class="timeline" id="timeline"></div>
-      <div id="res-zone"></div>
+      <div class="knowledge-split">
+        <div class="k-left">
+          <h3 class="sub-h">端侧 AI 核心概念速查</h3>
+          <div id="k-dynamic"></div>
+          <h3 class="sub-h">博客库 · 一手信源</h3>
+          <div id="res-zone"></div>
+        </div>
+        <aside class="k-right">
+          <div class="gh-panel" id="gh-panel"></div>
+        </aside>
+      </div>
     </section>
 
     <!-- ================= 板块四：评论区 ================= -->
@@ -124,6 +131,7 @@
 
   <script src="js/data.js"></script>
   <script src="js/archive/manifest.js"></script>
+  <script src="js/github_repos.js"></script>
   <script src="js/blogs.js"></script>
   <script src="js/app.js"></script>
 </body>

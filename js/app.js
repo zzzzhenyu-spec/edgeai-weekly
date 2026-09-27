@@ -19,6 +19,15 @@
       .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
 
+  /* 富文本强调（在转义后的文本上做受标记替换，无注入面）：
+   **加粗** -> rp-b；==高亮== -> rp-mark（下划线式）；「术语」 -> rp-q 着色 */
+  function rich(s) {
+    return esc(s)
+      .replace(/\*\*([^*]+)\*\*/g, '<b class="rp-b">$1</b>')
+      .replace(/==([^=]+)==/g, '<span class="rp-mark">$1</span>')
+      .replace(/「([^」]*)」/g, '<span class="rp-q">「$1」</span>');
+  }
+
   /* ---------- 论文分类配色 ---------- */
   var CAT_COLOR = {
     "推理与系统": "#22d3ee",
@@ -45,20 +54,31 @@
 
   /* 期次渲染（可重入）：切换期数时整体重绘，事件绑定全部在初始化区一次性完成 */
   function renderIssue() {
-    $("issue-chip").textContent = D.meta.issue;
+    var chipEl = $("issue-chip");
+    if (chipEl) chipEl.textContent = D.meta.issue;
     $("hero-kicker").textContent = "VOL." + ((D.meta.issue.match(/\d+(?=\s*期)/) || [""])[0]) + " · " + D.meta.weekRange + " · WEEKLY BRIEFING";
-    $("editors-note").innerHTML = "<b>本期导读</b>" + esc(D.meta.editorsNote);
+    $("editors-note").innerHTML = "<b>本期导读</b>" + rich(D.meta.editorsNote);
     $("footer-meta").textContent = D.meta.issue + " · 数据更新于 " + D.meta.updated + " · 资讯 " + D.news.length + " 条 / 论文 " + D.papers.length + " 篇 / 资源 " + D.knowledge.resources.length + " 个";
     countUp($("stat-news"), D.news.length);
     countUp($("stat-papers"), D.papers.length);
     countUp($("stat-res"), D.knowledge.resources.length);
     $("stat-weeks").textContent = (D.meta.issue.match(/\d+(?= *期)/) || ["—"])[0];
-    $("timeline").innerHTML = D.knowledge.timeline.map(function (t) {
-      return '<div class="tl-item reveal">' +
-        '<div class="tl-year">' + esc(t.year) + "</div>" +
-        "<h4>" + esc(t.title) + "</h4>" +
-        "<p>" + esc(t.text) + "</p></div>";
-    }).join("");
+    var KD = $("k-dynamic");
+    if (KD) {
+      if (D.knowledge.concepts && D.knowledge.concepts.length) {
+        KD.innerHTML = '<div class="concept-grid">' + D.knowledge.concepts.map(function (c) {
+          return '<div class="concept"><span class="c-term">' + esc(c.t) + '</span><p>' + rich(c.d) + '</p></div>';
+        }).join("") + "</div>";
+      } else if (D.knowledge.timeline) {
+        /* 历史期存档无 concepts 字段时回退时间线 */
+        KD.innerHTML = '<div class="timeline">' + D.knowledge.timeline.map(function (t) {
+          return '<div class="tl-item reveal">' +
+            '<div class="tl-year">' + esc(t.year) + "</div>" +
+            "<h4>" + esc(t.title) + "</h4>" +
+            "<p>" + esc(t.text) + "</p></div>";
+        }).join("") + "</div>";
+      }
+    }
     $("res-zone").innerHTML = RES_GROUPS.map(function (g) {
       var items = D.knowledge.resources.filter(function (r) { return r.group === g; });
       if (!items.length) return "";
@@ -69,7 +89,7 @@
     renderNewsChips(); renderNews();
     renderPaperChips(); renderPapers();
     buildViz();
-    Array.prototype.forEach.call(document.querySelectorAll(".tl-item, .res-card, .stat, .editors-note"), function (el) {
+    Array.prototype.forEach.call(document.querySelectorAll(".tl-item, .concept, .res-card, .stat, .editors-note"), function (el) {
       revealIO.observe(el);
       el.classList.add("reveal");
     });
@@ -246,7 +266,7 @@
           '<span class="card-date">' + esc(n.date) + "</span>" +
         "</div>" +
         "<h3>" + esc(n.title) + "</h3>" +
-        '<p class="card-sum">' + esc(n.summary) + "</p>" +
+        '<p class="card-sum">' + rich(n.summary) + "</p>" +
         '<div class="card-tags">' + (n.tags || []).map(function (t) { return '<span class="tag"># ' + esc(t) + '</span>'; }).join("") + "</div>" +
         '<span class="read-hint">点击查看详情</span>' +
       "</article>";
@@ -281,7 +301,7 @@
         "</div>" +
         '<h3 class="card-en-title">' + esc(p.title) + "</h3>" +
         '<div class="paper-authors">' + esc(p.authors) + "</div>" +
-        '<p class="card-sum">' + esc(p.summary) + "</p>" +
+        '<p class="card-sum">' + rich(p.summary) + "</p>" +
         '<div class="card-tags">' + (p.tags || []).map(function (t) { return '<span class="tag"># ' + esc(t) + '</span>'; }).join("") + "</div>" +
         '<span class="read-hint">点击查看详情</span>' +
       "</article>";
@@ -526,7 +546,7 @@
       actions = '<div class="panel-actions"><a class="btn-src" href="' + esc(item.url) + '" target="_blank" rel="noopener">阅读原文 ↗</a></div>';
     }
     var paras = String(item.detail || item.summary).split("\n").filter(Boolean)
-      .map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
+      .map(function (p) { return "<p>" + rich(p) + "</p>"; }).join("");
     return '' +
       '<div class="panel-kicker">' + kicker + "</div>" +
       figureHTML(item, type) +
@@ -641,6 +661,97 @@
   document.querySelectorAll("section.board").forEach(function (s) { sectionIO.observe(s); });
 
   /* ============================================================
+   * GitHub 高星 AI 仓库面板（数据来自 js/github_repos.js，每周随 fetch_github.py 更新）
+   * ============================================================ */
+  var GH_LANG_COLORS = ["#22d3ee", "#818cf8", "#e879f9", "#34d399", "#fbbf24"];
+  function ghStars(n) {
+    return n >= 10000 ? (n / 10000).toFixed(1).replace(/\.0$/, "") + "万" : String(n);
+  }
+  function renderGH() {
+    var host = $("gh-panel");
+    if (!host) return;
+    var G = (typeof GH_REPOS !== "undefined") ? GH_REPOS : window.GH_REPOS;
+    if (!G || !G.repos || !G.repos.length) { host.style.display = "none"; return; }
+    host.innerHTML =
+      '<div class="gh-head"><h4>GitHub · 高星 AI 仓库</h4>' +
+      '<span class="gh-updated">近 120 天 · ' + esc(G.updated) + "</span></div>" +
+      '<div class="gh-list">' + G.repos.map(function (r, i) {
+        var dot = GH_LANG_COLORS[i % GH_LANG_COLORS.length];
+        return '<a class="gh-repo" href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
+          '<div class="gh-name"><b>' + esc(r.name) + "</b>" +
+          '<span class="gh-count">★ ' + esc(ghStars(r.stars)) + "</span></div>" +
+          "<p>" + esc(r.desc || "—") + "</p>" +
+          '<div class="gh-meta"><i style="background:' + dot + '"></i>' + esc(r.lang || "—") +
+          "<span>push " + esc(r.pushed) + "</span></div></a>";
+      }).join("") + "</div>";
+  }
+
+  /* ============================================================
+   * 背景粒子场（高级感氛围层）：慢速上浮微粒 + 近邻低透明度连线
+   * 尊重 prefers-reduced-motion；页面隐藏时暂停
+   * ============================================================ */
+  function initParticles() {
+    var cv = document.getElementById("bg-particles");
+    if (!cv || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var ctx = cv.getContext("2d");
+    if (!ctx) return;
+    var COLORS = ["34,211,238", "129,140,248", "232,121,249"];
+    var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    var W = 0, H = 0, pts = [], running = false;
+    function resize() {
+      W = cv.clientWidth || window.innerWidth;
+      H = cv.clientHeight || window.innerHeight;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var n = Math.min(90, Math.max(30, Math.round(W * H / 18000)));
+      pts = [];
+      for (var i = 0; i < n; i++) {
+        pts.push({
+          x: Math.random() * W, y: Math.random() * H,
+          r: 0.6 + Math.random() * 1.4,
+          vx: (Math.random() - 0.5) * 0.12,
+          vy: -(0.04 + Math.random() * 0.15),
+          a: 0.10 + Math.random() * 0.26,
+          tw: Math.random() * Math.PI * 2,
+          c: COLORS[i % 3]
+        });
+      }
+    }
+    function step(t) {
+      if (document.hidden) { running = false; return; }
+      ctx.clearRect(0, 0, W, H);
+      var i, j, p;
+      for (i = 0; i < pts.length; i++) {
+        p = pts[i];
+        p.x += p.vx; p.y += p.vy;
+        if (p.y < -4) { p.y = H + 4; p.x = Math.random() * W; }
+        if (p.x < -4) p.x = W + 4; else if (p.x > W + 4) p.x = -4;
+        var alpha = p.a * (0.7 + 0.3 * Math.sin(t / 1500 + p.tw));
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832);
+        ctx.fillStyle = "rgba(" + p.c + "," + alpha.toFixed(3) + ")";
+        ctx.fill();
+      }
+      ctx.lineWidth = 1;
+      for (i = 0; i < pts.length; i++) {
+        for (j = i + 1; j < pts.length; j++) {
+          var dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y, d2 = dx * dx + dy * dy;
+          if (d2 < 8100) {
+            ctx.strokeStyle = "rgba(129,140,248," + (0.05 * (1 - d2 / 8100)).toFixed(3) + ")";
+            ctx.beginPath(); ctx.moveTo(pts[i].x, pts[i].y); ctx.lineTo(pts[j].x, pts[j].y); ctx.stroke();
+          }
+        }
+      }
+      if (running) requestAnimationFrame(step);
+    }
+    function start() { if (!running) { running = true; requestAnimationFrame(step); } }
+    resize();
+    var rt = null;
+    window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(resize, 250); });
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) start(); });
+    start();
+  }
+
+  /* ============================================================
    * 初始化（一次性事件绑定 + 期次渲染 + 期数选择器）
    * ============================================================ */
   $("news-chips").addEventListener("click", function (e) {
@@ -658,6 +769,8 @@
   spotlight($("papers-grid"));
   bindCards($("news-grid"), "news");
   bindCards($("papers-grid"), "papers");
+  renderGH();
+  initParticles();
 
   /* ---------- 期数选择器：当前期用 live 数据，历史期从 js/archive/ 按需加载 ---------- */
   var ISSUES = (typeof WEEKLY_ISSUES !== "undefined" && window.WEEKLY_ISSUES) ? window.WEEKLY_ISSUES : [];
