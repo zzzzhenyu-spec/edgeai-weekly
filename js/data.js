@@ -17,7 +17,7 @@ const WEEKLY_DATA = {
     issue: "2026 · 第 40 期",
     weekRange: "2026.09.20 — 09.27",
     updated: "2026-09-27",
-    editorsNote: "本期只收录最近一周（09.20–09.27）动态：首款 AI 智能体手机撞上现实 friction——豆包手机助手就《王者荣耀》强制下线事件致歉，端侧 GUI Agent 与 App 反作弊风控的边界之争浮出水面；骁龙峰会收官，高通联合阶跃星辰、无量火、江波龙演示端侧 30B MoE 完整智能体工作流，Snapdragon Sound Elite Gen 2 把端侧 AI 带进「hearables」；苹果首度公布端侧 AI 能力矩阵（iPhone 140 亿参数 → Mac Studio 集群 1.6 万亿），新款 Mac 主打端侧 AI 省 token 费；荣耀 Magic9 定档 9·28（顶配首发第六代骁龙8超级至尊版、搭载 Qwen Intelligence）；微软 12 吋 Surface Pro 换装骁龙 X2 Plus 补上 5G。Meta Connect 上 Muse 全面接入 AI 眼镜、百款眼镜矩阵齐发；Rokid 二代眼镜数贸会首秀、千问 AI 眼镜 N1 亮相云栖（10·13 开售）；小米 18 Pro 全球首发 2nm 骁龙8E6 发布即开售，18 Fold 首销激活近 8 万台；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；高通×谷歌首批 Googlebook 落地、联发科 CX C10 Max 跟进；阶跃 600B 旗舰宣布 10 月开源；「哑巴 AI」Jev 刷屏硅谷。学术侧 arXiv 新作集中于端侧 KV 缓存、小音频语言模型、端侧个性化与具身 VLM（理想 ME-VLM 4B 端侧部署）。"
+    editorsNote: "本期只收录最近一周（09.20–09.27）动态：首款 AI 智能体手机撞上现实 friction——豆包手机助手就《王者荣耀》强制下线事件致歉，端侧 GUI Agent 与 App 反作弊风控的边界之争浮出水面；骁龙峰会收官，高通联合阶跃星辰、无量火、江波龙演示端侧 30B MoE 完整智能体工作流，Snapdragon Sound Elite Gen 2 把端侧 AI 带进「hearables」；苹果首度公布端侧 AI 能力矩阵（iPhone 140 亿参数 → Mac Studio 集群 1.6 万亿），新款 Mac 主打端侧 AI 省 token 费；荣耀 Magic9 定档 9·28（顶配首发第六代骁龙8超级至尊版、搭载 Qwen Intelligence）；微软 12 吋 Surface Pro 换装骁龙 X2 Plus 补上 5G。Meta Connect 上 Muse 全面接入 AI 眼镜、百款眼镜矩阵齐发；Rokid 二代眼镜数贸会首秀、千问 AI 眼镜 N1 亮相云栖（10·13 开售）、阿里「原生智能体电脑」QwenBook 云栖首秀（打通 WPS，年底或明年初发售）；小米 18 Pro 全球首发 2nm 骁龙8E6 发布即开售，18 Fold 首销激活近 8 万台；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；高通×谷歌首批 Googlebook 落地、联发科 CX C10 Max 跟进；阶跃 600B 旗舰宣布 10 月开源；「哑巴 AI」Jev 刷屏硅谷。用户侧温度（小红书）：AirPods 5 首发潮多篇千赞教程帖，豆包手机口碑两极。学术侧 arXiv 新作集中于端侧 KV 缓存、小音频语言模型、端侧个性化与具身 VLM（理想 ME-VLM 4B 端侧部署）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -191,6 +191,16 @@ const WEEKLY_DATA = {
       tags: ["千问AI眼镜", "N1 系列", "眼动追踪", "虹膜支付"],
       url: "https://finance.sina.com.cn/tech/roll/2026-09-22/doc-inisspzf8887020.shtml",
       image: "https://n.sinaimg.cn/spider20260922/200/w600h400/20260922/1460-c181d25bcbc3c4ba6b6012d0510fc11a.png",
+      imageCap: "配图来自原文页面"
+    },
+    {
+      id: "n40", cat: "AI硬件", source: "IT之家（腾讯新闻）/ 时代周报（新浪财经）", date: "2026-09-22",
+      title: "阿里云栖首秀「原生智能体电脑」QwenBook：千问平板形态，打通 WPS、适配高通/英特尔",
+      summary: "晚点独家披露 + 云栖现场真机首秀：阿里云无影团队自研 QwenBook——「你的第一台原生智能体电脑」，平板+键盘形态、类 macOS 界面、键盘带千问专属键、摄像头模组内藏圆形小屏；打通 WPS 与支付宝/千问输入法，已适配高通、英特尔、罗技、绿联，正式发布预计年底或明年初。",
+      detail: "9 月 22 日，据《晚点 LatePost》独家报道，阿里云旗下无影团队正在研发名为 QwenBook 的 AI 设备，定位「原生智能体电脑」，产品形态更接近一台「千问平板」；IT之家当天即在 2026 云栖大会现场看到了演示真机。\n形态与交互：平板 + 键盘触摸板组合（类似笔记本），系统界面类似 macOS——App 底栏、窗口位置随意可调、随时唤醒千问对话，应用中心含钉钉、阿里云盘；键盘可在 Windows/macOS 双布局间切换并搭载专门的千问按键；A 面硕大的黑色摄像头模组另有玄机——双摄只占一半面积，另一半是一块可显示卡通形象的圆形小屏。\n生态：与金山深度合作打通 WPS（开发中）；时代周报现场消息称，QwenBook 配备 Skill 键盘阵列、全局 AI 按键、语音手写笔等交互入口，面向 7x24 小时执行重度任务，并与开源项目 Omarchy 合作探索面向 Agent 的新一代桌面 OS；已与高通、英特尔、罗技、绿联完成适配，打通支付宝、千问输入法；接入 Qwen3.8-Max / Qwen3.8-Flash 双模型。\n定位与节奏：产品仍处试水阶段，本次展示为演示版本，正式发售预计今年底或明年初；该设备也在骁龙峰会上现身。此前 9 月 21 日搜狐独家曝料的「千问办公 AI 硬件」（见本板块另一条）由此落定首个具体形态——与豆包做手机的「整机路线」不同，阿里选择从「办公平板 + 智能体 OS」切入 AI 终端。（本条线索最早来自小红书用户帖，经晚点/IT之家/时代周报核实收录。）",
+      tags: ["QwenBook", "千问平板", "原生智能体电脑", "阿里云"],
+      url: "https://news.qq.com/rain/a/20260922A05VOJ00",
+      image: "https://inews.gtimg.com/om_ls/O-Av19C3FfX8lkOEEmvGNLm9SzzdUNSs9rOs6ty2bK0H8AA_640330/0",
       imageCap: "配图来自原文页面"
     },
     {

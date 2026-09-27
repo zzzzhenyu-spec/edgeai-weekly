@@ -4,7 +4,7 @@
 
 ## 2026 · 第 40 期（2026.09.20 — 09.27）
 
-**本期导读**：本期只收录最近一周（09.20–09.27）动态：首款 AI 智能体手机撞上现实 friction——豆包手机助手就《王者荣耀》强制下线事件致歉，端侧 GUI Agent 与 App 反作弊风控的边界之争浮出水面；骁龙峰会收官，高通联合阶跃星辰、无量火、江波龙演示端侧 30B MoE 完整智能体工作流，Snapdragon Sound Elite Gen 2 把端侧 AI 带进「hearables」；苹果首度公布端侧 AI 能力矩阵（iPhone 140 亿参数 → Mac Studio 集群 1.6 万亿），新款 Mac 主打端侧 AI 省 token 费；荣耀 Magic9 定档 9·28（顶配首发第六代骁龙8超级至尊版、搭载 Qwen Intelligence）；微软 12 吋 Surface Pro 换装骁龙 X2 Plus 补上 5G。Meta Connect 上 Muse 全面接入 AI 眼镜、百款眼镜矩阵齐发；Rokid 二代眼镜数贸会首秀、千问 AI 眼镜 N1 亮相云栖（10·13 开售）；小米 18 Pro 全球首发 2nm 骁龙8E6 发布即开售，18 Fold 首销激活近 8 万台；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；高通×谷歌首批 Googlebook 落地、联发科 CX C10 Max 跟进；阶跃 600B 旗舰宣布 10 月开源；「哑巴 AI」Jev 刷屏硅谷。学术侧 arXiv 新作集中于端侧 KV 缓存、小音频语言模型、端侧个性化与具身 VLM（理想 ME-VLM 4B 端侧部署）。
+**本期导读**：本期只收录最近一周（09.20–09.27）动态：首款 AI 智能体手机撞上现实 friction——豆包手机助手就《王者荣耀》强制下线事件致歉，端侧 GUI Agent 与 App 反作弊风控的边界之争浮出水面；骁龙峰会收官，高通联合阶跃星辰、无量火、江波龙演示端侧 30B MoE 完整智能体工作流，Snapdragon Sound Elite Gen 2 把端侧 AI 带进「hearables」；苹果首度公布端侧 AI 能力矩阵（iPhone 140 亿参数 → Mac Studio 集群 1.6 万亿），新款 Mac 主打端侧 AI 省 token 费；荣耀 Magic9 定档 9·28（顶配首发第六代骁龙8超级至尊版、搭载 Qwen Intelligence）；微软 12 吋 Surface Pro 换装骁龙 X2 Plus 补上 5G。Meta Connect 上 Muse 全面接入 AI 眼镜、百款眼镜矩阵齐发；Rokid 二代眼镜数贸会首秀、千问 AI 眼镜 N1 亮相云栖（10·13 开售）、阿里「原生智能体电脑」QwenBook 云栖首秀（打通 WPS，年底或明年初发售）；小米 18 Pro 全球首发 2nm 骁龙8E6 发布即开售，18 Fold 首销激活近 8 万台；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；高通×谷歌首批 Googlebook 落地、联发科 CX C10 Max 跟进；阶跃 600B 旗舰宣布 10 月开源；「哑巴 AI」Jev 刷屏硅谷。用户侧温度（小红书）：AirPods 5 首发潮多篇千赞教程帖，豆包手机口碑两极。学术侧 arXiv 新作集中于端侧 KV 缓存、小音频语言模型、端侧个性化与具身 VLM（理想 ME-VLM 4B 端侧部署）。
 
 ## 本期速览
 
@@ -17,7 +17,7 @@
 | 2026-09-23 | [手机端侧AI备案新增 3 款：荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI 在列](https://news.qq.com/rain/a/20260923A0BOJU00) | 腾讯新闻 |
 | 2026-09-21 | [系统级 Agent 进入加速期：豆包、荣耀、vivo、OPPO 密集落地](https://news.qq.com/rain/a/20260921A046EN00) | 东吴证券（腾讯新闻） / 36氪 |
 
-### AI硬件（6 条）
+### AI硬件（7 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -26,6 +26,7 @@
 | 2026-09-23 | [高通发布 Snapdragon Sound Elite Gen 2：面向 AI「hearables」，连带摄像头的耳机都能驱动](https://9to5google.com/2026/09/23/qualcomm-announces-snapdragon-sound-elite-gen-2/) | 9to5Google |
 | 2026-09-23 | [豆包做手机、阿里造平板：AI 开始争夺硬件控制权](https://finance.sina.com.cn/wm/2026-09-23/doc-inisvivv6005017.shtml) | 新浪财经 |
 | 2026-09-22 | [阿里千问 AI 眼镜 N1 系列亮相云栖：眼动追踪 + 虹膜支付，10 月 13 日开售](https://finance.sina.com.cn/tech/roll/2026-09-22/doc-inisspzf8887020.shtml) | 新浪财经 / 富途资讯 |
+| 2026-09-22 | [阿里云栖首秀「原生智能体电脑」QwenBook：千问平板形态，打通 WPS、适配高通/英特尔](https://news.qq.com/rain/a/20260922A05VOJ00) | IT之家（腾讯新闻）/ 时代周报（新浪财经） |
 | 2026-09-21 | [独家：阿里首款千问办公 AI 硬件将推出，售价或在千元级](https://www.sohu.com/a/1079171780_553580) | 搜狐科技（独家） |
 
 ### 芯片厂商（4 条）
