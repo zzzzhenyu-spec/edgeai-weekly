@@ -8,11 +8,18 @@
 
 ## 本期速览
 
-### 端侧Agent（4 条）
+### 行业关注事件（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-09-27 | [首款 AI 智能体手机撞上反作弊风控：豆包手机助手就《王者荣耀》强制下线致歉](https://finance.sina.com.cn/stock/t/2026-09-27/doc-inithcyh0184530.shtml) | 新浪财经 / 观察者网 |
+| 2026-09-24 | [「哑巴 AI」Jev 刷屏：不生成文本的「系统一模型」，决策快 200 倍](https://www.36kr.com/p/3988372551990276) | 36氪 / TechCrunch |
+| 2026-09-23 | [Meta Muse 现象级数据：12 天 280 万安装碾压 ChatGPT 同期，Meta 单日大涨 11.4%](https://finance.sina.com.cn/jjxw/2026-09-23/doc-inisusym1393712.shtml) | 新浪财经 / 腾讯新闻 |
+
+### 端侧Agent（3 条）
+
+| 日期 | 要闻 | 来源 |
+|------|------|------|
 | 2026-09-26 | [从模型上手机到智能体落地：骁龙峰会演示端侧 30B MoE 完整工作流](https://cj.sina.com.cn/articles/view/5953466437/162dab0450670bdlw2) | 36氪 / 新浪财经（焦点分析） |
 | 2026-09-23 | [手机端侧AI备案新增 3 款：荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI 在列](https://news.qq.com/rain/a/20260923A0BOJU00) | 腾讯新闻 |
 | 2026-09-21 | [系统级 Agent 进入加速期：豆包、荣耀、vivo、OPPO 密集落地](https://news.qq.com/rain/a/20260921A046EN00) | 东吴证券（腾讯新闻） / 36氪 |
@@ -50,18 +57,16 @@
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
-| 2026-09-24 | [「哑巴 AI」Jev 刷屏：不生成文本的「系统一模型」，决策快 200 倍](https://www.36kr.com/p/3988372551990276) | 36氪 / TechCrunch |
+| 2026-09-20 | [阶跃星辰发布 Step 5 Preview：600B MoE 旗舰，10 月 15 日开源](https://www.163.com/tech/article/L78VD8I600098IEO.html) | 网易科技 / 腾讯新闻 |
 
-### 行业动态（6 条）
+### 行业动态（4 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-09-25 | [苹果首度公布端侧 AI 能力矩阵：从 iPhone 140 亿参数到 Mac Studio 集群 1.6 万亿](https://www.itsdw.cn/news/28606.html) | IT时代网 / IT之家 |
 | 2026-09-24 | [斑马智能发布全模态端侧大模型 AutoOmni 2.0-23B-A3B：座舱任务比肩 10 倍级云模型](https://news.qq.com/rain/a/20260924A07A9800) | 央广网（腾讯新闻）/ 搜狐科技 |
-| 2026-09-23 | [Meta Muse 现象级数据：12 天 280 万安装碾压 ChatGPT 同期，Meta 单日大涨 11.4%](https://finance.sina.com.cn/jjxw/2026-09-23/doc-inisusym1393712.shtml) | 新浪财经 / 腾讯新闻 |
 | 2026-09-23 | [端侧 AI 加速落地：多厂商密集发布新一代操作系统](https://news.qq.com/rain/a/20260923A05I6700) | 腾讯新闻 |
 | 2026-09-23 | [苹果新款 Mac 发货：主打端侧 AI，帮用户省下 token 费](https://finance.sina.com.cn/roll/2026-09-23/doc-inistvut5489395.shtml) | 新浪财经 |
-| 2026-09-20 | [阶跃星辰发布 Step 5 Preview：600B MoE 旗舰，10 月 15 日开源](https://www.163.com/tech/article/L78VD8I600098IEO.html) | 网易科技 / 腾讯新闻 |
 
 ## 科研前沿（10 篇）
 

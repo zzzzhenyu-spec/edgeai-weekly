@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://zzzzhenyu-spec.github.io/edgeai-weekly/"
-CAT_ORDER = ["端侧Agent", "AI硬件", "芯片厂商", "手机厂商", "大模型厂商", "行业动态"]
+CAT_ORDER = ["行业关注事件", "端侧Agent", "AI硬件", "芯片厂商", "手机厂商", "大模型厂商", "行业动态"]
 
 
 def load_sections():
