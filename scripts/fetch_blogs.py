@@ -54,6 +54,12 @@ LOGO_OVERRIDES = {
     "IT之家": "https://img.ithome.com/images/logo.png",
     "36氪": "https://img.36krcdn.com/20200828/719c4c8d5eb2de09d4e2b6cc3d1e2d0f.png",
     "Qualcomm AI Hub & Blog": "https://www.google.com/s2/favicons?domain=qualcomm.com&sz=128",
+    "Apple Machine Learning Research": "https://www.google.com/s2/favicons?domain=apple.com&sz=128",
+    "Simon Willison": "https://github.com/simonw.png",
+    "量子位": "https://www.google.com/s2/favicons?domain=qbitai.com&sz=128",
+    "面壁智能数据洞察": "https://www.google.com/s2/favicons?domain=modelbest.cn&sz=128",
+    "Tianqi Chen 陈天奇": "https://github.com/tqchen.png",
+    "Georgi Gerganov": "https://github.com/ggerganov.png",
 }
 
 EDGE_KEYS = ["端侧", "on-device", "on device", "edge ai", "edge-side", "npu", "天玑", "骁龙",
