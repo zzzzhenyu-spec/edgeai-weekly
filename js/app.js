@@ -40,10 +40,40 @@
   /* ============================================================
    * Hero / 页头 / 页脚
    * ============================================================ */
-  $("issue-chip").textContent = D.meta.issue;
-  $("hero-kicker").textContent = "VOL." + ((D.meta.issue.match(/\d+(?=\s*期)/) || [""])[0]) + " · " + D.meta.weekRange + " · WEEKLY BRIEFING";
-  $("editors-note").innerHTML = "<b>本期导读</b>" + esc(D.meta.editorsNote);
-  $("footer-meta").textContent = D.meta.issue + " · 数据更新于 " + D.meta.updated + " · 资讯 " + D.news.length + " 条 / 论文 " + D.papers.length + " 篇 / 资源 " + D.knowledge.resources.length + " 个";
+  /* 当前期号（历史期切换的基准） */
+  var CUR_NO = parseInt((D.meta.issue.match(/\d+(?=\s*期)/) || ["0"])[0], 10);
+
+  /* 期次渲染（可重入）：切换期数时整体重绘，事件绑定全部在初始化区一次性完成 */
+  function renderIssue() {
+    $("issue-chip").textContent = D.meta.issue;
+    $("hero-kicker").textContent = "VOL." + ((D.meta.issue.match(/\d+(?=\s*期)/) || [""])[0]) + " · " + D.meta.weekRange + " · WEEKLY BRIEFING";
+    $("editors-note").innerHTML = "<b>本期导读</b>" + esc(D.meta.editorsNote);
+    $("footer-meta").textContent = D.meta.issue + " · 数据更新于 " + D.meta.updated + " · 资讯 " + D.news.length + " 条 / 论文 " + D.papers.length + " 篇 / 资源 " + D.knowledge.resources.length + " 个";
+    countUp($("stat-news"), D.news.length);
+    countUp($("stat-papers"), D.papers.length);
+    countUp($("stat-res"), D.knowledge.resources.length);
+    $("stat-weeks").textContent = (D.meta.issue.match(/\d+(?= *期)/) || ["—"])[0];
+    $("timeline").innerHTML = D.knowledge.timeline.map(function (t) {
+      return '<div class="tl-item reveal">' +
+        '<div class="tl-year">' + esc(t.year) + "</div>" +
+        "<h4>" + esc(t.title) + "</h4>" +
+        "<p>" + esc(t.text) + "</p></div>";
+    }).join("");
+    $("res-zone").innerHTML = RES_GROUPS.map(function (g) {
+      var items = D.knowledge.resources.filter(function (r) { return r.group === g; });
+      if (!items.length) return "";
+      return '<h3 class="sub-h">' + esc(g) + "</h3>" +
+        '<div class="res-grid">' + items.map(resCard).join("") + "</div>";
+    }).join("");
+    newsFilter = "全部"; paperFilter = "全部";
+    renderNewsChips(); renderNews();
+    renderPaperChips(); renderPapers();
+    buildViz();
+    Array.prototype.forEach.call(document.querySelectorAll(".tl-item, .res-card, .stat, .editors-note"), function (el) {
+      revealIO.observe(el);
+      el.classList.add("reveal");
+    });
+  }
 
   function countUp(el, target, suffix) {
     var t0 = null, dur = 900, done = false;
@@ -62,11 +92,6 @@
     }
     requestAnimationFrame(step);
   }
-  countUp($("stat-news"), D.news.length);
-  countUp($("stat-papers"), D.papers.length);
-  countUp($("stat-res"), D.knowledge.resources.length);
-  $("stat-weeks").textContent = (D.meta.issue.match(/\d+(?= *期)/) || ["—"])[0];
-
   /* ============================================================
    * Hero 可视化：词云（Canvas 实时渲染）+ 资讯构成 / 论文方向图
    * 全部从 data.js 自动统计，每周换数据后自动更新
@@ -238,11 +263,6 @@
       var cnt = c === "全部" ? D.news.length : D.news.filter(function (n) { return n.cat === c; }).length;
       return '<button class="chip' + (c === newsFilter ? " on" : "") + '" data-cat="' + esc(c) + '">' + esc(c) + '<span class="cnt">' + cnt + "</span></button>";
     }).join("");
-    $("news-chips").addEventListener("click", function (e) {
-      var b = e.target.closest(".chip"); if (!b) return;
-      newsFilter = b.dataset.cat;
-      renderNewsChips(); renderNews();
-    });
   }
 
   /* ============================================================
@@ -285,11 +305,6 @@
       if (c !== "全部" && cnt === 0) return "";   // 无内容的分类不显示
       return '<button class="chip' + (c === paperFilter ? " on" : "") + '" data-cat="' + esc(c) + '">' + esc(c) + '<span class="cnt">' + cnt + "</span></button>";
     }).join("");
-    $("papers-chips").addEventListener("click", function (e) {
-      var b = e.target.closest(".chip"); if (!b) return;
-      paperFilter = b.dataset.cat;
-      renderPaperChips(); renderPapers();
-    });
   }
 
   /* ============================================================
@@ -305,15 +320,8 @@
   }
 
   /* ============================================================
-   * 板块三：知识分享
+   * 板块三：知识分享（时间线与博客库随期次渲染，见 renderIssue）
    * ============================================================ */
-  $("timeline").innerHTML = D.knowledge.timeline.map(function (t) {
-    return '<div class="tl-item reveal">' +
-      '<div class="tl-year">' + esc(t.year) + "</div>" +
-      "<h4>" + esc(t.title) + "</h4>" +
-      "<p>" + esc(t.text) + "</p></div>";
-  }).join("");
-
   var FEEDS = (typeof BLOG_FEEDS !== "undefined") ? BLOG_FEEDS : {};
   function resLogoHTML(r, cls) {
     var letter = esc(r.letter || r.name.charAt(0));
@@ -335,12 +343,6 @@
   }
   var RES_GROUPS = ["厂商官方博客", "个人博客", "中文媒体 · 公众号"];
   var RES_GROUP_COLORS = { "厂商官方博客": "#22d3ee", "个人博客": "#818cf8", "中文媒体 · 公众号": "#fbbf24" };
-  $("res-zone").innerHTML = RES_GROUPS.map(function (g) {
-    var items = D.knowledge.resources.filter(function (r) { return r.group === g; });
-    if (!items.length) return "";
-    return '<h3 class="sub-h">' + esc(g) + "</h3>" +
-      '<div class="res-grid">' + items.map(resCard).join("") + "</div>";
-  }).join("");
 
   /* 博客卡片点击 -> 简介面板（logo + 近期文章分页列表，端侧相关背光高亮） */
   function hostOf(u) {
@@ -639,18 +641,72 @@
   document.querySelectorAll("section.board").forEach(function (s) { sectionIO.observe(s); });
 
   /* ============================================================
-   * 初始化
+   * 初始化（一次性事件绑定 + 期次渲染 + 期数选择器）
    * ============================================================ */
-  renderNewsChips(); renderNews();
-  renderPaperChips(); renderPapers();
+  $("news-chips").addEventListener("click", function (e) {
+    var b = e.target.closest(".chip"); if (!b) return;
+    newsFilter = b.dataset.cat;
+    renderNewsChips(); renderNews();
+  });
+  $("papers-chips").addEventListener("click", function (e) {
+    var b = e.target.closest(".chip"); if (!b) return;
+    paperFilter = b.dataset.cat;
+    renderPaperChips(); renderPapers();
+  });
   renderComments();
-  buildViz();
   spotlight($("news-grid"));
   spotlight($("papers-grid"));
   bindCards($("news-grid"), "news");
   bindCards($("papers-grid"), "papers");
-  Array.prototype.forEach.call(document.querySelectorAll(".tl-item, .res-card, .stat, .editors-note"), function (el) {
-    revealIO.observe(el);
-    el.classList.add("reveal");
+
+  /* ---------- 期数选择器：当前期用 live 数据，历史期从 js/archive/ 按需加载 ---------- */
+  var ISSUES = (typeof WEEKLY_ISSUES !== "undefined" && window.WEEKLY_ISSUES) ? window.WEEKLY_ISSUES : [];
+  var issueSel = $("issue-select");
+  var issueOptions = [{ no: CUR_NO, label: D.meta.issue + "（当前）", range: D.meta.weekRange }]
+    .concat(ISSUES.filter(function (i) { return i.no !== CUR_NO; }));
+  if (issueSel) {
+    issueSel.innerHTML = issueOptions.map(function (o) {
+      return '<option value="' + o.no + '">' + esc(o.label + (o.range ? " · " + o.range : "")) + "</option>";
+    }).join("");
+  }
+  var issueLocks = {};
+  var shownNo = CUR_NO;          /* 当前展示的期号 */
+  var LIVE = D;                  /* data.js 的 const 声明不挂 window，这里留存当前期数据引用 */
+  function switchIssue(no) {
+    function apply(data) {
+      if (!data) { if (issueSel) issueSel.value = String(shownNo); return; }
+      D = data;
+      shownNo = no;
+      renderIssue();
+      try { history.replaceState(null, "", "#issue-" + no); } catch (err) { /* file:// 下可能失败，忽略 */ }
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    if (no === CUR_NO) { apply(LIVE); return; }
+    var A = window.WEEKLY_ARCHIVE || {};
+    if (A[no]) { apply(A[no]); return; }
+    if (issueLocks[no]) return;
+    issueLocks[no] = true;
+    var s = document.createElement("script");
+    s.src = "js/archive/issue-" + no + ".js";
+    s.onload = function () { issueLocks[no] = false; apply((window.WEEKLY_ARCHIVE || {})[no]); };
+    s.onerror = function () { issueLocks[no] = false; if (issueSel) issueSel.value = String(shownNo); };
+    document.head.appendChild(s);
+  }
+  if (issueSel) {
+    issueSel.addEventListener("change", function () { switchIssue(parseInt(this.value, 10) || shownNo); });
+  }
+  window.addEventListener("hashchange", function () {
+    var m = (location.hash.match(/^#issue-(\d+)$/) || [])[1];
+    if (m && parseInt(m, 10) !== shownNo) {
+      if (issueSel) issueSel.value = m;
+      switchIssue(parseInt(m, 10));
+    }
   });
+  var hashIssue = (location.hash.match(/^#issue-(\d+)$/) || [])[1];
+  if (hashIssue && parseInt(hashIssue, 10) !== CUR_NO) {
+    if (issueSel) issueSel.value = hashIssue;
+    switchIssue(parseInt(hashIssue, 10));
+  } else {
+    renderIssue();
+  }
 })();

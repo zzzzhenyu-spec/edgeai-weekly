@@ -96,6 +96,14 @@ a:hover { text-decoration: underline; }
   padding: 4px 12px; white-space: nowrap;
   background: rgba(34, 211, 238, 0.07);
 }
+.issue-select {
+  font-family: var(--mono); font-size: 12px; color: var(--accent);
+  border: 1px solid rgba(34, 211, 238, 0.35); border-radius: 999px;
+  padding: 4px 10px; background: rgba(34, 211, 238, 0.07);
+  cursor: pointer; outline: none; max-width: 340px; white-space: nowrap;
+}
+.issue-select:hover { border-color: rgba(34, 211, 238, 0.7); }
+.issue-select option { background: #0c1424; color: #dbe4f5; }
 
 /* ---------------- Hero ---------------- */
 .hero { max-width: 1240px; margin: 0 auto; padding: 72px 28px 44px; }
