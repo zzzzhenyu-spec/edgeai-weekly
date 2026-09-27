@@ -6,7 +6,7 @@ WEEKLY_ARCHIVE[40] = {
     issue: "2026 · 第 40 期",
     weekRange: "2026.09.20 — 09.27",
     updated: "2026-09-27",
-    editorsNote: "本期聚焦：豆包手机助手因《王者荣耀》反作弊风控强制下线致歉——端侧 GUI Agent 首次大规模撞上 App 风控；骁龙峰会演示端侧 30B MoE 完整智能体工作流；苹果首度公布端侧 AI 能力矩阵（最高 1.6 万亿参数）；荣耀 Magic9 定档 9·28；阿里 QwenBook「原生智能体电脑」云栖首秀；小米 18 Pro 首发 2nm 骁龙8E6 发布即开售。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。"
+    editorsNote: "本期聚焦：Meta Muse 现象级爆火——12 天 280 万安装、日活反超 ChatGPT 同期，同时撞上亚马逊封禁（与豆包手机助手撞《王者荣耀》风控同构）；骁龙峰会演示端侧 30B MoE 完整智能体工作流；苹果首度公布端侧 AI 能力矩阵（最高 1.6 万亿参数）；荣耀 Magic9 定档 9·28；阿里 QwenBook「原生智能体电脑」云栖首秀；小米 18 Pro 首发 2nm 骁龙8E6 发布即开售。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -69,6 +69,17 @@ WEEKLY_ARCHIVE[40] = {
       url: "https://9to5google.com/2026/09/23/qualcomm-announces-snapdragon-sound-elite-gen-2/",
       image: "https://9to5google.com/wp-content/uploads/sites/4/2026/09/snapdragon-Sound-elite-gen-2-2.jpg?quality=82&strip=all&resize=1200,628",
       imageCap: "配图来自原文页面"
+    },
+    {
+      id: "n41", cat: "行业动态", source: "新浪财经 / 腾讯新闻", date: "2026-09-23",
+      title: "Meta Muse 现象级数据：12 天 280 万安装碾压 ChatGPT 同期，Meta 单日大涨 11.4%",
+      summary: "Muse 上线 12 天全球安装 280 万、美加 iOS 下载（180 万）与美国日活（64.2 万）全面反超 ChatGPT 同期（130 万 / 23.1 万），登顶双榜；Meta 股价单日飙升 11.43%、市值较发布前增超 2000 亿美元。每用户一台云端 VM 的「执行型智能体」同时也撞上第一道平台墙：亚马逊已禁止 Muse 访问其购物平台。",
+      detail: "新浪财经与腾讯新闻 9 月 22–23 日报道，Meta 9 月 8 日上线的个人 AI 智能体 Muse 交出现象级成绩单：Sensor Tower 口径上线约 5 天 73 万下载；Apptopia/Sensor Tower 数据显示 12 天全球安装 280 万，美加 iOS 同口径下载 180 万，高于 ChatGPT 同期的 130 万（Claude 约 40 万、Grok 约 20 万）；美国移动端日活约 64.2 万，远超 ChatGPT 同期的 23.1 万，截至 9 月 21 日同时登顶 App Store 与 Google Play 免费榜。\n产品形态是「执行」而非「问答」：用户说出目标，Muse 自行拆解任务、打开网页、填表单、调应用——代写代发邮件、订行程、网购下单（Stripe Link 一次性卡号）、账单谈判、协助卖车；每名用户配一台 Meta 云端独立虚拟机，关掉 App 任务仍在后台执行，敏感操作才回来请求授权；Muse Spark 模型驱动，Sentinel 系统在访问互联网前审查操作。免费版每周约 1 亿 token，订阅 20/100 美元两档。\n市场反应：发布次日 Meta 涨 6.55%，9 月 21 日单日飙 11.43% 至 741 美元（2025 年 4 月以来最大单日涨幅），市值较发布前增超 2000 亿美元；富国银行目标价 640→796 美元，杰富瑞上调至 875 美元并测算 2027 年底 10 亿用户、3% 付费转化对应年化 108 亿美元收入。分析师认为市场开始相信 Meta 能把 40 亿社交用户转化为 AI 助手分发优势。\n端侧看点与摩擦：Muse 后续将进入 Meta AI 眼镜（见 n32），其爆火被解读为带动端侧 CPU / 芯片产业新叙事（科创板日报 9·26）；同时「代理式 AI」的第一道平台墙已经出现——亚马逊以「未获授权浏览网站、访问账户、处理交易，且未表明 AI 身份」为由禁止 Muse 访问其购物平台，与本期豆包手机助手撞《王者荣耀》反作弊风控（n39）是同一结构性冲突：智能体替用户操作与平台规则之间的边界之争。",
+      tags: ["Meta Muse", "现象级", "执行型智能体", "亚马逊封禁"],
+      url: "https://finance.sina.com.cn/jjxw/2026-09-23/doc-inisusym1393712.shtml",
+      image: "https://n.sinaimg.cn/sinakd20260923s/394/w1320h1474/20260923/2fc7-3ee655c2788cc22fcadfd68489f86c7c.jpg",
+      imageCap: "配图来自原文页面",
+      highlight: true
     },
     {
       id: "n32", cat: "AI硬件", source: "站长之家（AIbase）/ 新浪财经", date: "2026-09-24",
