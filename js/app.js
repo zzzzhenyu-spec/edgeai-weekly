@@ -57,7 +57,7 @@
     var chipEl = $("issue-chip");
     if (chipEl) chipEl.textContent = D.meta.issue;
     $("hero-kicker").textContent = "VOL." + ((D.meta.issue.match(/\d+(?=\s*期)/) || [""])[0]) + " · " + D.meta.weekRange + " · WEEKLY BRIEFING";
-    $("editors-note").innerHTML = "<b>本期导读</b>" + esc(D.meta.editorsNote);
+    $("editors-note").innerHTML = "<b>本期导读<i>" + esc(D.meta.weekRange) + "</i></b>" + esc(D.meta.editorsNote);
     $("footer-meta").textContent = D.meta.issue + " · 数据更新于 " + D.meta.updated + " · 资讯 " + D.news.length + " 条 / 论文 " + D.papers.length + " 篇 / 资源 " + D.knowledge.resources.length + " 个";
     countUp($("stat-news"), D.news.length);
     countUp($("stat-papers"), D.papers.length);
