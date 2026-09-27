@@ -20,8 +20,11 @@ KEYWORDS = [
     "mobile ai", "local ai", "offline ai", "agentic ai", "inference",
     "apple intelligence", "gemini nano", "galaxy ai", "天玑", "骁龙", "snapdragon",
     "dimensity", "瑞芯微", "rk1828", "展锐", "全志", "海思", "麒麟", "玄戒",
+    "昇腾", "ascend", "寒武纪", "cambricon", "地平线", "黑芝麻", "燧原", "摩尔线程", "芯原",
     "蓝心", "小艺", "andresgpt", "openclaw", "workbuddy", "jev", "typesafe",
     "minicpm", "端云协同",
+    "ai眼镜", "智能眼镜", "ai耳机", "hearable", "ai pc", "copilot+",
+    "gemini intelligence", "qwen intelligence", "agentic os", "ai硬件",
 ]
 
 

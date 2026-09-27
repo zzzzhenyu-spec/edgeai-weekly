@@ -1,5 +1,5 @@
 /* ============================================================
- * 端侧AI每周情报站 · 数据文件（2026 第 39 期 · 09.17–09.23）
+ * 端侧AI每周情报站 · 数据文件（2026 第 40 期 · 09.20–09.27）
  * 每周更新流程（Python 脚本，本地需 Python 3.10+）：
  *   python scripts\fetch_papers.py      # arXiv 论文候选
  *   python scripts\fetch_news.py        # RSS 资讯候选(默认近7天)
@@ -14,14 +14,73 @@
 const WEEKLY_DATA = {
 
   meta: {
-    issue: "2026 · 第 39 期",
-    weekRange: "2026.09.17 — 09.24",
-    updated: "2026-09-24",
-    editorsNote: "本期只收录最近一周（09.17–09.24）动态：Meta Connect 开幕，Muse 全面接入 AI 眼镜、百款眼镜矩阵与 Muse Charm 终端齐发；Rokid 二代 AI 眼镜 9·24 数贸会完成全球首秀；千问 AI 眼镜 N1 系列亮相云栖（10·13 开售）；Q2 全球智能眼镜出货 +35%。小米 18 Pro 9·23 晚全球首发 2nm 骁龙8E6、发布即开售，18 Fold 首销激活近 8 万台；高通发布第六代骁龙8双旗舰（2nm、端侧 300 亿参数模型）；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；斑马智能发布端侧大模型 AutoOmni 2.0-23B-A3B；苹果新款 Mac 发货主打端侧 AI 省 token 费；豆包做手机、阿里造平板、OPPO 心力球——AI 硬件赛道全面升温；「哑巴 AI」Jev 刷屏硅谷；高通×谷歌联手推出首批骁龙 X Elite Googlebook，联发科 CX C10 Max 亦将驱动 Googlebook；Google Home MCP 面向所有智能体开放；阶跃 600B 旗舰宣布 10 月开源。学术侧 arXiv 近期新作集中于推理系统、SLM 工具调用与 TEE 安全。"
+    issue: "2026 · 第 40 期",
+    weekRange: "2026.09.20 — 09.27",
+    updated: "2026-09-27",
+    editorsNote: "本期只收录最近一周（09.20–09.27）动态：首款 AI 智能体手机撞上现实 friction——豆包手机助手就《王者荣耀》强制下线事件致歉，端侧 GUI Agent 与 App 反作弊风控的边界之争浮出水面；骁龙峰会收官，高通联合阶跃星辰、无量火、江波龙演示端侧 30B MoE 完整智能体工作流，Snapdragon Sound Elite Gen 2 把端侧 AI 带进「hearables」；苹果首度公布端侧 AI 能力矩阵（iPhone 140 亿参数 → Mac Studio 集群 1.6 万亿），新款 Mac 主打端侧 AI 省 token 费；荣耀 Magic9 定档 9·28（顶配首发第六代骁龙8超级至尊版、搭载 Qwen Intelligence）；微软 12 吋 Surface Pro 换装骁龙 X2 Plus 补上 5G。Meta Connect 上 Muse 全面接入 AI 眼镜、百款眼镜矩阵齐发；Rokid 二代眼镜数贸会首秀、千问 AI 眼镜 N1 亮相云栖（10·13 开售）；小米 18 Pro 全球首发 2nm 骁龙8E6 发布即开售，18 Fold 首销激活近 8 万台；手机端侧AI备案新增荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI；高通×谷歌首批 Googlebook 落地、联发科 CX C10 Max 跟进；阶跃 600B 旗舰宣布 10 月开源；「哑巴 AI」Jev 刷屏硅谷。学术侧 arXiv 新作集中于端侧 KV 缓存、小音频语言模型、端侧个性化与具身 VLM（理想 ME-VLM 4B 端侧部署）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n39", cat: "端侧Agent", source: "新浪财经 / 观察者网", date: "2026-09-27",
+      title: "首款 AI 智能体手机撞上反作弊风控：豆包手机助手就《王者荣耀》强制下线致歉",
+      summary: "9 月 24 日起，努比亚 NaviX Ultra（豆包手机）用户登录《王者荣耀》时被提示「设备环境异常」强制下线；豆包手机助手 9 月 27 日致歉：全程未对腾讯游戏系统做任何操作、AI 不存在外挂或模拟行为，正与腾讯接洽——端侧 GUI Agent 与 App 风控的首次大规模正面冲突。",
+      detail: "9 月 27 日，豆包手机助手在官方社区发文致歉：9 月 24 日晚起陆续收到用户反馈，搭载豆包手机助手的努比亚 NaviX Ultra 在登录《王者荣耀》或匹配对战时出现「设备环境异常」提示、被强制踢下线。\n官方回应要点：经确认全程未对腾讯游戏系统进行任何操作，AI 不存在任何违规点击、外挂或模拟行为；团队正持续与腾讯相关方接洽沟通，暂未收到明确回复；建议用户暂时不要在该机型上反复尝试登录，账号被封可通过游戏客服渠道申诉。\n这不是第一次：2025 年 12 月，第一代工程预览机 M153 就爆发过同系列风控冲突（微信环境异常、阿里系 App 人机验证/闪退），豆包当时收紧了 AI 操作范围——下线金融 App 与竞技游戏场景的 AI 操作能力。但报道指出，该调整只限制了「主动操作」，设备底层的模拟点击能力仍在：哪怕用户没有唤醒豆包下达指令，App 风控也能扫描到系统的自动化特征，将其判为高风险环境。\n为什么重要：NaviX Ultra 是「全球首款 AI 智能体手机」（9 月 16 日发售，已完成大模型备案+工信部入网），其核心卖点恰恰是 GUI Agent 直接操作手机——而《王者荣耀》用户协议明确禁止非腾讯授权的第三方系统。端侧智能体「替用户操作」的权限边界、与存量 App 风控生态的兼容规则，成了智能体手机规模化的下一道坎：豆包在声明中亦呼吁与厂商共同制定清晰、安全的 AI 操作行为准则。",
+      tags: ["豆包手机助手", "NaviX Ultra", "GUI Agent", "反作弊风控"],
+      url: "https://finance.sina.com.cn/stock/t/2026-09-27/doc-inithcyh0184530.shtml",
+      image: "https://n.sinaimg.cn/spider20260927/454/w660h1394/20260927/f934-14c310187440cf3355741c3c0ba919a0.jpg",
+      imageCap: "配图来自原文页面",
+      highlight: true
+    },
+    {
+      id: "n36", cat: "手机厂商", source: "IT之家", date: "2026-09-27",
+      title: "荣耀 Magic9 系列定档 9·28：顶配首发第六代骁龙8超级至尊版，搭载 Qwen Intelligence",
+      summary: "荣耀 Magic9 系列三款机型定档 9 月 28 日 14:30 发布：Magic9 Pro Max 至高搭载第六代骁龙8超级至尊版（Extreme 档首次上机），全系搭载阿里 Qwen Intelligence 系统级 Agent 架构——继小米 18 Pro 之后，「2nm 旗舰 + 系统级 Agent」的第二波量产机型来了。",
+      detail: "IT之家 9 月 27 日配置汇总：荣耀 Magic9 系列定档 9 月 28 日 14:30 发布，共三款机型，是「品牌焕新后的首款作品」，主打外观、影像、AI 三大升级，搭载阿里 Qwen Intelligence 系统级 Agent 架构。\n处理器分布：Magic9 标准版与超能版采用第五代骁龙8至尊版，Pro Max 至高搭载第六代骁龙8超级至尊版——继小米 18 Pro 首发 8E6 之后，「超级至尊版（Extreme 档）」机型首次亮相。\n亮点配置：Pro Max 配 6.8 吋 LTPO 大直屏、8800mAh 电池、100W 有线 + 80W 无线、双 3D 生物识别（3D 人脸 + 3D 超声波）、双实体卡 + 双 eSIM 四卡双待、自研至臻黑钻屏峰值亮度 1 万尼特；超能版配主动散热风扇与 11000mAh 系列最大电池。\n端侧看点：Qwen Intelligence 是阿里云栖大会发布的 Agentic OS（任务规划、跨应用执行、影像创作三大场景），荣耀 Magic9 成为其深度落地的旗舰载体——继小米（澎湃 OS4 + MiMo）之后，「系统级 Agent 架构 + 第三方旗舰整机」的绑定再添一例。",
+      tags: ["荣耀 Magic9", "骁龙8超级至尊版", "Qwen Intelligence", "AI手机"],
+      url: "https://www.ithome.com/1/007/524.htm"
+    },
+    {
+      id: "n35", cat: "端侧Agent", source: "36氪 / 新浪财经（焦点分析）", date: "2026-09-26",
+      title: "从模型上手机到智能体落地：骁龙峰会演示端侧 30B MoE 完整工作流",
+      summary: "36氪焦点分析复盘骁龙峰会：高通联合阶跃星辰（模型）、无量火科技（推理调度）、江波龙（存储）演示端侧 30B-MoE 智能体工作链——本地读邮件、提取行程、同步日历、推荐航班酒店并草拟回复，全程无需云端；2024 年端侧上限约 7B，这次被视为一次跨越。",
+      detail: "36氪《焦点分析》（9 月 26 日）复盘 2026 骁龙峰会：高通的叙事正在从两年前「证明大模型能装进手机」转向「证明端侧模型能承担完整工作」。\n四方演示：高通（计算平台）×阶跃星辰（模型）×无量火科技（推理与调度优化）×江波龙（存储协同），在参考设计上用端侧 30B-MoE 模型跑通完整办公工作链——本地读取邮件、提取行程信息、同步日历、推荐航班酒店并草拟回复，全程无需云端；AI Hub 平台用于复用优化成果、降低部署门槛，合作已前移至模型设计环节。\n硬件底座：第六代骁龙8双旗舰均为 2nm，超级至尊版频率达 5GHz；双 Micro NPU 架构性能提升 85%、功耗降低 20%，强化 Personal Scribe 与个人知识图谱等本地能力；CPU 管工具调用与任务调度、NPU 管推理、低功耗感知单元处理后台信息。\n节奏判断：CEO 安蒙称智能体 AI「创造了一种全新的终端工作流」；中国区董事长孟樸则提示，跨终端个人智能体可能要到 2027-2028 年才逐步稳定落地——大模型每 3 个月迭代一次，而手机适配后 9-12 个月不动，节奏错配是端侧智能体落地的最大挑战。",
+      tags: ["骁龙峰会", "端侧30B MoE", "阶跃星辰", "端侧智能体"],
+      url: "https://cj.sina.com.cn/articles/view/5953466437/162dab0450670bdlw2",
+      highlight: true
+    },
+    {
+      id: "n34", cat: "行业动态", source: "IT时代网 / IT之家", date: "2026-09-25",
+      title: "苹果首度公布端侧 AI 能力矩阵：从 iPhone 140 亿参数到 Mac Studio 集群 1.6 万亿",
+      summary: "Jamf 用户大会（JNUC）上，苹果首次系统性公布全系设备端侧 AI 推理能力矩阵：iPhone/iPad 最高 140 亿激活参数、MacBook Pro 1200 亿、Mac Studio 4800 亿，Mac Studio 集群最高 1.6 万亿——统一内存的容量与带宽直接决定端侧模型上限。",
+      detail: "9 月 25 日消息，苹果在 Jamf 用户大会（JNUC）的 IT 行业动态环节公布了一张端侧 AI 推理能力对比图表，首次系统展示从 iPhone、iPad 到 Mac 的端侧推理能力分级。\n能力矩阵：iPhone / iPad（16GB 内存、76GB/s 带宽）最高支持 140 亿激活参数，覆盖 Siri、文字润色、图片处理等轻量任务；MacBook Air（32GB、153GB/s）350 亿；Mac mini（64GB、307GB/s）700 亿；MacBook Pro（128GB、614GB/s）1200 亿；Mac Studio（512GB、1.2TB/s）4800 亿；Mac Studio 集群（2TB）最高可跑 1.6 万亿参数，承担超大模型的本地训练与推理。\n苹果的解释是：能力分级依托统一内存架构——内存容量与带宽直接决定可加载模型的参数量。此前已有 iPhone 18 Pro（A20 Pro）实测本地运行 270 亿参数模型的报道。\n行业语境：高通在骁龙峰会宣讲端侧 300 亿参数模型、联发科天玑 9600 Pro 宣称 30B 端侧——苹果用一张矩阵表，把「端侧算力上限」的竞争从 SoC 发布会延伸到了存量设备生态，也为企业 IT 选购「本地 AI 主机」提供了第一份官方参照系。",
+      tags: ["苹果", "端侧AI能力矩阵", "统一内存", "本地大模型"],
+      url: "https://www.itsdw.cn/news/28606.html",
+      image: "https://www.itsdw.cn/wp-content/uploads/2026/09/20260925091125671097.jpg",
+      imageCap: "配图来自原文页面",
+      highlight: true
+    },
+    {
+      id: "n37", cat: "芯片厂商", source: "9to5Google", date: "2026-09-23",
+      title: "微软 12 吋 Surface Pro 换装骁龙 X2 Plus：补上 5G，10 月 13 日开售",
+      summary: "骁龙峰会期间微软官宣小尺寸 Surface 更新：12 吋 Surface Pro 与 13 吋 Surface Laptop 换装骁龙 X2 Plus，屏幕亮度提升 25%、电池效率提升 30%，Pro 首次提供 5G 版本，内存起步升至 16GB，10 月 13 日开售（1149 美元起）。",
+      detail: "据 9to5Google 9 月 23 日报道，微软在骁龙峰会期间确认小尺寸 Surface 产品线更新，10 月 13 日上市。\nSurface Pro 12 吋：换装骁龙 X2 Plus，屏幕亮度提升 25%，电池「效率提升 30%」，并提供可选 5G 版本——微软称这是「呼声最高的新增项」；内存 16GB/24GB（砍掉 8GB 档），存储 256GB/512GB，起售价 1149 美元。\nSurface Laptop 13 吋：同样换装骁龙 X2 Plus、砍掉 8GB 内存档，起售价 1199 美元，除芯片升级与更亮屏幕外与上代基本一致。\n配套发布带触觉反馈、可自定义 Copilot 按键的新 Surface Mouse（79.99 美元）与 Ink Canvas 应用。\n端侧看点：骁龙 X2 Plus 补齐了 Windows on Arm 阵营的小尺寸 + 蜂窝联网形态——「Copilot+ PC + 常时在线」下探到更小机型，与 Googlebook（安卓端侧 AI 笔记本）形成端侧 AI 终端两条路线的对照。",
+      tags: ["Surface Pro", "骁龙 X2 Plus", "Copilot+ PC", "Windows on Arm"],
+      url: "https://9to5google.com/2026/09/23/microsoft-surface-pro-12-inch-5g-laptop-13-snapdragon-x2/",
+      image: "https://9to5google.com/wp-content/uploads/sites/4/2026/09/surface-pro-laptop-x2-oct-refresh.jpg?quality=82&strip=all&resize=1200,628",
+      imageCap: "配图来自原文页面"
+    },
+    {
+      id: "n38", cat: "AI硬件", source: "9to5Google", date: "2026-09-23",
+      title: "高通发布 Snapdragon Sound Elite Gen 2：面向 AI「hearables」，连带摄像头的耳机都能驱动",
+      summary: "高通在骁龙峰会发布面向音频可穿戴（hearables）的 Snapdragon Sound Elite Gen 2：端侧 AI 性能最高翻倍、功耗降低 40%，支持情境化图像识别——可驱动带摄像头的耳机、音频眼镜与未来多模态可穿戴，Wi-Fi 6E 支持端云双路 AI。",
+      detail: "据 9to5Google 9 月 23 日报道，高通发布 Snapdragon Sound Elite Gen 2 SoC，专为音频可穿戴（hearables）打造——重点不再是纯音频性能，而是「音频芯片还能做什么」。\nAI 能力：端侧 AI 性能最高提升 2 倍、功耗最高降低 40%；支持情境化图像识别（contextual image recognition），为搭载摄像头的耳机类设备做好准备。\n连接与音频：Wi-Fi 6E 让 OEM 可在端侧/云端 AI 之间灵活取舍；保留 aptX 与 XPAN 连接提升音质与蓝牙范围，ANC 升级到第五代协议并借助 AI 增强。\n形态畅想：高通列举的可驱动形态包括传统耳机/头戴、开放耳 hybrid 声学设计、带摄像头设备、音频眼镜与未来多模态可穿戴；Android XR 设备被视为关键场景——Gemini 需要在本地运行并从真实环境采集信息。\n端侧看点：继 AI 眼镜之后，「AI 耳机 / hearables」正在成为端侧 AI 的下一个入口级品类——芯片先到位，等的是杀手级形态。",
+      tags: ["Snapdragon Sound", "hearables", "AI耳机", "多模态可穿戴"],
+      url: "https://9to5google.com/2026/09/23/qualcomm-announces-snapdragon-sound-elite-gen-2/",
+      image: "https://9to5google.com/wp-content/uploads/sites/4/2026/09/snapdragon-Sound-elite-gen-2-2.jpg?quality=82&strip=all&resize=1200,628",
+      imageCap: "配图来自原文页面"
+    },
     {
       id: "n32", cat: "AI硬件", source: "站长之家（AIbase）/ 新浪财经", date: "2026-09-24",
       title: "Meta Connect 开幕：智能体 Muse 全面接入 AI 眼镜，硬件矩阵齐发",
@@ -53,16 +112,6 @@ const WEEKLY_DATA = {
       image: "https://inews.gtimg.com/om_ls/OKuU0fqca7EVcsSxL7UByEwTtbeNlwlhfknP5NhmYcpacAA_640330/0",
       imageCap: "配图来自原文页面",
       highlight: true
-    },
-    {
-      id: "n28", cat: "AI硬件", source: "腾讯新闻 / 新浪财经", date: "2026-09-17",
-      title: "OPPO 发布「心力球」：全天候主动式 AI 硬件，年内到来",
-      summary: "OPPO 公开全新品类——全天候主动式 AI 硬件「心力球」，预计今年晚些时候上市：AI 硬件从「被动工具」走向「主动智能体」。",
-      detail: "OPPO 发布全天候主动式 AI 硬件「心力球」，预计今年晚些时候到来。\n新品类的关键词是「主动式」：不再等待用户指令，而是全天候感知场景并主动给出建议——端侧智能体需要一个常在的物理载体，这与此轮 AI OS 换代、系统级 Agent 落地是同一逻辑。\n行业语境：豆包做手机、阿里造平板、OPPO 做主动式硬件——模型厂商与手机厂商都在探索「App 之外」的 AI 硬件形态。",
-      tags: ["OPPO", "心力球", "主动式AI硬件", "新品类"],
-      url: "https://news.qq.com/rain/a/20260917A0AMVQ00",
-      image: "https://n.sinaimg.cn/spider20260917/328/w660h468/20260917/c755-7cd5ebbefefefe578f1beb8079dfa7a9.jpg",
-      imageCap: "配图来自原文页面"
     },
     {
       id: "n2", cat: "芯片厂商", source: "腾讯新闻 / Qualcomm", date: "2026-09-23",
@@ -145,16 +194,6 @@ const WEEKLY_DATA = {
       imageCap: "配图来自原文页面"
     },
     {
-      id: "n24", cat: "AI硬件", source: "腾讯新闻（盘中雷达）", date: "2026-09-17",
-      title: "Q2 全球智能眼镜出货同比增超 35%：全年预计 3500 万副",
-      summary: "机构数据：二季度全球智能眼镜出货量同比增长超 35%，市场从早期尝鲜进入快速放量阶段；2026 全年预计 3500 万副（约 +40%），高价产品与 AI 功能渗透是核心动力。",
-      detail: "9 月 17 日盘中雷达援引机构数据：二季度全球智能眼镜出货量同比增长超 35%，市场已从早期尝鲜进入快速放量阶段；机构预计 2026 年全年出货量达 3500 万副、同比增长约 40%。\n结构特征：本轮增长由高价产品驱动——高价位段贡献主要增量，AI 功能渗透率提升是核心动力；这与本周 Rokid 二代眼镜定档首秀、国内厂商密集发布的节奏互相印证。\n行业判断：眼镜是天然的全天候传感器位置，但隐私与功耗约束使其比手机更依赖端侧小模型——多模态理解与主动式 AI 记忆成为差异化卖点，AI 眼镜被视为「下一代端侧 AI 入口」的有力候选。",
-      tags: ["智能眼镜", "出货量", "端侧AI入口", "研报数据"],
-      url: "https://news.qq.com/rain/a/20260917A094OI00",
-      image: "https://inews.gtimg.com/om_ls/OibaM2RBN3EUOegjbSW6pJSWrxp__NurbEjgy1NfmPIk0AA_640330/0",
-      imageCap: "配图来自原文页面"
-    },
-    {
       id: "n11", cat: "大模型厂商", source: "36氪 / TechCrunch", date: "2026-09-24",
       title: "「哑巴 AI」Jev 刷屏：不生成文本的「系统一模型」，决策快 200 倍",
       summary: "前 OpenAI 研究员创办的 TypeSafe AI 发布 Jev：不做对话、直接输出类型安全的概率化决策，70ms 级响应、快约 200 倍、便宜约 400 倍；上线 3 天获 Vercel / Cloudflare / LangChain 整合。",
@@ -169,7 +208,7 @@ const WEEKLY_DATA = {
       id: "n12", cat: "端侧Agent", source: "东吴证券（腾讯新闻） / 36氪", date: "2026-09-21",
       title: "系统级 Agent 进入加速期：豆包、荣耀、vivo、OPPO 密集落地",
       summary: "机构报告：豆包手机助手消费者版量产落地，荣耀、vivo、OPPO 系统级智能体密集跟进；开源侧 OpenClaw（「小龙虾」）成为 2026 现象级端侧 Agent，腾讯 WorkBuddy 等衍生适配崛起。",
-      detail: "东吴证券 9 月 21 日报告指出：系统级 Agent 进入加速期。\n落地节奏：豆包手机助手消费者版随努比亚 NaviX Ultra 实现量产（本周期内开售）；荣耀、vivo、OPPO 的系统级智能体密集布局，成为下半年最确定的产业主线。\n技术路线：执行框架 Harness 开始系统级商用；GUI（直接操作图形界面）与 A2A（智能体间通信）两条路线并行演进。\n学术侧本周亦有呼应：MCP 式工具调用在单板机上的可靠性基准（论文板块 p6）、车载 SLM 函数调用（p5）指向同一问题——让小模型在端侧可靠地「动手」。",
+      detail: "东吴证券 9 月 21 日报告指出：系统级 Agent 进入加速期。\n落地节奏：豆包手机助手消费者版随努比亚 NaviX Ultra 实现量产（本周期内开售）；荣耀、vivo、OPPO 的系统级智能体密集布局，成为下半年最确定的产业主线。\n技术路线：执行框架 Harness 开始系统级商用；GUI（直接操作图形界面）与 A2A（智能体间通信）两条路线并行演进。\n学术侧本周亦有呼应：MCP 式工具调用在单板机上的可靠性基准（论文板块 p10）、车载 SLM 函数调用（p9）指向同一问题——让小模型在端侧可靠地「动手」。",
       tags: ["系统级Agent", "GUI", "A2A", "智能体手机"],
       url: "https://news.qq.com/rain/a/20260921A046EN00",
       image: "https://inews.gtimg.com/om_ls/On-vObCIUNjBT2QmAbIIetUc87uUIwDooLRvnRrAl6QSwAA_640330/0",
@@ -205,26 +244,6 @@ const WEEKLY_DATA = {
       imageCap: "配图来自原文页面"
     },
     {
-      id: "n31", cat: "端侧Agent", source: "腾讯新闻", date: "2026-09-17",
-      title: "谷歌开放 Google Home MCP：任意 AI 智能体都能操控智能家居",
-      summary: "谷歌宣布 Google Home MCP Server 面向所有智能体开放：任何遵循 MCP 协议的 AI Agent 都能发现、订阅并控制兼容设备——灯光、窗帘、电视、扫地机器人进入「智能体可操作」时代。",
-      detail: "9 月 17 日，谷歌宣布即日起任何 AI 智能体都可接入 Google Home MCP Server：此前仅向部分开发者开放，现已面向所有智能体开放。\n能力边界：任何遵循 MCP 协议的智能体（任何厂商、任何 MCP 客户端）均能发现、订阅并控制 Google Home 生态中的兼容设备——灯光、窗帘、电视、扫地机器人等。\n配合谷歌此前宣布 Google Home 支持非谷歌认证设备，智能家居正在变成「智能体可编程」的端侧执行环境：端侧 Agent + MCP 协议 + 家居设备，构成端侧智能体落地的最大存量场景。",
-      tags: ["Google Home MCP", "智能家居", "智能体", "MCP"],
-      url: "https://news.qq.com/rain/a/20260917A0188X00",
-      image: "https://inews.gtimg.com/om_ls/OcMWl6SXFpExJYkdEbsRbbBds82lb6l0wFw7Mm_TUlgPMAA_640330/0",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n3", cat: "手机厂商", source: "巨潮资讯（搜狐号）/ 新浪财经", date: "2026-09-18",
-      title: "「端侧AI之战正式打响」：字节豆包 AI 手机 NaviX Ultra 亮相",
-      summary: "努比亚 NaviX Ultra（豆包手机二代）9 月 16 日正式发布，5499 元起，搭载豆包手机助手消费者版，被称为全球首款规模量产的 AI 智能体手机。",
-      detail: "《端侧AI之战正式打响｜巨潮》一文盘点端侧 AI 整机动态：努比亚 NaviX Ultra（豆包手机二代）于 9 月 16 日正式发布并开售，5499 元起（12GB+512GB，16GB+1TB 版 7499 元），由中兴通讯努比亚全链路主导、与字节跳动合作，搭载第五代骁龙8至尊版平台与豆包手机助手消费者版。\n产品核心是把 AI 智能体技术从工程样机推进到规模化量产商用：围绕「听得懂、能干活、记得住、够安全」四大能力，支持全场景自然语义理解，可自主跨应用完成比价下单、行程规划等多步骤任务——手机从「你操作它」变成「它帮你办事」。该机此前在 WAIC 2026 亮相并获 SAIL 卓越人工智能引领者奖。\n同场竞争：苹果 Apple 智能 + 全新 Siri AI 已在 WWDC26 发布；刚上市的小米 18 Fold 内置 Xiaomi 端侧模型。文章判断：跳出耗资巨大的云端大模型军备竞赛、转向端侧模型研发，正成为更多企业深度参与 AI 浪潮的路径。",
-      tags: ["豆包", "NaviX Ultra", "AI智能体手机", "努比亚"],
-      url: "https://www.sohu.com/a/1077629065_122014422",
-      image: "https://q3.itc.cn/q_70/images03/20260918/8e7d8da3bcd743c8b9362d1748862d0b.png",
-      imageCap: "配图来自原文页面"
-    },
-    {
       id: "n4", cat: "手机厂商", source: "搜狐科技 / 腾讯新闻", date: "2026-09-23",
       title: "小米 18 Fold 首销激活近 8 万台：MiMo 端侧模型机型通过市场验证",
       summary: "小米 18 Fold 首销激活量近 8 万台、同比暴增 300%——这款首款搭载 MiMo 端侧模型与自研玄戒 O3 的万元级折叠旗舰，拿到了「端侧 AI + 自研芯片」的市场正反馈。",
@@ -244,7 +263,47 @@ const WEEKLY_DATA = {
    */
   papers: [
     {
-      id: "p1", group: "recent", cat: "推理与系统", date: "2026-09-15",
+      id: "p1", group: "recent", cat: "端侧智能体", date: "2026-09-21",
+      title: "ME-VLM: A Unified VLM for Embodied Cognition and Agent Coordination",
+      authors: "理想汽车基础模型团队（Foundation Model, Li Auto Inc）",
+      venue: "arXiv:2609.24526", level: "预印本",
+      summary: "理想汽车发布统一视觉语言模型 ME-VLM（4B 与 35B-A3B 双版本）：融合具身认知与多模态智能体能力；4B 版经视觉 token 压缩、W4A8 量化与软硬件协同优化，在 M100 上实现端侧推理，prefill 时延从 400ms 降至 188ms。",
+      detail: "研究背景：Physical AI 要求模型把视觉-语言理解落到真实环境，同时考虑环境约束与执行反馈。本文提出 MachEmbodied-VLM（ME-VLM），提供 4B 与 35B-A3B 两个版本，把具身认知与多模态智能体能力统一进同一个模型。\n方法：强调物理感知与时空推理，覆盖数字与物理环境中的规划、交互与结果评估；训练数据横跨具身与多模态智能体任务，包含执行观察与反馈以支持结果评估与决策修正；训练管线包括具身能力注入、具身/多模态智能体两个专家的分别强化学习、以及多教师 on-policy 蒸馏。\n端侧部署：面向边缘部署做了视觉 token 压缩、W4A8 量化与软硬件协同优化，使 4B 版本可在 M100 上端侧推理，prefill 时延从 400ms 降到 188ms。\n评测：在具身与智能体两类基准、自动驾驶与具身导航任务上均取得有竞争力的表现。项目页与代码已开源（machembodied.com）。",
+      tags: ["具身智能", "VLM", "车端部署", "量化"],
+      url: "https://arxiv.org/abs/2609.24526"
+    },
+    {
+      id: "p2", group: "recent", cat: "端云协同", date: "2026-09-21",
+      title: "LoRA-generating hypernetworks for efficient on-device LLM generative personalization",
+      authors: "Sean Augenstein, Li Ding, Jihwan Lee 等（Google）",
+      venue: "arXiv:2609.24979", level: "预印本",
+      summary: "用超网络在端侧「现场生成」个性化 LoRA：把用户上下文 token 映射为适配该用户的低秩适配器——兼得上下文学习的端侧可行性与参数微调的权重级定制，设备上只做前向传播、个性化数据不出端。",
+      detail: "研究背景：手机上的端侧 LLM 受限于算力，模型规模与质量天花板明显，任何可行的质量增益都弥足珍贵；同时端侧模型与特定用户深度耦合、使用模式可预测——天然适合个性化，但现有两条路线各有短板：上下文学习（ICL）端侧可行，却要延长输入序列带来时延等代价；参数高效微调（PEFT）改权重无额外时延，但端侧训练在算力上不可行。\n方法：训练一个超网络（hypernetwork），把用户的上下文 token 映射为适合该用户的 LoRA 低秩适配器；训练好的公共产物下发到设备后，每台设备完全在端侧用超网络「合成」自己的个性化 LoRA——合成阶段只涉及神经网络前向传播（如 ICL 般轻量），又像 PEFT 一样通过权重修改基础模型（不延长输入序列）。\n适配场景：该思路尤其契合移动设备的算力约束——个性化在设备上完成，用户数据无需上传。\n定位：这是 Google 团队提出的端侧 LLM 生成式个性化新范式，把「个性化」从微调问题转化为生成问题。",
+      tags: ["个性化", "LoRA", "超网络", "端侧部署"],
+      url: "https://arxiv.org/abs/2609.24979"
+    },
+    {
+      id: "p3", group: "recent", cat: "推理与系统", date: "2026-09-18",
+      title: "TierKV: Long-Context On-Device LLMs via Predictive Multi-Tier KV Caching",
+      authors: "Zhihao Shu, Md Musfiqur Rahman Sanim, Jie Hu 等",
+      venue: "arXiv:2609.21172", level: "预印本",
+      summary: "预测式多层 KV 缓存（PMCO）：解码开始前用 prefill 隐状态预测未来缓存需求，把 token 联合分配到精确/低秩/闪存卸载三层；在 3 款移动 SoC、8 个模型上 prefill 吞吐最高提升 17.6×，RAM 常驻 KV 缓存减少 12.5–34%。",
+      detail: "研究背景：LLM 正走向手机并处理文本、图像、视频、音频的多样化负载，长上下文让 KV 缓存成为最大内存瓶颈——它随序列长度线性增长、且每个解码步都要访问。已有工作用低秩压缩、token 驱逐或闪存卸载减小足迹，但重建开销、不可逆的 token 损失或 I/O 停顿可能抵消省下的内存收益。\n方法：提出基于「预测式多层缓存优化（PMCO）」的移动端推理框架 TierKV——在解码开始前，用 prefill 隐状态预测未来缓存需求，在设备内存与精度预算下把 token 联合分配到精确层、低秩层与闪存卸载层三个层级。该形式化保留对完整上下文的访问、消除反应式驱逐的循环依赖，并存在闭式求解器在运行时选择分层边界与每层秩。\n结果：跨 3 款移动 SoC、8 个文本/视觉/音频模型评估，TierKV 相比现有移动 LLM 框架 prefill 吞吐最高提升 17.6×，RAM 常驻 KV 缓存减少 12.5–34%，同等内存预算下支持显著更长的上下文，精度损失轻微。",
+      tags: ["KV缓存", "长上下文", "移动推理框架"],
+      url: "https://arxiv.org/abs/2609.21172"
+    },
+    {
+      id: "p4", group: "recent", cat: "能效与评测", date: "2026-09-18",
+      title: "Samsone: A Family of Open Small Audio Language Models for On-Device Inference",
+      authors: "Piotr Masztalski, Michał K. Grzeszczyk, Olaf Sikorski",
+      venue: "arXiv:2609.21666", level: "预印本",
+      summary: "开源小音频语言模型家族 Samsone（99M/134M/356M）：134M 在同量级多个基准上刷新 SOTA，全部基于公开数据训练，发布训练代码、模型权重、移动优化 checkpoint 与开源安卓应用，演示实时端侧音频推理。",
+      detail: "研究背景：大型音频语言模型（LALM）的成功推动了数十亿参数的多模态网络，但隐私保护与低时延处理的需求，把焦点转向能在端侧运行的小音频语言模型（SALM）。\n方法与结果：提出面向边缘计算的 SALM 家族 Samsone——核心模型 Samsone-134M 在多个基准上刷新同规模 SOTA；并引入 99M 与 356M 两个尺寸，探索 SALM 的缩放规律。尽管体量紧凑，Samsone 家族的性能可与大一到两个数量级的模型竞争。\n开源配套：全部基于公开数据训练，发布训练代码、模型权重、移动优化 checkpoint，并提供开源安卓应用演示 Samsone 的实时端侧推理。\n与本站资讯板块的呼应：高通本周发布面向 AI hearables 的 Sound Elite Gen 2（端侧 AI 性能翻倍）——端侧音频智能的芯片侧与模型侧正在同步成熟，「语音入口端侧化」是下一阶段值得盯的主线。",
+      tags: ["音频语言模型", "开源", "安卓端侧推理"],
+      url: "https://arxiv.org/abs/2609.21666"
+    },
+    {
+      id: "p5", group: "recent", cat: "推理与系统", date: "2026-09-15",
       title: "End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services",
       authors: "Zhen Li, Jun Cai, Haoran Gao 等",
       venue: "arXiv:2609.17193", level: "预印本",
@@ -254,7 +313,7 @@ const WEEKLY_DATA = {
       url: "https://arxiv.org/abs/2609.17193"
     },
     {
-      id: "p2", group: "recent", cat: "端云协同", date: "2026-09-14",
+      id: "p6", group: "recent", cat: "端云协同", date: "2026-09-14",
       title: "CIDERS: Cloud-Edge LLM Collaborative Learning via Accelerating Personalized Bilevel Optimization",
       authors: "Victor H. Chen, Hairui Yu, Stella K. Chung, Hong Yan",
       venue: "arXiv:2609.15664", level: "预印本",
@@ -266,7 +325,7 @@ const WEEKLY_DATA = {
       imageCap: "论文图表 · 自动抓取自 arXiv HTML 版"
     },
     {
-      id: "p3", group: "recent", cat: "安全与隐私", date: "2026-09-09",
+      id: "p7", group: "recent", cat: "安全与隐私", date: "2026-09-09",
       title: "Understanding the Security Boundary of Obfuscation-based On-Device LLM Protection",
       authors: "Hanyi Zhou, Chenyang Li, Yuanzhe Pang 等（清华）",
       venue: "arXiv:2609.10117", level: "预印本",
@@ -276,7 +335,7 @@ const WEEKLY_DATA = {
       url: "https://arxiv.org/abs/2609.10117", highlight: true
     },
     {
-      id: "p4", group: "recent", cat: "能效与评测", date: "2026-09-09",
+      id: "p8", group: "recent", cat: "能效与评测", date: "2026-09-09",
       title: "PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling",
       authors: "Weisi Yang, Stephen Xia（Northwestern / imec）",
       venue: "arXiv:2609.09662", level: "预印本",
@@ -286,7 +345,7 @@ const WEEKLY_DATA = {
       url: "https://arxiv.org/abs/2609.09662"
     },
     {
-      id: "p5", group: "recent", cat: "端侧智能体", date: "2026-09-09",
+      id: "p9", group: "recent", cat: "端侧智能体", date: "2026-09-09",
       title: "From Fixed Keys to Readable Schemas: Small Language Models for Vehicle Agent Function Calls",
       authors: "Hamed Jafarzadeh Asl, Yuanhao Yu, Vahid Partovi Nia",
       venue: "arXiv:2609.09476", level: "预印本",
@@ -298,7 +357,7 @@ const WEEKLY_DATA = {
       imageCap: "论文结构图 · 自动抓取自 arXiv HTML 版"
     },
     {
-      id: "p6", group: "recent", cat: "端侧智能体", date: "2026-09-07",
+      id: "p10", group: "recent", cat: "端侧智能体", date: "2026-09-07",
       title: "Beyond Fluent Generation: A CPU Reliability Benchmark for MCP-Style Tool Calling in Sub-2B Small Language Models for Edge Deployment",
       authors: "Abrar Shahriar, Qurat-Ul-Ain Mastoi",
       venue: "arXiv:2609.07370", level: "预印本",
@@ -306,49 +365,7 @@ const WEEKLY_DATA = {
       detail: "研究背景：树莓派、NVIDIA Jetson Nano、Arduino UNO Q、Orange Pi、LattePanda 等资源受限单板机，催生了减少云依赖、改善数据本地性、容忍断连的端侧 SLM 智能体。而 MCP 式工具调用对模型的要求远高于「生成流畅文本」：必须输出机器可读 JSON、选对工具、补全所有必填参数、避免误动作。\n基准设计：在 100 条提示（天气检索、网页搜索、计算、邮件撰写、任务创建）上，对五款 2B 以下开源模型（Phi-1.5、Pythia-1.4B、TinyLlama-1.1B-Chat、Qwen2.5-0.5B/1.5B）做贪心与核采样两种解码评测；评分维度包括可解析性、工具名正确性、参数完整性与取值一致性，并设计了一个恢复解析器（剥离 Markdown 围栏、抽取花括号子串）。\n核心结果：严格的事后审计发现 1000 条原始回复中只有 5 条能直接解析为 JSON；经恢复解析器后 Qwen2.5-1.5B 达 75%（贪心）/79%（采样），Qwen2.5-0.5B 贪心 72% 但采样下降到 32%，Phi-1.5 为 0%，Pythia 与 TinyLlama 最多 7%——端侧 Agent 高度依赖输出恢复层。\n资源侧：CPU 探针显示 Qwen2.5-1.5B 需 7,960MiB 内存、平均 30.8s 延迟；Qwen2.5-0.5B 为 3,637MiB、10.6s，揭示可靠性-资源权衡。作者建议安全部署需要 schema 校验、受限生成、最小权限执行与后果性操作的人工升级通道。",
       tags: ["MCP", "工具调用", "单板机"],
       url: "https://arxiv.org/abs/2609.07370"
-    },
-    {
-      id: "p7", group: "recent", cat: "推理与系统", date: "2026-09-03",
-      title: "LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference",
-      authors: "Renyuan Liu, Yuyang Leng, Kaiyan Liu 等（IBM / UIUC）",
-      venue: "arXiv:2609.03079", level: "预印本",
-      summary: "「推测-精化」流式框架：用部分 GPU 结果渐进修正计算 / 加载 / 缓存保留优先级，实现 GPU 执行与存储 I/O 细粒度重叠；内存降低 4.8–7.5×，吞吐再提 1.6–2.1×。",
-      detail: "研究背景：端侧 LLM 推理对隐私与响应速度有吸引力，但模型权重远超手机/嵌入式设备的可用 DRAM。已有系统利用激活稀疏性把权重卸载到 SSD/闪存，却面临一个根本性的系统矛盾：准确的稀疏执行决策需要最新的上下文，而计算与 I/O 的高效重叠需要尽早预测——于是现有设计要么串行执行，要么付出冗余权重读取、额外计算与缓存开销。\n方法（LeanStream）：提出「推测-精化（speculate-and-refine）」的流式执行框架——用部分 GPU 计算结果渐进地精化三类优先级：计算优先级、加载优先级与缓存保留优先级，从而在保证正确性的前提下实现 GPU 执行与存储 I/O 的细粒度流水线重叠。\n实现与评估：在移动与嵌入式两类平台上实现 LeanStream。与既有端侧 LLM 推理系统相比：在取得前人最优吞吐的条件下，内存占用降低 4.8–7.5×；在内存受限设置下，token 生成吞吐再提升 1.6–2.1×。",
-      tags: ["推理系统", "存储卸载", "流式执行"],
-      url: "https://arxiv.org/abs/2609.03079"
-    },
-    {
-      id: "p8", group: "recent", cat: "能效与评测", date: "2026-09-02",
-      title: "How Do Prompt Variations Affect Energy Consumption in On-Device LLMs?",
-      authors: "Wei Hu, Xiaolong Tu, Dawei Chen 等（GSU / Google）",
-      venue: "arXiv:2609.01798", level: "预印本",
-      summary: "首个系统研究提示词设计如何影响端侧 LLM 能耗：认知负荷主要影响每 token 能耗，措辞模式通过 token 用量影响总能耗；端侧提示工程需要「模型感知」。",
-      detail: "研究背景：LLM 正越来越多地部署在手机等移动设备上，能耗随之成为关键部署约束；然而提示词（prompt）设计对能耗的影响此前缺乏系统研究。\n实验设计：本文开展了一项覆盖提示属性、数据集、模型与设备四个维度的广泛实证研究，并对推理过程做分相剖析（profiling），把能耗拆分为 prefill（预填充）与 decode（解码）两个阶段分别计量。\n主要发现：提示的两个属性以不同机制影响能耗——认知负荷（cognitive load，任务本身要求的高低）主要改变「每 token 的能耗成本」；措辞模式（phrasing pattern，同一任务的不同表达方式）则主要通过「token 使用量」影响总能耗。\n进一步分析：能耗-质量联合分析显示，提示设计对不同模型会重塑出不同的可达前沿（Pareto frontier）——同样的提示优化在 A 模型上省电、在 B 模型上可能适得其反。结论：面向能耗的端侧提示工程应当「模型感知」（model-aware）。代码、数据与脚本已开源（amai-gsu.github.io/PromptProperty/）。",
-      tags: ["提示工程", "能耗", "实证研究"],
-      url: "https://arxiv.org/abs/2609.01798"
-    },
-    {
-      id: "p9", group: "recent", cat: "能效与评测", date: "2026-09-01",
-      title: "Triple-Bottom-Line Sustainability of Language Models for Edge AI: A Comparison Between SLMs and Quantized LLMs",
-      authors: "Jainil Dharmil Shah",
-      venue: "arXiv:2609.00665", level: "预印本",
-      summary: "提出三支柱「全息可持续性得分 HSS」（能力效率 / 能耗 / 安全）对比原生 SLM 与量化 LLM 共 30 种配置：Qwen3-30B-A3B/GGUF Q4 综合第一——量化大模型未必输给原生小模型。",
-      detail: "研究背景：边缘 AI 的模型选型通常只看单一指标——准确率、时延、内存、能耗或安全之一；而一个可部署的语言模型必须同时平衡这五个维度。\n方法：提出可复现的「全息可持续性得分（Holistic Sustainability Score, HSS）」，按三重底线（triple bottom line）组织：经济支柱（能力 + 系统效率）、环境支柱（运行时 GPU 能耗）、社会支柱（有害提示的鲁棒性，以攻击成功率近似）。实验覆盖 5 个 BF16 原生 SLM 与 5 个 LLM，后者在 BF16 / INT8 / NF4 4-bit / GPTQ 4-bit / GGUF Q4 五种量化下共形成 30 种实测配置；能力用 5 个零样本基准评估，效率测时延/吞吐/峰值显存/能耗。\n结果：综合排名第一的是 Qwen3-30B-A3B / GGUF Q4（93.38 分），其次 Mistral-Small-24B / GGUF Q4（92.40）；SLM 中排名最高的是 Phi-4-mini / BF16（89.49）。\n结论：「原生训练的小模型必然是更可持续的边缘选择」这一假设并不普适成立——优化得当的量化大模型可以在整体上胜出；量化是系统级的设计选择，而非单调的「精度-效率」折衷。作者同时说明 HSS 得分相对于其比较池与代理指标定义。",
-      tags: ["模型选择", "量化", "可持续性"],
-      url: "https://arxiv.org/abs/2609.00665",
-      image: "https://arxiv.org/html/2609.00665v1/figures/figure_1.png",
-      imageCap: "论文结构图 · 自动抓取自 arXiv HTML 版"
-    },
-    {
-      id: "p10", group: "recent", cat: "推理与系统", date: "2026-09-01",
-      title: "mzCache: On-Device LLM Memory Management under Multitasking",
-      authors: "Hongseung Yu, Minsung Kim, Jongseok Park, Kyunghan Lee（SNU）",
-      venue: "arXiv:2609.01338", level: "预印本",
-      summary: "面向手机多任务内存压力的端侧 LLM 内存管理：细粒度共享缓冲 + 混合换出，利用 SoC 统一内存实现 GPU 零等待推理与 CPU 侧并行恢复，TTFT 降低 2.1–5.5×；基于 llama.cpp 落地为安卓应用。",
-      detail: "研究背景：端侧手机 LLM 推理正获得大量关注，但手机运行在高度动态的多任务环境中——用户频繁切换应用造成内存压力，操作系统会把 LLM 的内存（模型权重 + KV 缓存）逐出（evict）。当新推理请求到来时，系统只能通过慢速存储读取恢复被逐出的内存、或整块重算 KV 缓存，严重劣化响应速度。\n方法（mzCache）：一个面向多任务环境的端侧 LLM 推理系统，核心是「面向恢复的内存管理」：把 LLM 内存划分为细粒度共享缓冲，支持部分逐出与部分恢复，并允许 CPU 与 GPU 跨处理器并发访问；配合混合 swap 与 backward-out 逐出策略，保证从任意逐出状态都能低延迟恢复。\n关键机制：利用移动 SoC 的统一内存（unified memory）特性，让 CPU 侧的恢复与 GPU 侧的推理并发进行——GPU 无需等待恢复完成即可「零等待」继续推理。\n实现与结果：在 llama.cpp 上实现并打包为 Android 应用。真实多任务场景下，相比「存储 backed 部分卸载」方案，Time-to-First-Token（首 token 时延）降低 2.1–5.5×。",
-      tags: ["内存管理", "多任务", "llama.cpp"],
-      url: "https://arxiv.org/abs/2609.01338"
-    },
+    }
       ],
 
   /* ---------------- 板块三：知识分享 ----------------
@@ -390,10 +407,6 @@ const WEEKLY_DATA = {
         text: "llama.cpp / GGML / whisper.cpp 作者，GGUF 量化生态奠基人；端侧推理开源事实标准的源头。",
         url: "https://ggerganov.com",
         intro: "Georgi Gerganov 的个人站点。他是 llama.cpp、GGML、whisper.cpp 等项目的作者——GGUF 量化格式与 CPU 推理优化的事实标准，几乎所有端侧/本地推理工具链（Ollama、LM Studio 等）都构建在他的工作之上。\n看点：ggml 的架构笔记、量化方法的演进讨论，以及他近年创业（本地推理方向）后的实践分享；GitHub 动态本身就是端侧推理技术的风向标。\n适合谁：想理解「为什么 4-bit 量化能在笔记本/手机上跑大模型」底层原理的工程师。" },
-      { group: "个人博客", name: "Andrej Karpathy", type: "个人博客", letter: "K",
-        text: "从 nanoGPT 到 LLM101n，把大模型拆到最小可运行单元；理解小模型训练原理的最佳入门材料。",
-        url: "https://karpathy.github.io",
-        intro: "前特斯拉 AI 总监、OpenAI 创始成员 Karpathy 的博客与公开课合集。虽然不专门写「端侧」，但他把 transformer 训练拆到最小可运行单元的讲解方式，是理解小模型（也是端侧模型）原理的最佳起点。\n代表作：《The Unreasonable Effectiveness of Recurrent Neural Networks》、nanoGPT（约 300 行训练出 GPT-2）、视频课《Let's build GPT》与《Deep Dive into LLMs》、以及教学项目 LLM101n。\n适合谁：需要补齐「模型内部原理」基础的端侧工程师；所有材料免费。" },
       { group: "个人博客", name: "Tri Dao", type: "个人博客", letter: "T",
         text: "FlashAttention 作者，专注高效注意力与推理 Kernel；端侧推理框架大量复用他的工作。",
         url: "https://tridao.me",
@@ -402,10 +415,14 @@ const WEEKLY_DATA = {
         text: "LLM 应用实践的一手笔记，工具调用、提示工程与安全议题跟踪，更新勤、观点实。",
         url: "https://simonwillison.net",
         intro: "Django 联合创始人 Simon Willison 的博客，近五年几乎每天更新 LLM 应用实践笔记：新模型发布的一手上手测评、工具调用（tool use）与提示工程实践、LLM 安全（提示注入等）议题跟踪。\n看点：每款重要模型发布当天他几乎都会给出实测；llm 命令行工具与 Datasette 生态的作者；对「本地/端侧运行模型」也有大量实操记录（Ollama/llama.cpp 场景）。\n适合谁：把 LLM 真正用进产品的工程师；想跟进模型生态变化但没时间刷推的人——他的博客就是高信噪比的过滤器。" },
-      { group: "个人博客", name: "Chip Huyen", type: "个人博客", letter: "C",
-        text: "《Designing Machine Learning Systems》作者，ML 系统与部署领域的经典书写者，端侧工程化的方法论参考。",
-        url: "https://huyenchip.com",
-        intro: "Chip Huyen（《Designing Machine Learning Systems》与《AI Engineering》作者）的个人博客，专注 ML/AI 系统的工程化：从数据管道、模型部署、推理服务到近年密集更新的 LLM 工程议题（RAG、评估、推理优化）。\n代表作：《Machine Learning Tooling》系列盘点、《The Implications of LLMs for ML Engineering》等长文——中文圈广泛流传的多个「AI 工程化」框架源自她的梳理。\n适合谁：需要系统性方法论（而非碎片技巧）的 ML 平台 / 端侧部署工程师；她的书是许多团队的入门教材。" },
+      { group: "个人博客", name: "Sebastian Raschka", type: "个人博客 · AI工程Newsletter", letter: "R",
+        text: "《Build a Large Language Model (From Scratch)》作者，LLM 架构与量化的第一线拆解，端侧工程师的进阶读物。",
+        url: "https://magazine.sebastianraschka.com",
+        intro: "威斯康星大学教授、《Build a Large Language Model (From Scratch)》作者，Newsletter《Ahead of AI》约半月一更（2026-09 实测持续更新中）。\n看点：LLM 架构演进长文拆解（KV 缓存共享、MoE、推理效率）、量化技术系列、本地 coding agent 实操——与端侧部署直接相关的主题密度很高；代码级讲解是其招牌。\n适合谁：想理解「模型为什么这么设计、怎么压得更小」底层逻辑的端侧工程师。" },
+      { group: "个人博客", name: "Interconnects (Nathan Lambert)", type: "个人博客 · 开源模型Newsletter", letter: "L",
+        text: "开源/开放权重模型生态的第一时间解读：Qwen、Gemma、Llama 每次发布都有结构化分析，端侧小模型的「上游水源」。",
+        url: "https://www.interconnects.ai",
+        intro: "Allen AI 前研究经理、RLHF 重要推动者 Nathan Lambert 的 Newsletter，周更（2026-09 实测每周多篇）。\n看点：开源权重模型（Qwen / Gemma / Llama / DeepSeek）发布的逐家对比、模型许可与开源政策分析、定期「Open Models Reading List」汇总——端侧小模型的源头动态多在这里第一时间出现。\n适合谁：需要判断「开源模型格局往哪走」的从业者；做端侧模型选型前的背景功课。" },
       { group: "中文媒体 · 公众号", name: "量子位", type: "中文媒体 · 微信公众号同名", letter: "量",
         text: "AI 资讯与模型发布第一时间的中文报道，公众号与网站同步更新，追踪国内外端侧动态的高频信源。",
         url: "https://www.qbitai.com",

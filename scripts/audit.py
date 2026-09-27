@@ -105,7 +105,7 @@ def audit_papers(items):
         got[ax] = (e.findtext("a:title", "", NS).replace("\n", " ").strip(),
                    e.findtext("a:published", "", NS)[:10])
     import datetime
-    today = datetime.date(2026, 9, 23)
+    today = datetime.date.today()
     for p in items:
         g = got.get(p["ax"])
         if not g:

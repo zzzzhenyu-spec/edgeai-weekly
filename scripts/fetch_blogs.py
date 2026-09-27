@@ -25,12 +25,12 @@ FEEDS = {
     "Simon Willison": "https://simonwillison.net/atom/everything/",
     "Google DeepMind / Developers Blog": "https://blog.google/rss/",
     "IT之家": "https://www.ithome.com/rss/",
-    "Chip Huyen": "https://huyenchip.com/feed.xml",
+    "Sebastian Raschka": "https://magazine.sebastianraschka.com/feed",
+    "Interconnects (Nathan Lambert)": "https://www.interconnects.ai/feed",
+    "Apple Machine Learning Research": "https://machinelearning.apple.com/rss.xml",
 }
 # HTML 解析: 名称 -> (列表页URL, 站点根, 链接正则)；列表页可以是 HTML 或 sitemap.xml
 HTML_SITES = {
-    "Apple Machine Learning Research": ("https://machinelearning.apple.com/", "https://machinelearning.apple.com", r"^/research/[a-z0-9-]+$"),
-    "Andrej Karpathy": ("https://karpathy.github.io", "https://karpathy.github.io", r"^/\d{4}/"),
     "Tri Dao": ("https://tridao.me", "https://tridao.me", r"/(blog|notes|p)/"),
     "电子工程专辑 EETimes China": ("https://www.eet-china.com", "https://www.eet-china.com", r"/(mp|news)/a?\d"),
 }
