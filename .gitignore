@@ -1,5 +1,7 @@
-# 脚本生成的筛选候选文件，不参与部署
-data/
+# 脚本生成的筛选候选文件，不参与部署（两个项目记忆文件除外）
+data/*
+!data/storylines.json
+!data/source_health.json
 
 # Python 运行产物
 __pycache__/

@@ -1,0 +1,85 @@
+{
+  "updated": "2026-09-28",
+  "note": "事件线记忆（周报的连载跟踪）。周更流程第0步：逐条核对 watch_for，有新进展则编选条目并更新 last_seen/issues；连续两期无新进展将 status 改为 dormant；再无则移除。新现象级事件开新线。",
+  "threads": [
+    {
+      "topic": "Meta Muse 现象级与智能体权限边界",
+      "status": "active",
+      "last_seen": "2026-09-28",
+      "issues": [40, 41],
+      "watch_for": [
+        "DAU/安装量新数据（Sensor Tower / Apptopia 口径）",
+        "亚马逊封禁后续：其他电商平台是否跟进、Meta 是否妥协或诉讼",
+        "用户设备侧隐私事件（Mac 短信数据库未授权同步，41 期已报，观察是否发酵为监管介入）",
+        "Muse 进入 Meta AI 眼镜的时间表与形态",
+        "付费转化与 Meta 财报口径的 AI 收入"
+      ]
+    },
+    {
+      "topic": "Jev 决策模型（非 LLM 路线出圈）",
+      "status": "active",
+      "last_seen": "2026-09-28",
+      "issues": [40, 41],
+      "watch_for": [
+        "企业场景落地案例（TypeSafe AI 客户与定价）",
+        "社区复现与成本数据（Frigade 方案 $1-1.7/天 之后）",
+        "更多游戏/长程任务通关记录",
+        "与 LLM Agent 路线的对比评测"
+      ]
+    },
+    {
+      "topic": "骁龙峰会 2026 与端侧大模型平台",
+      "status": "active",
+      "last_seen": "2026-09-28",
+      "issues": [40, 41],
+      "watch_for": [
+        "第六代骁龙 8 超级至尊版机型铺开（小米 18 Pro / 荣耀 Magic9 Pro Max 之后）",
+        "30B MoE 端侧智能体演示的工程化落地",
+        "1-bit 模型在 AR1/Sound Elite Gen 2 上的量产设备",
+        "Googlebook（高通 x 谷歌）新品类进展"
+      ]
+    },
+    {
+      "topic": "智能体手机首销与 GUI Agent 风控冲突",
+      "status": "active",
+      "last_seen": "2026-09-28",
+      "issues": [40, 41],
+      "watch_for": [
+        "豆包手机助手《王者荣耀》风控事件的解决方式（腾讯与字节是否达成规则）",
+        "小米 18 Pro / 荣耀 Magic9 首销长线数据",
+        "其他 App 厂商对系统级智能体的适配政策"
+      ]
+    },
+    {
+      "topic": "QwenBook 原生智能体电脑",
+      "status": "active",
+      "last_seen": "2026-09-27",
+      "issues": [40],
+      "watch_for": [
+        "上市时间、配置与定价",
+        "「原生智能体电脑」品类定义是否被其他厂商跟进"
+      ]
+    },
+    {
+      "topic": "AI PC 品牌策略转向（Copilot+ 退役）",
+      "status": "active",
+      "last_seen": "2026-09-26",
+      "issues": [41],
+      "watch_for": [
+        "OEM 是否跟进摘标",
+        "Copilot 8GB 内存优化的实际落地版本",
+        "Windows 11 中 Copilot 入口的进一步调整"
+      ]
+    },
+    {
+      "topic": "Mobilint 韩国端侧 NPU 创业公司（机器人方向）",
+      "status": "watch",
+      "last_seen": "2026-09-28",
+      "issues": [],
+      "watch_for": [
+        "与 LG/Doosan/大东的合作项目落地（机器人+家用电器的端侧 AI 芯片）",
+        "若有实质进展再开卡，暂不入资讯"
+      ]
+    }
+  ]
+}

@@ -20,8 +20,11 @@ def load_sections():
     meta = {}
     for k in ("issue", "weekRange", "updated", "editorsNote"):
         meta[k] = field(text[:text.index("news:")], k)
-    def items(section, end_marker):
-        seg = text[text.index(section):text.index(end_marker)]
+    def items(section, end_marker, fallback=None):
+        if section not in text:
+            return []
+        end = end_marker if end_marker in text else fallback
+        seg = text[text.index(section):text.index(end)] if end else text[text.index(section):]
         blocks = re.split(r'\n\s*\{\s*\n', seg)
         out = []
         for b in blocks[1:]:
@@ -36,8 +39,8 @@ def load_sections():
                 "group": field(b, "group"),
             })
         return out
-    return meta, items("news: [", "/* ---------------- 板块二"), \
-        items("papers: [", "/* ---------------- 板块三")
+    return meta, items("news: [", "/* ---------------- 板块二", "papers: ["), \
+        items("papers: [", "/* ---------------- 板块三", "knowledge: {")
 
 
 def main():
@@ -62,6 +65,8 @@ def main():
     recent = [p for p in papers if p["group"] == "recent"]
     pub = [p for p in papers if p["group"] == "published"]
     L.append(f"## 科研前沿（{len(papers)} 篇）\n")
+    if not papers:
+        L.append("- 本期处于滚动更新期，论文板块将在周日核结时补齐。\n")
     if recent:
         L.append(f"- **arXiv 新作跟踪（{len(recent)} 篇，预印本）**：" + "；".join(
             f"[{p['title'][:58]}{'…' if len(p['title']) > 58 else ''}]({p['url']})" for p in recent) + "\n")

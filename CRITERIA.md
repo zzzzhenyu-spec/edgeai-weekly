@@ -142,10 +142,38 @@
 
 ---
 
+## 6.4 外文通道（fetch_foreign.py，2026-09-28 起）
+
+一手英文/韩文报道直接编译入库，弥补中文媒体二手转述的时滞与遗漏：
+
+1. **通道构成**：Google News 英文 RSS（关键词雷达）／站点直连 RSS（TechCrunch AI、The Verge、9to5Mac、Tom's Hardware）／Hacker News（Algolia API，现象级事件雷达，首页热帖+关键词搜索）／Hugging Face Daily Papers（社区热度论文榜，与 arXiv 捞鱼互补）／博主 Bluesky（simonw、rasbt，实测活跃者）；
+2. **编选规范**：候选池 `data/foreign_pool.json`（`-d` 控制窗口，日常 3 天、周更大版本 7 天）；入库时**全文编译成中文**（标题、summary、detail 全中文），source 标注「原名（编译）」；事实与数字以原文为准，日期用原文发布日；配图用原文 og:image；
+3. **URL 处理**：Google News 返回 JS 跳转链，真实原文地址用 `find_article.py` 反查；
+4. **已知限制**（详见 data/source_health.json）：Reddit 当前网络不通；Bluesky 仅 simonw/rasbt 活跃；X/Twitter 无官方 RSS，博主动态靠 Bluesky+博客库+HN 覆盖，未来可用 IAB 登录态扫描补 X。
+
+---
+
+## 6.5 滚动更新制（2026-09-28 起，每日小更 + 周日大版本）
+
+- **滚动期**（周一 00:00 至周日核结前）：`meta.status = "rolling"`，工作日每日定时任务补充**简讯级条目**；
+- **简讯门槛**（低于正式条目的 16 分制，但必须全过）：R≥4（端侧强相关）且 N≥1（明确信息增量）且信源 S1/S2/S3；每日 ≤3 条；summary 2-3 句；detail 可精简但事实必须完整；快讯不重写导读（导读在周日核结时统一重写）；
+- **周日核结**（周更定时任务）：对本周全部条目（含简讯）按 §3 十六分制补评，达标升级 highlight、补配图与深度 detail；重写导读；`status` 改为 `final`；走 §7 检查单全流程（audit/README/archive save）后开下一期滚动；
+- **事件线联动**：编选前先读 `data/storylines.json` 的 watch_for——有进展的线优先补条目；新现象级事件开新线。
+
+---
+
+## 6.6 项目记忆文件（data/*.json，随 git 持久化）
+
+- **storylines.json（事件线记忆）**：活跃话题的 watch_for 清单。周更第 0 步核对；条目入刊后更新 last_seen/issues；两期无进展标 dormant；
+- **source_health.json（信源健康记忆）**：各通道可用性、踩坑结论、最后成功时间。每周更新；新会话/定时任务开工前先读它，避免重复踩坑（如 Reddit 不通、搜狗勿每日跑）。
+
+---
+
 ## 7. 每期发布前检查单（顺序执行）
 
 1. 窗口核对：全部资讯事件日 ∈ [运行日-7, 运行日]；
 1.5. **可读性核对**：summary/detail/导读等用户可见文本中**禁止出现内部编号**（nXX / pXX / "论文板块 p10" 之类）——交叉引用一律用条目标题或自然语言描述（如「见本期『科研前沿』板块的××一文」「（见本板块另一条）」）；
+1.7. **状态核对**（滚动期专用）：`meta.status` 与实际一致——滚动期保持 "rolling" 且每日更新 `meta.updated`；周日核结后改为 `final`；
 2. **完整性与不重复性对账**：`python scripts/archive.py check`——候选池与全部历史期比对，复核「未收录净增量池」中是否有达标条目被遗漏（QwenBook 教训）；确认「当前期 vs 历史期重复性校验」无疑似重复（有则改写或删除）；
 3. `python scripts/audit.py` **全 PASS**（WARN 需逐条解释，FAIL 一律修完再发）；
 4. 分数抽查：每期随机抽 3 条按 §3 复盘打分，偏差 ≥3 分则本标准需要修订；
@@ -167,3 +195,4 @@
 - 2026-09-27 v1.3：建立期次存档库（scripts/archive.py：save 快照 + check 对账）；检查单新增第 2 步「完整性与不重复性对账」（防 QwenBook 式遗漏、防跨期重复收录）；前端上线历史期数选择器（js/archive/ 按需加载，hash 直达）。
 - 2026-09-28 v1.4：资讯分类扩为七类——新增「行业关注事件」（现象级/出圈事件专属类：Muse 爆火、Jev 刷屏、豆包风控冲突等），置于首位并给出准入判据；第 40 期将 n39/n11/n41 移入该类、n10 归回大模型厂商。
 - 2026-09-28 v1.5：检查单新增「可读性核对」——用户可见文本禁止内部编号（nXX/pXX），交叉引用用条目名或自然语言（用户反馈"n39/p10 完全看不懂"）。
+- 2026-09-28 v1.6：滚动更新制上线（§6.5：每日简讯门槛 + 周日核结补评，第 41 期起 `meta.status` 区分 rolling/final）；外文通道接入（§6.4：Google News/站点RSS/HN/HF Papers/Bluesky 五通道，编译入库规范）；项目记忆文件（§6.6：storylines 事件线 + source_health 信源健康）；博客库新增「社区与平台」分组（Hugging Face 回归）。

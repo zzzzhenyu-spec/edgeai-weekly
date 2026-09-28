@@ -1,0 +1,22 @@
+{
+  "updated": "2026-09-28",
+  "note": "信源健康记忆：每周更新一次。记录各通道可用性与踩坑结论，帮助新会话/定时任务快速恢复认知，避免重复踩坑。",
+  "channels": [
+    { "name": "fetch_blogs.py", "state": "ok", "last_success": "2026-09-28",
+      "notes": "14源92篇(含HF后15源)。面壁/陈天奇/Gerganov为指引空状态(官网无RSS,设计如此)。电子工程专辑(eet-china.com)首页偶发读超时,但文章列表通道正常,不影响。Raschka半月更节奏属正常,勿误判停更。" },
+    { "name": "fetch_foreign.py", "state": "new", "last_success": "2026-09-28",
+      "notes": "5通道: GoogleNews英文RSS/站点直连RSS(TechCrunch,Verge,9to5Mac,Tom's)/HN Algola/HF DailyPapers/博主Bluesky(simonw,rasbt)。坑: Reddit当前网络连不通; Bluesky仅simonw与rasbt活跃(karpathy 2023停更,swyx 2025-10停更); Google News的RSS链接是JS跳转链,取真实URL用find_article.py; HF论文日期取row级publishedAt(上榜日)而非paper级(arXiv原始日); HF榜隔几天更新一次,-d 3可能为0属正常。" },
+    { "name": "fetch_wechat.py", "state": "risk", "last_success": "2026-09-27",
+      "notes": "搜狗微信通道有反爬风险,已内置8s间隔。每周只跑一次(-d 7),不要用于每日扫描。" },
+    { "name": "小红书(IAB浏览器扫描)", "state": "manual", "last_success": "2026-09-27",
+      "notes": "需用户小号在ZCode内置浏览器保持登录态。宽关键词库(端侧AI/AI手机/AI眼镜/AI耳机/AI PC/AI芯片/本地部署大模型+事件词)。站内无时间排序,靠笔记日期(今天/昨天/N天前/MM-DD)过滤。产出data/xhs_candidates.json。" },
+    { "name": "fetch_github.py", "state": "ok", "last_success": "2026-09-27",
+      "notes": "GitHub Search API,topics=llm/ai-agents/on-device,星标>1200,120天内创建,取前12。无已知问题。" },
+    { "name": "fetch_papers.py / fetch_news.py", "state": "ok", "last_success": "2026-09-28",
+      "notes": "arXiv关键词捞鱼与Bing News RSS,稳定。" },
+    { "name": "archive.py", "state": "ok", "last_success": "2026-09-28",
+      "notes": "save/check/list。第38-41期已存档(41期为滚动期快照,周日核结时覆盖)。查重阈值: URL精确或标题相似度≥0.62。" },
+    { "name": "data.js编辑踩坑(重要)", "state": "note",
+      "notes": "用python改data.js时: 1) re.sub的replacement字符串会把两字符\\n再解释成真实换行→插含换行的JS字符串时用字符串拼接或lambda repl; 2) 追加资源卡到resources末尾时,原最后一项结尾无逗号,要先补逗号; 3) 改完必须用 vm.Script/node 语法校验(浏览器 new Function 也行), audit.py 的正则解析发现不了JS语法错误; 4) python write_text在Windows会写CRLF,无害。" }
+  ]
+}

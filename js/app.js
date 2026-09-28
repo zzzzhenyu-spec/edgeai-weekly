@@ -56,9 +56,10 @@
   function renderIssue() {
     var chipEl = $("issue-chip");
     if (chipEl) chipEl.textContent = D.meta.issue;
-    $("hero-kicker").textContent = "VOL." + ((D.meta.issue.match(/\d+(?=\s*期)/) || [""])[0]) + " · " + D.meta.weekRange + " · WEEKLY BRIEFING";
+    $("hero-kicker").innerHTML = "VOL." + ((D.meta.issue.match(/\d+(?=\s*期)/) || [""])[0]) + " · " + esc(D.meta.weekRange) + " · WEEKLY BRIEFING" +
+      (D.meta.status === "rolling" ? ' <span class="roll-badge"><i></i>本周持续更新中</span>' : "");
     $("editors-note").innerHTML = "<b>本期导读<i>" + esc(D.meta.weekRange) + "</i></b>" + esc(D.meta.editorsNote);
-    $("footer-meta").textContent = D.meta.issue + " · 数据更新于 " + D.meta.updated + " · 资讯 " + D.news.length + " 条 / 论文 " + D.papers.length + " 篇 / 资源 " + D.knowledge.resources.length + " 个";
+    $("footer-meta").textContent = D.meta.issue + (D.meta.status === "rolling" ? " · 滚动更新中" : "") + " · 数据更新于 " + D.meta.updated + " · 资讯 " + D.news.length + " 条 / 论文 " + D.papers.length + " 篇 / 资源 " + D.knowledge.resources.length + " 个";
     countUp($("stat-news"), D.news.length);
     countUp($("stat-papers"), D.papers.length);
     countUp($("stat-res"), D.knowledge.resources.length);
@@ -308,6 +309,11 @@
   }
 
   function renderPapers() {
+    if (!D.papers.length) {
+      $("papers-grid").innerHTML = '<div class="empty-note">论文板块随周日大版本更新——当前为滚动更新期，本期论文将在周日核结时补齐。</div>';
+      $("papers-chips").innerHTML = "";
+      return;
+    }
     var list = D.papers.filter(function (p) {
       if (paperFilter === "全部") return true;
       if (paperFilter === "已发表·高质量") return p.group === "published";
@@ -361,8 +367,8 @@
       '<a class="res-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">访问 ↗</a>' +
       "</div>";
   }
-  var RES_GROUPS = ["厂商官方博客", "个人博客", "中文媒体 · 公众号"];
-  var RES_GROUP_COLORS = { "厂商官方博客": "#22d3ee", "个人博客": "#818cf8", "中文媒体 · 公众号": "#fbbf24" };
+  var RES_GROUPS = ["厂商官方博客", "个人博客", "社区与平台", "中文媒体 · 公众号"];
+  var RES_GROUP_COLORS = { "厂商官方博客": "#22d3ee", "个人博客": "#818cf8", "社区与平台": "#34d399", "中文媒体 · 公众号": "#fbbf24" };
 
   /* 博客卡片点击 -> 简介面板（logo + 近期文章分页列表，端侧相关背光高亮） */
   function hostOf(u) {

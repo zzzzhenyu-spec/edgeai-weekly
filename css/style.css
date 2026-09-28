@@ -112,6 +112,23 @@ a:hover { text-decoration: underline; }
   font-family: var(--mono); font-size: 13px; letter-spacing: 0.12em;
   color: var(--accent); text-transform: uppercase; margin-bottom: 14px;
 }
+.roll-badge {
+  display: inline-flex; align-items: center; gap: 6px; margin-left: 8px;
+  padding: 3px 11px; border-radius: 999px; vertical-align: 1px;
+  font-size: 10.5px; letter-spacing: 0.14em; text-transform: none;
+  color: #34d399; border: 1px solid rgba(52, 211, 153, 0.35);
+  background: rgba(52, 211, 153, 0.07);
+}
+.roll-badge i {
+  width: 6px; height: 6px; border-radius: 50%; background: #34d399;
+  box-shadow: 0 0 10px #34d399; animation: rollPulse 2.2s ease-in-out infinite;
+}
+@keyframes rollPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+.empty-note {
+  grid-column: 1 / -1; padding: 34px 20px; text-align: center;
+  color: var(--text-faint); font-size: 13px; letter-spacing: 0.02em;
+  border: 1px dashed var(--border); border-radius: var(--radius);
+}
 .hero h1 { font-size: clamp(34px, 5.4vw, 58px); font-weight: 800; line-height: 1.18; letter-spacing: 0.01em; }
 .hero h1 em {
   font-style: normal;
@@ -602,6 +619,7 @@ body.panel-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .card, .card:hover { transform: none; }
+  .roll-badge i { animation: none; }
 }
 
 /* ---------------- 响应式 ---------------- */

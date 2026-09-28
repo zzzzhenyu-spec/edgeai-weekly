@@ -58,6 +58,7 @@ LOGO_OVERRIDES = {
     "Simon Willison": "https://github.com/simonw.png",
     "量子位": "https://www.google.com/s2/favicons?domain=qbitai.com&sz=128",
     "面壁智能数据洞察": "https://www.google.com/s2/favicons?domain=modelbest.cn&sz=128",
+    "Hugging Face Blog": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
     "Tianqi Chen 陈天奇": "https://github.com/tqchen.png",
     "Georgi Gerganov": "https://github.com/ggerganov.png",
 }

@@ -1,17 +1,6 @@
-/* ============================================================
- * 端侧AI每周情报站 · 数据文件（2026 第 41 期 · 09.28–10.04 · 滚动更新中：工作日补简讯, 周日核结）
- * 每周更新流程（Python 脚本，本地需 Python 3.10+）：
- *   python scripts\fetch_papers.py      # arXiv 论文候选
- *   python scripts\fetch_news.py        # RSS 资讯候选(默认近7天)
- *   python scripts\check_dblp.py        # DBLP 核对 venue
- *   python scripts\find_article.py "关键词..."  # 定位真实文章URL
- *   python scripts\fetch_paper_figs.py  # 抓取论文结构图(arXiv HTML版)
- * 收录规则：资讯只收最近一周(运行日往前7天)的事件，超出窗口的
- * 厂商动态不放卡片(由厂商雷达标注覆盖)；来源只用简体中文或英文。
- * 字段：url=阅读原文(具体文章页)；image=详情配图(og:image或论文图,
- *       无则前端自动生成兜底封面)；imageCap=配图说明
- * ============================================================ */
-const WEEKLY_DATA = {
+/* 自动生成: scripts/archive.py (勿手改) · 2026 · 第 41 期 快照（2026.09.28 — 10.04，数据更新于 2026-09-28） */
+window.WEEKLY_ARCHIVE = window.WEEKLY_ARCHIVE || {};
+WEEKLY_ARCHIVE[41] = {
 
   meta: {
     issue: "2026 · 第 41 期",
