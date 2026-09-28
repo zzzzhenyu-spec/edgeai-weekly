@@ -158,6 +158,14 @@ a:hover { text-decoration: underline; }
   gap: 10px; margin-bottom: 6px; font-size: 13.5px;
 }
 .editors-note b::before { content: "📝 "; }
+/* 导读正文引导词：本期聚焦(主题色) / 今日新增(与滚动徽章同源的绿色, 另起一行) */
+.editors-note .note-lead { font-weight: 700; color: var(--accent); letter-spacing: 0.02em; }
+.editors-note .note-new-line { display: block; height: 0; margin-top: 9px; }
+.editors-note .note-lead.note-new { color: #34d399; }
+.editors-note .note-lead.note-new::before {
+  content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  background: #34d399; box-shadow: 0 0 8px #34d399; margin-right: 7px; vertical-align: 1px;
+}
 .editors-note b i {
   font-style: normal; font-weight: 500; font-family: var(--mono);
   font-size: 11.5px; color: var(--text-dim); letter-spacing: 0.03em; white-space: nowrap;
@@ -165,8 +173,10 @@ a:hover { text-decoration: underline; }
 
 /* ---------------- Hero 可视化面板 ---------------- */
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr); gap: 46px; align-items: stretch; }
-/* 底边对齐：左列弹性布局+统计沉底吸收高度差；右列卡片保持自然高度不拉伸 */
+/* 底边对齐：左列弹性布局+统计沉底吸收高度差；右列容器拉伸、卡片锚底(自然高度,内部永不出现空白)——导读行数变化时底边始终对齐 */
 .hero-left { display: flex; flex-direction: column; }
+.hero-right { display: flex; flex-direction: column; }
+.hero-right .viz-card { margin-top: auto; }
 
 .viz-card {
   padding: 22px 22px 18px; border-radius: var(--radius);

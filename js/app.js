@@ -58,7 +58,11 @@
     if (chipEl) chipEl.textContent = D.meta.issue;
     $("hero-kicker").innerHTML = "VOL." + ((D.meta.issue.match(/\d+(?=\s*期)/) || [""])[0]) + " · " + esc(D.meta.weekRange) + " · WEEKLY BRIEFING" +
       (D.meta.status === "rolling" ? ' <span class="roll-badge"><i></i>本周持续更新中</span>' : "");
-    $("editors-note").innerHTML = "<b>本期导读<i>" + esc(D.meta.weekRange) + "</i></b>" + esc(D.meta.editorsNote);
+    /* 导读正文：引导词「本期聚焦」主题色高亮、「今日新增」另起一行且用滚动徽章同源绿 */
+    var noteBody = esc(D.meta.editorsNote)
+      .replace("本期聚焦：", '<span class="note-lead">本期聚焦</span>：')
+      .replace("今日新增：", '<i class="note-new-line"></i><span class="note-lead note-new">今日新增</span>：');
+    $("editors-note").innerHTML = "<b>本期导读<i>" + esc(D.meta.weekRange) + "</i></b>" + noteBody;
     $("footer-meta").textContent = D.meta.issue + (D.meta.status === "rolling" ? " · 滚动更新中" : "") + " · 数据更新于 " + D.meta.updated + " · 资讯 " + D.news.length + " 条 / 论文 " + D.papers.length + " 篇 / 资源 " + D.knowledge.resources.length + " 个";
     countUp($("stat-news"), D.news.length);
     countUp($("stat-papers"), D.papers.length);
