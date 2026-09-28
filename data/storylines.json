@@ -1,12 +1,15 @@
 {
   "updated": "2026-09-28",
-  "note": "事件线记忆（周报的连载跟踪）。周更流程第0步：逐条核对 watch_for，有新进展则编选条目并更新 last_seen/issues；连续两期无新进展将 status 改为 dormant；再无则移除。新现象级事件开新线。",
+  "note": "事件线记忆（周报的连载跟踪）。周更流程第0步：逐条核对 watch_for，有新进展则编选条目并更新 last_seen/issues；连续两期无新进展将 status 改为 dormant；再无则移除。新现象级事件开新线。 选题价值锚点（用户 2026-09-28 反馈）：厂商条目盯端侧 AI 能力与落地，销量/首销仅作注脚。",
   "threads": [
     {
       "topic": "Meta Muse 现象级与智能体权限边界",
       "status": "active",
       "last_seen": "2026-09-28",
-      "issues": [40, 41],
+      "issues": [
+        40,
+        41
+      ],
       "watch_for": [
         "DAU/安装量新数据（Sensor Tower / Apptopia 口径）",
         "亚马逊封禁后续：其他电商平台是否跟进、Meta 是否妥协或诉讼",
@@ -19,7 +22,10 @@
       "topic": "Jev 决策模型（非 LLM 路线出圈）",
       "status": "active",
       "last_seen": "2026-09-28",
-      "issues": [40, 41],
+      "issues": [
+        40,
+        41
+      ],
       "watch_for": [
         "企业场景落地案例（TypeSafe AI 客户与定价）",
         "社区复现与成本数据（Frigade 方案 $1-1.7/天 之后）",
@@ -31,7 +37,10 @@
       "topic": "骁龙峰会 2026 与端侧大模型平台",
       "status": "active",
       "last_seen": "2026-09-28",
-      "issues": [40, 41],
+      "issues": [
+        40,
+        41
+      ],
       "watch_for": [
         "第六代骁龙 8 超级至尊版机型铺开（小米 18 Pro / 荣耀 Magic9 Pro Max 之后）",
         "30B MoE 端侧智能体演示的工程化落地",
@@ -40,21 +49,29 @@
       ]
     },
     {
-      "topic": "智能体手机首销与 GUI Agent 风控冲突",
+      "topic": "智能体手机落地与 GUI Agent 风控（AI能力主线，销量仅注脚）",
       "status": "active",
       "last_seen": "2026-09-28",
-      "issues": [40, 41],
+      "issues": [
+        40,
+        41
+      ],
       "watch_for": [
+        "荣耀 MagicOS 11 / 397B 智能体大模型 / YOYO 长程任务的实测与生态反应（41 期已报发布）",
+        "荣耀 9 月开发者大会的 Agentic OS 预览版（8 月已预告）",
+        "中国移动×荣耀 Token 套餐试点扩展与其他运营商跟进（端侧 AI 计费新物种）",
         "豆包手机助手《王者荣耀》风控事件的解决方式（腾讯与字节是否达成规则）",
-        "小米 18 Pro / 荣耀 Magic9 首销长线数据",
-        "其他 App 厂商对系统级智能体的适配政策"
+        "其他 App 厂商对系统级智能体的适配政策",
+        "厂商 AI 能力对比（小米澎湃 OS4 / OPPO / vivo 的系统智能体进展）"
       ]
     },
     {
       "topic": "QwenBook 原生智能体电脑",
       "status": "active",
       "last_seen": "2026-09-27",
-      "issues": [40],
+      "issues": [
+        40
+      ],
       "watch_for": [
         "上市时间、配置与定价",
         "「原生智能体电脑」品类定义是否被其他厂商跟进"
@@ -64,7 +81,9 @@
       "topic": "AI PC 品牌策略转向（Copilot+ 退役）",
       "status": "active",
       "last_seen": "2026-09-26",
-      "issues": [41],
+      "issues": [
+        41
+      ],
       "watch_for": [
         "OEM 是否跟进摘标",
         "Copilot 8GB 内存优化的实际落地版本",
