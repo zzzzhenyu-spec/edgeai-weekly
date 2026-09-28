@@ -57,12 +57,12 @@
     var chipEl = $("issue-chip");
     if (chipEl) chipEl.textContent = D.meta.issue;
     $("hero-kicker").innerHTML = "VOL." + ((D.meta.issue.match(/\d+(?=\s*期)/) || [""])[0]) + " · " + esc(D.meta.weekRange) + " · WEEKLY BRIEFING" +
-      (D.meta.status === "rolling" ? ' <span class="roll-badge"><i></i>本周持续更新中</span>' : "");
-    /* 导读正文：引导词「本期聚焦」主题色高亮、「今日新增」另起一行且用滚动徽章同源绿 */
+      (D.meta.status === "rolling" ? ' <span class="roll-badge"><i></i>每日滚动更新中</span>' : "");
+    /* 导读正文：引导词「近 7 天聚焦」（归档期为「本期聚焦」）主题色高亮、「今日新增」另起一行且用滚动徽章同源绿 */
     var noteBody = esc(D.meta.editorsNote)
-      .replace("本期聚焦：", '<span class="note-lead">本期聚焦</span>：')
+      .replace(/(近 7 天聚焦|本期聚焦)：/, '<span class="note-lead">$1</span>：')
       .replace("今日新增：", '<i class="note-new-line"></i><span class="note-lead note-new">今日新增</span>：');
-    $("editors-note").innerHTML = "<b>本期导读<i>" + esc(D.meta.weekRange) + "</i></b>" + noteBody;
+    $("editors-note").innerHTML = "<b>近 7 天导读<i>" + esc(D.meta.weekRange) + "</i></b>" + noteBody;
     $("footer-meta").textContent = D.meta.issue + (D.meta.status === "rolling" ? " · 滚动更新中" : "") + " · 数据更新于 " + D.meta.updated + " · 资讯 " + D.news.length + " 条 / 论文 " + D.papers.length + " 篇 / 资源 " + D.knowledge.resources.length + " 个";
     countUp($("stat-news"), D.news.length);
     countUp($("stat-papers"), D.papers.length);
@@ -240,7 +240,7 @@
     }).filter(function (x) { return x.value > 0; });
     host.innerHTML =
       '<div class="viz-card">' +
-        '<div class="viz-title">📊 本期数据速览</div>' +
+        '<div class="viz-title">📊 近 7 天数据速览</div>' +
         '<div class="viz-cloud-box"><canvas id="word-cloud"></canvas></div>' +
         '<div class="viz-row">' +
           '<div class="viz-block"><h5>资讯构成</h5>' + donutSVG(newsItems) + "</div>" +
@@ -314,7 +314,7 @@
 
   function renderPapers() {
     if (!D.papers.length) {
-      $("papers-grid").innerHTML = '<div class="empty-note">论文板块随周日大版本更新——当前为滚动更新期，本期论文将在周日核结时补齐。</div>';
+      $("papers-grid").innerHTML = '<div class="empty-note">论文板块每周日随大版本刷新——当前为滚动窗口期，论文沿用最近一次周日核结的精选。</div>';
       $("papers-chips").innerHTML = "";
       return;
     }
@@ -409,7 +409,7 @@
     var all = f.posts || [];
     if (!all.length) {
       var zone0 = document.getElementById("post-zone");
-      if (zone0) zone0.innerHTML = '<div class="post-empty">该博客官网无公开 RSS，暂无法自动收录文章列表；点击下方按钮访问官网查看最新文章（厂商动态见「本周资讯」板块）</div>';
+      if (zone0) zone0.innerHTML = '<div class="post-empty">该博客官网无公开 RSS，暂无法自动收录文章列表；点击下方按钮访问官网查看最新文章（厂商动态见「近 7 天资讯」板块）</div>';
       return;
     }
     // 端侧相关置顶（按时间倒序），其余普通展示（按时间倒序）

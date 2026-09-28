@@ -1,13 +1,13 @@
-/* 自动生成: scripts/archive.py (勿手改) · 2026 · 第 41 期 快照（2026.09.28 — 10.04，数据更新于 2026-09-28） */
+/* 自动生成: scripts/archive.py (勿手改) · 2026 · 第 41 期 快照（2026.09.22 — 09.28 · 近 7 天，数据更新于 2026-09-28） */
 window.WEEKLY_ARCHIVE = window.WEEKLY_ARCHIVE || {};
 WEEKLY_ARCHIVE[41] = {
 
   meta: {
     issue: "2026 · 第 41 期",
-    weekRange: "2026.09.28 — 10.04",
+    weekRange: "2026.09.22 — 09.28 · 近 7 天",
     updated: "2026-09-28",
     status: "rolling",
-    editorsNote: "本期聚焦：Meta Muse 现象级爆火——12 天 280 万安装、日活反超 ChatGPT 同期，同时撞上亚马逊封禁（与豆包手机助手撞《王者荣耀》风控同构）；骁龙峰会演示端侧 30B MoE 完整智能体工作流；苹果首度公布端侧 AI 能力矩阵（最高 1.6 万亿参数）；荣耀 Magic9 定档 9·28；阿里 QwenBook「原生智能体电脑」云栖首秀；小米 18 Pro 首发 2nm 骁龙8E6 发布即开售。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：荣耀 Magic9 如期发布，397B 智能体大模型进系统、YOYO 可执行百步长程任务；Jev 一周通关《宝可梦 红》；Muse 被曝未授权同步 Mac 短信数据库；高通 1-bit 模型上可穿戴平台；微软弃用 Copilot+ 标识。"
+    editorsNote: "近 7 天聚焦：Meta Muse 现象级爆火——12 天 280 万安装、日活反超 ChatGPT 同期，接连撞上亚马逊封禁与 Mac 短信库未授权同步（与豆包手机助手撞《王者荣耀》风控同构）；骁龙峰会演示端侧 30B MoE 智能体工作流、1-bit 模型上可穿戴平台；苹果首度公布端侧 AI 能力矩阵（最高 1.6 万亿参数）；阿里 QwenBook「原生智能体电脑」云栖首秀；小米 18 Pro 首发 2nm 骁龙8E6。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：荣耀 Magic9 如期发布，397B 智能体大模型进系统、YOYO 可执行百步长程任务；Jev 一周通关《宝可梦 红》；高通 1-bit 模型上可穿戴；微软弃用 Copilot+ 标识。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -219,16 +219,6 @@ WEEKLY_ARCHIVE[41] = {
       url: "https://news.qq.com/rain/a/20260923A05I6700"
     },
     {
-      id: "n23", cat: "AI硬件", source: "搜狐科技（独家）", date: "2026-09-21",
-      title: "独家：阿里首款千问办公 AI 硬件将推出，售价或在千元级",
-      summary: "阿里被曝将推出首款千问办公 AI 硬件（QwenNote），售价千元级——大模型厂商做硬件再下一城，瞄准办公场景的随身 AI 终端。",
-      detail: "9 月 21 日独家消息：阿里首款千问办公 AI 硬件将推出，产品线指向 QwenNote，售价或在千元级。\n定位是「随身办公 AI 终端」：依托千问端侧模型 + 云端算力，覆盖会议记录、文档处理、翻译等办公高频场景，与手机形成互补而非替代关系。\n放在本周语境里看：豆包做手机、阿里造平板与办公硬件、康冠携手阶跃出 AI PC——模型厂商的硬件化已经是集体动作，而非个案。",
-      tags: ["千问", "QwenNote", "办公AI硬件", "阿里"],
-      url: "https://www.sohu.com/a/1079171780_553580",
-      image: "https://q7.itc.cn/q_70/images03/20260921/43bc4f6ae13f400699272bf498964ac0.jpeg",
-      imageCap: "配图来自原文页面"
-    },
-    {
       id: "n29", cat: "芯片厂商", source: "腾讯新闻（手机中国）", date: "2026-09-22",
       title: "高通携手谷歌推出首批 Googlebook：骁龙 X Elite 赋能 Gemini Intelligence 笔记本",
       summary: "高通宣布与谷歌合作，将骁龙 X Elite 平台引入首批 Googlebook 笔记本——谷歌今年 5 月推出的高端安卓本品类、定位高于 Chromebook，内置 Gemini Intelligence 主动提供个性化帮助；戴尔、惠普率先开售，联想在首批名单之列。",
@@ -269,35 +259,6 @@ WEEKLY_ARCHIVE[41] = {
       image: "https://img.36krcdn.com/hsossms/20260918/v2_cfa5dfb20fde4be3b974bd19767f8254@000000@ai_oswg679481oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
       imageCap: "配图来自原文页面",
       highlight: true
-    },
-    {
-      id: "n12", cat: "端侧Agent", source: "东吴证券（腾讯新闻） / 36氪", date: "2026-09-21",
-      title: "系统级 Agent 进入加速期：豆包、荣耀、vivo、OPPO 密集落地",
-      summary: "机构报告：豆包手机助手消费者版量产落地，荣耀、vivo、OPPO 系统级智能体密集跟进；开源侧 OpenClaw（「小龙虾」）成为 2026 现象级端侧 Agent，腾讯 WorkBuddy 等衍生适配崛起。",
-      detail: "东吴证券 9 月 21 日报告指出：系统级 Agent 进入加速期。\n落地节奏：豆包手机助手消费者版随努比亚 NaviX Ultra 实现量产（本周期内开售）；荣耀、vivo、OPPO 的系统级智能体密集布局，成为下半年最确定的产业主线。\n技术路线：执行框架 Harness 开始系统级商用；GUI（直接操作图形界面）与 A2A（智能体间通信）两条路线并行演进。\n学术侧本周亦有呼应：本期「科研前沿」板块的 MCP 式工具调用单板机可靠性基准、车载 SLM 函数调用两篇新作指向同一问题——让小模型在端侧可靠地「动手」。",
-      tags: ["系统级Agent", "GUI", "A2A", "智能体手机"],
-      url: "https://news.qq.com/rain/a/20260921A046EN00",
-      image: "https://inews.gtimg.com/om_ls/On-vObCIUNjBT2QmAbIIetUc87uUIwDooLRvnRrAl6QSwAA_640330/0",
-      imageCap: "配图来自原文页面",
-      highlight: true
-    },
-    {
-      id: "n18", cat: "芯片厂商", source: "9to5Google / Tom's Hardware", date: "2026-09-21",
-      title: "联发科 Dimensity CX C10 Max 亮相：将驱动谷歌 Googlebook 计划，联想首发",
-      summary: "联发科旗舰笔记本 SoC 天玑 CX C10 Max（3nm）正式亮相，将驱动谷歌新推出的 Googlebook 计划，联想首发搭载；规格对标 Kompanio Ultra，主打 Chromebook Plus 级 AI 体验。",
-      detail: "据 9to5Google 与 Tom's Hardware 9 月 21 日报道，联发科下一代旗舰笔记本芯片 Dimensity CX C10 Max 正式亮相：3nm 制程，规格与 Kompanio Ultra 相近（NPU 算力面向 Chromebook Plus 级 AI 任务），将驱动谷歌新发起的 Googlebook 产品计划，联想率先推出搭载机型。\n这是联发科在手机旗舰（天玑 9600 Pro）之外，向 PC / ChromeOS 端侧 AI 市场的又一次进攻——与高通骁龙 X、MediaTek/NVIDIA 合作路线形成三方竞逐。\n配合上周发布的天玑 9600 Pro（首款 2nm 手机 SoC、支持 30B 端侧模型），联发科本周在端侧 AI 芯片两端（手机 + 笔记本）全面落子。",
-      tags: ["联发科", "Dimensity CX C10 Max", "Googlebook", "AI PC"],
-      url: "https://9to5google.com/2026/09/21/mediatek-googlebook-dimensity-cx-c10-max/",
-      image: "https://9to5google.com/wp-content/uploads/sites/4/2026/09/mediatek-dimensity-cx-c10-max-2.jpg",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n10", cat: "大模型厂商", source: "网易科技 / 腾讯新闻", date: "2026-09-20",
-      title: "阶跃星辰发布 Step 5 Preview：600B MoE 旗舰，10 月 15 日开源",
-      summary: "阶跃星辰发布新一代旗舰基座 Step 5 Preview：总参数 600B、激活约 27B 的稀疏 MoE，支持 100 万 token 上下文与视觉输入，已跻身全球开源前三，10 月 15 日开源。",
-      detail: "阶跃星辰 9 月 20 日发布新一代旗舰基座模型 Step 5 Preview：采用稀疏 MoE 架构，总参数 600B、推理时仅激活约 27B，支持 100 万 token 上下文与文本 + 视觉双模态输入，重点面向 AI 编程、软件工程、专业知识工作与金融四大场景，并针对长程 Agent 任务（long-horizon agentic tasks）优化。\n评测表现：Artificial Analysis Intelligence Index 得分 44，发布一日内由全球开源模型第三升至第二；单任务成本据称约为 Claude Opus 5 的 1/8。\n官方宣布将于 10 月 15 日开源。阶跃星辰成立于 2023 年 4 月，是上海头部大模型独角兽，坚持自研超级模型路线，此前已多轮开源 Step 系列中小模型。",
-      tags: ["阶跃星辰", "Step 5 Preview", "MoE", "开源"],
-      url: "https://www.163.com/tech/article/L78VD8I600098IEO.html"
     },
     {
       id: "n30", cat: "行业动态", source: "新浪财经", date: "2026-09-23",

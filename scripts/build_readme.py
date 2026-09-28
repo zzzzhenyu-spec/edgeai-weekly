@@ -50,8 +50,8 @@ def main():
     L.append("# 端侧AI每周情报站 · Edge AI Weekly\n")
     L.append(f"> 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读]({SITE})\n")
     L.append(f"## {meta['issue']}（{meta['weekRange']}）\n")
-    L.append(f"**本期导读**：{meta['editorsNote']}\n")
-    L.append("## 本期速览\n")
+    L.append(f"**近 7 天导读**：{meta['editorsNote']}\n")
+    L.append("## 近 7 天速览\n")
     for cat in CAT_ORDER:
         items = [n for n in news if n["cat"] == cat]
         if not items:
@@ -66,7 +66,7 @@ def main():
     pub = [p for p in papers if p["group"] == "published"]
     L.append(f"## 科研前沿（{len(papers)} 篇）\n")
     if not papers:
-        L.append("- 本期处于滚动更新期，论文板块将在周日核结时补齐。\n")
+        L.append("- 当前为滚动窗口期，论文板块沿用最近一次周日核结的精选。\n")
     if recent:
         L.append(f"- **arXiv 新作跟踪（{len(recent)} 篇，预印本）**：" + "；".join(
             f"[{p['title'][:58]}{'…' if len(p['title']) > 58 else ''}]({p['url']})" for p in recent) + "\n")
@@ -74,11 +74,11 @@ def main():
         L.append(f"- **已发表精选（{len(pub)} 篇，CCF-A / 顶会）**：" + "；".join(
             f"[{p['title'][:58]}{'…' if len(p['title']) > 58 else ''}]({p['url']})" for p in pub) + "\n")
     L.append("## 页面板块\n")
-    L.append("① 本周资讯（分类筛选卡片，点击看详情与配图）② 科研前沿（原文扩写中文介绍 + 论文结构图）③ 知识分享（端侧 AI 发展史 + 厂商/个人/中文媒体三分区博客库）④ 评论区\n")
+    L.append("① 近 7 天资讯（分类筛选卡片，点击看详情与配图）② 科研前沿（原文扩写中文介绍 + 论文结构图）③ 知识分享（端侧 AI 发展史 + 厂商/个人/中文媒体三分区博客库）④ 评论区\n")
     L.append("## 说明\n")
     L.append("- 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；")
     L.append("- 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；")
-    L.append(f"- 本期数据更新于 {meta['updated']}；本 README 由 `scripts/build_readme.py` 自动生成。\n")
+    L.append(f"- 数据更新于 {meta['updated']}；本 README 由 `scripts/build_readme.py` 自动生成。\n")
     (ROOT / "README.md").write_text("\n".join(L), encoding="utf-8", newline="\n")
     print(f"README.md 已生成：{len(news)} 条资讯 / {len(papers)} 篇论文")
 
