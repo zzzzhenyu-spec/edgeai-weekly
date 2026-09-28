@@ -42,8 +42,14 @@ def keywords(title):
 
 def audit_news(items):
     rows = []
+    # 价值锚点 lint（CRITERIA §6.5/§7-1.8）: 厂商类条目标题出现市场数据用语 -> WARN
+    # 销量/股价只能作注脚，不得占据标题主体（用户 2026-09-28 明确反馈）
+    MKT_RE = re.compile(r"销量|首销|激活量|股价|市值|出货量|市占")
+    VENDOR_CATS = ("手机厂商", "芯片厂商", "AI硬件")
     for it in items:
         uid, url, date, title = it["id"], it["url"], it["date"], it["title"]
+        if it.get("cat") in VENDOR_CATS and MKT_RE.search(title):
+            rows.append((uid, "WARN", f"价值锚点: 标题含市场数据用语「{MKT_RE.search(title).group(0)}」——厂商条目应以端侧AI能力为主体，销量仅注脚"))
         try:
             b = http_get(url, timeout=28, headers=UA)
             t = b.decode("utf-8", "ignore")
