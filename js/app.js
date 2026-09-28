@@ -314,7 +314,7 @@
 
   function renderPapers() {
     if (!D.papers.length) {
-      $("papers-grid").innerHTML = '<div class="empty-note">论文板块每周日随大版本刷新——当前为滚动窗口期，论文沿用最近一次周日核结的精选。</div>';
+      $("papers-grid").innerHTML = '<div class="empty-note">论文精选每周日更新，当前展示最近一次的周日精选。</div>';
       $("papers-chips").innerHTML = "";
       return;
     }
