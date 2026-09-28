@@ -173,10 +173,11 @@ a:hover { text-decoration: underline; }
 
 /* ---------------- Hero 可视化面板 ---------------- */
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr); gap: 46px; align-items: stretch; }
-/* 底边对齐：左列弹性布局+统计沉底吸收高度差；右列容器拉伸、卡片锚底(自然高度,内部永不出现空白)——导读行数变化时底边始终对齐 */
+/* 对齐机制：左右两列等高(顶部 kicker 与底部统计行都对齐)；左列 flex 统计沉底，右列卡片填满列高、
+   多余高度由 space-between 均匀分给标题/词云/图表三个块之间的间距——卡片内部不会出现集中空白 */
 .hero-left { display: flex; flex-direction: column; }
 .hero-right { display: flex; flex-direction: column; }
-.hero-right .viz-card { margin-top: auto; }
+.hero-right .viz-card { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
 
 .viz-card {
   padding: 22px 22px 18px; border-radius: var(--radius);
