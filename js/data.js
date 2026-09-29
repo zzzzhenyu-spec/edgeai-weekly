@@ -15,14 +15,37 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 41 期",
-    weekRange: "2026.09.22 — 09.28 · 近 7 天",
-    updated: "2026-09-28",
+    weekRange: "2026.09.23 — 09.29 · 近 7 天",
+    updated: "2026-09-29",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：Meta Muse 现象级爆火——12 天 280 万安装、日活反超 ChatGPT 同期，接连撞上亚马逊封禁与 Mac 短信库未授权同步（与豆包手机助手撞《王者荣耀》风控同构）；骁龙峰会演示端侧 30B MoE 智能体工作流；苹果首度公布端侧 AI 能力矩阵（最高 1.6 万亿参数）；阿里 QwenBook「原生智能体电脑」云栖首秀；小米 18 Pro 首发 2nm 骁龙8E6。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：荣耀 Magic9 如期发布，397B 智能体大模型进系统、YOYO 可执行百步长程任务；Jev 一周通关《宝可梦 红》；高通 1-bit 模型上可穿戴；微软弃用 Copilot+ 标识。"
+    editorsNote: "近 7 天聚焦：Meta Muse 现象级爆火——12 天 280 万安装、日活反超 ChatGPT 同期，接连撞上亚马逊封禁与 Mac 短信库未授权同步，并迈出硬件化第一步（钥匙扣设备 Muse Charm 与无摄像头眼镜）；骁龙峰会演示端侧 30B MoE 智能体工作流，高通携手 Liquid AI 展示常驻端侧的主动式智能体；苹果首度公布端侧 AI 能力矩阵（最高 1.6 万亿参数）；Jev 决策模型一周通关《宝可梦 红》；荣耀 Magic9 发布——397B 智能体大模型进系统、YOYO 可执行百步长程任务；小米 18 Pro 首发 2nm 骁龙8E6。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：Muse Charm 钥匙扣设备与无摄像头眼镜亮相；高通 × Liquid AI 演示主动式端侧智能体。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n47", cat: "行业关注事件", source: "THE ELEC（编译）", date: "2026-09-29",
+      title: "Muse 硬件化第一步：Meta 发布钥匙扣大小的独立设备 Muse Charm，无摄像头眼镜同步亮相",
+      summary: "Meta 于骁龙峰会场边发布钥匙扣大小的 Muse Charm——Muse 智能体的首款独立硬件形态，内置摄像头与扬声器、可识别佩戴者所见并接入 Muse 生态；同场还亮相了去掉摄像头的 Ray-Ban 音频眼镜，以回应 AI 眼镜的隐私争议。Muse 生态从手机 App 向多硬件铺开，但市场对其硬件化节奏仍有分歧。",
+      detail: "THE ELEC 9 月 29 日报道：Meta 在骁龙峰会 2026 期间发布了钥匙扣大小的独立 AI 设备「Muse Charm」，是 Muse 智能体的首款专属硬件。\n产品形态：Muse Charm 可挂在钥匙扣或包上，内置摄像头与扬声器，能识别佩戴者所见场景并接入 Muse 生态执行任务——把「执行型智能体」从手机屏幕里解放出来。\n同场的隐私牌：Meta 同步亮相了去掉摄像头的 Ray-Ban 音频眼镜版本——只保留扬声器与麦克风，直接回应「AI 眼镜摄像头引发的对拍争议」（此前多起酒吧/演出场所禁拍事件集中于带摄眼镜）；配套的 HUD 版显示眼镜仍在推进。\n上下文：Muse 上线三周生态扩张迅速——App 端已曝出未授权同步 Mac 短信库的隐私事件（见同板块此前报道），硬件化将让「 always-on 感知 + 智能体执行」的权限边界问题更尖锐；市场对 Meta 硬件化节奏亦有分歧，当日 Meta 股价随 Muse 进眼镜的消息回落 3.6%。",
+      tags: ["Meta Muse", "Muse Charm", "AI硬件", "无摄像头眼镜"],
+      url: "https://www.thelec.net/news/articleView.html?idxno=14189",
+      image: "https://cdn.thelec.net/news/photo/202609/14189_14386_645.jpg",
+      imageCap: "配图来自原文页面",
+      highlight: false
+    },
+    {
+      id: "n48", cat: "芯片厂商", source: "THE ELEC（编译）", date: "2026-09-29",
+      title: "高通 × Liquid AI 演示主动式端侧智能体：LiquidCFM 常驻设备感知场景，跨应用自动完成任务",
+      summary: "高通与 Liquid AI 在骁龙峰会上演示 Proactive AI Agent：LiquidAI 的 LiquidCFM 系列模型（2.5B 起）常驻骁龙平台，持续感知设备上的用户场景，在用户开口前跨应用完成任务——如识别到用户在订机票后自动调出行程确认与日历创建。主打「主动式」而非「应答式」，且全程端侧运行、数据不出设备。",
+      detail: "THE ELEC 9 月 29 日报道：高通与 Liquid AI 在骁龙峰会 2026 联合展示了面向骁龙平台的 Proactive AI Agent（主动式智能体）方案。\n技术要点：LiquidAI 的 LiquidCFM（液态基础模型）系列从 2.5B 参数起，专为端侧持续运行设计——常驻设备、持续感知屏幕与应用场景，在用户显式指令之前识别意图并跨应用执行（演示场景：识别订票页后自动整理行程、创建日历、拉取登机信息）。\n与现有方案的差异：不是「用户提问-模型回答」的应答式，而是「感知-预判-执行」的主动式；相比 Muse 每用户一台云端 VM 的重资产路线，这套方案强调全端侧、数据不出设备。\n落地方式：LiquidAI 已面向骁龙平台开放 LiquidCFM 模型与智能体框架，设备厂商可集成进自家助手；与此前峰会演示的 30B MoE 端侧智能体工作流互为补充——大模型卷能力上限，常驻小模型卷响应与功耗。",
+      tags: ["高通", "Liquid AI", "主动式智能体", "端侧Agent"],
+      url: "https://www.thelec.net/news/articleView.html?idxno=14179",
+      image: "https://cdn.thelec.net/news/photo/202609/14179_14377_5426.jpg",
+      imageCap: "配图来自原文页面",
+      highlight: false
+    },
+
     {
       id: "n42", cat: "手机厂商", source: "腾讯新闻（数智前线）/ IT之家", date: "2026-09-28",
       title: "荣耀 Magic9 全系落地 MagicOS 11：397B 智能体大模型进系统，新一代 YOYO 可执行百步长程任务",
@@ -228,37 +251,6 @@ const WEEKLY_DATA = {
       detail: "9 月 23 日报道：端侧 AI 正加速落地，多个厂商密集发布新一代操作系统，「AI OS」成为新一轮系统换代的核心卖点——智能体调度、端侧模型调用、跨应用执行正在进入系统层。\n与此呼应：荣耀 MagicOS 11、vivo 原系统 7、OPPO ColorOS 17 相继发布（均以 AI 智能体为核心标签），澎湃 OS4 随小米 18 系列落地——操作系统的「AI 原生化」竞赛已经开启。\n二级市场同步反映：端侧 AI 与 AI 应用方向表现活跃。",
       tags: ["AI OS", "系统换代", "智能体调度"],
       url: "https://news.qq.com/rain/a/20260923A05I6700"
-    },
-    {
-      id: "n29", cat: "芯片厂商", source: "腾讯新闻（手机中国）", date: "2026-09-22",
-      title: "高通携手谷歌推出首批 Googlebook：骁龙 X Elite 赋能 Gemini Intelligence 笔记本",
-      summary: "高通宣布与谷歌合作，将骁龙 X Elite 平台引入首批 Googlebook 笔记本——谷歌今年 5 月推出的高端安卓本品类、定位高于 Chromebook，内置 Gemini Intelligence 主动提供个性化帮助；戴尔、惠普率先开售，联想在首批名单之列。",
-      detail: "据腾讯新闻 9 月 22 日报道，高通技术公司宣布与谷歌展开合作，将骁龙 X Elite 平台引入首批 Googlebook 笔记本电脑。\nGooglebook 是谷歌今年 5 月正式推出的全新旗舰级笔记本品类：运行安卓系统、定位高于 Chromebook，类似「安卓版的 MacBook」；产品内置 Gemini Intelligence，可为用户主动提供个性化帮助——这是「系统级端侧 AI」在笔记本上的落地。\n首批机型：戴尔、惠普的骁龙 X Elite 版 Googlebook 率先开售，联想也在首批名单中（首批均定位 1200 美元档高端市场）；另据 Digital Trends，后续低价款 Googlebook 拟采用老款骁龙平台，把价位下探至约 700 美元。\n官方动作同步：高通官方博客同日发布《Qualcomm × Cartesia 联手为骁龙 X 系列的 Googlebook 带来语音 AI》。\n背景：谷歌日前还宣布了联发科 CX C10 Max 驱动 Googlebook 的合作路线（见本板块另一条）——Googlebook 作为「端侧 AI 笔记本」新品类，已形成高通 / 联发科双平台竞逐的格局。",
-      tags: ["Googlebook", "骁龙 X Elite", "Gemini Intelligence", "高通×谷歌"],
-      url: "https://news.qq.com/rain/a/20260922A03CRB00",
-      image: "https://inews.gtimg.com/om_ls/Op9IiQxeF066H1lYzfYWV9vB-FmpNs0cl8PhSiZL_WxH4AA_640330/0",
-      imageCap: "配图来自原文页面",
-      highlight: true
-    },
-    {
-      id: "n33", cat: "AI硬件", source: "新浪财经 / 富途资讯", date: "2026-09-22",
-      title: "阿里千问 AI 眼镜 N1 系列亮相云栖：眼动追踪 + 虹膜支付，10 月 13 日开售",
-      summary: "云栖大会期间，阿里推出新一代千问 AI 眼镜 N1 系列，支持眼动追踪与虹膜支付，10 月 13 日开售——大模型厂商做 AI 硬件再下一城。",
-      detail: "9 月 22 日消息：阿里在云栖大会期间推出新一代千问 AI 眼镜 N1 系列，10 月 13 日开售。\n差异化能力集中在「眼睛」：眼动追踪交互与虹膜支付——把生物识别与交互都收进眼镜形态，配合千问端侧模型的多模态理解能力。\n放在当前语境里：千问 AI 眼镜 + 此前曝出的千问平板与千元级千问办公硬件——「千问」正从模型品牌变成一条完整的 AI 硬件产品线，与豆包做手机形成大模型厂商硬件化的两条代表路线。",
-      tags: ["千问AI眼镜", "N1 系列", "眼动追踪", "虹膜支付"],
-      url: "https://finance.sina.com.cn/tech/roll/2026-09-22/doc-inisspzf8887020.shtml",
-      image: "https://n.sinaimg.cn/spider20260922/200/w600h400/20260922/1460-c181d25bcbc3c4ba6b6012d0510fc11a.png",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n40", cat: "AI硬件", source: "IT之家（腾讯新闻）/ 时代周报（新浪财经）", date: "2026-09-22",
-      title: "阿里云栖首秀「原生智能体电脑」QwenBook：千问平板形态，打通 WPS、适配高通/英特尔",
-      summary: "晚点独家披露 + 云栖现场真机首秀：阿里云无影团队自研 QwenBook——「你的第一台原生智能体电脑」，平板+键盘形态、类 macOS 界面、键盘带千问专属键、摄像头模组内藏圆形小屏；打通 WPS 与支付宝/千问输入法，已适配高通、英特尔、罗技、绿联，正式发布预计年底或明年初。",
-      detail: "9 月 22 日，据《晚点 LatePost》独家报道，阿里云旗下无影团队正在研发名为 QwenBook 的 AI 设备，定位「原生智能体电脑」，产品形态更接近一台「千问平板」；IT之家当天即在 2026 云栖大会现场看到了演示真机。\n形态与交互：平板 + 键盘触摸板组合（类似笔记本），系统界面类似 macOS——App 底栏、窗口位置随意可调、随时唤醒千问对话，应用中心含钉钉、阿里云盘；键盘可在 Windows/macOS 双布局间切换并搭载专门的千问按键；A 面硕大的黑色摄像头模组另有玄机——双摄只占一半面积，另一半是一块可显示卡通形象的圆形小屏。\n生态：与金山深度合作打通 WPS（开发中）；时代周报现场消息称，QwenBook 配备 Skill 键盘阵列、全局 AI 按键、语音手写笔等交互入口，面向 7x24 小时执行重度任务，并与开源项目 Omarchy 合作探索面向 Agent 的新一代桌面 OS；已与高通、英特尔、罗技、绿联完成适配，打通支付宝、千问输入法；接入 Qwen3.8-Max / Qwen3.8-Flash 双模型。\n定位与节奏：产品仍处试水阶段，本次展示为演示版本，正式发售预计今年底或明年初；该设备也在骁龙峰会上现身。此前 9 月 21 日搜狐独家曝料的「千问办公 AI 硬件」（见本板块另一条）由此落定首个具体形态——与豆包做手机的「整机路线」不同，阿里选择从「办公平板 + 智能体 OS」切入 AI 终端。（本条线索最早来自小红书用户帖，经晚点/IT之家/时代周报核实收录。）",
-      tags: ["QwenBook", "千问平板", "原生智能体电脑", "阿里云"],
-      url: "https://news.qq.com/rain/a/20260922A05VOJ00",
-      image: "https://inews.gtimg.com/om_ls/O-Av19C3FfX8lkOEEmvGNLm9SzzdUNSs9rOs6ty2bK0H8AA_640330/0",
-      imageCap: "配图来自原文页面"
     },
     {
       id: "n11", cat: "行业关注事件", source: "36氪 / TechCrunch", date: "2026-09-24",
