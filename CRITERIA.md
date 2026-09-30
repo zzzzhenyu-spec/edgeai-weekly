@@ -116,7 +116,7 @@
 
 | 级别 | 信源 | 用法 |
 |------|------|------|
-| S1 一手 | 厂商新闻室/官方博客/发布会实录/arXiv | 优先引用；能配 og:image 的尽量配 |
+| S1 一手 | 厂商新闻室/官方博客/发布会实录/arXiv；**工具链官方**（PyTorch/Ollama/NVIDIA/微软 DevBlogs 等官方博客，及 §6.7 雷达所列项目的官方 Release Notes） | 优先引用；能配 og:image 的尽量配 |
 | S2 一线中文媒体 | 腾讯新闻、新浪财经、搜狐科技、36氪、IT之家、央广网、界面 | 主要信源；source 标「媒体A / 媒体B」 |
 | S2 一线英文媒体 | 9to5Google、Tom's Hardware、TechCrunch、The Verge、Ars Technica、Android Authority | 同上 |
 | S3 行业垂类 | 电子工程专辑、AR圈、集微网、半导体行业观察 | 芯片/供应链条目优先 |
@@ -173,6 +173,33 @@
 
 ---
 
+## 6.7 端侧工具链信源与 Release 雷达（2026-09-30 起）
+
+端侧 AI 的「开发者侧」动态（推理运行时、量化工具、部署框架）此前仅靠 Gerganov 个人博客与关键词捞鱼间接覆盖，现补全为两层：
+
+1. **工具链官方博客（博客库「端侧工具链官方」+「厂商官方博客」分组，fetch_blogs.py 每日刷新）**：
+   - 新增 RSS 直连：**PyTorch Blog**（ExecuTorch/torchao）、**Ollama Blog**、**NVIDIA Technical Blog**（Jetson/TensorRT）、**Microsoft DevBlogs DirectX/DirectML**（Windows NPU 路线）；
+   - 新增指引卡（官网无 RSS，文章列表无法自动收录，属设计如此）：**ONNX / ONNX Runtime**、**Intel OpenVINO Blog**、**Apple MLX 生态**——其动态走下述 Release 雷达 + 关键词池覆盖；
+2. **Release 雷达（fetch_blogs.py 的 RADAR_NAME 通道）**：聚合 14 个白名单仓库的 GitHub Release Notes（每仓近 2 版）：本地推理与量化（llama.cpp、Ollama、MLX）、移动端运行时（ExecuTorch、LiteRT、MediaPipe、coremltools）、推理格式与引擎（ONNX、ONNX Runtime、OpenVINO）、国产 CV 框架（ncnn、MNN）、离线语音（whisper.cpp、sherpa-onnx）。**收录规则**：仓库白名单=人工信源（S1 级），雷达条目免 AI 关键词过滤、全部标记端侧相关；**里程碑版本**（新硬件后端、量化格式演进、重大能力接入）按 §3 评分编译成资讯条目（R≥4 门槛照常），日常小版本仅留痕博客库；增删仓库改 RELEASE_REPOS；
+3. **关键词池补漏**（fetch_news.py / fetch_foreign.py）：新增 llama.cpp / gguf / ollama / mlx / executorch / litert / tflite / coreml / openvino / onnx / ncnn / mnn / sherpa / whisper.cpp / mediapipe / directml / jetson / 本地大模型 / 本地部署等；
+4. **大厂信源探测结论**（2026-09-30，详录 source_health.json）：TensorFlow 官方博客 2025-08 后停更（LiteRT 动态走 Google 官方博客+雷达）；微软 WindowsAI 官博 2023 年停更（DirectML 走 DirectX 频道）；ai.meta.com / blog.mediatek.com / developers.googleblog.com 当前网络不通；Arm 官网反爬 403——这几家暂不设直连源，靠 S2 英文媒体+关键词池覆盖，网络条件变化后可重探。
+
+---
+
+## 6.8 候选五步漏斗（对齐高质量信息搜集实践，2026-09-30 定稿）
+
+从信源到入库共五道闸，前两道在抓取层硬性执行，后三道在编选/发布层执行（对标社区同类项目的五步筛选：人工信源→内容校验→质量过滤→价值分析→入库查重）：
+
+| 步 | 闸门 | 本站落地 |
+|----|------|---------|
+| ① | 人工信源白名单 | sources.json / fetch_blogs.py 各通道清单 / RELEASE_REPOS 全部人工维护；无白名单的开放抓取一律不做 |
+| ② | 内容完整性（抓取层硬门槛） | 标题过短（<8 字）或无有效链接的候选直接丢弃（fetch_news.py） |
+| ③ | 质量过滤（抓取层初筛） | AI 相关性过滤（is_ai/AI_KEYS_RE，非 AI 内容不进池）+ 端侧标记（is_edge，供编选优先级）；信源分级见 §5（S4 聚合仅作线索） |
+| ④ | 价值分析（编选层） | §3 五维评分（R=I×W+A+T），模型/人工对候选逐条打分，≥8 收录、R≥4 才进每日滚动新增 |
+| ⑤ | 入库查重（发布层） | 候选池生成时对当前窗口打 dup_with_current 标记（标题精确归一命中，标记不删）；权威查重 = 检查单第 2 步 archive.py check（URL 精确 或 标题相似度 ≥0.62，跨全部历史期） |
+
+---
+
 ## 7. 每期发布前检查单（顺序执行）
 
 1. 窗口核对：全部资讯事件日 ∈ [运行日-7, 运行日]；
@@ -205,3 +232,4 @@
 - 2026-09-28 v1.8：价值锚点升级为**机械门禁**（用户再次指出同类违规——"强调过很多遍没记住"）：audit.py 对厂商类标题的市场数据用语（销量/首销/激活量/股价/市值/出货量/市占）自动 WARN；检查单新增 1.8；存量违规条目（小米 18 Fold 首销版）已重写为能力主体。
 - 2026-09-28 v1.9：**滚动期导读格式定稿**（用户反馈）：主体 = 上期导读原文，每日只追加/更新一句「今日新增：<当日条目列举>」；**用户可见文本一律禁止流程/机制自我说明**（"滚动更新刊""外文通道上线"之类无展示价值）；每日快讯由"不动导读"改为"更新今日新增句"。
 - 2026-09-28 v2.0：**模型重构为常驻滚动窗口**（用户提案："以当天为准的七天，每周末把这周七天总结成一期"）——live 永远是 [今日-6, 今日] 近 7 天（消除"标注新周期却载上周内容"的误导），每日滑窗+重写「近 7 天聚焦」导读，周日快照归档为第 N 期后 live 连续滚动（期号+1，不再有"开新刊带入上期"）；页面措辞全面改「近 7 天」（资讯板块/导读头/数据速览/README），高亮卡角标「本期看点」→「重点关注」。
+- 2026-09-30 v2.1：**端侧工具链信源补全**（用户要求"大厂做端侧AI的都要查清楚"）——博客库新增 4 个 RSS 直连源（PyTorch/Ollama/NVIDIA/微软 DirectX·DirectML）与 3 个指引卡（ONNX Runtime/OpenVINO/MLX）及「端侧工具链官方」分组；**接通 Release 雷达**（14 仓库白名单聚合 Release Notes，此前为死代码）；关键词池补 19 个工具链词；**候选五步漏斗定稿**（§6.8：人工信源→内容完整性→质量过滤→价值分析→入库查重，②⑤补为抓取层硬门槛/预标记）。

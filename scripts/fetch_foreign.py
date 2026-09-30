@@ -34,7 +34,8 @@ SITE_FEEDS = {
     "9to5Mac": "https://9to5mac.com/feed/",
     "Tom's Hardware": "https://www.tomshardware.com/feeds/all",
 }
-HN_QUERIES = ["on-device", "local llm", "llama.cpp", "edge ai", "AI PC"]
+HN_QUERIES = ["on-device", "local llm", "llama.cpp", "edge ai", "AI PC",
+              "onnx", "ollama", "mlx", "whisper.cpp"]
 BLUESKY = {
     "simonw": "https://bsky.app/profile/simonw.bsky.social/rss",
     "rasbt": "https://bsky.app/profile/rasbt.bsky.social/rss",
@@ -44,10 +45,14 @@ AI_KEYS_RE = re.compile(
     r"\b(ai|a\.i\.|llm|llms|gpt|claude|gemini|qwen|deepseek|openai|anthropic|mistral|llama|"
     r"transformer|agent|agents|agentic|inference|gpu|npu|tpu|robot|rag|diffusion|multimodal|"
     r"copilot|vlm|slm|moe|vllm|on-device|on device|edge ai|quantiz|machine learning|"
-    r"neural|model|models|chatbot|local llm|smartphone|pc)\b", re.I)
+    r"neural|model|models|chatbot|local llm|smartphone|pc|"
+    r"executorch|litert|tflite|coreml|openvino|ncnn|ollama|sherpa|directml|jetson|"
+    r"mediapipe|mlx|onnx|gguf|whisper)\b", re.I)
 EDGE_HINTS_RE = re.compile(
     r"\b(on-device|on device|edge|npu|local llm|local model|llama\.cpp|gguf|quantiz|"
-    r"ai pc|copilot\+|ai glasses|wearab|smartphone|laptop|browser|phone|robot)\b", re.I)
+    r"ai pc|copilot\+|ai glasses|wearab|smartphone|laptop|browser|phone|robot|"
+    r"executorch|litert|tflite|coreml|openvino|ncnn|ollama|sherpa|directml|jetson|"
+    r"mediapipe|mlx|onnx|whisper)\b", re.I)
 
 
 def fetch_xml(url, timeout=25):

@@ -371,8 +371,8 @@
       '<a class="res-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">访问 ↗</a>' +
       "</div>";
   }
-  var RES_GROUPS = ["厂商官方博客", "个人博客", "社区与平台", "中文媒体 · 公众号"];
-  var RES_GROUP_COLORS = { "厂商官方博客": "#22d3ee", "个人博客": "#818cf8", "社区与平台": "#34d399", "中文媒体 · 公众号": "#fbbf24" };
+  var RES_GROUPS = ["厂商官方博客", "端侧工具链官方", "个人博客", "社区与平台", "中文媒体 · 公众号"];
+  var RES_GROUP_COLORS = { "厂商官方博客": "#22d3ee", "端侧工具链官方": "#f472b6", "个人博客": "#818cf8", "社区与平台": "#34d399", "中文媒体 · 公众号": "#fbbf24" };
 
   /* 博客卡片点击 -> 简介面板（logo + 近期文章分页列表，端侧相关背光高亮） */
   function hostOf(u) {

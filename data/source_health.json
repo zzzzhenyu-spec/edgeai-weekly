@@ -1,22 +1,27 @@
 {
-  "updated": "2026-09-28",
+  "updated": "2026-09-30",
   "note": "信源健康记忆：每周更新一次。记录各通道可用性与踩坑结论，帮助新会话/定时任务快速恢复认知，避免重复踩坑。",
   "channels": [
-    { "name": "fetch_blogs.py", "state": "ok", "last_success": "2026-09-28",
-      "notes": "14源92篇(含HF后15源)。面壁/陈天奇/Gerganov为指引空状态(官网无RSS,设计如此)。电子工程专辑(eet-china.com)首页偶发读超时,但文章列表通道正常,不影响。Raschka半月更节奏属正常,勿误判停更。" },
+    { "name": "fetch_blogs.py", "state": "ok", "last_success": "2026-09-30",
+      "notes": "23源154篇(-n 15实测)。2026-09-30 新增: PyTorch/Ollama/NVIDIA/微软DirectX 四个RSS直连源 + Release雷达(RADAR_NAME, 14仓库白名单聚合GitHub Release Notes, 每仓2版, llama.cpp日更构建属正常)。ONNX Runtime/OpenVINO/MLX三卡为指引空状态(官网无RSS,设计如此,动态靠雷达)。面壁/陈天奇/Gerganov为指引空状态(官网无RSS,设计如此)。电子工程专辑(eet-china.com)首页偶发读超时,但文章列表通道正常,不影响。Raschka半月更节奏属正常,勿误判停更。" },
+    { "name": "大厂博客RSS探测结论(2026-09-30)", "state": "note",
+      "notes": "可用: pytorch.org/feed, ollama.com/blog/rss.xml, developer.nvidia.com/blog/feed(Atom,量大), devblogs.microsoft.com/directx/feed。不可用: blog.tensorflow.org RSS在但2025-08后停更(LiteRT动态走blog.google+雷达,勿依赖); devblogs.microsoft.com/windowsai 2023-12停更; ai.meta.com/blog 连接不通(本网络); blog.mediatek.com 连接不通; developers.googleblog.com 连接不通(blogspot系被墙); developer.arm.com/community.arm.com 反爬403; onnxruntime.ai与blog.openvino.ai无RSS且sitemap无lastmod(JS渲染站); mlx.ai连接不通(MLX走GitHub Release+Apple ML Research)。arm/联发科/Meta动态靠S2英文媒体+关键词池覆盖,网络变化后可重探。" },
+    { "name": "GitHub API", "state": "ok", "last_success": "2026-09-30",
+      "notes": "未认证限额60次/时。当前用量: fetch_blogs.py雷达14次(每次运行)+fetch_github.py 3次。注意coremltools正确组织名是apple/coremltools(写成google/会404)。llama.cpp仓库现属ggml-org(ggerganov旧路径会重定向,但API不重定向,用ggml-org/llama.cpp)。" },
     { "name": "fetch_foreign.py", "state": "new", "last_success": "2026-09-28",
-      "notes": "5通道: GoogleNews英文RSS/站点直连RSS(TechCrunch,Verge,9to5Mac,Tom's)/HN Algola/HF DailyPapers/博主Bluesky(simonw,rasbt)。坑: Reddit当前网络连不通; Bluesky仅simonw与rasbt活跃(karpathy 2023停更,swyx 2025-10停更); Google News的RSS链接是JS跳转链,取真实URL用find_article.py; HF论文日期取row级publishedAt(上榜日)而非paper级(arXiv原始日); HF榜隔几天更新一次,-d 3可能为0属正常。" },
+      "notes": "5通道: GoogleNews英文RSS/站点直连RSS(TechCrunch,Verge,9to5Mac,Tom's)/HN Algola/HF DailyPapers/博主Bluesky(simonw,rasbt)。2026-09-30 HN查询词扩为9个(+onnx/ollama/mlx/whisper.cpp),AI正则补工具链词。坑: Reddit当前网络连不通; Bluesky仅simonw与rasbt活跃(karpathy 2023停更,swyx 2025-10停更); Google News的RSS链接是JS跳转链,取真实URL用find_article.py; HF论文日期取row级publishedAt(上榜日)而非paper级(arXiv原始日); HF榜隔几天更新一次,-d 3可能为0属正常。" },
     { "name": "fetch_wechat.py", "state": "risk", "last_success": "2026-09-27",
       "notes": "搜狗微信通道有反爬风险,已内置8s间隔。每周只跑一次(-d 7),不要用于每日扫描。" },
     { "name": "小红书(IAB浏览器扫描)", "state": "manual", "last_success": "2026-09-27",
       "notes": "需用户小号在ZCode内置浏览器保持登录态。宽关键词库(端侧AI/AI手机/AI眼镜/AI耳机/AI PC/AI芯片/本地部署大模型+事件词)。站内无时间排序,靠笔记日期(今天/昨天/N天前/MM-DD)过滤。产出data/xhs_candidates.json。" },
     { "name": "fetch_github.py", "state": "ok", "last_success": "2026-09-27",
-      "notes": "GitHub Search API,topics=llm/ai-agents/on-device,星标>1200,120天内创建,取前12。无已知问题。" },
+      "notes": "GitHub Search API,topics=llm/ai-agents/on-device,星标>1200,120天内创建,取前12。只看新仓库,不看既有项目版本(后者由fetch_blogs.py雷达负责)。无已知问题。" },
     { "name": "fetch_papers.py / fetch_news.py", "state": "ok", "last_success": "2026-09-28",
-      "notes": "arXiv关键词捞鱼与Bing News RSS,稳定。" },
+      "notes": "arXiv关键词捞鱼与Bing News RSS,稳定。2026-09-30 fetch_news关键词+19个工具链词;新增内容门槛(标题≥8字+链接有效)与dup_with_current预查重标记(对js/data.js标题精确归一,标记不删)。" },
     { "name": "archive.py", "state": "ok", "last_success": "2026-09-28",
       "notes": "save/check/list。第38-41期已存档(41期为滚动期快照,周日核结时覆盖)。查重阈值: URL精确或标题相似度≥0.62。" },
     { "name": "data.js编辑踩坑(重要)", "state": "note",
-      "notes": "用python改data.js时: 1) re.sub的replacement字符串会把两字符\\n再解释成真实换行→插含换行的JS字符串时用字符串拼接或lambda repl; 2) 追加资源卡到resources末尾时,原最后一项结尾无逗号,要先补逗号; 3) 改完必须用 vm.Script/node 语法校验(浏览器 new Function 也行), audit.py 的正则解析发现不了JS语法错误; 4) python write_text在Windows会写CRLF,无害。" }
+      "notes": "用python改data.js时: 1) re.sub的replacement字符串会把两字符\\n再解释成真实换行→插含换行的JS字符串时用字符串拼接或lambda repl; 2) 追加资源卡到resources末尾时,原最后一项结尾无逗号,要先补逗号; 3) 改完必须用 vm.Script/node 语法校验(浏览器 new Function 也行), audit.py 的正则解析发现不了JS语法错误; 4) python write_text在Windows会写CRLF,无害。本机无node,2026-09-30实测 pip install esprima + esprima.parseScript 可用(文件无可选链/空值合并等ES2020语法时)。" }
   ]
 }
+

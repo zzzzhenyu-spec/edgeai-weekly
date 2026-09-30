@@ -15,14 +15,47 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 41 期",
-    weekRange: "2026.09.23 — 09.29 · 近 7 天",
-    updated: "2026-09-29",
+    weekRange: "2026.09.24 — 09.30 · 近 7 天",
+    updated: "2026-09-30",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：Meta Muse 现象级爆火——12 天 280 万安装、日活反超 ChatGPT 同期，接连撞上亚马逊封禁与 Mac 短信库未授权同步，并迈出硬件化第一步（钥匙扣设备 Muse Charm 与无摄像头眼镜）；骁龙峰会演示端侧 30B MoE 智能体工作流，高通携手 Liquid AI 展示常驻端侧的主动式智能体；苹果首度公布端侧 AI 能力矩阵（最高 1.6 万亿参数）；Jev 决策模型一周通关《宝可梦 红》；荣耀 Magic9 发布——397B 智能体大模型进系统、YOYO 可执行百步长程任务；小米 18 Pro 首发 2nm 骁龙8E6。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：Muse Charm 钥匙扣设备与无摄像头眼镜亮相；高通 × Liquid AI 演示主动式端侧智能体。"
+    editorsNote: "近 7 天聚焦：Meta Muse 现象级爆火——从 Connect 大会全面接入 AI 眼镜，到被曝未经授权同步 Mac 短信数据库，再到发布钥匙扣设备 Muse Charm 迈出硬件化第一步，生态与争议同步扩张；骁龙峰会演示端侧 30B MoE 完整智能体工作流，高通携手 Liquid AI 展示常驻端侧的主动式智能体，并将 1-bit 模型带上可穿戴平台；苹果首度公布端侧 AI 能力矩阵——从 iPhone 的 140 亿参数到 Mac Studio 集群的 1.6 万亿参数；荣耀 Magic9 发布，397B 智能体大模型进系统、YOYO 可执行百步长程任务；Jev 决策模型一周通关《宝可梦 红》；首款 AI 智能体手机撞上《王者荣耀》反作弊风控后致歉。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：地平线 HSD V2.1 国内量产首发端到端全场景倒车；OpenClaw Enterprise 为持久性智能体补上企业级安全与治理；智能眼镜声学性能测试规范 10 月 2 日实施。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n49", cat: "芯片厂商", source: "IT之家", date: "2026-09-30",
+      title: "地平线发布 HSD V2.1：国内量产首发端到端全场景倒车，首批 iCAR V27 10 月 8 日推送",
+      summary: "地平线 HSD 全场景辅助驾驶系统 V2.1 发布，核心增量是「全场景倒车」Beta——国内量产首发的端到端倒车能力，系统在倒车全程接管并应对侧方来车与盲区风险；行车、泊车、主动安全三条线同步升级，首批搭载 iCAR V27，10 月 8 日起分批推送。",
+      detail: "IT之家 9 月 30 日报道：地平线正式发布 HSD 全场景辅助驾驶系统 V2.1，首批搭载车型 iCAR V27 将于 10 月 8 日起分批向车主推送升级。\n核心增量「全场景倒车」Beta：国内量产首发的端到端全场景倒车——不再是单一的倒车入库功能，而是系统在倒车全程接管，能应对侧方来车、盲区风险等复杂场景，并可与循迹倒车功能衔接。\n行车升级：新增闪灯鸣笛主动警示；提升复杂道路的通过效率；左右转向轨迹更拟人；可按导航路径预选车道；对临停车辆、行人盲区横穿、障碍物占道等场景的理解加深，必要时主动变道脱离风险。\n泊车与主动安全：支持自定义车位吸附、遥控泊入泊出与实体钥匙遥控泊车，360° AVM 与 SR 视图支持双区拖动；视觉神经网络升级，优化横穿场景、转弯低速跟车与 Cut-in 避撞，AES 应对前后夹击的触发逻辑同步优化。\n端侧视角：HSD 是地平线以软硬一体思路推进的辅助驾驶方案，端到端全场景倒车量产上车，意味着车端「行驶全场景」的端到端模型覆盖再补一块——车端正在成为端侧 AI 落地最快的整机场景。",
+      tags: ["地平线", "HSD", "端到端", "智能驾驶"],
+      url: "https://www.ithome.com/1/008/787.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/9/7582edcb-bbee-4372-8711-08325b98d8bb.jpg",
+      imageCap: "HSD V2.1 新增全场景倒车 Beta（图源：IT之家）",
+      highlight: true
+    },
+    {
+      id: "n50", cat: "端侧Agent", source: "IT之家", date: "2026-09-30",
+      title: "OpenClaw 推出 Enterprise 版：为持久性智能体补上企业级安全与治理",
+      summary: "OpenClaw 官宣开源中立的敏感环境持久性智能体管理平台 OpenClaw Enterprise：企业级控制平面支持多租户、严格安全边界与标准化智能体原语，并在智能体全生命周期内提供治理与审计；核心原语可替换为第三方或内部实现，避免供应商锁定，1.0 正式版即将发布。",
+      detail: "IT之家 9 月 30 日报道：OpenClaw 官方于 9 月 29 日官宣 OpenClaw Enterprise——一个开源中立的敏感环境持久性智能体管理平台。\n切中的痛点：持久性智能体的实际部署不及预期，根源在于业界缺乏通用的安全、保障与治理标准——智能体长期驻留系统执行任务，权限与行为边界的可控性是企业落地的前置条件。\n企业级控制平面：支持多租户与严格的安全边界；提供标准化智能体原语；覆盖智能体全生命周期的治理与审计能力；核心原语可整体替换为第三方或内部实现，不绑定单一供应商。\n端侧视角：端侧 Agent 从「能跑」走向「敢用」的分水岭正是治理——把安全边界与生命周期审计做成平台能力，为端侧智能体进入企业敏感环境铺路；1.0 正式版即将发布。",
+      tags: ["OpenClaw", "智能体治理", "端侧Agent", "企业级"],
+      url: "https://www.ithome.com/1/008/774.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/9/15ccc867-b328-4516-a022-31c6b74d4776.jpg",
+      imageCap: "OpenClaw Enterprise 官宣（图源：IT之家）",
+      highlight: false
+    },
+    {
+      id: "n51", cat: "行业动态", source: "IT之家", date: "2026-09-30",
+      title: "《智能眼镜声学性能测试规范》10 月 2 日实施：收音、放音首次有了统一标尺",
+      summary: "市场监管总局发布国家计量技术规范 JJF 2385—2026《智能眼镜声学性能测试规范》，围绕收音、放音两大模块建立标准化检测流程，覆盖频率响应、定向收音、播放漏音三项关键维度，10 月 2 日起正式实施——AI 眼镜的「参数内卷」与虚标问题首次有了统一的计量依据。",
+      detail: "IT之家 9 月 30 日报道：市场监管总局宣布，JJF 2385—2026《智能眼镜声学性能测试规范》国家计量技术规范自 10 月 2 日起正式实施。\n检测框架：围绕「收音」「放音」两大模块建立标准化检测流程，须在消声室内、使用头和躯干模拟器、测量传声器与声学分析仪完成测试。\n三项关键维度：频率响应指标（衡量录音回放的还原程度）、麦克风收音定向性能（区分人声与环境噪声的能力）、播放漏音测试（防止声音外泄、保护通话隐私）。\n端侧视角：语音交互是 AI 眼镜的核心端侧能力，收音质量直接决定唤醒与识别体验——统一标尺落地后，厂商竞争将从「参数内卷」回到真实收放音体验，听力健康与通话隐私也有了底线保障。",
+      tags: ["AI眼镜", "行业标准", "声学测试", "市场监管"],
+      url: "https://www.ithome.com/1/008/779.htm",
+      image: "",
+      imageCap: "",
+      highlight: false
+    },
     {
       id: "n47", cat: "行业关注事件", source: "THE ELEC（编译）", date: "2026-09-29",
       title: "Muse 硬件化第一步：Meta 发布钥匙扣大小的独立设备 Muse Charm，无摄像头眼镜同步亮相",
@@ -141,37 +174,6 @@ const WEEKLY_DATA = {
       highlight: true
     },
     {
-      id: "n37", cat: "芯片厂商", source: "9to5Google", date: "2026-09-23",
-      title: "微软 12 吋 Surface Pro 换装骁龙 X2 Plus：补上 5G，10 月 13 日开售",
-      summary: "骁龙峰会期间微软官宣小尺寸 Surface 更新：12 吋 Surface Pro 与 13 吋 Surface Laptop 换装骁龙 X2 Plus，屏幕亮度提升 25%、电池效率提升 30%，Pro 首次提供 5G 版本，内存起步升至 16GB，10 月 13 日开售（1149 美元起）。",
-      detail: "据 9to5Google 9 月 23 日报道，微软在骁龙峰会期间确认小尺寸 Surface 产品线更新，10 月 13 日上市。\nSurface Pro 12 吋：换装骁龙 X2 Plus，屏幕亮度提升 25%，电池「效率提升 30%」，并提供可选 5G 版本——微软称这是「呼声最高的新增项」；内存 16GB/24GB（砍掉 8GB 档），存储 256GB/512GB，起售价 1149 美元。\nSurface Laptop 13 吋：同样换装骁龙 X2 Plus、砍掉 8GB 内存档，起售价 1199 美元，除芯片升级与更亮屏幕外与上代基本一致。\n配套发布带触觉反馈、可自定义 Copilot 按键的新 Surface Mouse（79.99 美元）与 Ink Canvas 应用。\n端侧看点：骁龙 X2 Plus 补齐了 Windows on Arm 阵营的小尺寸 + 蜂窝联网形态——「Copilot+ PC + 常时在线」下探到更小机型，与 Googlebook（安卓端侧 AI 笔记本）形成端侧 AI 终端两条路线的对照。",
-      tags: ["Surface Pro", "骁龙 X2 Plus", "Copilot+ PC", "Windows on Arm"],
-      url: "https://9to5google.com/2026/09/23/microsoft-surface-pro-12-inch-5g-laptop-13-snapdragon-x2/",
-      image: "https://9to5google.com/wp-content/uploads/sites/4/2026/09/surface-pro-laptop-x2-oct-refresh.jpg?quality=82&strip=all&resize=1200,628",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n38", cat: "AI硬件", source: "9to5Google", date: "2026-09-23",
-      title: "高通发布 Snapdragon Sound Elite Gen 2：面向 AI「hearables」，连带摄像头的耳机都能驱动",
-      summary: "高通在骁龙峰会发布面向音频可穿戴（hearables）的 Snapdragon Sound Elite Gen 2：端侧 AI 性能最高翻倍、功耗降低 40%，支持情境化图像识别——可驱动带摄像头的耳机、音频眼镜与未来多模态可穿戴，Wi-Fi 6E 支持端云双路 AI。",
-      detail: "据 9to5Google 9 月 23 日报道，高通发布 Snapdragon Sound Elite Gen 2 SoC，专为音频可穿戴（hearables）打造——重点不再是纯音频性能，而是「音频芯片还能做什么」。\nAI 能力：端侧 AI 性能最高提升 2 倍、功耗最高降低 40%；支持情境化图像识别（contextual image recognition），为搭载摄像头的耳机类设备做好准备。\n连接与音频：Wi-Fi 6E 让 OEM 可在端侧/云端 AI 之间灵活取舍；保留 aptX 与 XPAN 连接提升音质与蓝牙范围，ANC 升级到第五代协议并借助 AI 增强。\n形态畅想：高通列举的可驱动形态包括传统耳机/头戴、开放耳 hybrid 声学设计、带摄像头设备、音频眼镜与未来多模态可穿戴；Android XR 设备被视为关键场景——Gemini 需要在本地运行并从真实环境采集信息。\n端侧看点：继 AI 眼镜之后，「AI 耳机 / hearables」正在成为端侧 AI 的下一个入口级品类——芯片先到位，等的是杀手级形态。",
-      tags: ["Snapdragon Sound", "hearables", "AI耳机", "多模态可穿戴"],
-      url: "https://9to5google.com/2026/09/23/qualcomm-announces-snapdragon-sound-elite-gen-2/",
-      image: "https://9to5google.com/wp-content/uploads/sites/4/2026/09/snapdragon-Sound-elite-gen-2-2.jpg?quality=82&strip=all&resize=1200,628",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n41", cat: "行业关注事件", source: "新浪财经 / 腾讯新闻", date: "2026-09-23",
-      title: "Meta Muse 现象级数据：12 天 280 万安装碾压 ChatGPT 同期，Meta 单日大涨 11.4%",
-      summary: "Muse 上线 12 天全球安装 280 万、美加 iOS 下载（180 万）与美国日活（64.2 万）全面反超 ChatGPT 同期（130 万 / 23.1 万），登顶双榜；Meta 股价单日飙升 11.43%、市值较发布前增超 2000 亿美元。每用户一台云端 VM 的「执行型智能体」同时也撞上第一道平台墙：亚马逊已禁止 Muse 访问其购物平台。",
-      detail: "新浪财经与腾讯新闻 9 月 22–23 日报道，Meta 9 月 8 日上线的个人 AI 智能体 Muse 交出现象级成绩单：Sensor Tower 口径上线约 5 天 73 万下载；Apptopia/Sensor Tower 数据显示 12 天全球安装 280 万，美加 iOS 同口径下载 180 万，高于 ChatGPT 同期的 130 万（Claude 约 40 万、Grok 约 20 万）；美国移动端日活约 64.2 万，远超 ChatGPT 同期的 23.1 万，截至 9 月 21 日同时登顶 App Store 与 Google Play 免费榜。\n产品形态是「执行」而非「问答」：用户说出目标，Muse 自行拆解任务、打开网页、填表单、调应用——代写代发邮件、订行程、网购下单（Stripe Link 一次性卡号）、账单谈判、协助卖车；每名用户配一台 Meta 云端独立虚拟机，关掉 App 任务仍在后台执行，敏感操作才回来请求授权；Muse Spark 模型驱动，Sentinel 系统在访问互联网前审查操作。免费版每周约 1 亿 token，订阅 20/100 美元两档。\n市场反应：发布次日 Meta 涨 6.55%，9 月 21 日单日飙 11.43% 至 741 美元（2025 年 4 月以来最大单日涨幅），市值较发布前增超 2000 亿美元；富国银行目标价 640→796 美元，杰富瑞上调至 875 美元并测算 2027 年底 10 亿用户、3% 付费转化对应年化 108 亿美元收入。分析师认为市场开始相信 Meta 能把 40 亿社交用户转化为 AI 助手分发优势。\n端侧看点与摩擦：Muse 后续将进入 Meta AI 眼镜（Meta Connect 上已宣布接入），其爆火被解读为带动端侧 CPU / 芯片产业新叙事（科创板日报 9·26）；同时「代理式 AI」的第一道平台墙已经出现——亚马逊以「未获授权浏览网站、访问账户、处理交易，且未表明 AI 身份」为由禁止 Muse 访问其购物平台，与此前报道的豆包手机助手因《王者荣耀》反作弊风控强制下线致歉是同一结构性冲突：智能体替用户操作与平台规则之间的边界之争。",
-      tags: ["Meta Muse", "现象级", "执行型智能体", "亚马逊封禁"],
-      url: "https://finance.sina.com.cn/jjxw/2026-09-23/doc-inisusym1393712.shtml",
-      image: "https://n.sinaimg.cn/sinakd20260923s/394/w1320h1474/20260923/2fc7-3ee655c2788cc22fcadfd68489f86c7c.jpg",
-      imageCap: "配图来自原文页面",
-      highlight: true
-    },
-    {
       id: "n32", cat: "AI硬件", source: "站长之家（AIbase）/ 新浪财经", date: "2026-09-24",
       title: "Meta Connect 开幕：智能体 Muse 全面接入 AI 眼镜，硬件矩阵齐发",
       summary: "Meta Connect 2026（当地时间 9·23）开幕：个人智能体 Muse 成为全场核心——接入智能眼镜、拥有自己的邮箱、Mac 端可操作电脑；同场发布无摄像头 Audio 眼镜（$349）、Gen 3（$449）、100g VR 眼镜与独立终端 Muse Charm，年底 AI 眼镜将超 100 款。",
@@ -193,38 +195,6 @@ const WEEKLY_DATA = {
       imageCap: "配图来自原文页面"
     },
     {
-      id: "n26", cat: "手机厂商", source: "腾讯新闻 / 新浪财经", date: "2026-09-23",
-      title: "小米 18 Pro 系列正式发布：首发 2nm 骁龙8E6，5999 元起、发布即开售",
-      summary: "小米 18 Pro 系列 9 月 23 日晚正式发布：首发 2nm 骁龙8E6（第六代骁龙8至尊版），5999 元起、发布即开售；透明特别版 9999 元起，雷军发文「惊艳亮相」。",
-      detail: "小米 18 Pro 系列于 9 月 23 日晚正式发布，全球首发 2nm 制程的骁龙8E6（第六代骁龙8至尊版，8 Elite Gen 6）。\n定价与销售：起售价 5999 元，发布即开售；另推出透明特别版，起售价 9999 元——雷军发文称「惊艳亮相」，卢伟冰登台演讲。\n规格要点：骁龙8E6 此前跑分已显示安卓单核最高分，配合 LPDDR6 内存与澎湃 OS4；影像配双 2 亿像素与防窥屏。\n意义：这是 2nm 制程 + 面向智能体的 Hexagon NPU 首次到达消费者手中——高通日前在骁龙峰会上主讲的「端侧智能体时代」，发布当晚起即可被真实买到。",
-      tags: ["小米 18 Pro", "骁龙8E6", "2nm", "发布即开售"],
-      url: "https://news.qq.com/rain/a/20260923A0BVK600",
-      image: "https://inews.gtimg.com/om_ls/OKuU0fqca7EVcsSxL7UByEwTtbeNlwlhfknP5NhmYcpacAA_640330/0",
-      imageCap: "配图来自原文页面",
-      highlight: true
-    },
-    {
-      id: "n2", cat: "芯片厂商", source: "腾讯新闻 / Qualcomm", date: "2026-09-23",
-      title: "高通正式发布第六代骁龙8双旗舰：2nm 制程，端侧可跑 300 亿参数模型",
-      summary: "骁龙峰会正式发布 8 Elite Gen 6 双旗舰：2nm 制程、Oryon CPU 最高 5.11GHz，Hexagon NPU 面向智能体重构，端侧可运行 300 亿参数模型；小米 18 Pro 已于 9·23 晚首发登场（发布即开售）。",
-      detail: "9 月 22–24 日骁龙峰会（毛伊岛）进行中，高通正式发布第六代骁龙8双旗舰处理器（8 Elite Gen 6 与更高档的 Extreme），官方口径「正式迈入端侧智能体 AI 新时代」。\n规格：2nm 制程；Oryon CPU 最高 5.11GHz；Hexagon NPU 新增 Element Accelerator（元素加速器）与更大共享内存，端侧可运行最高 300 亿参数模型；GPU 性能大幅提升，Extreme 档面向超旗舰机型。\n落地：小米 18 Pro 已于 9 月 23 日晚首发搭载骁龙8E6 登场、发布即开售（见本板块另一条）；泄露定价约 320 美元，后续首发机型年底前密集亮相。\n配合此前联发科天玑 9600 Pro（同样宣称 30B 端侧模型），「2nm + 端侧智能体」已成为本轮旗舰 SoC 的共同卖点。",
-      tags: ["骁龙8 Elite Gen 6", "2nm", "Hexagon NPU", "端侧智能体"],
-      url: "https://news.qq.com/rain/a/20260923A038CO00",
-      image: "https://inews.gtimg.com/om_ls/Orkpllb6bRi833C9vvqznHvULMUg3qfyylgzlyfcb1Kb0AA_640330/0",
-      imageCap: "配图来自原文页面",
-      highlight: true
-    },
-    {
-      id: "n20", cat: "端侧Agent", source: "腾讯新闻", date: "2026-09-23",
-      title: "手机端侧AI备案新增 3 款：荣耀 YOYO Claw、小米 miclaw、阶跃终端 AI 在列",
-      summary: "网信办手机端侧生成式 AI 备案新增 3 款：荣耀 YOYO Claw、小米 miclaw 与阶跃终端 AI——「Claw」系命名密集出现，端侧智能体成为手机厂商的标配产品线。",
-      detail: "9 月 23 日消息，手机端侧AI备案名单新增 3 款：荣耀 YOYO Claw、小米 miclaw 与阶跃终端 AI。\n两个信号值得注意：其一，「Claw」式命名在荣耀与小米之间撞名，说明「端侧智能体助手」已成手机厂商的标配产品线，竞争进入命名与定位层面的贴身战；其二，阶跃星辰的终端 AI 榜上有名——与其日前发布的 600B 旗舰 Step 5 Preview 发布形成「云端旗舰 + 终端模型」的两翼布局。\n结合此前首批 7 款手机端侧模型备案（华为小艺、OPPO AndesGPT、vivo 蓝心、Apple 智能、小米、努比亚豆包、三星），名单正快速扩容，端侧生成式 AI 进入规模化合规落地阶段。",
-      tags: ["端侧AI备案", "YOYO Claw", "miclaw", "阶跃终端AI"],
-      url: "https://news.qq.com/rain/a/20260923A0BOJU00",
-      image: "https://inews.gtimg.com/om_ls/Oa689SH8m5hjUH8ytR5dYdoVJwCTyPLgJpOQwPCr09aPwAA_640330/0",
-      imageCap: "配图来自原文页面"
-    },
-    {
       id: "n21", cat: "行业动态", source: "央广网（腾讯新闻）/ 搜狐科技", date: "2026-09-24",
       title: "斑马智能发布全模态端侧大模型 AutoOmni 2.0-23B-A3B：座舱任务比肩 10 倍级云模型",
       summary: "云栖大会期间，斑马智能发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B（MoE 架构）：智能座舱普通任务处理能力堪比 10 倍参数量级的云模型；AutoClaw 2.0 智舱协作实车方案同步亮相。",
@@ -233,24 +203,6 @@ const WEEKLY_DATA = {
       url: "https://news.qq.com/rain/a/20260924A07A9800",
       image: "https://inews.gtimg.com/om_ls/OgUErLUkrqPgOv1hN-ljbN8wvZoECL9qAdZsuHRFHioAYAA_640330/0",
       imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n22", cat: "AI硬件", source: "新浪财经", date: "2026-09-23",
-      title: "豆包做手机、阿里造平板：AI 开始争夺硬件控制权",
-      summary: "大模型厂商正从「赋能者」变为「硬件主导者」——字节豆包做手机、阿里将推千问平板与办公 AI 硬件，AI 公司下场争夺终端入口与系统级话语权。",
-      detail: "文章核心判断：AI 开始争夺硬件控制权。\n案例：字节跳动以豆包手机（努比亚 NaviX Ultra）切入整机；阿里将推出千问平板，并被曝有千元级办公 AI 硬件在途（见本板块另一条）——大模型厂商不再满足于做系统里的一个 App，而是要定义设备本身。\n逻辑：端侧模型 + 智能体时代，硬件入口意味着数据、场景与话语权；自己做硬件才能端到端优化「模型-芯片-系统」。\n这也解释了当前的另一面：高通把 NPU 面向智能体重构、手机厂商密集备案端侧模型——芯片厂、模型厂、整机厂三方都在向对方的腹地渗透。",
-      tags: ["AI硬件", "豆包手机", "千问平板", "终端入口"],
-      url: "https://finance.sina.com.cn/wm/2026-09-23/doc-inisvivv6005017.shtml",
-      image: "https://n.sinaimg.cn/front20260923ac/776/w788h788/20260923/df4f-ca2049e794c96ff7b188d67464dd3fbc.jpg",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n25", cat: "行业动态", source: "腾讯新闻", date: "2026-09-23",
-      title: "端侧 AI 加速落地：多厂商密集发布新一代操作系统",
-      summary: "端侧 AI 加速落地，多厂商密集发布新一代操作系统，「AI OS」成为系统换代的核心叙事；资金面同步关注端侧 AI 与 AI 应用方向。",
-      detail: "9 月 23 日报道：端侧 AI 正加速落地，多个厂商密集发布新一代操作系统，「AI OS」成为新一轮系统换代的核心卖点——智能体调度、端侧模型调用、跨应用执行正在进入系统层。\n与此呼应：荣耀 MagicOS 11、vivo 原系统 7、OPPO ColorOS 17 相继发布（均以 AI 智能体为核心标签），澎湃 OS4 随小米 18 系列落地——操作系统的「AI 原生化」竞赛已经开启。\n二级市场同步反映：端侧 AI 与 AI 应用方向表现活跃。",
-      tags: ["AI OS", "系统换代", "智能体调度"],
-      url: "https://news.qq.com/rain/a/20260923A05I6700"
     },
     {
       id: "n11", cat: "行业关注事件", source: "36氪 / TechCrunch", date: "2026-09-24",
@@ -262,26 +214,6 @@ const WEEKLY_DATA = {
       image: "https://img.36krcdn.com/hsossms/20260918/v2_cfa5dfb20fde4be3b974bd19767f8254@000000@ai_oswg679481oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
       imageCap: "配图来自原文页面",
       highlight: true
-    },
-    {
-      id: "n30", cat: "行业动态", source: "新浪财经", date: "2026-09-23",
-      title: "苹果新款 Mac 发货：主打端侧 AI，帮用户省下 token 费",
-      summary: "苹果宣布 M5 系列新款 Mac mini / Mac Studio 开始发货（4499 / 19999 元起），营销主线转向「端侧 AI」：神经网络引擎算力大幅提升、本地直接跑主流大模型，省下云端按 token 计费的开支。",
-      detail: "9 月 23 日（周三），苹果宣布搭载 M5 系列芯片的新款 Mac mini 与 Mac Studio 开始发货，起售价分别为 4499 元与 19999 元。\n与以往的性能叙事不同，本轮营销主线是「端侧 AI 算力」：苹果强调新款 Mac 的神经网络引擎算力大幅提升，可在本地直接运行主流大模型，帮用户省下云端推理按 token 计费的开支，并主打本地运行的安全与隐私优势。\n背景：在智能体开发与私有部署需求带动下，「本地 AI 主机」成为新战场——英伟达 DGX Spark、小米 AI Cube（8 月底发布）与新款 Mac 台式机正面竞争，端侧算力形态正从手机 / PC 延伸到桌面。",
-      tags: ["苹果 Mac", "M5", "端侧AI", "本地大模型"],
-      url: "https://finance.sina.com.cn/roll/2026-09-23/doc-inistvut5489395.shtml",
-      image: "https://n.sinaimg.cn/spider20260923/54/w578h276/20260923/704d-66796a662bd6b5a37a13b74a669a6401.png",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n4", cat: "手机厂商", source: "搜狐科技 / 腾讯新闻", date: "2026-09-23",
-      title: "小米 18 Fold 搭载 MiMo 端侧大模型上市：玄戒 O3 + 澎湃 OS4 自研三件套，端侧内存带宽占用直降 30%",
-      summary: "小米首款万元级中折叠 18 Fold 是 MiMo 端侧大模型的首款搭载机型，与自研玄戒 O3 SoC、澎湃 OS4 组成「自研三件套」：配合 LPDDR6 高带宽内存，端侧模型的内存与带宽占用直降约 30%、精度几乎无损。首销激活近 8 万台（同比 +300%）——端侧 AI 成为高端机真实购买理由的市场注脚。",
-      detail: "产品底色：小米首款「中折叠」旗舰（7.58 吋内屏、219g、10999 元起）；核心是自研三件套——玄戒 O3 旗舰 SoC、澎湃 OS4 与 MiMo 端侧大模型（首款搭载机型），配合 LPDDR6 高带宽内存，端侧模型内存与带宽占用直降约 30%、精度几乎无损。\n市场注脚：9 月 12 日开售当日约 3.6 万台，首销激活近 8 万台、同比 +300%（小米许斐：较上代大折叠增长超三倍）——端侧模型手机不再只是发布会概念，「端侧 AI + 自研芯片」正在成为高端机的真实购买理由。",
-      tags: ["小米 18 Fold", "MiMo 端侧模型", "玄戒 O3", "澎湃 OS4"],
-      url: "https://www.sohu.com/a/1080077450_120073936",
-      image: "https://q0.itc.cn/images01/20260923/775d114521c248e1baffe87bef1bb6fd.png",
-      imageCap: "配图来自原文页面"
     }
   ],
 
@@ -433,6 +365,14 @@ const WEEKLY_DATA = {
         text: "Gemini Nano、AICore 与 Android 端侧 AI 的官方进展；AICORE API 与 ML Kit 的端侧能力说明中心。",
         url: "https://blog.google/technology/ai/",
         intro: "Google 官方 AI 博客（DeepMind + Developers 合流），端侧相关内容集中在：Gemini Nano 与 Android AICore 的每次更新、ML Kit / MediaPipe 的端侧能力（Generative AI API 一行代码调用内置小模型）、以及 Gemma 开源系列的发布说明。\n看点：Gemma 系列开源模型的发布与变体（含面向端侧的轻量版）、Chrome / Android 内置 AI 能力路线图。\n适合谁：安卓生态开发者，以及跟踪「系统级内置模型」路线的从业者。" },
+      { group: "厂商官方博客", name: "NVIDIA Technical Blog", type: "厂商技术博客", letter: "N",
+        text: "Jetson 边缘平台、TensorRT 模型优化与 Isaac 机器人的官方一手工程文章。",
+        url: "https://developer.nvidia.com/blog",
+        intro: "NVIDIA 开发者技术博客（更新极勤，日均多篇），端侧相关集中在 Jetson 系列（Orin/Thor）的平台与模型部署文章、TensorRT / TensorRT-LLM 的推理优化实践、TAO 工具链与 Isaac 机器人边缘侧应用。\n看点：Jetson 新品与 JetPack 软件栈更新、开源模型在边缘设备上的官方部署指南。\n适合谁：做边缘盒子、机器人、智能摄像头方向，需要 GPU 边缘算力部署的工程师。文章量大，建议按 Jetson / TensorRT 关键词筛选阅读。" },
+      { group: "厂商官方博客", name: "Microsoft DevBlogs · DirectX/DirectML", type: "厂商技术博客", letter: "M",
+        text: "Windows AI 芯片路线的一手阵地：DirectML 在各家 NPU/GPU 上的端侧推理更新。",
+        url: "https://devblogs.microsoft.com/directx/",
+        intro: "微软 DevBlogs 的 DirectX 频道，Windows 端侧 AI 的底层通道——DirectML（DirectX 之上的机器学习推理层）与 Windows AI 平台的更新在此首发；Copilot+ PC 本地模型栈（ONNX Runtime + DirectML 执行提供方）的底层进展也常在此披露。\n看点：DirectML 新特性（NPU 支持范围、驱动级 AI 加速）、Windows AI 相关 API 演进。\n适合谁：做 Windows 平台（AI PC / Copilot+ PC）端侧推理与 NPU 适配的工程师。" },
       { group: "厂商官方博客", name: "面壁智能数据洞察", type: "厂商研究博客", letter: "面",
         text: "MiniCPM 技术解读与「知识密度」路线的持续输出，国产端侧模型的第一视角。",
         url: "https://www.modelbest.cn",
@@ -480,7 +420,31 @@ const WEEKLY_DATA = {
       { group: "社区与平台", name: "Hugging Face Blog", type: "平台官方博客", letter: "H",
         text: "开源模型与端侧部署的一线实践：SmolLM 端侧小模型、量化工具链与新模型发布的第一手说明。",
         url: "https://huggingface.co/blog",
-        intro: "Hugging Face 官方博客，开源生态的「发射台」：新模型与新功能的第一手发布说明、量化与推理优化的工程实践、以及 SmolLM 端侧小模型系列的设计文章。\n看点：SmolLM 端侧模型的发布与技术报告解读、transformers 生态的量化工具链（bitsandbytes / GPTQ / AWQ 集成）、与合作伙伴的手机/浏览器端侧落地案例。\n适合谁：所有做端侧模型选型与部署的工程师——配套的 Daily Papers 榜单也是发现社区热点论文的风向标。" }
+        intro: "Hugging Face 官方博客，开源生态的「发射台」：新模型与新功能的第一手发布说明、量化与推理优化的工程实践、以及 SmolLM 端侧小模型系列的设计文章。\n看点：SmolLM 端侧模型的发布与技术报告解读、transformers 生态的量化工具链（bitsandbytes / GPTQ / AWQ 集成）、与合作伙伴的手机/浏览器端侧落地案例。\n适合谁：所有做端侧模型选型与部署的工程师——配套的 Daily Papers 榜单也是发现社区热点论文的风向标。" },
+      { group: "端侧工具链官方", name: "PyTorch Blog", type: "工具链官方博客", letter: "P",
+        text: "ExecuTorch 端侧运行时与 torchao 量化的第一手发布说明与工程实践。",
+        url: "https://pytorch.org/blog",
+        intro: "PyTorch 官方博客（更新极勤），端侧相关集中在 ExecuTorch——PyTorch 官方的端侧部署运行时（模型导出、量化、委托到 CPU/DSP/NPU 后端）的版本说明与教程，以及 torchao 量化技术、iOS/Android 移动端官方示例。\n看点：ExecuTorch 新版本与后端委托（XNNPACK / CoreML / QNN 等）支持进展、模型压缩与量化的官方实践。\n适合谁：从 PyTorch 训练生态向移动/嵌入式部署模型的工程师——训练侧到端侧的最短官方路径。" },
+      { group: "端侧工具链官方", name: "Ollama Blog", type: "工具链官方博客", letter: "O",
+        text: "本地大模型运行时的版本动态与新模型支持说明，本地部署事实标准的风向标。",
+        url: "https://ollama.com/blog",
+        intro: "Ollama 官方博客。Ollama 把 llama.cpp 级的本地推理封装成「一条命令跑模型」的体验，是个人开发者本地跑大模型的事实标准（macOS/Linux/Windows 全平台）。\n看点：新版本的功能演进（多模态、工具调用、并发与上下文管理）与新模型上架说明——某端侧级模型首发可用常在这里最先出现。\n适合谁：在本地/私有环境部署开源模型的开发者与企业 IT；跟踪「本地大模型易用性」演进的产品经理。" },
+      { group: "端侧工具链官方", name: "ONNX / ONNX Runtime", type: "开放标准 · 推理引擎", letter: "O",
+        text: "跨框架模型交换标准与微软维护的高性能推理引擎，端侧部署中间格式的事实标准。",
+        url: "https://onnxruntime.ai",
+        intro: "ONNX 是开放的模型表示标准（PyTorch/TensorFlow 等框架导出的通用中间格式），ONNX Runtime 是微软维护的跨平台推理引擎（Windows/安卓/iOS/Linux/嵌入式），支持量化与多种执行提供方（CPU / DirectML / CoreML / QNN / XNNPACK）。\n看点：官网博客（onnxruntime.ai/blogs）与版本发布——移动端执行提供方、生成式 API 与量化工具 Olive 的更新；Windows AI PC 官方路线的必经一站。\n适合谁：需要「一次导出、多端运行」的应用工程师。版本动态另见本库「端侧工具链 Release 雷达」。" },
+      { group: "端侧工具链官方", name: "Intel OpenVINO Blog", type: "工具链官方博客", letter: "I",
+        text: "Intel 端侧推理引擎的优化实践：CPU/iGPU/NPU 一套 API，AI PC 与边缘盒子的官方路线。",
+        url: "https://blog.openvino.ai",
+        intro: "OpenVINO 是 Intel 的开源推理引擎（CPU/iGPU/NPU 统一 API），覆盖 AI PC（Core Ultra 的 NPU）、边缘计算盒与工业视觉场景；官方博客持续输出模型优化（NNCF 量化）、异构部署与生成式 AI 边缘侧实践的教程。\n看点：OpenVINO 新版本特性（NPU 支持与 LLM 边缘推理优化）、与 Intel 硬件联调的一手指南。\n适合谁：x86 生态做端侧部署、工业质检/边缘盒子方向的工程师。版本动态另见本库「端侧工具链 Release 雷达」。" },
+      { group: "端侧工具链官方", name: "Apple MLX 生态", type: "开源框架 · GitHub", letter: "M",
+        text: "苹果官方的 Apple silicon 本地推理框架：统一内存视角的数组库 + LLM 推理栈。",
+        url: "https://github.com/ml-explore/mlx",
+        intro: "MLX 是苹果机器学习研究团队（ml-explore）开源的 Apple silicon 数值计算与推理框架：针对统一内存架构设计（CPU/GPU 共享内存、零拷贝），配合 mlx-lm 可在 Mac 上高效运行大模型——「Mac 本地大模型」当前的事实标准之一（LM Studio 等产品的底层选项）。\n看点：框架与 mlx-lm 的版本节奏、Apple ML Research 博客上 MLX 相关研究（扩散模型加速、多模态端侧化）。\n适合谁：在 Mac 生态做本地推理与模型移植的工程师。版本动态另见本库「端侧工具链 Release 雷达」。" },
+      { group: "端侧工具链官方", name: "端侧工具链 Release 雷达", type: "Release 聚合 · 每日跟踪", letter: "R",
+        text: "14 个核心端侧项目的官方版本发布动态：本地推理/量化、移动端运行时、CV 框架、离线语音。",
+        url: "https://github.com/topics/on-device",
+        intro: "聚合端侧开源工具链的官方 Release Notes：本地推理与量化（llama.cpp、Ollama、MLX）、移动端运行时（ExecuTorch、LiteRT、MediaPipe、coremltools）、推理格式与引擎（ONNX、ONNX Runtime、OpenVINO）、国产 CV 框架（ncnn、MNN）、离线语音（whisper.cpp、sherpa-onnx）。\n看点：重要版本的第一时间信号——新硬件后端支持、量化格式演进、新模型能力接入；其中 llama.cpp 为日更构建，日常小版本仅留痕、里程碑版本才进资讯板块。\n适合谁：想一眼看全「端侧工具链这周谁发了什么版」的工程师。" }
     ]
   }
 };

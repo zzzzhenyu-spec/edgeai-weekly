@@ -6,7 +6,10 @@
 # 输出: js/blogs.js —— const BLOG_FEEDS = {名称: {logo, posts:[{t,u,d,s,e}]}}
 #   t=标题 u=链接 d=日期 s=摘要 e=端侧相关(前端高亮)
 # 规则: RSS 源取最近 30 条；HTML 解析源取 25 条；sitemap 源取 12 条；
-#       端侧相关且无摘要的文章自动抓 og:description 作为介绍
+#       端侧相关且无摘要的文章自动抓 og:description 作为介绍；
+#       另有「端侧工具链 Release 雷达」通道(RADAR_NAME): 聚合 RELEASE_REPOS
+#       白名单仓库的 GitHub Release Notes(每仓近 2 版)，免 AI 关键词过滤、
+#       全部标记端侧相关(仓库清单本身即人工信源把关)。
 # ============================================================
 import sys, json, re, time, html as H
 import urllib.parse
@@ -28,6 +31,10 @@ FEEDS = {
     "Sebastian Raschka": "https://magazine.sebastianraschka.com/feed",
     "Interconnects (Nathan Lambert)": "https://www.interconnects.ai/feed",
     "Apple Machine Learning Research": "https://machinelearning.apple.com/rss.xml",
+    "NVIDIA Technical Blog": "https://developer.nvidia.com/blog/feed/",
+    "Microsoft DevBlogs · DirectX/DirectML": "https://devblogs.microsoft.com/directx/feed/",
+    "PyTorch Blog": "https://pytorch.org/feed/",
+    "Ollama Blog": "https://ollama.com/blog/rss.xml",
 }
 # HTML 解析: 名称 -> (列表页URL, 站点根, 链接正则)；列表页可以是 HTML 或 sitemap.xml
 HTML_SITES = {
@@ -48,6 +55,27 @@ SITEMAP_SITES = {
         "max": 12,
     },
 }
+# 端侧工具链 Release 雷达: GitHub Release Notes 聚合通道（仓库白名单=人工信源，免 AI 关键词过滤）。
+# 覆盖谱系: 本地推理与量化 / 移动端运行时 / 推理格式与引擎 / 国产 CV 框架 / 离线语音；增删仓库改这里。
+# 实测可用性结论(2026-09-30, 详录 source_health.json): TensorFlow 官博 2025-08 后停更、
+# WindowsAI 官博 2023 停更、onnxruntime.ai/blog.openvino.ai/mlx 均无 RSS —— 这些项目只走本雷达。
+RADAR_NAME = "端侧工具链 Release 雷达"
+RELEASE_REPOS = [
+    "ggml-org/llama.cpp",        # 本地推理+量化事实标准(日更构建, 噪音大属正常)
+    "ollama/ollama",             # 本地大模型运行时
+    "ml-explore/mlx",            # Apple silicon 本地推理框架
+    "Tencent/ncnn",              # 腾讯移动端 CV 推理框架
+    "alibaba/MNN",               # 阿里移动端推理引擎
+    "k2-fsa/sherpa-onnx",        # 离线语音(ASR/TTS)
+    "ggml-org/whisper.cpp",      # 离线语音识别
+    "pytorch/executorch",        # PyTorch 端侧运行时
+    "apple/coremltools",         # Core ML 模型转换工具链
+    "google-ai-edge/LiteRT",     # Google 端侧运行时(原 TF Lite)
+    "google-ai-edge/mediapipe",  # 端侧多模态管线
+    "onnx/onnx",                 # 开放推理格式
+    "microsoft/onnxruntime",     # 跨平台推理引擎
+    "openvinotoolkit/openvino",  # Intel 推理引擎
+]
 # 手工指定高质量 logo（RSS image 抓不到或太丑的）
 LOGO_OVERRIDES = {
     "Google DeepMind / Developers Blog": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
@@ -61,12 +89,19 @@ LOGO_OVERRIDES = {
     "Hugging Face Blog": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
     "Tianqi Chen 陈天奇": "https://github.com/tqchen.png",
     "Georgi Gerganov": "https://github.com/ggerganov.png",
+    "NVIDIA Technical Blog": "https://www.google.com/s2/favicons?domain=developer.nvidia.com&sz=128",
+    "Microsoft DevBlogs · DirectX/DirectML": "https://www.google.com/s2/favicons?domain=devblogs.microsoft.com&sz=128",
+    "PyTorch Blog": "https://www.google.com/s2/favicons?domain=pytorch.org&sz=128",
+    "Ollama Blog": "https://www.google.com/s2/favicons?domain=ollama.com&sz=128",
+    RADAR_NAME: "https://www.google.com/s2/favicons?domain=github.com&sz=128",
 }
 
 EDGE_KEYS = ["端侧", "on-device", "on device", "edge ai", "edge-side", "npu", "天玑", "骁龙",
              "snapdragon", "dimensity", "ai手机", "ai 眼镜", "ai眼镜", "小模型", "slm",
              "quantiz", "量化", "llama.cpp", "gguf", "local llm", "本地大模型", "本地部署",
-             "inference", "推理", "mobile", "手机", "mobilecpm", "agentic", "智能体", "端云"]
+             "inference", "推理", "mobile", "手机", "mobilecpm", "agentic", "智能体", "端云",
+             "executorch", "litert", "tflite", "coreml", "openvino", "ncnn", "mnn",
+             "ollama", "mlx", "sherpa", "whisper", "mediapipe", "directml", "jetson", "onnx"]
 
 # AI 相关性过滤: 非 AI 内容一律不收录(英文用词边界匹配, 中文子串匹配)
 AI_KEYS_SUB = ["人工智能", "大模型", "小模型", "模型", "机器学习", "深度学习", "神经网络", "智能体",
@@ -78,7 +113,9 @@ AI_KEYS_RE = re.compile(
     r"finetun|fine-tun|quantiz|machine learning|deep learning|neural|model|models|chatbot|"
     r"copilot|vlm|slm|moe|vllm|attention|flashattention|pytorch|torch|tensorflow|jax|"
     r"cuda|tensor|onnx|ggml|gguf|whisper|stable diffusion|sdxl|bert|vit|mamba|kimi|glm|"
-    r"deepseek|gemini|tokens?|embedding|prompt|context window|scaling law)\b", re.I)
+    r"deepseek|gemini|tokens?|embedding|prompt|context window|scaling law|"
+    r"executorch|litert|tflite|coreml|openvino|ncnn|ollama|sherpa|directml|jetson|"
+    r"mediapipe|mlx|mlc|tvm)\b", re.I)
 
 
 def is_ai(text):
@@ -297,7 +334,7 @@ def github_releases(repos):
     posts = []
     for repo in repos:
         try:
-            data = json.loads(http_get(f"https://api.github.com/repos/{repo}/releases?per_page=5", timeout=30))
+            data = json.loads(http_get(f"https://api.github.com/repos/{repo}/releases?per_page=2", timeout=30))
         except Exception:
             continue
         name = repo.split("/")[-1]
@@ -393,7 +430,9 @@ def main():
     out, fetched = {}, 0
     for name in names:
         posts, logo = [], ""
-        if name in FEEDS:
+        if name == RADAR_NAME:
+            posts = github_releases(RELEASE_REPOS)
+        elif name in FEEDS:
             logo, posts = parse_feed(FEEDS[name])
         elif name in HTML_SITES:
             logo, posts = parse_html(*HTML_SITES[name])
@@ -410,11 +449,12 @@ def main():
             if need_translate(p.get("s", "")):
                 p["s"] = gtranslate(p["s"]); time.sleep(0.25)
             p["orig"] = p["t"]   # 翻译后原文丢弃前先留给过滤判定
-        posts = [p for p in posts if is_ai(p["t"] + " " + p.get("s", ""))]   # 只留 AI 相关
+        if name != RADAR_NAME:   # 雷达=仓库白名单(人工信源), 免 AI 关键词过滤
+            posts = [p for p in posts if is_ai(p["t"] + " " + p.get("s", ""))]   # 只留 AI 相关
         for p in posts:
             p["d"] = norm_date(p["d"])
             p.pop("orig", None)
-            p["e"] = is_edge(p["t"] + " " + p.get("s", ""))
+            p["e"] = (name == RADAR_NAME) or is_edge(p["t"] + " " + p.get("s", ""))
         posts.sort(key=sort_key, reverse=True)
         # 端侧相关但无摘要的 -> 抓 og:description（全局限量）
         for p in posts:

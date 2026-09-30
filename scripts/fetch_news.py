@@ -25,6 +25,10 @@ KEYWORDS = [
     "minicpm", "端云协同",
     "ai眼镜", "智能眼镜", "ai耳机", "hearable", "ai pc", "copilot+",
     "gemini intelligence", "qwen intelligence", "agentic os", "ai硬件",
+    # 端侧工具链谱系(2026-09-30 补): 本地推理/量化/移动端运行时/CV框架/离线语音
+    "llama.cpp", "gguf", "ollama", "mlx", "executorch", "litert", "tflite",
+    "coreml", "openvino", "onnx", "ncnn", "mnn", "sherpa", "whisper.cpp",
+    "mediapipe", "directml", "jetson", "本地大模型", "本地部署",
 ]
 
 
@@ -123,11 +127,37 @@ def main():
         print(f"  命中 {hit} 条")
         time.sleep(0.8)
 
+    # ---- 候选漏斗加固(2026-09-30, 对标五步漏斗实践) ----
+    # 步骤二「内容完整性」: 标题过短/无有效链接的候选直接丢弃
+    results = [r for r in results if len(r["title"]) >= 8 and (r["url"] or "").startswith("http")]
+
+    # 步骤五「入库查重」前置: 池内同标题去重 + 对当前窗口已收录条目打 dup 标记(标记不删,
+    # 供编选时跳过; 权威查重仍是 archive.py check 的 URL精确/标题相似度双通道)
+    def norm_title(t):
+        return re.sub(r"[\W_]+", "", t.lower())
+
+    cur_titles = set()
+    try:
+        data_js = (ROOT / "js" / "data.js").read_text(encoding="utf-8")
+        cur_titles = {norm_title(t) for t in re.findall(r'title: "([^"]+)"', data_js)}
+    except Exception:
+        pass
+    seen_t, kept = set(), []
+    for r in results:
+        k = norm_title(r["title"])
+        if not k or k in seen_t:
+            continue
+        seen_t.add(k)
+        r["dup_with_current"] = k in cur_titles
+        kept.append(r)
+    results = kept
+
     results.sort(key=lambda x: x["date"], reverse=True)
     d = ROOT / "data"
     d.mkdir(exist_ok=True)
     (d / "news_candidates.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\n共 {len(results)} 条候选（近 {days} 天），已写入 data/news_candidates.json")
+    n_dup = sum(1 for r in results if r.get("dup_with_current"))
+    print(f"\n共 {len(results)} 条候选（近 {days} 天，其中 {n_dup} 条疑似已在当前窗口），已写入 data/news_candidates.json")
     for r in results:
         print(f"[{r['date']}][{r['source']}] {r['title']}")
 
