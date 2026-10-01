@@ -15,14 +15,47 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 41 期",
-    weekRange: "2026.09.24 — 09.30 · 近 7 天",
-    updated: "2026-09-30",
+    weekRange: "2026.09.25 — 10.01 · 近 7 天",
+    updated: "2026-10-01",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：Meta Muse 现象级爆火——从 Connect 大会全面接入 AI 眼镜，到被曝未经授权同步 Mac 短信数据库，再到发布钥匙扣设备 Muse Charm 迈出硬件化第一步，生态与争议同步扩张；骁龙峰会演示端侧 30B MoE 完整智能体工作流，高通携手 Liquid AI 展示常驻端侧的主动式智能体，并将 1-bit 模型带上可穿戴平台；苹果首度公布端侧 AI 能力矩阵——从 iPhone 的 140 亿参数到 Mac Studio 集群的 1.6 万亿参数；荣耀 Magic9 发布，397B 智能体大模型进系统、YOYO 可执行百步长程任务；Jev 决策模型一周通关《宝可梦 红》；首款 AI 智能体手机撞上《王者荣耀》反作弊风控后致歉。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：地平线 HSD V2.1 国内量产首发端到端全场景倒车；OpenClaw Enterprise 为持久性智能体补上企业级安全与治理；智能眼镜声学性能测试规范 10 月 2 日实施。"
+    editorsNote: "近 7 天聚焦：Meta Muse 从爆火走向硬件化——钥匙扣设备 Muse Charm 亮相，但被曝未经授权同步 Mac 短信库的隐私事件同步发酵；骁龙峰会演示端侧 30B MoE 完整智能体工作流，高通携手 Liquid AI 展示常驻端侧的主动式智能体，并将 1-bit 模型带上可穿戴平台；苹果首度公布端侧 AI 能力矩阵（从 iPhone 的 140 亿参数到 Mac Studio 集群的 1.6 万亿参数）；荣耀 Magic9 落地 397B 智能体大模型、YOYO 可执行百步长程任务；华为 Mate 90 发布——麒麟 τ 家族四芯齐发，麒麟 9035 NPU 提升 51%，小艺智能体进旗舰。Jev 决策模型一周通关《宝可梦 红》后，OpenAI 在 DevDay 推出被指「Jev 克隆」的 Decisions API，快系统路线获平台级跟进；首款 AI 智能体手机撞上《王者荣耀》反作弊风控后致歉。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：华为 Mate 90 与麒麟 τ 四芯；OpenAI Decisions API 被指「Jev 克隆」；三星 Galaxy Glasses 过 FCC 认证、有望 11 月上市。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n52", cat: "手机厂商", source: "IT之家", date: "2026-10-01",
+      title: "华为 Mate 90 发布：麒麟 τ 家族四款芯片齐上，麒麟 9035 NPU 提升 51%，小艺智能体进旗舰",
+      summary: "华为 Mate 90 系列全系搭载麒麟 9030/9035/9050/9050 Pro 四款新芯片，Pro 首发的麒麟 9035 NPU 较 9030 再提 51%，是这代端侧算力升级的最大头；HarmonyOS 7 带来小艺智能体、小艺帮记等鸿蒙智能能力，同场发布的 FreeBuds Neo 搭载自研第三代音频 AI 芯片——麒麟 + 鸿蒙智能 + 自研音频芯片构成全品类端侧 AI 软硬栈。起售价 5999 元。",
+      detail: "IT之家 10 月 1 日报道：华为 Mate 90 系列于国庆假期首日发布，Mate 90、Mate 90 Pro、Mate 90 Pro Max 分别搭载麒麟 9030、9035、9050/9050 Pro 四款新芯片，全系沿用「τ 旗舰芯片」设计。\n芯片侧：麒麟 9030 较上代 CPU 提升 13%、GPU 提升 54%、NPU 提升 13%；Pro 首发的麒麟 9035 进一步把 NPU 拉高 51%（CPU+11%、GPU+10%）；Pro Max 的麒麟 9050 Pro 采用逻辑折叠设计，晶体管密度 2.38 亿/mm²、较上代提升 28%。配套 FFRT 软硬协同调度，图片加载速度翻倍。\n系统与智能：HarmonyOS 7 鸿蒙智能全面上机——小艺智能体、小艺帮记、小艺·图库助手、隔空传送；星盾安全架构提供风险网页检测等端侧防护；第二代灵珑屏由朱雀显示芯片驱动，支持 AI Pixel 逐像素调优，峰值亮度 12000nits。\n同场全场景：FreeBuds Neo 搭载自研第三代音频 AI 芯片，WATCH GT 7 Pro 与智慧屏 V7 Max 等同步亮相。\n端侧视角：从手机 SoC 的 NPU 代际提升，到系统级小艺智能体、再到耳机的音频 AI 芯片，华为是目前少有的在手机/手表/耳机/屏全品类自研端侧 AI 芯片并配齐系统级智能体的厂商——麒麟 NPU 的算力水位将直接决定小艺智能体的端侧推理上限。起售价 5999 元，10 月 16 日开售。",
+      tags: ["华为", "麒麟", "小艺智能体", "HarmonyOS"],
+      url: "https://www.ithome.com/1/009/101.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/c6bc1294-0520-4ad2-a9c7-3ba0fca0905a.jpg",
+      imageCap: "Mate 90 系列发布（图源：IT之家）",
+      highlight: true
+    },
+    {
+      id: "n53", cat: "行业关注事件", source: "TechCrunch（编译）", date: "2026-09-30",
+      title: "OpenAI 在 DevDay 推出 Decisions API：被 TechCrunch 直称「Jev 克隆」，快系统路线获头部实验室跟进",
+      summary: "OpenAI CEO Altman 在 DevDay 演讲间隙披露 Decisions API——给模型一组预定义选项、以极快速度输出决策，功能与 TypeSafe AI 的 Jev 相似；TypeSafe CEO 调侃「克隆战争开始了」，并称这「说明以系统一兼容方式构建就是未来」。在 LLM 过慢过贵的痛点下，用廉价快速决策层增强 LLM 的「快+慢」组合正成为智能体编排的主流解法。",
+      detail: "TechCrunch 9 月 30 日报道：OpenAI DevDay 上，CEO Sam Altman 在演讲中披露了新的「Decisions API」——为模型（如 Luna）提供一组预定义选项（如图像分类的类别、智能体的不同行为），聚焦于该选择即可做到极快推理，同时保留图像理解、多语言与安全防护能力。\n与 Jev 的关系：TechCrunch 直言这是「Jev 克隆」——TypeSafe AI 本月早些时候发布的 Jev 是「构建于 LLM 之上的超级分类器」，开发者给出选项集合，它以极低成本与极高速度输出概率分布，专为软件自动化设计。\nTypeSafe 的回应：CEO Diogo Almeida（前 OpenAI 工程师）在 X 上调侃「克隆战争开始了」，并称 OpenAI 的跟进说明「以系统一（System One）兼容方式构建就是未来」——「系统一」即 TypeSafe 对快速直觉式思考的术语，区别于深思熟虑的「系统二」。\n端侧视角：Jev 出圈三周即获 OpenAI 官方跟进，「快系统 + 慢系统」的分层智能体架构从创业公司的独门武器变成平台级标配；对端侧的意义同样直接——小体量决策层 + 端侧部署的组合，正是低成本常驻智能体的可行路径。",
+      tags: ["OpenAI", "Jev", "Decisions API", "系统一模型"],
+      url: "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+      image: "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2297228249.jpg?resize=1200,800",
+      imageCap: "OpenAI DevDay 2026（图源：TechCrunch）",
+      highlight: false
+    },
+    {
+      id: "n54", cat: "AI硬件", source: "IT之家", date: "2026-10-01",
+      title: "三星 Galaxy Glasses 通过美国 FCC 认证：骁龙 AR1 + Android XR + Gemini，有望 11 月上市",
+      summary: "三星智能眼镜 Galaxy Glasses 已通过美国 FCC 认证（越南制造），预计 11 月上市；信息显示其搭载高通骁龙 AR1 Gen 1 眼镜专用端侧芯片、运行 Android XR 平台并集成谷歌 Gemini——继 Meta 之后，Android 阵营首个头部品牌的 AI 眼镜进入上市倒计时。",
+      detail: "IT之家 10 月 1 日报道：三星 Galaxy Glasses 智能眼镜通过美国 FCC 认证，认证信息显示为越南制造，有望 11 月上市。\n已知规格：搭载高通骁龙 AR1 Gen 1（智能眼镜专用低功耗端侧芯片）、运行 Android XR 平台、集成谷歌 Gemini，支持多项 AI 功能，形态对标 Meta 的音频+显示混合眼镜。\n端侧视角：AR1 正是高通为眼镜定制的端侧平台（上周高通刚演示了 AR1 上的 1-bit 端侧模型方案）；三星 + 谷歌 + 高通的组合意味着 AI 眼镜从 Meta 独跑进入 Android 阵营集团军阶段，11 月上市窗口将直接对撞年末购物季。",
+      tags: ["三星", "Galaxy Glasses", "AI眼镜", "Android XR"],
+      url: "https://www.ithome.com/1/009/102.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/7/be9f2156-f5be-4ec3-94a4-97fb630fc49a.jpg",
+      imageCap: "Galaxy Glasses 概念渲染（图源：IT之家）",
+      highlight: false
+    },
     {
       id: "n49", cat: "芯片厂商", source: "IT之家", date: "2026-09-30",
       title: "地平线发布 HSD V2.1：国内量产首发端到端全场景倒车，首批 iCAR V27 10 月 8 日推送",
@@ -110,7 +143,7 @@ const WEEKLY_DATA = {
       url: "https://9to5mac.com/2026/09/28/yeah-dont-give-metas-muse-app-access-to-your-mac/",
       image: "https://9to5mac.com/wp-content/uploads/sites/6/2026/09/Yeah-dont-give-Metas-Muse-app-access-to-your-Mac.jpg",
       imageCap: "配图来自原文页面",
-      highlight: true
+      highlight: false
     },
     {
       id: "n45", cat: "芯片厂商", source: "THE ELEC（编译）", date: "2026-09-27",
@@ -143,7 +176,7 @@ const WEEKLY_DATA = {
       url: "https://finance.sina.com.cn/stock/t/2026-09-27/doc-inithcyh0184530.shtml",
       image: "https://n.sinaimg.cn/spider20260927/454/w660h1394/20260927/f934-14c310187440cf3355741c3c0ba919a0.jpg",
       imageCap: "配图来自原文页面",
-      highlight: true
+      highlight: false
     },
     {
       id: "n36", cat: "手机厂商", source: "IT之家", date: "2026-09-27",
@@ -170,48 +203,6 @@ const WEEKLY_DATA = {
       tags: ["苹果", "端侧AI能力矩阵", "统一内存", "本地大模型"],
       url: "https://www.itsdw.cn/news/28606.html",
       image: "https://www.itsdw.cn/wp-content/uploads/2026/09/20260925091125671097.jpg",
-      imageCap: "配图来自原文页面",
-      highlight: true
-    },
-    {
-      id: "n32", cat: "AI硬件", source: "站长之家（AIbase）/ 新浪财经", date: "2026-09-24",
-      title: "Meta Connect 开幕：智能体 Muse 全面接入 AI 眼镜，硬件矩阵齐发",
-      summary: "Meta Connect 2026（当地时间 9·23）开幕：个人智能体 Muse 成为全场核心——接入智能眼镜、拥有自己的邮箱、Mac 端可操作电脑；同场发布无摄像头 Audio 眼镜（$349）、Gen 3（$449）、100g VR 眼镜与独立终端 Muse Charm，年底 AI 眼镜将超 100 款。",
-      detail: "Meta Connect 2026 于当地时间 9 月 23 日开幕，站长之家（AIbase）9 月 24 日报道：个人智能体 Muse 贯穿全场，扎克伯格称要让数十亿人用上「超级智能」。\nMuse 生态：「Hey Muse」全面接入智能眼镜；Muse 拥有自己的邮箱（可直接替用户收发处理）；Mac 端 Muse App 可直接操作电脑——从语音助手升级为「全面智能体」。Muse 9 月 8 日推出后已登顶美区 App Store 与 Google Play 免费榜。\n硬件矩阵：Ray-Ban Meta Audio Glasses（无摄像头、43g、12 小时续航 + 充电盒 48 小时，$349）主打隐私形态；Ray-Ban Meta Gen 3（$449，12MP 摄像头、6 麦克风、通话降噪 90%、9 小时续航）；入门线 Meta Adventurer $249 起——2026 年底三大产品线合计将超 100 款 AI 眼镜。\n更远一步：Meta VR Glasses 重量仅 100g（约为 Quest 3 的 1/5），采用「眼镜 + 口袋计算单元」形态，2027 年春上市（$1299）；另公布电子宠物形态的独立 Muse 终端 Muse Charm（内置小屏 / 麦克风 / 扬声器，年底前推出）与眼镜听力增强能力。",
-      tags: ["Meta Connect", "Muse", "AI眼镜", "智能体"],
-      url: "https://www.chinaz.com/ainews/31346.shtml",
-      image: "https://n.sinaimg.cn/spider20260924/155/w660h295/20260924/36e9-20c2ba611e35c3a2649f53d623dc854e.jpg",
-      imageCap: "配图来自原文页面",
-      highlight: true
-    },
-    {
-      id: "n27", cat: "AI硬件", source: "腾讯新闻（AR圈）/ 搜狐科技", date: "2026-09-24",
-      title: "第二代乐奇（Rokid）AI 眼镜数贸会首秀：更潮、更强、更舒适",
-      summary: "Rokid 第二代乐奇 AI 眼镜 9 月 24 日在杭州数贸会全球首秀，现场体验的三个关键词：更潮、更强、更舒适——设计理念「不减配」：先定框形与佩戴，再让光学与重量去适配。",
-      detail: "9 月 24 日，第二代乐奇（Rokid）AI 眼镜在第五届数贸会全球首秀，AR圈在现场体验后给出三个关键词：更潮、更强、更舒适。\n方法论看点是「不减配」：带显示的 AI 眼镜通常先定电子件再包一个壳，二代乐奇把顺序反过来——先定框形与佩戴，再让光学与重量适配，把 AI 眼镜「做回一副眼镜」。\n行业背景：Q2 全球智能眼镜出货同比 +35%（见本板块另一条），Meta Connect 同日发布多款新品——Rokid 代表的中国玩家与 Meta 在「下一代端侧 AI 入口」上正面竞速。",
-      tags: ["Rokid", "乐奇二代", "AI眼镜", "数贸会"],
-      url: "https://news.qq.com/rain/a/20260924A09SWC00",
-      image: "https://inews.gtimg.com/om_ls/Onebi6GvNnxq_zXqA_k_IiUTTp1_N4uR8y_QVPZ6py5E0AA_640330/0",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n21", cat: "行业动态", source: "央广网（腾讯新闻）/ 搜狐科技", date: "2026-09-24",
-      title: "斑马智能发布全模态端侧大模型 AutoOmni 2.0-23B-A3B：座舱任务比肩 10 倍级云模型",
-      summary: "云栖大会期间，斑马智能发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B（MoE 架构）：智能座舱普通任务处理能力堪比 10 倍参数量级的云模型；AutoClaw 2.0 智舱协作实车方案同步亮相。",
-      detail: "央广网 9 月 24 日报道：9 月 23 日云栖大会期间，斑马智能正式发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B，AutoClaw 2.0 智舱协作服务实车方案同步亮相。\n技术要点：模型采用 MoE 混合专家架构（命名中的 A3B 即激活参数约 3B 量级的稀疏架构），官方称在智能座舱场景下普通任务处理能力堪比 10 倍参数量级的云模型，复杂任务端云协同处理。\n行业语境：车载是端侧大模型落地最快的场景之一（车规算力 + 私密性强 + 交互高频）；同期云栖大会 AI 新品密集发布，端侧算力被业内评价为「全面爆发」。",
-      tags: ["云栖大会", "AutoOmni 2.0", "智能座舱", "MoE"],
-      url: "https://news.qq.com/rain/a/20260924A07A9800",
-      image: "https://inews.gtimg.com/om_ls/OgUErLUkrqPgOv1hN-ljbN8wvZoECL9qAdZsuHRFHioAYAA_640330/0",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n11", cat: "行业关注事件", source: "36氪 / TechCrunch", date: "2026-09-24",
-      title: "「哑巴 AI」Jev 刷屏：不生成文本的「系统一模型」，决策快 200 倍",
-      summary: "前 OpenAI 研究员创办的 TypeSafe AI 发布 Jev：不做对话、直接输出类型安全的概率化决策，70ms 级响应、快约 200 倍、便宜约 400 倍；上线 3 天获 Vercel / Cloudflare / LangChain 整合。",
-      detail: "Jev 是 TypeSafe AI（前 OpenAI 研究员 Diogo Almeida 创办）9 月 15 日开放早期访问的新模型，被媒体称为「哑巴 AI」：\n它基于 transformer 架构，但不是 LLM——不写文章、不写代码、不陪聊，放弃逐 token 的文本生成，直接输出「类型安全的概率化决策」并内置校准（calibration），对标心理学中快思考的「系统一」能力。因此它高速、轻量，官方与第三方评测称在相关决策任务上比传统 LLM 快约 200 倍、便宜约 400 倍，且从机制上避免幻觉。\n有多轰动：发布 3 天内获 Vercel、Cloudflare、LangChain 等主流平台整合；内测开放不到 36 小时涌入 14 万开发者；同日公司宣布完成 DCVC 领投的 4000 万美元种子轮。TechCrunch 评价其为「一种新型 AI 模型」，Wikipedia 已收录词条。\n36氪追问《Jev 真是新范式吗？》：它在企业自动化（分类、风控、路由等结构化决策）中优势明显，但复杂推理与开放生成仍需与传统 LLM 配合——「快系统 + 慢系统」的组合成为新的工程范式。",
-      tags: ["Jev", "TypeSafe AI", "系统一模型", "决策模型"],
-      url: "https://www.36kr.com/p/3988372551990276",
-      image: "https://img.36krcdn.com/hsossms/20260918/v2_cfa5dfb20fde4be3b974bd19767f8254@000000@ai_oswg679481oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
       imageCap: "配图来自原文页面",
       highlight: true
     }

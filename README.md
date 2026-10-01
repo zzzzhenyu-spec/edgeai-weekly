@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 41 期（2026.09.24 — 09.30 · 近 7 天）
+## 2026 · 第 41 期（2026.09.25 — 10.01 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：Meta Muse 现象级爆火——从 Connect 大会全面接入 AI 眼镜，到被曝未经授权同步 Mac 短信数据库，再到发布钥匙扣设备 Muse Charm 迈出硬件化第一步，生态与争议同步扩张；骁龙峰会演示端侧 30B MoE 完整智能体工作流，高通携手 Liquid AI 展示常驻端侧的主动式智能体，并将 1-bit 模型带上可穿戴平台；苹果首度公布端侧 AI 能力矩阵——从 iPhone 的 140 亿参数到 Mac Studio 集群的 1.6 万亿参数；荣耀 Magic9 发布，397B 智能体大模型进系统、YOYO 可执行百步长程任务；Jev 决策模型一周通关《宝可梦 红》；首款 AI 智能体手机撞上《王者荣耀》反作弊风控后致歉。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：地平线 HSD V2.1 国内量产首发端到端全场景倒车；OpenClaw Enterprise 为持久性智能体补上企业级安全与治理；智能眼镜声学性能测试规范 10 月 2 日实施。
+**近 7 天导读**：近 7 天聚焦：Meta Muse 从爆火走向硬件化——钥匙扣设备 Muse Charm 亮相，但被曝未经授权同步 Mac 短信库的隐私事件同步发酵；骁龙峰会演示端侧 30B MoE 完整智能体工作流，高通携手 Liquid AI 展示常驻端侧的主动式智能体，并将 1-bit 模型带上可穿戴平台；苹果首度公布端侧 AI 能力矩阵（从 iPhone 的 140 亿参数到 Mac Studio 集群的 1.6 万亿参数）；荣耀 Magic9 落地 397B 智能体大模型、YOYO 可执行百步长程任务；华为 Mate 90 发布——麒麟 τ 家族四芯齐发，麒麟 9035 NPU 提升 51%，小艺智能体进旗舰。Jev 决策模型一周通关《宝可梦 红》后，OpenAI 在 DevDay 推出被指「Jev 克隆」的 Decisions API，快系统路线获平台级跟进；首款 AI 智能体手机撞上《王者荣耀》反作弊风控后致歉。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：华为 Mate 90 与麒麟 τ 四芯；OpenAI Decisions API 被指「Jev 克隆」；三星 Galaxy Glasses 过 FCC 认证、有望 11 月上市。
 
 ## 近 7 天速览
 
@@ -12,11 +12,11 @@
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-09-30 | [OpenAI 在 DevDay 推出 Decisions API：被 TechCrunch 直称「Jev 克隆」，快系统路线获头部实验室跟进](https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/) | TechCrunch（编译） |
 | 2026-09-29 | [Muse 硬件化第一步：Meta 发布钥匙扣大小的独立设备 Muse Charm，无摄像头眼镜同步亮相](https://www.thelec.net/news/articleView.html?idxno=14189) | THE ELEC（编译） |
 | 2026-09-28 | [Muse 被曝未经授权同步 Mac 短信数据库：明确拒绝授权后仍读取，Meta 称「bug」](https://9to5mac.com/2026/09/28/yeah-dont-give-metas-muse-app-access-to-your-mac/) | 9to5Mac（编译） |
 | 2026-09-27 | [Jev 一周通关《宝可梦 红》进入名人堂：非 LLM 决策引擎 + Claude Opus 5 当教练](https://www.tomshardware.com/tech-industry/artificial-intelligence/developer-says-jev-decision-model-beat-pokemon-red-in-under-a-week-non-llm-engine-succeeds-where-traditional-chatbots-stalled-for-months-but-claude-opus-5-coached-the-model-through-its-dead-ends) | Tom's Hardware（编译） |
 | 2026-09-27 | [首款 AI 智能体手机撞上反作弊风控：豆包手机助手就《王者荣耀》强制下线致歉](https://finance.sina.com.cn/stock/t/2026-09-27/doc-inithcyh0184530.shtml) | 新浪财经 / 观察者网 |
-| 2026-09-24 | [「哑巴 AI」Jev 刷屏：不生成文本的「系统一模型」，决策快 200 倍](https://www.36kr.com/p/3988372551990276) | 36氪 / TechCrunch |
 
 ### 端侧Agent（2 条）
 
@@ -25,12 +25,11 @@
 | 2026-09-30 | [OpenClaw 推出 Enterprise 版：为持久性智能体补上企业级安全与治理](https://www.ithome.com/1/008/774.htm) | IT之家 |
 | 2026-09-26 | [从模型上手机到智能体落地：骁龙峰会演示端侧 30B MoE 完整工作流](https://cj.sina.com.cn/articles/view/5953466437/162dab0450670bdlw2) | 36氪 / 新浪财经（焦点分析） |
 
-### AI硬件（2 条）
+### AI硬件（1 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
-| 2026-09-24 | [Meta Connect 开幕：智能体 Muse 全面接入 AI 眼镜，硬件矩阵齐发](https://www.chinaz.com/ainews/31346.shtml) | 站长之家（AIbase）/ 新浪财经 |
-| 2026-09-24 | [第二代乐奇（Rokid）AI 眼镜数贸会首秀：更潮、更强、更舒适](https://news.qq.com/rain/a/20260924A09SWC00) | 腾讯新闻（AR圈）/ 搜狐科技 |
+| 2026-10-01 | [三星 Galaxy Glasses 通过美国 FCC 认证：骁龙 AR1 + Android XR + Gemini，有望 11 月上市](https://www.ithome.com/1/009/102.htm) | IT之家 |
 
 ### 芯片厂商（3 条）
 
@@ -40,21 +39,21 @@
 | 2026-09-29 | [高通 × Liquid AI 演示主动式端侧智能体：LiquidCFM 常驻设备感知场景，跨应用自动完成任务](https://www.thelec.net/news/articleView.html?idxno=14179) | THE ELEC（编译） |
 | 2026-09-27 | [高通将 1-bit 模型带上可穿戴平台：内存需求降至 1/8，AR1 与 Sound Elite Gen 2 已支持](https://www.thelec.net/news/articleView.html?idxno=14188) | THE ELEC（编译） |
 
-### 手机厂商（2 条）
+### 手机厂商（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-01 | [华为 Mate 90 发布：麒麟 τ 家族四款芯片齐上，麒麟 9035 NPU 提升 51%，小艺智能体进旗舰](https://www.ithome.com/1/009/101.htm) | IT之家 |
 | 2026-09-28 | [荣耀 Magic9 全系落地 MagicOS 11：397B 智能体大模型进系统，新一代 YOYO 可执行百步长程任务](https://news.qq.com/rain/a/20260928A0BDLL00) | 腾讯新闻（数智前线）/ IT之家 |
 | 2026-09-27 | [荣耀 Magic9 系列定档 9·28：顶配首发第六代骁龙8超级至尊版，搭载 Qwen Intelligence](https://www.ithome.com/1/007/524.htm) | IT之家 |
 
-### 行业动态（4 条）
+### 行业动态（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-09-30 | [《智能眼镜声学性能测试规范》10 月 2 日实施：收音、放音首次有了统一标尺](https://www.ithome.com/1/008/779.htm) | IT之家 |
 | 2026-09-26 | [微软悄然弃用 Copilot+ 品牌标识：新 Surface 满足 40 TOPS 门槛但不再挂标](https://www.tomshardware.com/tablets/microsoft-surface/microsoft-quietly-drops-copilot-branding-from-its-new-laptops-surface-cvp-confirms-new-devices-meet-hardware-requirements-but-lack-controversial-branding) | Tom's Hardware（编译） |
 | 2026-09-25 | [苹果首度公布端侧 AI 能力矩阵：从 iPhone 140 亿参数到 Mac Studio 集群 1.6 万亿](https://www.itsdw.cn/news/28606.html) | IT时代网 / IT之家 |
-| 2026-09-24 | [斑马智能发布全模态端侧大模型 AutoOmni 2.0-23B-A3B：座舱任务比肩 10 倍级云模型](https://news.qq.com/rain/a/20260924A07A9800) | 央广网（腾讯新闻）/ 搜狐科技 |
 
 ## 科研前沿（10 篇）
 
@@ -68,4 +67,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-09-30；本 README 由 `scripts/build_readme.py` 自动生成。
+- 数据更新于 2026-10-01；本 README 由 `scripts/build_readme.py` 自动生成。
