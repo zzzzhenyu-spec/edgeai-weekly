@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30",
+  "updated": "2026-10-05",
   "note": "信源健康记忆：每周更新一次。记录各通道可用性与踩坑结论，帮助新会话/定时任务快速恢复认知，避免重复踩坑。",
   "channels": [
     {
@@ -59,6 +59,13 @@
       "name": "data.js编辑踩坑(重要)",
       "state": "note",
       "notes": "用python改data.js时: 1) re.sub的replacement字符串会把两字符\\n再解释成真实换行→插含换行的JS字符串时用字符串拼接或lambda repl; 2) 追加资源卡到resources末尾时,原最后一项结尾无逗号,要先补逗号; 3) 改完必须用 vm.Script/node 语法校验(浏览器 new Function 也行), audit.py 的正则解析发现不了JS语法错误; 4) python write_text在Windows会写CRLF,无害。本机无node,2026-09-30实测 pip install esprima + esprima.parseScript 可用(文件无可选链/空值合并等ES2020语法时)。 2026-09-30新增坑: 滑窗splice曾吞掉news[]与papers[]之间的边界文本(],\n  papers: [),导致9篇论文并入news、p1被日期过滤误删、D.papers为undefined(app.js引用会整页抛错)。规矩: 滑窗脚本必须先定位papers:[锚点、只在news段内操作; 任何写入后必须跑vm校验D.papers/D.news/D.knowledge三键齐全。"
+    }
+  ],
+  "incidents": [
+    {
+      "date": "2026-10-05",
+      "what": "10-02/03/04 三天定时任务未触发(含周日快照), 10-05 周一补录: 宽抓news -d 4/foreign -d 5, 补5条(n55-n59), archive save 回填第41期(09.28-10.04), 恢复滚动第42期",
+      "lesson": "每日运行开头必须先核对系统日期再定星期几(勿沿上次日期+1推算); 漏跑后用 archive.py save + 手动构造窗口态可完整回补"
     }
   ]
 }
