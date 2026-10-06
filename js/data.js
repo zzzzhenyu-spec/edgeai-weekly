@@ -15,14 +15,25 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 42 期",
-    weekRange: "2026.09.29 — 10.05 · 近 7 天",
-    updated: "2026-10-05",
+    weekRange: "2026.09.30 — 10.06 · 近 7 天",
+    updated: "2026-10-06",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：Jev 线连放大招——TypeSafe AI 估值 100 亿美元、日处理破万亿 token，OpenAI 在 DevDay 推出被指「Jev 克隆」的 Decisions API，「快+慢」分层架构成为平台级共识；华为双响——Mate 90 麒麟 τ 四芯齐发（麒麟 9035 NPU +51%），高通随后获得华为「逻辑折叠」芯片技术专利许可，先进封装路线赢得头部芯片公司背书；地平线 HSD V2.1 国内量产首发端到端全场景倒车；骁龙峰会余温——高通 × Liquid AI 常驻端侧主动式智能体、1-bit 模型登上可穿戴平台；AI 眼镜战线双线推进——三星 Galaxy Glasses 过 FCC 认证有望 11 月上市，荷兰连锁 Hans Anders 则因隐私担忧暂停销售 Meta 雷朋眼镜。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：高通获得华为「逻辑折叠」专利许可；Hans Anders 停售 Meta 眼镜；TypeSafe AI 估值 100 亿美元；openJiuwen X-Router 昇腾亲和路由；Nvidia 64GB DGX Spark。"
+    editorsNote: "近 7 天聚焦：AI 眼镜进入监管时刻——挪威政府拟立法在公共场所临时禁用 AI 眼镜（全球首个国家级动议），荷兰连锁 Hans Anders 停售 Meta 雷朋眼镜，而三星 Galaxy Glasses 过 FCC 认证、有望 11 月上市，扩张与收紧同步进行；Jev 线高热——TypeSafe AI 估值 100 亿美元、日处理破万亿 token，OpenAI 推出被指「Jev 克隆」的 Decisions API，「快+慢」分层成为平台级共识；华为双响——Mate 90 麒麟 τ 四芯齐发（麒麟 9035 NPU +51%），高通获得「逻辑折叠」芯片技术专利许可；地平线 HSD V2.1 国内量产首发端到端全场景倒车。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：挪威拟公共场所临时禁用 AI 眼镜。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n60", cat: "行业关注事件", source: "The Guardian（编译）", date: "2026-10-05",
+      title: "挪威拟立法在公共场所临时禁用 AI 眼镜：全球首个国家级动议，隐私监管从场馆走向立法",
+      summary: "挪威政府宣布将尽快向议会提交法案，在公园、海滩、博物馆、购物中心、学校、幼儿园、医疗机构、健身房与公共活动场所临时禁用带摄像头的智能眼镜（私人使用不受限）——成为首个提出国家级 AI 眼镜禁令的主要国家；数字事务大臣表示「不想要一个人们担心被不知情记录的社会」，同时专家小组将起草长期监管方案。",
+      detail: "卫报 10 月 5 日报道：挪威政府计划提交法案，在公园、海滩、博物馆、购物中心、学校、幼儿园、医疗机构、健身房与公共活动等场所临时禁用带摄像头的智能眼镜，私人使用仍然允许——这使其成为首个提出国家级 AI 眼镜临时禁令的主要国家。\n官方表态：数字事务大臣 Torgeir Micaelsen 称「新的强大技术正在进入社会，人们面临在不知情时被拍照、摄像或录音的风险」，「我们不想要一个人们在习惯不被监视的场所里还要担心被记录的社会」。工党少数派政府需争取其他党派支持，同时已责成专家小组起草长期监管方案。\n对照背景：英美已出现零散限制——法院、酒吧、影院与部分餐厅禁用或限制智能眼镜；Meta 自 2023 年初以来售出至少 900 万副雷朋智能眼镜。就在两天前，荷兰眼镜连锁 Hans Anders 刚宣布停售 Meta 雷朋眼镜。\n端侧视角：AI 眼镜隐私议题完成三级跳——场馆禁拍、零售渠道停售、如今是国家立法动议；「临时禁令 + 长期规则并行」的挪威路径若通过，将成为其他欧洲国家的监管模板，硬件侧的隐私设计（指示灯、物理遮挡、无摄像头版本）将从产品差异点变为合规底线。",
+      tags: ["挪威", "AI眼镜", "隐私监管", "临时禁令"],
+      url: "https://www.theguardian.com/world/2026/oct/05/norway-temporary-ban-smart-glasses-public-places",
+      image: "https://i.guim.co.uk/img/media/40af5768117abd5443d47eba0a698ad852dd88a1/451_0_4085_3270/master/4085.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=7b05d2c122a783977bd623fb1520c5d1",
+      imageCap: "挪威拟临时禁用 AI 智能眼镜（图源：卫报）",
+      highlight: true
+    },
     {
       id: "n58", cat: "芯片厂商", source: "IT之家（彭博社报道）", date: "2026-10-05",
       title: "高通获得华为「逻辑折叠」芯片技术专利许可：先进封装路线赢得头部芯片公司背书",
@@ -142,28 +153,6 @@ const WEEKLY_DATA = {
       url: "https://www.ithome.com/1/008/779.htm",
       image: "",
       imageCap: "",
-      highlight: false
-    },
-    {
-      id: "n47", cat: "行业关注事件", source: "THE ELEC（编译）", date: "2026-09-29",
-      title: "Muse 硬件化第一步：Meta 发布钥匙扣大小的独立设备 Muse Charm，无摄像头眼镜同步亮相",
-      summary: "Meta 于骁龙峰会场边发布钥匙扣大小的 Muse Charm——Muse 智能体的首款独立硬件形态，内置摄像头与扬声器、可识别佩戴者所见并接入 Muse 生态；同场还亮相了去掉摄像头的 Ray-Ban 音频眼镜，以回应 AI 眼镜的隐私争议。Muse 生态从手机 App 向多硬件铺开，但市场对其硬件化节奏仍有分歧。",
-      detail: "THE ELEC 9 月 29 日报道：Meta 在骁龙峰会 2026 期间发布了钥匙扣大小的独立 AI 设备「Muse Charm」，是 Muse 智能体的首款专属硬件。\n产品形态：Muse Charm 可挂在钥匙扣或包上，内置摄像头与扬声器，能识别佩戴者所见场景并接入 Muse 生态执行任务——把「执行型智能体」从手机屏幕里解放出来。\n同场的隐私牌：Meta 同步亮相了去掉摄像头的 Ray-Ban 音频眼镜版本——只保留扬声器与麦克风，直接回应「AI 眼镜摄像头引发的对拍争议」（此前多起酒吧/演出场所禁拍事件集中于带摄眼镜）；配套的 HUD 版显示眼镜仍在推进。\n上下文：Muse 上线三周生态扩张迅速——App 端已曝出未授权同步 Mac 短信库的隐私事件（见同板块此前报道），硬件化将让「 always-on 感知 + 智能体执行」的权限边界问题更尖锐；市场对 Meta 硬件化节奏亦有分歧，当日 Meta 股价随 Muse 进眼镜的消息回落 3.6%。",
-      tags: ["Meta Muse", "Muse Charm", "AI硬件", "无摄像头眼镜"],
-      url: "https://www.thelec.net/news/articleView.html?idxno=14189",
-      image: "https://cdn.thelec.net/news/photo/202609/14189_14386_645.jpg",
-      imageCap: "配图来自原文页面",
-      highlight: false
-    },
-    {
-      id: "n48", cat: "芯片厂商", source: "THE ELEC（编译）", date: "2026-09-29",
-      title: "高通 × Liquid AI 演示主动式端侧智能体：LiquidCFM 常驻设备感知场景，跨应用自动完成任务",
-      summary: "高通与 Liquid AI 在骁龙峰会上演示 Proactive AI Agent：LiquidAI 的 LiquidCFM 系列模型（2.5B 起）常驻骁龙平台，持续感知设备上的用户场景，在用户开口前跨应用完成任务——如识别到用户在订机票后自动调出行程确认与日历创建。主打「主动式」而非「应答式」，且全程端侧运行、数据不出设备。",
-      detail: "THE ELEC 9 月 29 日报道：高通与 Liquid AI 在骁龙峰会 2026 联合展示了面向骁龙平台的 Proactive AI Agent（主动式智能体）方案。\n技术要点：LiquidAI 的 LiquidCFM（液态基础模型）系列从 2.5B 参数起，专为端侧持续运行设计——常驻设备、持续感知屏幕与应用场景，在用户显式指令之前识别意图并跨应用执行（演示场景：识别订票页后自动整理行程、创建日历、拉取登机信息）。\n与现有方案的差异：不是「用户提问-模型回答」的应答式，而是「感知-预判-执行」的主动式；相比 Muse 每用户一台云端 VM 的重资产路线，这套方案强调全端侧、数据不出设备。\n落地方式：LiquidAI 已面向骁龙平台开放 LiquidCFM 模型与智能体框架，设备厂商可集成进自家助手；与此前峰会演示的 30B MoE 端侧智能体工作流互为补充——大模型卷能力上限，常驻小模型卷响应与功耗。",
-      tags: ["高通", "Liquid AI", "主动式智能体", "端侧Agent"],
-      url: "https://www.thelec.net/news/articleView.html?idxno=14179",
-      image: "https://cdn.thelec.net/news/photo/202609/14179_14377_5426.jpg",
-      imageCap: "配图来自原文页面",
       highlight: false
     },
 
