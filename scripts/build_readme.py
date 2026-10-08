@@ -43,9 +43,8 @@ def load_sections():
         items("papers: [", "/* ---------------- 板块三", "knowledge: {")
 
 
-def main():
-    meta, news, papers = load_sections()
-
+def render(meta, news, papers):
+    """从解析结果生成 README 全文（audit.py 的 README 同步门禁复用此函数逐字比对）"""
     L = []
     L.append("# 端侧AI每周情报站 · Edge AI Weekly\n")
     L.append(f"> 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读]({SITE})\n")
@@ -79,7 +78,12 @@ def main():
     L.append("- 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；")
     L.append("- 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；")
     L.append(f"- 数据更新于 {meta['updated']}；本 README 由 `scripts/build_readme.py` 自动生成。\n")
-    (ROOT / "README.md").write_text("\n".join(L), encoding="utf-8", newline="\n")
+    return "\n".join(L)
+
+
+def main():
+    meta, news, papers = load_sections()
+    (ROOT / "README.md").write_text(render(meta, news, papers), encoding="utf-8", newline="\n")
     print(f"README.md 已生成：{len(news)} 条资讯 / {len(papers)} 篇论文")
 
 

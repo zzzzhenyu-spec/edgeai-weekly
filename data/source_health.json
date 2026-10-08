@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05",
+  "updated": "2026-10-08",
   "note": "信源健康记忆：每周更新一次。记录各通道可用性与踩坑结论，帮助新会话/定时任务快速恢复认知，避免重复踩坑。",
   "channels": [
     {
@@ -71,6 +71,11 @@
       "date": "2026-10-06",
       "what": "Ars Technica 对脚本爬虫返回405(WebFetch同样被拒), RemoveMacAI条目因audit无法访问而弃收; 同日arXiv API 先429后超时(网络出口故障), 论文区当日未改动故按已验状态放行",
       "lesson": "外文编译条目的url必须选择爬虫可访问的信源(卫报/AP备选), Ars Technica会405; arXiv瞬时故障时用git diff证明论文区未动即可放行并在汇总说明"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "10-07 定时任务未触发(周四运行时经 meta.updated 与 audit --fast 窗口 WARN 检出), 按-d 3/4 补抓缺口, 补录3条(微软RTX Spark AI PC/苹果卸载压力/Muse iPad)+当日2条(XREAL/WorkBuddy)",
+      "lesson": "audit.py 升级后含结构门禁(分类白名单/README同步/归档对账)与 --fast 秒级终检, 提交前必须: 全量audit->build_readme->--fast 0 FAIL; arXiv 429/超时为瞬时故障, 论文区未动时可放行"
     }
   ]
 }

@@ -15,14 +15,69 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 42 期",
-    weekRange: "2026.09.30 — 10.06 · 近 7 天",
-    updated: "2026-10-06",
+    weekRange: "2026.10.02 — 10.08 · 近 7 天",
+    updated: "2026-10-08",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：AI 眼镜进入监管时刻——挪威政府拟立法在公共场所临时禁用 AI 眼镜（全球首个国家级动议），荷兰连锁 Hans Anders 停售 Meta 雷朋眼镜，而三星 Galaxy Glasses 过 FCC 认证、有望 11 月上市，扩张与收紧同步进行；Jev 线高热——TypeSafe AI 估值 100 亿美元、日处理破万亿 token，OpenAI 推出被指「Jev 克隆」的 Decisions API，「快+慢」分层成为平台级共识；华为双响——Mate 90 麒麟 τ 四芯齐发（麒麟 9035 NPU +51%），高通获得「逻辑折叠」芯片技术专利许可；地平线 HSD V2.1 国内量产首发端到端全场景倒车。学术侧新作集中于端侧 KV 缓存、小音频语言模型与具身 VLM 端侧部署。今日新增：挪威拟公共场所临时禁用 AI 眼镜。"
+    editorsNote: "近 7 天聚焦：AI PC 战线重开——微软联手英伟达发布 RTX Spark 芯片的 Surface Laptop Ultra 与开发者工作站，Windows 11 将向全员开放「Execution Containers」智能体沙箱；苹果则因 Apple Intelligence 最高占用 14GB 存储、机构用户拒购新 Mac 而面临「官方可卸载」压力。AI 眼镜监管与扩张对撞——挪威拟立法公共场所临时禁用、荷兰连锁停售 Meta 眼镜，而 XREAL AURA 以 1279 美元起售价定档 Android XR 阵营第二发。Jev 线维持高热——TypeSafe AI 估值 100 亿美元、日处理破万亿 token；高通获得华为「逻辑折叠」芯片技术专利许可；腾讯 WorkBuddy 为桌面智能体补上本地文件直改能力，Muse 生态扩张至 iPad。今日新增：XREAL AURA 定价；腾讯 WorkBuddy 独立文件浏览器；微软 RTX Spark AI PC 与智能体沙箱；苹果 Apple Intelligence 卸载压力；Muse 登陆 iPad。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n65", cat: "AI硬件", source: "IT之家", date: "2026-10-08",
+      title: "XREAL AURA 定价 1279 美元起：骁龙 Reality Elite 芯片 + Android XR + Gemini，不足 95g 的空间计算眼镜",
+      summary: "XREAL 确认 Android XR 眼镜 AURA 两档定价——12GB+256GB 版 1279 美元、16GB+512GB 版 1499 美元；本体不足 95g，搭载骁龙 Reality Elite 计算单元与 X1S 空间协处理器，索尼 FHD 120Hz microOLED、6DoF 追踪、Bose 调音声学，集成谷歌 Gemini——继三星 Galaxy Glasses 之后 Android XR 阵营的第二发正式定档。",
+      detail: "IT之家 10 月 8 日报道：XREAL 在 10 月 7 日的新闻稿中确认 Android XR 眼镜 AURA 提供两档配置——12GB+256GB 定价 1279 美元、16GB+512GB 定价 1499 美元。\n硬件规格：本体质量不到 95g，搭载 X1S 空间协处理器；索尼 FHD 120Hz microOLED 显示面板（100% sRGB、峰值亮度 1050nits）；集成 Bose 调音声学系统与 4 麦克风阵列，支持 6DoF 追踪与 5 档电致变色。\n计算单元基于高通骁龙 Reality Elite 芯片，支持 Google Gemini，配备 34.8Whr 电池与 Wi-Fi 6、蓝牙 5.3。\n端侧视角：Reality Elite 是高通面向 XR 眼镜的新一代端侧计算平台——XREAL 与三星前后脚定档，Android XR 阵营（谷歌系统 + 高通芯片 + 各家硬件）正以「轻本体 + 端侧算力单元 + 云端 Gemini」的组合对撞 Meta 的一体化路线，年末 AI 眼镜货架将首次真正拥挤。",
+      tags: ["XREAL", "AURA", "Android XR", "骁龙 Reality Elite"],
+      url: "https://www.ithome.com/1/010/564.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/4f343202-ef87-42ee-8610-8d717697019e.jpg",
+      imageCap: "XREAL AURA（图源：IT之家）",
+      highlight: false
+    },
+    {
+      id: "n66", cat: "端侧Agent", source: "IT之家", date: "2026-10-08",
+      title: "腾讯 WorkBuddy 上线独立文件浏览器：右键即唤 AI，本地 Word/Excel/PPT 修改直接写回",
+      summary: "腾讯 AI 办公产品 WorkBuddy 正式上线独立文件浏览器——在文件资源管理器/Finder 中右键即可用 WorkBuddy 打开 Word、Excel、PPT、PDF、Markdown、HTML 等文件，在独立窗口查看编辑并随时调用 AI 分析、改写；修改通过保存直接写回本地文件，多文件标签页各自挂独立的 AI 对话。",
+      detail: "IT之家 10 月 8 日报道：腾讯宣布 AI 办公产品 WorkBuddy 上线独立文件浏览器——用户在文件资源管理器或 Finder 中找到文件后右键选择 WorkBuddy 打开，即可在独立窗口查看文件并直接调用 AI 分析、修改或继续处理。\n能力细节：支持 Word、Excel、PPT、PDF、Markdown、HTML 等格式；多文件标签页切换，每份文件都有独立的 Buddy 对话；可选中正文段落让 AI 针对性改写、润色或补充，结果直接落到文档对应位置。\n本地闭环：修改完成后 Ctrl/Command+S 直接写回本地文件，Markdown 自动保存，HTML 退出编辑时自动保存；还支持跨格式产出，例如打开 Excel 直接说「按这份数据，帮我做一个网页版汇报」。\n端侧视角：桌面智能体最难的一步是「敢让它动本地文件」——WorkBuddy 把文件浏览、编辑与 AI 对话合并进一个窗口并保留用户亲手修改权，是国产大厂在 GUI Agent 本地文件能力上的一次实打实落地。",
+      tags: ["腾讯", "WorkBuddy", "桌面智能体", "本地文件"],
+      url: "https://www.ithome.com/1/010/562.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/31723ed3-0461-4ff4-8e30-dd92a8c22cd7.png",
+      imageCap: "WorkBuddy 文件浏览器（图源：IT之家）",
+      highlight: false
+    },
+    {
+      id: "n62", cat: "行业动态", source: "TechCrunch（编译）", date: "2026-10-07",
+      title: "微软发布 RTX Spark 芯片 AI PC：Surface Laptop Ultra 2600 美元起，Windows 11 全员迎来「Execution Containers」智能体沙箱",
+      summary: "微软在旧金山 Tech Week 活动上发布基于英伟达 RTX Spark 芯片的 Surface Laptop Ultra（2600/3700 美元两档，顶配 5900 美元）与 6000 美元的 Surface RTX Spark Dev Box 开发者工作站——为本地免费运行 AI 模型改造 CPU/GPU/统一内存与散热；更关键的是改版 Windows 11 引入「Execution Containers」智能体沙箱，并将向所有 Windows 11 用户开放。纳德拉称 Windows 平台的未来就是「为任何人的智能体服务」。",
+      detail: "TechCrunch 10 月 7 日报道：微软在旧金山 Tech Week 期间的活动上公布了 Surface Laptop Ultra 的规格与价格——两档基础型号分别 2600 美元与 3700 美元起（更强芯片），选配更高内存/存储可达 5900 美元，最高配已售罄；同场发布搭载 RTX Spark 芯片的开发者工作站 Surface RTX Spark Dev Box，6000 美元起，预装 VS Code、GitHub Copilot CLI、WSL 与 PowerShell 7。\n设计定位：两款设备均为本地免费运行 AI 模型而设计——CPU、GPU、统一内存及散热等硬件均为此改造；同时也胜任内容创作、视频处理与游戏。\n系统侧才是重点：改版 Windows 11 引入「Execution Containers」，让 AI 智能体的沙箱隔离变得更简单，且该功能将面向所有 Windows 11 用户开放。\n纳德拉的表态：「过去三四年我们意识到，光有模型做不成任何事——你真正需要的是编排，是模型之外的内存，是能整合多模型、上下文、记忆与行动空间的 harness 层」；微软要把这套能力「不仅给自家应用，也给任何人的智能体——这就是 Windows 平台未来的意义」。背景：英伟达今年 6 月已与微软及一批 PC 厂商达成基于 RTX Spark 芯片打造 AI 与智能体就绪 Windows PC 的协议。\n端侧视角：Execution Containers 下放全部 Win11 用户，意味着 Windows 正在把自己改造成「智能体操作系统」——沙箱、编排、记忆成为平台级原语；RTX Spark 上 PC 则给端侧模型提供了新的硬件底座，AI PC 竞争从营销标签（Copilot+ 已退役）转入真刀真枪的智能体基础设施。",
+      tags: ["微软", "英伟达", "RTX Spark", "Surface Laptop Ultra", "智能体沙箱"],
+      url: "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/",
+      image: "https://techcrunch.com/wp-content/uploads/2026/10/Microsoft-Surface-Laptop-Ultra.png",
+      imageCap: "Surface Laptop Ultra（图源：TechCrunch）",
+      highlight: true
+    },
+    {
+      id: "n63", cat: "行业动态", source: "9to5Mac（编译）", date: "2026-10-07",
+      title: "Apple Intelligence 卸载压力升级：最高占用 14GB 存储，机构用户因「不可移除」拒购新 Mac",
+      summary: "macOS 27 的 Apple Intelligence 模型最高占用 14GB 存储，对 256GB 机型构成实质挤压；继社区工具 RemoveMacAI 提供非官方移除方案后，John Gruber 指出部分机构因规定禁装 AI 工具、在 Apple Intelligence 无法移除的情况下直接拒绝采购仅能运行 Golden Gate 的新 Mac——苹果或被迫提供官方卸载支持以保住硬件销量。",
+      detail: "9to5Mac 10 月 7 日报道：最新 Apple Intelligence 模型最高需要 14GB 存储空间，对 256GB 机型的用户构成显著占用；独立开发者 Om Lahore 为此开发了移除工具 RemoveMacAI。\n风险与争议：9to5Mac 提醒深度移除有风险——Apple Intelligence 与 macOS 27 深度耦合，强行移除可能影响基本功能；但有观点认为苹果将不得不提供官方移除途径。\nDaring Fireball 的 John Gruber 指出真正的压力来自机构用户：一些组织规定禁装 AI 工具，「在 Apple Intelligence 可被移除之前完全不允许 Golden Gate 系统」——这意味着不买只预装 Golden Gate 的新 Mac 硬件。\n端侧视角：端侧 AI 的「不可卸载」正在从个人吐槽变成采购阻力——存储占用 + 合规要求双重挤压下，「官方可移除」或将成为端侧 AI 的合规底线，与挪威对 AI 眼镜的监管动议同属端侧 AI 治理大潮的两面。",
+      tags: ["Apple Intelligence", "macOS 27", "可卸载性", "RemoveMacAI"],
+      url: "https://9to5mac.com/2026/10/07/apple-may-have-to-officially-support-apple-intelligence-removal-on-macs-to-protect-sales/",
+      image: "https://9to5mac.com/wp-content/uploads/sites/6/2024/10/macbook-air-apple-intelligence.jpg",
+      imageCap: "Apple Intelligence 存储（图源：9to5Mac）",
+      highlight: false
+    },
+    {
+      id: "n64", cat: "行业关注事件", source: "9to5Mac（编译）", date: "2026-10-07",
+      title: "Muse 登陆 iPad：连续数周蝉联 iPhone 下载榜首后，Meta 智能体补齐大屏形态",
+      summary: "Meta 智能体应用 Muse 发布 iPad 版本并新增更多连接器——继 9 月 iPhone 首发、数日后登陆 Mac 之后，三周内完成手机/电脑/平板三端布局；Muse 是 Meta 大部分功能免费的主动式智能体工具，与 Grok Bot、ChatGPT Dots、OpenClaw 同场竞技，上线以来连续数周位居 iPhone 应用下载榜首。",
+      detail: "9to5Mac 10 月 7 日报道：Meta 的主动式智能体应用 Muse 推出 iPad 版更新，同时新增多项连接器——此前该应用已连续数周占据 iPhone 应用下载榜首位。\n产品线节奏：Muse 于 9 月首发 iPhone 版，数日后即推出 Mac 版，如今补齐 iPad——三周内完成手机、电脑、平板三端覆盖。\n竞争位势：9to5Mac 将 Muse 定位为与 Grok Bot、ChatGPT Dots、OpenClaw 竞争的主动式智能体工具，iPhone/iPad 版免费上架 App Store。\n端侧视角：在隐私争议（未经授权同步 Mac 短信库、硬件化 Muse Charm）与监管审视之外，Muse 的生态扩张速度并未放缓——多端覆盖 + 连接器扩张是智能体产品抢占「默认入口」的标准打法。",
+      tags: ["Meta Muse", "iPad", "智能体应用"],
+      url: "https://9to5mac.com/2026/10/07/meta-launches-muse-for-ipad-following-weeks-as-the-top-iphone-app/",
+      image: "https://9to5mac.com/wp-content/uploads/sites/6/2026/09/Muse-by-Meta.webp",
+      imageCap: "Muse for iPad（图源：9to5Mac）",
+      highlight: false
+    },
     {
       id: "n60", cat: "行业关注事件", source: "The Guardian（编译）", date: "2026-10-05",
       title: "挪威拟立法在公共场所临时禁用 AI 眼镜：全球首个国家级动议，隐私监管从场馆走向立法",
@@ -68,7 +123,7 @@ const WEEKLY_DATA = {
       highlight: true
     },
     {
-      id: "n56", cat: "推理与系统", source: "量子位", date: "2026-10-02",
+      id: "n56", cat: "行业动态", source: "量子位", date: "2026-10-02",
       title: "openJiuwen X-Router 自演进模型路由技术首发：昇腾亲和，实测降低 50%+ Token 消耗",
       summary: "openJiuwen 项目首发 X-Router 自演进模型路由技术——「让每一次请求选对模型，让每一次反馈都成为下一次更优、更省的选择」：昇腾亲和，面向 Agent 工作流实测减少 50% 以上 Token 消耗，Agent 越跑越省。",
       detail: "量子位 10 月 2 日报道：openJiuwen 项目首发 X-Router 自演进模型路由技术，口号是「让每一次请求选对模型，让每一次反馈都成为下一次更优、更省的选择」。\n核心特性：昇腾亲和；面向 Agent 工作流的模型路由实测减少 50% 以上的 Token 消耗；路由策略基于反馈自演进，Agent 用得越多、路由越准、成本越低。\n端侧视角：模型路由是端云分层的调度中枢——按请求难度在大小模型、端云之间动态分配算力，直接决定常驻智能体的成本上限；昇腾亲和的开源实现也为国产算力栈补上了一块路由层参考。",
@@ -87,72 +142,6 @@ const WEEKLY_DATA = {
       url: "https://www.tomshardware.com/pc-components/gpus/nvidia-introduces-64gb-dgx-spark-to-throw-local-ai-fans-a-lifeline-amid-the-rampocalypse-new-gb10-config-starts-at-usd4999-for-those-who-can-work-with-less",
       image: "https://cdn.mos.cms.futurecdn.net/D4D8sJFKUe4PFUpqUAPSfB-2560-80.jpg",
       imageCap: "DGX Spark（图源：Tom's Hardware）",
-      highlight: false
-    },
-    {
-      id: "n52", cat: "手机厂商", source: "IT之家", date: "2026-10-01",
-      title: "华为 Mate 90 发布：麒麟 τ 家族四款芯片齐上，麒麟 9035 NPU 提升 51%，小艺智能体进旗舰",
-      summary: "华为 Mate 90 系列全系搭载麒麟 9030/9035/9050/9050 Pro 四款新芯片，Pro 首发的麒麟 9035 NPU 较 9030 再提 51%，是这代端侧算力升级的最大头；HarmonyOS 7 带来小艺智能体、小艺帮记等鸿蒙智能能力，同场发布的 FreeBuds Neo 搭载自研第三代音频 AI 芯片——麒麟 + 鸿蒙智能 + 自研音频芯片构成全品类端侧 AI 软硬栈。起售价 5999 元。",
-      detail: "IT之家 10 月 1 日报道：华为 Mate 90 系列于国庆假期首日发布，Mate 90、Mate 90 Pro、Mate 90 Pro Max 分别搭载麒麟 9030、9035、9050/9050 Pro 四款新芯片，全系沿用「τ 旗舰芯片」设计。\n芯片侧：麒麟 9030 较上代 CPU 提升 13%、GPU 提升 54%、NPU 提升 13%；Pro 首发的麒麟 9035 进一步把 NPU 拉高 51%（CPU+11%、GPU+10%）；Pro Max 的麒麟 9050 Pro 采用逻辑折叠设计，晶体管密度 2.38 亿/mm²、较上代提升 28%。配套 FFRT 软硬协同调度，图片加载速度翻倍。\n系统与智能：HarmonyOS 7 鸿蒙智能全面上机——小艺智能体、小艺帮记、小艺·图库助手、隔空传送；星盾安全架构提供风险网页检测等端侧防护；第二代灵珑屏由朱雀显示芯片驱动，支持 AI Pixel 逐像素调优，峰值亮度 12000nits。\n同场全场景：FreeBuds Neo 搭载自研第三代音频 AI 芯片，WATCH GT 7 Pro 与智慧屏 V7 Max 等同步亮相。\n端侧视角：从手机 SoC 的 NPU 代际提升，到系统级小艺智能体、再到耳机的音频 AI 芯片，华为是目前少有的在手机/手表/耳机/屏全品类自研端侧 AI 芯片并配齐系统级智能体的厂商——麒麟 NPU 的算力水位将直接决定小艺智能体的端侧推理上限。起售价 5999 元，10 月 16 日开售。",
-      tags: ["华为", "麒麟", "小艺智能体", "HarmonyOS"],
-      url: "https://www.ithome.com/1/009/101.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/c6bc1294-0520-4ad2-a9c7-3ba0fca0905a.jpg",
-      imageCap: "Mate 90 系列发布（图源：IT之家）",
-      highlight: true
-    },
-    {
-      id: "n53", cat: "行业关注事件", source: "TechCrunch（编译）", date: "2026-09-30",
-      title: "OpenAI 在 DevDay 推出 Decisions API：被 TechCrunch 直称「Jev 克隆」，快系统路线获头部实验室跟进",
-      summary: "OpenAI CEO Altman 在 DevDay 演讲间隙披露 Decisions API——给模型一组预定义选项、以极快速度输出决策，功能与 TypeSafe AI 的 Jev 相似；TypeSafe CEO 调侃「克隆战争开始了」，并称这「说明以系统一兼容方式构建就是未来」。在 LLM 过慢过贵的痛点下，用廉价快速决策层增强 LLM 的「快+慢」组合正成为智能体编排的主流解法。",
-      detail: "TechCrunch 9 月 30 日报道：OpenAI DevDay 上，CEO Sam Altman 在演讲中披露了新的「Decisions API」——为模型（如 Luna）提供一组预定义选项（如图像分类的类别、智能体的不同行为），聚焦于该选择即可做到极快推理，同时保留图像理解、多语言与安全防护能力。\n与 Jev 的关系：TechCrunch 直言这是「Jev 克隆」——TypeSafe AI 本月早些时候发布的 Jev 是「构建于 LLM 之上的超级分类器」，开发者给出选项集合，它以极低成本与极高速度输出概率分布，专为软件自动化设计。\nTypeSafe 的回应：CEO Diogo Almeida（前 OpenAI 工程师）在 X 上调侃「克隆战争开始了」，并称 OpenAI 的跟进说明「以系统一（System One）兼容方式构建就是未来」——「系统一」即 TypeSafe 对快速直觉式思考的术语，区别于深思熟虑的「系统二」。\n端侧视角：Jev 出圈三周即获 OpenAI 官方跟进，「快系统 + 慢系统」的分层智能体架构从创业公司的独门武器变成平台级标配；对端侧的意义同样直接——小体量决策层 + 端侧部署的组合，正是低成本常驻智能体的可行路径。",
-      tags: ["OpenAI", "Jev", "Decisions API", "系统一模型"],
-      url: "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
-      image: "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2297228249.jpg?resize=1200,800",
-      imageCap: "OpenAI DevDay 2026（图源：TechCrunch）",
-      highlight: false
-    },
-    {
-      id: "n54", cat: "AI硬件", source: "IT之家", date: "2026-10-01",
-      title: "三星 Galaxy Glasses 通过美国 FCC 认证：骁龙 AR1 + Android XR + Gemini，有望 11 月上市",
-      summary: "三星智能眼镜 Galaxy Glasses 已通过美国 FCC 认证（越南制造），预计 11 月上市；信息显示其搭载高通骁龙 AR1 Gen 1 眼镜专用端侧芯片、运行 Android XR 平台并集成谷歌 Gemini——继 Meta 之后，Android 阵营首个头部品牌的 AI 眼镜进入上市倒计时。",
-      detail: "IT之家 10 月 1 日报道：三星 Galaxy Glasses 智能眼镜通过美国 FCC 认证，认证信息显示为越南制造，有望 11 月上市。\n已知规格：搭载高通骁龙 AR1 Gen 1（智能眼镜专用低功耗端侧芯片）、运行 Android XR 平台、集成谷歌 Gemini，支持多项 AI 功能，形态对标 Meta 的音频+显示混合眼镜。\n端侧视角：AR1 正是高通为眼镜定制的端侧平台（上周高通刚演示了 AR1 上的 1-bit 端侧模型方案）；三星 + 谷歌 + 高通的组合意味着 AI 眼镜从 Meta 独跑进入 Android 阵营集团军阶段，11 月上市窗口将直接对撞年末购物季。",
-      tags: ["三星", "Galaxy Glasses", "AI眼镜", "Android XR"],
-      url: "https://www.ithome.com/1/009/102.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/7/be9f2156-f5be-4ec3-94a4-97fb630fc49a.jpg",
-      imageCap: "Galaxy Glasses 概念渲染（图源：IT之家）",
-      highlight: false
-    },
-    {
-      id: "n49", cat: "芯片厂商", source: "IT之家", date: "2026-09-30",
-      title: "地平线发布 HSD V2.1：国内量产首发端到端全场景倒车，首批 iCAR V27 10 月 8 日推送",
-      summary: "地平线 HSD 全场景辅助驾驶系统 V2.1 发布，核心增量是「全场景倒车」Beta——国内量产首发的端到端倒车能力，系统在倒车全程接管并应对侧方来车与盲区风险；行车、泊车、主动安全三条线同步升级，首批搭载 iCAR V27，10 月 8 日起分批推送。",
-      detail: "IT之家 9 月 30 日报道：地平线正式发布 HSD 全场景辅助驾驶系统 V2.1，首批搭载车型 iCAR V27 将于 10 月 8 日起分批向车主推送升级。\n核心增量「全场景倒车」Beta：国内量产首发的端到端全场景倒车——不再是单一的倒车入库功能，而是系统在倒车全程接管，能应对侧方来车、盲区风险等复杂场景，并可与循迹倒车功能衔接。\n行车升级：新增闪灯鸣笛主动警示；提升复杂道路的通过效率；左右转向轨迹更拟人；可按导航路径预选车道；对临停车辆、行人盲区横穿、障碍物占道等场景的理解加深，必要时主动变道脱离风险。\n泊车与主动安全：支持自定义车位吸附、遥控泊入泊出与实体钥匙遥控泊车，360° AVM 与 SR 视图支持双区拖动；视觉神经网络升级，优化横穿场景、转弯低速跟车与 Cut-in 避撞，AES 应对前后夹击的触发逻辑同步优化。\n端侧视角：HSD 是地平线以软硬一体思路推进的辅助驾驶方案，端到端全场景倒车量产上车，意味着车端「行驶全场景」的端到端模型覆盖再补一块——车端正在成为端侧 AI 落地最快的整机场景。",
-      tags: ["地平线", "HSD", "端到端", "智能驾驶"],
-      url: "https://www.ithome.com/1/008/787.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/9/7582edcb-bbee-4372-8711-08325b98d8bb.jpg",
-      imageCap: "HSD V2.1 新增全场景倒车 Beta（图源：IT之家）",
-      highlight: true
-    },
-    {
-      id: "n50", cat: "端侧Agent", source: "IT之家", date: "2026-09-30",
-      title: "OpenClaw 推出 Enterprise 版：为持久性智能体补上企业级安全与治理",
-      summary: "OpenClaw 官宣开源中立的敏感环境持久性智能体管理平台 OpenClaw Enterprise：企业级控制平面支持多租户、严格安全边界与标准化智能体原语，并在智能体全生命周期内提供治理与审计；核心原语可替换为第三方或内部实现，避免供应商锁定，1.0 正式版即将发布。",
-      detail: "IT之家 9 月 30 日报道：OpenClaw 官方于 9 月 29 日官宣 OpenClaw Enterprise——一个开源中立的敏感环境持久性智能体管理平台。\n切中的痛点：持久性智能体的实际部署不及预期，根源在于业界缺乏通用的安全、保障与治理标准——智能体长期驻留系统执行任务，权限与行为边界的可控性是企业落地的前置条件。\n企业级控制平面：支持多租户与严格的安全边界；提供标准化智能体原语；覆盖智能体全生命周期的治理与审计能力；核心原语可整体替换为第三方或内部实现，不绑定单一供应商。\n端侧视角：端侧 Agent 从「能跑」走向「敢用」的分水岭正是治理——把安全边界与生命周期审计做成平台能力，为端侧智能体进入企业敏感环境铺路；1.0 正式版即将发布。",
-      tags: ["OpenClaw", "智能体治理", "端侧Agent", "企业级"],
-      url: "https://www.ithome.com/1/008/774.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/9/15ccc867-b328-4516-a022-31c6b74d4776.jpg",
-      imageCap: "OpenClaw Enterprise 官宣（图源：IT之家）",
-      highlight: false
-    },
-    {
-      id: "n51", cat: "行业动态", source: "IT之家", date: "2026-09-30",
-      title: "《智能眼镜声学性能测试规范》10 月 2 日实施：收音、放音首次有了统一标尺",
-      summary: "市场监管总局发布国家计量技术规范 JJF 2385—2026《智能眼镜声学性能测试规范》，围绕收音、放音两大模块建立标准化检测流程，覆盖频率响应、定向收音、播放漏音三项关键维度，10 月 2 日起正式实施——AI 眼镜的「参数内卷」与虚标问题首次有了统一的计量依据。",
-      detail: "IT之家 9 月 30 日报道：市场监管总局宣布，JJF 2385—2026《智能眼镜声学性能测试规范》国家计量技术规范自 10 月 2 日起正式实施。\n检测框架：围绕「收音」「放音」两大模块建立标准化检测流程，须在消声室内、使用头和躯干模拟器、测量传声器与声学分析仪完成测试。\n三项关键维度：频率响应指标（衡量录音回放的还原程度）、麦克风收音定向性能（区分人声与环境噪声的能力）、播放漏音测试（防止声音外泄、保护通话隐私）。\n端侧视角：语音交互是 AI 眼镜的核心端侧能力，收音质量直接决定唤醒与识别体验——统一标尺落地后，厂商竞争将从「参数内卷」回到真实收放音体验，听力健康与通话隐私也有了底线保障。",
-      tags: ["AI眼镜", "行业标准", "声学测试", "市场监管"],
-      url: "https://www.ithome.com/1/008/779.htm",
-      image: "",
-      imageCap: "",
       highlight: false
     },
 

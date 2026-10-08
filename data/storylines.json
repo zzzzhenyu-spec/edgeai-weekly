@@ -1,20 +1,24 @@
 {
   "threads": [
     {
-      "topic": "Meta Muse 现象级与智能体权限边界",
+      "topic": "Meta Muse 与 AI 眼镜生态（含 Android XR 阵营）",
       "status": "active",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-08",
       "issues": [
         40,
         41,
         "荷兰连锁 Hans Anders 停售 Meta 雷朋眼镜(荷比两地, 10-05)——抵制从场馆/平台蔓延到零售渠道",
-        "挪威政府拟立法公共场所临时禁用AI眼镜(全球首个国家级动议, 10-05): 公园/海滩/博物馆/学校/医院等, 私人使用豁免; 专家小组起草长期规则; 工党少数派政府需联合支持"
+        "挪威政府拟立法公共场所临时禁用AI眼镜(全球首个国家级动议, 10-05): 公园/海滩/博物馆/学校/医院等, 私人使用豁免; 专家小组起草长期规则; 工党少数派政府需联合支持",
+        "Muse 登陆 iPad 并新增连接器(10-07): 三周内完成 iPhone/Mac/iPad 三端, 连续数周蝉联 iPhone 下载榜首",
+        "XREAL AURA 定档$1279起(10-08): 骁龙 Reality Elite 新芯片+Android XR, 阵营第二发, <95g+6DoF"
       ],
       "watch_for": [
+        "AI眼镜隐私硬件设计成为合规底座",
+        "Android XR 阵营扩员(三星Galaxy Glasses/XREAL AURA发售表现)",
         "挪威议会投票进展与其他欧洲国家跟进",
-        "苹果/Meta对监管的官方回应",
         "更多零售渠道停售(已发生Hans Anders)",
-        "AI眼镜隐私硬件设计成为合规底座"
+        "苹果/Meta对监管的官方回应",
+        "骁龙 Reality Elite 生态机型"
       ]
     },
     {
@@ -80,14 +84,16 @@
     {
       "topic": "AI PC 品牌策略转向（Copilot+ 退役）",
       "status": "active",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-10-07",
       "issues": [
-        41
+        41,
+        "微软×英伟达 RTX Spark AI PC(10-07): Surface Laptop Ultra $2600/$3700, Dev Box $6000, Windows 11 Execution Containers 智能体沙箱全员开放, 纳德拉定调 Windows 为智能体平台; 苹果侧: Apple Intelligence 最高占 14GB, 机构因不可卸载拒购新 Mac(Gruber), 官方卸载压力"
       ],
       "watch_for": [
-        "OEM 是否跟进摘标",
-        "Copilot 8GB 内存优化的实际落地版本",
-        "Windows 11 中 Copilot 入口的进一步调整"
+        "Execution Containers 技术细节与开放时间表",
+        "RTX Spark PC 媒体评测(本地模型跑分)",
+        "苹果官方卸载选项回应",
+        "更多 PC 厂商 RTX Spark 机型"
       ]
     },
     {
@@ -117,6 +123,6 @@
       "topic": "华为麒麟与「逻辑折叠」先进封装"
     }
   ],
-  "updated": "2026-10-06",
+  "updated": "2026-10-08",
   "note": "事件线记忆（周报的连载跟踪）。周更流程第0步：逐条核对 watch_for，有新进展则编选条目并更新 last_seen/issues；连续两期无新进展将 status 改为 dormant；再无则移除。新现象级事件开新线。 选题价值锚点（用户 2026-09-28 反馈）：厂商条目盯端侧 AI 能力与落地，销量/首销仅作注脚。"
 }

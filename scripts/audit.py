@@ -1,13 +1,28 @@
 # -*- coding: utf-8 -*-
 # ============================================================
-# audit.py —— 每周发布前的质检：核验 data.js 全部资讯/论文条目
-# 用法: python scripts/audit.py
+# audit.py —— 每期发布前质检：结构门禁(离线) + 网络核验(在线)
+# 用法:
+#   python scripts/audit.py          # 全量：结构门禁 + 网络
+#   python scripts/audit.py --fast   # 仅结构门禁(秒级, 提交前终检用)
+# 退出码: 有 FAIL -> 1, 其余 -> 0 (供流水线机械判定)
 # 检查项:
-#   1. 资讯 url 可访问(HTTP 200)，og:title 与我方标题关键词吻合
-#   2. 资讯日期 vs 信源 URL/页面里的发布日期一致性
-#   3. 论文 arXiv ID 真实存在，标题对得上，日期在近半年内
+#   [结构门禁 --fast 即跑, 全部离线]
+#     S1 资讯分类 ∈ NEWS_CATS 七类 / 论文分类 ∈ PAPER_CATS (白名单取自 js/app.js, 单一事实源)
+#     S2 NEWS_CAT_COLORS 键 == NEWS_CATS(除"全部") —— 数据速览漏计即在此暴露
+#     S3 id 唯一 / 资讯 URL 不重复
+#     S4 rolling 期事件日 ∈ [今日-6, 今日] (越界=WARN 漏跑/未滑窗; 未来日期=FAIL)
+#     S5 README.md 与 data.js 当前内容逐字一致 (改过 data.js 必须重跑 build_readme.py)
+#     S6 归档对账: manifest 计数 vs issue-NN.js 实际条数; manifest 最新期 == live 期号-1 (WARN)
+#     S7 storylines.json / source_health.json JSON 合法
+#   [网络核验]
+#     N1 资讯 url 可访问(HTTP 200)，og:title 与我方标题关键词吻合
+#     N2 资讯日期 vs 信源 URL/页面里的发布日期一致性
+#     N3 论文 arXiv ID 真实存在，标题对得上，日期在近半年内
 # 输出: 每条一行 PASS/WARN/FAIL + 原因，最后汇总
 # ============================================================
+import argparse
+import datetime
+import json
 import re
 import sys
 import time
@@ -15,6 +30,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import build_readme as br
 from netutil import http_get
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,15 +39,123 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 NS = {"a": "http://www.w3.org/2005/Atom"}
 
 
-def load_entries():
-    t = (ROOT / "js" / "data.js").read_text(encoding="utf-8")
-    news, papers = [], []
-    for m in re.finditer(r'id: "(n\d+)"[\s\S]*?date: "([\d-]+)"[\s\S]*?title: "([^"]+)"[\s\S]*?url: "([^"]+)"', t):
-        news.append({"id": m.group(1), "date": m.group(2), "title": m.group(3), "url": m.group(4)})
-    for m in re.finditer(r'id: "(p\d+)"[\s\S]*?title: "([^"]+)"[\s\S]*?url: "(https://arxiv\.org/abs/([\d.]+))"', t):
-        papers.append({"id": m.group(1), "title": m.group(2), "url": m.group(3), "ax": m.group(4)})
-    return news, papers
+# ---------------- 结构门禁（离线） ----------------
 
+def parse_app_js_constants():
+    """从 js/app.js 提取 NEWS_CATS / PAPER_CATS / NEWS_CAT_COLORS——与前端单一事实源，防 audit 自说自话"""
+    t = (ROOT / "js" / "app.js").read_text(encoding="utf-8")
+
+    def arr(name):
+        m = re.search(r"var " + name + r"\s*=\s*\[(.*?)\];", t, re.S)
+        return re.findall(r'"([^"]+)"', m.group(1)) if m else None
+
+    def objkeys(name):
+        m = re.search(r"var " + name + r"\s*=\s*\{(.*?)\};", t, re.S)
+        return re.findall(r'"([^"]+)"\s*:', m.group(1)) if m else None
+
+    return arr("NEWS_CATS"), arr("PAPER_CATS"), objkeys("NEWS_CAT_COLORS")
+
+
+def check_structure():
+    rows = []
+    news_cats, paper_cats, colors = parse_app_js_constants()
+    if not news_cats or not paper_cats or not colors:
+        rows.append(("结构", "FAIL", "无法从 js/app.js 解析 NEWS_CATS/PAPER_CATS/NEWS_CAT_COLORS——audit 与前端脱钩，先修本脚本"))
+        return rows
+    meta, news, papers = br.load_sections()
+    today = datetime.date.today()
+
+    # S1 分类白名单
+    for n in news:
+        if n["cat"] not in news_cats:
+            rows.append((n["id"], "FAIL",
+                         f"分类「{n['cat']}」不在资讯七类里（{ '/'.join(c for c in news_cats if c != '全部')}）"
+                         "——论文分类名误用到资讯会令筛选 chips 与数据速览漏计该条"))
+    for p in papers:
+        if p["cat"] not in paper_cats:
+            rows.append((p["id"], "FAIL", f"分类「{p['cat']}」不在论文分类 PAPER_CATS 里"))
+
+    # S2 前端常量自洽（数据速览只按 NEWS_CAT_COLORS 键统计）
+    if sorted(colors) != sorted(c for c in news_cats if c != "全部"):
+        rows.append(("结构", "FAIL", f"NEWS_CAT_COLORS 键与 NEWS_CATS(除全部)不一致: {sorted(colors)} vs {sorted(c for c in news_cats if c != '全部')}"))
+
+    # S3 id / URL 去重
+    ids = [n["id"] for n in news] + [p["id"] for p in papers]
+    dup = sorted({i for i in ids if ids.count(i) > 1})
+    if dup:
+        rows.append(("结构", "FAIL", f"重复 id: {dup}"))
+    urls = [n["url"] for n in news]
+    dupu = sorted({u for u in urls if urls.count(u) > 1})
+    if dupu:
+        rows.append(("结构", "FAIL", f"资讯重复 URL: {dupu[:2]}"))
+
+    # S4 滚动窗口
+    status = re.search(r'status:\s*"([^"]+)"', (ROOT / "js" / "data.js").read_text(encoding="utf-8"))
+    if status and status.group(1) == "rolling":
+        lo = today - datetime.timedelta(days=6)
+        for n in news:
+            if not n["date"]:
+                rows.append((n["id"], "FAIL", "缺少事件日 date 字段"))
+                continue
+            d = datetime.date.fromisoformat(n["date"])
+            if d > today:
+                rows.append((n["id"], "FAIL", f"事件日 {n['date']} 晚于今日——未来事件不可收录"))
+            elif d < lo:
+                rows.append((n["id"], "WARN", f"事件日 {n['date']} 已滑出窗口 [{lo}, {today}]——当日任务未跑或漏滑窗，需滑出/补录"))
+
+    # S5 README 同步门禁
+    try:
+        expect = br.render(meta, news, papers)
+        actual = (ROOT / "README.md").read_text(encoding="utf-8")
+        if expect != actual:
+            rows.append(("README", "FAIL", "README.md 与 data.js 当前内容不一致（data.js 改动后未重跑 build_readme.py）——重跑: python scripts/build_readme.py"))
+        else:
+            rows.append(("README", "PASS", "README 与 data.js 同步"))
+    except Exception as e:
+        rows.append(("README", "FAIL", "README 一致性比对异常: " + str(e)[:70]))
+
+    # S7 记忆文件 JSON 合法
+    for f in ("data/storylines.json", "data/source_health.json"):
+        try:
+            d = json.loads((ROOT / f).read_text(encoding="utf-8"))
+            if not isinstance(d, dict) or not d:
+                rows.append(("结构", "WARN", f"{f} 为空或非对象"))
+        except Exception as e:
+            rows.append(("结构", "FAIL", f"{f} JSON 解析失败: {str(e)[:60]}"))
+    return rows
+
+
+def check_archive():
+    rows = []
+    mf = ROOT / "js" / "archive" / "manifest.js"
+    if not mf.exists():
+        rows.append(("归档", "WARN", "manifest.js 不存在（可能是首期，尚未归档）"))
+        return rows
+    try:
+        mt = mf.read_text(encoding="utf-8")
+        issues = json.loads(mt[mt.index("["):mt.rindex("]") + 1])
+    except Exception as e:
+        return [("归档", "FAIL", "manifest.js 解析失败: " + str(e)[:60])]
+    live = br.load_sections()[0].get("issue", "")
+    m = re.search(r"第\s*(\d+)\s*期", live)
+    live_no = int(m.group(1)) if m else None
+    for it in issues:
+        f = ROOT / "js" / "archive" / f"issue-{it['no']}.js"
+        if not f.exists():
+            rows.append(("归档", "FAIL", f"manifest 列出第 {it['no']} 期但 issue-{it['no']}.js 不存在"))
+            continue
+        t = f.read_text(encoding="utf-8")
+        nn, pp = len(re.findall(r'id: "n\d+"', t)), len(re.findall(r'id: "p\d+"', t))
+        if nn != it["news"] or pp != it["papers"]:
+            rows.append(("归档", "FAIL", f"第 {it['no']} 期 manifest 计数 {it['news']}/{it['papers']} 与实际文件 {nn}/{pp} 不符"))
+    if issues and live_no and issues[0]["no"] != live_no - 1:
+        rows.append(("归档", "WARN", f"manifest 最新为第 {issues[0]['no']} 期, live 为第 {live_no} 期——周日快照后应相差 1"))
+    if not rows:
+        rows.append(("归档", "PASS", f"{len(issues)} 期计数对账一致"))
+    return rows
+
+
+# ---------------- 网络核验（在线） ----------------
 
 def keywords(title):
     """从我方标题抽核验关键词(去停用词, 取前几个实词)"""
@@ -86,7 +210,7 @@ def audit_news(items):
             # URL 内编码日期与标注日期差 >1 天 -> WARN
             for dh in dhints:
                 if re.match(r"\d{4}-\d{2}-\d{2}", dh):
-                    dd = abs(( __import__("datetime").date.fromisoformat(dh) - __import__("datetime").date.fromisoformat(date)).days)
+                    dd = abs((datetime.date.fromisoformat(dh) - datetime.date.fromisoformat(date)).days)
                     if dd > 1:
                         flag, why = "WARN", f"日期疑似不符: {dmsg}"
                     break
@@ -98,7 +222,7 @@ def audit_news(items):
 
 
 def audit_papers(items):
-    rows, ids = [], ",".join(p["ax"] for p in items)
+    rows, ids = [], ",".join(re.search(r"arxiv\.org/abs/([\d.]+)", p["url"]).group(1) for p in items if "arxiv.org/abs/" in p["url"])
     try:
         xml = http_get("https://export.arxiv.org/api/query?id_list=" + ids + "&max_results=30",
                        timeout=40, headers={"User-Agent": "Mozilla/5.0"}).decode("utf-8", "ignore")
@@ -110,12 +234,15 @@ def audit_papers(items):
         ax = (e.findtext("a:id", "", NS).rsplit("/", 1)[-1]).split("v")[0]
         got[ax] = (e.findtext("a:title", "", NS).replace("\n", " ").strip(),
                    e.findtext("a:published", "", NS)[:10])
-    import datetime
     today = datetime.date.today()
     for p in items:
-        g = got.get(p["ax"])
+        m = re.search(r"arxiv\.org/abs/([\d.]+)", p["url"])
+        if not m:
+            rows.append((p["id"], "WARN", f"非 arXiv 链接, 跳过: {p['url'][:50]}"))
+            continue
+        g = got.get(m.group(1))
         if not g:
-            rows.append((p["id"], "FAIL", f"arXiv 上不存在: {p['ax']}"))
+            rows.append((p["id"], "FAIL", f"arXiv 上不存在: {m.group(1)}"))
             continue
         at, ad = g
         kw = keywords(p["title"])
@@ -130,13 +257,37 @@ def audit_papers(items):
 
 
 def main():
-    news, papers = load_entries()
-    print(f"=== 资讯 {len(news)} 条 ===")
-    for uid, flag, why in audit_news(news):
+    ap = argparse.ArgumentParser(description="周报发布前质检")
+    ap.add_argument("--fast", action="store_true", help="跳过网络核验，只跑结构/一致性门禁（提交前终检）")
+    args = ap.parse_args()
+
+    all_rows = []
+    struct = check_structure() + check_archive()
+    all_rows += struct
+    print(f"=== 结构与一致性门禁（离线, {len(struct)} 项） ===")
+    for uid, flag, why in struct:
         print(f"[{flag:4}] {uid}: {why}")
-    print(f"\n=== 论文 {len(papers)} 篇 ===")
-    for uid, flag, why in audit_papers(papers):
-        print(f"[{flag:4}] {uid}: {why}")
+
+    if not args.fast:
+        meta, news, papers = br.load_sections()
+        print(f"\n=== 资讯 {len(news)} 条 ===")
+        r = audit_news(news)
+        all_rows += r
+        for uid, flag, why in r:
+            print(f"[{flag:4}] {uid}: {why}")
+        print(f"\n=== 论文 {len(papers)} 篇 ===")
+        r = audit_papers(papers)
+        all_rows += r
+        for uid, flag, why in r:
+            print(f"[{flag:4}] {uid}: {why}")
+
+    n_pass = sum(1 for x in all_rows if x[1] == "PASS")
+    n_warn = sum(1 for x in all_rows if x[1] == "WARN")
+    n_fail = sum(1 for x in all_rows if x[1] == "FAIL")
+    print(f"\n=== 汇总: {n_pass} PASS / {n_warn} WARN / {n_fail} FAIL ===")
+    if n_fail:
+        print("存在 FAIL，修完再提交（README 不一致 -> 重跑 build_readme.py；分类越界 -> 改 data.js 后重跑 build_readme.py）")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
