@@ -24,11 +24,12 @@
     {
       "topic": "Jev 决策模型（非 LLM 路线出圈）",
       "status": "active",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-07",
       "issues": [
         40,
         41,
-        "TypeSafe AI 估值100亿美元(10-03); 日处理破1万亿token, 夜间流量=机器自动化为主; JevBench v1.2.1 综合榜 Jev 1.13.0 75.3分第一; OpenAI DevDay 推 Decisions API 被指Jev克隆(09-30)"
+        "TypeSafe AI 估值100亿美元(10-03); 日处理破1万亿token, 夜间流量=机器自动化为主; JevBench v1.2.1 综合榜 Jev 1.13.0 75.3分第一; OpenAI DevDay 推 Decisions API 被指Jev克隆(09-30)",
+        "EmbeddingGemma 2 以嵌入模型实现毫秒级零样本意图路由(10-07): 「快系统」路由思想在端侧落地, 与 Jev/Decisions API 同题竞争"
       ],
       "watch_for": [
         "Decisions API 与 Jev 的正面对比数据",
@@ -40,10 +41,11 @@
     {
       "topic": "骁龙峰会 2026 与端侧大模型平台",
       "status": "active",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-10-07",
       "issues": [
         40,
-        41
+        41,
+        "Google EmbeddingGemma 2 开源(10-07): 740M多模态统一向量空间, 191/567MB内存, ML Kit+NPU即将上Android; 全离线Mac应用AI Edge Foresight首发"
       ],
       "watch_for": [
         "第六代骁龙 8 超级至尊版机型铺开（小米 18 Pro / 荣耀 Magic9 Pro Max 之后）",
@@ -107,11 +109,12 @@
       ]
     },
     {
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-09",
       "issues": [
         "Mate 90 麒麟τ四芯齐发, 9035 NPU+51%(10-01)",
         "高通获得逻辑折叠专利许可+双方5G/AI/网络交叉许可, 华为专利累计总额预计超69亿美元(10-05)",
-        "麒麟9050 Pro=首款逻辑折叠芯片, 双裸片垂直堆叠"
+        "麒麟9050 Pro=首款逻辑折叠芯片, 双裸片垂直堆叠",
+        "鸿蒙电脑9月报告(10-09): 小艺任务2300+技能/端侧WebAgent成功率持平人类; DevEco三件套PC公测(内置GLM5.3, CLI开放给Agent工作流); 擎云HM650台式机(麒麟X90)10月上市"
       ],
       "watch_for": [
         "韬定律论文更新(何庭波)",
@@ -123,6 +126,6 @@
       "topic": "华为麒麟与「逻辑折叠」先进封装"
     }
   ],
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "note": "事件线记忆（周报的连载跟踪）。周更流程第0步：逐条核对 watch_for，有新进展则编选条目并更新 last_seen/issues；连续两期无新进展将 status 改为 dormant；再无则移除。新现象级事件开新线。 选题价值锚点（用户 2026-09-28 反馈）：厂商条目盯端侧 AI 能力与落地，销量/首销仅作注脚。"
 }

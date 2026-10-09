@@ -15,14 +15,47 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 42 期",
-    weekRange: "2026.10.02 — 10.08 · 近 7 天",
-    updated: "2026-10-08",
+    weekRange: "2026.10.03 — 10.09 · 近 7 天",
+    updated: "2026-10-09",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：AI PC 战线重开——微软联手英伟达发布 RTX Spark 芯片的 Surface Laptop Ultra 与开发者工作站，Windows 11 将向全员开放「Execution Containers」智能体沙箱；苹果则因 Apple Intelligence 最高占用 14GB 存储、机构用户拒购新 Mac 而面临「官方可卸载」压力。AI 眼镜监管与扩张对撞——挪威拟立法公共场所临时禁用、荷兰连锁停售 Meta 眼镜，而 XREAL AURA 以 1279 美元起售价定档 Android XR 阵营第二发。Jev 线维持高热——TypeSafe AI 估值 100 亿美元、日处理破万亿 token；高通获得华为「逻辑折叠」芯片技术专利许可；腾讯 WorkBuddy 为桌面智能体补上本地文件直改能力，Muse 生态扩张至 iPad。今日新增：XREAL AURA 定价；腾讯 WorkBuddy 独立文件浏览器；微软 RTX Spark AI PC 与智能体沙箱；苹果 Apple Intelligence 卸载压力；Muse 登陆 iPad。"
+    editorsNote: "近 7 天聚焦：Google 端侧双发——开源多模态嵌入模型 EmbeddingGemma 2 以 740M 参数、567MB 内存跑通文本/图像/音视频统一向量空间并可做毫秒级零样本意图路由，配套的全离线 Mac 笔记应用 AI Edge Foresight 同步亮相；AI PC 战线重开——微软 RTX Spark 芯片 Surface 上架、Windows 11 智能体沙箱全员开放，苹果因 Apple Intelligence 不可卸载面临机构拒购压力；AI 眼镜监管与扩张对撞——挪威拟立法公共场所临时禁用、荷兰连锁停售 Meta 眼镜，XREAL AURA 定档 1279 美元入局 Android XR；Jev 线维持高热（TypeSafe AI 估值 100 亿美元）；华为「逻辑折叠」获高通专利许可，鸿蒙电脑以 2300+ 项小艺技能与 DevEco 智能体开发链补全端侧生态；腾讯 WorkBuddy 让桌面智能体直改本地文件。今日新增：Google EmbeddingGemma 2 开源；AI Edge Foresight 离线笔记应用；鸿蒙电脑 9 月报告。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n69", cat: "行业动态", source: "IT之家", date: "2026-10-09",
+      title: "鸿蒙电脑 9 月报告：小艺任务 2300+ 项技能、端侧 WebAgent 成功率持平人类，DevEco 三件套携 GLM5.3 公测",
+      summary: "华为发布鸿蒙电脑 9 月体验报告——小艺任务模式、图库 AI 修图、沉浸光感等能力随版本升级落地；同步公测的 DevEco「三件套」内置 GLM5.3/GLM5.1 提供智能体化开发体验，DevEco CLI 把鸿蒙开发能力开放给 Agent 工作流；首款鸿蒙台式机擎云 HM650（麒麟 X90）10 月上市。",
+      detail: "IT之家 10 月 9 日报道：华为在花粉俱乐部发布鸿蒙电脑 9 月体验报告，公布 9 月多次版本升级带来的新变化——全新沉浸光感、图库 AI 修图、小艺任务模式、动态壁纸、华为远程分享、超空间存储/内存技术、3D 影像壁纸等。\n小艺任务的底座：多智能体协同架构，4 大类 2300+ 项技能，可自主规划、按需组合；支持定制邮件、浏览器控制、分析任务、生成表格、本地搜索、汇总确认、桌面文件解析等能力——官方称其端侧运行 WebAgent 任务的成功率已持平人类水平。\n开发者侧：DevEco Studio 上线鸿蒙 PC 公测（10 月 8 日首发），一站式 AI 开发工具 DevEco Code 内置 GLM5.3 与 GLM5.1 模型，通过 Harness 技术提升应用编译通过率与任务完成率，支持配置第三方模型并提供 Plan/Build/Goal 三种模式；DevEco CLI 将鸿蒙开发能力开放给各类 AI Agent 工作流。\n产品矩阵：首款鸿蒙台式机华为擎云 HM650 系列计划 10 月上市，搭载自研麒麟 X90 芯片，面向政企、金融、能源等商用办公场景。\n端侧视角：从系统级小艺任务（2300+ 技能、WebAgent 持平人类）到开发侧智能体工具链（DevEco 三件套），鸿蒙电脑正在把「智能体 OS」的叙事从演示推进到可用的技能库与开发链——配合麒麟 X90 台式机补齐政企场景，端侧智能体生态首次在国产 PC 上成建制落地。",
+      tags: ["华为", "鸿蒙电脑", "小艺任务", "DevEco"],
+      url: "https://www.ithome.com/1/011/111.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/3e252a39-85b8-44cd-b4c9-bac71578c9b9.jpg",
+      imageCap: "鸿蒙电脑 9 月体验报告（图源：IT之家）",
+      highlight: false
+    },
+    {
+      id: "n68", cat: "端侧Agent", source: "TechCrunch（编译）", date: "2026-10-08",
+      title: "Google AI Edge Foresight 发布：全程离线的 Mac 会议笔记应用，EmbeddingGemma 2 驱动对标 Granola",
+      summary: "Google 推出 Mac 应用 AI Edge Foresight——完全离线运行，用端侧 EmbeddingGemma 2（740M 参数）跨应用捕获会议笔记（含线下会议）；类 Granola 的分屏设计（速记 + AI 笔记），支持实时转写、上传文档构建本地知识库并实时问答，聊天助手由 Gemma 4 驱动——本地优先智能体应用的旗舰样本。",
+      detail: "TechCrunch 10 月 8 日报道：Google 发布 Mac 应用 AI Edge Foresight，与热门 AI 笔记应用 Granola 直接竞争——由今年 4 月推出本地模型听写工具的同一团队打造。\n工作方式：可完全离线运行，调用端侧 EmbeddingGemma 2（740M 参数）跨应用捕获会议笔记（包括线下会议）；分屏视图一侧手写速记、一侧 AI 生成笔记；可查看会议转写文本，并与 Gemma 4 驱动的助手对话获取答案。\n知识库：支持上传 PDF、Google Docs、Microsoft Office、纯文本、Markdown 与网页书签构建本地知识库，会议中相关问题可实时作答；官方 FAQ 确认应用针对 Apple Silicon 优化、可完全离线使用。\n端侧视角：Foresight 展示了「端侧模型 + 本地知识库」组合的完整体验闭环——录音、转写、检索、问答全程不出设备；TechCrunch 认为它可能只是 Gemma 离线模型家族的能力展示，后续不排除以 Gemini 应用矩阵推出跨视频会议的消费版本。",
+      tags: ["Google", "AI Edge Foresight", "离线AI", "会议笔记"],
+      url: "https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/",
+      image: "https://techcrunch.com/wp-content/uploads/2026/06/google-logo.jpg",
+      imageCap: "Google AI Edge Foresight（图源：TechCrunch）",
+      highlight: false
+    },
+    {
+      id: "n67", cat: "大模型厂商", source: "Google Developers Blog（编译）", date: "2026-10-07",
+      title: "Google 开源 EmbeddingGemma 2：740M 参数统一文本/图像/音视频向量空间，567MB 内存跑通端侧多模态检索",
+      summary: "Google DeepMind 发布开源多模态嵌入模型 EmbeddingGemma 2——原生把文本、图像、视频帧与音频映射进统一向量空间，740M 参数、全模态仅需约 567MB 内存（Pixel 11 Pro 实测），纯文本可低至 191MB；无需训练即可充当毫秒级端侧决策引擎做零样本意图路由，未来数周将通过 ML Kit 上 Android 并提供 NPU 加速。",
+      detail: "Google 开发者博客消息：Google DeepMind 发布 EmbeddingGemma 2——同等尺寸最佳的开放权重多模态嵌入模型，原生将文本、图像、视频帧与音频映射进单一统一向量空间；为本地搜索与媒体检索而生，省去串联图像描述、语音转文本、文本嵌入多模型的延迟与内存开销。\n资源占用：专为本地隐私优先应用设计，740M 参数；模块化编码器设计——纯文本权重仅需约 191MB 活动内存，全多模态约 567MB（Google Pixel 11 Pro 实测）。\n决策引擎用法：无需任何训练数据或微调，模型可将用户输入直接与分类标签/描述匹配，毫秒级完成零样本意图路由——正是「快系统」路由思想在端侧嵌入模型上的直接实现。\n上手与生态：Google AI Edge Gallery 新增 Instant Media Search 与 Video Moments Finder 两个交互演示（本地媒体自然语言检索，向量存于设备端 SQLite），Mac 端可体验 AI Edge Foresight；未来数周模型将以服务形式登陆 Android ML Kit，并提供 NPU 加速。\n端侧视角：统一向量空间 + 百兆级内存占用，意味着「跨模态语义搜索」正式成为手机端的基座能力——相册、笔记、文档的本地检索与端侧 RAG 不再需要云端往返，隐私与离线场景同时受益。",
+      tags: ["Google", "EmbeddingGemma 2", "多模态嵌入", "端侧检索"],
+      url: "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
+      image: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/embeddinggemma2-banner_169.width-1300.png",
+      imageCap: "EmbeddingGemma 2（图源：Google）",
+      highlight: true
+    },
     {
       id: "n65", cat: "AI硬件", source: "IT之家", date: "2026-10-08",
       title: "XREAL AURA 定价 1279 美元起：骁龙 Reality Elite 芯片 + Android XR + Gemini，不足 95g 的空间计算眼镜",
@@ -121,28 +154,6 @@ const WEEKLY_DATA = {
       image: "https://i.qbitai.com/wp-content/uploads/2026/09/e9f0f52b82bb7d241981dbb6ab6fbfd6.webp",
       imageCap: "Diogo Almeida 访谈（图源：量子位）",
       highlight: true
-    },
-    {
-      id: "n56", cat: "行业动态", source: "量子位", date: "2026-10-02",
-      title: "openJiuwen X-Router 自演进模型路由技术首发：昇腾亲和，实测降低 50%+ Token 消耗",
-      summary: "openJiuwen 项目首发 X-Router 自演进模型路由技术——「让每一次请求选对模型，让每一次反馈都成为下一次更优、更省的选择」：昇腾亲和，面向 Agent 工作流实测减少 50% 以上 Token 消耗，Agent 越跑越省。",
-      detail: "量子位 10 月 2 日报道：openJiuwen 项目首发 X-Router 自演进模型路由技术，口号是「让每一次请求选对模型，让每一次反馈都成为下一次更优、更省的选择」。\n核心特性：昇腾亲和；面向 Agent 工作流的模型路由实测减少 50% 以上的 Token 消耗；路由策略基于反馈自演进，Agent 用得越多、路由越准、成本越低。\n端侧视角：模型路由是端云分层的调度中枢——按请求难度在大小模型、端云之间动态分配算力，直接决定常驻智能体的成本上限；昇腾亲和的开源实现也为国产算力栈补上了一块路由层参考。",
-      tags: ["模型路由", "昇腾", "Agent", "推理优化"],
-      url: "https://www.qbitai.com/2026/10/500098.html",
-      image: "https://i.qbitai.com/wp-content/uploads/2026/10/e8e637667f6fc01ccf8a7d61d231532a.png",
-      imageCap: "X-Router 架构（图源：量子位）",
-      highlight: false
-    },
-    {
-      id: "n57", cat: "AI硬件", source: "Tom's Hardware（编译）", date: "2026-10-02",
-      title: "Nvidia 推出 64GB 版 DGX Spark：内存涨价潮下的本地 AI「生路」，4999 美元起",
-      summary: "Nvidia 为 DGX Spark（GB10 平台）推出 64GB 统一内存配置，在内存涨价的「RAMpocalypse」浪潮中为本地 AI 用户提供更低的入门价——新配置 4999 美元起；此前本地 AI 统一内存平台（Strix Halo/GB10/Apple M 系）以 128GB+ 配置为主流。",
-      detail: "Tom's Hardware 10 月 2 日报道：Nvidia 推出 64GB 版 DGX Spark，在内存价格暴涨的「RAMpocalypse」中给本地 AI 用户一条生路——新 GB10 配置 4999 美元起，面向「能用更少内存工作」的用户。\n背景：本地 AI 的统一内存配置此前以 128GB 以上为主流——AMD Strix Halo、Nvidia GB10、Apple M 系列芯片都可配到大内存；内存涨价后，64GB 档成为拉低门槛的现实选择。\n端侧视角：统一内存容量直接决定本地能跑的模型规模上限——64GB 档把「本地跑中型模型」的入门价打到 5000 美元内；在内存涨价潮下，厂商正在重新切分本地 AI 设备的产品档位。",
-      tags: ["Nvidia", "DGX Spark", "本地AI", "统一内存"],
-      url: "https://www.tomshardware.com/pc-components/gpus/nvidia-introduces-64gb-dgx-spark-to-throw-local-ai-fans-a-lifeline-amid-the-rampocalypse-new-gb10-config-starts-at-usd4999-for-those-who-can-work-with-less",
-      image: "https://cdn.mos.cms.futurecdn.net/D4D8sJFKUe4PFUpqUAPSfB-2560-80.jpg",
-      imageCap: "DGX Spark（图源：Tom's Hardware）",
-      highlight: false
     },
 
   ],

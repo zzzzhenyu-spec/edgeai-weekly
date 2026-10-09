@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 42 期（2026.10.02 — 10.08 · 近 7 天）
+## 2026 · 第 42 期（2026.10.03 — 10.09 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：AI PC 战线重开——微软联手英伟达发布 RTX Spark 芯片的 Surface Laptop Ultra 与开发者工作站，Windows 11 将向全员开放「Execution Containers」智能体沙箱；苹果则因 Apple Intelligence 最高占用 14GB 存储、机构用户拒购新 Mac 而面临「官方可卸载」压力。AI 眼镜监管与扩张对撞——挪威拟立法公共场所临时禁用、荷兰连锁停售 Meta 眼镜，而 XREAL AURA 以 1279 美元起售价定档 Android XR 阵营第二发。Jev 线维持高热——TypeSafe AI 估值 100 亿美元、日处理破万亿 token；高通获得华为「逻辑折叠」芯片技术专利许可；腾讯 WorkBuddy 为桌面智能体补上本地文件直改能力，Muse 生态扩张至 iPad。今日新增：XREAL AURA 定价；腾讯 WorkBuddy 独立文件浏览器；微软 RTX Spark AI PC 与智能体沙箱；苹果 Apple Intelligence 卸载压力；Muse 登陆 iPad。
+**近 7 天导读**：近 7 天聚焦：Google 端侧双发——开源多模态嵌入模型 EmbeddingGemma 2 以 740M 参数、567MB 内存跑通文本/图像/音视频统一向量空间并可做毫秒级零样本意图路由，配套的全离线 Mac 笔记应用 AI Edge Foresight 同步亮相；AI PC 战线重开——微软 RTX Spark 芯片 Surface 上架、Windows 11 智能体沙箱全员开放，苹果因 Apple Intelligence 不可卸载面临机构拒购压力；AI 眼镜监管与扩张对撞——挪威拟立法公共场所临时禁用、荷兰连锁停售 Meta 眼镜，XREAL AURA 定档 1279 美元入局 Android XR；Jev 线维持高热（TypeSafe AI 估值 100 亿美元）；华为「逻辑折叠」获高通专利许可，鸿蒙电脑以 2300+ 项小艺技能与 DevEco 智能体开发链补全端侧生态；腾讯 WorkBuddy 让桌面智能体直改本地文件。今日新增：Google EmbeddingGemma 2 开源；AI Edge Foresight 离线笔记应用；鸿蒙电脑 9 月报告。
 
 ## 近 7 天速览
 
@@ -16,19 +16,19 @@
 | 2026-10-05 | [挪威拟立法在公共场所临时禁用 AI 眼镜：全球首个国家级动议，隐私监管从场馆走向立法](https://www.theguardian.com/world/2026/oct/05/norway-temporary-ban-smart-glasses-public-places) | The Guardian（编译） |
 | 2026-10-03 | [Jev 开发商 TypeSafe AI 估值 100 亿美元：日处理破万亿 token，创始人详解「系统一」路线](https://www.qbitai.com/2026/10/500148.html) | 量子位 |
 
-### 端侧Agent（1 条）
+### 端侧Agent（2 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-08 | [Google AI Edge Foresight 发布：全程离线的 Mac 会议笔记应用，EmbeddingGemma 2 驱动对标 Granola](https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/) | TechCrunch（编译） |
 | 2026-10-08 | [腾讯 WorkBuddy 上线独立文件浏览器：右键即唤 AI，本地 Word/Excel/PPT 修改直接写回](https://www.ithome.com/1/010/562.htm) | IT之家 |
 
-### AI硬件（3 条）
+### AI硬件（2 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-10-08 | [XREAL AURA 定价 1279 美元起：骁龙 Reality Elite 芯片 + Android XR + Gemini，不足 95g 的空间计算眼镜](https://www.ithome.com/1/010/564.htm) | IT之家 |
 | 2026-10-05 | [AI 眼镜隐私抵制蔓延到零售渠道：荷兰连锁 Hans Anders 暂停销售 Meta 雷朋智能眼镜](https://www.ithome.com/1/009/798.htm) | IT之家 |
-| 2026-10-02 | [Nvidia 推出 64GB 版 DGX Spark：内存涨价潮下的本地 AI「生路」，4999 美元起](https://www.tomshardware.com/pc-components/gpus/nvidia-introduces-64gb-dgx-spark-to-throw-local-ai-fans-a-lifeline-amid-the-rampocalypse-new-gb10-config-starts-at-usd4999-for-those-who-can-work-with-less) | Tom's Hardware（编译） |
 
 ### 芯片厂商（1 条）
 
@@ -36,13 +36,19 @@
 |------|------|------|
 | 2026-10-05 | [高通获得华为「逻辑折叠」芯片技术专利许可：先进封装路线赢得头部芯片公司背书](https://www.ithome.com/1/009/852.htm) | IT之家（彭博社报道） |
 
+### 大模型厂商（1 条）
+
+| 日期 | 要闻 | 来源 |
+|------|------|------|
+| 2026-10-07 | [Google 开源 EmbeddingGemma 2：740M 参数统一文本/图像/音视频向量空间，567MB 内存跑通端侧多模态检索](https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/) | Google Developers Blog（编译） |
+
 ### 行业动态（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-09 | [鸿蒙电脑 9 月报告：小艺任务 2300+ 项技能、端侧 WebAgent 成功率持平人类，DevEco 三件套携 GLM5.3 公测](https://www.ithome.com/1/011/111.htm) | IT之家 |
 | 2026-10-07 | [微软发布 RTX Spark 芯片 AI PC：Surface Laptop Ultra 2600 美元起，Windows 11 全员迎来「Execution Containers」智能体沙箱](https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/) | TechCrunch（编译） |
 | 2026-10-07 | [Apple Intelligence 卸载压力升级：最高占用 14GB 存储，机构用户因「不可移除」拒购新 Mac](https://9to5mac.com/2026/10/07/apple-may-have-to-officially-support-apple-intelligence-removal-on-macs-to-protect-sales/) | 9to5Mac（编译） |
-| 2026-10-02 | [openJiuwen X-Router 自演进模型路由技术首发：昇腾亲和，实测降低 50%+ Token 消耗](https://www.qbitai.com/2026/10/500098.html) | 量子位 |
 
 ## 科研前沿（10 篇）
 
@@ -56,4 +62,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-10-08；本 README 由 `scripts/build_readme.py` 自动生成。
+- 数据更新于 2026-10-09；本 README 由 `scripts/build_readme.py` 自动生成。
