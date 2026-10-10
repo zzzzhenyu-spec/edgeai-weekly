@@ -15,14 +15,36 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 42 期",
-    weekRange: "2026.10.03 — 10.09 · 近 7 天",
-    updated: "2026-10-09",
+    weekRange: "2026.10.04 — 10.10 · 近 7 天",
+    updated: "2026-10-10",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：Google 端侧双发——开源多模态嵌入模型 EmbeddingGemma 2 以 740M 参数、567MB 内存跑通文本/图像/音视频统一向量空间并可做毫秒级零样本意图路由，配套的全离线 Mac 笔记应用 AI Edge Foresight 同步亮相；AI PC 战线重开——微软 RTX Spark 芯片 Surface 上架、Windows 11 智能体沙箱全员开放，苹果因 Apple Intelligence 不可卸载面临机构拒购压力；AI 眼镜监管与扩张对撞——挪威拟立法公共场所临时禁用、荷兰连锁停售 Meta 眼镜，XREAL AURA 定档 1279 美元入局 Android XR；Jev 线维持高热（TypeSafe AI 估值 100 亿美元）；华为「逻辑折叠」获高通专利许可，鸿蒙电脑以 2300+ 项小艺技能与 DevEco 智能体开发链补全端侧生态；腾讯 WorkBuddy 让桌面智能体直改本地文件。今日新增：Google EmbeddingGemma 2 开源；AI Edge Foresight 离线笔记应用；鸿蒙电脑 9 月报告。"
+    editorsNote: "近 7 天聚焦：Google 端侧双发——开源多模态嵌入模型 EmbeddingGemma 2（740M 参数、567MB 内存统一文本/图像/音视频向量空间）搭配全离线 Mac 笔记应用 AI Edge Foresight；AI PC 战线重开——微软 RTX Spark 芯片 Surface 上架、Windows 11 智能体沙箱全员开放，苹果因 Apple Intelligence 不可卸载面临机构拒购；AI 眼镜监管与扩张对撞——挪威拟立法公共场所临时禁用、荷兰连锁停售，XREAL AURA 定档 1279 美元入局 Android XR；Jev 线再进一步——融资 8.7 亿美元、估值 75 亿美元获 a16z 领投官宣，财富 500 强三分之一已在使用；华为「逻辑折叠」获高通专利许可、鸿蒙电脑以 2300+ 项小艺技能与 DevEco 智能体开发链补全端侧生态；腾讯 WorkBuddy 让智能体直改本地文件，腾讯云再开源 TeamAI 统一团队 Agent 的技能与规范管理。今日新增：腾讯云开源 TeamAI；TypeSafe AI 融资官宣 8.7 亿美元（估值 75 亿美元，早前 100 亿美元为落地前口径）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n70", cat: "端侧Agent", source: "IT之家", date: "2026-10-10",
+      title: "腾讯云开源 TeamAI：把团队的 Skill、规范与知识装进 Git 仓库，一人配置、16 种 Agent 全员复用",
+      summary: "腾讯云开源内部自用的团队 AI 协作工具 TeamAI——基于 Git 把团队 Skill、工作规范、工具配置与项目知识统一进仓库，像管理代码一样评审、更新与版本管理，再同步到成员各自的 Agent（已适配 WorkBuddy、Claude Code、Cursor、Codex 等 16 种）；并可与腾讯云智能体管理平台 ClawPro 打通，管理员在管控台统一管理 Skill、MCP 配置并分发到已接入的本地 Agent。",
+      detail: "IT之家 10 月 10 日报道：腾讯云宣布开源内部自用的 TeamAI——一款基于 Git 的团队 AI 协作工具，把团队使用的 Skill、工作规范、工具配置和项目知识统一放进 Git 仓库，像管理代码一样评审、更新和版本管理，再同步到成员各自使用的 Agent 中，实现「一人配置，全员复用」；目前已适配 WorkBuddy、CodeBuddy、Claude Code、Codex、Cursor 等 16 种 Agent。\n协作机制：沿用开发者熟悉的 Git 流程——成员提交技能或修改规范时自动创建分支、发起合并请求交团队评审；确认合入后，支持会话启动 Hook 的 Agent 会在新对话开始时自动拉取更新，无需逐人通知或手动替换。\n治理与沉淀：新增模型配置统一下发能力，管理员可为涉及内部数据的任务统一配置符合安全要求的模型服务；Agent 还会在会话结束时提示成员分享「反复纠正、工具调用失败」类经验，自动整理成文档入库供后续检索复用。\n端侧视角：TeamAI 与此前上线的 WorkBuddy 一脉相承——当每个成员桌面上跑着不同品牌的本地 Agent 时，「技能与规范的版本化分发」成了团队级刚需；TeamAI 用 Git 工作流补上了这一层，配合 ClawPro 对本地 Agent 的统一纳管，腾讯正在把端侧 Agent 从单机工具做成可管理的企业基础设施。",
+      tags: ["腾讯云", "TeamAI", "Agent 协作", "开源"],
+      url: "https://www.ithome.com/1/011/432.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/dd01ede5-936c-40b9-899b-9e0dae78e5ec.png",
+      imageCap: "TeamAI（图源：IT之家）",
+      highlight: false
+    },
+    {
+      id: "n71", cat: "行业关注事件", source: "TechCrunch（编译）", date: "2026-10-09",
+      title: "TypeSafe AI 融资官宣：8.7 亿美元、估值 75 亿美元，a16z 领投——财富 500 强三分之一已在用 Jev",
+      summary: "Jev 开发商 TypeSafe AI 官宣完成 8.7 亿美元融资，估值 75 亿美元，a16z 领投、红杉与 DCVC 跟投（此前中文报道的「100 亿美元」为融资落地前口径，以本次官宣为准）；公司称三分之一的财富 500 强企业已在使用 Jev——发布仅三周多，企业采用速度罕见。",
+      detail: "TechCrunch 10 月 9 日报道：TypeSafe AI 完成 8.7 亿美元融资，估值 75 亿美元，由 Andreessen Horowitz 领投，Sequoia 与现有投资者 DCVC 跟投；早前中文报道曾以 100 亿美元口径传述其估值，本次以融资官宣数字为准。\n采用面：公司称三分之一的财富 500 强企业已在使用 Jev——距 9 月 15 日发布仅三周多，企业级采用速度罕见。\n技术定位：Jev 基于 Transformer 架构但不是 LLM——不输出文本，而是输出概率，即公司所称的「校准决策」（calibrated decisions）；比 LLM 显著更快、消耗 token 远少，定位为任务自动化而非文本或代码生成。创始人 Almeida 称「过去四年我们在人类语言上做得极好，但对自动化没用——计算机说的是另一种语言」。\n公司背景：TypeSafe AI 于 2024 年创立，三位联合创始人——Diogo Almeida（前 OpenAI 研究员）、Sasha Sheng（前 Meta 研究工程师）与 Erik Gafni（工程师/创业者）。\n端侧视角：巨额定调「非文本模型」路线的价值——当头部资本押注「决策概率输出 + 极低 token 消耗」，快系统架构从技术争议变成商业共识，也为端侧小模型承担路由/决策层提供了持续的资本与生态推力。",
+      tags: ["TypeSafe AI", "Jev", "融资", "a16z"],
+      url: "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
+      image: "https://techcrunch.com/wp-content/uploads/2026/09/typesafe-ai.jpg",
+      imageCap: "TypeSafe AI（图源：TechCrunch）",
+      highlight: true
+    },
     {
       id: "n69", cat: "行业动态", source: "IT之家", date: "2026-10-09",
       title: "鸿蒙电脑 9 月报告：小艺任务 2300+ 项技能、端侧 WebAgent 成功率持平人类，DevEco 三件套携 GLM5.3 公测",
@@ -143,17 +165,6 @@ const WEEKLY_DATA = {
       image: "https://img.ithome.com/newsuploadfiles/2026/8/373f8d53-b946-46bd-9bc3-694c7e7017dc.jpg",
       imageCap: "Meta 雷朋智能眼镜（图源：IT之家）",
       highlight: false
-    },
-    {
-      id: "n55", cat: "行业关注事件", source: "量子位", date: "2026-10-03",
-      title: "Jev 开发商 TypeSafe AI 估值 100 亿美元：日处理破万亿 token，创始人详解「系统一」路线",
-      summary: "Jev 开发商 TypeSafe AI 估值站上 100 亿美元：Jev 日处理量突破 1 万亿 token、夜间流量持续走高（大量调用来自机器自动化），JevBench 综合榜排名第一；创始人 Diogo Almeida 首次系统阐述「系统一」路线——choice/null/score 三原语 + RLCD 训练，并称「就算给十亿美元也不会从零预训练大模型」。",
-      detail: "量子位 10 月 3 日报道：Jev 开发商 TypeSafe AI 估值站上 100 亿美元；创始人 Diogo Almeida（前 OpenAI 工程师）做客 Latent Space 播客（swyx 主持），首次系统回应技术路线与商业化问题。\n规模数据：Jev 日处理量突破 1 万亿 token，夜间流量持续走高——说明大量调用来自机器自动化而非人类对话；发布视频 6 天浏览量 3870 万；第三方 JevBench v1.2.1 综合榜上，Jev 1.13.0 以 75.3 分排名第一。\n命名与路线：Jev 源于「杰文斯悖论」——效率提升反而放大总消耗，产品追求极致性价比；「系统一」定位为机器原生、大型可编程模型，核心是 choice（枚举）、null（二值判断）、score（排序阈值）三原语；训练采用 RLCD（以程序闭环验证为目标），区别于 RLHF 与 RLVR。\n端侧视角：级联是 Jev 的典型用法——置信度高直接采纳，中间区间调用更强模型二次校验；小体量决策模型 + 级联 + 端侧部署正是低成本常驻智能体的工程解，TypeSafe 的五年目标是拉动全要素生产率增长 3%。",
-      tags: ["Jev", "TypeSafe AI", "系统一模型", "估值"],
-      url: "https://www.qbitai.com/2026/10/500148.html",
-      image: "https://i.qbitai.com/wp-content/uploads/2026/09/e9f0f52b82bb7d241981dbb6ab6fbfd6.webp",
-      imageCap: "Diogo Almeida 访谈（图源：量子位）",
-      highlight: true
     },
 
   ],

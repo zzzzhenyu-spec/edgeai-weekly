@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "note": "信源健康记忆：每周更新一次。记录各通道可用性与踩坑结论，帮助新会话/定时任务快速恢复认知，避免重复踩坑。",
   "channels": [
     {
@@ -59,6 +59,11 @@
       "name": "data.js编辑踩坑(重要)",
       "state": "note",
       "notes": "用python改data.js时: 1) re.sub的replacement字符串会把两字符\\n再解释成真实换行→插含换行的JS字符串时用字符串拼接或lambda repl; 2) 追加资源卡到resources末尾时,原最后一项结尾无逗号,要先补逗号; 3) 改完必须用 vm.Script/node 语法校验(浏览器 new Function 也行), audit.py 的正则解析发现不了JS语法错误; 4) python write_text在Windows会写CRLF,无害。本机无node,2026-09-30实测 pip install esprima + esprima.parseScript 可用(文件无可选链/空值合并等ES2020语法时)。 2026-09-30新增坑: 滑窗splice曾吞掉news[]与papers[]之间的边界文本(],\n  papers: [),导致9篇论文并入news、p1被日期过滤误删、D.papers为undefined(app.js引用会整页抛错)。规矩: 滑窗脚本必须先定位papers:[锚点、只在news段内操作; 任何写入后必须跑vm校验D.papers/D.news/D.knowledge三键齐全。"
+    },
+    {
+      "name": "国产厂商官方信源缺口(2026-10-09)",
+      "state": "note",
+      "notes": "华为 consumer.huawei.com/cn/news 404、huawei.com/cn/news SSL失败，无官方RSS可接；荣耀/小米/三星/vivo/OPPO 同样未接官方源（与 Meta/联发科博客同属网络不可达或无RSS）。当前依赖快讯RSS(量子位/IT之家等，有报道角度偏差风险)+周日定向检索。对策已入检查单1.10与cron：重大厂商发布(旗舰/芯片/眼镜/官方模型)必须定向检索官方通稿核对模型规格后再入库，周日复核highlight条目。华为官方通稿可靠镜像：官网 newsroom 与华为终端官方公众号(周更通道fetch_wechat可见)；媒体侧搜狐/凤凰常全文转载官方通稿。"
     }
   ],
   "incidents": [
@@ -81,6 +86,16 @@
       "date": "2026-10-09",
       "what": "arXiv API 再次429(论文区当日未改动, git diff为证, 按环境故障放行); 前日漏收的Google EmbeddingGemma 2经外文池二次扫描补入——gnews通道条目易在当日筛选中漏看, 次日复审有价值",
       "lesson": "arXiv 429为常态性瞬时故障, 处置口径: git diff证明论文区未动+--fast 0 FAIL即可提交并说明"
+    },
+    {
+      "date": "2026-10-09",
+      "what": "用户发现 10-01 Mate 90 条目漏「端侧 30B MoE 全模态端侧大模型 + 6B AIGC 图像模型」——收录依据的 IT之家快讯只写芯片规格，模型细节在官方通稿与搜狐/网易/凤凰报道中",
+      "lesson": "重大厂商发布禁止单源快讯定稿：模型参数/架构/端侧运行特性必须官方通稿核对(检查单1.10)；第41期归档已勘误补录"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "Jev估值口径冲突处理: 量子位10-03报100亿美元(访谈口径) vs TechCrunch 10-09官宣$7.5B(a16z领投$870M), 已按官宣数字收录并明示口径差异; 双源核对规则(检查单1.10)自本日起机械执行——厂商重大发布入库前必核官方通稿",
+      "lesson": "融资/参数类数字以最终官宣为准, 访谈/传闻口径须在条目中标注; 明日周日复核本周厂商highlight条目+第41期Mate 90勘误(端侧30B MoE全模态大模型漏记)"
     }
   ]
 }

@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 42 期（2026.10.03 — 10.09 · 近 7 天）
+## 2026 · 第 42 期（2026.10.04 — 10.10 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：Google 端侧双发——开源多模态嵌入模型 EmbeddingGemma 2 以 740M 参数、567MB 内存跑通文本/图像/音视频统一向量空间并可做毫秒级零样本意图路由，配套的全离线 Mac 笔记应用 AI Edge Foresight 同步亮相；AI PC 战线重开——微软 RTX Spark 芯片 Surface 上架、Windows 11 智能体沙箱全员开放，苹果因 Apple Intelligence 不可卸载面临机构拒购压力；AI 眼镜监管与扩张对撞——挪威拟立法公共场所临时禁用、荷兰连锁停售 Meta 眼镜，XREAL AURA 定档 1279 美元入局 Android XR；Jev 线维持高热（TypeSafe AI 估值 100 亿美元）；华为「逻辑折叠」获高通专利许可，鸿蒙电脑以 2300+ 项小艺技能与 DevEco 智能体开发链补全端侧生态；腾讯 WorkBuddy 让桌面智能体直改本地文件。今日新增：Google EmbeddingGemma 2 开源；AI Edge Foresight 离线笔记应用；鸿蒙电脑 9 月报告。
+**近 7 天导读**：近 7 天聚焦：Google 端侧双发——开源多模态嵌入模型 EmbeddingGemma 2（740M 参数、567MB 内存统一文本/图像/音视频向量空间）搭配全离线 Mac 笔记应用 AI Edge Foresight；AI PC 战线重开——微软 RTX Spark 芯片 Surface 上架、Windows 11 智能体沙箱全员开放，苹果因 Apple Intelligence 不可卸载面临机构拒购；AI 眼镜监管与扩张对撞——挪威拟立法公共场所临时禁用、荷兰连锁停售，XREAL AURA 定档 1279 美元入局 Android XR；Jev 线再进一步——融资 8.7 亿美元、估值 75 亿美元获 a16z 领投官宣，财富 500 强三分之一已在使用；华为「逻辑折叠」获高通专利许可、鸿蒙电脑以 2300+ 项小艺技能与 DevEco 智能体开发链补全端侧生态；腾讯 WorkBuddy 让智能体直改本地文件，腾讯云再开源 TeamAI 统一团队 Agent 的技能与规范管理。今日新增：腾讯云开源 TeamAI；TypeSafe AI 融资官宣 8.7 亿美元（估值 75 亿美元，早前 100 亿美元为落地前口径）。
 
 ## 近 7 天速览
 
@@ -12,14 +12,15 @@
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-09 | [TypeSafe AI 融资官宣：8.7 亿美元、估值 75 亿美元，a16z 领投——财富 500 强三分之一已在用 Jev](https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/) | TechCrunch（编译） |
 | 2026-10-07 | [Muse 登陆 iPad：连续数周蝉联 iPhone 下载榜首后，Meta 智能体补齐大屏形态](https://9to5mac.com/2026/10/07/meta-launches-muse-for-ipad-following-weeks-as-the-top-iphone-app/) | 9to5Mac（编译） |
 | 2026-10-05 | [挪威拟立法在公共场所临时禁用 AI 眼镜：全球首个国家级动议，隐私监管从场馆走向立法](https://www.theguardian.com/world/2026/oct/05/norway-temporary-ban-smart-glasses-public-places) | The Guardian（编译） |
-| 2026-10-03 | [Jev 开发商 TypeSafe AI 估值 100 亿美元：日处理破万亿 token，创始人详解「系统一」路线](https://www.qbitai.com/2026/10/500148.html) | 量子位 |
 
-### 端侧Agent（2 条）
+### 端侧Agent（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-10 | [腾讯云开源 TeamAI：把团队的 Skill、规范与知识装进 Git 仓库，一人配置、16 种 Agent 全员复用](https://www.ithome.com/1/011/432.htm) | IT之家 |
 | 2026-10-08 | [Google AI Edge Foresight 发布：全程离线的 Mac 会议笔记应用，EmbeddingGemma 2 驱动对标 Granola](https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/) | TechCrunch（编译） |
 | 2026-10-08 | [腾讯 WorkBuddy 上线独立文件浏览器：右键即唤 AI，本地 Word/Excel/PPT 修改直接写回](https://www.ithome.com/1/010/562.htm) | IT之家 |
 
@@ -62,4 +63,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-10-09；本 README 由 `scripts/build_readme.py` 自动生成。
+- 数据更新于 2026-10-10；本 README 由 `scripts/build_readme.py` 自动生成。
