@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-label="模型、芯片、工具三条曲线正在交汇">
+  <defs>
+    <linearGradient id="cv-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="340" fill="url(#cv-bg)" rx="14"/>
+  <text x="40" y="42" font-size="14" font-weight="700" fill="#e8ecf6" font-family="sans-serif">三条曲线正在交汇：端侧大模型从「能不能」到「好不好」</text>
+
+  <!-- 坐标轴 -->
+  <line x1="70" y1="290" x2="910" y2="290" stroke="#ffffff2a" stroke-width="1.5"/>
+  <line x1="70" y1="290" x2="70" y2="70" stroke="#ffffff2a" stroke-width="1.5"/>
+  <text x="40" y="80" font-size="12" fill="#99a5bf" font-family="sans-serif">端侧</text>
+  <text x="40" y="96" font-size="12" fill="#99a5bf" font-family="sans-serif">可行性</text>
+  <g font-family="monospace" font-size="12" fill="#99a5bf">
+    <text x="90" y="310">2023</text>
+    <text x="330" y="310">2024</text>
+    <text x="570" y="310">2025</text>
+    <text x="810" y="310">2026</text>
+    <text x="880" y="310">→</text>
+  </g>
+
+  <!-- 曲线 1：模型侧 -->
+  <path d="M90 268 C 250 258, 400 220, 560 150 C 660 106, 740 92, 880 84" fill="none" stroke="#818cf8" stroke-width="2.6"/>
+  <text x="884" y="80" font-size="12.5" font-weight="700" fill="#818cf8" font-family="sans-serif" text-anchor="end">模型</text>
+  <circle cx="860" cy="88" r="4.5" fill="#818cf8"/>
+  <text x="852" y="112" font-size="12" fill="#818cf8" font-family="sans-serif" text-anchor="end">MiniCPM-V 4.7：35B MoE 进 iPhone，约 3GB 内存 13+ token/s</text>
+
+  <!-- 曲线 2：芯片侧 -->
+  <path d="M90 276 C 260 268, 420 240, 590 170 C 690 128, 760 110, 880 102" fill="none" stroke="#22d3ee" stroke-width="2.6"/>
+  <text x="884" y="130" font-size="12.5" font-weight="700" fill="#22d3ee" font-family="sans-serif" text-anchor="end">芯片</text>
+  <circle cx="700" cy="138" r="4.5" fill="#22d3ee"/>
+  <text x="692" y="160" font-size="12" fill="#22d3ee" font-family="sans-serif" text-anchor="end">旗舰 NPU 破 100 TOPS；高通路线：2028 年端侧 100B</text>
+
+  <!-- 曲线 3：工具侧 -->
+  <path d="M90 282 C 280 276, 460 252, 620 196 C 720 158, 790 138, 880 124" fill="none" stroke="#fbbf24" stroke-width="2.6"/>
+  <text x="884" y="150" font-size="12.5" font-weight="700" fill="#fbbf24" font-family="sans-serif" text-anchor="end">工具链</text>
+  <circle cx="520" cy="228" r="4.5" fill="#fbbf24"/>
+  <text x="512" y="250" font-size="12" fill="#fbbf24" font-family="sans-serif" text-anchor="end">量化与编译链一年数迭代（GPTQ→AWQ→FP4；llama.cpp 生态）</text>
+
+  <!-- 交汇高亮区 -->
+  <ellipse cx="830" cy="108" rx="88" ry="58" fill="#e879f914" stroke="#e879f988" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="830" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#e879f9" font-family="sans-serif">2026：竞赛进入「好不好」</text>
+
+  <text x="70" y="336" font-size="12" fill="#99a5bf" font-family="sans-serif">三条线各自解决一个瓶颈：模型压得小、芯片算得动、工具串得起——任何一条掉队，端侧大模型都停在演示阶段。</text>
+</svg>

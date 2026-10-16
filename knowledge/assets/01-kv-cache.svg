@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-label="KV 缓存随对话变长而膨胀">
+  <defs>
+    <linearGradient id="kv-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+    <linearGradient id="kv-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.7"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="320" fill="url(#kv-bg)" rx="14"/>
+  <text x="40" y="42" font-size="14" font-weight="700" fill="#e8ecf6" font-family="sans-serif">KV 缓存：模型的「草稿纸」——对话越长，账本越大</text>
+
+  <!-- 上排：对话三阶段气泡（与下排动画同步点亮） -->
+  <g font-family="sans-serif">
+    <rect x="40" y="66" width="200" height="52" rx="12" fill="#22d3ee12" stroke="#22d3ee88" stroke-width="1.2">
+      <animate attributeName="opacity" values="0.25;1;1;0.25;0.25" keyTimes="0;0.06;0.3;0.38;1" dur="6s" begin="0.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="140" y="88" text-anchor="middle" font-size="13" fill="#22d3ee" font-family="monospace">短问题（几百 token）</text>
+    <text x="140" y="107" text-anchor="middle" font-size="12" fill="#99a5bf">「今天天气？」</text>
+
+    <rect x="280" y="66" width="200" height="52" rx="12" fill="#22d3ee12" stroke="#22d3ee88" stroke-width="1.2">
+      <animate attributeName="opacity" values="0.25;0.25;1;1;0.25;0.25" keyTimes="0;0.32;0.38;0.62;0.7;1" dur="6s" begin="0.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="380" y="88" text-anchor="middle" font-size="13" fill="#22d3ee" font-family="monospace">多轮对话（8K token）</text>
+    <text x="380" y="107" text-anchor="middle" font-size="12" fill="#99a5bf">来回讨论一篇文档</text>
+
+    <rect x="520" y="66" width="220" height="52" rx="12" fill="#f8717118" stroke="#f8717188" stroke-width="1.2">
+      <animate attributeName="opacity" values="0.25;0.25;1;1;0.25;0.25" keyTimes="0;0.64;0.7;0.94;0.99;1" dur="6s" begin="0.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="630" y="88" text-anchor="middle" font-size="13" fill="#f87171" font-family="monospace">长上下文（32K token）</text>
+    <text x="630" y="107" text-anchor="middle" font-size="12" fill="#99a5bf">整本书塞进对话</text>
+
+    <rect x="780" y="66" width="150" height="52" rx="12" fill="#818cf812" stroke="#818cf877" stroke-width="1.2"/>
+    <text x="855" y="88" text-anchor="middle" font-size="12.5" fill="#818cf8" font-family="sans-serif">对策（第 8 讲）</text>
+    <text x="855" y="106" text-anchor="middle" font-size="12" fill="#99a5bf">量化/滑窗/offload</text>
+  </g>
+
+  <!-- 下排：内存条布局 -->
+  <text x="40" y="166" font-size="13" fill="#b6c0d6" font-family="sans-serif">同一块手机内存里：</text>
+
+  <!-- 权重块（固定） -->
+  <rect x="40" y="182" width="240" height="46" rx="8" fill="#22d3ee26" stroke="#22d3ee" stroke-width="1.4"/>
+  <text x="160" y="211" text-anchor="middle" font-size="13.5" font-weight="700" fill="#22d3ee" font-family="monospace">权重 3.5GB（固定）</text>
+
+  <!-- KV 缓存块（动态膨胀） -->
+  <rect x="292" y="182" width="60" height="46" rx="8" fill="url(#kv-bar)" stroke="#fbbf24" stroke-width="1.4">
+    <animate attributeName="width" values="60;60;60;170;170;170;330;330;330;60" keyTimes="0;0.02;0.34;0.4;0.62;0.66;0.72;0.94;0.98;1" dur="6s" begin="0.2s" repeatCount="indefinite" calcMode="discrete"/>
+  </rect>
+  <text x="322" y="211" font-size="12.5" font-weight="700" fill="#fbbf24" font-family="monospace">KV 缓存
+    <animate attributeName="opacity" values="1;1" dur="6s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- 内存上限线 -->
+  <line x1="770" y1="168" x2="770" y2="244" stroke="#f87171" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="770" y="160" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f87171" font-family="monospace">可用内存上限</text>
+
+  <!-- 阶段标注（与动画同步） -->
+  <g font-family="monospace" fill="#fbbf24">
+    <text x="292" y="258" font-size="12.5">≈ 0.2GB
+      <animate attributeName="opacity" values="1;1;0;0;0;0;0;0;0;1" keyTimes="0;0.34;0.4;0.62;0.66;0.72;0.94;0.98;0.99;1" dur="6s" begin="0.2s" repeatCount="indefinite" calcMode="discrete"/>
+    </text>
+    <text x="292" y="258" font-size="12.5">≈ 2GB
+      <animate attributeName="opacity" values="0;0;0;1;1;0;0;0;0;0" keyTimes="0;0.34;0.4;0.42;0.62;0.66;0.72;0.94;0.98;1" dur="6s" begin="0.2s" repeatCount="indefinite" calcMode="discrete"/>
+    </text>
+    <text x="292" y="258" font-size="12.5" fill="#f87171">数 GB —— 与权重抢内存，甚至顶到上限
+      <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;1;0" keyTimes="0;0.34;0.4;0.62;0.66;0.72;0.74;0.94;0.98;1" dur="6s" begin="0.2s" repeatCount="indefinite" calcMode="discrete"/>
+    </text>
+  </g>
+
+  <text x="40" y="296" font-size="12" fill="#99a5bf" font-family="sans-serif">动画示意：对话从短问题到 32K 长上下文，KV 缓存（金色块）逐段膨胀——这就是「越聊越慢、越聊越占内存」的直接原因；权重（青色块）全程不变。</text>
+</svg>

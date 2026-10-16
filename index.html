@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>端侧AI每周情报站 · Edge AI Weekly</title>
+  <meta name="description" content="端侧 AI 每周情报：硬件厂商、手机厂商、端侧大模型动态 + 科研论文精选 + 知识分享" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='.5' stop-color='%23818cf8'/%3E%3Cstop offset='1' stop-color='%23e879f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='67' font-size='46' text-anchor='middle' fill='%2305070d' font-weight='bold' font-family='sans-serif'%3E%E7%AB%AF%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-fx" aria-hidden="true"><canvas id="bg-particles"></canvas></div>
+
+  <!-- ================= 顶部导航 ================= -->
+  <header class="site-header">
+    <div class="logo">
+      <span class="mark">端</span>
+      <span>端侧AI每周情报站<span class="en">EDGE AI WEEKLY</span></span>
+    </div>
+    <nav class="site-nav" id="site-nav">
+      <a href="#news" data-sec="news">近 7 天资讯</a>
+      <a href="#papers" data-sec="papers">科研前沿</a>
+      <a href="#knowledge" data-sec="knowledge">知识分享</a>
+      <a href="#comments" data-sec="comments">评论区</a>
+    </nav>
+    <select id="issue-select" class="issue-select" aria-label="选择期数（含历史期存档）" title="切换历史期数"></select>
+  </header>
+
+  <!-- ================= Hero ================= -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <p class="kicker" id="hero-kicker"></p>
+        <h1>端侧AI<br /><em>每周情报站</em></h1>
+        <p class="hero-desc">硬件厂商 · 手机厂商 · 端侧大模型 · 学术前沿 —— 一页看懂端侧 AI 的这一周。</p>
+        <div class="editors-note" id="editors-note"></div>
+        <div class="hero-meta">
+          <div class="stat"><b id="stat-news">0</b><span>近 7 天资讯</span></div>
+          <div class="stat"><b id="stat-papers">0</b><span>科研论文</span></div>
+          <div class="stat"><b id="stat-res">0</b><span>知识资源</span></div>
+          <div class="stat"><b id="stat-weeks">39</b><span>本期期数 / 2026</span></div>
+        </div>
+      </div>
+      <div class="hero-right" id="hero-viz"></div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ================= 板块一：本周资讯 ================= -->
+    <section id="news" class="board" data-sec="news">
+      <div class="board-head">
+        <h2><span class="no">01</span>近 7 天资讯</h2>
+        <span class="board-sub">行业关注事件 · 端侧Agent · AI硬件 · 芯片厂商 · 手机厂商 · 大模型厂商 · 行业动态</span>
+      </div>
+      <div class="coverage">📡 <strong>厂商雷达</strong> — 芯片：联发科 · 高通 · 海思（华为）· 瑞芯微 · 紫光展锐 · 全志 · 苹果 ｜ 手机：苹果 · 三星 · 华为 · 小米 · vivo · OPPO · 荣耀 · 中兴努比亚 · 谷歌（Pixel）｜ 大模型：面壁 · Qwen · 豆包 · 阶跃 · Apple · Google · TypeSafe（Jev）等</div>
+      <div class="chips" id="news-chips"></div>
+      <div class="grid" id="news-grid"></div>
+    </section>
+
+    <!-- ================= 板块二：科研前沿 ================= -->
+    <section id="papers" class="board" data-sec="papers">
+      <div class="board-head">
+        <h2><span class="no">02</span>科研前沿</h2>
+        <span class="board-sub">端侧大模型 · 端侧 Agent · 推理系统 · 安全与能效</span>
+      </div>
+      <div class="board-rule">只收近半年的论文；SCI 二区以上期刊 / CCF-B 以上会议正式发表优先，近期 arXiv 新作以「预印本」标记跟踪</div>
+      <div class="chips" id="papers-chips"></div>
+      <div class="grid" id="papers-grid"></div>
+    </section>
+
+    <!-- ================= 板块三：知识分享 ================= -->
+    <section id="knowledge" class="board" data-sec="knowledge">
+      <div class="board-head">
+        <h2><span class="no">03</span>知识分享</h2>
+        <span class="board-sub">每周一个知识点 · 读懂端侧 ｜ 博客 ｜ GitHub 端侧框架与高星仓库</span>
+      </div>
+      <div class="knowledge-split">
+        <div class="k-left">
+          <h3 class="sub-h" id="kw-head">本周知识分享</h3>
+          <div id="k-weekly"></div>
+          <h3 class="sub-h">博客</h3>
+          <div id="res-zone"></div>
+        </div>
+        <aside class="k-right">
+          <div class="gh-panel" id="gh-panel"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= 板块四：评论区 ================= -->
+    <section id="comments" class="board" data-sec="comments">
+      <div class="board-head">
+        <h2><span class="no">04</span>评论区</h2>
+        <span class="board-sub">聊端侧 AI · 补充线索 · 推荐论文与新闻</span>
+      </div>
+      <div class="comment-wrap">
+        <form class="comment-form" id="comment-form">
+          <div class="form-row">
+            <input type="text" id="c-name" maxlength="24" placeholder="昵称（必填）" required />
+          </div>
+          <textarea id="c-text" maxlength="2000" placeholder="说点什么…（支持多行，2000 字以内）" required></textarea>
+          <button type="submit" class="btn-submit">发表评论</button>
+        </form>
+        <div class="comment-list" id="comment-list"></div>
+        <p class="comment-tip">⚠ 评论保存在<strong>当前浏览器本地</strong>，换浏览器/设备不可见</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 页脚 ================= -->
+  <footer class="site-footer">
+    <div class="f-links">
+      <a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a>
+      <a href="https://dblp.org" target="_blank" rel="noopener">DBLP</a>
+      <a href="https://www.qualcomm.com/news" target="_blank" rel="noopener">Qualcomm</a>
+      <a href="https://www.mediatek.com/press-room" target="_blank" rel="noopener">MediaTek</a>
+      <a href="https://machinelearning.apple.com" target="_blank" rel="noopener">Apple ML</a>
+      <a href="https://www.jiqizhixin.com" target="_blank" rel="noopener">机器之心</a>
+    </div>
+    <div id="footer-meta"></div>
+  </footer>
+
+  <!-- ================= 详情抽屉 ================= -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="detail-panel" id="detail-panel" aria-label="详情面板">
+    <div class="panel-glow"></div>
+    <button class="panel-close" id="panel-close" aria-label="关闭">✕</button>
+    <div class="panel-body" id="panel-body"></div>
+  </aside>
+
+  <script src="js/data.js"></script>
+  <script src="js/archive/manifest.js"></script>
+  <script src="js/github_repos.js"></script>
+  <script src="js/blogs.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Cloudflare Web Analytics（访问统计探针：加载失败静默，不影响页面） -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d3094157024244cfa6180e35a9a078d3"}'></script>
+</body>
+</html>

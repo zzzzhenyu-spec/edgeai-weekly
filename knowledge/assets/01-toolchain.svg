@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-label="端侧工具链分层">
+  <defs>
+    <linearGradient id="tc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="340" fill="url(#tc-bg)" rx="14"/>
+  <text x="40" y="42" font-size="14" font-weight="700" fill="#e8ecf6" font-family="sans-serif">工具链：一条命令背后的分层协作</text>
+
+  <!-- 上层：四个产品化入口 -->
+  <g font-family="sans-serif">
+    <rect x="40" y="66" width="212" height="92" rx="12" fill="#818cf812" stroke="#818cf8" stroke-width="1.4"/>
+    <text x="146" y="94" text-anchor="middle" font-size="14.5" font-weight="700" fill="#818cf8" font-family="monospace">Ollama</text>
+    <text x="146" y="116" text-anchor="middle" font-size="12.5" fill="#b6c0d6">模型管理 + 易用层</text>
+    <text x="146" y="138" text-anchor="middle" font-size="12" fill="#99a5bf">一条命令跑模型的事实体验</text>
+
+    <rect x="272" y="66" width="212" height="92" rx="12" fill="#e879f912" stroke="#e879f9" stroke-width="1.4"/>
+    <text x="378" y="94" text-anchor="middle" font-size="14.5" font-weight="700" fill="#e879f9" font-family="monospace">MLX</text>
+    <text x="378" y="116" text-anchor="middle" font-size="12.5" fill="#b6c0d6">苹果统一内存重写数值库</text>
+    <text x="378" y="138" text-anchor="middle" font-size="12" fill="#99a5bf">Mac 本地大模型的事实标准之一</text>
+
+    <rect x="504" y="66" width="212" height="92" rx="12" fill="#34d39912" stroke="#34d39988" stroke-width="1.4"/>
+    <text x="610" y="94" text-anchor="middle" font-size="14.5" font-weight="700" fill="#34d399" font-family="monospace">ExecuTorch</text>
+    <text x="610" y="116" text-anchor="middle" font-size="12.5" fill="#b6c0d6">PyTorch 官方端侧出口</text>
+    <text x="610" y="138" text-anchor="middle" font-size="12" fill="#99a5bf">训练侧到手机的最短官方路径</text>
+
+    <rect x="736" y="66" width="184" height="92" rx="12" fill="#fbbf2412" stroke="#fbbf2488" stroke-width="1.4"/>
+    <text x="828" y="94" text-anchor="middle" font-size="14.5" font-weight="700" fill="#fbbf24" font-family="monospace">MNN / ncnn</text>
+    <text x="828" y="116" text-anchor="middle" font-size="12.5" fill="#b6c0d6">App 内嵌部署</text>
+    <text x="828" y="138" text-anchor="middle" font-size="12" fill="#99a5bf">国产系移动端推理老牌</text>
+  </g>
+
+  <!-- 连接线 -->
+  <g stroke="#5f719488" stroke-width="1.4" stroke-dasharray="4 4">
+    <line x1="146" y1="158" x2="420" y2="206"/>
+    <line x1="378" y1="158" x2="450" y2="206"/>
+    <line x1="610" y1="158" x2="540" y2="206"/>
+    <line x1="828" y1="158" x2="570" y2="206"/>
+  </g>
+
+  <!-- 底座：llama.cpp -->
+  <rect x="40" y="210" width="880" height="88" rx="14" fill="#22d3ee14" stroke="#22d3ee" stroke-width="2"/>
+  <text x="480" y="242" text-anchor="middle" font-size="16" font-weight="700" fill="#22d3ee" font-family="monospace">llama.cpp —— 端侧推理的事实标准底座</text>
+  <g font-family="sans-serif" fill="#b6c0d6" font-size="13">
+    <text x="130" y="274" text-anchor="middle">读 GGUF 量化模型</text>
+    <text x="330" y="274" text-anchor="middle">调度 CPU / GPU / NPU</text>
+    <text x="560" y="274" text-anchor="middle">管理 KV 缓存</text>
+    <text x="760" y="274" text-anchor="middle">逐 token 输出</text>
+  </g>
+  <g stroke="#22d3ee66" stroke-width="1.4">
+    <line x1="236" y1="270" x2="252" y2="270"/><line x1="428" y1="270" x2="444" y2="270"/><line x1="642" y1="270" x2="658" y2="270"/>
+  </g>
+
+  <text x="40" y="324" font-size="12" fill="#99a5bf" font-family="sans-serif">你在手机上每一次「本地跑大模型」：上层入口负责体验，llama.cpp 这类引擎负责读模型、管缓存、吐 token 的全部苦活。</text>
+</svg>

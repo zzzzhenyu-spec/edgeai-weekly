@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="量化前后体积对比">
+  <defs>
+    <linearGradient id="qs-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+    <linearGradient id="qs-fp16" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#818cf8" stop-opacity="0.55"/><stop offset="1" stop-color="#818cf8" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="qs-int4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.65"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="360" fill="url(#qs-bg)" rx="14"/>
+
+  <!-- 标题 -->
+  <text x="250" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#e8ecf6" font-family="sans-serif">一个 7B 模型的体重：量化前后</text>
+
+  <!-- 坐标底线与刻度 -->
+  <line x1="60" y1="300" x2="460" y2="300" stroke="#ffffff2a" stroke-width="1.5"/>
+  <line x1="60" y1="80" x2="460" y2="80" stroke="#ffffff18" stroke-width="1" stroke-dasharray="5 5"/>
+  <text x="52" y="84" text-anchor="end" font-size="12.5" fill="#99a5bf" font-family="monospace">14GB</text>
+  <line x1="60" y1="245" x2="460" y2="245" stroke="#ffffff14" stroke-width="1" stroke-dasharray="5 5"/>
+  <text x="52" y="249" text-anchor="end" font-size="12.5" fill="#99a5bf" font-family="monospace">3.5GB</text>
+
+  <!-- FP16 柱：高 220 -->
+  <rect x="110" y="80" width="120" height="220" rx="8" fill="url(#qs-fp16)" stroke="#818cf8" stroke-width="1.5"/>
+  <text x="170" y="66" text-anchor="middle" font-size="15" font-weight="700" fill="#818cf8" font-family="monospace">FP16 · 14GB</text>
+  <text x="170" y="322" text-anchor="middle" font-size="13" fill="#b6c0d6" font-family="sans-serif">原始精度</text>
+  <text x="170" y="340" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">比多数手机整机内存还大</text>
+
+  <!-- INT4 柱：高 55 -->
+  <rect x="300" y="245" width="120" height="55" rx="8" fill="url(#qs-int4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="360" y="231" text-anchor="middle" font-size="15" font-weight="700" fill="#22d3ee" font-family="monospace">INT4 · 3.5GB</text>
+  <text x="360" y="322" text-anchor="middle" font-size="13" fill="#b6c0d6" font-family="sans-serif">4bit 量化</text>
+  <text x="360" y="340" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">中端机也装得下</text>
+
+  <!-- 1/4 括注 -->
+  <path d="M242 80 C268 80 268 245 292 245" fill="none" stroke="#fbbf24" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <text x="266" y="156" text-anchor="middle" font-size="13" font-weight="700" fill="#fbbf24" font-family="sans-serif" transform="rotate(-76 266 156)">体积 ≈ 1/4</text>
+
+  <!-- 右侧要点卡 -->
+  <g font-family="sans-serif">
+    <rect x="510" y="66" width="416" height="70" rx="10" fill="#22d3ee10" stroke="#22d3ee66" stroke-width="1"/>
+    <text x="530" y="96" font-size="14" font-weight="700" fill="#22d3ee">体积 ↓ 约 75%</text>
+    <text x="530" y="118" font-size="12.5" fill="#b6c0d6">权重塞进手机/PC 内存，端侧部署的前提条件成立</text>
+
+    <rect x="510" y="150" width="416" height="70" rx="10" fill="#818cf810" stroke="#818cf866" stroke-width="1"/>
+    <text x="530" y="180" font-size="14" font-weight="700" fill="#818cf8">内存带宽压力同步骤降</text>
+    <text x="530" y="202" font-size="12.5" fill="#b6c0d6">decode 阶段每步要读全部权重——读的量小 4 倍，生成更快更省电</text>
+
+    <rect x="510" y="234" width="416" height="70" rx="10" fill="#fbbf2410" stroke="#fbbf2466" stroke-width="1"/>
+    <text x="530" y="264" font-size="14" font-weight="700" fill="#fbbf24">能力损失通常只有个位数百分比</text>
+    <text x="530" y="286" font-size="12.5" fill="#b6c0d6">GPTQ / AWQ / k-quants 等算法补偿误差的功劳（后面三讲的主角）</text>
+  </g>
+  <text x="510" y="336" font-size="12.5" fill="#99a5bf" font-family="sans-serif">注：仅计权重体积，未含 KV 缓存与激活值；以 7B、per-group 4bit 量化为例的近似值。</text>
+</svg>
