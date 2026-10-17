@@ -15,14 +15,47 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 43 期",
-    weekRange: "2026.10.10 — 10.16 · 近 7 天",
-    updated: "2026-10-16",
+    weekRange: "2026.10.11 — 10.17 · 近 7 天",
+    updated: "2026-10-17",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售（Pro 版眼动交互与虹膜支付），面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；Apple Intelligence 携千问/万相获批月底入华测试，HomeView 把 Siri AI 送进家庭中枢；腾讯连落三子——混元记忆框架 Hy Memory 2.0 开源（3B 激活专用模型跑赢 Opus 5）、Rokid 眼镜经 A2A 协议上线行业首个原生打车、WorkBuddy 直改本地文件；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 以约半价对标 DGX Spark；黄仁勋为 OpenClaw 配 OpenShell 零信任容器。今日新增：混元 Hy Memory 2.0 开源；Rokid×腾讯 AI 眼镜原生打车；XREAL One Pro Plus。"
+    editorsNote: "近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车之后，微信鸿蒙版测试接入小艺语音操作；Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 可跑），DeepSeek V4.1-Flash-1017 实现性能-成本帕累托改进并 MIT 开源；Apple Intelligence 携千问/万相获批月底入华，HomeView 把 Siri AI 送进家庭中枢；腾讯混元 Hy Memory 2.0 开源记忆框架（3B 激活跑赢 Opus 5）；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 以约半价对标 DGX Spark。今日新增：微信鸿蒙版测试接入 A2A；DeepSeek V4.1-Flash-1017；社区让 PS5 原生跑 27B 模型（20.9 token/s）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n91", cat: "端侧Agent", source: "IT之家", date: "2026-10-17",
+      title: "微信鸿蒙版测试接入 A2A：语音唤醒小艺即可操作微信发消息、打电话",
+      summary: "鸿蒙微信移动版 8.0.22 更新接入 A2A 能力——语音唤醒小艺发送指令操作微信，当前支持向好友发送文字消息（不支持表情）、发起语音或视频通话；暂不支持群聊消息与微信分身，需小艺 11.7.8.303 以上版本。继 Rokid 眼镜原生打车之后，A2A 智能体互联协议一周内第二次落地——国民应用微信成为被智能体操作的首个超级 App。",
+      detail: "IT之家 10 月 17 日报道：微信鸿蒙版 App 现已支持使用小艺发送微信——据博主 @伤心萨摩耶Ciuciu 透露，鸿蒙微信移动版 8.0.22 更新接入 A2A 能力，支持语音唤醒小艺发送指令操作微信。\n能力边界：当前支持向好友发送文字消息（不支持发送表情）、发起语音或视频通话；暂不支持操作微信向群聊发送消息或发起通话，也不支持操作微信分身；小艺版本需更新至 11.7.8.303。\n端侧视角：这是 A2A（Agent-to-Agent）协议一周内第二次公开落地——上一例是 Rokid 眼镜经 A2A 调用腾讯出行打车，这次是鸿蒙系统智能体小艺经 A2A 操作微信；超级 App 开放智能体操作入口，意味着「智能体接管应用」从演示走进普通用户手机，语音发微信只是第一步。",
+      tags: ["微信", "鸿蒙", "A2A协议", "小艺"],
+      url: "https://www.ithome.com/1/014/331.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/46e1790f-ecca-4dc5-8d98-4d5dc9253c84.jpg",
+      imageCap: "微信鸿蒙版（图源：IT之家）",
+      highlight: false
+    },
+    {
+      id: "n92", cat: "大模型厂商", source: "IT之家", date: "2026-10-17",
+      title: "DeepSeek V4.1-Flash-1017 发布：性能-成本帕累托改进，承接「许愿式」编程，权重 MIT 开放下载",
+      summary: "DeepSeek V4.1 Flash 更新至 1017 版本（网页端/APP/API 同步，价格不变）——各基准能力较上一版明显提升，同时任务运行时间与输出长度缩短、单次调用综合成本下降，在多个 Harness 下达到新的性能-费用帕累托最优；经自反馈强化学习训练，模型在极有限提示下从零构建完整项目（游戏开发、3D 建模）的能力增强，官方称可承接「许愿式」编程；权重延续 MIT 许可在 HuggingFace 与 ModelScope 开放下载。",
+      detail: "IT之家 10 月 17 日报道：DeepSeek V4.1 Flash 更新至 V4.1-Flash-1017，官方网页端、APP 与 API 同步变更（API 调用方式与价格不变，deepseek-flash 即可访问）。\n帕累托改进：各基准测试中模型能力较上一版明显提升，同时任务运行时间与输出长度均有缩短——单次调用综合成本下降，在多个 Harness 下达到新的性能-费用帕累托最优；官方针对 DeepSeek Harness、腾讯 CodeBuddy 与 WorkBuddy 做了适配优化（建议 Harness 升级至 0.2.1-rc.1 以上）。\n能力增强：基于自反馈的强化学习训练，模型从零构建完整项目的能力增强，覆盖游戏开发、3D 建模等场景——在提示词与素材参考极为有限的条件下直接生成可运行项目成果，官方演示中以极短交互轮次完成完整项目搭建。\n端侧视角：MIT 开放权重意味着该版本可自由本地部署与蒸馏——「更快、更短、更便宜」的输出特性正是端侧 Agent 调用云模型时的成本关键，也延续了 DeepSeek 开源策略对国产端侧生态（MiniCPM、Step 等）的输血路径。",
+      tags: ["DeepSeek", "V4.1 Flash", "帕累托改进", "MIT开源"],
+      url: "https://www.ithome.com/1/014/328.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/ca365e64-d286-4a9b-842d-37162dbd5fe2.jpg",
+      imageCap: "DeepSeek V4.1-Flash-1017（图源：IT之家）",
+      highlight: false
+    },
+    {
+      id: "n93", cat: "AI硬件", source: "IT之家", date: "2026-10-17",
+      title: "社区让 PS5 变成本地 AI 服务器：Vulkan 原生跑 Qwen3.8-27B 达 20.9 token/s，局域网开放 API",
+      summary: "开发者基于 llama.cpp 的 PS5 移植项目推出 PS5LM Plus——通过移植 Mesa 的 AMD RADV 驱动与 Vulkan 计算接口实现原生 GPU 运行，可用内存从 6GB 提升到 11.4GB，高度量化的 Qwen3.8-27B 生成速度达 20.9 token/s（PS5 内存带宽 448GB/s）；内置网页聊天界面并经局域网 8081 端口提供 API，兼容 OpenAI/Anthropic 接口格式，opencode、Codex、Claude Code 等工具可直接调用——游戏主机变本地推理盒子（需越狱，有封号风险）。",
+      detail: "IT之家 10 月 17 日报道（Wccftech）：开发者 abhi245y 基于资深 AI 工程师 Mert Cobanov 的 PS5LM（llama.cpp 移植项目）开发原生 GPU 应用 PS5LM Plus，让越狱后的 PS5 在本地运行 Qwen3.8-27B 等大模型。\n技术路径：早期版本靠 CPU 运行 27B 模型约 1 token/分钟；新版移植 Mesa 开源项目的 AMD RADV 驱动并通过 Vulkan 计算接口让 llama.cpp 原生运行——可用内存从约 6GB 提升至 11.4GB。\n性能：依托 PS5 的 448GB/s 内存带宽，Qwen3.8-27B（高度量化）生成速度 20.9 token/s，GPU 占用 100%、CPU 仅 2%；更小模型更快——Gemma 4 E4B 约 61 token/s、Llama 3.2 3B 达 124 token/s。\n生态玩法：内置网页聊天界面，局域网 8081 端口提供 API 服务，兼容 OpenAI 与 Anthropic API 格式，opencode、Codex、Claude Code 等工具可直接调用 PS5 上的模型。\n端侧视角：这证明了游戏主机的统一内存架构天然适合本地推理——448GB/s 带宽超过多数桌面独显；不过 16GB 统一内存仍限制模型规模，且越狱有封号风险，属社区样本而非推荐玩法。",
+      tags: ["PS5", "本地推理", "llama.cpp", "Vulkan"],
+      url: "https://www.ithome.com/1/014/372.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/643504c8-98d7-469d-8baf-64185024da7e.png",
+      imageCap: "PS5LM Plus（图源：IT之家）",
+      highlight: false
+    },
     {
       id: "n90", cat: "大模型厂商", source: "智东西", date: "2026-10-16",
       title: "Meta 开放权重模型 Muse Spark Open：816B 总参 / 42B 激活，两台 M5 Ultra Mac Studio 组 1TB 统一内存本地跑，苹果 CEO 回应「拓展端侧 AI 边界」",
@@ -222,17 +255,6 @@ const WEEKLY_DATA = {
       image: "https://img.ithome.com/newsuploadfiles/2026/10/4da85392-ef76-4d5f-a7f4-78a8a55b943b.jpg",
       imageCap: "高通 CEO 安蒙（图源：IT之家）",
       highlight: true
-    },
-    {
-      id: "n76", cat: "端侧Agent", source: "IT之家", date: "2026-10-10",
-      title: "腾讯云开源 TeamAI：把团队的 Skill、规范与知识装进 Git 仓库，一人配置、16 种 Agent 全员复用",
-      summary: "腾讯云开源内部自用的团队 AI 协作工具 TeamAI——基于 Git 把团队 Skill、工作规范、工具配置与项目知识统一进仓库，像管理代码一样评审、更新与版本管理，再同步到成员各自的 Agent（已适配 WorkBuddy、Claude Code、Cursor、Codex 等 16 种）；并可与腾讯云智能体管理平台 ClawPro 打通，管理员在管控台统一管理 Skill、MCP 配置并分发到已接入的本地 Agent。",
-      detail: "IT之家 10 月 10 日报道：腾讯云宣布开源内部自用的 TeamAI——一款基于 Git 的团队 AI 协作工具，把团队使用的 Skill、工作规范、工具配置和项目知识统一放进 Git 仓库，像管理代码一样评审、更新和版本管理，再同步到成员各自使用的 Agent 中，实现「一人配置，全员复用」；目前已适配 WorkBuddy、CodeBuddy、Claude Code、Codex、Cursor 等 16 种 Agent。\n协作机制：沿用开发者熟悉的 Git 流程——成员提交技能或修改规范时自动创建分支、发起合并请求交团队评审；确认合入后，支持会话启动 Hook 的 Agent 会在新对话开始时自动拉取更新，无需逐人通知或手动替换。\n治理与沉淀：新增模型配置统一下发能力，管理员可为涉及内部数据的任务统一配置符合安全要求的模型服务；Agent 还会在会话结束时提示成员分享「反复纠正、工具调用失败」类经验，自动整理成文档入库供后续检索复用。\n端侧视角：TeamAI 与此前上线的 WorkBuddy 一脉相承——当每个成员桌面上跑着不同品牌的本地 Agent 时，「技能与规范的版本化分发」成了团队级刚需；TeamAI 用 Git 工作流补上了这一层，配合 ClawPro 对本地 Agent 的统一纳管，腾讯正在把端侧 Agent 从单机工具做成可管理的企业基础设施。",
-      tags: ["腾讯云", "TeamAI", "Agent 协作", "开源"],
-      url: "https://www.ithome.com/1/011/432.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/dd01ede5-936c-40b9-899b-9e0dae78e5ec.png",
-      imageCap: "TeamAI（图源：IT之家）",
-      highlight: false
     }
 
   ],
