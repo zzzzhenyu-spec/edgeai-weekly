@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 43 期（2026.10.11 — 10.17 · 近 7 天）
+## 2026 · 第 43 期（2026.10.12 — 10.18）
 
-**近 7 天导读**：近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车之后，微信鸿蒙版测试接入小艺语音操作；Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 可跑），DeepSeek V4.1-Flash-1017 实现性能-成本帕累托改进并 MIT 开源；Apple Intelligence 携千问/万相获批月底入华，HomeView 把 Siri AI 送进家庭中枢；腾讯混元 Hy Memory 2.0 开源记忆框架（3B 激活跑赢 Opus 5）；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 以约半价对标 DGX Spark。今日新增：微信鸿蒙版测试接入 A2A；DeepSeek V4.1-Flash-1017；社区让 PS5 原生跑 27B 模型（20.9 token/s）。
+**近 7 天导读**：本期聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类（软硬模全栈 3999 元），千问 AI 眼镜/耳机全家桶开售（Pro 版眼动交互与虹膜支付），面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信。模型侧三连——Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 可跑），DeepSeek V4.1-Flash-1017 实现性能-成本帕累托改进并 MIT 开源，腾讯混元 Hy Memory 2.0 记忆框架开源（3B 激活跑赢 Opus 5）。Apple Intelligence 携千问/万相获批月底入华，HomeView 把 Siri AI 送进家庭中枢；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 以约半价对标 DGX Spark，黄仁勋为 OpenClaw 配 OpenShell 零信任容器；社区让 PS5 原生跑 27B 模型（20.9 token/s）。学术侧聚焦端云路由与协同推理（弱到强路由、HyCo 投机解码、PriorityFEC 缓存交接）、WebGPU 边缘内核调优与 TEE 模型保护。
 
 ## 近 7 天速览
 
@@ -67,7 +67,7 @@
 
 ## 科研前沿（10 篇）
 
-- **arXiv 新作跟踪（10 篇，预印本）**：[Decoupling Logic from Persona: Structural Immunity of Edge…](https://arxiv.org/abs/2610.09772)；[How Fragile Is On-Device Language Model Safety?](https://arxiv.org/abs/2610.09000)；[SAFESHIELD: A Decision-Organization Framework for Deployme…](https://arxiv.org/abs/2610.07276)；[Small Language Models for Smart Data Model Classification …](https://arxiv.org/abs/2610.07093)；[Sibyl: An Efficient Small-large Model Collaboration Framew…](https://arxiv.org/abs/2610.05383)；[G-CARB: Graph-Localized Conformal Agent Risk Budget for Co…](https://arxiv.org/abs/2610.05563)；[PhaseGate: Phase-Aware CPU Retrieval Scheduling for On-Dev…](https://arxiv.org/abs/2610.04537)；[EdgeAgent: Orchestrating On-Device LLM Inference for End-U…](https://arxiv.org/abs/2610.03394)；[AIR-LLM: Broadcasting AI Weights over Radio for Memory-Fre…](https://arxiv.org/abs/2610.00465)；[IronLLM: Forging Compact Edge-Native Language Models for R…](https://arxiv.org/abs/2609.36860)
+- **arXiv 新作跟踪（10 篇，预印本）**：[BiShield-TEE: On the (In-)Security of Unilateral Weight Ob…](https://arxiv.org/abs/2610.21565)；[PriorityFEC: Deadline-Aware Streaming FEC for KV-Cache Han…](https://arxiv.org/abs/2610.21390)；[Disagreement-Guided Weak-to-Strong Routing](https://arxiv.org/abs/2610.22245)；[HyCo: Hybrid Drafting for Cost-Efficient Mobile-Cloud Spec…](https://arxiv.org/abs/2610.21436)；[Verification Turns Capability Gaps into Routing Decisions:…](https://arxiv.org/abs/2610.19169)；[GPU Goldmines: Tunable WebGPU Kernels for Edge LLM Inferen…](https://arxiv.org/abs/2610.17321)；[Context-Aware Precision Scheduling for Small Language Mode…](https://arxiv.org/abs/2610.15640)；[PEAM: On-device Communication Agent for Personalized, Effi…](https://arxiv.org/abs/2610.14855)；[「Is Low Power Enough?」Rethinking Energy Efficiency in High…](https://arxiv.org/abs/2610.14714)；[Linear-Time Non-Local Codec Placement for Machine Learning…](https://arxiv.org/abs/2610.14703)
 
 ## 页面板块
 
@@ -77,4 +77,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-10-17。
+- 数据更新于 2026-10-18。

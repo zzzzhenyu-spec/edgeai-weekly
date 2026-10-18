@@ -15,10 +15,10 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 43 期",
-    weekRange: "2026.10.11 — 10.17 · 近 7 天",
-    updated: "2026-10-17",
-    status: "rolling",
-    editorsNote: "近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车之后，微信鸿蒙版测试接入小艺语音操作；Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 可跑），DeepSeek V4.1-Flash-1017 实现性能-成本帕累托改进并 MIT 开源；Apple Intelligence 携千问/万相获批月底入华，HomeView 把 Siri AI 送进家庭中枢；腾讯混元 Hy Memory 2.0 开源记忆框架（3B 激活跑赢 Opus 5）；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 以约半价对标 DGX Spark。今日新增：微信鸿蒙版测试接入 A2A；DeepSeek V4.1-Flash-1017；社区让 PS5 原生跑 27B 模型（20.9 token/s）。"
+    weekRange: "2026.10.12 — 10.18",
+    updated: "2026-10-18",
+    status: "final",
+    editorsNote: "本期聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类（软硬模全栈 3999 元），千问 AI 眼镜/耳机全家桶开售（Pro 版眼动交互与虹膜支付），面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信。模型侧三连——Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 可跑），DeepSeek V4.1-Flash-1017 实现性能-成本帕累托改进并 MIT 开源，腾讯混元 Hy Memory 2.0 记忆框架开源（3B 激活跑赢 Opus 5）。Apple Intelligence 携千问/万相获批月底入华，HomeView 把 Siri AI 送进家庭中枢；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 以约半价对标 DGX Spark，黄仁勋为 OpenClaw 配 OpenShell 零信任容器；社区让 PS5 原生跑 27B 模型（20.9 token/s）。学术侧聚焦端云路由与协同推理（弱到强路由、HyCo 投机解码、PriorityFEC 缓存交接）、WebGPU 边缘内核调优与 TEE 模型保护。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -254,112 +254,112 @@ const WEEKLY_DATA = {
       url: "https://www.ithome.com/1/011/991.htm",
       image: "https://img.ithome.com/newsuploadfiles/2026/10/4da85392-ef76-4d5f-a7f4-78a8a55b943b.jpg",
       imageCap: "高通 CEO 安蒙（图源：IT之家）",
-      highlight: true
+      highlight: false
     }
 
   ],
 
 papers: [
     {
-      id: "p1", group: "recent", cat: "端侧智能体", date: "2026-10-07",
-      title: "Decoupling Logic from Persona: Structural Immunity of Edge LLM Agents",
-      authors: "Masaaki Nakatsu 等",
-      venue: "arXiv:2610.09772", level: "预印本",
-      summary: "研究端侧小模型智能体的「人设-逻辑互扰」问题：长而带误导性的人设指令会持续污染逻辑推理。提出解耦架构——逻辑路径只接收核心对话轮并输出可验证的结构化状态，人设路径再按角色渲染；INT4 基座 + 热插拔 LoRA，单机即可运行。",
-      detail: "问题：边缘设备上的小模型智能体要在同一个上下文窗口里同时维持人设与正确推理——当历史变长、误导且人设指令繁重时，逻辑部分会被「人设-逻辑互扰」拖垮。\n方法：解耦架构把逻辑推断（What）与人设表达（How）拆成两条推理路径，跑在同一个 INT4 基座模型上、以热插拔 LoRA 适配器切换；逻辑路径只接收核心对话轮，输出可验证的结构化状态（Micro-State）；人设路径再带着完整历史按角色渲染。\n实验：在 Apple M2 笔记本上对 Llama-3.1-8B-Instruct 与 Gemma-3-4B-it（4-bit）做同基座消融（480 次运行）——解耦逻辑路径对污染结构性免疫：提示恒定在 180/167 token（单次混合提示从 242 涨到 1203），且各污染级别下输出逐字节一致（40/40）。\n对照：混合单次推理随污染单调劣化（Llama 复合逻辑分 0.669→0.150，Gemma 0.487→0.150）。",
-      tags: ["端侧智能体", "人设与逻辑解耦", "LoRA", "INT4量化"],
-      url: "https://arxiv.org/abs/2610.09772"
+      id: "p1", group: "recent", cat: "安全与隐私", date: "2026-10-15",
+      title: "BiShield-TEE: On the (In-)Security of Unilateral Weight Obfuscation",
+      authors: "Zhiyuan Wang 等",
+      venue: "arXiv:2610.21565", level: "预印本",
+      summary: "揭示端侧 TEE 参数混淆的单边变换漏洞——混淆密钥被「解的唯一性」暴露，代表性方案 GroupCover 与 ArrowCloak 的保护可被击穿；提出双边混淆框架 BiShield-TEE，通过输入与输出维度联合混淆诱导「解的歧义性」重建保护。",
+      detail: "背景：端侧部署 LLM 越来越普遍（时延与隐私），但专有模型面临逆向与窃取风险；TEE 提供硬件隔离推理，但多数 TEE 参数混淆依赖单边矩阵变换（仅混淆输出侧）。\n漏洞：识别出「解的唯一性」（SDP）缺陷——混淆密钥被唯一确定，暴露真实密钥结构；攻击下 GroupCover 与 ArrowCloak 的保护降至可忽略，攻击准确率超过全屏蔽黑盒基线 2.4 倍并恢复接近完整的模型功能。\n方案：BiShield-TEE 双边框架，联合混淆输入与输出维度诱导歧义解，配合硬件保护重建有效的权重保密。",
+      tags: ["TEE", "模型保护", "参数混淆", "端侧安全"],
+      url: "https://arxiv.org/abs/2610.21565"
     },
     {
-      id: "p2", group: "recent", cat: "安全与隐私", date: "2026-10-06",
-      title: "How Fragile Is On-Device Language Model Safety?",
-      authors: "Muhammad Zeeshan Karamat 等",
-      venue: "arXiv:2610.09000", level: "预印本",
-      summary: "考察端侧部署小模型的安全行为是否集中于稀疏参数子集：对 LLaMA-2-7B-Chat 的定位分析显示 MLP 的 down_proj 是最突出的安全敏感组件——仅改动 0.19% 的权重即可显著破坏安全护栏，而通用精度几乎不受影响，为端侧模型的选择性完整性保护提供了依据。",
-      detail: "背景：小模型越来越多部署在资源受限的端侧平台并作为智能体组件，本地存储的模型参数完整性成为新的安全面。\n方法：两种互补定位——低秩安全关联子空间分析与参数级安全-效用重要性过滤；均发现安全敏感性在网络中高度不均匀，MLP 的 down_proj 持续成为最突出的安全敏感组件，o_proj 贡献较小。\n关键结果：参数级定位下仅修改 down_proj 中 0.19% 的权重，Basic ASR 达 53%、GCG ASR 达 56%，而 tinyBenchmarks 精度保持 51.6%（未修改基线 52.2%）。\n意义：为端侧/智能体场景的语言模型定向故障分析与选择性完整性保护（只保护那 0.19%）提供了动机与坐标。",
-      tags: ["端侧安全", "参数定位", "down_proj", "完整性保护"],
-      url: "https://arxiv.org/abs/2610.09000"
+      id: "p2", group: "recent", cat: "推理与系统", date: "2026-10-15",
+      title: "PriorityFEC: Deadline-Aware Streaming FEC for KV-Cache Handoff",
+      authors: "Han Shen 等",
+      venue: "arXiv:2610.21390", level: "预印本",
+      summary: "面向边缘多智能体系统的 KV 缓存交接——上游已预填的上下文跨智能体传递时，在严格首 token 时延与不可靠边缘链路下按效用优先传输：效用感知源流把高价值 KV 块排在传输前端，并结合传输层 FEC 保护，让接收方在有限预算内拿到最有价值的 KV 状态。",
+      detail: "问题：多智能体 LLM 系统部署在边缘，任务上下文跨智能体传递时上游已算好的 KV 缓存若能复用可省去重复预填——但完整 KV 缓存需在网络传输后才能开始生成，TTFT 截止与不可靠链路下传不完。\n方法：PriorityFEC 联合模型侧 KV 重要性（效用）与传输侧可靠性——构建效用感知源流（高效用 KV 块先传），并用流式前向纠错保护关键块。",
+      tags: ["KV缓存", "多智能体", "边缘传输", "FEC"],
+      url: "https://arxiv.org/abs/2610.21390"
     },
     {
-      id: "p3", group: "recent", cat: "安全与隐私", date: "2026-10-05",
-      title: "SAFESHIELD: A Decision-Organization Framework for Deployment-Time Safety",
-      authors: "Xingru Zhou 等",
-      venue: "arXiv:2610.07276", level: "预印本",
-      summary: "把部署期安全表述为一个「决策组织」问题：将安全决策按职责分解（准入/路由/证据/放行）并显式协调，已提交决策记录进可审计的 Decision Traces——为小模型的运行时护栏（审核、路由、检索验证、输出过滤）补上组织与审计层。",
-      detail: "问题：语言模型的部署期安全通常靠运行时护栏实现（输入审核、路由、检索验证、输出过滤），但现有框架对「安全决策应如何组织、协调与审计」给出的指导有限。\n方法：提出职责导向的安全决策分解 + 显式协调，并在 SAFESHIELD 中实例化四类循环出现的决策职责——admission（准入）、routing（路由）、evidence（证据）、release（放行），提交的决策记入可审计的 Decision Traces。\n评估：机制级实验、聚合阶段消融、受控协调消融与面向部署的压力套件——护栏机制提供了决策过程所需能力；而随着外围安全组织被移除，端到端安全显著劣化。",
-      tags: ["部署期安全", "决策组织", "可审计", "SLM护栏"],
-      url: "https://arxiv.org/abs/2610.07276"
+      id: "p3", group: "recent", cat: "端云协同", date: "2026-10-15",
+      title: "Disagreement-Guided Weak-to-Strong Routing",
+      authors: "Sima Noorani 等",
+      venue: "arXiv:2610.22245", level: "预印本",
+      summary: "重审弱到强路由的基础：路由决策可以不依赖真值监督——通过本地推理生成多个弱模型响应，刻画最优弱到强路由策略，并提出基于「模型间分歧」的原则性近似——分歧信号可直接从模型生成响应中测得，无需真值标注即可决定何时把弱模型响应升级给强模型。",
+      detail: "背景：小模型部署在边缘与机器人满足成本时延约束，但能力有限需要强模型兜底；开放任务中路由信号通常依赖响应正确性判断，而真值监督难以规模化。\n方法：允许本地推理生成多个弱模型响应并刻画最优路由策略；基于模型间比较推导原则性近似——引入可直接从模型响应测得的「模型分歧」概念。",
+      tags: ["弱到强路由", "模型分歧", "端云协同", "无监督信号"],
+      url: "https://arxiv.org/abs/2610.22245"
     },
     {
-      id: "p4", group: "recent", cat: "推理与系统", date: "2026-10-05",
-      title: "Small Language Models for Smart Data Model Classification at the Edge",
-      authors: "Cristian Martella 等",
-      venue: "arXiv:2610.07093", level: "预印本",
-      summary: "面向物联网数据标准化的资源受限场景，系统评测轻量开源语言模型把输入数据实体对齐到最合适智能数据模型（SDM）的能力——覆盖通用、推理特化与代码特化三类架构，为边缘环境下的模型选型与部署策略给出基准。",
-      detail: "背景：智慧城市、能源管理、环境监测中异构数据源激增，智能数据模型（SDM）分类是互操作的关键，但现有方法资源消耗高、不适用于算力受限的边缘环境。\n方法：系统基准测试多类轻量开源语言模型（通用 GP、推理特化 RS、代码特化 CS），在多个领域数据集上完成「输入数据实体→最适配 SDM 表示」任务。\n贡献：补上文献中轻量高效方案的空缺，给出模型选型、任务构造与精度-效率部署策略的实证洞见。",
-      tags: ["IoT", "边缘推理", "模型选型", "SDM分类"],
-      url: "https://arxiv.org/abs/2610.07093"
+      id: "p4", group: "recent", cat: "端云协同", date: "2026-10-15",
+      title: "HyCo: Hybrid Drafting for Cost-Efficient Mobile-Cloud Speculative Decoding",
+      authors: "Hanbin Bae 等",
+      venue: "arXiv:2610.21436", level: "预印本",
+      summary: "设备-云混合投机解码：把服务器模型原生多 token 预测（MTP）头放到设备端执行、把候选分支交给单次 SLM 前传——服务器只返回 MTP 头所需的隐藏状态与 KV；Galaxy S26 Ultra 经 LTE/5G 实测，相对服务器侧 MTP 自投机每 token 的服务器 GPU 时间减少 38.6%。",
+      detail: "问题：设备-云投机解码能省服务器算力，但用小模型在手机 NPU 上逐层长草稿树需要反复前传，开销大。\n方法：HyCo 把「深度」交给服务器模型的原生 MTP 头（在设备端执行）、「分支」交给单次 SLM 前传——服务器返回隐藏状态、输入嵌入与 KV 条目而非自己逐步执行；量化、受限词表与 1K token 窗口把两个草稿器都装进 NPU，ε 阈值规则放宽对验证器采样分布的精确保持。\n实测：Galaxy S26 Ultra 单客户端 LTE/5G——Spec-Bench 上每 token 服务器 GPU 时间较服务器侧 MTP 自投机降 38.6%，32K token 摘要任务降 29.2%；较纯 SLM 草稿器多省 9.0 个百分点且投递快 1.9 倍。",
+      tags: ["投机解码", "移动端", "MTP", "端云协同"],
+      url: "https://arxiv.org/abs/2610.21436"
     },
     {
-      id: "p5", group: "recent", cat: "端云协同", date: "2026-10-04",
-      title: "Sibyl: An Efficient Small-large Model Collaboration Framework for Long-horizon Tasks",
-      authors: "Zhewei Fang 等",
-      venue: "arXiv:2610.05383", level: "预印本",
-      summary: "让端侧小模型智能体在步骤级选择性地咨询云端大模型并内化其指导——三阶段训练（无咨询自进化 RL 冷启动 + 关键分歧状态挖掘 + 咨询决策与指导内化联合优化），在长程任务上以最少的云端调用拿到强表现。",
-      detail: "问题：小模型是端侧智能体的理想底座（低时延、省资源），但推理规划能力受限；与大模型做步骤级协同可以补短，难点在于「哪些状态值得求助云端」——每次云端调用的贡献与后续动作纠缠，只能从最终任务结果反推。\n方法：Sibyl 三阶段管线——① 无咨询的自进化强化学习建立稳健基础策略；② 通过「关键分歧状态挖掘」冷启动咨询行为；③ 联合优化咨询决策与指导内化。\n平衡目标：智能体需同时最大化任务成功率与最小化云端调用次数——Sibyl 在两者间取得强平衡。",
-      tags: ["端云协同", "小大模型协作", "强化学习", "长程任务"],
-      url: "https://arxiv.org/abs/2610.05383"
+      id: "p5", group: "recent", cat: "推理与系统", date: "2026-10-13",
+      title: "Verification Turns Capability Gaps into Routing Decisions: Small Language Models for Clinical Documentation",
+      authors: "Nina Fatehi 等",
+      venue: "arXiv:2610.19169", level: "预印本",
+      summary: "在幻觉零容忍的临床笔记生成任务上，用固定四评估器验证栈+修正策略，仅更换生成器：4B 参数模型（QLoRA）达到 0.984 的声明级事实蕴含（前沿基线 0.992）、完整度差 3.3 分——全程端侧生成；其缺陷集中在跨节结构保真而非临床理解，且作为显式验证器决策可转化为路由策略：默认跑小模型、验证器否决的再升级。",
+      detail: "设定：医生-患者对话生成临床笔记——量大且幻觉零容忍（编造一个化验值就是患者安全风险）；问题是「智能体化验证架构」能否替代生成器规模让小模型可用。\n结果：固定四评估器验证栈与修正策略，仅换生成器——4B+QLoRA 达 0.984 声明级事实蕴含（前沿基线 0.992），完整度差 3.3 分，完全在设备上生成。\n路由价值：小模型的缺陷集中在跨节结构保真（编排而非理解），且是显式验证器决策而非隐性质量差异——可直接变成路由策略：小模型默认、被否决的升级。",
+      tags: ["验证架构", "临床笔记", "小模型路由", "端侧生成"],
+      url: "https://arxiv.org/abs/2610.19169"
     },
     {
-      id: "p6", group: "recent", cat: "端侧智能体", date: "2026-10-04",
-      title: "G-CARB: Graph-Localized Conformal Agent Risk Budget for Compositional Safety",
-      authors: "Zijun Yu 等",
-      venue: "arXiv:2610.05563", level: "预印本",
-      summary: "为小模型智能体的跨工具调用安全提出「共形风险预算」：用已发生损害的账本校准何时叫停智能体，G-CARB 沿可观测依赖（私有读取→外发动作）选择评分证据，无需额外模型推理——在 AgentDojo 上以一半的评分输入改进了自主任务完成率。",
-      detail: "问题：小模型智能体需要能跨工具调用追踪后果且监控开销极小的安全控制——例如一次私有读取，在后续动作把数据外发后才变成泄漏。\n方法：CARB（共形智能体风险预算）用叫停前已产生损害的账本校准停止时机；G-CARB 沿可观测依赖图从私有来源到外发动作选择评分证据，账本覆盖全部执行历史，且计算门控分数无需额外语言模型推理。\n结果：AgentDojo 重放实验（两个 14B 底座）——中等风险预算下评分输入记录约减半，同时自主任务完成率优于全前缀评分；同规模随机上下文取得相近增益。",
-      tags: ["智能体安全", "共形风险控制", "工具调用", "风险预算"],
-      url: "https://arxiv.org/abs/2610.05563"
+      id: "p6", group: "recent", cat: "推理与系统", date: "2026-10-12",
+      title: "GPU Goldmines: Tunable WebGPU Kernels for Edge LLM Inference",
+      authors: "Rithik Sharma 等",
+      venue: "arXiv:2610.17321", level: "预印本",
+      summary: "为 WebGPU 边缘 LLM 推理打造可调内核框架 GPU Goldmines——覆盖矩阵乘、矩阵-向量乘与 Flash Attention 三大构件，跨设备/形状/浏览器建立性能数据库加速后续自动调优；矩阵乘内核几何平均超 ONNX Runtime WebGPU 7.0 倍、超 llama.cpp WebGPU 1.41 倍，并为 llama.cpp 聊天负载带来 1.48 倍的预填阶段端到端提升。",
+      detail: "背景：WebGPU 提供跨平台可移植与浏览器可达性，但同一实现在不同环境性能差异大——需要系统化的内核调优。\n方法：GPU Goldmines 框架用于指定、执行与调优 WebGPU 内核；实例化 LLM 三大核心构件（matmul/matvec/flash attention），跨设备、形状与浏览器刻画性能并建立数据库，加速后续自动调优与配置选择。",
+      tags: ["WebGPU", "内核调优", "浏览器推理", "Flash Attention"],
+      url: "https://arxiv.org/abs/2610.17321"
     },
     {
-      id: "p7", group: "recent", cat: "推理与系统", date: "2026-10-03",
-      title: "PhaseGate: Phase-Aware CPU Retrieval Scheduling for On-Device LLMs",
-      authors: "Seoyoon Yum 等",
-      venue: "arXiv:2610.04537", level: "预印本",
-      summary: "统一内存系统上 GPU 跑 LLM 推理、CPU 跑本地检索的共存调度：发现检索负载会让解码 p95 时延抬升 60-61%（预填充仅 +6%），于是把 LLM 阶段（prefill/decode）作为检索准入信号——分阶段并发限制让聚合检索吞吐翻倍且 LLM 时延保持在基线 1.25 倍内。",
-      detail: "现象：端侧助手在统一内存上同时跑 GPU LLM 推理与 CPU 检索——饱和本地检索负载下，4 个并发检索 worker 使解码 p95 时延抬升 60-61%（两台 M4 系统），而预填充时延只升 5.7-6.9%。\n方法：PhaseGate 把 LLM 阶段作为独立 CPU 检索的准入信号，为 prefill 与 decode 分别校准并发上限（基线 M4 配置下取 4 与 1）。\n结果：积压队列下取得最佳固定可行策略 2.0 倍的聚合检索吞吐，且七次留出运行中两个 p95 LLM 时延指标均在无检索基线的 1.25 倍以内；阶段盲的对照组 TimeGate 违反输出 token 时延限制。M2/M2 Pro 复现了策略排序。",
-      tags: ["统一内存", "阶段感知调度", "检索", "M4"],
-      url: "https://arxiv.org/abs/2610.04537"
+      id: "p7", group: "recent", cat: "能效与评测", date: "2026-10-11",
+      title: "Context-Aware Precision Scheduling for Small Language Models",
+      authors: "Mukund Athmaram 等",
+      venue: "arXiv:2610.15640", level: "预印本",
+      summary: "端侧小模型的上下文感知精度调度：按张量大小与敏感度分配混合精度的最优配置随上下文长度变化——用实测校准的时序模型（而非仅看权重字节数）在时延/精度预算下选配置，KV 缓存变大挤压权重算力时自动降精度，调度可在执行前备好且保留会话 KV 缓存。",
+      detail: "问题：端侧 Agent 的上下文持续增长，短上下文选定的混合精度配置在长上下文下不再最优；且「位数少不等于跑得快」。\n方法：在不同精度与上下文长度上校准计时模型，结合张量敏感度在时延或精度预算下选择配置——预测器按校准后的执行成本估计时延；时延预算下读取更大 KV 缓存会压缩权重运算时间，促使分配器选择更低精度。\n工程性：给出可在执行前准备好的张量精度变更调度，运行时跟随调度并保留会话 KV 缓存。",
+      tags: ["混合精度", "精度调度", "KV缓存", "时延预算"],
+      url: "https://arxiv.org/abs/2610.15640"
     },
     {
-      id: "p8", group: "recent", cat: "推理与系统", date: "2026-10-02",
-      title: "EdgeAgent: Orchestrating On-Device LLM Inference for End-User Multi-Agent Workflows",
-      authors: "Yuhai Long 等",
-      venue: "arXiv:2610.03394", level: "预印本",
-      summary: "面向边缘统一内存（UMA）与多智能体负载的跨层推理系统：零拷贝 UMA 感知张量并行充分吃满 CPU+GPU、按序列可预测性动态分配投机解码草稿预算、异步挂起-让出机制应对工具停顿——解决多智能体碎片化执行下的硬件利用率问题。",
-      detail: "问题：多智能体 LLM 需要隐私保护的边缘部署，但现有推理系统难以支撑——内存受限的解码阶段在 UMA 上引发严重总线竞争，朴素 CPU-GPU 共执行瘫痪；投机解码在多智能体负载下草稿难度方差极大，加上频繁的工具停顿，碎片化执行让静态批处理失效。\n方法：EdgeAgent 为边缘 UMA 与多智能体负载跨层协同设计——微架构层绕开图编译器刚性约束，实现零拷贝 UMA 感知张量并行，用非对称内存布局吃满 CPU 与 GPU 算力；调度层按实时序列可预测性动态分配草稿预算以约束带宽浪费；并用异步挂起-让出机制主动逐出停滞智能体，保证不可预测工具交互期间的持续硬件饱和。",
-      tags: ["多智能体推理", "统一内存", "投机解码", "边缘系统"],
-      url: "https://arxiv.org/abs/2610.03394"
+      id: "p8", group: "recent", cat: "端侧智能体", date: "2026-10-10",
+      title: "PEAM: On-device Communication Agent for Personalized, Efficient and Autonomous Mobile Network Configuration",
+      authors: "Haowen Wan 等",
+      venue: "arXiv:2610.14855", level: "预印本",
+      summary: "端侧 LLM 通信智能体 PEAM：用真实用户标注数据微调端侧模型注入通信知识，空闲时段（如夜间）批量分析历史网络配置记录并跨批反思，沉淀出可在毫秒内执行的个性化网络配置规则——把「切换应用/网络变化时的毫秒级决策」交给本地智能体。",
+      detail: "背景：手机上的紧凑 LLM 正在催生自主端侧决策（如 GUI 智能体），但网络配置这类决策有严格时延约束。\n方法：两阶段——规则生成阶段在设备空闲时批量分析历史配置记录并跨批反思，巩固一致证据、降低局部偏置、沉淀稳健配置规则；执行阶段毫秒级应用规则。\n数据与微调：基于人工标注的真实用户数据微调端侧 LLM，把通信知识注入本地模型。",
+      tags: ["端侧智能体", "网络配置", "规则生成", "个性化"],
+      url: "https://arxiv.org/abs/2610.14855"
     },
     {
-      id: "p9", group: "recent", cat: "推理与系统", date: "2026-09-30",
-      title: "AIR-LLM: Broadcasting AI Weights over Radio for Memory-Free Edge LLM Inference",
-      authors: "Zhihui Gao 等",
-      venue: "arXiv:2610.00465", level: "预印本",
-      summary: "提出「不存权重、不载权重」的边缘 LLM 推理：中心电台（如 5G 基站）把模型权重广播到空中，边缘设备在射频域用 RF 混频器直接完成推理所需的矩阵-向量乘——单次广播覆盖无限用户，MIMO 空分复用进一步缩短占用时长。",
-      detail: "动机：边缘设备要么存不下越来越大的 LLM 权重，要么加载权重的能耗不可承受——能否既不存储也不加载，让权重「过空而用」？\n架构：AIR-LLM 由中心电台广播 LLM 权重 + 边缘接收两部分组成——边缘用户在射频（RF）域用 RF 混频器直接完成 LLM 推理的通用矩阵-向量乘（GEMV）；利用 MIMO 空分复用并设计节能的预编码-后编码对校准自身无线信道。\n特性：中心电台对用户无感知，一次广播服务覆盖范围内的无限用户；在 NVIDIA Sionna 光线追踪的两个真实城市场景上实现验证。",
-      tags: ["免存内存推理", "无线电广播", "RF计算", "5G"],
-      url: "https://arxiv.org/abs/2610.00465"
+      id: "p9", group: "recent", cat: "能效与评测", date: "2026-10-10",
+      title: "「Is Low Power Enough?」Rethinking Energy Efficiency in High-Fidelity Sensing",
+      authors: "Chae Young Lee 等",
+      venue: "arXiv:2610.14714", level: "预印本",
+      summary: "重新审视高保真传感节点的选型：要拍图像/录音频，低功耗 MCU 反而更耗能——更强的 STM32N6（带神经加速器）虽功耗 1.9 倍，但完成一次观测（采集+存储+端侧检测+LoRa 传输）快 9.9 倍，总能耗反而低 5.2 倍，推理能耗低 3.2~11.4 倍——「race to sleep」原则在高保真数据与端侧 AI 时代重新成立。",
+      detail: "论点：二十年来长寿命传感节点都用最低功耗器件（标量读数毫秒级完成）；但科学家要图像/音频等高保真数据时，低功耗 MCU 需要醒着数秒——低功率不再等于低能量。\n方法：重访传感网早期的「race to sleep」与「talk less」两原则，用带神经加速器的 STM32N6 对比低功耗 Apollo4 Plus。\n结果：STM32N6 功耗高 1.9 倍但观测快 9.9 倍——总能耗低 5.2 倍；同一模型推理能耗低 3.2~11.4 倍，并可塞下精度高 23 点以上的模型。",
+      tags: ["能耗", "传感节点", "race-to-sleep", "MCU选型"],
+      url: "https://arxiv.org/abs/2610.14714"
     },
     {
-      id: "p10", group: "recent", cat: "能效与评测", date: "2026-09-29",
-      title: "IronLLM: Forging Compact Edge-Native Language Models for Real-Time Embodied Use",
-      authors: "Changdi Yang 等",
-      venue: "arXiv:2609.36860", level: "预印本",
-      summary: "654M 参数的端侧原生语言模型 IronLLM-0.6B：混合注意力 + X-MTP 多 token 预测（免 KV 回放、免回滚草稿）带来 1.48 倍解码加速；6.2 万亿 token 预训练 + 多域在线策略蒸馏，性能对标 Qwen3.5-0.8B 与 MiniCPM5-1B。",
-      detail: "设计：IronLLM-0.6B（654M 参数）面向高效端侧推理——混合注意力架构搭配 X-MTP：轻量共享 KV 的多 token 预测设计，消除逐深度 KV 缓存回放并采用轻量验证头实现免回滚草稿，解码提速 1.48 倍。\n训练：约 6.2 万亿 token 的质量导向数据管线预训练，再以多域在线策略蒸馏（Multi-Domain On-Policy Distillation）吸收领域教师模型能力；为满足端侧低时延要求采用 Instruct-Only 设计。\n评测：性能对标更大模型 Qwen3.5-0.8B 与 MiniCPM5-1B 且多数任务回复更简洁；另发布 IronLLM-0.6B-Light——以 Dynamic Tanh 替换 RMSNorm 并简化高开销组件，进一步优化推理与量化效率。",
-      tags: ["端侧模型", "多token预测", "在线策略蒸馏", "紧凑模型"],
-      url: "https://arxiv.org/abs/2609.36860"
-    }
+      id: "p10", group: "recent", cat: "推理与系统", date: "2026-10-10",
+      title: "Linear-Time Non-Local Codec Placement for Machine Learning Model Compression",
+      authors: "Matteo Spallanzani",
+      venue: "arXiv:2610.14703", level: "预印本",
+      summary: "压缩表示需要在计算图里放置编解码算子，但朴素局部放置会抵消压缩收益——本文提出线性时间的非局部放置算法：通过「绝对支配节点」为每个子图找到唯一观察点放置参数化编解码器，四个模型上建模 operand 流量再降 24%~44%。",
+      detail: "背景：端侧推理受存储与 operand 流量约束，压缩表示需要编解码算子；朴素放置可能抵消压缩收益。\n方法：给图边着色使每个导出子图弱连通且存在同时支配全部输出、后支配全部输入的「绝对支配节点」——该点即观察子图流量、学习参数化编解码算子的自然位置；算法时间复杂度与图规模线性。\n效果：较朴素局部放置，四个模型上建模 operand 流量降 24%~44%（SigLIP 降 24%、SmolLM2 降 34%）。",
+      tags: ["编解码放置", "计算图", "operand流量", "压缩推理"],
+      url: "https://arxiv.org/abs/2610.14703"
+    },
   ],
 
   /* ------------- 板块三：知识分享 ------------- */
