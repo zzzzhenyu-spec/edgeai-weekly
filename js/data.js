@@ -18,7 +18,7 @@ const WEEKLY_DATA = {
     weekRange: "2026.10.12 — 10.18 · 近 7 天",
     updated: "2026-10-18",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；Meta 开放 Muse Spark Open（816B 总参/42B 激活），DeepSeek V4.1-Flash-1017 帕累托改进并 MIT 开源，腾讯混元 Hy Memory 2.0 开源（3B 激活跑赢 Opus 5）；Apple Intelligence 月底入华测试；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 半价对标 DGX Spark，黄仁勋为 OpenClaw 配 OpenShell 零信任容器；社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。"
+    editorsNote: "近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；Meta 开放 Muse Spark Open（816B 总参/42B 激活），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本（1017 版再帕累托改进、MIT 开源），腾讯混元 Hy Memory 2.0 开源（3B 激活跑赢 Opus 5）；Apple Intelligence 月底入华测试；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 半价对标 DGX Spark，黄仁勋为 OpenClaw 配 OpenShell 零信任容器；社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -36,10 +36,10 @@ const WEEKLY_DATA = {
     },
     {
       id: "n92", cat: "大模型厂商", source: "IT之家", date: "2026-10-17",
-      title: "DeepSeek V4.1-Flash-1017 发布：性能-成本帕累托改进，承接「许愿式」编程，权重 MIT 开放下载",
-      summary: "DeepSeek V4.1 Flash 更新至 1017 版本（网页端/APP/API 同步，价格不变）——各基准能力较上一版明显提升，同时任务运行时间与输出长度缩短、单次调用综合成本下降，在多个 Harness 下达到新的性能-费用帕累托最优；经自反馈强化学习训练，模型在极有限提示下从零构建完整项目（游戏开发、3D 建模）的能力增强，官方称可承接「许愿式」编程；权重延续 MIT 许可在 HuggingFace 与 ModelScope 开放下载。",
-      detail: "IT之家 10 月 17 日报道：DeepSeek V4.1 Flash 更新至 V4.1-Flash-1017，官方网页端、APP 与 API 同步变更（API 调用方式与价格不变，deepseek-flash 即可访问）。\n帕累托改进：各基准测试中模型能力较上一版明显提升，同时任务运行时间与输出长度均有缩短——单次调用综合成本下降，在多个 Harness 下达到新的性能-费用帕累托最优；官方针对 DeepSeek Harness、腾讯 CodeBuddy 与 WorkBuddy 做了适配优化（建议 Harness 升级至 0.2.1-rc.1 以上）。\n能力增强：基于自反馈的强化学习训练，模型从零构建完整项目的能力增强，覆盖游戏开发、3D 建模等场景——在提示词与素材参考极为有限的条件下直接生成可运行项目成果，官方演示中以极短交互轮次完成完整项目搭建。\n端侧视角：MIT 开放权重意味着该版本可自由本地部署与蒸馏——「更快、更短、更便宜」的输出特性正是端侧 Agent 调用云模型时的成本关键，也延续了 DeepSeek 开源策略对国产端侧生态（MiniCPM、Step 等）的输血路径。",
-      tags: ["DeepSeek", "V4.1 Flash", "帕累托改进", "MIT开源"],
+      title: "DeepSeek V4.1 Flash：552B MoE 将 KV 缓存压至 1/4（SSD 1/8），1017 版帕累托改进，权重 MIT 开放",
+      summary: "DeepSeek 全新架构系列最小尺寸模型 V4.1 Flash——Causal-Encoder-Decoder 不对称结构的 552B MoE（输入激活 8B/输出 16B，原生多模态），KV Cache 压缩使 HBM 需求降至上一代 1/4、SSD 降至 1/8，基准超越 V4 Pro；10 月 17 日的 1017 版本再实现性能-成本帕累托改进并承接「许愿式」编程，权重延续 MIT 许可开放。",
+      detail: "模型背景（官方公告）：V4.1 Flash 于 9 月 10 日发布，是 DeepSeek 全新模型结构系列中的最小尺寸模型——Causal-Encoder-Decoder 不对称结构（输入激活 8B、输出激活 16B）的 552B MoE，具备原生多模态视觉理解；基准测试超越包括 DeepSeek V4 Pro 在内的旗舰模型，官方已计划下线 V4 Pro 并将其请求路由至 V4.1 Flash。\n缓存架构：新一代结构大幅压缩 KV Cache——对 HBM（显存）的需求降至上一代的 1/4、对 SSD 降至 1/8；配套 arXiv 论文披露采用 CSA2（Compressed Sparse Attention 2）跨层 KV 复用，全局 KV 约 890 B/token 并支持 100 万 token 上下文。Agent 场景缓存命中费用占比高，KV 压缩直接大幅降低长时程智能体任务成本。\n1017 更新：各基准能力较上一版明显提升，任务运行时间与输出长度缩短——多个 Harness 下达到新的性能-费用帕累托最优；基于自反馈强化学习增强从零构建完整项目的能力（游戏开发、3D 建模），可承接提示极简的「许愿式」编程；针对 DeepSeek Harness、腾讯 CodeBuddy 与 WorkBuddy 适配优化。\n生态与开源：权重延续 MIT 许可在 HuggingFace 与 ModelScope 开放；腾讯 WorkBuddy/CodeBuddy 与 OpenCode 作为官方合作伙伴全量接入；定价采用峰谷模式（闲时为高峰一半）。\n端侧视角：KV 缓存是长上下文与 Agent 的第一内存瓶颈——「显存 1/4」的架构级压缩意味着同等硬件可承载 4 倍并发或 4 倍长度的上下文，与论文板块的 PriorityFEC 缓存交接、精度调度同题；MIT 权重让本地部署与蒸馏路线完全开放。",
+      tags: ["DeepSeek", "V4.1 Flash", "KV缓存", "CSA2", "MIT开源"],
       url: "https://www.ithome.com/1/014/328.htm",
       image: "https://img.ithome.com/newsuploadfiles/2026/10/ca365e64-d286-4a9b-842d-37162dbd5fe2.jpg",
       imageCap: "DeepSeek V4.1-Flash-1017（图源：IT之家）",

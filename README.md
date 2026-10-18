@@ -4,7 +4,7 @@
 
 ## 2026 · 第 44 期（2026.10.12 — 10.18 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；Meta 开放 Muse Spark Open（816B 总参/42B 激活），DeepSeek V4.1-Flash-1017 帕累托改进并 MIT 开源，腾讯混元 Hy Memory 2.0 开源（3B 激活跑赢 Opus 5）；Apple Intelligence 月底入华测试；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 半价对标 DGX Spark，黄仁勋为 OpenClaw 配 OpenShell 零信任容器；社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。
+**近 7 天导读**：近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；Meta 开放 Muse Spark Open（816B 总参/42B 激活），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本（1017 版再帕累托改进、MIT 开源），腾讯混元 Hy Memory 2.0 开源（3B 激活跑赢 Opus 5）；Apple Intelligence 月底入华测试；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 半价对标 DGX Spark，黄仁勋为 OpenClaw 配 OpenShell 零信任容器；社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。
 
 ## 近 7 天速览
 
@@ -53,7 +53,7 @@
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
-| 2026-10-17 | [DeepSeek V4.1-Flash-1017 发布：性能-成本帕累托改进，承接「许愿式」编程，权重 MIT 开放下载](https://www.ithome.com/1/014/328.htm) | IT之家 |
+| 2026-10-17 | [DeepSeek V4.1 Flash：552B MoE 将 KV 缓存压至 1/4（SSD 1/8），1017 版帕累托改进，权重 MIT 开放](https://www.ithome.com/1/014/328.htm) | IT之家 |
 | 2026-10-16 | [Meta 开放权重模型 Muse Spark Open：816B 总参 / 42B 激活，两台 M5 Ultra Mac Studio 组 1TB 统一内存本地跑，苹果 CEO 回应「拓展端侧 AI 边界」](https://zhidx.com/p/601572.html) | 智东西 |
 | 2026-10-16 | [腾讯混元开源记忆框架 Hy Memory 2.0：3B 激活专用模型跑赢 Opus 5，MemHub 让 10 种 AI 工具共享一份本地记忆](https://www.ithome.com/1/014/108.htm) | IT之家 |
 | 2026-10-13 | [面壁 MiniCPM-V 4.7 发布：首个端侧无损流畅运行的开源 MoE，iPhone 上 3GB 内存跑出 13+ token/s](https://www.ithome.com/1/012/483.htm) | IT之家 |
