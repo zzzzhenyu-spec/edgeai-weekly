@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 43 期（2026.10.12 — 10.18）
+## 2026 · 第 44 期（2026.10.12 — 10.18 · 近 7 天）
 
-**近 7 天导读**：本期聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类（软硬模全栈 3999 元），千问 AI 眼镜/耳机全家桶开售（Pro 版眼动交互与虹膜支付），面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信。模型侧三连——Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 可跑），DeepSeek V4.1-Flash-1017 实现性能-成本帕累托改进并 MIT 开源，腾讯混元 Hy Memory 2.0 记忆框架开源（3B 激活跑赢 Opus 5）。Apple Intelligence 携千问/万相获批月底入华，HomeView 把 Siri AI 送进家庭中枢；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 以约半价对标 DGX Spark，黄仁勋为 OpenClaw 配 OpenShell 零信任容器；社区让 PS5 原生跑 27B 模型（20.9 token/s）。学术侧聚焦端云路由与协同推理（弱到强路由、HyCo 投机解码、PriorityFEC 缓存交接）、WebGPU 边缘内核调优与 TEE 模型保护。
+**近 7 天导读**：近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；Meta 开放 Muse Spark Open（816B 总参/42B 激活），DeepSeek V4.1-Flash-1017 帕累托改进并 MIT 开源，腾讯混元 Hy Memory 2.0 开源（3B 激活跑赢 Opus 5）；Apple Intelligence 月底入华测试；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 半价对标 DGX Spark，黄仁勋为 OpenClaw 配 OpenShell 零信任容器；社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。
 
 ## 近 7 天速览
 
