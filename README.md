@@ -4,14 +4,15 @@
 
 ## 2026 · 第 44 期（2026.10.13 — 10.19 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；Meta 开放 Muse Spark Open（816B 总参/42B 激活），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本（1017 版再帕累托改进、MIT 开源），腾讯混元 Hy Memory 2.0 开源（3B 激活跑赢 Opus 5），PrismML 以 Qwen3.5 为底座开源三元权重模型 Ternary Bonsai 2（2B 仅 0.43GB，iPhone 18 Pro Max 本地最高 120 token/s）；Apple Intelligence 月底入华测试；OPPO 面向全球发布 ColorOS 17，智能体模式直调本地文件、端侧检测实时识别合成语音与换脸诈骗；首个走完全流程合规的智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议并启动 30 天公示；爱芯元智 AX8860 半价对标 DGX Spark，跃然第三代 AI 玩具「光之召唤」开售，黄仁勋为 OpenClaw 配 OpenShell 零信任容器，社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。
+**近 7 天导读**：近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；Meta 开放 Muse Spark Open（816B 总参/42B 激活），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本（1017 版再帕累托改进、MIT 开源），腾讯混元 Hy Memory 2.0 开源（3B 激活跑赢 Opus 5），PrismML 以 Qwen3.5 为底座开源三元权重模型 Ternary Bonsai 2（2B 仅 0.43GB，iPhone 18 Pro Max 本地最高 120 token/s），岩芯矩阵联合港科大/CMU 开源固定内存推理的 EdgeRock-4B（KV Cache 固定 72MiB、单卡 512 路并发）；Apple Intelligence 月底入华测试；OPPO 面向全球发布 ColorOS 17，智能体模式直调本地文件、端侧检测实时识别合成语音与换脸诈骗；首个走完全流程合规的智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议并启动 30 天公示；Meta 官方确认雷朋眼镜「未唤醒也录音」Bug 并已修复；爱芯元智 AX8860 半价对标 DGX Spark，达摩院发布 ASIL-B+D 双认证的玄铁 E908A 车规 CPU，跃然第三代 AI 玩具「光之召唤」开售，黄仁勋为 OpenClaw 配 OpenShell 零信任容器，社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。今日新增：Meta 确认雷朋眼镜「未唤醒也录音」Bug、岩芯矩阵开源固定内存推理的 EdgeRock-4B、达摩院发布双认证车规 CPU 玄铁 E908A。
 
 ## 近 7 天速览
 
-### 行业关注事件（2 条）
+### 行业关注事件（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-19 | [Meta 官方确认雷朋眼镜「未唤醒也录音」的 Bug 并称已修复：睡眠模式无声录音引爆隐私争议](https://mashable.com/tech/meta-confirms-smart-glasses-recording-without-being-activated) | Mashable（编译） |
 | 2026-10-18 | [超百款 App 集体拒绝豆包手机助手操控：首个全流程合规智能体手机开售撞上生态墙，豆包发起 SAEP 声明协议](https://www.chinanews.com.cn/sh/2026/10-18/10716588.shtml) | 央视新闻 |
 | 2026-10-13 | [Meta 发布前沿模型 Muse Wonder：部分评测对标 Claude Opus 5.5 与 GPT-6，扎克伯格称已追上第一梯队](https://news.qq.com/rain/a/20261013A03H7Q00) | 腾讯新闻 |
 
@@ -35,10 +36,11 @@
 | 2026-10-13 | [千问 AI 硬件全家桶开售：N1 眼镜可换电池 2899 元起，Pro 版眼动交互/虹膜支付/全天候健康监测，AI 耳机 1099 元](https://www.ithome.com/1/012/400.htm) | IT之家 |
 | 2026-10-13 | [苹果 HomeView 发布：A18 芯片+Apple Intelligence 的 Siri 进家门，智能家居中枢 299 美元、11 月 13 日开售](https://www.ithome.com/1/012/566.htm) | IT之家 |
 
-### 芯片厂商（1 条）
+### 芯片厂商（2 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-19 | [达摩院发布首款 ASIL-B+ASIL-D 双认证 RISC-V 车规 CPU 玄铁 E908A，首发自动驾驶与具身智能路线图](https://www.ithome.com/1/014/960.htm) | IT之家 |
 | 2026-10-13 | [爱芯元智 AX8860 发布：256 TOPS 边缘算力对标 DGX Spark，Qwen 27B 推理快 25%~30%，整机价格约一半](https://www.ithome.com/1/012/551.htm) | IT之家 |
 
 ### 手机厂商（2 条）
@@ -48,10 +50,11 @@
 | 2026-10-13 | [首款大模型原生智能体手机落地：阶跃 STEPX Neo 先行版发布，软硬模三位一体全栈 3999 元](https://www.ithome.com/1/012/556.htm) | IT之家 |
 | 2026-10-13 | [OPPO 面向全球发布 ColorOS 17：智能体模式直接调用本地照片与文件，端侧 AI 实时检测合成语音与换脸诈骗](https://www.techritual.com/2026/10/13/591644/) | Techritual 香港 |
 
-### 大模型厂商（5 条）
+### 大模型厂商（6 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-19 | [岩芯矩阵开源 EdgeRock-4B：RMA 记忆岩锚把 KV Cache 固定在 72MiB，单卡 80GB 跑 512 路并发、吞吐 6.42 倍于源模型](https://finance.sina.com.cn/wm/2026-10-19/doc-inivueuh0952341.shtml) | 量子位 |
 | 2026-10-17 | [DeepSeek V4.1 Flash：552B MoE 将 KV 缓存压至 1/4（SSD 1/8），1017 版帕累托改进，权重 MIT 开放](https://www.ithome.com/1/014/328.htm) | IT之家 |
 | 2026-10-16 | [Meta 开放权重模型 Muse Spark Open：816B 总参 / 42B 激活，两台 M5 Ultra Mac Studio 组 1TB 统一内存本地跑，苹果 CEO 回应「拓展端侧 AI 边界」](https://zhidx.com/p/601572.html) | 智东西 |
 | 2026-10-16 | [腾讯混元开源记忆框架 Hy Memory 2.0：3B 激活专用模型跑赢 Opus 5，MemHub 让 10 种 AI 工具共享一份本地记忆](https://www.ithome.com/1/014/108.htm) | IT之家 |

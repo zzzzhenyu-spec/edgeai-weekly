@@ -18,11 +18,44 @@ const WEEKLY_DATA = {
     weekRange: "2026.10.13 — 10.19 · 近 7 天",
     updated: "2026-10-19",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；Meta 开放 Muse Spark Open（816B 总参/42B 激活），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本（1017 版再帕累托改进、MIT 开源），腾讯混元 Hy Memory 2.0 开源（3B 激活跑赢 Opus 5），PrismML 以 Qwen3.5 为底座开源三元权重模型 Ternary Bonsai 2（2B 仅 0.43GB，iPhone 18 Pro Max 本地最高 120 token/s）；Apple Intelligence 月底入华测试；OPPO 面向全球发布 ColorOS 17，智能体模式直调本地文件、端侧检测实时识别合成语音与换脸诈骗；首个走完全流程合规的智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议并启动 30 天公示；爱芯元智 AX8860 半价对标 DGX Spark，跃然第三代 AI 玩具「光之召唤」开售，黄仁勋为 OpenClaw 配 OpenShell 零信任容器，社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。"
+    editorsNote: "近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；Meta 开放 Muse Spark Open（816B 总参/42B 激活），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本（1017 版再帕累托改进、MIT 开源），腾讯混元 Hy Memory 2.0 开源（3B 激活跑赢 Opus 5），PrismML 以 Qwen3.5 为底座开源三元权重模型 Ternary Bonsai 2（2B 仅 0.43GB，iPhone 18 Pro Max 本地最高 120 token/s），岩芯矩阵联合港科大/CMU 开源固定内存推理的 EdgeRock-4B（KV Cache 固定 72MiB、单卡 512 路并发）；Apple Intelligence 月底入华测试；OPPO 面向全球发布 ColorOS 17，智能体模式直调本地文件、端侧检测实时识别合成语音与换脸诈骗；首个走完全流程合规的智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议并启动 30 天公示；Meta 官方确认雷朋眼镜「未唤醒也录音」Bug 并已修复；爱芯元智 AX8860 半价对标 DGX Spark，达摩院发布 ASIL-B+D 双认证的玄铁 E908A 车规 CPU，跃然第三代 AI 玩具「光之召唤」开售，黄仁勋为 OpenClaw 配 OpenShell 零信任容器，社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。今日新增：Meta 确认雷朋眼镜「未唤醒也录音」Bug、岩芯矩阵开源固定内存推理的 EdgeRock-4B、达摩院发布双认证车规 CPU 玄铁 E908A。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n98", cat: "行业关注事件", source: "Mashable（编译）", date: "2026-10-19",
+      title: "Meta 官方确认雷朋眼镜「未唤醒也录音」的 Bug 并称已修复：睡眠模式无声录音引爆隐私争议",
+      summary: "多位用户反映 Ray-Ban Meta 智能眼镜在未说唤醒词、未按键的「睡眠」状态下仍在录音，Meta 官方确认该 Bug 并表示已通过固件修复——继 8 月「指示灯被遮挡即拒录」更新后再度触碰 AI 眼镜最敏感的隐私神经，外媒称「AI 眼镜最大的恐惧成真」；同一周 HTC 披露 Vive Eagle 眼镜隐私设计，主打本地加密存储与语音停止录制，隐私正成为 AI 眼镜第二战场。",
+      detail: "事件要点：用户上报 Ray-Ban Meta 眼镜处于待机/睡眠状态时仍在采集音频——没有「Hey Meta」唤醒词、也没有按下录制键；Meta 确认存在该缺陷并称已修复。\n背景线：今年 8 月 Meta 刚推送「指示灯被遮挡即停止录制」的防偷拍更新；本月雷朋眼镜已在欧洲遭遇零售停售（荷兰连锁 Hans Anders）与立法动议（挪威拟公共场所临时禁用），此次事故为监管方提供了新论据。\n同周对照：HTC 披露 Vive Eagle 智能眼镜的隐私设计——本地加密存储与语音停止录制，功能对标 Meta 但主打隐私保护。\n端侧视角：AI 眼镜的社会接受度取决于「可信的物理开关 + 指示灯」这一端侧执行机制——连续两次信任事件都出在录制边界的执行层而非模型层；当佩戴者与非佩戴者的信任都依赖厂商固件自律，硬件级录制开关与本地加密正在从卖点变为行业底线。",
+      tags: ["Meta", "雷朋眼镜", "隐私安全", "AI眼镜"],
+      url: "https://mashable.com/tech/meta-confirms-smart-glasses-recording-without-being-activated",
+      image: "https://helios-i.mashable.com/imagery/articles/00qxpKzBOY9swwOt1U66td9/hero-image.fill.size_1200x675.v1792097187.jpg",
+      imageCap: "Ray-Ban Meta 智能眼镜（图：Mashable）",
+      highlight: false
+    },
+    {
+      id: "n99", cat: "大模型厂商", source: "量子位", date: "2026-10-19",
+      title: "岩芯矩阵开源 EdgeRock-4B：RMA 记忆岩锚把 KV Cache 固定在 72MiB，单卡 80GB 跑 512 路并发、吞吐 6.42 倍于源模型",
+      summary: "岩山科技旗下岩芯矩阵联合港科大与 CMU 开源 EdgeRock-4B——由 Qwen3.5-4B 分阶段改造，KV Cache 在 256K 上下文固定为 72MiB（较源模型下降 99.1%）；单卡 80GB Hopper 以 512 路并发跑出 12,124 tokens/s（源模型批 64 时 1,889 tokens/s 的 6.42 倍）；AIME 三年平均 pass@1 保留 96.3%，支持文本与图像输入，权重与代码开源、可商用。",
+      detail: "发布要点：岩芯矩阵（Rock Matrix）联合港科大、CMU 开源 EdgeRock-4B——从 Qwen3.5-4B 分阶段改造而来（保留 24 层 Gated DeltaNet 线性注意力，8 层全注意力改为 1024 token 滑窗并叠加 RMA），无需从零预训练；支持文本与图像输入，权重与代码开源、可商用。\n性能数据：KV Cache 在 256K 上下文固定为 72 MiB、较源模型下降 99.1%（批量状态 97.76 MiB/路）；单卡 80GB Hopper 批 512 并发长流推理输出 12,124 tokens/s，为源模型的 6.42 倍，平均 4.94 倍于 Qwen3.5-4B、7.18 倍于 LFM2.5-2.6B。\nRMA 记忆岩锚：维护循环状态 + 1024 token 局部窗口 + 岩锚库（从候选中保留评分最高的 1024 个、分 4 组 KV），使全注意力「近似完整保留」；消融实验显示关掉 RMA 后长文问答准确率从 94.1% 跌至 0.4%。\n能力保留：AIME 2024-2026 平均 pass@1 达 82.9%（保留源模型 96.3%）、MATH-500 保留 97.5%；29 项文本基准中 8 项反超源模型（MMLU-Pro/HumanEval/MBPP），6 项视觉基准平均保留 95.3%；128K→128K 长流推理全程稳定 233.7 tokens/s，每 token 算力恒定。\n端侧视角：继 DeepSeek CSA2 跨层 KV 复用之后，「固定内存循环状态 + 可检索岩锚」给出 KV 压缩的第三条路线——显存不再随上下文增长，对机器人数小时级感知规划等超长智能体流尤其关键；4B 量级叠加开源可商用，把固定内存推理的部署门槛降到了消费级显卡与高端终端可及的范围。",
+      tags: ["EdgeRock-4B", "KV缓存", "RMA记忆岩锚", "开源模型"],
+      url: "https://finance.sina.com.cn/wm/2026-10-19/doc-inivueuh0952341.shtml",
+      image: "https://n.sinaimg.cn/front20261019ac/479/w898h381/20261019/9da8-d2429ff623cec1bb87137503058a34be.jpg",
+      imageCap: "EdgeRock-4B 架构（图：新浪财经/量子位）",
+      highlight: false
+    },
+    {
+      id: "n100", cat: "芯片厂商", source: "IT之家", date: "2026-10-19",
+      title: "达摩院发布首款 ASIL-B+ASIL-D 双认证 RISC-V 车规 CPU 玄铁 E908A，首发自动驾驶与具身智能路线图",
+      summary: "RISC-V 中国峰会（深圳）上，阿里达摩院发布车规增强处理器玄铁 E908A——首款同时达到 ASIL-B 与 ASIL-D 功能安全标准的 RISC-V CPU IP，单点安全度量（SPFM）业内首次超过 90%，面向安全岛、域控与车载网关；同场首发自动驾驶与具身智能路线图，下一代 C950A 目标性能为现有 RISC-V 车规产品 5 倍，C950 运行 Qwen3.8-Flash-Next 达 43 token/s。",
+      detail: "发布要点：10 月 19 日 RISC-V 中国峰会在深圳举行，达摩院发布玄铁 E908A——首款同时达到 ASIL-B 与 ASIL-D 功能安全标准的 RISC-V CPU IP，单点安全度量（SPFM）业内首次超过 90%，为安全岛、域控、车载网关等场景提供安全可靠的实时计算底座。\n路线图：首次发布自动驾驶与具身智能产品路线图，下一代 C950A 目标性能达现有 RISC-V 车规产品的 5 倍；XT-LINK 多核互联支撑 C950 多核性能线性扩展。\nAI 能力：今年 3 月发布、曾刷新全球 RISC-V 性能纪录的 C950，在四类 Agentic 工作负载上较主流传统架构处理器提升 10% 以上，运行 Qwen3.8-Flash-Next 推理速度达 43 token/s，运行云端 MoE 与端侧 Dense 模型的性能进一步提升。\n行业背景：达摩院孟建熠称 RISC-V 处理器年出货量保持 50% 增长，2030 年市占率预计约 25%——车规功能安全认证曾是 Arm 的护城河，E908A 双认证补上 RISC-V 最大的短板。\n端侧视角：车规是端侧 AI 最苛刻的场景（功能安全 + 实时性双约束）——RISC-V 拿下 ASIL-D 双认证意味着智驾域控与安全岛多出一条非 Arm 供应链选择；43 token/s 的模型运行能力则把「车端跑大模型」的选项从 SoC 厂商延伸到 CPU IP 层。",
+      tags: ["玄铁", "RISC-V", "车规芯片", "达摩院"],
+      url: "https://www.ithome.com/1/014/960.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/5b0e9162-6a24-4b8a-ad1d-a8ed6e790e35.jpg",
+      imageCap: "玄铁 E908A（图源：IT之家）",
+      highlight: false
+    },
     {
       id: "n95", cat: "行业关注事件", source: "央视新闻", date: "2026-10-18",
       title: "超百款 App 集体拒绝豆包手机助手操控：首个全流程合规智能体手机开售撞上生态墙，豆包发起 SAEP 声明协议",
