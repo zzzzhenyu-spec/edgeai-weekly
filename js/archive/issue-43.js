@@ -7,7 +7,7 @@ WEEKLY_ARCHIVE[43] = {
     weekRange: "2026.10.12 — 10.18",
     updated: "2026-10-18",
     status: "final",
-    editorsNote: "本期聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类（软硬模全栈 3999 元），千问 AI 眼镜/耳机全家桶开售（Pro 版眼动交互与虹膜支付），面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信。模型侧三连——Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 可跑），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本（1017 版帕累托改进、MIT 开源），腾讯混元 Hy Memory 2.0 记忆框架开源（3B 激活跑赢 Opus 5）。Apple Intelligence 携千问/万相获批月底入华，HomeView 把 Siri AI 送进家庭中枢；OPPO 面向全球发布 ColorOS 17，智能体模式直调本地文件、端侧检测实时识别合成语音与换脸诈骗；首个走完全流程合规的智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议并启动 30 天公示；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 以约半价对标 DGX Spark，黄仁勋为 OpenClaw 配 OpenShell 零信任容器；社区让 PS5 原生跑 27B 模型（20.9 token/s）。学术侧聚焦端云路由与协同推理（弱到强路由、HyCo 投机解码、PriorityFEC 缓存交接）、WebGPU 边缘内核调优与 TEE 模型保护。"
+    editorsNote: "本期聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类（软硬模全栈 3999 元），千问 AI 眼镜/耳机全家桶开售（Pro 版眼动交互与虹膜支付），面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信。模型侧三连——Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 可跑），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本（1017 版帕累托改进、MIT 开源），腾讯混元 Hy Memory 2.0 记忆框架开源（3B 激活跑赢 Opus 5），PrismML 以 Qwen3.5 为底座开源三元权重模型 Ternary Bonsai 2（2B 仅 0.43GB，iPhone 18 Pro Max 本地最高 120 token/s）。Apple Intelligence 携千问/万相获批月底入华，HomeView 把 Siri AI 送进家庭中枢；OPPO 面向全球发布 ColorOS 17，智能体模式直调本地文件、端侧检测实时识别合成语音与换脸诈骗；首个走完全流程合规的智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议并启动 30 天公示；跃然第三代 AI 玩具「光之召唤」开售（599 元）；高通安蒙披露 2028 年 100B 端侧路线，爱芯元智 AX8860 以约半价对标 DGX Spark，黄仁勋为 OpenClaw 配 OpenShell 零信任容器；社区让 PS5 原生跑 27B 模型（20.9 token/s）。学术侧聚焦端云路由与协同推理（弱到强路由、HyCo 投机解码、PriorityFEC 缓存交接）、WebGPU 边缘内核调优与 TEE 模型保护。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -120,6 +120,28 @@ WEEKLY_ARCHIVE[43] = {
       url: "https://www.ithome.com/1/013/610.htm",
       image: "https://img.ithome.com/newsuploadfiles/2026/10/bd325a6f-8b9d-4ffb-8dba-b86d624b61fe.jpg",
       imageCap: "黄仁勋谈 OpenClaw（图源：IT之家）",
+      highlight: false
+    },
+    {
+      id: "n96", cat: "大模型厂商", source: "IT之家", date: "2026-10-15",
+      title: "PrismML 开源 Ternary Bonsai 2：三元权重把 2B 模型压到 0.43GB，iPhone 18 Pro Max 本地跑出 120 token/s",
+      summary: "美国初创 PrismML 发布 Ternary Bonsai 2 系列 2B/4B/9B 三个规格——基于阿里 Qwen3.5 底座，参数仅用 -1/0/+1 三种数值编码，存储占用分别约 0.43GB、0.95GB 与 2GB；iPhone 18 Pro Max 上 2B 最高 120 token/s、9B 最高 34 token/s，官方称相较全精度模型最高 5 倍吞吐与 3 倍能效；Apache 2.0 开源，经 llama.cpp 与 MLX 双通道部署，与此前 27B（压缩至 3.9GB、保留 98.2% 综合性能）组成完整端侧产品线。",
+      detail: "发布要点：PrismML 于 10 月 15 日发布博文推出 Ternary Bonsai 2 系列 2B/4B/9B 三个规格，底座为阿里 Qwen3.5，支持文本与图片输入；权重以 Apache 2.0 许可开放。\n三元权重：模型参数仅用 -1、0、+1 三种数值编码，配合 FP16 分组缩放（等效约 1.76 bit）——2B/4B/9B 的存储占用分别约 0.43GB、0.95GB 与 2GB，一部手机即可装下覆盖轻量任务到复杂工作流的完整模型线。\n实测性能：iPhone 18 Pro Max 本地推理 2B 模型最高 120 token/s、9B 模型最高 34 token/s；官方称在 RTX 4090 与 M5 Pro 等硬件上相较对应全精度模型可实现最高 5 倍吞吐量与 3 倍能效。\n部署与产品线：经 llama.cpp 在 NVIDIA GPU 运行、经 MLX 在 Mac/iPhone/iPad 部署；与 9 月发布的 Bonsai 2 27B（1-bit 量化压缩至 3.9GB、保留 98.2% 综合基准性能）组成 2B—27B 完整端侧产品线。\n端侧视角：继苹果端侧模型 14GB 占用争议、华为 30B MoE 上机之后，三元/1-bit 极限压缩成为端侧模型的第三条路线——「近无损压缩 + 手机级吞吐」若经第三方复现，Agent 常驻手机的存储门槛将被大幅拉低；另据 36 氪报道苹果已接触 PrismML（未获官方证实）。",
+      tags: ["PrismML", "Ternary Bonsai 2", "三元权重", "端侧模型"],
+      url: "https://www.ithome.com/1/013/894.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/5097a109-353a-4c05-8d0c-c9d262e1fe3c.png",
+      imageCap: "Ternary Bonsai 2（图源：IT之家）",
+      highlight: false
+    },
+    {
+      id: "n97", cat: "AI硬件", source: "凤凰网科技", date: "2026-10-15",
+      title: "跃然第三代 AI 玩具「光之召唤」开售：奥特曼 AI 互动对话器 599 元，可佩戴形态支持远距离组队对讲",
+      summary: "跃然创新第三代 AI 玩具「光之召唤」奥特曼 AI 互动对话器 10 月 15 日众筹收官并正式开售，官方零售价 599 元——把 AI 角色互动、实时通信、多人社交与家庭管理整合进一台可佩戴的「奥特曼彩色计时器」：按压触发与自由实时对话两种模式，具备角色设定、知识内容与长期记忆；支持 4G/Wi-Fi 远距离组队对讲与 AI 互动剧场；基于 2.0 技术平台与自研虚拟操作系统，以边缘节点通信架构支撑设备间实时连接。",
+      detail: "产品要点：从 BubblePal 到 CocoMate 再到「光之召唤」，跃然创新的第三代 AI 玩具以奥特曼 IP 为载体、可佩戴彩色计时器形态——能量光效、实体按键与受力自动断开的安全挂绳；官方零售价 599 元，首发赠流量卡与迪迦 NFC 主题币。\n交互能力：按压触发与自由实时对话两种模式；角色设定、知识内容与长期记忆能力让对话可持续积累；好友可经 4G 或 Wi-Fi 远距离组队对讲，AI 互动剧场与 NFC 主题内容扩展玩法。\n技术底座：基于跃然 2.0 技术平台，自研虚拟操作系统降低内容适配难度，边缘节点通信架构支撑设备间实时连接，支持持续更新；配套 App 提供内容推送、设备管理与使用管理。\n端侧视角：AI 玩具是端侧智能体在儿童场景的先落地产物——长期记忆 + 角色设定 + 实时通信的组合本质是「陪伴型 Personal Agent」；跃然之外，字节「显眼包」（内测不对外售卖）、珞博芙崽等已形成赛道，大模型厂商的儿童端入口之争正在展开。",
+      tags: ["跃然创新", "AI玩具", "光之召唤", "陪伴智能体"],
+      url: "https://sz.ifeng.com/c/8xDX2OH7dM9",
+      image: "https://q0.itc.cn/q_70/images03/20261016/b3c4a9adb1654be8a869b02033b0a085.png",
+      imageCap: "光之召唤奥特曼 AI 互动对话器（图：搜狐科技）",
       highlight: false
     },
     {
