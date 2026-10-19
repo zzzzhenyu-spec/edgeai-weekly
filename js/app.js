@@ -545,6 +545,7 @@
     resCur = rc;
     panelBody.innerHTML = resPanelHTML(rc);
     panelBody.scrollTop = 0;
+    panel.classList.add("wide");
     panel.classList.add("open");
     overlay.classList.add("show");
     document.body.classList.add("panel-open");
@@ -631,12 +632,15 @@
       });
     }
     panelBody.scrollTop = 0;
+    /* 知识分享类内容桌面端加宽(~2/3 视口), 资讯/论文保持原宽; wide 类的宽度定义在 style.css 桌面媒体查询里 */
+    panel.classList.toggle("wide", ["knowledge", "kplan", "framework", "trendrepo"].indexOf(type) > -1);
     panel.classList.add("open");
     overlay.classList.add("show");
     document.body.classList.add("panel-open");
   }
   function closePanel() {
     panel.classList.remove("open");
+    panel.classList.remove("wide");
     overlay.classList.remove("show");
     document.body.classList.remove("panel-open");
   }
