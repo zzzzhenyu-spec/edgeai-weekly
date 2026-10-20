@@ -15,14 +15,36 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 44 期",
-    weekRange: "2026.10.13 — 10.19 · 近 7 天",
-    updated: "2026-10-19",
+    weekRange: "2026.10.14 — 10.20 · 近 7 天",
+    updated: "2026-10-20",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：智能体终端三箭齐发——阶跃 STEPX Neo 开启大模型原生智能体手机品类，千问 AI 眼镜/耳机全家桶开售，面壁 MiniCPM-V 4.7 成为首个端侧无损运行的开源 MoE；A2A 智能体互联协议一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；Meta 开放 Muse Spark Open（816B 总参/42B 激活），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本（1017 版再帕累托改进、MIT 开源），腾讯混元 Hy Memory 2.0 开源（3B 激活跑赢 Opus 5），PrismML 以 Qwen3.5 为底座开源三元权重模型 Ternary Bonsai 2（2B 仅 0.43GB，iPhone 18 Pro Max 本地最高 120 token/s），岩芯矩阵联合港科大/CMU 开源固定内存推理的 EdgeRock-4B（KV Cache 固定 72MiB、单卡 512 路并发）；Apple Intelligence 月底入华测试；OPPO 面向全球发布 ColorOS 17，智能体模式直调本地文件、端侧检测实时识别合成语音与换脸诈骗；首个走完全流程合规的智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议并启动 30 天公示；Meta 官方确认雷朋眼镜「未唤醒也录音」Bug 并已修复；爱芯元智 AX8860 半价对标 DGX Spark，达摩院发布 ASIL-B+D 双认证的玄铁 E908A 车规 CPU，跃然第三代 AI 玩具「光之召唤」开售，黄仁勋为 OpenClaw 配 OpenShell 零信任容器，社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。今日新增：Meta 确认雷朋眼镜「未唤醒也录音」Bug、岩芯矩阵开源固定内存推理的 EdgeRock-4B、达摩院发布双认证车规 CPU 玄铁 E908A。"
+    editorsNote: "近 7 天聚焦：监管为端侧智能体定调——工信部确认 AI 手机电脑旗舰已具备端侧自主执行任务能力，超百款终端达 L3 辅助级，AI 终端从「被动响应」转向「主动服务」；Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 本地可跑），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本，岩芯矩阵开源固定内存推理的 EdgeRock-4B（KV Cache 固定 72MiB、单卡 512 路并发），PrismML 三元权重 Ternary Bonsai 2 在 iPhone 18 Pro Max 跑到 120 token/s，腾讯混元 Hy Memory 2.0 开源；Apple Intelligence 携千问/万相获批月底入华测试；A2A 智能体互联一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；首个全流程合规智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议 30 天公示；Meta 官方确认雷朋眼镜「未唤醒也录音」Bug 并已修复；讯飞 AI 录音环发布（1299 元，无感常驻新形态），跃然第三代 AI 玩具开售，达摩院发布 ASIL-B+D 双认证的玄铁 E908A 车规 CPU，黄仁勋为 OpenClaw 配 OpenShell 零信任容器，社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。今日新增：工信部定调端侧自主执行任务能力、讯飞 AI 录音环发布。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n101", cat: "行业动态", source: "新浪科技", date: "2026-10-20",
+      title: "工信部定调：AI 手机电脑旗舰已具备端侧自主执行任务能力，超百款终端达 L3、AI 终端从「被动响应」转向「主动服务」",
+      summary: "国新办发布会上，工信部新闻发言人谢存介绍前三季度工业和信息化情况：人工智能手机和电脑旗舰产品已具备端侧自主执行任务能力，AI 终端正从「被动响应」转向「主动服务」——依据《人工智能终端智能化分级》国家标准，超百款覆盖手机、电脑、电视、眼镜、汽车座舱、耳机的 AI 终端产品符合 L3 辅助级能力要求；三季度超 20 款 AI 手机和电脑新品集中发布。",
+      detail: "官方表态：10 月 20 日国新办发布会介绍 2026 年前三季度工业和信息化发展情况，工信部新闻发言人、信息通信管理局局长谢存表示——人工智能手机和电脑旗舰产品已具备端侧自主执行任务能力，AI 终端从「被动响应」转向「主动服务」，L3 产品能够理解复杂意图、主动服务用户。\n分级标准：依据《人工智能终端智能化分级》系列国家标准，超百款 AI 终端产品符合 L3 辅助级能力要求，覆盖手机、电脑、电视、眼镜、汽车座舱、耳机等品类；贯标工作稳步推进，标准牵引效应持续显现。\n节奏数据：三季度超 20 款人工智能手机和电脑新品集中发布；电子信息制造业前三季度增加值同比增长 15.8%，1—8 月行业营收 12.8 万亿元、利润总额同比增长 109.9%。\n端侧视角：这是监管层首次以「已具备端侧自主执行任务能力」为旗舰 AI 终端定调——阶跃通过 AI 终端 L3 认证、荣耀过首批智能体手机认证等产业动作，已被国家标准体系吸纳为可度量的分级；「主动服务」的官方表述意味着端侧智能体从厂商叙事变成行业基线，后续新品竞争将围绕 L3/L4 分级展开。",
+      tags: ["工信部", "L3标准", "AI终端", "主动服务"],
+      url: "https://finance.sina.com.cn/tech/roll/2026-10-20/doc-inivwitp6542897.shtml",
+      image: "https://n.sinaimg.cn/spider20261020/600/w800h600/20261020/39e4-a82e6f0fad3ddab6b9b5e2393b34769d.jpg",
+      imageCap: "国新办发布会（图：新浪科技）",
+      highlight: false
+    },
+    {
+      id: "n102", cat: "AI硬件", source: "中关村在线", date: "2026-10-20",
+      title: "讯飞 AI 录音环发布：4+1 麦克风阵列的无感常驻录音设备 1299 元，2 小时录音 10 秒传完、终身不限量转写",
+      summary: "科大讯飞进军随身 AI 硬件发布 AI 录音环——4 麦全向 + 1 麦指向的阵列设计自动识别场景并切换录音模式，WiFi 6 传输让 2 小时录音 10 秒传完、2 分钟极速转写；支持 200+ 语言在线识别转写（准确率 98.6%）、说话人分离与 AI 自动提炼，可接入办公助手；标准价 1299 元、会员价 1099 元，含终身不限量转写——继录音卡、录音豆之后 AI 录音硬件再添「无感常驻」新形态。",
+      detail: "产品要点：讯飞 AI 录音环为环形可穿戴形态，主打「无感常驻、随时好录」的一整天佩戴录音体验，已上架讯飞官方商城。\n声学设计：4+1 麦克风阵列——4 个全向麦克风负责 360 度覆盖现场声源、1 个指向麦克风专注对话声，自动识别场景并切换录音模式，配合多档专业降噪。\n传输与转写：WiFi 6 超速传输，2 小时录音 10 秒传完；2 分钟极速转写，支持 200+ 语言在线识别转写（准确率 98.6%）、说话人分离、关键词高亮与 AI 自动提炼关键信息，可接入办公助手生态。\n价格权益：标准价 1299 元、会员价 1099 元，附终身不限量转写权益。\n端侧视角：AI 录音硬件的形态谱系一个月内集齐「卡（讯飞 iFLYCard/钉钉 A1）—豆（安克）—环（讯飞）」——环形把采集端做到无感常驻，录音采集在端侧、转写依托云端大模型；「随身记录入口 → 办公智能体的上下文管道」正是大厂密集下注这一品类的原因。",
+      tags: ["讯飞", "AI录音环", "录音硬件", "随身AI"],
+      url: "https://news.zol.com.cn/1262/12627470.html",
+      image: "https://doc-fd.zol-img.com.cn/t_s2000x2000/g8/M00/00/0C/ChMkLWrW1FiIeKClAAOyJPiw4toAAKCRAGyZeQAA7I8213.jpg",
+      imageCap: "讯飞 AI 录音环（图：中关村在线）",
+      highlight: false
+    },
     {
       id: "n98", cat: "行业关注事件", source: "Mashable（编译）", date: "2026-10-19",
       title: "Meta 官方确认雷朋眼镜「未唤醒也录音」的 Bug 并称已修复：睡眠模式无声录音引爆隐私争议",
@@ -32,7 +54,7 @@ const WEEKLY_DATA = {
       url: "https://mashable.com/tech/meta-confirms-smart-glasses-recording-without-being-activated",
       image: "https://helios-i.mashable.com/imagery/articles/00qxpKzBOY9swwOt1U66td9/hero-image.fill.size_1200x675.v1792097187.jpg",
       imageCap: "Ray-Ban Meta 智能眼镜（图：Mashable）",
-      highlight: false
+      highlight: true
     },
     {
       id: "n99", cat: "大模型厂商", source: "量子位", date: "2026-10-19",
@@ -65,7 +87,7 @@ const WEEKLY_DATA = {
       url: "https://www.chinanews.com.cn/sh/2026/10-18/10716588.shtml",
       image: "",
       imageCap: "",
-      highlight: false
+      highlight: true
     },
     {
       id: "n91", cat: "端侧Agent", source: "IT之家", date: "2026-10-17",
@@ -197,102 +219,6 @@ const WEEKLY_DATA = {
       url: "https://www.ithome.com/1/012/979.htm",
       image: "https://img.ithome.com/newsuploadfiles/2026/10/0cbed7a7-e45e-466b-acb2-846f25b71fe5.jpg",
       imageCap: "鸿蒙座舱智慧场景（图源：IT之家）",
-      highlight: false
-    },
-    {
-      id: "n70", cat: "AI硬件", source: "搜狐科技", date: "2026-10-13",
-      title: "三星首款智能眼镜参数齐备：约 41 克 + 骁龙 AR1 Gen1，预计 11 月上市",
-      summary: "三星 Galaxy Glasses 曝光最终形态参数：整机约 41 克、搭载骁龙 AR1 Gen1 眼镜专用端侧芯片，预计 11 月上市——继通过 FCC 认证后规格基本齐备，直接对标 Meta 雷朋眼镜的轻量无屏音频 AI 路线。",
-      detail: "曝光要点：整机约 41 克，为同类 AI 眼镜最轻一档；搭载高通骁龙 AR1 Gen1（眼镜专用端侧芯片），运行 Android XR 并集成谷歌 Gemini；预计 11 月上市，与此前 FCC 认证信息一致。\n端侧视角：AR1 Gen1 是高通为眼镜单独开辟的端侧芯片线——41 克机身内完成拍照、翻译与助手推理，轻量化 + 专用芯片已成为 AI 眼镜收敛后的共识形态；上市后将形成 Meta、三星与安卓系三方对垒。\n事件线：本条为「三星 Galaxy 眼镜」线的参数落定进展（此前已过 FCC 认证）。",
-      url: "https://www.sohu.com/a/1086993778_114760",
-      image: "https://q4.itc.cn/q_70/images03/20261013/a62f702de1394c888d172b90185a6f2f.jpeg", imageCap: "三星首款智能眼镜（图：搜狐科技）",
-      tags: ["三星", "Galaxy Glasses", "AI眼镜", "骁龙 AR1"]
-    },
-    {
-      id: "n71", cat: "行业关注事件", source: "腾讯新闻", date: "2026-10-13",
-      title: "Meta 发布前沿模型 Muse Wonder：部分评测对标 Claude Opus 5.5 与 GPT-6，扎克伯格称已追上第一梯队",
-      summary: "Meta 发布 Muse Wonder 系列前沿模型：主打长期记忆与代理任务，部分基准测试超越 Anthropic 与 OpenAI 同档模型；扎克伯格称 Meta 已在 AI 前沿追上竞争对手——Muse 智能体生态补齐自研模型底座。",
-      detail: "发布要点：Muse Wonder 主打长期记忆（Active Memory）与代理任务执行，多家评测显示部分基准超越 Claude Opus 5.5 与 GPT-6 Astra；输出 API 定价每百万 token 20 美元；扎克伯格同时表示模型迭代速度将明显加快。\n端侧视角：Muse 线此前以智能体（应用层）见长、模型层依赖开源系，Wonder 补上了自研前沿底座——「智能体 × 前沿模型」闭环后，其眼镜侧端云协同的想象空间被打开。\n事件线：本条为「Meta Muse 生态」线的模型层重大进展。",
-      url: "https://news.qq.com/rain/a/20261013A03H7Q00",
-      image: "https://inews.gtimg.com/om_ls/OXUNwzgxePLjd2e8ZzKetm8elNq1W7VNavVuOPzY", imageCap: "Muse Wonder 发布（图：腾讯新闻）",
-      tags: ["Meta", "Muse Wonder", "前沿模型", "智能体"],
-      highlight: true
-    },
-    {
-      id: "n79", cat: "手机厂商", source: "IT之家", date: "2026-10-13",
-      title: "首款大模型原生智能体手机落地：阶跃 STEPX Neo 先行版发布，软硬模三位一体全栈 3999 元",
-      summary: "阶跃终端今晚发布首款大模型原生智能体手机 STEPX Neo 先行版——骁龙 8 系芯片、16GB+256GB，软硬模三位一体全栈定价 3999 元（含手机本体、Step AOS 与 Step 系列模型）；智能体原生系统 Step AOS 1.0 把长期记忆、任务调度与安全机制融入系统底层，系统原子能力可被个人智能体「阶跃 Amoo」直接调用。今日预售、10 月 16 日首销，随机附 12 个月每月百亿 Token 的使用额度。",
-      detail: "IT之家 10 月 13 日报道：阶跃终端首款大模型原生智能体手机 STEPX Neo 先行版正式发布——搭载骁龙 8 系芯片，16GB+256GB 规格，碳黑/硅银两色；「软硬模三位一体」全栈价 3999 元（包含手机本体、StepAOS+Step Studio 与 Step 系列模型）。今日开启预售，10 月 16 日首销；先行版用户享连续 12 个月、每月百亿 Token 额度的 STEPX Token Plan。\n系统侧：Step AOS 1.0 宣称从零为智能体打造——长期记忆、任务调度、安全机制融入系统底层；双入口界面让用户与智能体互相可达，大量系统原子能力可被个人智能体「阶跃 Amoo」直接调用，能记住用户、更能替用户完成任务。\n硬件侧：智能体听觉增强系统由六麦克风阵列、低功耗音频感知芯片与 Whisper 1.0 拾音算法组成——复杂声场中准确识人，低功耗芯片独立运行 24 小时耗电仅 1.2%；双屏联动系统主动支持人机互动共享，背屏提供智能体专属表达。\n生态侧：Step 5 Preview 正式接入腾讯 WorkBuddy，把更强推理与 Agent 能力带入真实办公场景（深度研究、数据分析、PPT 生成等），10 月 25 日前限时免费；另推「阶跃 Amoo 成长计划」，前 1 万名达标用户获「星辰船票」，未来五年可 0 元置换任意 STEPX 新终端。\n端侧视角：区别于「手机外挂 AI 助手」的既有路线，STEPX Neo 把模型、系统、硬件三层按智能体重构——这是智能体手机从概念到商品的关键一步，其 Step AOS 与 Amoo 的实际任务完成度将是行业检验「原生」成色的第一块试金石。\n端侧模型（据凤凰评测与发布会报道补核）：搭载阶跃自研端侧基座模型 Step Edge——为终端硬件定制，本地 tool call 延迟低至 0.1 秒，支持多模态本地处理（无网可执行系统设置等简单指令）；Step-GUI Edge（前身 Gelab-Zero，4B 参数）为首款真正部署到手机的 GUI 模型，配合 GUI-MCP 协议可跨 200 多个 App 执行操作。\n架构与云端：采用「端侧快反应、云侧深思考」的端云协同——复杂任务交由云端 Step 5 等旗舰模型（Step Pro 旗舰推理模型参数量超 1.5 万亿）；芯片为骁龙 8 Gen 5，6260mAh 电池 + 80W 快充，6.36 英寸 1.5K 120Hz OLED。",
-      tags: ["阶跃星辰", "STEPX Neo", "智能体手机", "Step AOS"],
-      url: "https://www.ithome.com/1/012/556.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/16a74b51-3eb5-4a14-9608-ed9bb0803f1c.jpg",
-      imageCap: "STEPX Neo 先行版（图源：IT之家）",
-      highlight: true
-    },
-    {
-      id: "n80", cat: "AI硬件", source: "IT之家", date: "2026-10-13",
-      title: "千问 AI 硬件全家桶开售：N1 眼镜可换电池 2899 元起，Pro 版眼动交互/虹膜支付/全天候健康监测，AI 耳机 1099 元",
-      summary: "千问 AI 硬件 2026 新品发布会上，N1/Pro 系列 AI 眼镜与 AI 耳夹式耳机同日落地——两款眼镜全系三芯异构算力、5000 万像素超感影像与双电池可换电设计（N1 续航 9 小时/Pro 8 小时）；N1 Pro 新增高精度眼动交互、金融级虹膜核验支付与全天候健康监测（心率/血氧/皮肤温度+AI 健康解读）；AI 耳机 Bose 调音、到手 1099 元，支持 89 种语言翻译与 92 语种转写纪要——个人智能体（Personal Agent）硬件化成色初显。",
-      detail: "IT之家 10 月 13 日报道：千问 AI 硬件 2026 新品发布会推出 N1/Pro 系列 AI 眼镜，核心围绕个人智能体理念——让 AI 从被动等待转向主动服务。N1 标准版 2899 元起，提供影像、主动感知、更换电池等核心能力，主打第一视角记录。\nPro 版创新：N1 Pro 在标准版之上新增高精度眼动交互、金融级虹膜核验支付（看一眼即可付款）、全天候健康监测——可采集心率、血氧、皮肤温度，提供主任医师级 AI 健康解读与 AI 情绪疗愈。\n硬件底座：全系三芯异构算力平台；5000 万像素超感影像系统支持 4K 录像、实况照片与多重防抖；全天候主动感知可自动会议记录、出行提醒；双电池可换电设计——N1 综合续航 9 小时、N1 Pro 8 小时，随时更换镜腿电池。\n同日开售的千问 AI 耳夹式耳机到手 1099 元：Bose 大师调音、0.5mm 记忆钛丝耳夹形态，IP55 防护；支持录音实时转写、离线本地录音、92 语种转写纪要与 89 种语言 AI 翻译（面对面/通话模式），耳机续航 9 小时、配合充电仓 40 小时。\n端侧视角：眼镜「看得见的交互」（眼动/虹膜）+ 耳机「听得懂的翻译」（89 语种）+ 主动感知，千问把 Personal Agent 拆进三类穿戴硬件——眼镜承担身份与支付、耳机承担语言与记录，与手机端智能体互为入口，AI 硬件的「智能体下半场」竞争正式开局。\n开售价格（华尔街见闻）：叠加国补与限时优惠后，N1 标准套装到手 2218 元起、超级续航套装 2446 元起；N1 Pro 标准套装到手 2600 元起、超级续航套装 2827 元起。",
-      tags: ["千问", "AI眼镜", "AI耳机", "个人智能体"],
-      url: "https://www.ithome.com/1/012/400.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/2ed58d28-7886-48f9-aff3-dce1c8a8069f.png",
-      imageCap: "千问 N1 系列 AI 眼镜（图源：IT之家）",
-      highlight: true
-    },
-    {
-      id: "n75", cat: "大模型厂商", source: "IT之家", date: "2026-10-13",
-      title: "面壁 MiniCPM-V 4.7 发布：首个端侧无损流畅运行的开源 MoE，iPhone 上 3GB 内存跑出 13+ token/s",
-      summary: "面壁智能发布新一代端侧多模态大模型 MiniCPM-V 4.7，提供 35B-A3B（系列首个 MoE）与 1B 两种规格——基于 LES 前瞻专家调度推理加速，35B-A3B 成为首个支持端侧无损流畅运行的开源 MoE 模型，在 iPhone 17 Pro Max 上以仅 3GB 内存实现 13+ token/s 解码；支持 iOS/安卓/鸿蒙并适配 Intel、AMD、Arm、瑞芯微、后摩等芯片平台，同步开源 SRFT 微调方案。",
-      detail: "IT之家 10 月 13 日报道：面壁智能推出新一代端侧多模态大模型 MiniCPM-V 4.7——35B-A3B 与 1B 两种规格，其中 35B-A3B 是 MiniCPM-V 系列首个 MoE 模型。\n加速技术：基于最新 LES（前瞻专家调度）推理加速——35B-A3B 版本是首个支持端侧无损流畅运行的开源 MoE 模型，在 iPhone 17 Pro Max 上以仅 3GB 内存达到 13+ token/s 的解码速度。\n生态适配：同时支持 iOS、安卓和鸿蒙，并适配 Intel、AMD、Arm、瑞芯微、后摩等芯片平台，覆盖更多移动设备与本地计算场景；同步开源 Self-Replay Fine-Tuning（SRFT）微调方案，帮助开发者低成本扩展模型能力、减少灾难性遗忘。\n跑分对照：35B-A3B 在 Instruct 模式下以更短推理时间取得比 Qwen3.6 35B-A3B 更高的综合得分；1B 版本相对 MiniCPM-V 4.6 持续提升，综合得分与推理效率均显著领先 Qwen3.5 0.8B。\n端侧视角：「35B 级 MoE 无损进手机」把端侧多模态的规模上限又推高一档——3GB 内存的占用意味着中端机也能跑；瑞芯微、后摩等国产芯片平台进入官方适配清单，端侧模型与国产算力的组合拳正在成型。",
-      tags: ["面壁智能", "MiniCPM-V", "端侧MoE", "LES加速"],
-      url: "https://www.ithome.com/1/012/483.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/2c50c051-fc36-4558-bbd8-81e026a34460.png",
-      imageCap: "MiniCPM-V 4.7（图源：IT之家）",
-      highlight: false
-    },
-    {
-      id: "n81", cat: "AI硬件", source: "IT之家", date: "2026-10-13",
-      title: "苹果 HomeView 发布：A18 芯片+Apple Intelligence 的 Siri 进家门，智能家居中枢 299 美元、11 月 13 日开售",
-      summary: "苹果推出首款智能家居中枢 HomeView——A18 芯片、7 英寸方形屏、1200 万像素摄像头，整合音乐、FaceTime、家庭监控与智能家居控制，搭载基于 Apple Intelligence 的 Siri；支持识别 6 位家庭成员并按人切换个性化内容，个人内容互不可见。标准版与壁挂版均 299 美元，11 月 13 日开售——端侧 AI 的「第三块屏幕」正式入场。",
-      detail: "IT之家 10 月 13 日报道：苹果发布 Apple HomeView 智能家居管理设备，标准版与壁挂版定价均为 299 美元（约合 2005 元）；首批 6 国当日预购，11 月 13 日正式开售。\n硬件：A18 芯片；7 英寸 Liquid Retina 方形屏（1088×1088、220ppi、0.3~500nits 自动亮度）；1200 万像素摄像头（f/2.4）；Wi-Fi 6E、蓝牙 6.0、Thread；需搭配 iOS/iPadOS 27.2 以上设备使用。\n智能与隐私：搭载基于 Apple Intelligence 的 Siri；面部识别最多 6 位家庭成员、按人切换信息/FaceTime/日历/提醒事项/查找的个人内容，苹果强调个人内容不会向其他家庭成员开放；配套 Schneider Home 壁挂支架 59.95~129.95 美元。\n设计：铝合金机身+不锈钢铰链连接半球形扬声器底座；表盘式个性化界面（支持人像景深的照片、随动作响应的流动界面、史努比动画界面），可作全家共享电子相框。\n端侧视角：继手机、PC 之后，苹果把 Apple Intelligence 的本地推理落进家庭中枢——A18 承载的 Siri 成为家庭场景的常驻智能体入口，「识别到谁就为谁服务」的多用户隔离正是端侧个性化推理的样板间。",
-      tags: ["苹果", "HomeView", "智能家居中枢", "Apple Intelligence"],
-      url: "https://www.ithome.com/1/012/566.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/d80467b3-e134-48d1-abd0-d08b89dba809.jpg",
-      imageCap: "Apple HomeView（图源：IT之家）",
-      highlight: false
-    },
-    {
-      id: "n82", cat: "芯片厂商", source: "IT之家", date: "2026-10-13",
-      title: "爱芯元智 AX8860 发布：256 TOPS 边缘算力对标 DGX Spark，Qwen 27B 推理快 25%~30%，整机价格约一半",
-      summary: "爱芯元智在工博会发布 AX8860 系列大算力 AI 芯片——16 核 A55+自研 NPU、256 TOPS 混合精度（原生 FP4）、最高 128GB LPDDR5X（273 GB/s）、6nm 工艺；Qwen 27B 上 prefill 比 DGX Spark 快 25%、decode 快 30%，Sipeed 整机定价约为 DGX Spark 的一半；支持四芯级联至 1024 TOPS，路线图还有 500 TOPS 的 8950 与 700+ TOPS 的 8970。",
-      detail: "IT之家 10 月 13 日报道：爱芯元智在 2026 中国国际工业博览会发布 AX8860 系列大算力 AI 芯片，定位大模型在边缘与端侧落地的算力底座。\n规格：16 核 Arm Cortex-A55 CPU+自研 NPU，256 TOPS 混合精度算力（原生 FP4、无稀疏性）；最高 128GB LPDDR5X、256-bit 位宽 273 GB/s 带宽；6nm 制程，支持 PCIe 5.0。\n形态与扩展：覆盖 40W 专用模块、单槽 PCIe 卡与单槽四芯方案，并规划 Mini PC/口袋 PC；支持 256 Gbps 网络接口——双芯级联 512 TOPS、四芯 1024 TOPS，扩展效率约 80%。\n生态：支持 vLLM、SGLang、PyTorch 主流推理框架与 ONNX、Hugging Face 格式开箱即用，兼容 OpenAI API 接口，配套量化/转换/编译/调试完整工具链；同步发布元曦模组 A256S 并展出推理卡与推理服务器。\n性能与价格：Qwen 27B 模型上 prefill 比 NVIDIA DGX Spark 快 25%、decode 快 30%；Sipeed 宣称整机定价接近 DGX Spark 的一半（DGX Spark 64GB 版 4999 美元起）。路线图：Axera 8950（500 TOPS）与 8970（700+ TOPS）。",
-      tags: ["爱芯元智", "AX8860", "边缘算力", "FP4"],
-      url: "https://www.ithome.com/1/012/551.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/23a83269-d2f5-49f8-ac2c-650dd47ce39b.png",
-      imageCap: "AX8860 发布（图源：IT之家）",
-      highlight: false
-    },
-    {
-      id: "n86", cat: "端侧Agent", source: "量子位", date: "2026-10-13",
-      title: "APUS 开源 Reflex Agent：决策模型驱动 Harness，实测响应最快达 Claude Code 3 倍",
-      summary: "APUS AI 开源 Personal Agent 产品 Reflex Agent——基于自研开源决策模型 Reflex 构建 Harness 并结合 Continuum 记忆引擎，模型路由、技能选择、结果审查与执行监督均由决策模型承担，以「决策—执行—反馈—再决策」的 Loop Working 循环推进长周期任务；实验室实测响应速度最快达 Claude Code、Codex 等主流 Agent 的 3 倍，MIT 协议开源。",
-      detail: "量子位 10 月 13 日报道：APUS AI（麒麟合盛网络技术股份有限公司）宣布开源 Personal Agent 产品 Reflex Agent——基于自研开源决策模型 Reflex 构建 Harness，结合 Continuum 记忆引擎，由模型驱动 Harness 核心控制逻辑。\n架构差异：与主要依赖代码和提示词组织 Harness 的传统方案不同，Reflex Agent 由决策模型承担模型路由、技能选择、结果审查和执行监督，通过「决策—执行—反馈—再决策」循环推动任务持续向前——APUS 称之为 Loop Working：Agent 不只回答问题，更要围绕用户目标持续行动。\n记忆机制：Continuum 记忆引擎提供无限记忆（持续积累任务信息）、无损记忆（保留原始内容及关联）与无损输入（历史信息以原始内容参与决策）；「无限上下文」并非突破单次模型调用的输入长度限制，而是让记忆与任务周期不再受限于单次窗口。\n性能与开源：实验室实测相关测试场景响应速度最快达 Claude Code、Codex 等主流 Agent 的 3 倍；MIT 协议开源，提供桌面端、Web 与 SDK。\n端侧视角：决策模型接管 Harness 是「快系统」思想向智能体框架的延伸——路由与审查交给小而快的决策模型，恰与 Jev 路线、EmbeddingGemma 零样本路由同场竞技；开源桌面端形态也让个人 Agent 的本地部署多了一个可复现样本。",
-      tags: ["APUS", "Reflex Agent", "决策模型", "开源Agent"],
-      url: "https://www.qbitai.com/2026/10/503165.html",
-      image: "https://i.qbitai.com/wp-content/uploads/2026/10/d1a31ac10b6da805f34d746e2d4d7d8f.png",
-      imageCap: "Reflex Agent（图源：量子位）",
-      highlight: false
-    },
-    {
-      id: "n94", cat: "手机厂商", source: "Techritual 香港", date: "2026-10-13",
-      title: "OPPO 面向全球发布 ColorOS 17：智能体模式直接调用本地照片与文件，端侧 AI 实时检测合成语音与换脸诈骗",
-      summary: "OPPO 于 10 月 13 日在深圳宣布 ColorOS 17 全球发布，系统级 AI 成为主角——AI Mind Pilot 新增智能体模式，可直接处理设备本地存储的照片与文件；AI Call Guard 由端侧 AI 检测驱动，通话中实时识别合成语音与 AI 换脸两类欺诈；Find X10 系列首发搭载，全球升级 10 月 29 日启动、逐批覆盖 OPPO/一加/真我机型，国内正式版升级已于 10 月 8 日开启分批推送。",
-      detail: "发布要点（OPPO 官方通稿，10 月 13 日深圳）：ColorOS 17 面向全球发布，系统级 AI 能力包括——AI Mind Pilot 新增智能体模式（Agent Mode），可直接处理设备本地存储的照片与文件；AI Mind Space 个人信息中心以记忆合集自动归类相关内容并生成摘要；AI Mind Suggest 在恰当时刻主动推送晨报、出行与航班提醒；OSee 把识别、检索、扫描与翻译整合为一处视觉 AI 入口。\n端侧防诈：AI Call Guard「由端侧 AI 检测驱动，通话中实时监测」，可识别合成语音与 AI 换脸两类欺诈风险（首发于印尼、印度与泰国市场）；Private Computing Cloud 端到端加密新增后量子安全能力与双重加密机制，透明度报告可查询每次 AI 服务的调用时间与操作。\n性能引擎：Luminous 渲染引擎的统一渲染架构最高降低 30% 渲染负载与 25% 渲染内存占用；Laminar Flow 引擎使应用启动稳定性提升 55%、图库缩略图加载提速 50%、后台驻留应用增加 25% 以上；模拟六年老化测试仍保留 90% 以上初始流畅度。\n推送节奏：Find X10 系列首发搭载，全球升级 10 月 29 日启动并逐批覆盖 OPPO/一加/真我机型；国内正式版升级计划 10 月 8 日已开启，首批含 Find N6、Find X9 系列与一加 15 等，10 月 16 日、20 日后续批次陆续推送。\n端侧视角：继阶跃 Step AOS、鸿蒙小艺之后，又一系统级「智能体 OS」把调度权收到系统层——看点有二：智能体模式直调本地文件，把隐私数据处理留在设备内；端侧实时防诈把欺诈识别压进通话链路；叠加 OPPO/一加/真我三大品牌的机型覆盖面，端侧智能体正从旗舰专属走向规模铺量。",
-      tags: ["OPPO", "ColorOS 17", "端侧智能体", "AI防诈"],
-      url: "https://www.techritual.com/2026/10/13/591644/",
-      image: "https://www.techritual.com/wp-content/uploads/2026/10/featured-591644.jpg",
-      imageCap: "ColorOS 17 全球推广计划（图：Techritual）",
       highlight: false
     }
 
