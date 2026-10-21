@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 44 期（2026.10.14 — 10.20 · 近 7 天）
+## 2026 · 第 44 期（2026.10.15 — 10.21 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：监管为端侧智能体定调——工信部确认 AI 手机电脑旗舰已具备端侧自主执行任务能力，超百款终端达 L3 辅助级，AI 终端从「被动响应」转向「主动服务」；Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 本地可跑），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本，岩芯矩阵开源固定内存推理的 EdgeRock-4B（KV Cache 固定 72MiB、单卡 512 路并发），PrismML 三元权重 Ternary Bonsai 2 在 iPhone 18 Pro Max 跑到 120 token/s，腾讯混元 Hy Memory 2.0 开源；Apple Intelligence 携千问/万相获批月底入华测试；A2A 智能体互联一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；首个全流程合规智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议 30 天公示；Meta 官方确认雷朋眼镜「未唤醒也录音」Bug 并已修复；讯飞 AI 录音环发布（1299 元，无感常驻新形态），跃然第三代 AI 玩具开售，达摩院发布 ASIL-B+D 双认证的玄铁 E908A 车规 CPU，黄仁勋为 OpenClaw 配 OpenShell 零信任容器，社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。今日新增：工信部定调端侧自主执行任务能力、讯飞 AI 录音环发布。
+**近 7 天导读**：近 7 天聚焦：监管为端侧智能体定调——工信部确认 AI 手机电脑旗舰已具备端侧自主执行任务能力，超百款终端达 L3 辅助级，AI 终端从「被动响应」转向「主动服务」；Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 本地可跑），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本并全开源推理框架 DeepInfer（单集群日吞吐 155 万亿 token、每卡时收入 38 美元），岩芯矩阵开源固定内存推理的 EdgeRock-4B（KV Cache 固定 72MiB、单卡 512 路并发），PrismML 三元权重 Ternary Bonsai 2 在 iPhone 18 Pro Max 跑到 120 token/s，腾讯混元 Hy Memory 2.0 开源；Apple Intelligence 携千问/万相获批月底入华测试；A2A 智能体互联一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；首个全流程合规智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议 30 天公示；Meta 官方确认雷朋眼镜「未唤醒也录音」Bug 并已修复；讯飞 AI 录音环发布（1299 元，无感常驻新形态），跃然第三代 AI 玩具开售，达摩院发布 ASIL-B+D 双认证的玄铁 E908A 车规 CPU，黄仁勋为 OpenClaw 配 OpenShell 零信任容器，社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。今日新增：工信部定调端侧自主执行任务能力、讯飞 AI 录音环发布、DeepSeek 全开源推理框架 DeepInfer。
 
 ## 近 7 天速览
 
@@ -38,23 +38,23 @@
 |------|------|------|
 | 2026-10-19 | [达摩院发布首款 ASIL-B+ASIL-D 双认证 RISC-V 车规 CPU 玄铁 E908A，首发自动驾驶与具身智能路线图](https://www.ithome.com/1/014/960.htm) | IT之家 |
 
-### 大模型厂商（5 条）
+### 大模型厂商（6 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-20 | [DeepSeek 全开源大规模推理框架 DeepInfer：单集群日吞吐 155 万亿 token，公布每卡每小时收入 38 美元](https://news.qq.com/rain/a/20261020A0DA3W00) | 智东西 |
 | 2026-10-19 | [岩芯矩阵开源 EdgeRock-4B：RMA 记忆岩锚把 KV Cache 固定在 72MiB，单卡 80GB 跑 512 路并发、吞吐 6.42 倍于源模型](https://finance.sina.com.cn/wm/2026-10-19/doc-inivueuh0952341.shtml) | 量子位 |
 | 2026-10-17 | [DeepSeek V4.1 Flash：552B MoE 将 KV 缓存压至 1/4（SSD 1/8），1017 版帕累托改进，权重 MIT 开放](https://www.ithome.com/1/014/328.htm) | IT之家 |
 | 2026-10-16 | [Meta 开放权重模型 Muse Spark Open：816B 总参 / 42B 激活，两台 M5 Ultra Mac Studio 组 1TB 统一内存本地跑，苹果 CEO 回应「拓展端侧 AI 边界」](https://zhidx.com/p/601572.html) | 智东西 |
 | 2026-10-16 | [腾讯混元开源记忆框架 Hy Memory 2.0：3B 激活专用模型跑赢 Opus 5，MemHub 让 10 种 AI 工具共享一份本地记忆](https://www.ithome.com/1/014/108.htm) | IT之家 |
 | 2026-10-15 | [PrismML 开源 Ternary Bonsai 2：三元权重把 2B 模型压到 0.43GB，iPhone 18 Pro Max 本地跑出 120 token/s](https://www.ithome.com/1/013/894.htm) | IT之家 |
 
-### 行业动态（3 条）
+### 行业动态（2 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-10-20 | [工信部定调：AI 手机电脑旗舰已具备端侧自主执行任务能力，超百款终端达 L3、AI 终端从「被动响应」转向「主动服务」](https://finance.sina.com.cn/tech/roll/2026-10-20/doc-inivwitp6542897.shtml) | 新浪科技 |
 | 2026-10-15 | [库克确认：Apple Intelligence 携阿里千问/万相获批，月底在华发布测试版（不含 Siri AI）](https://www.ithome.com/1/013/478.htm) | IT之家 |
-| 2026-10-14 | [鸿蒙座舱「智慧场景」详解：条件+动作的车载自动化规则，MoLA 2.0 小艺智能体支持口语化模糊定位](https://www.ithome.com/1/012/979.htm) | IT之家 |
 
 ## 科研前沿（10 篇）
 
@@ -68,4 +68,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-10-20。
+- 数据更新于 2026-10-21。

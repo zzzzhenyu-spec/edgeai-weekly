@@ -15,14 +15,25 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 44 期",
-    weekRange: "2026.10.14 — 10.20 · 近 7 天",
-    updated: "2026-10-20",
+    weekRange: "2026.10.15 — 10.21 · 近 7 天",
+    updated: "2026-10-21",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：监管为端侧智能体定调——工信部确认 AI 手机电脑旗舰已具备端侧自主执行任务能力，超百款终端达 L3 辅助级，AI 终端从「被动响应」转向「主动服务」；Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 本地可跑），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本，岩芯矩阵开源固定内存推理的 EdgeRock-4B（KV Cache 固定 72MiB、单卡 512 路并发），PrismML 三元权重 Ternary Bonsai 2 在 iPhone 18 Pro Max 跑到 120 token/s，腾讯混元 Hy Memory 2.0 开源；Apple Intelligence 携千问/万相获批月底入华测试；A2A 智能体互联一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；首个全流程合规智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议 30 天公示；Meta 官方确认雷朋眼镜「未唤醒也录音」Bug 并已修复；讯飞 AI 录音环发布（1299 元，无感常驻新形态），跃然第三代 AI 玩具开售，达摩院发布 ASIL-B+D 双认证的玄铁 E908A 车规 CPU，黄仁勋为 OpenClaw 配 OpenShell 零信任容器，社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。今日新增：工信部定调端侧自主执行任务能力、讯飞 AI 录音环发布。"
+    editorsNote: "近 7 天聚焦：监管为端侧智能体定调——工信部确认 AI 手机电脑旗舰已具备端侧自主执行任务能力，超百款终端达 L3 辅助级，AI 终端从「被动响应」转向「主动服务」；Meta 开放 Muse Spark Open（816B 总参/42B 激活，两台 Mac Studio 本地可跑），DeepSeek V4.1 Flash 以 KV 缓存压至 1/4 的架构大幅降低 Agent 成本并全开源推理框架 DeepInfer（单集群日吞吐 155 万亿 token、每卡时收入 38 美元），岩芯矩阵开源固定内存推理的 EdgeRock-4B（KV Cache 固定 72MiB、单卡 512 路并发），PrismML 三元权重 Ternary Bonsai 2 在 iPhone 18 Pro Max 跑到 120 token/s，腾讯混元 Hy Memory 2.0 开源；Apple Intelligence 携千问/万相获批月底入华测试；A2A 智能体互联一周双落地——Rokid 眼镜原生打车、微信鸿蒙版语音操作微信；首个全流程合规智能体手机开售即遭超百款 App 拒绝操控，豆包发起 SAEP 声明协议 30 天公示；Meta 官方确认雷朋眼镜「未唤醒也录音」Bug 并已修复；讯飞 AI 录音环发布（1299 元，无感常驻新形态），跃然第三代 AI 玩具开售，达摩院发布 ASIL-B+D 双认证的玄铁 E908A 车规 CPU，黄仁勋为 OpenClaw 配 OpenShell 零信任容器，社区让 PS5 原生跑 27B 模型。学术侧新作覆盖端云路由与协同推理（HyCo/PriorityFEC）、WebGPU 边缘内核与 TEE 模型保护。今日新增：工信部定调端侧自主执行任务能力、讯飞 AI 录音环发布、DeepSeek 全开源推理框架 DeepInfer。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n103", cat: "大模型厂商", source: "智东西", date: "2026-10-20",
+      title: "DeepSeek 全开源大规模推理框架 DeepInfer：单集群日吞吐 155 万亿 token，公布每卡每小时收入 38 美元",
+      summary: "DeepSeek 开源内部大规模推理框架 DeepInfer 与 Token 编解码组件 deepseek-recipe——V4.1 Flash 的高吞吐、低延迟服务即由其承载，单一集群服务吞吐达 155 万亿 token/天；同步公布经营数据：每卡每小时收入 38 美元（约合 254 元）、单卡月收入或超 18 万元——继权重与算子之后，「整机调度层」（推理调度/算力编排/编解码）首次完整公开，社区评价「毫无保留」。",
+      detail: "发布要点：10 月 20 日 DeepSeek 宣布全面开源内部大规模推理框架 DeepInfer，并同步开源 Token 编解码组件 deepseek-recipe；DeepSeek V4.1 Flash 的高吞吐、低延迟大规模推理服务即基于该框架实现。\n规模数据：单一集群服务吞吐 155 万亿 token/天；开源内容覆盖大模型推理调度、算力编排与编解码——这是继模型权重与算子库之后，其「整机调度层」首次公开。\n经营数据：公布每卡每小时收入 38 美元（约合 254 元人民币），单卡月收入或超 18 万元；此前 V3/R1 时代曾披露推理系统理论日利润 346 万元、成本利润率 545%——把 API 生意的水位线摊开给了全行业。\n端侧视角：DeepSeek 的历次开源件（权重/算子/缓存技术）最终都汇入本地部署生态——vLLM、SGLang 与 llama.cpp 社区是其最快的下游，调度与编排层开源意味着边缘盒子与私有化部署可直接复用生产级 serving 经验；对端侧更现实的意义在成本锚点——38 美元/卡时的云端价格，正是本地推理价值主张要对标的基准线。\n事件线：与 DeepSeek V4.1 Flash（CSA2 KV 压缩）、岩芯 EdgeRock-4B（固定内存 KV）同属推理成本主线。",
+      tags: ["DeepSeek", "DeepInfer", "推理框架", "开源"],
+      url: "https://news.qq.com/rain/a/20261020A0DA3W00",
+      image: "https://inews.gtimg.com/om_ls/OGldSSeEv6VrHbOpsuC3LGht_UDHTtuvlh2UqSxv6sV70AA_640330/0",
+      imageCap: "DeepInfer 开源（图：智东西）",
+      highlight: true
+    },
     {
       id: "n101", cat: "行业动态", source: "新浪科技", date: "2026-10-20",
       title: "工信部定调：AI 手机电脑旗舰已具备端侧自主执行任务能力，超百款终端达 L3、AI 终端从「被动响应」转向「主动服务」",
@@ -208,17 +219,6 @@ const WEEKLY_DATA = {
       url: "https://sz.ifeng.com/c/8xDX2OH7dM9",
       image: "https://q0.itc.cn/q_70/images03/20261016/b3c4a9adb1654be8a869b02033b0a085.png",
       imageCap: "光之召唤奥特曼 AI 互动对话器（图：搜狐科技）",
-      highlight: false
-    },
-    {
-      id: "n83", cat: "行业动态", source: "IT之家", date: "2026-10-14",
-      title: "鸿蒙座舱「智慧场景」详解：条件+动作的车载自动化规则，MoLA 2.0 小艺智能体支持口语化模糊定位",
-      summary: "华为车 BU 乾崑答网友问第 17 期详解鸿蒙座舱「智慧场景」——一套「条件+动作」的车载自动化规则：主驾入座、挂入 D 挡、副驾入座等条件触发后，车辆自动执行播报日程、启动导航、调节空调、播放音乐等系列操作；基于 MoLA 2.0 架构的小艺智能体还支持超模糊地址搜索——「能拍到小蛮腰的那个广场」这类口语化描述即可精准定位。",
-      detail: "IT之家 10 月 14 日报道：华为智能汽车解决方案 BU 发布乾崑答网友问第 17 期，集中解答鸿蒙座舱「智慧场景」与 MoLA 2.0 小艺智能体的能力边界。\n智慧场景：一套「条件+动作」的车载自动化规则——触发条件包括主驾入座、挂入 D 挡、到达设定时间、副驾入座等；条件满足后自动执行播报日程、启动导航、调节空调、播放专属音乐、开启座椅功能等操作。\n场景示例：下班放松场景（挂入 D 挡→自动播放舒缓音乐+启动回家导航）；仪式感惊喜场景（副驾入座并系安全带→座椅按摩+生日祝福播报+生日歌）。\n智能体侧：基于 MoLA 2.0 架构的小艺智能体涵盖导航、人车交互、影音、畅聊、点餐等多款智能体；核心的超模糊地址搜索支持仅凭场景特征、相对位置、出行目的的口语化描述定位目的地。\n端侧视角：座舱是端侧智能体少有的「高确定性」落地场景——条件触发+多设备执行的自动化规则正是 GUI Agent 的车载形态，MoLA 2.0 多智能体架构则把任务拆解为可组合的专用智能体。",
-      tags: ["鸿蒙座舱", "智慧场景", "小艺智能体", "车载自动化"],
-      url: "https://www.ithome.com/1/012/979.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/0cbed7a7-e45e-466b-acb2-846f25b71fe5.jpg",
-      imageCap: "鸿蒙座舱智慧场景（图源：IT之家）",
       highlight: false
     }
 
