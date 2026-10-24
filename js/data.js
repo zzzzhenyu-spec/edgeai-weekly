@@ -15,10 +15,10 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 44 期",
-    weekRange: "2026.10.17 — 10.23 · 近 7 天",
-    updated: "2026-10-23",
+    weekRange: "2026.10.18 — 10.24 · 近 7 天",
+    updated: "2026-10-24",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：具身智能迎来「量产周」——特斯拉 Optimus 首批量产级产品弗里蒙特下线（比原计划提前约一季度，目标周产 2 万台），智元发布全流程作业平台 Genie Studio 2.0（最快 7 天完成新场景部署、装配线成功率 99.9%），OpenAI 重申一定做人形机器人且「大脑优先」——本体量产与模型大脑两条路线同周交汇。端侧模型侧讯飞星火 X2.6 端云一体（首个全国产算力完整训练的主流模型，同步开源 4B 端侧版），Meta 财报确认 Muse 下月登陆智能眼镜并押注订阅变现；蚂蚁 LingDT 决策模型 23 项基准超微软与 Jev；Synaptics 把谷歌 Coral NPU 压进 MCU（最高 400 GOPS）。监管侧工信部确认超百款终端达 L3 辅助级；超百款 App 拒接豆包撞出智能体生态墙，SAEP 协议公示；陪伴智能体走向具身（奇瑞墨宝、宇树 H2-X），ISHO Ring 把智能戒指做成指尖入口，苹果家用机器人 J595 曝光。今日新增：智元 Genie Studio 2.0 作业平台、特斯拉 Optimus 首批量产下线。"
+    editorsNote: "近 7 天聚焦：具身智能进入「量产与作业」阶段——特斯拉 Optimus 首批量产级产品弗里蒙特下线（比原计划提前约一季度、目标周产 2 万台），智元 Genie Studio 2.0 作业平台把新场景部署验证压到最快 7 天（装配线成功率 99.9%），OpenAI 重申一定做人形机器人且「大脑优先」；端侧模型侧讯飞星火 X2.6 端云一体（首个全国产算力完整训练的主流模型，同步开源 4B 端侧版），Meta 财报确认 Muse 下月登陆智能眼镜并押注订阅变现，蚂蚁 LingDT 决策模型 23 项基准超微软与 Jev；中科创达滴水 AIOS 3.0 以一套「自主智能」框架横跨汽车、机器人与 AI 眼镜（奇瑞量产平台验证），Synaptics 把谷歌 Coral NPU 压进 MCU（最高 400 GOPS）；监管侧工信部确认超百款终端达 L3 辅助级，超百款 App 拒接豆包撞出智能体生态墙（SAEP 协议公示），陪伴智能体走向具身（奇瑞墨宝、宇树 H2-X），ISHO Ring 把智能戒指做成指尖入口。今日新增：中科创达滴水 AIOS 3.0。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -32,6 +32,17 @@ const WEEKLY_DATA = {
       image: "",
       imageCap: "",
       tags: ["智元", "Genie Studio", "具身智能", "作业平台"],
+      highlight: false
+    },
+    {
+      id: "n117", cat: "行业动态", source: "搜狐科技", date: "2026-10-23",
+      title: "中科创达发布滴水 AIOS 3.0：「自主生成、自主融合、自主控制」覆盖汽车、机器人与 AI 眼镜，已上车奇瑞量产平台验证",
+      summary: "中科创达在 ThunderWorld 2026 技术大会发布滴水 AIOS 3.0，以「自主生成、自主融合、自主控制」三大能力为核心——生成式 HMI 动态生成功能卡片与交互界面，车道级导航、360 度环视与自动泊车自主融合，复杂任务自主规划执行并跨会话记忆、任务可在车端完成不依赖网络；已覆盖汽车（奇瑞瑞虎 8 量产平台完成改装并在真实城市路况验证）、机器人（自主搬运与叉取已量产、服务超 100 家大客户且复购率 60%）与 AI 眼镜（骁龙 AR1、整机 35 克以内、Veda OS 底座支持低功耗常驻感知）三类终端。",
+      detail: "发布要点：ThunderWorld 2026 技术大会暨产品发布会（10 月 23 日）发布滴水 AIOS（AquaDrive AIOS）3.0，主打「自主智能」——自主生成（生成式 HMI 动态生成功能卡片和交互界面）、自主融合（车道级导航、环境可视化、360 度环视与自动泊车整合、减少界面割裂）、自主控制（自主规划执行复杂任务、跨会话记忆、任务在车端完成不依赖网络）。\n落地进展：智能汽车侧已在奇瑞瑞虎 8 量产平台完成改装并在真实城市路况验证；机器人业务覆盖自主搬运、叉取、具身复合与人形机器人（前两者已量产），服务超 100 家大客户、复购率 60%；TurboX 自主智能套件覆盖智能戒指、智能相机、AI 眼镜与智能盒子等硬件。\nAI 眼镜细节：基于高通骁龙 AR1 芯片、1200 万像素摄像头、5 麦克风阵列、光波导显示，整机重量控制在 35 克以内；系统底座为 Veda OS，支持低功耗常驻感知的主动服务。\n端侧视角：滴水 AIOS 是「整车厂 OS 之外的第二条端侧智能 OS 路线」——中科创达以座舱 OS 起家，3.0 把同一套自主智能框架横向铺到车、机器人与 AI 眼镜三类端，任务在车端完成不依赖网络是其端侧定位的直接表述；TurboX 套件覆盖智能戒指也与本周智能戒指品类升温同频——端侧 OS 厂商正以「一套框架多端复用」参与入口竞争。",
+      url: "https://www.sohu.com/a/1092059876_116157",
+      image: "",
+      imageCap: "",
+      tags: ["中科创达", "滴水AIOS", "自主智能", "端侧OS"],
       highlight: false
     },
     {
@@ -208,39 +219,6 @@ const WEEKLY_DATA = {
       url: "https://www.ithome.com/1/014/611.htm",
       image: "https://img.ithome.com/newsuploadfiles/2026/10/0e4e812a-0688-4265-949d-289ebd400a59.jpg",
       imageCap: "苹果 HomeView 智能家庭中枢与机械臂构想（图：IT之家）",
-      highlight: false
-    },
-    {
-      id: "n91", cat: "端侧Agent", source: "IT之家", date: "2026-10-17",
-      title: "微信鸿蒙版测试接入 A2A：语音唤醒小艺即可操作微信发消息、打电话",
-      summary: "鸿蒙微信移动版 8.0.22 更新接入 A2A 能力——语音唤醒小艺发送指令操作微信，当前支持向好友发送文字消息（不支持表情）、发起语音或视频通话；暂不支持群聊消息与微信分身，需小艺 11.7.8.303 以上版本。继 Rokid 眼镜原生打车之后，A2A 智能体互联协议一周内第二次落地——国民应用微信成为被智能体操作的首个超级 App。",
-      detail: "IT之家 10 月 17 日报道：微信鸿蒙版 App 现已支持使用小艺发送微信——据博主 @伤心萨摩耶Ciuciu 透露，鸿蒙微信移动版 8.0.22 更新接入 A2A 能力，支持语音唤醒小艺发送指令操作微信。\n能力边界：当前支持向好友发送文字消息（不支持发送表情）、发起语音或视频通话；暂不支持操作微信向群聊发送消息或发起通话，也不支持操作微信分身；小艺版本需更新至 11.7.8.303。\n端侧视角：这是 A2A（Agent-to-Agent）协议一周内第二次公开落地——上一例是 Rokid 眼镜经 A2A 调用腾讯出行打车，这次是鸿蒙系统智能体小艺经 A2A 操作微信；超级 App 开放智能体操作入口，意味着「智能体接管应用」从演示走进普通用户手机，语音发微信只是第一步。",
-      tags: ["微信", "鸿蒙", "A2A协议", "小艺"],
-      url: "https://www.ithome.com/1/014/331.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/46e1790f-ecca-4dc5-8d98-4d5dc9253c84.jpg",
-      imageCap: "微信鸿蒙版（图源：IT之家）",
-      highlight: false
-    },
-    {
-      id: "n92", cat: "大模型厂商", source: "IT之家", date: "2026-10-17",
-      title: "DeepSeek V4.1 Flash：552B MoE 将 KV 缓存压至 1/4（SSD 1/8），1017 版帕累托改进，权重 MIT 开放",
-      summary: "DeepSeek 全新架构系列最小尺寸模型 V4.1 Flash——Causal-Encoder-Decoder 不对称结构的 552B MoE（输入激活 8B/输出 16B，原生多模态），KV Cache 压缩使 HBM 需求降至上一代 1/4、SSD 降至 1/8，基准超越 V4 Pro；10 月 17 日的 1017 版本再实现性能-成本帕累托改进并承接「许愿式」编程，权重延续 MIT 许可开放。",
-      detail: "模型背景（官方公告）：V4.1 Flash 于 9 月 10 日发布，是 DeepSeek 全新模型结构系列中的最小尺寸模型——Causal-Encoder-Decoder 不对称结构（输入激活 8B、输出激活 16B）的 552B MoE，具备原生多模态视觉理解；基准测试超越包括 DeepSeek V4 Pro 在内的旗舰模型，官方已计划下线 V4 Pro 并将其请求路由至 V4.1 Flash。\n缓存架构：新一代结构大幅压缩 KV Cache——对 HBM（显存）的需求降至上一代的 1/4、对 SSD 降至 1/8；配套 arXiv 论文披露采用 CSA2（Compressed Sparse Attention 2）跨层 KV 复用，全局 KV 约 890 B/token 并支持 100 万 token 上下文。Agent 场景缓存命中费用占比高，KV 压缩直接大幅降低长时程智能体任务成本。\n1017 更新：各基准能力较上一版明显提升，任务运行时间与输出长度缩短——多个 Harness 下达到新的性能-费用帕累托最优；基于自反馈强化学习增强从零构建完整项目的能力（游戏开发、3D 建模），可承接提示极简的「许愿式」编程；针对 DeepSeek Harness、腾讯 CodeBuddy 与 WorkBuddy 适配优化。\n生态与开源：权重延续 MIT 许可在 HuggingFace 与 ModelScope 开放；腾讯 WorkBuddy/CodeBuddy 与 OpenCode 作为官方合作伙伴全量接入；定价采用峰谷模式（闲时为高峰一半）。\n端侧视角：KV 缓存是长上下文与 Agent 的第一内存瓶颈——「显存 1/4」的架构级压缩意味着同等硬件可承载 4 倍并发或 4 倍长度的上下文，与论文板块的 PriorityFEC 缓存交接、精度调度同题；MIT 权重让本地部署与蒸馏路线完全开放。",
-      tags: ["DeepSeek", "V4.1 Flash", "KV缓存", "CSA2", "MIT开源"],
-      url: "https://www.ithome.com/1/014/328.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/ca365e64-d286-4a9b-842d-37162dbd5fe2.jpg",
-      imageCap: "DeepSeek V4.1-Flash-1017（图源：IT之家）",
-      highlight: false
-    },
-    {
-      id: "n93", cat: "AI硬件", source: "IT之家", date: "2026-10-17",
-      title: "社区让 PS5 变成本地 AI 服务器：Vulkan 原生跑 Qwen3.8-27B 达 20.9 token/s，局域网开放 API",
-      summary: "开发者基于 llama.cpp 的 PS5 移植项目推出 PS5LM Plus——通过移植 Mesa 的 AMD RADV 驱动与 Vulkan 计算接口实现原生 GPU 运行，可用内存从 6GB 提升到 11.4GB，高度量化的 Qwen3.8-27B 生成速度达 20.9 token/s（PS5 内存带宽 448GB/s）；内置网页聊天界面并经局域网 8081 端口提供 API，兼容 OpenAI/Anthropic 接口格式，opencode、Codex、Claude Code 等工具可直接调用——游戏主机变本地推理盒子（需越狱，有封号风险）。",
-      detail: "IT之家 10 月 17 日报道（Wccftech）：开发者 abhi245y 基于资深 AI 工程师 Mert Cobanov 的 PS5LM（llama.cpp 移植项目）开发原生 GPU 应用 PS5LM Plus，让越狱后的 PS5 在本地运行 Qwen3.8-27B 等大模型。\n技术路径：早期版本靠 CPU 运行 27B 模型约 1 token/分钟；新版移植 Mesa 开源项目的 AMD RADV 驱动并通过 Vulkan 计算接口让 llama.cpp 原生运行——可用内存从约 6GB 提升至 11.4GB。\n性能：依托 PS5 的 448GB/s 内存带宽，Qwen3.8-27B（高度量化）生成速度 20.9 token/s，GPU 占用 100%、CPU 仅 2%；更小模型更快——Gemma 4 E4B 约 61 token/s、Llama 3.2 3B 达 124 token/s。\n生态玩法：内置网页聊天界面，局域网 8081 端口提供 API 服务，兼容 OpenAI 与 Anthropic API 格式，opencode、Codex、Claude Code 等工具可直接调用 PS5 上的模型。\n端侧视角：这证明了游戏主机的统一内存架构天然适合本地推理——448GB/s 带宽超过多数桌面独显；不过 16GB 统一内存仍限制模型规模，且越狱有封号风险，属社区样本而非推荐玩法。",
-      tags: ["PS5", "本地推理", "llama.cpp", "Vulkan"],
-      url: "https://www.ithome.com/1/014/372.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/643504c8-98d7-469d-8baf-64185024da7e.png",
-      imageCap: "PS5LM Plus（图源：IT之家）",
       highlight: false
     }
 
