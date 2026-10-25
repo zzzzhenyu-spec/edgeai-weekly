@@ -51,6 +51,48 @@ WEEKLY_ARCHIVE[40] = {
       highlight: true
     },
     {
+      id: "n32", cat: "AI硬件", source: "站长之家（AIbase）/ 新浪财经", date: "2026-09-24",
+      title: "Meta Connect 开幕：智能体 Muse 全面接入 AI 眼镜，硬件矩阵齐发",
+      summary: "Meta Connect 2026（当地时间 9·23）开幕：个人智能体 Muse 成为全场核心——接入智能眼镜、拥有自己的邮箱、Mac 端可操作电脑；同场发布无摄像头 Audio 眼镜（$349）、Gen 3（$449）、100g VR 眼镜与独立终端 Muse Charm，年底 AI 眼镜将超 100 款。",
+      detail: "Meta Connect 2026 于当地时间 9 月 23 日开幕，站长之家（AIbase）9 月 24 日报道：个人智能体 Muse 贯穿全场，扎克伯格称要让数十亿人用上「超级智能」。\nMuse 生态：「Hey Muse」全面接入智能眼镜；Muse 拥有自己的邮箱（可直接替用户收发处理）；Mac 端 Muse App 可直接操作电脑——从语音助手升级为「全面智能体」。Muse 9 月 8 日推出后已登顶美区 App Store 与 Google Play 免费榜。\n硬件矩阵：Ray-Ban Meta Audio Glasses（无摄像头、43g、12 小时续航 + 充电盒 48 小时，$349）主打隐私形态；Ray-Ban Meta Gen 3（$449，12MP 摄像头、6 麦克风、通话降噪 90%、9 小时续航）；入门线 Meta Adventurer $249 起——2026 年底三大产品线合计将超 100 款 AI 眼镜。\n更远一步：Meta VR Glasses 重量仅 100g（约为 Quest 3 的 1/5），采用「眼镜 + 口袋计算单元」形态，2027 年春上市（$1299）；另公布电子宠物形态的独立 Muse 终端 Muse Charm（内置小屏 / 麦克风 / 扬声器，年底前推出）与眼镜听力增强能力。",
+      tags: ["Meta Connect", "Muse", "AI眼镜", "智能体"],
+      url: "https://www.chinaz.com/ainews/31346.shtml",
+      image: "https://n.sinaimg.cn/spider20260924/155/w660h295/20260924/36e9-20c2ba611e35c3a2649f53d623dc854e.jpg",
+      imageCap: "配图来自原文页面",
+      highlight: true
+    },
+    {
+      id: "n27", cat: "AI硬件", source: "腾讯新闻（AR圈）/ 搜狐科技", date: "2026-09-24",
+      title: "第二代乐奇（Rokid）AI 眼镜数贸会首秀：更潮、更强、更舒适",
+      summary: "Rokid 第二代乐奇 AI 眼镜 9 月 24 日在杭州数贸会全球首秀，现场体验的三个关键词：更潮、更强、更舒适——设计理念「不减配」：先定框形与佩戴，再让光学与重量去适配。",
+      detail: "9 月 24 日，第二代乐奇（Rokid）AI 眼镜在第五届数贸会全球首秀，AR圈在现场体验后给出三个关键词：更潮、更强、更舒适。\n方法论看点是「不减配」：带显示的 AI 眼镜通常先定电子件再包一个壳，二代乐奇把顺序反过来——先定框形与佩戴，再让光学与重量适配，把 AI 眼镜「做回一副眼镜」。\n行业背景：Q2 全球智能眼镜出货同比 +35%（见本板块另一条），Meta Connect 同日发布多款新品——Rokid 代表的中国玩家与 Meta 在「下一代端侧 AI 入口」上正面竞速。",
+      tags: ["Rokid", "乐奇二代", "AI眼镜", "数贸会"],
+      url: "https://news.qq.com/rain/a/20260924A09SWC00",
+      image: "https://inews.gtimg.com/om_ls/Onebi6GvNnxq_zXqA_k_IiUTTp1_N4uR8y_QVPZ6py5E0AA_640330/0",
+      imageCap: "配图来自原文页面"
+    },
+    {
+      id: "n21", cat: "行业动态", source: "央广网（腾讯新闻）/ 搜狐科技", date: "2026-09-24",
+      title: "斑马智能发布全模态端侧大模型 AutoOmni 2.0-23B-A3B：座舱任务比肩 10 倍级云模型",
+      summary: "云栖大会期间，斑马智能发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B（MoE 架构）：智能座舱普通任务处理能力堪比 10 倍参数量级的云模型；AutoClaw 2.0 智舱协作实车方案同步亮相。",
+      detail: "央广网 9 月 24 日报道：9 月 23 日云栖大会期间，斑马智能正式发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B，AutoClaw 2.0 智舱协作服务实车方案同步亮相。\n技术要点：模型采用 MoE 混合专家架构（命名中的 A3B 即激活参数约 3B 量级的稀疏架构），官方称在智能座舱场景下普通任务处理能力堪比 10 倍参数量级的云模型，复杂任务端云协同处理。\n行业语境：车载是端侧大模型落地最快的场景之一（车规算力 + 私密性强 + 交互高频）；同期云栖大会 AI 新品密集发布，端侧算力被业内评价为「全面爆发」。",
+      tags: ["云栖大会", "AutoOmni 2.0", "智能座舱", "MoE"],
+      url: "https://news.qq.com/rain/a/20260924A07A9800",
+      image: "https://inews.gtimg.com/om_ls/OgUErLUkrqPgOv1hN-ljbN8wvZoECL9qAdZsuHRFHioAYAA_640330/0",
+      imageCap: "配图来自原文页面"
+    },
+    {
+      id: "n11", cat: "行业关注事件", source: "36氪 / TechCrunch", date: "2026-09-24",
+      title: "「哑巴 AI」Jev 刷屏：不生成文本的「系统一模型」，决策快 200 倍",
+      summary: "前 OpenAI 研究员创办的 TypeSafe AI 发布 Jev：不做对话、直接输出类型安全的概率化决策，70ms 级响应、快约 200 倍、便宜约 400 倍；上线 3 天获 Vercel / Cloudflare / LangChain 整合。",
+      detail: "Jev 是 TypeSafe AI（前 OpenAI 研究员 Diogo Almeida 创办）9 月 15 日开放早期访问的新模型，被媒体称为「哑巴 AI」：\n它基于 transformer 架构，但不是 LLM——不写文章、不写代码、不陪聊，放弃逐 token 的文本生成，直接输出「类型安全的概率化决策」并内置校准（calibration），对标心理学中快思考的「系统一」能力。因此它高速、轻量，官方与第三方评测称在相关决策任务上比传统 LLM 快约 200 倍、便宜约 400 倍，且从机制上避免幻觉。\n有多轰动：发布 3 天内获 Vercel、Cloudflare、LangChain 等主流平台整合；内测开放不到 36 小时涌入 14 万开发者；同日公司宣布完成 DCVC 领投的 4000 万美元种子轮。TechCrunch 评价其为「一种新型 AI 模型」，Wikipedia 已收录词条。\n36氪追问《Jev 真是新范式吗？》：它在企业自动化（分类、风控、路由等结构化决策）中优势明显，但复杂推理与开放生成仍需与传统 LLM 配合——「快系统 + 慢系统」的组合成为新的工程范式。",
+      tags: ["Jev", "TypeSafe AI", "系统一模型", "决策模型"],
+      url: "https://www.36kr.com/p/3988372551990276",
+      image: "https://img.36krcdn.com/hsossms/20260918/v2_cfa5dfb20fde4be3b974bd19767f8254@000000@ai_oswg679481oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
+      imageCap: "配图来自原文页面",
+      highlight: true
+    },
+    {
       id: "n37", cat: "芯片厂商", source: "9to5Google", date: "2026-09-23",
       title: "微软 12 吋 Surface Pro 换装骁龙 X2 Plus：补上 5G，10 月 13 日开售",
       summary: "骁龙峰会期间微软官宣小尺寸 Surface 更新：12 吋 Surface Pro 与 13 吋 Surface Laptop 换装骁龙 X2 Plus，屏幕亮度提升 25%、电池效率提升 30%，Pro 首次提供 5G 版本，内存起步升至 16GB，10 月 13 日开售（1149 美元起）。",
@@ -80,27 +122,6 @@ WEEKLY_ARCHIVE[40] = {
       image: "https://n.sinaimg.cn/sinakd20260923s/394/w1320h1474/20260923/2fc7-3ee655c2788cc22fcadfd68489f86c7c.jpg",
       imageCap: "配图来自原文页面",
       highlight: true
-    },
-    {
-      id: "n32", cat: "AI硬件", source: "站长之家（AIbase）/ 新浪财经", date: "2026-09-24",
-      title: "Meta Connect 开幕：智能体 Muse 全面接入 AI 眼镜，硬件矩阵齐发",
-      summary: "Meta Connect 2026（当地时间 9·23）开幕：个人智能体 Muse 成为全场核心——接入智能眼镜、拥有自己的邮箱、Mac 端可操作电脑；同场发布无摄像头 Audio 眼镜（$349）、Gen 3（$449）、100g VR 眼镜与独立终端 Muse Charm，年底 AI 眼镜将超 100 款。",
-      detail: "Meta Connect 2026 于当地时间 9 月 23 日开幕，站长之家（AIbase）9 月 24 日报道：个人智能体 Muse 贯穿全场，扎克伯格称要让数十亿人用上「超级智能」。\nMuse 生态：「Hey Muse」全面接入智能眼镜；Muse 拥有自己的邮箱（可直接替用户收发处理）；Mac 端 Muse App 可直接操作电脑——从语音助手升级为「全面智能体」。Muse 9 月 8 日推出后已登顶美区 App Store 与 Google Play 免费榜。\n硬件矩阵：Ray-Ban Meta Audio Glasses（无摄像头、43g、12 小时续航 + 充电盒 48 小时，$349）主打隐私形态；Ray-Ban Meta Gen 3（$449，12MP 摄像头、6 麦克风、通话降噪 90%、9 小时续航）；入门线 Meta Adventurer $249 起——2026 年底三大产品线合计将超 100 款 AI 眼镜。\n更远一步：Meta VR Glasses 重量仅 100g（约为 Quest 3 的 1/5），采用「眼镜 + 口袋计算单元」形态，2027 年春上市（$1299）；另公布电子宠物形态的独立 Muse 终端 Muse Charm（内置小屏 / 麦克风 / 扬声器，年底前推出）与眼镜听力增强能力。",
-      tags: ["Meta Connect", "Muse", "AI眼镜", "智能体"],
-      url: "https://www.chinaz.com/ainews/31346.shtml",
-      image: "https://n.sinaimg.cn/spider20260924/155/w660h295/20260924/36e9-20c2ba611e35c3a2649f53d623dc854e.jpg",
-      imageCap: "配图来自原文页面",
-      highlight: true
-    },
-    {
-      id: "n27", cat: "AI硬件", source: "腾讯新闻（AR圈）/ 搜狐科技", date: "2026-09-24",
-      title: "第二代乐奇（Rokid）AI 眼镜数贸会首秀：更潮、更强、更舒适",
-      summary: "Rokid 第二代乐奇 AI 眼镜 9 月 24 日在杭州数贸会全球首秀，现场体验的三个关键词：更潮、更强、更舒适——设计理念「不减配」：先定框形与佩戴，再让光学与重量去适配。",
-      detail: "9 月 24 日，第二代乐奇（Rokid）AI 眼镜在第五届数贸会全球首秀，AR圈在现场体验后给出三个关键词：更潮、更强、更舒适。\n方法论看点是「不减配」：带显示的 AI 眼镜通常先定电子件再包一个壳，二代乐奇把顺序反过来——先定框形与佩戴，再让光学与重量适配，把 AI 眼镜「做回一副眼镜」。\n行业背景：Q2 全球智能眼镜出货同比 +35%（见本板块另一条），Meta Connect 同日发布多款新品——Rokid 代表的中国玩家与 Meta 在「下一代端侧 AI 入口」上正面竞速。",
-      tags: ["Rokid", "乐奇二代", "AI眼镜", "数贸会"],
-      url: "https://news.qq.com/rain/a/20260924A09SWC00",
-      image: "https://inews.gtimg.com/om_ls/Onebi6GvNnxq_zXqA_k_IiUTTp1_N4uR8y_QVPZ6py5E0AA_640330/0",
-      imageCap: "配图来自原文页面"
     },
     {
       id: "n26", cat: "手机厂商", source: "腾讯新闻 / 新浪财经", date: "2026-09-23",
@@ -135,16 +156,6 @@ WEEKLY_ARCHIVE[40] = {
       imageCap: "配图来自原文页面"
     },
     {
-      id: "n21", cat: "行业动态", source: "央广网（腾讯新闻）/ 搜狐科技", date: "2026-09-24",
-      title: "斑马智能发布全模态端侧大模型 AutoOmni 2.0-23B-A3B：座舱任务比肩 10 倍级云模型",
-      summary: "云栖大会期间，斑马智能发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B（MoE 架构）：智能座舱普通任务处理能力堪比 10 倍参数量级的云模型；AutoClaw 2.0 智舱协作实车方案同步亮相。",
-      detail: "央广网 9 月 24 日报道：9 月 23 日云栖大会期间，斑马智能正式发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B，AutoClaw 2.0 智舱协作服务实车方案同步亮相。\n技术要点：模型采用 MoE 混合专家架构（命名中的 A3B 即激活参数约 3B 量级的稀疏架构），官方称在智能座舱场景下普通任务处理能力堪比 10 倍参数量级的云模型，复杂任务端云协同处理。\n行业语境：车载是端侧大模型落地最快的场景之一（车规算力 + 私密性强 + 交互高频）；同期云栖大会 AI 新品密集发布，端侧算力被业内评价为「全面爆发」。",
-      tags: ["云栖大会", "AutoOmni 2.0", "智能座舱", "MoE"],
-      url: "https://news.qq.com/rain/a/20260924A07A9800",
-      image: "https://inews.gtimg.com/om_ls/OgUErLUkrqPgOv1hN-ljbN8wvZoECL9qAdZsuHRFHioAYAA_640330/0",
-      imageCap: "配图来自原文页面"
-    },
-    {
       id: "n22", cat: "AI硬件", source: "新浪财经", date: "2026-09-23",
       title: "豆包做手机、阿里造平板：AI 开始争夺硬件控制权",
       summary: "大模型厂商正从「赋能者」变为「硬件主导者」——字节豆包做手机、阿里将推千问平板与办公 AI 硬件，AI 公司下场争夺终端入口与系统级话语权。",
@@ -163,13 +174,23 @@ WEEKLY_ARCHIVE[40] = {
       url: "https://news.qq.com/rain/a/20260923A05I6700"
     },
     {
-      id: "n23", cat: "AI硬件", source: "搜狐科技（独家）", date: "2026-09-21",
-      title: "独家：阿里首款千问办公 AI 硬件将推出，售价或在千元级",
-      summary: "阿里被曝将推出首款千问办公 AI 硬件（QwenNote），售价千元级——大模型厂商做硬件再下一城，瞄准办公场景的随身 AI 终端。",
-      detail: "9 月 21 日独家消息：阿里首款千问办公 AI 硬件将推出，产品线指向 QwenNote，售价或在千元级。\n定位是「随身办公 AI 终端」：依托千问端侧模型 + 云端算力，覆盖会议记录、文档处理、翻译等办公高频场景，与手机形成互补而非替代关系。\n放在本周语境里看：豆包做手机、阿里造平板与办公硬件、康冠携手阶跃出 AI PC——模型厂商的硬件化已经是集体动作，而非个案。",
-      tags: ["千问", "QwenNote", "办公AI硬件", "阿里"],
-      url: "https://www.sohu.com/a/1079171780_553580",
-      image: "https://q7.itc.cn/q_70/images03/20260921/43bc4f6ae13f400699272bf498964ac0.jpeg",
+      id: "n30", cat: "行业动态", source: "新浪财经", date: "2026-09-23",
+      title: "苹果新款 Mac 发货：主打端侧 AI，帮用户省下 token 费",
+      summary: "苹果宣布 M5 系列新款 Mac mini / Mac Studio 开始发货（4499 / 19999 元起），营销主线转向「端侧 AI」：神经网络引擎算力大幅提升、本地直接跑主流大模型，省下云端按 token 计费的开支。",
+      detail: "9 月 23 日（周三），苹果宣布搭载 M5 系列芯片的新款 Mac mini 与 Mac Studio 开始发货，起售价分别为 4499 元与 19999 元。\n与以往的性能叙事不同，本轮营销主线是「端侧 AI 算力」：苹果强调新款 Mac 的神经网络引擎算力大幅提升，可在本地直接运行主流大模型，帮用户省下云端推理按 token 计费的开支，并主打本地运行的安全与隐私优势。\n背景：在智能体开发与私有部署需求带动下，「本地 AI 主机」成为新战场——英伟达 DGX Spark、小米 AI Cube（8 月底发布）与新款 Mac 台式机正面竞争，端侧算力形态正从手机 / PC 延伸到桌面。",
+      tags: ["苹果 Mac", "M5", "端侧AI", "本地大模型"],
+      url: "https://finance.sina.com.cn/roll/2026-09-23/doc-inistvut5489395.shtml",
+      image: "https://n.sinaimg.cn/spider20260923/54/w578h276/20260923/704d-66796a662bd6b5a37a13b74a669a6401.png",
+      imageCap: "配图来自原文页面"
+    },
+    {
+      id: "n4", cat: "手机厂商", source: "搜狐科技 / 腾讯新闻", date: "2026-09-23",
+      title: "小米 18 Fold 首销激活近 8 万台：MiMo 端侧模型机型通过市场验证",
+      summary: "小米 18 Fold 首销激活量近 8 万台、同比暴增 300%——这款首款搭载 MiMo 端侧模型与自研玄戒 O3 的万元级折叠旗舰，拿到了「端侧 AI + 自研芯片」的市场正反馈。",
+      detail: "9 月 23 日消息：小米 18 Fold 首销激活近 8 万台，同比暴增 300%；该机 9 月 12 日开售当日即约 3.6 万台，小米许斐称首销较上代大折叠增长超三倍。\n产品底色：小米首款「中折叠」旗舰（7.58 吋内屏、219g），起售价 10999 元、小米首款万元机；核心是自研三件套——玄戒 O3 旗舰 SoC、澎湃 OS4 与 MiMo 端侧大模型（首款搭载机型），配合 LPDDR6 高带宽内存，端侧模型内存与带宽占用直降约 30%、精度几乎无损。\n意义：端侧模型手机不再只是发布会概念——首款 MiMo 机型在万元档拿下首销激活 +300%，说明「端侧 AI + 自研芯片」正在成为高端机的真实购买理由。",
+      tags: ["小米 18 Fold", "MiMo 端侧模型", "玄戒 O3", "首销激活"],
+      url: "https://www.sohu.com/a/1080077450_120073936",
+      image: "https://q0.itc.cn/images01/20260923/775d114521c248e1baffe87bef1bb6fd.png",
       imageCap: "配图来自原文页面"
     },
     {
@@ -204,15 +225,14 @@ WEEKLY_ARCHIVE[40] = {
       imageCap: "配图来自原文页面"
     },
     {
-      id: "n11", cat: "行业关注事件", source: "36氪 / TechCrunch", date: "2026-09-24",
-      title: "「哑巴 AI」Jev 刷屏：不生成文本的「系统一模型」，决策快 200 倍",
-      summary: "前 OpenAI 研究员创办的 TypeSafe AI 发布 Jev：不做对话、直接输出类型安全的概率化决策，70ms 级响应、快约 200 倍、便宜约 400 倍；上线 3 天获 Vercel / Cloudflare / LangChain 整合。",
-      detail: "Jev 是 TypeSafe AI（前 OpenAI 研究员 Diogo Almeida 创办）9 月 15 日开放早期访问的新模型，被媒体称为「哑巴 AI」：\n它基于 transformer 架构，但不是 LLM——不写文章、不写代码、不陪聊，放弃逐 token 的文本生成，直接输出「类型安全的概率化决策」并内置校准（calibration），对标心理学中快思考的「系统一」能力。因此它高速、轻量，官方与第三方评测称在相关决策任务上比传统 LLM 快约 200 倍、便宜约 400 倍，且从机制上避免幻觉。\n有多轰动：发布 3 天内获 Vercel、Cloudflare、LangChain 等主流平台整合；内测开放不到 36 小时涌入 14 万开发者；同日公司宣布完成 DCVC 领投的 4000 万美元种子轮。TechCrunch 评价其为「一种新型 AI 模型」，Wikipedia 已收录词条。\n36氪追问《Jev 真是新范式吗？》：它在企业自动化（分类、风控、路由等结构化决策）中优势明显，但复杂推理与开放生成仍需与传统 LLM 配合——「快系统 + 慢系统」的组合成为新的工程范式。",
-      tags: ["Jev", "TypeSafe AI", "系统一模型", "决策模型"],
-      url: "https://www.36kr.com/p/3988372551990276",
-      image: "https://img.36krcdn.com/hsossms/20260918/v2_cfa5dfb20fde4be3b974bd19767f8254@000000@ai_oswg679481oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
-      imageCap: "配图来自原文页面",
-      highlight: true
+      id: "n23", cat: "AI硬件", source: "搜狐科技（独家）", date: "2026-09-21",
+      title: "独家：阿里首款千问办公 AI 硬件将推出，售价或在千元级",
+      summary: "阿里被曝将推出首款千问办公 AI 硬件（QwenNote），售价千元级——大模型厂商做硬件再下一城，瞄准办公场景的随身 AI 终端。",
+      detail: "9 月 21 日独家消息：阿里首款千问办公 AI 硬件将推出，产品线指向 QwenNote，售价或在千元级。\n定位是「随身办公 AI 终端」：依托千问端侧模型 + 云端算力，覆盖会议记录、文档处理、翻译等办公高频场景，与手机形成互补而非替代关系。\n放在本周语境里看：豆包做手机、阿里造平板与办公硬件、康冠携手阶跃出 AI PC——模型厂商的硬件化已经是集体动作，而非个案。",
+      tags: ["千问", "QwenNote", "办公AI硬件", "阿里"],
+      url: "https://www.sohu.com/a/1079171780_553580",
+      image: "https://q7.itc.cn/q_70/images03/20260921/43bc4f6ae13f400699272bf498964ac0.jpeg",
+      imageCap: "配图来自原文页面"
     },
     {
       id: "n12", cat: "端侧Agent", source: "东吴证券（腾讯新闻） / 36氪", date: "2026-09-21",
@@ -242,26 +262,6 @@ WEEKLY_ARCHIVE[40] = {
       detail: "阶跃星辰 9 月 20 日发布新一代旗舰基座模型 Step 5 Preview：采用稀疏 MoE 架构，总参数 600B、推理时仅激活约 27B，支持 100 万 token 上下文与文本 + 视觉双模态输入，重点面向 AI 编程、软件工程、专业知识工作与金融四大场景，并针对长程 Agent 任务（long-horizon agentic tasks）优化。\n评测表现：Artificial Analysis Intelligence Index 得分 44，发布一日内由全球开源模型第三升至第二；单任务成本据称约为 Claude Opus 5 的 1/8。\n官方宣布将于 10 月 15 日开源。阶跃星辰成立于 2023 年 4 月，是上海头部大模型独角兽，坚持自研超级模型路线，此前已多轮开源 Step 系列中小模型。",
       tags: ["阶跃星辰", "Step 5 Preview", "MoE", "开源"],
       url: "https://www.163.com/tech/article/L78VD8I600098IEO.html"
-    },
-    {
-      id: "n30", cat: "行业动态", source: "新浪财经", date: "2026-09-23",
-      title: "苹果新款 Mac 发货：主打端侧 AI，帮用户省下 token 费",
-      summary: "苹果宣布 M5 系列新款 Mac mini / Mac Studio 开始发货（4499 / 19999 元起），营销主线转向「端侧 AI」：神经网络引擎算力大幅提升、本地直接跑主流大模型，省下云端按 token 计费的开支。",
-      detail: "9 月 23 日（周三），苹果宣布搭载 M5 系列芯片的新款 Mac mini 与 Mac Studio 开始发货，起售价分别为 4499 元与 19999 元。\n与以往的性能叙事不同，本轮营销主线是「端侧 AI 算力」：苹果强调新款 Mac 的神经网络引擎算力大幅提升，可在本地直接运行主流大模型，帮用户省下云端推理按 token 计费的开支，并主打本地运行的安全与隐私优势。\n背景：在智能体开发与私有部署需求带动下，「本地 AI 主机」成为新战场——英伟达 DGX Spark、小米 AI Cube（8 月底发布）与新款 Mac 台式机正面竞争，端侧算力形态正从手机 / PC 延伸到桌面。",
-      tags: ["苹果 Mac", "M5", "端侧AI", "本地大模型"],
-      url: "https://finance.sina.com.cn/roll/2026-09-23/doc-inistvut5489395.shtml",
-      image: "https://n.sinaimg.cn/spider20260923/54/w578h276/20260923/704d-66796a662bd6b5a37a13b74a669a6401.png",
-      imageCap: "配图来自原文页面"
-    },
-    {
-      id: "n4", cat: "手机厂商", source: "搜狐科技 / 腾讯新闻", date: "2026-09-23",
-      title: "小米 18 Fold 首销激活近 8 万台：MiMo 端侧模型机型通过市场验证",
-      summary: "小米 18 Fold 首销激活量近 8 万台、同比暴增 300%——这款首款搭载 MiMo 端侧模型与自研玄戒 O3 的万元级折叠旗舰，拿到了「端侧 AI + 自研芯片」的市场正反馈。",
-      detail: "9 月 23 日消息：小米 18 Fold 首销激活近 8 万台，同比暴增 300%；该机 9 月 12 日开售当日即约 3.6 万台，小米许斐称首销较上代大折叠增长超三倍。\n产品底色：小米首款「中折叠」旗舰（7.58 吋内屏、219g），起售价 10999 元、小米首款万元机；核心是自研三件套——玄戒 O3 旗舰 SoC、澎湃 OS4 与 MiMo 端侧大模型（首款搭载机型），配合 LPDDR6 高带宽内存，端侧模型内存与带宽占用直降约 30%、精度几乎无损。\n意义：端侧模型手机不再只是发布会概念——首款 MiMo 机型在万元档拿下首销激活 +300%，说明「端侧 AI + 自研芯片」正在成为高端机的真实购买理由。",
-      tags: ["小米 18 Fold", "MiMo 端侧模型", "玄戒 O3", "首销激活"],
-      url: "https://www.sohu.com/a/1080077450_120073936",
-      image: "https://q0.itc.cn/images01/20260923/775d114521c248e1baffe87bef1bb6fd.png",
-      imageCap: "配图来自原文页面"
     }
   ],
 
@@ -269,7 +269,7 @@ WEEKLY_ARCHIVE[40] = {
    * 收录标准：SCI 二区以上期刊 / CCF-B 以上会议论文（group=published）
    * 近期 arXiv 新作作为预印本收录跟踪（group=recent），录用后转入已发表
    * detail 为按论文原文（摘要）忠实扩写的中文介绍
-   * image=论文结构图(自动抓取自 arXiv HTML 版, 无 HTML 版时前端生成兜底封面)
+   * image=论文结构图(图源：arXiv 论文原文, 无 HTML 版时前端生成兜底封面)
    */
   papers: [
     {
@@ -332,7 +332,7 @@ WEEKLY_ARCHIVE[40] = {
       tags: ["云边协同", "双层优化", "个性化"],
       url: "https://arxiv.org/abs/2609.15664",
       image: "https://arxiv.org/html/2609.15664v1/figure_5_control_statistics_pca.png",
-      imageCap: "论文图表 · 自动抓取自 arXiv HTML 版"
+      imageCap: "论文图表 · 图源：arXiv 论文原文"
     },
     {
       id: "p7", group: "recent", cat: "安全与隐私", date: "2026-09-09",
@@ -364,7 +364,7 @@ WEEKLY_ARCHIVE[40] = {
       tags: ["车载智能体", "SLM", "函数调用"],
       url: "https://arxiv.org/abs/2609.09476",
       image: "https://arxiv.org/html/2609.09476v1/figures/teaser.png",
-      imageCap: "论文结构图 · 自动抓取自 arXiv HTML 版"
+      imageCap: "论文结构图 · 图源：arXiv 论文原文"
     },
     {
       id: "p10", group: "recent", cat: "端侧智能体", date: "2026-09-07",

@@ -12,6 +12,38 @@ WEEKLY_ARCHIVE[38] = {
   /* ---------------- 板块一：本周资讯 ---------------- */
   news: [
     {
+      id: "n10", cat: "行业动态", source: "网易科技", date: "2026-09-19",
+      title: "大模型周报：阶跃星辰 Step 5 Preview（6000 亿参数）等密集迭代",
+      summary: "本周大模型迭代密集：阶跃星辰跳过 4.X 直接发布 6000 亿参数 Step 5 Preview；AI 加速嵌入办公与操作系统，与端侧轻量化形成「两翼」格局。",
+      detail: "网易科技 9 月 19 日汇总本周 AI 动态：阶跃星辰推出 Step 5 Preview，参数量 6000 亿，跳过 Step 4.X 直接进入 Step 5；AI 正加速嵌入办公软件与操作系统层。\n从端侧视角看，云端参数量竞赛与端侧轻量化并非对立——云端旗舰负责复杂推理与蒸馏教师，端侧小模型负责隐私、延迟敏感的日常任务，「端云协同」是 2026 年的主流叙事。",
+      tags: ["阶跃星辰", "Step 5", "端云协同"],
+      url: "https://www.163.com"
+    },
+    {
+      id: "n9", cat: "行业动态", source: "36氪 / 新浪科技", date: "2026-09-18",
+      title: "行业观察：端侧AI进入规模化落地阶段，端云协同成为车端主流",
+      summary: "机构观察：2025 年端侧模型备案超 200 款、2026 年预计达 360 款；车载大模型转向「云端复杂推理 + 车机小模型」；竞争核心从算力转向模型、芯片与系统的深度整合。",
+      detail: "综合近期产业报道：其一，端侧 AI 正从概念验证迈向规模落地，2025 年端侧大模型备案已超 200 款，2026 年预计达 360 款；其二，车载场景转向端云协同——云端处理复杂推理、车机运行小模型，不再单纯比拼端侧参数量；其三，「模型变小变轻已不够」，关键在于模型与底层框架、芯片、设备场景的深度配合。\n这与本周天玑 9600 Pro、骁龙 8 Elite Gen 6 把 NPU 面向智能体重构的取向一致：算力、内存与系统软件栈的协同成为胜负手。",
+      tags: ["行业观察", "端云协同", "规模化落地"],
+      url: "https://www.36kr.com"
+    },
+    {
+      id: "n3", cat: "手机厂商", source: "新浪财经", date: "2026-09-17",
+      title: "「端侧AI之战正式打响」：字节豆包 AI 手机 NaviX Ultra 亮相",
+      summary: "新浪财经 9 月 17 日刊文盘点：豆包 AI 手机 NaviX Ultra 于 9 月 16 日正式亮相，端侧大模型上机竞争进入白热化。",
+      detail: "新浪财经 9 月 17 日发表《端侧AI之战正式打响》，盘点本周端侧 AI 整机动态：字节跳动旗下豆包 AI 手机 NaviX Ultra 于 9 月 16 日正式亮相；苹果 Apple 智能 + 全新 Siri AI 已在 WWDC26 发布；刚刚上市的小米 18 Fold 内置 Xiaomi 端侧模型。\n文章指出，2026 年被业内视为「端侧AI落地元年」——旗舰手机已可在断网状态下本地运行百亿参数级大模型，竞争焦点从单纯算力转向「模型 + 芯片 + 系统」的整体整合。",
+      tags: ["豆包", "NaviX Ultra", "AI手机"],
+      url: "https://finance.sina.com.cn", highlight: true
+    },
+    {
+      id: "n4", cat: "手机厂商", source: "新浪财经（综合）", date: "2026-09-16",
+      title: "小米 18 Fold 上市：内置 Xiaomi 端侧大模型",
+      summary: "新上市的小米 18 Fold 折叠旗舰内置 Xiaomi 端侧大模型，结合折叠大屏的多任务与办公场景提供本地 AI 能力，是国产「模型上机」的又一落地样本。",
+      detail: "小米 18 Fold 作为本周上市的新旗舰，内置 Xiaomi 端侧大模型。在折叠屏大屏形态下，端侧模型承担离线问答、文档处理、跨应用调度等本地任务。\n结合行业节奏，2026 年下半年国产旗舰普遍进入「百亿参数端侧模型 + 专用 NPU」配置区间，端侧能力正成为高端机型的标准卖点与差异化战场。",
+      tags: ["小米 18 Fold", "端侧模型", "折叠屏"],
+      url: "https://finance.sina.com.cn"
+    },
+    {
       id: "n1", cat: "芯片厂商", source: "联发科新闻室 / TechPowerUp", date: "2026-09-15",
       title: "联发科发布天玑 9600 Pro：全球首款 2nm 手机芯片，双 NPU 面向端侧智能体",
       summary: "首发 2nm 工艺，多核功耗降低 61%、单核性能提升约 17%；全新双 NPU AI 引擎专为端侧与 Agentic AI 负载设计，是端侧 AI 算力竞赛的标志性节点。",
@@ -28,36 +60,12 @@ WEEKLY_ARCHIVE[38] = {
       url: "https://www.computerworld.com", highlight: true
     },
     {
-      id: "n3", cat: "手机厂商", source: "新浪财经", date: "2026-09-17",
-      title: "「端侧AI之战正式打响」：字节豆包 AI 手机 NaviX Ultra 亮相",
-      summary: "新浪财经 9 月 17 日刊文盘点：豆包 AI 手机 NaviX Ultra 于 9 月 16 日正式亮相，端侧大模型上机竞争进入白热化。",
-      detail: "新浪财经 9 月 17 日发表《端侧AI之战正式打响》，盘点本周端侧 AI 整机动态：字节跳动旗下豆包 AI 手机 NaviX Ultra 于 9 月 16 日正式亮相；苹果 Apple 智能 + 全新 Siri AI 已在 WWDC26 发布；刚刚上市的小米 18 Fold 内置 Xiaomi 端侧模型。\n文章指出，2026 年被业内视为「端侧AI落地元年」——旗舰手机已可在断网状态下本地运行百亿参数级大模型，竞争焦点从单纯算力转向「模型 + 芯片 + 系统」的整体整合。",
-      tags: ["豆包", "NaviX Ultra", "AI手机"], 
-      url: "https://finance.sina.com.cn", highlight: true
-    },
-    {
-      id: "n4", cat: "手机厂商", source: "新浪财经（综合）", date: "2026-09-16",
-      title: "小米 18 Fold 上市：内置 Xiaomi 端侧大模型",
-      summary: "新上市的小米 18 Fold 折叠旗舰内置 Xiaomi 端侧大模型，结合折叠大屏的多任务与办公场景提供本地 AI 能力，是国产「模型上机」的又一落地样本。",
-      detail: "小米 18 Fold 作为本周上市的新旗舰，内置 Xiaomi 端侧大模型。在折叠屏大屏形态下，端侧模型承担离线问答、文档处理、跨应用调度等本地任务。\n结合行业节奏，2026 年下半年国产旗舰普遍进入「百亿参数端侧模型 + 专用 NPU」配置区间，端侧能力正成为高端机型的标准卖点与差异化战场。",
-      tags: ["小米 18 Fold", "端侧模型", "折叠屏"],
-      url: "https://finance.sina.com.cn"
-    },
-    {
-      id: "n5", cat: "大模型厂商", source: "Apple Machine Learning Research", date: "2026-06-08",
-      title: "苹果 AFM 3 家族：20B MoE 全端侧模型与 Foundation Models 框架",
-      summary: "WWDC26 发布 5 款 AFM3 基础模型：AFM 3 Core 为 3B 稠密端侧模型，AFM 3 Core Advanced 为约 20B 稀疏（MoE）架构、全端侧运行；Siri AI 与实时端侧语音合成同步亮相。",
-      detail: "苹果在 WWDC26 公开第三代基础模型 AFM 3 家族，共 5 款：AFM 3 Core 为 3B 参数稠密模型，完全在设备端运行；AFM 3 Core Advanced 采用约 20B 参数稀疏（MoE）架构，同样全部端侧运行，是苹果迄今最强大的端侧模型。\nSiri AI 全面升级，其中 Siri Expressive Voices 由 AFM 3 Core Advanced 驱动、完全在设备上实时合成语音；Siri 还被嵌入灵动岛，可下滑唤出。\n开发者可通过 Foundation Models 框架（Swift 原生 API）直接调用与 Apple Intelligence 同源的端侧模型。本周豆包、小米等动作均在与该路线对标。",
-      tags: ["AFM3", "Apple Intelligence", "Siri AI", "MoE"],
-      url: "https://machinelearning.apple.com"
-    },
-    {
-      id: "n6", cat: "大模型厂商", source: "新京报 / 证券时报 / IT之家", date: "2026-07-19",
-      title: "面壁智能：MiniCPM5-2B 发布、搭载三星旗舰，MiniCPM-V 4.6 定档 9 月",
-      summary: "WAIC 2026 上面壁发布 MiniCPM5-2B 端侧文本模型与 MiniCPM-Robot 具身 VLA 模型；MiniCPM 系列确认搭载三星数款旗舰；1.3B 的 MiniCPM-V 4.6 端侧约 6GB 内存可运行，9 月发布会已官宣。",
-      detail: "面壁智能 7 月在上海 WAIC 2026「智在终端」论坛发布 MiniCPM5-2B 端侧文本大模型（在 Artificial Analysis 指数上超越 4B 及以下量级对手）与首个具身智能系列 MiniCPM-Robot（VLA 模型）。\n商业化方面，MiniCPM 系列端侧模型将搭载三星数款旗舰机型上市，覆盖全球头部厂商。\n开源方面，5 月联合清华开源的 MiniCPM-V 4.6 仅 1.3B 参数、端侧约 6GB 内存即可运行，官方已官宣 9 月发布会，值得持续关注。",
-      tags: ["MiniCPM", "面壁智能", "三星", "VLA"],
-      url: "https://www.modelbest.cn"
+      id: "n8", cat: "芯片厂商", source: "Qualcomm Newsroom", date: "2026-08-31",
+      title: "高通与 HUMAIN 推出 Horizon Ultra AI PC：CPU+GPU+NPU 融合的端侧 AI 整机",
+      summary: "高通与沙特 HUMAIN 联合发布 Horizon Ultra AI PC，将 CPU、GPU 与 NPU 算力融合面向端侧 AI，首发搭载微软平台——端侧 AI 战场正从手机扩展到 PC 与边缘整机。",
+      detail: "高通与 HUMAIN 联合推出 Horizon Ultra AI PC，作为 Horizon 产品线新旗舰，把 CPU、GPU 与 NPU 三类算力聚合面向端侧 AI 工作负载，并宣布与微软平台首发合作。\n该产品延续骁龙 X 系列在 PC 端侧 AI 的路线，进一步说明「端侧 AI」正从手机扩展到 PC、机器人与边缘服务器等多形态终端。",
+      tags: ["AI PC", "骁龙 X", "HUMAIN"],
+      url: "https://www.qualcomm.com/news"
     },
     {
       id: "n7", cat: "大模型厂商", source: "Qwen 官方（综合报道）", date: "2026-08-26",
@@ -68,28 +76,20 @@ WEEKLY_ARCHIVE[38] = {
       url: "https://qwen.ai"
     },
     {
-      id: "n8", cat: "芯片厂商", source: "Qualcomm Newsroom", date: "2026-09",
-      title: "高通与 HUMAIN 推出 Horizon Ultra AI PC：CPU+GPU+NPU 融合的端侧 AI 整机",
-      summary: "高通与沙特 HUMAIN 联合发布 Horizon Ultra AI PC，将 CPU、GPU 与 NPU 算力融合面向端侧 AI，首发搭载微软平台——端侧 AI 战场正从手机扩展到 PC 与边缘整机。",
-      detail: "高通与 HUMAIN 联合推出 Horizon Ultra AI PC，作为 Horizon 产品线新旗舰，把 CPU、GPU 与 NPU 三类算力聚合面向端侧 AI 工作负载，并宣布与微软平台首发合作。\n该产品延续骁龙 X 系列在 PC 端侧 AI 的路线，进一步说明「端侧 AI」正从手机扩展到 PC、机器人与边缘服务器等多形态终端。",
-      tags: ["AI PC", "骁龙 X", "HUMAIN"],
-      url: "https://www.qualcomm.com/news"
+      id: "n6", cat: "大模型厂商", source: "新京报 / 证券时报 / IT之家", date: "2026-07-19",
+      title: "面壁智能：MiniCPM5-2B 发布、搭载三星旗舰，MiniCPM-V 4.6 定档 9 月",
+      summary: "WAIC 2026 上面壁发布 MiniCPM5-2B 端侧文本模型与 MiniCPM-Robot 具身 VLA 模型；MiniCPM 系列确认搭载三星数款旗舰；1.3B 的 MiniCPM-V 4.6 端侧约 6GB 内存可运行，9 月发布会已官宣。",
+      detail: "面壁智能 7 月在上海 WAIC 2026「智在终端」论坛发布 MiniCPM5-2B 端侧文本大模型（在 Artificial Analysis 指数上超越 4B 及以下量级对手）与首个具身智能系列 MiniCPM-Robot（VLA 模型）。\n商业化方面，MiniCPM 系列端侧模型将搭载三星数款旗舰机型上市，覆盖全球头部厂商。\n开源方面，5 月联合清华开源的 MiniCPM-V 4.6 仅 1.3B 参数、端侧约 6GB 内存即可运行，官方已官宣 9 月发布会，值得持续关注。",
+      tags: ["MiniCPM", "面壁智能", "三星", "VLA"],
+      url: "https://www.modelbest.cn"
     },
     {
-      id: "n9", cat: "行业动态", source: "36氪 / 新浪科技", date: "2026-09-18",
-      title: "行业观察：端侧AI进入规模化落地阶段，端云协同成为车端主流",
-      summary: "机构观察：2025 年端侧模型备案超 200 款、2026 年预计达 360 款；车载大模型转向「云端复杂推理 + 车机小模型」；竞争核心从算力转向模型、芯片与系统的深度整合。",
-      detail: "综合近期产业报道：其一，端侧 AI 正从概念验证迈向规模落地，2025 年端侧大模型备案已超 200 款，2026 年预计达 360 款；其二，车载场景转向端云协同——云端处理复杂推理、车机运行小模型，不再单纯比拼端侧参数量；其三，「模型变小变轻已不够」，关键在于模型与底层框架、芯片、设备场景的深度配合。\n这与本周天玑 9600 Pro、骁龙 8 Elite Gen 6 把 NPU 面向智能体重构的取向一致：算力、内存与系统软件栈的协同成为胜负手。",
-      tags: ["行业观察", "端云协同", "规模化落地"],
-      url: "https://www.36kr.com"
-    },
-    {
-      id: "n10", cat: "行业动态", source: "网易科技", date: "2026-09-19",
-      title: "大模型周报：阶跃星辰 Step 5 Preview（6000 亿参数）等密集迭代",
-      summary: "本周大模型迭代密集：阶跃星辰跳过 4.X 直接发布 6000 亿参数 Step 5 Preview；AI 加速嵌入办公与操作系统，与端侧轻量化形成「两翼」格局。",
-      detail: "网易科技 9 月 19 日汇总本周 AI 动态：阶跃星辰推出 Step 5 Preview，参数量 6000 亿，跳过 Step 4.X 直接进入 Step 5；AI 正加速嵌入办公软件与操作系统层。\n从端侧视角看，云端参数量竞赛与端侧轻量化并非对立——云端旗舰负责复杂推理与蒸馏教师，端侧小模型负责隐私、延迟敏感的日常任务，「端云协同」是 2026 年的主流叙事。",
-      tags: ["阶跃星辰", "Step 5", "端云协同"],
-      url: "https://www.163.com"
+      id: "n5", cat: "大模型厂商", source: "Apple Machine Learning Research", date: "2026-06-08",
+      title: "苹果 AFM 3 家族：20B MoE 全端侧模型与 Foundation Models 框架",
+      summary: "WWDC26 发布 5 款 AFM3 基础模型：AFM 3 Core 为 3B 稠密端侧模型，AFM 3 Core Advanced 为约 20B 稀疏（MoE）架构、全端侧运行；Siri AI 与实时端侧语音合成同步亮相。",
+      detail: "苹果在 WWDC26 公开第三代基础模型 AFM 3 家族，共 5 款：AFM 3 Core 为 3B 参数稠密模型，完全在设备端运行；AFM 3 Core Advanced 采用约 20B 参数稀疏（MoE）架构，同样全部端侧运行，是苹果迄今最强大的端侧模型。\nSiri AI 全面升级，其中 Siri Expressive Voices 由 AFM 3 Core Advanced 驱动、完全在设备上实时合成语音；Siri 还被嵌入灵动岛，可下滑唤出。\n开发者可通过 Foundation Models 框架（Swift 原生 API）直接调用与 Apple Intelligence 同源的端侧模型。本周豆包、小米等动作均在与该路线对标。",
+      tags: ["AFM3", "Apple Intelligence", "Siri AI", "MoE"],
+      url: "https://machinelearning.apple.com"
     }
   ],
 

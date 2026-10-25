@@ -112,6 +112,17 @@ WEEKLY_ARCHIVE[43] = {
       highlight: false
     },
     {
+      id: "n105", cat: "大模型厂商", source: "腾讯新闻（亿欧网）", date: "2026-10-16",
+      title: "Gemini 4 Argon 具身推理 87% 领跑前沿模型：单张照片生成数千仿真回合，谷歌、OpenAI、DeepSeek 同月入局具身大脑",
+      summary: "谷歌 10 月上旬发布 Gemini 4 Argon 的机器人能力——在具身推理基准 ERQA 纯推理得分 87%，超过所有其他前沿模型；Real2Sim 流水线从单张桌面照片合成数十个任务、数千个仿真回合，把下游 VLA 真机成功率从 56% 提升到 75%、完成时间从 35 秒压缩到 24 秒。同期 OpenAI 向全量 ChatGPT 用户推送 GPT-6 Sol/Luna，Physical Intelligence 开放 Pi API Beta，DeepSeek 以约 1.4 亿元参与宇树科创板战略配售——具身大脑赛道挤满巨头。",
+      detail: "谷歌侧（另据腾讯新闻 10 月 14 日 Argon 发布报道交叉核验）：Gemini 4 Argon 定位「通用物理推理模型」，具身推理基准 ERQA 纯推理得分 87%；演示链路为「视频生成 MuJoCo 仿真孪生—人手遥操作转移到双臂人形—真机复现」；Real2Sim 从单张桌面照片生成数十个任务、数千个仿真回合，下游 VLA 真机成功率 56%→75%、完成时间 35 秒→24 秒，合成 4500+ 域随机化剧集；抓取放置任务自我改进，首次 58.9 秒、第 3 次迭代 17.4 秒。\n行业格局：OpenAI 于 10 月 7 日向全量用户推送 GPT-6 Sol/Luna（Intelligent UI）；Physical Intelligence 10 月 13 日开放 Pi API Beta（上传数据—托管微调—云端推理—真机执行）；DeepSeek 以约 1.4 亿元参与宇树科创板 IPO 战略配售（锁定 36 个月）；宇树王兴兴在工博会表示具身拐点「快则一两年」。亿欧分析点名四类「最先承压」的公司：套壳方案商、传统示教集成商、单任务垂直 VLA 初创与低质仿真建模商。\n端侧视角：具身智能当前主流是「云端大脑 + 端侧小脑」分层——旗舰模型负责规划与仿真训练，机器人本体上的端侧控制器负责实时执行；Argon 的 Real2Sim 合成流水线同时也是端侧 VLA 小模型的训练数据水源（数千仿真回合可直接用于蒸馏），云端旗舰每一次升级都在抬高本体端侧控制器的对齐目标。\n收录定位：云端旗舰的具身升级直接决定端侧控制器的对齐目标与训练数据水位——「云端大脑 + 端侧小脑」的分层格局由此越发清晰。",
+      url: "https://news.qq.com/rain/a/20261016A0EHO000",
+      image: "https://inews.gtimg.com/om_ls/Oxy-e5rt3p5ARbTThUkaoJ_MKKTth5gwsTBIRKSt6uDaoAA_640330/0",
+      imageCap: "Gemini 4 Argon 具身能力引发行业震动（图：腾讯新闻）",
+      tags: ["Google", "Gemini 4 Argon", "具身智能", "VLA"],
+      highlight: false
+    },
+    {
       id: "n84", cat: "行业动态", source: "IT之家", date: "2026-10-15",
       title: "库克确认：Apple Intelligence 携阿里千问/万相获批，月底在华发布测试版（不含 Siri AI）",
       summary: "苹果董事会执行主席库克在上海接受采访确认——Apple Intelligence 及相关阿里千问大模型已获批准，将于 10 月晚些时候面向中国用户发布测试版本，首批功能包括实时翻译、书写工具、照片清除等，但 Siri AI 不在此次范围；彭博社称 12 月将随 iOS 27.3 正式推送。获批模型为通义千问（语言）与通义万相（图像/视频生成）——端侧 AI 的中美合规样本落地。",
@@ -153,6 +164,17 @@ WEEKLY_ARCHIVE[43] = {
       url: "https://sz.ifeng.com/c/8xDX2OH7dM9",
       image: "https://q0.itc.cn/q_70/images03/20261016/b3c4a9adb1654be8a869b02033b0a085.png",
       imageCap: "光之召唤奥特曼 AI 互动对话器（图：搜狐科技）",
+      highlight: false
+    },
+    {
+      id: "n104", cat: "行业关注事件", source: "腾讯新闻（全天候科技）", date: "2026-10-15",
+      title: "OpenAI 反诉指控前员工带走逾百份 AI 设备机密文件回苹果：法官称「极有可能」发禁令，但拒绝全面检查代码库",
+      summary: "苹果 7 月起诉 OpenAI 挖角并窃取商业秘密后，OpenAI 10 月中旬提交反诉文件：指控一名前员工（在 OpenAI 任职约六个月后重返苹果）离职当日将逾百份涉密文件发至个人账户——包含未发布设备的详细图像与高度机密的工程制造数据，并曾向苹果高管演示相关产品计划；苹果否认，称「未发现任何支持 OpenAI 指控的证据」。联邦法官 Davila 表示「极有可能」支持对仍在 OpenAI 任职的前苹果员工发出禁令，但称全面检查设备与代码库是「极其苛刻的要求」，苹果随后将检查范围缩小至少数离职员工。",
+      detail: "事件脉络：苹果 7 月先行起诉，指 OpenAI 系统性挖角并窃取商业秘密；OpenAI 反诉文件指控前员工离职当日转移逾百份涉密文件（未发布设备详细图像、高度机密工程与制造数据），并警告苹果工程师或将据此影响其即将推出的产品；苹果回应称有严格政策防止新员工滥用前雇主保密信息，未发现支持指控的证据，并指 OpenAI 意在转移诉讼焦点。\n硬件背景：OpenAI 首款硬件据报道为「无屏幕的小型智能音箱」，设计职能由收购的前苹果设计师 Jonny Ive 团队（io 公司）接管——设备尚未发布即爆发机密之争，凸显 AI 硬件工程的稀缺性。\n端侧视角：此案争夺的核心资产正是「AI 设备团队与工程机密」——OpenAI 的无屏智能音箱是其押注端侧硬件的首作，诉讼结果将直接影响端侧 AI 设备赛道的竞争格局；对端侧读者，这是观察大模型厂商「从云到端」卡位战的标志性诉讼。\n收录定位：AI 设备团队与工程机密正成为大模型厂商「从云到端」卡位战的核心资产，此案值得端侧读者持续跟踪。",
+      url: "https://news.qq.com/rain/a/20261015A02U0X00",
+      image: "https://inews.gtimg.com/news_ls/O8_URXmiGb-vn1SMocFN8L7z6TDGj8L7WLvKEQawiy0asAA_640330/0",
+      imageCap: "OpenAI 与苹果商业秘密纠纷升级（图：腾讯新闻）",
+      tags: ["OpenAI", "苹果", "商业秘密", "AI硬件"],
       highlight: false
     },
     {

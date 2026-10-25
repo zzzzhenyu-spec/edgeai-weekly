@@ -57,17 +57,6 @@ WEEKLY_ARCHIVE[41] = {
       highlight: true
     },
     {
-      id: "n53", cat: "行业关注事件", source: "TechCrunch（编译）", date: "2026-09-30",
-      title: "OpenAI 在 DevDay 推出 Decisions API：被 TechCrunch 直称「Jev 克隆」，快系统路线获头部实验室跟进",
-      summary: "OpenAI CEO Altman 在 DevDay 演讲间隙披露 Decisions API——给模型一组预定义选项、以极快速度输出决策，功能与 TypeSafe AI 的 Jev 相似；TypeSafe CEO 调侃「克隆战争开始了」，并称这「说明以系统一兼容方式构建就是未来」。在 LLM 过慢过贵的痛点下，用廉价快速决策层增强 LLM 的「快+慢」组合正成为智能体编排的主流解法。",
-      detail: "TechCrunch 9 月 30 日报道：OpenAI DevDay 上，CEO Sam Altman 在演讲中披露了新的「Decisions API」——为模型（如 Luna）提供一组预定义选项（如图像分类的类别、智能体的不同行为），聚焦于该选择即可做到极快推理，同时保留图像理解、多语言与安全防护能力。\n与 Jev 的关系：TechCrunch 直言这是「Jev 克隆」——TypeSafe AI 本月早些时候发布的 Jev 是「构建于 LLM 之上的超级分类器」，开发者给出选项集合，它以极低成本与极高速度输出概率分布，专为软件自动化设计。\nTypeSafe 的回应：CEO Diogo Almeida（前 OpenAI 工程师）在 X 上调侃「克隆战争开始了」，并称 OpenAI 的跟进说明「以系统一（System One）兼容方式构建就是未来」——「系统一」即 TypeSafe 对快速直觉式思考的术语，区别于深思熟虑的「系统二」。\n端侧视角：Jev 出圈三周即获 OpenAI 官方跟进，「快系统 + 慢系统」的分层智能体架构从创业公司的独门武器变成平台级标配；对端侧的意义同样直接——小体量决策层 + 端侧部署的组合，正是低成本常驻智能体的可行路径。",
-      tags: ["OpenAI", "Jev", "Decisions API", "系统一模型"],
-      url: "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
-      image: "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2297228249.jpg?resize=1200,800",
-      imageCap: "OpenAI DevDay 2026（图源：TechCrunch）",
-      highlight: false
-    },
-    {
       id: "n54", cat: "AI硬件", source: "IT之家", date: "2026-10-01",
       title: "三星 Galaxy Glasses 通过美国 FCC 认证：骁龙 AR1 + Android XR + Gemini，有望 11 月上市",
       summary: "三星智能眼镜 Galaxy Glasses 已通过美国 FCC 认证（越南制造），预计 11 月上市；信息显示其搭载高通骁龙 AR1 Gen 1 眼镜专用端侧芯片、运行 Android XR 平台并集成谷歌 Gemini——继 Meta 之后，Android 阵营首个头部品牌的 AI 眼镜进入上市倒计时。",
@@ -76,6 +65,17 @@ WEEKLY_ARCHIVE[41] = {
       url: "https://www.ithome.com/1/009/102.htm",
       image: "https://img.ithome.com/newsuploadfiles/2026/7/be9f2156-f5be-4ec3-94a4-97fb630fc49a.jpg",
       imageCap: "Galaxy Glasses 概念渲染（图源：IT之家）",
+      highlight: false
+    },
+    {
+      id: "n53", cat: "行业关注事件", source: "TechCrunch（编译）", date: "2026-09-30",
+      title: "OpenAI 在 DevDay 推出 Decisions API：被 TechCrunch 直称「Jev 克隆」，快系统路线获头部实验室跟进",
+      summary: "OpenAI CEO Altman 在 DevDay 演讲间隙披露 Decisions API——给模型一组预定义选项、以极快速度输出决策，功能与 TypeSafe AI 的 Jev 相似；TypeSafe CEO 调侃「克隆战争开始了」，并称这「说明以系统一兼容方式构建就是未来」。在 LLM 过慢过贵的痛点下，用廉价快速决策层增强 LLM 的「快+慢」组合正成为智能体编排的主流解法。",
+      detail: "TechCrunch 9 月 30 日报道：OpenAI DevDay 上，CEO Sam Altman 在演讲中披露了新的「Decisions API」——为模型（如 Luna）提供一组预定义选项（如图像分类的类别、智能体的不同行为），聚焦于该选择即可做到极快推理，同时保留图像理解、多语言与安全防护能力。\n与 Jev 的关系：TechCrunch 直言这是「Jev 克隆」——TypeSafe AI 本月早些时候发布的 Jev 是「构建于 LLM 之上的超级分类器」，开发者给出选项集合，它以极低成本与极高速度输出概率分布，专为软件自动化设计。\nTypeSafe 的回应：CEO Diogo Almeida（前 OpenAI 工程师）在 X 上调侃「克隆战争开始了」，并称 OpenAI 的跟进说明「以系统一（System One）兼容方式构建就是未来」——「系统一」即 TypeSafe 对快速直觉式思考的术语，区别于深思熟虑的「系统二」。\n端侧视角：Jev 出圈三周即获 OpenAI 官方跟进，「快系统 + 慢系统」的分层智能体架构从创业公司的独门武器变成平台级标配；对端侧的意义同样直接——小体量决策层 + 端侧部署的组合，正是低成本常驻智能体的可行路径。",
+      tags: ["OpenAI", "Jev", "Decisions API", "系统一模型"],
+      url: "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+      image: "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2297228249.jpg?resize=1200,800",
+      imageCap: "OpenAI DevDay 2026（图源：TechCrunch）",
       highlight: false
     },
     {
@@ -138,7 +138,7 @@ WEEKLY_ARCHIVE[41] = {
       id: "n42", cat: "手机厂商", source: "腾讯新闻（数智前线）/ IT之家", date: "2026-09-28",
       title: "荣耀 Magic9 全系落地 MagicOS 11：397B 智能体大模型进系统，新一代 YOYO 可执行百步长程任务",
       summary: "荣耀今日发布 Magic9 系列（Pro Max / 标准版 / 超能版，4499 元起），端侧 AI 成为主线：与阿里联合打造的 397B 智能体大模型被引入系统，Agent Harness 框架首次商用——把意图理解、终端感知、工具调用与执行反馈串成执行链。新一代 YOYO 从问答助手变为系统智能体：可处理 100 步以上长程任务、40 多种触发条件、130 多个执行动作；全系保留独立 AI 按键与业界首个 AI 通话助理。同场还与中国移动联合首发 Token 套餐（169 元/月起含 5000 万移动 Token）。",
-      detail: "9 月 28 日，荣耀 Magic 盛典发布 Magic9 系列，全系预装 9 月 15 日发布的 MagicOS 11。端侧 AI 是本次发布的主线：@NL@系统与模型：荣耀与阿里联合打造的 397B 智能体大模型被引入系统；Agent Harness 框架首次在 MagicOS 11 商用落地——把大模型意图理解、终端感知、工具调用和执行反馈串成完整执行链，YOYO 从「回答型助手」变成「可执行任务的智能体」。@NL@新一代 YOYO 的能力口径：可处理 100 步以上长程任务，支持 40 多种触发条件、130 多个执行动作，结合位置、时间、网络、设备状态自动触发——例如识别购票页自动建日程、整理粉丝群开票信息、按通话内容生成待办。@NL@AI 硬件入口：全系保留独立 AI 按键（单击记屏幕、双击记视频、长按记灵感）；YOYO 一键妙记可生成字幕拼图、视频转 Live，并自动整理取件码、取餐码、日程等碎片信息；业界首个 AI 通话助理可辅助转人工、总结工单。@NL@运营商侧的新物种：中国移动与荣耀联合首发 Token 套餐「MobileAI 达人计划」——169 元/月起含 5000 万移动 Token，支持话费支付、可叠加加油包，首批在杭州、郑州、长沙、深圳、成都、温州试点。@NL@算力底座与产品形态：Pro Max 首批搭载 2nm 第六代骁龙 8 超级至尊版（与小米 18 Pro 同款首发平台），标准版与超能版为第五代骁龙 8 至尊版；三机分工覆盖创作（阿莱双 2 亿影像+自研驭光 H1 影像芯片）、小屏、长续航三条线。@NL@上下文：此前定档预告如期兑现；Agent Harness 的系统级商用与此前的「系统级 Agent 进入加速期」产业判断相呼应；开售 30 分钟线上销量同比增长 194%，市场反应作为一句注脚。",
+      detail: "9 月 28 日，荣耀 Magic 盛典发布 Magic9 系列，全系预装 9 月 15 日发布的 MagicOS 11。端侧 AI 是本次发布的主线：\n系统与模型：荣耀与阿里联合打造的 397B 智能体大模型被引入系统；Agent Harness 框架首次在 MagicOS 11 商用落地——把大模型意图理解、终端感知、工具调用和执行反馈串成完整执行链，YOYO 从「回答型助手」变成「可执行任务的智能体」。\n新一代 YOYO 的能力口径：可处理 100 步以上长程任务，支持 40 多种触发条件、130 多个执行动作，结合位置、时间、网络、设备状态自动触发——例如识别购票页自动建日程、整理粉丝群开票信息、按通话内容生成待办。\nAI 硬件入口：全系保留独立 AI 按键（单击记屏幕、双击记视频、长按记灵感）；YOYO 一键妙记可生成字幕拼图、视频转 Live，并自动整理取件码、取餐码、日程等碎片信息；业界首个 AI 通话助理可辅助转人工、总结工单。\n运营商侧的新物种：中国移动与荣耀联合首发 Token 套餐「MobileAI 达人计划」——169 元/月起含 5000 万移动 Token，支持话费支付、可叠加加油包，首批在杭州、郑州、长沙、深圳、成都、温州试点。\n算力底座与产品形态：Pro Max 首批搭载 2nm 第六代骁龙 8 超级至尊版（与小米 18 Pro 同款首发平台），标准版与超能版为第五代骁龙 8 至尊版；三机分工覆盖创作（阿莱双 2 亿影像+自研驭光 H1 影像芯片）、小屏、长续航三条线。\n上下文：此前定档预告如期兑现；Agent Harness 的系统级商用与此前的「系统级 Agent 进入加速期」产业判断相呼应；开售 30 分钟线上销量同比增长 194%，市场反应作为一句注脚。",
       tags: ["荣耀Magic9", "MagicOS 11", "YOYO智能体", "Agent Harness"],
       url: "https://news.qq.com/rain/a/20260928A0BDLL00",
       image: "https://inews.gtimg.com/om_ls/OHiFF2Oujn8gSzBt-xjsfRsQ4q4-vnu2PMte-vMZDTvsMAA_640330/0",
@@ -220,7 +220,7 @@ WEEKLY_ARCHIVE[41] = {
       tags: ["云边协同", "双层优化", "个性化"],
       url: "https://arxiv.org/abs/2609.15664",
       image: "https://arxiv.org/html/2609.15664v1/figure_5_control_statistics_pca.png",
-      imageCap: "论文图表 · 自动抓取自 arXiv HTML 版"
+      imageCap: "论文图表 · 图源：arXiv 论文原文"
     },
     {
       id: "p7", group: "recent", cat: "安全与隐私", date: "2026-09-09",
@@ -252,7 +252,7 @@ WEEKLY_ARCHIVE[41] = {
       tags: ["车载智能体", "SLM", "函数调用"],
       url: "https://arxiv.org/abs/2609.09476",
       image: "https://arxiv.org/html/2609.09476v1/figures/teaser.png",
-      imageCap: "论文结构图 · 自动抓取自 arXiv HTML 版"
+      imageCap: "论文结构图 · 图源：arXiv 论文原文"
     },
     {
       id: "p10", group: "recent", cat: "端侧智能体", date: "2026-09-07",

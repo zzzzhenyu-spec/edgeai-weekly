@@ -95,8 +95,6 @@
 
   /* 期次渲染（可重入）：切换期数时整体重绘，事件绑定全部在初始化区一次性完成 */
   function renderIssue() {
-    var chipEl = $("issue-chip");
-    if (chipEl) chipEl.textContent = D.meta.issue;
     $("hero-kicker").innerHTML = "VOL." + ((D.meta.issue.match(/\d+(?=\s*期)/) || [""])[0]) + " · " + esc(D.meta.weekRange) + " · WEEKLY BRIEFING" +
       (D.meta.status === "rolling" ? ' <span class="roll-badge"><i></i>每日更新中</span>' : "");
     /* 导读正文：引导词「近 7 天聚焦」（归档期为「本期聚焦」）主题色高亮、「今日新增」另起一行且用滚动徽章同源绿 */
@@ -111,7 +109,7 @@
     $("stat-weeks").textContent = (D.meta.issue.match(/\d+(?= *期)/) || ["—"])[0];
     var KD = $("k-dynamic");
     if (KD) {
-      /* 兼容仍含 concepts/timeline 的历史期存档：老期切换时在该容器回退渲染（当前版已移除此板块） */
+      /* 兼容仍含 concepts/timeline 的历史期存档：老期切换时在该容器回退渲染；切回无此数据的期时清空，避免上期残留 */
       if (D.knowledge.concepts && D.knowledge.concepts.length) {
         KD.innerHTML = '<div class="concept-grid">' + D.knowledge.concepts.map(function (c) {
           return '<div class="concept"><span class="c-term">' + esc(c.t) + '</span><p>' + rich(c.d) + '</p></div>';
@@ -123,6 +121,8 @@
             "<h4>" + esc(t.title) + "</h4>" +
             "<p>" + esc(t.text) + "</p></div>";
         }).join("") + "</div>";
+      } else {
+        KD.innerHTML = "";
       }
     }
     /* 本周知识分享（每周一讲，KNOWLEDGE_PLAN.md 周更；无 weekly 时显示栏目预告，归档期无两者则隐藏子区块） */

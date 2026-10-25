@@ -57,17 +57,6 @@ WEEKLY_ARCHIVE[42] = {
       highlight: false
     },
     {
-      id: "n67", cat: "大模型厂商", source: "Google Developers Blog（编译）", date: "2026-10-07",
-      title: "Google 开源 EmbeddingGemma 2：740M 参数统一文本/图像/音视频向量空间，567MB 内存跑通端侧多模态检索",
-      summary: "Google DeepMind 发布开源多模态嵌入模型 EmbeddingGemma 2——原生把文本、图像、视频帧与音频映射进统一向量空间，740M 参数、全模态仅需约 567MB 内存（Pixel 11 Pro 实测），纯文本可低至 191MB；无需训练即可充当毫秒级端侧决策引擎做零样本意图路由，未来数周将通过 ML Kit 上 Android 并提供 NPU 加速。",
-      detail: "Google 开发者博客消息：Google DeepMind 发布 EmbeddingGemma 2——同等尺寸最佳的开放权重多模态嵌入模型，原生将文本、图像、视频帧与音频映射进单一统一向量空间；为本地搜索与媒体检索而生，省去串联图像描述、语音转文本、文本嵌入多模型的延迟与内存开销。\n资源占用：专为本地隐私优先应用设计，740M 参数；模块化编码器设计——纯文本权重仅需约 191MB 活动内存，全多模态约 567MB（Google Pixel 11 Pro 实测）。\n决策引擎用法：无需任何训练数据或微调，模型可将用户输入直接与分类标签/描述匹配，毫秒级完成零样本意图路由——正是「快系统」路由思想在端侧嵌入模型上的直接实现。\n上手与生态：Google AI Edge Gallery 新增 Instant Media Search 与 Video Moments Finder 两个交互演示（本地媒体自然语言检索，向量存于设备端 SQLite），Mac 端可体验 AI Edge Foresight；未来数周模型将以服务形式登陆 Android ML Kit，并提供 NPU 加速。\n端侧视角：统一向量空间 + 百兆级内存占用，意味着「跨模态语义搜索」正式成为手机端的基座能力——相册、笔记、文档的本地检索与端侧 RAG 不再需要云端往返，隐私与离线场景同时受益。",
-      tags: ["Google", "EmbeddingGemma 2", "多模态嵌入", "端侧检索"],
-      url: "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
-      image: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/embeddinggemma2-banner_169.width-1300.png",
-      imageCap: "EmbeddingGemma 2（图源：Google）",
-      highlight: true
-    },
-    {
       id: "n65", cat: "AI硬件", source: "IT之家", date: "2026-10-08",
       title: "XREAL AURA 定价 1279 美元起：骁龙 Reality Elite 芯片 + Android XR + Gemini，不足 95g 的空间计算眼镜",
       summary: "XREAL 确认 Android XR 眼镜 AURA 两档定价——12GB+256GB 版 1279 美元、16GB+512GB 版 1499 美元；本体不足 95g，搭载骁龙 Reality Elite 计算单元与 X1S 空间协处理器，索尼 FHD 120Hz microOLED、6DoF 追踪、Bose 调音声学，集成谷歌 Gemini——继三星 Galaxy Glasses 之后 Android XR 阵营的第二发正式定档。",
@@ -88,6 +77,17 @@ WEEKLY_ARCHIVE[42] = {
       image: "https://img.ithome.com/newsuploadfiles/2026/10/31723ed3-0461-4ff4-8e30-dd92a8c22cd7.png",
       imageCap: "WorkBuddy 文件浏览器（图源：IT之家）",
       highlight: false
+    },
+    {
+      id: "n67", cat: "大模型厂商", source: "Google Developers Blog（编译）", date: "2026-10-07",
+      title: "Google 开源 EmbeddingGemma 2：740M 参数统一文本/图像/音视频向量空间，567MB 内存跑通端侧多模态检索",
+      summary: "Google DeepMind 发布开源多模态嵌入模型 EmbeddingGemma 2——原生把文本、图像、视频帧与音频映射进统一向量空间，740M 参数、全模态仅需约 567MB 内存（Pixel 11 Pro 实测），纯文本可低至 191MB；无需训练即可充当毫秒级端侧决策引擎做零样本意图路由，未来数周将通过 ML Kit 上 Android 并提供 NPU 加速。",
+      detail: "Google 开发者博客消息：Google DeepMind 发布 EmbeddingGemma 2——同等尺寸最佳的开放权重多模态嵌入模型，原生将文本、图像、视频帧与音频映射进单一统一向量空间；为本地搜索与媒体检索而生，省去串联图像描述、语音转文本、文本嵌入多模型的延迟与内存开销。\n资源占用：专为本地隐私优先应用设计，740M 参数；模块化编码器设计——纯文本权重仅需约 191MB 活动内存，全多模态约 567MB（Google Pixel 11 Pro 实测）。\n决策引擎用法：无需任何训练数据或微调，模型可将用户输入直接与分类标签/描述匹配，毫秒级完成零样本意图路由——正是「快系统」路由思想在端侧嵌入模型上的直接实现。\n上手与生态：Google AI Edge Gallery 新增 Instant Media Search 与 Video Moments Finder 两个交互演示（本地媒体自然语言检索，向量存于设备端 SQLite），Mac 端可体验 AI Edge Foresight；未来数周模型将以服务形式登陆 Android ML Kit，并提供 NPU 加速。\n端侧视角：统一向量空间 + 百兆级内存占用，意味着「跨模态语义搜索」正式成为手机端的基座能力——相册、笔记、文档的本地检索与端侧 RAG 不再需要云端往返，隐私与离线场景同时受益。",
+      tags: ["Google", "EmbeddingGemma 2", "多模态嵌入", "端侧检索"],
+      url: "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
+      image: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/embeddinggemma2-banner_169.width-1300.png",
+      imageCap: "EmbeddingGemma 2（图源：Google）",
+      highlight: true
     },
     {
       id: "n62", cat: "行业动态", source: "TechCrunch（编译）", date: "2026-10-07",

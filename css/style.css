@@ -91,12 +91,6 @@ a:hover { text-decoration: underline; }
 }
 .site-nav a:hover { color: var(--text); background: var(--panel-strong); text-decoration: none; }
 .site-nav a.active { color: #fff; background: rgba(129, 140, 248, 0.16); box-shadow: inset 0 0 0 1px rgba(129, 140, 248, 0.35); }
-.issue-chip {
-  font-family: var(--mono); font-size: 12px; color: var(--accent);
-  border: 1px solid rgba(34, 211, 238, 0.35); border-radius: 999px;
-  padding: 4px 12px; white-space: nowrap;
-  background: rgba(34, 211, 238, 0.07);
-}
 .issue-select {
   font-family: var(--mono); font-size: 12px; color: var(--accent);
   border: 1px solid rgba(34, 211, 238, 0.35); border-radius: 999px;
@@ -275,7 +269,6 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
     0 26px 50px -18px rgba(0, 0, 0, 0.65),
     0 0 42px -8px rgba(129, 140, 248, 0.38);
 }
-.card.is-hidden { display: none; }
 
 .card-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .src-badge {
@@ -327,7 +320,6 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .venue-pre { color: var(--text-faint); background: rgba(255,255,255,0.04); border: 1px dashed rgba(255,255,255,0.18); }
 
 /* 高亮卡（重点关注）：顶部渐变描边 */
-.card.highlight { border-top: 2px solid transparent; border-image: linear-gradient(90deg, #22d3ee, #818cf8, #e879f9) 1; border-image-slice: 0 0 0 0 fill; }
 .card.highlight::after {
   content: "重点关注"; position: absolute; top: 12px; right: -34px; transform: rotate(38deg);
   font-size: 10.5px; padding: 2px 40px; letter-spacing: 0.2em;
@@ -530,7 +522,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
   position: absolute; inset: 3px; width: calc(100% - 6px); height: calc(100% - 6px);
   object-fit: contain; background: #fff; border-radius: 8px; padding: 2px;
 }
-.panel-logo img { inset: 5px; width: calc(100% - 10px); height: calc(100% - 10px); border-radius: 10px; }
+.panel-logo img { position: absolute; inset: 5px; width: calc(100% - 10px); height: calc(100% - 10px); object-fit: contain; border-radius: 10px; }
 
 /* 博客详情面板: 头部 + 文章列表 + 分页 */
 .res-detail-head { display: flex; gap: 14px; align-items: center; margin: 2px 0 14px; }
@@ -540,7 +532,6 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .panel-logo::before { content: attr(data-letter); font-size: 21px; font-weight: 800; color: var(--text-dim); }
 .panel-logo.noimg { background: var(--grad); }
 .panel-logo.noimg::before { color: #05070d; }
-.panel-logo img { position: absolute; inset: 5px; width: calc(100% - 10px); height: calc(100% - 10px); object-fit: contain; }
 .post-head { display: flex; align-items: baseline; gap: 10px; margin: 18px 0 10px; font-size: 15px; font-weight: 700; }
 .post-head span { font-size: 11.5px; color: var(--text-faint); font-weight: 400; }
 .post-item { display: flex; gap: 10px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,0.025); margin-bottom: 8px; text-decoration: none; transition: border-color 0.25s, transform 0.25s; }
@@ -665,7 +656,6 @@ body.panel-open { overflow: hidden; }
 }
 @media (max-width: 860px) {
   .site-header { padding: 12px 16px; gap: 12px; flex-wrap: wrap; }
-  .issue-chip { order: 3; }
   .issue-select { order: 4; }
   .site-nav { order: 2; margin-left: 0; width: 100%; }
   .hero { padding: 44px 18px 26px; }
