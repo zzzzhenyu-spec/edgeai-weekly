@@ -545,7 +545,6 @@
     resCur = rc;
     panelBody.innerHTML = resPanelHTML(rc);
     panelBody.scrollTop = 0;
-    panel.classList.add("wide");
     panel.classList.add("open");
     overlay.classList.add("show");
     document.body.classList.add("panel-open");
@@ -632,17 +631,15 @@
       });
     }
     panelBody.scrollTop = 0;
-    /* 桌面端两种宽抽屉：half=知识分享(周知识点/排期, 约1/2视口)；wide=GitHub框架/高星与博客详情(约2/3视口, 原比例)。
-       资讯/论文保持 560px 原宽；宽度定义在 style.css 桌面媒体查询里 */
+    /* 桌面端仅知识分享（周知识点/排期）走宽抽屉 half 约 1/2 视口；
+       GitHub 框架/高星、博客与资讯/论文一律默认 560px；宽度定义在 style.css 桌面媒体查询里 */
     panel.classList.toggle("half", ["knowledge", "kplan"].indexOf(type) > -1);
-    panel.classList.toggle("wide", ["framework", "trendrepo"].indexOf(type) > -1);
     panel.classList.add("open");
     overlay.classList.add("show");
     document.body.classList.add("panel-open");
   }
   function closePanel() {
     panel.classList.remove("open");
-    panel.classList.remove("wide");
     panel.classList.remove("half");
     overlay.classList.remove("show");
     document.body.classList.remove("panel-open");
