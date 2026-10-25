@@ -938,7 +938,6 @@
     paperFilter = b.dataset.cat;
     renderPaperChips(); renderPapers();
   });
-  renderComments();
   spotlight($("news-grid"));
   spotlight($("papers-grid"));
   bindCards($("news-grid"), "news");
