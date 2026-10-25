@@ -34,10 +34,11 @@
 | 2026-10-21 | [Synaptics 发布 Astra SR200 MCU：内置谷歌 Coral NPU、最高 400 GOPS，业界首搭 Cortex-M85+M52 双核并集成高带宽定制 DRAM——多模态边缘 AI 下沉到微控制器](https://www.ithome.com/1/016/027.htm) | IT之家 |
 | 2026-10-19 | [达摩院发布首款 ASIL-B+ASIL-D 双认证 RISC-V 车规 CPU 玄铁 E908A，首发自动驾驶与具身智能路线图](https://www.ithome.com/1/014/960.htm) | IT之家 |
 
-### 大模型厂商（4 条）
+### 大模型厂商（5 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-24 | [月之暗面发布 Kimi K3.1 Pro：3 万亿级参数 MoE、100 万 token 上下文，编程智能体测评超 GPT-6，权重 11 月 4 日前开源](https://www.ithome.com/1/017/284.htm) | IT之家 |
 | 2026-10-22 | [讯飞 1024 开发者节发布星火 X2.6 端云一体大模型：293B-A30B MoE、1M 上下文，首个全国产算力完整训练的主流模型，同步开源 4B 端侧版](https://www.ithome.com/1/016/403.htm) | IT之家 |
 | 2026-10-22 | [蚂蚁数科发布决策模型 LingDT-Decision-1.0：23 项基准超越微软与 Jev 热门决策模型，Token 消耗降超 90%、响应快 10 倍](https://news.qq.com/rain/a/20261022A0BKMW00) | 腾讯新闻 |
 | 2026-10-20 | [DeepSeek 全开源大规模推理框架 DeepInfer：单集群日吞吐 155 万亿 token，公布每卡每小时收入 38 美元](https://news.qq.com/rain/a/20261020A0DA3W00) | 智东西 |
