@@ -15,14 +15,25 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 44 期",
-    weekRange: "2026.10.18 — 10.24 · 近 7 天",
-    updated: "2026-10-24",
-    status: "rolling",
-    editorsNote: "近 7 天聚焦：具身智能进入「量产与作业」阶段——特斯拉 Optimus 首批量产级产品弗里蒙特下线（比原计划提前约一季度、目标周产 2 万台），智元 Genie Studio 2.0 作业平台把新场景部署验证压到最快 7 天（装配线成功率 99.9%），OpenAI 重申一定做人形机器人且「大脑优先」；端侧模型侧讯飞星火 X2.6 端云一体（首个全国产算力完整训练的主流模型，同步开源 4B 端侧版），Meta 财报确认 Muse 下月登陆智能眼镜并押注订阅变现，蚂蚁 LingDT 决策模型 23 项基准超微软与 Jev；中科创达滴水 AIOS 3.0 以一套「自主智能」框架横跨汽车、机器人与 AI 眼镜（奇瑞量产平台验证），Synaptics 把谷歌 Coral NPU 压进 MCU（最高 400 GOPS）；监管侧工信部确认超百款终端达 L3 辅助级，超百款 App 拒接豆包撞出智能体生态墙（SAEP 协议公示），陪伴智能体走向具身（奇瑞墨宝、宇树 H2-X），ISHO Ring 把智能戒指做成指尖入口。今日新增：中科创达滴水 AIOS 3.0。"
+    weekRange: "2026.10.19 — 10.25",
+    updated: "2026-10-25",
+    status: "final",
+    editorsNote: "本期聚焦：具身智能跨过量产与作业的分水岭——特斯拉 Optimus 首批量产级产品弗里蒙特下线（提前约一季度、目标周产 2 万台），启元第 5000 台个人机器人下线（日产能 200 余台、每 2.5 分钟一台），智元 Genie Studio 2.0 把新场景部署验证压到最快 7 天（装配线成功率 99.9%），OpenAI 重申下场人形且「大脑优先」，奇瑞墨宝、宇树 H2-X 陪伴与安保人形密集开订。端侧模型侧讯飞星火 X2.6 端云一体（首个全国产算力完整训练的主流模型、同步开源 4B 端侧版），Meta 开源 Muse Glimmer 30B 端侧智能体模型并宣布 Muse 下月登陆智能眼镜押注订阅变现，蚂蚁 LingDT 决策模型 23 项基准超微软与 Jev。算力与系统侧 Synaptics 把谷歌 Coral NPU 压进 MCU（400 GOPS、Cortex-M85+M52），中科创达滴水 AIOS 3.0 一套自主智能框架横跨汽车/机器人/眼镜，星闪 3.0 把 AI 列为标准第一方向（国标 2027 年 4 月实施）。生态侧工信部确认超百款终端达 L3 辅助级，超百款 App 拒接豆包撞出智能体生态墙（SAEP 协议公示），ISHO Ring 把智能戒指做成指尖入口。科研侧覆盖端云路由、共形预测导航、0.5B 语义防火墙、存内 KV 加速与 TEE 权重保护。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
+    {
+      id: "n119", cat: "AI硬件", source: "IT之家", date: "2026-10-25",
+      title: "启元机器人第 5000 台个人机器人下线：日产能从 10 余台提至 200 余台、每 2.5 分钟一台，Q1/T1 均 19999 元起 9 月发售",
+      summary: "启元机器人宣布第 5000 台个人机器人正式下线——两款产品启元 Q1（稚晖君打造，称「全球首个个人机器人」）与启元 T1（全球首个可变形个人机器人，人形/四足形态秒切换）均于 9 月 20 日发售、19999 元起；联席总裁高全中披露日产能已从 10 余台提升至 200 余台（每 2.5 分钟下线一台），供应链联合供应商建原材料立库、首创半自动化装配线体，端到端制造 IT 系统实现全流程可追溯——个人机器人开始按消费电子的量产节奏交付。",
+      detail: "量产节点：10 月 25 日第 5000 台个人机器人下线；Q1 与 T1 于 9 月 20 日正式发售，均 19999 元起——T1 可在人形与四足形态间秒级切换，Q1 由稚晖君团队打造、定位「全球首个个人机器人」，产品首发即接入腾讯 WorkBuddy 智能体生态。\n制造体系：联合供应商建原材料立库，首创半自动化装配线体，搭建端到端制造 IT 系统实现全流程可追溯；日产能从 10 余台提升至 200 余台，折合每 2.5 分钟下线一台。\n端侧视角：继特斯拉 Optimus 产线消息后，国内个人机器人也跑出「数千台级下线+日产能百台级」的量产样本——5000 台对消费电子是小数字，对个人机器人品类是从众筹走向工厂的第一道门槛；19999 元定价+WorkBuddy 接入把它放进「家庭端侧智能体」而非工业具身的赛道，与本周陪伴人形（墨宝）、作业平台（Genie Studio）共同构成具身智能消费化-工程化的完整切面。",
+      url: "https://www.ithome.com/1/017/672.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/456db827-dae6-4c74-93a4-e22dead8f0c5.jpg",
+      imageCap: "启元机器人第 5000 台下线（图：IT之家）",
+      tags: ["启元机器人", "个人机器人", "量产", "稚晖君"],
+      highlight: false
+    },
     {
       id: "n116", cat: "AI硬件", source: "新浪科技", date: "2026-10-23",
       title: "智元发布一站式具身作业平台 Genie Studio 2.0：覆盖「采-训-测-推-编-管」全生命周期，最快 7 天完成新场景部署验证",
@@ -43,6 +54,17 @@ const WEEKLY_DATA = {
       image: "",
       imageCap: "",
       tags: ["中科创达", "滴水AIOS", "自主智能", "端侧OS"],
+      highlight: false
+    },
+    {
+      id: "n118", cat: "行业动态", source: "IT之家", date: "2026-10-22",
+      title: "星闪 3.0 标准成果发布：主题「星闪 AI·智合万物」，瞄准 AI、无源、毫米波方向，配套国标 2027 年 4 月实施",
+      summary: "国际星闪联盟在深圳产业峰会发布星闪 3.0 标准成果——面向全场景智能物联，瞄准 AI、无源物联网与毫米波等方向创新；SLE3.0 将在速率、覆盖、抗干扰方面再升级（含无损音频在内的三项标准已正式发布），60 余家产学研单位编制演进蓝皮书；信通院、华为、中国移动、联想等共建，配套国家标准 GB/T 48336.101—2026 已于 9 月 28 日批准、2027 年 4 月 1 日实施。",
+      detail: "发布要点：CEIC2026 暨国际星闪联盟产业峰会 10 月 22 日在深圳举行，主题「星闪 AI · 智合万物」；星闪 3.0 标准自 2025 年 8 月启动研制，会上发布含无损音频在内的三项标准，60 余家产学研单位参与编制《星闪 SLE 3.0 技术标准演进蓝皮书》。\n演进脉络：1.0 定义通信架构，2.0 打通「通定感网一体化」端到端能力，3.0 面向全场景智能物联、瞄准 AI、无源、毫米波等方向，SLE3.0 在速率、覆盖、抗干扰方面再升级。\n共建方：国际星闪联盟联合中国信通院、中国电子技术标准化研究院、国家无线电监测中心检测中心、中国标准化研究院、中国汽车技术研究中心等机构，以及华为、中国移动、联想等企业。\n端侧视角：星闪是端侧 AI 的「最后一米」互联底座——无源物联（设备取电于射频）与低时延高可靠短距通信直接决定 AI 传感器件、穿戴设备与车的组网上限；3.0 把 AI 列为标准演进第一方向，与蓝牙阵营的 AI 探索正面竞争，2027 年 4 月国标实施后将成为国内端侧设备的默认选项之一。",
+      url: "https://www.ithome.com/1/017/620.htm",
+      image: "https://img.ithome.com/newsuploadfiles/2026/10/25bba2c8-0b1c-4744-8405-aa9b53c66402.jpg",
+      imageCap: "星闪 3.0 标准成果发布（图：IT之家）",
+      tags: ["星闪", "近距离通信", "智能物联", "华为"],
       highlight: false
     },
     {
@@ -198,35 +220,103 @@ const WEEKLY_DATA = {
       image: "https://img.ithome.com/newsuploadfiles/2026/10/5b0e9162-6a24-4b8a-ad1d-a8ed6e790e35.jpg",
       imageCap: "玄铁 E908A（图源：IT之家）",
       highlight: false
-    },
-    {
-      id: "n95", cat: "行业关注事件", source: "央视新闻", date: "2026-10-18",
-      title: "超百款 App 集体拒绝豆包手机助手操控：首个全流程合规智能体手机开售撞上生态墙，豆包发起 SAEP 声明协议",
-      summary: "央视新闻报道：我国首个完成「大模型备案—终端入网」完整合规流程的 AI 智能体手机开售，其核心交互是 AI 读懂屏幕、模拟点击——但豆包手机助手被超百款应用集体拒绝操控（不是禁用，而是拒绝被调度）；应用方顾虑安全责任难划清、用户关系与数据主导权让渡。豆包提出「屏幕自动化操作声明协议」SAEP 并启动 30 天规则公示，应用可自主声明允许或拒绝 AI 的操作边界——业界期待其成为智能体时代的「Robots 协议」。",
-      detail: "事件要点：央视新闻报道，我国首个走完「大模型备案—终端入网」完整合规流程的 AI 智能体手机开售；其核心交互是屏幕自动化——AI 读懂屏幕内容、模拟人的点击与滑动来完成任务，但豆包手机助手被超百款应用集体拒绝——不是无法使用，而是禁止豆包助手操控应用。\n抵触原因：应用方一怕安全责任——智能体被植入恶意软件或泄露隐私时责任如何划定没有先例；二怕商业生态——用户关系、核心数据、流量入口的主导权，不愿交由手机厂商的 AI 统一调度。\n路线之争：与「读屏幕」相对的是定向 API 接口路线，只开放有限操作入口；历史上早期搜索引擎抓取数据同样遭集体抵制，最终以 Robots 协议划定边界，SAEP 被寄望复刻这一路径。\nSAEP 要点：第三方应用可自主声明操作边界，明确允许或拒绝 AI 助手的屏幕自动化操作，明确拒绝的应用将不再被自动化执行；规则公示期 30 天。\n专家观点：中科院软件所高级工程师郑森文认为，SAEP 有望解决三个痛点——风控一刀切会误伤授权智能体、冲突从事后博弈变事前协商、标准化声明降低数百万款应用的协商成本；但要成为行业标准仍需各方博弈与主管部门规范。\n端侧视角：智能体手机的成败不只在模型与系统，更在应用生态的调度权分配——继阶跃 Step AOS 重构系统、微信 A2A 开放操作之后，本周端侧智能体主线第三次撞上「生态博弈」；SAEP 若立得住，将是端侧智能体拿到应用生态通行证的关键一步。",
-      tags: ["豆包", "智能体手机", "SAEP", "应用生态"],
-      url: "https://www.chinanews.com.cn/sh/2026/10-18/10716588.shtml",
-      image: "",
-      imageCap: "",
-      highlight: true
-    },
-    {
-      id: "n106", cat: "AI硬件", source: "IT之家", date: "2026-10-18",
-      title: "苹果家用机器人再曝新进展：古尔曼称 HomeView 高端版代号 J595 配电动机械臂，9 英寸屏 360 度转向说话人，最快 2027 年发布",
-      summary: "彭博社记者古尔曼在《Power On》通讯披露：苹果计划为智能家庭中枢 HomeView 推出更高端的家用机器人版本——代号 J595，9 英寸屏幕搭载电动机械臂，机械臂可围绕底座旋转 360 度，并通过语音识别自动转向说话的人；定位偏陪伴型产品，最快 2027 年发布，命名可能启用全新名称或加 Max/Ultra 后缀。这是继 2024 年 8 月「iPad+机械臂」家用机器人项目首曝后最实质的进展，苹果造车项目取消后机器人被视作其下一个大品类赌注。",
-      detail: "曝光要点（古尔曼 10 月 18 日《Power On》）：产品并非 HomeView 的直接继任机型，而是定位更高端的版本；9 英寸屏幕+电动机械臂，可围绕底座 360 度旋转、通过语音识别自动转向说话的人；最快 2027 年发布，可能更像一款陪伴型产品。\n项目脉络：苹果在机械臂领域布局多年，2024 年有传闻称苹果想把造车项目的机器人技术转入家庭领域，当年 8 月首次曝出类「iPad+机械臂」家用机器人项目（代号 J595，2022 年即获高管团队批准立项），售价传闻约 1000 美元，分析师郭明錤曾给出最早 2028 年量产的判断。\n近期节奏：苹果 9 月已发布智能家居中枢 HomeView（特努斯任 CEO 后第二场发布活动），并官宣当地时间 10 月 28 日在洛杉矶举办第三场发布活动「Pro and tell」（预计触屏 MacBook Pro 等）——机器人本体预计不在本场，但智能家居产品线密集落子为 J595 铺路。\n端侧视角：家用桌面机器人是继智能音箱、AI 眼镜之后又一个常开端侧 AI 入口形态——「语音识别+自动转向跟踪」意味着多模态常开感知必须在端侧低延迟完成；J595 与 OpenAI 正在打造的无屏智能音箱属同一场「AI 入口卡位战」（两家刚因 AI 设备机密对簿公堂），2027 年前后端侧 AI 硬件将迎来苹果正式入场。",
-      tags: ["苹果", "家用机器人", "J595", "HomeView"],
-      url: "https://www.ithome.com/1/014/611.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/0e4e812a-0688-4265-949d-289ebd400a59.jpg",
-      imageCap: "苹果 HomeView 智能家庭中枢与机械臂构想（图：IT之家）",
-      highlight: false
     }
 
   ],
 
 papers: [
     {
-      id: "p1", group: "recent", cat: "安全与隐私", date: "2026-10-15",
+      id: "p1", group: "recent", cat: "推理与系统", date: "2026-10-20",
+      title: "CovNav: Conformal Prediction-Guided Adaptive Inference for Object Goal Navigation",
+      authors: "CovNav Team 等",
+      venue: "arXiv:2610.27677", level: "预印本",
+      summary: "目标物体导航（ObjectNav）中云端大模型有时延与隐私风险、端侧小模型推理质量不足——CovNav 用共形预测（Conformal Prediction）引导自适应推理，按导航场景动态决定何时调用更强的模型能力，在未见环境中以空间常识（物体共现）引导智能体找到目标。",
+      detail: "背景：具身智能体要在未见过的环境里执行「找到一个床」这类目标导航，依赖物体共现等空间常识——大模型编码了这种常识，但部署在机器人上暴露质量与效率的取舍：云端模型带来时延与隐私风险，端侧小模型能力受限。\n方法：CovNav 以共形预测为引导机制做自适应推理——为导航决策提供统计意义上的置信边界，动态调节推理投入。\n端侧视角：共形预测给「小模型何时够用、何时必须升级」提供了有理论保证的判据，是端云协同导航从启发式走向可校准路线的代表性工作。",
+      tags: ["具身导航", "共形预测", "自适应推理", "端云协同"],
+      url: "https://arxiv.org/abs/2610.27677"
+    },
+    {
+      id: "p2", group: "recent", cat: "安全与隐私", date: "2026-10-20",
+      title: "Context-Aware Prompt Injection Detection via Small Language Models in RAG Pipelines: nokast-secureRAG",
+      authors: "nokast Team 等",
+      venue: "arXiv:2610.28364", level: "预印本",
+      summary: "本地 RAG 系统面临间接提示注入与检索投毒——检索内容中的恶意指令被误当可信输入。nokast-secureRAG 用约 0.5B 参数的小语言模型充当检索与生成之间的「语义防火墙」：联合评估用户查询与检索上下文，对内容分类拦截，全程可在端侧运行。",
+      detail: "背景：本地检索增强生成（RAG）让端侧个性化推理成为可能，但检索到的内容可能夹带恶意指令（间接提示注入、检索投毒），被生成侧误信执行。\n方法：约 0.5B 参数小语言模型作为语义防火墙插在检索与生成之间——联合考察用户查询与检索上下文的语义关系，对是否存在注入意图做上下文感知分类。\n端侧视角：安全层也要端侧化——0.5B 量级说明「语义防火墙」可随主模型常驻设备本地，端侧 RAG 的安全闭环不依赖云端审查。",
+      tags: ["提示注入", "RAG安全", "语义防火墙", "小语言模型"],
+      url: "https://arxiv.org/abs/2610.28364"
+    },
+    {
+      id: "p3", group: "recent", cat: "安全与隐私", date: "2026-10-19",
+      title: "LLMs Prompted for Legal Context Refuse More: Overrefusal from Small On-Premises LLMs in Criminal Legal Context",
+      authors: "Legal NLP Group 等",
+      venue: "arXiv:2610.26211", level: "预印本",
+      summary: "保密要求推动法律从业者转向本地小模型处理案卷（摘要/翻译/改写），但遵循提示规范自报身份（「我是律师…」）的习惯带来意外代价——此类「权威框架」会令模型在刑事法律语境中选择性拒答更多；过度拒答正成为端侧小模型落地的隐性质量税。",
+      detail: "背景：法律行业的保密要求使小型本地 LLM 成为日常任务（摘要、翻译、改写）的选择，案件数据不出内网。\n发现：用户按提示工程惯例声明角色（如「我是一名律师」）反而提高模型在刑事语境中的拒答率——权威框架触发选择性拒答，正常的法律工作流被频繁打断。\n端侧视角：本地部署解决了数据保密，却把云端侧的内容策略压缩进小模型——「过度拒答」是端侧小模型进入专业领域时被低估的行为缺陷，需要在模型与提示层同时校准。",
+      tags: ["过度拒答", "本地模型", "法律AI", "行为校准"],
+      url: "https://arxiv.org/abs/2610.26211"
+    },
+    {
+      id: "p4", group: "recent", cat: "推理与系统", date: "2026-10-19",
+      title: "MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration",
+      authors: "Architecture Lab 等",
+      venue: "arXiv:2610.26083", level: "预印本",
+      summary: "块缩放量化格式（OCP MX、NVFP4）已是 LLM 推理的高效数据格式，但共享缩放、权重与激活格式的组合设计空间从未被系统刻画——本文以软硬件协同设计探索该空间，寻找精度-硅面积的帕累托最优配置，并给出与 NPU 集成的张量核设计。",
+      detail: "背景：块缩放量化格式被广泛采用，但其设计空间（共享缩放位宽、权重与激活格式的组合）缺乏系统探索，精度与硅开销的联合权衡此前未被标定，真正的帕累托最优配置不明。\n方法：软硬件协同设计探索——在设计空间上系统评估精度与硬件代价，刻画帕累托前沿，并给出可集成 NPU 的类 MX 张量核实现。\n端侧视角：为端侧推理芯片的下一代张量核给出格式选型依据——在 NPU 面积与功耗约束下选择「够准且最省」的量化组合，是端侧算力持续下沉（本周 Synaptics SR200 同题）的学术侧支点。",
+      tags: ["块缩放量化", "张量核", "NPU", "软硬件协同"],
+      url: "https://arxiv.org/abs/2610.26083"
+    },
+    {
+      id: "p5", group: "recent", cat: "端侧智能体", date: "2026-10-17",
+      title: "Muse Glimmer 30B: An On-Device Agentic Model",
+      authors: "Meta 等",
+      venue: "arXiv:2610.24628", level: "预印本",
+      summary: "Meta 开源 30B 参数的因果语言模型 Muse Glimmer（带感知编码器），专为消费级硬件上的自主智能体任务打造——把多步推理、可靠工具使用与失败恢复整合进单一模型，可完全本地运行无需云端，接受文本与图像输入、输出文本。",
+      detail: "定位：开源 30B 参数模型+感知编码器，面向消费设备本地运行的智能体——多步推理、可靠工具调用与失败恢复一体化，不依赖云端基础设施。\n输入输出：文本与图像输入、文本输出；权重开放下载。\n端侧视角：30B 是「工作站/高端手机可承载」的端侧智能体量级——Meta 在开放权重侧（Muse Spark Open 816B 之后）补上智能体专型号，与本周 Muse 下月登陆 Meta 眼镜的财报叙事同源：模型-终端-订阅的端侧生态全栈正在成形。",
+      tags: ["Muse Glimmer", "端侧智能体", "开源模型", "工具使用"],
+      url: "https://arxiv.org/abs/2610.24628"
+    },
+    {
+      id: "p6", group: "recent", cat: "端侧智能体", date: "2026-10-17",
+      title: "MedPAO-Assist: Edge-Deployable, Modality-Aware Agentic AI for Radiology Report Structuring",
+      authors: "MedPAO Team 等",
+      venue: "arXiv:2610.26913", level: "预印本",
+      summary: "放射报告结构化长期被专有云端模型或需要高端 GPU 的大模型垄断，与临床对数据隐私和离线运行的要求冲突——MedPAO-Assist 是边缘可部署的智能体框架，按模态感知组织放射报告结构化流程，把医疗 AI 推回院内边缘。",
+      detail: "背景：LLM 做放射报告结构化要么用专有云模型、要么用需高端 GPU 的开源大模型——临床工作流要求数据隐私与离线运行，这是落地瓶颈。\n方案：MedPAO-Assist 边缘可部署智能体框架，模态感知（modality-aware）地组织结构化生成流程，适配影像科的环境约束。\n端侧视角：医疗是端侧 AI 的高价值刚需场景（隐私+离线+合规三重约束），智能体化（而非单纯小模型化）是边缘医疗应用的新形态。",
+      tags: ["边缘医疗", "放射报告", "智能体框架", "隐私计算"],
+      url: "https://arxiv.org/abs/2610.26913"
+    },
+    {
+      id: "p7", group: "recent", cat: "安全与隐私", date: "2026-10-16",
+      title: "From Billion-Scale to Million-Scale Language Models: Operational Capabilities for Embedded Post-Exploitation",
+      authors: "Security Research Group 等",
+      venue: "arXiv:2610.23534", level: "预印本",
+      summary: "百万参数级超紧凑语言模型（SLM）因计算足迹极小，被视为未来「自主恶意软件」的候选载体——在连接受限、时延与隐私（攻击者视角）约束无法使用云端推理的场景下，本文系统评估超紧凑模型在入侵后渗透阶段的可运作能力。",
+      detail: "背景：SLM 在资源受限环境的价值正在被安全研究双面审视——同样的特性（低算力、离线、难审计）也使其可能成为自主恶意软件的推理引擎，而后渗透阶段的实际能力此前缺乏系统刻画。\n工作：面向嵌入式后渗透场景，评估百万参数级模型在无云端依赖时可支撑的操作能力边界。\n端侧视角：这是端侧模型能力的「压力测试反面样本」——小模型能做的，恶意负载同样能做；端侧安全体系（本期的语义防火墙、TEE 保护）需要与端侧模型能力同步演进，攻防两侧共用同一条小型化技术曲线。",
+      tags: ["小模型安全", "后渗透", "自主恶意软件", "威胁评估"],
+      url: "https://arxiv.org/abs/2610.23534"
+    },
+    {
+      id: "p8", group: "recent", cat: "推理与系统", date: "2026-10-16",
+      title: "FederatedBytes: Tokenizer-Free, Byte-Level Small Language Models for Efficient Multimodal Federated Learning",
+      authors: "FederatedBytes Team 等",
+      venue: "arXiv:2610.22906", level: "预印本",
+      summary: "联邦学习可在保护各端本地数据隐私的前提下汇总全局模型，但计算与通信开销阻碍其服务 NLP 与多模态负载——FederatedBytes 提出无分词器的字节级小语言模型，直接处理字节级文本与多模态数据，大幅降低联邦训练的通信与计算负担。",
+      detail: "背景：联邦学习（FL）让分布式客户端在不共享本地数据的前提下共建全局模型，隐私友好；但传统 NLP 管线的重计算与重通信使其难以覆盖当代工作负载。\n方法：字节级（tokenizer-free）小语言模型——绕开词表不一致问题（各端分词器差异是 FL 的隐性障碍），直接以字节为单位处理文本与多模态数据。\n端侧视角： tokenizer-free 是「同一模型在异构端侧设备间可联邦演化」的前提——字节数据天然对齐，端侧众设备协同训练的工程门槛随之下降。",
+      tags: ["字节级模型", "联邦学习", "多模态", "隐私训练"],
+      url: "https://arxiv.org/abs/2610.22906"
+    },
+    {
+      id: "p9", group: "recent", cat: "推理与系统", date: "2026-10-15",
+      title: "MemLLM: End-to-end In-Storage Acceleration of On-device RAG using Precomputed KV Caches",
+      authors: "MemLLM Team 等",
+      venue: "arXiv:2610.22579", level: "预印本",
+      summary: "端侧 RAG 的长上下文预填（prefill）是主要瓶颈——离线预计算 KV 缓存虽省算力，但数 GB 缓存在设备窄互连上形成 I/O 墙；MemLLM 用存内计算（in-storage）端到端加速预计算 KV 缓存的读取与注入，让「外置记忆」真正可在端侧跑起来。",
+      detail: "背景：边缘设备上的 RAG 支持个性化推理且保隐私，但其长度不对称性使预填阶段成为瓶颈；服务器侧预计算 KV 缓存的方案搬到端侧后，多 GB 缓存经窄互连搬运形成严重 I/O 墙。\n方法：MemLLM 端到端存内加速——把预计算 KV 缓存的消费过程下沉到存储介质内部，绕开主互连搬运。\n端侧视角：与本期资讯侧的 KV 缓存压缩线（架构级压缩）互补——压缩让缓存变小，存内计算让缓存的读取不再走「总线」，两条路线共同拆端侧长上下文的 I/O 墙。",
+      tags: ["存内计算", "KV缓存", "端侧RAG", "预填加速"],
+      url: "https://arxiv.org/abs/2610.22579"
+    },
+    {
+      id: "p10", group: "recent", cat: "安全与隐私", date: "2026-10-15",
       title: "BiShield-TEE: On the (In-)Security of Unilateral Weight Obfuscation",
       authors: "Zhiyuan Wang 等",
       venue: "arXiv:2610.21565", level: "预印本",
@@ -234,96 +324,6 @@ papers: [
       detail: "背景：端侧部署 LLM 越来越普遍（时延与隐私），但专有模型面临逆向与窃取风险；TEE 提供硬件隔离推理，但多数 TEE 参数混淆依赖单边矩阵变换（仅混淆输出侧）。\n漏洞：识别出「解的唯一性」（SDP）缺陷——混淆密钥被唯一确定，暴露真实密钥结构；攻击下 GroupCover 与 ArrowCloak 的保护降至可忽略，攻击准确率超过全屏蔽黑盒基线 2.4 倍并恢复接近完整的模型功能。\n方案：BiShield-TEE 双边框架，联合混淆输入与输出维度诱导歧义解，配合硬件保护重建有效的权重保密。",
       tags: ["TEE", "模型保护", "参数混淆", "端侧安全"],
       url: "https://arxiv.org/abs/2610.21565"
-    },
-    {
-      id: "p2", group: "recent", cat: "推理与系统", date: "2026-10-15",
-      title: "PriorityFEC: Deadline-Aware Streaming FEC for KV-Cache Handoff",
-      authors: "Han Shen 等",
-      venue: "arXiv:2610.21390", level: "预印本",
-      summary: "面向边缘多智能体系统的 KV 缓存交接——上游已预填的上下文跨智能体传递时，在严格首 token 时延与不可靠边缘链路下按效用优先传输：效用感知源流把高价值 KV 块排在传输前端，并结合传输层 FEC 保护，让接收方在有限预算内拿到最有价值的 KV 状态。",
-      detail: "问题：多智能体 LLM 系统部署在边缘，任务上下文跨智能体传递时上游已算好的 KV 缓存若能复用可省去重复预填——但完整 KV 缓存需在网络传输后才能开始生成，TTFT 截止与不可靠链路下传不完。\n方法：PriorityFEC 联合模型侧 KV 重要性（效用）与传输侧可靠性——构建效用感知源流（高效用 KV 块先传），并用流式前向纠错保护关键块。",
-      tags: ["KV缓存", "多智能体", "边缘传输", "FEC"],
-      url: "https://arxiv.org/abs/2610.21390"
-    },
-    {
-      id: "p3", group: "recent", cat: "端云协同", date: "2026-10-15",
-      title: "Disagreement-Guided Weak-to-Strong Routing",
-      authors: "Sima Noorani 等",
-      venue: "arXiv:2610.22245", level: "预印本",
-      summary: "重审弱到强路由的基础：路由决策可以不依赖真值监督——通过本地推理生成多个弱模型响应，刻画最优弱到强路由策略，并提出基于「模型间分歧」的原则性近似——分歧信号可直接从模型生成响应中测得，无需真值标注即可决定何时把弱模型响应升级给强模型。",
-      detail: "背景：小模型部署在边缘与机器人满足成本时延约束，但能力有限需要强模型兜底；开放任务中路由信号通常依赖响应正确性判断，而真值监督难以规模化。\n方法：允许本地推理生成多个弱模型响应并刻画最优路由策略；基于模型间比较推导原则性近似——引入可直接从模型响应测得的「模型分歧」概念。",
-      tags: ["弱到强路由", "模型分歧", "端云协同", "无监督信号"],
-      url: "https://arxiv.org/abs/2610.22245"
-    },
-    {
-      id: "p4", group: "recent", cat: "端云协同", date: "2026-10-15",
-      title: "HyCo: Hybrid Drafting for Cost-Efficient Mobile-Cloud Speculative Decoding",
-      authors: "Hanbin Bae 等",
-      venue: "arXiv:2610.21436", level: "预印本",
-      summary: "设备-云混合投机解码：把服务器模型原生多 token 预测（MTP）头放到设备端执行、把候选分支交给单次 SLM 前传——服务器只返回 MTP 头所需的隐藏状态与 KV；Galaxy S26 Ultra 经 LTE/5G 实测，相对服务器侧 MTP 自投机每 token 的服务器 GPU 时间减少 38.6%。",
-      detail: "问题：设备-云投机解码能省服务器算力，但用小模型在手机 NPU 上逐层长草稿树需要反复前传，开销大。\n方法：HyCo 把「深度」交给服务器模型的原生 MTP 头（在设备端执行）、「分支」交给单次 SLM 前传——服务器返回隐藏状态、输入嵌入与 KV 条目而非自己逐步执行；量化、受限词表与 1K token 窗口把两个草稿器都装进 NPU，ε 阈值规则放宽对验证器采样分布的精确保持。\n实测：Galaxy S26 Ultra 单客户端 LTE/5G——Spec-Bench 上每 token 服务器 GPU 时间较服务器侧 MTP 自投机降 38.6%，32K token 摘要任务降 29.2%；较纯 SLM 草稿器多省 9.0 个百分点且投递快 1.9 倍。",
-      tags: ["投机解码", "移动端", "MTP", "端云协同"],
-      url: "https://arxiv.org/abs/2610.21436"
-    },
-    {
-      id: "p5", group: "recent", cat: "推理与系统", date: "2026-10-13",
-      title: "Verification Turns Capability Gaps into Routing Decisions: Small Language Models for Clinical Documentation",
-      authors: "Nina Fatehi 等",
-      venue: "arXiv:2610.19169", level: "预印本",
-      summary: "在幻觉零容忍的临床笔记生成任务上，用固定四评估器验证栈+修正策略，仅更换生成器：4B 参数模型（QLoRA）达到 0.984 的声明级事实蕴含（前沿基线 0.992）、完整度差 3.3 分——全程端侧生成；其缺陷集中在跨节结构保真而非临床理解，且作为显式验证器决策可转化为路由策略：默认跑小模型、验证器否决的再升级。",
-      detail: "设定：医生-患者对话生成临床笔记——量大且幻觉零容忍（编造一个化验值就是患者安全风险）；问题是「智能体化验证架构」能否替代生成器规模让小模型可用。\n结果：固定四评估器验证栈与修正策略，仅换生成器——4B+QLoRA 达 0.984 声明级事实蕴含（前沿基线 0.992），完整度差 3.3 分，完全在设备上生成。\n路由价值：小模型的缺陷集中在跨节结构保真（编排而非理解），且是显式验证器决策而非隐性质量差异——可直接变成路由策略：小模型默认、被否决的升级。",
-      tags: ["验证架构", "临床笔记", "小模型路由", "端侧生成"],
-      url: "https://arxiv.org/abs/2610.19169"
-    },
-    {
-      id: "p6", group: "recent", cat: "推理与系统", date: "2026-10-12",
-      title: "GPU Goldmines: Tunable WebGPU Kernels for Edge LLM Inference",
-      authors: "Rithik Sharma 等",
-      venue: "arXiv:2610.17321", level: "预印本",
-      summary: "为 WebGPU 边缘 LLM 推理打造可调内核框架 GPU Goldmines——覆盖矩阵乘、矩阵-向量乘与 Flash Attention 三大构件，跨设备/形状/浏览器建立性能数据库加速后续自动调优；矩阵乘内核几何平均超 ONNX Runtime WebGPU 7.0 倍、超 llama.cpp WebGPU 1.41 倍，并为 llama.cpp 聊天负载带来 1.48 倍的预填阶段端到端提升。",
-      detail: "背景：WebGPU 提供跨平台可移植与浏览器可达性，但同一实现在不同环境性能差异大——需要系统化的内核调优。\n方法：GPU Goldmines 框架用于指定、执行与调优 WebGPU 内核；实例化 LLM 三大核心构件（matmul/matvec/flash attention），跨设备、形状与浏览器刻画性能并建立数据库，加速后续自动调优与配置选择。",
-      tags: ["WebGPU", "内核调优", "浏览器推理", "Flash Attention"],
-      url: "https://arxiv.org/abs/2610.17321"
-    },
-    {
-      id: "p7", group: "recent", cat: "能效与评测", date: "2026-10-11",
-      title: "Context-Aware Precision Scheduling for Small Language Models",
-      authors: "Mukund Athmaram 等",
-      venue: "arXiv:2610.15640", level: "预印本",
-      summary: "端侧小模型的上下文感知精度调度：按张量大小与敏感度分配混合精度的最优配置随上下文长度变化——用实测校准的时序模型（而非仅看权重字节数）在时延/精度预算下选配置，KV 缓存变大挤压权重算力时自动降精度，调度可在执行前备好且保留会话 KV 缓存。",
-      detail: "问题：端侧 Agent 的上下文持续增长，短上下文选定的混合精度配置在长上下文下不再最优；且「位数少不等于跑得快」。\n方法：在不同精度与上下文长度上校准计时模型，结合张量敏感度在时延或精度预算下选择配置——预测器按校准后的执行成本估计时延；时延预算下读取更大 KV 缓存会压缩权重运算时间，促使分配器选择更低精度。\n工程性：给出可在执行前准备好的张量精度变更调度，运行时跟随调度并保留会话 KV 缓存。",
-      tags: ["混合精度", "精度调度", "KV缓存", "时延预算"],
-      url: "https://arxiv.org/abs/2610.15640"
-    },
-    {
-      id: "p8", group: "recent", cat: "端侧智能体", date: "2026-10-10",
-      title: "PEAM: On-device Communication Agent for Personalized, Efficient and Autonomous Mobile Network Configuration",
-      authors: "Haowen Wan 等",
-      venue: "arXiv:2610.14855", level: "预印本",
-      summary: "端侧 LLM 通信智能体 PEAM：用真实用户标注数据微调端侧模型注入通信知识，空闲时段（如夜间）批量分析历史网络配置记录并跨批反思，沉淀出可在毫秒内执行的个性化网络配置规则——把「切换应用/网络变化时的毫秒级决策」交给本地智能体。",
-      detail: "背景：手机上的紧凑 LLM 正在催生自主端侧决策（如 GUI 智能体），但网络配置这类决策有严格时延约束。\n方法：两阶段——规则生成阶段在设备空闲时批量分析历史配置记录并跨批反思，巩固一致证据、降低局部偏置、沉淀稳健配置规则；执行阶段毫秒级应用规则。\n数据与微调：基于人工标注的真实用户数据微调端侧 LLM，把通信知识注入本地模型。",
-      tags: ["端侧智能体", "网络配置", "规则生成", "个性化"],
-      url: "https://arxiv.org/abs/2610.14855"
-    },
-    {
-      id: "p9", group: "recent", cat: "能效与评测", date: "2026-10-10",
-      title: "「Is Low Power Enough?」Rethinking Energy Efficiency in High-Fidelity Sensing",
-      authors: "Chae Young Lee 等",
-      venue: "arXiv:2610.14714", level: "预印本",
-      summary: "重新审视高保真传感节点的选型：要拍图像/录音频，低功耗 MCU 反而更耗能——更强的 STM32N6（带神经加速器）虽功耗 1.9 倍，但完成一次观测（采集+存储+端侧检测+LoRa 传输）快 9.9 倍，总能耗反而低 5.2 倍，推理能耗低 3.2~11.4 倍——「race to sleep」原则在高保真数据与端侧 AI 时代重新成立。",
-      detail: "论点：二十年来长寿命传感节点都用最低功耗器件（标量读数毫秒级完成）；但科学家要图像/音频等高保真数据时，低功耗 MCU 需要醒着数秒——低功率不再等于低能量。\n方法：重访传感网早期的「race to sleep」与「talk less」两原则，用带神经加速器的 STM32N6 对比低功耗 Apollo4 Plus。\n结果：STM32N6 功耗高 1.9 倍但观测快 9.9 倍——总能耗低 5.2 倍；同一模型推理能耗低 3.2~11.4 倍，并可塞下精度高 23 点以上的模型。",
-      tags: ["能耗", "传感节点", "race-to-sleep", "MCU选型"],
-      url: "https://arxiv.org/abs/2610.14714"
-    },
-    {
-      id: "p10", group: "recent", cat: "推理与系统", date: "2026-10-10",
-      title: "Linear-Time Non-Local Codec Placement for Machine Learning Model Compression",
-      authors: "Matteo Spallanzani",
-      venue: "arXiv:2610.14703", level: "预印本",
-      summary: "压缩表示需要在计算图里放置编解码算子，但朴素局部放置会抵消压缩收益——本文提出线性时间的非局部放置算法：通过「绝对支配节点」为每个子图找到唯一观察点放置参数化编解码器，四个模型上建模 operand 流量再降 24%~44%。",
-      detail: "背景：端侧推理受存储与 operand 流量约束，压缩表示需要编解码算子；朴素放置可能抵消压缩收益。\n方法：给图边着色使每个导出子图弱连通且存在同时支配全部输出、后支配全部输入的「绝对支配节点」——该点即观察子图流量、学习参数化编解码算子的自然位置；算法时间复杂度与图规模线性。\n效果：较朴素局部放置，四个模型上建模 operand 流量降 24%~44%（SigLIP 降 24%、SmolLM2 降 34%）。",
-      tags: ["编解码放置", "计算图", "operand流量", "压缩推理"],
-      url: "https://arxiv.org/abs/2610.14703"
     },
   ],
 
