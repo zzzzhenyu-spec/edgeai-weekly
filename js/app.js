@@ -1,7 +1,7 @@
 /* ============================================================
  * 端侧AI周报 · 交互逻辑（零依赖）
  * 渲染资讯/论文网格 · 鼠标跟随光晕 · 右侧详情抽屉
- * 知识时间线 · 本地评论区 · 滚动动效
+ * 知识时间线 · 滚动动效
  * ============================================================ */
 (function () {
   "use strict";
@@ -768,69 +768,6 @@
       card.click();
     });
   }
-
-  /* ============================================================
-   * 板块四：评论区（localStorage）
-   * ============================================================ */
-  var CK = "edgeai_weekly_comments_v1";
-  var comments = [];
-  try { comments = JSON.parse(localStorage.getItem(CK) || "[]"); } catch (e) { comments = []; }
-  if (!Array.isArray(comments)) comments = [];
-
-  var AVATARS = [
-    ["#22d3ee", "#0ea5e9"], ["#818cf8", "#6366f1"], ["#e879f9", "#c026d3"],
-    ["#34d399", "#059669"], ["#fbbf24", "#f59e0b"], ["#f87171", "#ef4444"]
-  ];
-  function avatarOf(name) {
-    var h = 0;
-    for (var i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) >>> 0;
-    var pair = AVATARS[h % AVATARS.length];
-    return '<span class="c-avatar" style="background:linear-gradient(135deg,' + pair[0] + "," + pair[1] + ')">' + esc(name.charAt(0).toUpperCase()) + "</span>";
-  }
-  function timeAgo(ts) {
-    var diff = Date.now() - ts;
-    if (diff < 6e4) return "刚刚";
-    if (diff < 36e5) return Math.floor(diff / 6e4) + " 分钟前";
-    if (diff < 864e5) return Math.floor(diff / 36e5) + " 小时前";
-    var d = new Date(ts);
-    function p(n) { return (n < 10 ? "0" : "") + n; }
-    return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()) + " " + p(d.getHours()) + ":" + p(d.getMinutes());
-  }
-
-  function saveComments() {
-    try { localStorage.setItem(CK, JSON.stringify(comments)); } catch (e) { alert("评论保存失败：浏览器存储不可用"); }
-  }
-  function renderComments() {
-    if (!comments.length) {
-      $("comment-list").innerHTML = '<div class="comment-empty">还没有评论，来抢个沙发，聊聊你关注的端侧 AI 动态吧</div>';
-      return;
-    }
-    $("comment-list").innerHTML = comments.slice().reverse().map(function (c) {
-      return '<div class="comment-item" data-cid="' + esc(c.id) + '">' +
-        avatarOf(c.name) +
-        '<div class="c-body">' +
-          '<div class="c-head"><span class="c-name">' + esc(c.name) + '</span><span class="c-time">' + timeAgo(c.ts) + '</span><button class="c-del" title="删除该条评论">删除</button></div>' +
-          '<div class="c-text">' + esc(c.text) + "</div>" +
-        "</div></div>";
-    }).join("");
-  }
-
-  $("comment-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var name = $("c-name").value.trim();
-    var text = $("c-text").value.trim();
-    if (!name || !text) return;
-    comments.push({ id: String(Date.now()) + Math.random().toString(36).slice(2, 7), name: name, text: text, ts: Date.now() });
-    saveComments(); renderComments();
-    $("c-text").value = "";
-  });
-  $("comment-list").addEventListener("click", function (e) {
-    var btn = e.target.closest(".c-del"); if (!btn) return;
-    var item = btn.closest(".comment-item");
-    if (!confirm("确定删除这条评论？")) return;
-    comments = comments.filter(function (c) { return c.id !== item.dataset.cid; });
-    saveComments(); renderComments();
-  });
 
   /* ============================================================
    * 滚动显现 + 导航高亮

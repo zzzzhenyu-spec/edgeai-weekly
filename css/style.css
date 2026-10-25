@@ -577,59 +577,6 @@ main { max-width: 1240px; margin: 0 auto; padding: 30px 28px 60px; }
 .res-card p { font-size: 13.5px; color: var(--text-dim); margin-bottom: 12px; }
 .res-link { font-size: 13px; font-family: var(--mono); }
 
-/* ---------------- 评论区 ---------------- */
-.comment-wrap { max-width: 860px; }
-.comment-form {
-  padding: 22px; border-radius: var(--radius); background: var(--panel); border: 1px solid var(--border);
-  display: flex; flex-direction: column; gap: 12px;
-}
-.comment-form:focus-within { border-color: rgba(129,140,248,0.45); box-shadow: 0 0 30px -10px rgba(129,140,248,0.4); }
-.form-row { display: flex; gap: 12px; flex-wrap: wrap; }
-.comment-form input, .comment-form textarea {
-  font-family: var(--font); font-size: 14px; color: var(--text);
-  background: rgba(255,255,255,0.045); border: 1px solid var(--border); border-radius: 12px;
-  padding: 11px 14px; outline: none; transition: border-color 0.25s, box-shadow 0.25s;
-}
-.comment-form input:focus, .comment-form textarea:focus {
-  border-color: rgba(129,140,248,0.6); box-shadow: 0 0 0 3px rgba(129,140,248,0.15);
-}
-.comment-form input { flex: 0 0 220px; }
-.comment-form textarea { flex: 1; min-height: 96px; resize: vertical; }
-.btn-submit {
-  align-self: flex-end; font-family: var(--font); font-size: 14px; font-weight: 700; color: #05070d;
-  padding: 11px 30px; border: none; border-radius: 12px; cursor: pointer;
-  background: linear-gradient(120deg, #22d3ee, #818cf8, #e879f9);
-  box-shadow: 0 6px 22px -6px rgba(129,140,248,0.65);
-  transition: transform 0.25s, box-shadow 0.25s, filter 0.25s;
-}
-.btn-submit:hover { transform: translateY(-2px); filter: brightness(1.12); box-shadow: 0 10px 28px -6px rgba(129,140,248,0.8); }
-.btn-submit:active { transform: none; }
-
-.comment-list { margin-top: 26px; display: flex; flex-direction: column; gap: 16px; }
-.comment-item {
-  display: flex; gap: 14px; padding: 18px; border-radius: var(--radius);
-  background: var(--panel); border: 1px solid var(--border);
-  animation: fadeUp 0.4s ease both;
-}
-.c-avatar {
-  width: 40px; height: 40px; border-radius: 50%; flex: none;
-  display: grid; place-items: center; font-weight: 800; font-size: 16px; color: #05070d;
-}
-.c-body { flex: 1; min-width: 0; }
-.c-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-.c-name { font-weight: 700; font-size: 14.5px; }
-.c-time { font-size: 12px; color: var(--text-faint); font-family: var(--mono); }
-.c-del { margin-left: auto; font-size: 12px; color: var(--text-faint); background: none; border: none; cursor: pointer; font-family: var(--font); transition: color 0.2s; }
-.c-del:hover { color: var(--red); }
-.c-text { font-size: 14px; color: var(--text-dim); margin-top: 5px; word-break: break-word; white-space: pre-wrap; }
-.comment-empty {
-  padding: 44px 20px; text-align: center; color: var(--text-faint); font-size: 14px;
-  border: 1px dashed var(--border); border-radius: var(--radius);
-}
-.comment-empty::before { content: "💬"; display: block; font-size: 26px; margin-bottom: 10px; opacity: 0.7; }
-.comment-tip { margin-top: 14px; font-size: 12.5px; color: var(--text-faint); }
-.comment-tip a { color: var(--text-dim); text-decoration: underline; text-underline-offset: 3px; }
-
 /* ---------------- 详情抽屉（右侧） ---------------- */
 .overlay {
   position: fixed; inset: 0; z-index: 60; background: rgba(3, 5, 10, 0.6);
