@@ -14,6 +14,12 @@
 |------|------|------|
 | 2026-10-19 | [Meta 官方确认雷朋眼镜「未唤醒也录音」的 Bug 并称已修复：睡眠模式无声录音引爆隐私争议](https://mashable.com/tech/meta-confirms-smart-glasses-recording-without-being-activated) | Mashable（编译） |
 
+### 端侧Agent（1 条）
+
+| 日期 | 要闻 | 来源 |
+|------|------|------|
+| 2026-10-23 | [谷歌发布智能体计算引擎 ACE：为每个 AI 智能体配备专属安全可弹性伸缩的计算环境，配套 Agent Gateway 与 Agent Registry](https://view.inews.qq.com/a/20261023A06LG700) | 腾讯新闻 |
+
 ### AI硬件（8 条）
 
 | 日期 | 要闻 | 来源 |

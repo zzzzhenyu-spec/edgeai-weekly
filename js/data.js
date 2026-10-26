@@ -46,6 +46,17 @@ const WEEKLY_DATA = {
       highlight: false
     },
     {
+      id: "n123", cat: "端侧Agent", source: "腾讯新闻", date: "2026-10-23",
+      title: "谷歌发布智能体计算引擎 ACE：为每个 AI 智能体配备专属安全可弹性伸缩的计算环境，配套 Agent Gateway 与 Agent Registry",
+      summary: "谷歌在 Google Cloud 推出智能体计算引擎 ACE（Agent Compute Engine）——专为 AI 智能体打造的新计算服务与 VM 类型：每个智能体获得专属、安全、持久且可弹性伸缩的计算环境，面向大规模运行场景设计；配套组件包括 Agent Gateway（智能体网关）与 Agent Registry（智能体注册表），构成智能体从注册、接入到运行管理的云侧基础设施。继 A2A 协议与 Gemini 企业智能体平台之后，谷歌把智能体基础设施从协议层推进到算力层。",
+      detail: "发布要点：10 月 22-23 日公告，ACE 是 Google Cloud 面向 AI 智能体的新 VM 类型与计算服务——每个智能体配备专属、安全、持久、可弹性伸缩的计算环境，专为大规模智能体运行场景构建。\n配套组件：Agent Gateway（智能体网关，负责接入与路由）与 Agent Registry（智能体注册表，负责发现与管理），与既有 Vertex AI 智能体开发栈衔接。\n生态脉络：谷歌在智能体侧的落子已连成线——A2A 协议（智能体互联）、Gemini 企业智能体平台（应用层）、ACE（算力层）；与亚马逊、微软的智能体基础设施竞赛同题。\n端侧视角：端云协同智能体架构里，端侧负责常驻感知与即时执行、云侧负责重任务与编排——ACE 正是云侧那半的专用底座；对端侧读者的意义在于「智能体获得专属 VM」意味着云侧开始按智能体而非按人来供给算力，端侧 Agent 与云端 ACE 实例的配对、迁移与 A2A 互联，会是端云协同智能体的下一个工程问题。",
+      url: "https://view.inews.qq.com/a/20261023A06LG700",
+      image: "https://inews.gtimg.com/om_ls/Ow5o52ZNWlU9NbxMQkl2ewhBLmWJS7el-2rWAiReLbAusAA_640330/0",
+      imageCap: "谷歌智能体计算引擎 ACE（图：腾讯新闻）",
+      tags: ["Google Cloud", "ACE", "智能体算力", "Agent Gateway"],
+      highlight: false
+    },
+    {
       id: "n116", cat: "AI硬件", source: "新浪科技", date: "2026-10-23",
       title: "智元发布一站式具身作业平台 Genie Studio 2.0：覆盖「采-训-测-推-编-管」全生命周期，最快 7 天完成新场景部署验证",
       summary: "智元「AI WAVE」七连发第二弹推出一站式全流程具身智能作业平台 Genie Studio 2.0——Flyflywheel 模型迭代、Agent 作业编排与 Monitor 多机运维三大模块打通机器人从「演示态」到「部署态」的门槛，最快 7 天即可完成全新作业场景从 0 到 1 的部署验证；已落地常州数控机床上下料（14 天产线验证）、均普智能 BMS 装配线（三台精灵 G2 成功率稳定 99.9% 以上、节拍 13 秒内、7×24 小时生产）与广州地铁 60 余台设备部署等案例。",
