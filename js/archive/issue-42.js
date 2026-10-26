@@ -79,6 +79,17 @@ WEEKLY_ARCHIVE[42] = {
       highlight: false
     },
     {
+      id: "n122", cat: "AI硬件", source: "ExplainX（编译）", date: "2026-10-07",
+      title: "Oki Home 发布：1799 美元的「记忆电脑」——RTX 5060 Ti + 2TB 可换 Memchip，本地跑 Qwen 3.8 27B 管理你的全部数字生活",
+      summary: "YC W25 批次创业公司 Oki（创始人 Luofei Chen，旧金山）发布个人 AI 电脑 Oki Home——售价 1799 美元，NVIDIA RTX 5060 Ti 显卡 + 2TB 可插拔「Memchip」记忆模块（可扩展至 16TB），本地运行 Qwen 3.8 27B 与约 8B 辅助模型，把用户的文档、消息、照片与应用上下文聚合成可搜索的私人数字记忆，全部处理在设备本地完成；首批预订 59 美元（可退），2026 年 12 月中旬先在美国发货，另有面向团队代码/工单/消息的企业侧姊妹产品 Oki Core。",
+      detail: "产品要点：10 月 7 日前后发布，定位「随你成长的记忆电脑（a memory computer that grows with you）」——核心主张是个人上下文与智能应放在自己拥有的硬件上，而非云端。\n硬件配置：家用主机形态，NVIDIA RTX 5060 Ti 独显；2TB Memchip 可插拔记忆模块，存储可扩展至 16TB。\n模型与隐私：本地运行 Qwen 3.8 27B 主模型（另有约 8B 小模型分工），摄取文档/消息/文件后由本地 AI 组织、关联并支持全量检索，数据不出设备。\n购买与节奏：首批预订 59 美元（可退款），2026 年 12 月中旬发货、先覆盖美国；企业侧另有 Oki Core（读取团队代码、工单与消息做商业智能）。\n端侧视角：这是「个人数据主权」路线的标志性消费硬件——与 DGX Spark 类桌面算力盒不同，Oki Home 卖的不是裸算力而是「本地模型 × 个人记忆库」的成品体验；Qwen 3.8 27B 跑在消费级 GPU 上也再次印证开源旗舰→端侧蒸馏的部署水位；与同期 OpenAI DevDay 的 Agent Builder 形成企业/个人两条路线的对照。",
+      tags: ["Oki Home", "记忆电脑", "本地AI", "Qwen"],
+      url: "https://explainx.ai/blog/oki-home-1799-local-ai-memory-computer-memchip-qwen-3-8-27b-2026",
+      image: "",
+      imageCap: "",
+      highlight: false
+    },
+    {
       id: "n67", cat: "大模型厂商", source: "Google Developers Blog（编译）", date: "2026-10-07",
       title: "Google 开源 EmbeddingGemma 2：740M 参数统一文本/图像/音视频向量空间，567MB 内存跑通端侧多模态检索",
       summary: "Google DeepMind 发布开源多模态嵌入模型 EmbeddingGemma 2——原生把文本、图像、视频帧与音频映射进统一向量空间，740M 参数、全模态仅需约 567MB 内存（Pixel 11 Pro 实测），纯文本可低至 191MB；无需训练即可充当毫秒级端侧决策引擎做零样本意图路由，未来数周将通过 ML Kit 上 Android 并提供 NPU 加速。",
