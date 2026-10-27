@@ -18,7 +18,7 @@ const WEEKLY_DATA = {
     weekRange: "2026.10.21 — 10.27 · 近 7 天",
     updated: "2026-10-27",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：AI 眼镜进入全彩时代——Rokid 发布首款全彩 AI 眼镜 Rokid Color（0.16cc Micro-LED 光机、4999 元起，Glasses 2 与乐奇魔戒同场组成全家族），雷鸟同日亮全彩方案，行业从「音频+拍摄」走向「显示」与线下渠道「巷战」并行。个人智能体基础设施同周密集落子：蚂蚁灵光 2.0 升级「事务管理者」（跨会话记忆+主动盯办），千问Go!「我的应用」一句话建应用，谷歌 ACE 为智能体配专属计算环境。具身智能跨过量产分水岭：Optimus 首批量产级下线、启元第 5000 台下线、智元 Genie Studio 2.0 平台与精灵 G2 Max 重载机器人双线推进。模型侧 Kimi K3.1 Pro 开源旗舰与讯飞星火 X2.6 端云一体先后落地，小米以 150 元开源硬件 HachimoDock 给桌面 Agent 造「身体」；工信部定调超百款终端达 L3。\n今日新增：Rokid Color 首款全彩 AI 眼镜发布、蚂蚁灵光 2.0 个人智能体升级。"
+    editorsNote: "近 7 天聚焦：AI 眼镜进入全彩时代——Rokid 发布首款全彩 AI 眼镜 Rokid Color（0.16cc Micro-LED 光机、4999 元起，Glasses 2 与乐奇魔戒同场组成全家族），雷鸟同日亮全彩方案，行业从「音频+拍摄」走向「显示」与线下渠道「巷战」并行。个人智能体基础设施同周密集落子：蚂蚁灵光 2.0 升级「事务管理者」（跨会话记忆+主动盯办），千问Go!「我的应用」一句话建应用，谷歌 ACE 为智能体配专属计算环境。具身智能跨过量产分水岭：Optimus 首批量产级下线、启元第 5000 台下线、智元 Genie Studio 2.0 平台与精灵 G2 Max 重载机器人双线推进。模型侧 Kimi K3.1 Pro 开源旗舰与讯飞星火 X2.6 端云一体先后落地，小米以 150 元开源硬件 HachimoDock 给桌面 Agent 造「身体」；工信部定调超百款终端达 L3。\n今日新增：Rokid Color 首款全彩 AI 眼镜发布、蚂蚁灵光 2.0 个人智能体升级；补录 OpenAI GPT-6.1 Terra 官宣（快而强的 computer use 模型，输出价每百万 token 5 美元）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -62,6 +62,15 @@ const WEEKLY_DATA = {
       image: "https://img.ithome.com/newsuploadfiles/2026/10/b85e06ac-544c-4ed3-9b18-bebe7871d6ae.png",
       imageCap: "精灵 G2 Max（图源：IT之家）",
       highlight: true
+    },
+    {
+      id: "n130", cat: "大模型厂商", source: "OpenAI 官方", date: "2026-10-26",
+      title: "OpenAI 官宣 GPT-6.1 Terra：把「快而强」的 computer use 打到每百万 token 输出 5 美元，OSWorld 追至距旗舰约 2 个百分点",
+      summary: "OpenAI 发布 GPT-6.1 Terra，官方定位「把快速且强大的 computer use（计算机操作）带给所有人」，API、Codex 与 ChatGPT Work 可用。第三方测评口径下 API 定价输入 1 美元、输出 5 美元（每百万 token），比 GPT-5.6 Terra 与 GPT-6.1 Sol 便宜约 50%；在离线 computer use 基准 OSWorld 2.0 上标准档得分 57.6%、高难度档 60.0%——与旗舰 Astra 最高努力档差距约 2.1 个百分点，而成本约为其七分之一。",
+      detail: "发布：10 月 26 日官方博客《Introducing GPT-6.1 Terra》，口号是「快而强的 computer use，面向所有人」；经由 API、Codex 与 ChatGPT Work 提供。\n定价：API 输入 1 美元、输出 5 美元（每百万 token，第三方测评口径）——较 GPT-5.6 Terra 与 GPT-6.1 Sol（输入 2 美元、输出 10 美元）便宜约 50%；另据称推理速度提升约 3 倍。\n能力：在离线 computer use 基准 OSWorld 2.0 上，标准档 57.6%（单次成本约 0.29 美元）、高难度档 60.0%（约 1.01 美元），距旗舰 Astra 最高努力档约 2.1 个百分点、成本约为其 1/7；支持托管（云端）与本地（Playwright）两种 computer use 实现方式，社区普遍将其评为当前性价比最优的 computer use 模型。\n端侧视角：computer use 的「大脑」在云端、「手」在本机——Terra 主打本地 Playwright 执行路径，意味着个人电脑正在成为智能体的标准执行端；当旗舰能力以五分之一价格下放，端侧 Agent 编排层的门槛被进一步拉低，与本周谷歌 ACE、蚂蚁灵光 2.0 同属「智能体基础设施」落子。",
+      tags: ["OpenAI", "GPT-6.1 Terra", "computer use", "智能体", "API定价"],
+      url: "https://openai.com/index/introducing-gpt-6-1-terra",
+      highlight: false
     },
     {
       id: "n126", cat: "端侧Agent", source: "IT之家", date: "2026-10-25",
