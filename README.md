@@ -4,7 +4,7 @@
 
 ## 2026 · 第 45 期（2026.10.21 — 10.27 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：AI 眼镜进入全彩时代——Rokid 发布首款全彩 AI 眼镜 Rokid Color（0.16cc Micro-LED 光机、4999 元起，Glasses 2 与乐奇魔戒同场组成全家族），雷鸟同日亮全彩方案，行业从「音频+拍摄」走向「显示」与线下渠道「巷战」并行。个人智能体基础设施同周密集落子：蚂蚁灵光 2.0 升级「事务管理者」（跨会话记忆+主动盯办），千问Go!「我的应用」一句话建应用，谷歌 ACE 为智能体配专属计算环境。具身智能跨过量产分水岭：Optimus 首批量产级下线、启元第 5000 台下线、智元 Genie Studio 2.0 平台与精灵 G2 Max 重载机器人双线推进。模型侧 Kimi K3.1 Pro 开源旗舰与讯飞星火 X2.6 端云一体先后落地，小米以 150 元开源硬件 HachimoDock 给桌面 Agent 造「身体」；工信部定调超百款终端达 L3。 今日新增：Rokid Color 首款全彩 AI 眼镜发布、蚂蚁灵光 2.0 个人智能体升级；补录 OpenAI GPT-6.1 Terra 官宣（快而强的 computer use 模型，输出价每百万 token 5 美元）。
+**近 7 天导读**：近 7 天聚焦：AI 眼镜进入全彩时代——Rokid 发布首款全彩 AI 眼镜 Rokid Color（0.16cc Micro-LED 光机、4999 元起，Glasses 2 与乐奇魔戒同场组成全家族），雷鸟同日亮全彩方案，行业从「音频+拍摄」走向「显示」与线下渠道「巷战」并行。个人智能体基础设施同周密集落子：蚂蚁灵光 2.0 升级「事务管理者」（跨会话记忆+主动盯办），千问Go!「我的应用」一句话建应用，谷歌 ACE 为智能体配专属计算环境。具身智能跨过量产分水岭：Optimus 首批量产级下线、启元第 5000 台下线、智元 Genie Studio 2.0 平台与精灵 G2 Max 重载机器人双线推进。模型侧 Kimi K3.1 Pro 开源旗舰与讯飞星火 X2.6 端云一体先后落地，小米以 150 元开源硬件 HachimoDock 给桌面 Agent 造「身体」；工信部定调超百款终端达 L3。 今日新增：Rokid Color 首款全彩 AI 眼镜发布、蚂蚁灵光 2.0 个人智能体升级；补录 OpenAI GPT-6.1 Terra 官宣（快而强的 computer use 模型，输出价每百万 token 5 美元）与 OpenAI 学术协作博客（Kakeya 猜想/指数时间假设/量子色动力学成果及可验证路径）。
 
 ## 近 7 天速览
 
@@ -36,11 +36,12 @@
 |------|------|------|
 | 2026-10-21 | [Synaptics 发布 Astra SR200 MCU：内置谷歌 Coral NPU、最高 400 GOPS，业界首搭 Cortex-M85+M52 双核并集成高带宽定制 DRAM——多模态边缘 AI 下沉到微控制器](https://www.ithome.com/1/016/027.htm) | IT之家 |
 
-### 大模型厂商（4 条）
+### 大模型厂商（5 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-10-26 | [OpenAI 官宣 GPT-6.1 Terra：把「快而强」的 computer use 打到每百万 token 输出 5 美元，OSWorld 追至距旗舰约 2 个百分点](https://openai.com/index/introducing-gpt-6-1-terra) | OpenAI 官方 |
+| 2026-10-26 | [OpenAI 披露与学术社区共建科学理解：模型在 Kakeya 猜想、指数时间假设与量子色动力学上的成果及可验证路径](https://openai.com/index/building-scientific-understanding-with-academic-communities) | OpenAI 官方 |
 | 2026-10-24 | [月之暗面发布 Kimi K3.1 Pro：3 万亿级参数 MoE、100 万 token 上下文，编程智能体测评超 GPT-6，权重 11 月 4 日前开源](https://www.ithome.com/1/017/284.htm) | IT之家 |
 | 2026-10-22 | [讯飞 1024 开发者节发布星火 X2.6 端云一体大模型：293B-A30B MoE、1M 上下文，首个全国产算力完整训练的主流模型，同步开源 4B 端侧版](https://www.ithome.com/1/016/403.htm) | IT之家 |
 | 2026-10-22 | [蚂蚁数科发布决策模型 LingDT-Decision-1.0：23 项基准超越微软与 Jev 热门决策模型，Token 消耗降超 90%、响应快 10 倍](https://news.qq.com/rain/a/20261022A0BKMW00) | 腾讯新闻 |
