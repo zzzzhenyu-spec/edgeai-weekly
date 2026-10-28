@@ -19,7 +19,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "IT之家 10 月 10 日报道：腾讯云宣布开源内部自用的 TeamAI——一款基于 Git 的团队 AI 协作工具，把团队使用的 Skill、工作规范、工具配置和项目知识统一放进 Git 仓库，像管理代码一样评审、更新和版本管理，再同步到成员各自使用的 Agent 中，实现「一人配置，全员复用」；目前已适配 WorkBuddy、CodeBuddy、Claude Code、Codex、Cursor 等 16 种 Agent。\n协作机制：沿用开发者熟悉的 Git 流程——成员提交技能或修改规范时自动创建分支、发起合并请求交团队评审；确认合入后，支持会话启动 Hook 的 Agent 会在新对话开始时自动拉取更新，无需逐人通知或手动替换。\n治理与沉淀：新增模型配置统一下发能力，管理员可为涉及内部数据的任务统一配置符合安全要求的模型服务；Agent 还会在会话结束时提示成员分享「反复纠正、工具调用失败」类经验，自动整理成文档入库供后续检索复用。\n端侧视角：TeamAI 与此前上线的 WorkBuddy 一脉相承——当每个成员桌面上跑着不同品牌的本地 Agent 时，「技能与规范的版本化分发」成了团队级刚需；TeamAI 用 Git 工作流补上了这一层，配合 ClawPro 对本地 Agent 的统一纳管，腾讯正在把端侧 Agent 从单机工具做成可管理的企业基础设施。",
       tags: ["腾讯云", "TeamAI", "Agent 协作", "开源"],
       url: "https://www.ithome.com/1/011/432.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/dd01ede5-936c-40b9-899b-9e0dae78e5ec.png",
+      image: "images/archive/issue-42/n70.png",
       imageCap: "TeamAI（图源：IT之家）",
       highlight: false
     },
@@ -30,7 +30,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "TechCrunch 10 月 9 日报道：TypeSafe AI 完成 8.7 亿美元融资，估值 75 亿美元，由 Andreessen Horowitz 领投，Sequoia 与现有投资者 DCVC 跟投；早前中文报道曾以 100 亿美元口径传述其估值，本次以融资官宣数字为准。\n采用面：公司称三分之一的财富 500 强企业已在使用 Jev——距 9 月 15 日发布仅三周多，企业级采用速度罕见。\n技术定位：Jev 基于 Transformer 架构但不是 LLM——不输出文本，而是输出概率，即公司所称的「校准决策」（calibrated decisions）；比 LLM 显著更快、消耗 token 远少，定位为任务自动化而非文本或代码生成。创始人 Almeida 称「过去四年我们在人类语言上做得极好，但对自动化没用——计算机说的是另一种语言」。\n公司背景：TypeSafe AI 于 2024 年创立，三位联合创始人——Diogo Almeida（前 OpenAI 研究员）、Sasha Sheng（前 Meta 研究工程师）与 Erik Gafni（工程师/创业者）。\n端侧视角：巨额定调「非文本模型」路线的价值——当头部资本押注「决策概率输出 + 极低 token 消耗」，快系统架构从技术争议变成商业共识，也为端侧小模型承担路由/决策层提供了持续的资本与生态推力。",
       tags: ["TypeSafe AI", "Jev", "融资", "a16z"],
       url: "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
-      image: "https://techcrunch.com/wp-content/uploads/2026/09/typesafe-ai.jpg",
+      image: "images/archive/issue-42/n71.jpg",
       imageCap: "TypeSafe AI（图源：TechCrunch）",
       highlight: true
     },
@@ -41,7 +41,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "IT之家 10 月 9 日报道：华为在花粉俱乐部发布鸿蒙电脑 9 月体验报告，公布 9 月多次版本升级带来的新变化——全新沉浸光感、图库 AI 修图、小艺任务模式、动态壁纸、华为远程分享、超空间存储/内存技术、3D 影像壁纸等。\n小艺任务的底座：多智能体协同架构，4 大类 2300+ 项技能，可自主规划、按需组合；支持定制邮件、浏览器控制、分析任务、生成表格、本地搜索、汇总确认、桌面文件解析等能力——官方称其端侧运行 WebAgent 任务的成功率已持平人类水平。\n开发者侧：DevEco Studio 上线鸿蒙 PC 公测（10 月 8 日首发），一站式 AI 开发工具 DevEco Code 内置 GLM5.3 与 GLM5.1 模型，通过 Harness 技术提升应用编译通过率与任务完成率，支持配置第三方模型并提供 Plan/Build/Goal 三种模式；DevEco CLI 将鸿蒙开发能力开放给各类 AI Agent 工作流。\n产品矩阵：首款鸿蒙台式机华为擎云 HM650 系列计划 10 月上市，搭载自研麒麟 X90 芯片，面向政企、金融、能源等商用办公场景。\n端侧视角：从系统级小艺任务（2300+ 技能、WebAgent 持平人类）到开发侧智能体工具链（DevEco 三件套），鸿蒙电脑正在把「智能体 OS」的叙事从演示推进到可用的技能库与开发链——配合麒麟 X90 台式机补齐政企场景，端侧智能体生态首次在国产 PC 上成建制落地。",
       tags: ["华为", "鸿蒙电脑", "小艺任务", "DevEco"],
       url: "https://www.ithome.com/1/011/111.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/3e252a39-85b8-44cd-b4c9-bac71578c9b9.jpg",
+      image: "images/archive/issue-42/n69.jpg",
       imageCap: "鸿蒙电脑 9 月体验报告（图源：IT之家）",
       highlight: false
     },
@@ -52,7 +52,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "TechCrunch 10 月 8 日报道：Google 发布 Mac 应用 AI Edge Foresight，与热门 AI 笔记应用 Granola 直接竞争——由今年 4 月推出本地模型听写工具的同一团队打造。\n工作方式：可完全离线运行，调用端侧 EmbeddingGemma 2（740M 参数）跨应用捕获会议笔记（包括线下会议）；分屏视图一侧手写速记、一侧 AI 生成笔记；可查看会议转写文本，并与 Gemma 4 驱动的助手对话获取答案。\n知识库：支持上传 PDF、Google Docs、Microsoft Office、纯文本、Markdown 与网页书签构建本地知识库，会议中相关问题可实时作答；官方 FAQ 确认应用针对 Apple Silicon 优化、可完全离线使用。\n端侧视角：Foresight 展示了「端侧模型 + 本地知识库」组合的完整体验闭环——录音、转写、检索、问答全程不出设备；TechCrunch 认为它可能只是 Gemma 离线模型家族的能力展示，后续不排除以 Gemini 应用矩阵推出跨视频会议的消费版本。",
       tags: ["Google", "AI Edge Foresight", "离线AI", "会议笔记"],
       url: "https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/",
-      image: "https://techcrunch.com/wp-content/uploads/2026/06/google-logo.jpg",
+      image: "images/archive/issue-42/n68.jpg",
       imageCap: "Google AI Edge Foresight（图源：TechCrunch）",
       highlight: false
     },
@@ -63,7 +63,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "IT之家 10 月 8 日报道：XREAL 在 10 月 7 日的新闻稿中确认 Android XR 眼镜 AURA 提供两档配置——12GB+256GB 定价 1279 美元、16GB+512GB 定价 1499 美元。\n硬件规格：本体质量不到 95g，搭载 X1S 空间协处理器；索尼 FHD 120Hz microOLED 显示面板（100% sRGB、峰值亮度 1050nits）；集成 Bose 调音声学系统与 4 麦克风阵列，支持 6DoF 追踪与 5 档电致变色。\n计算单元基于高通骁龙 Reality Elite 芯片，支持 Google Gemini，配备 34.8Whr 电池与 Wi-Fi 6、蓝牙 5.3。\n端侧视角：Reality Elite 是高通面向 XR 眼镜的新一代端侧计算平台——XREAL 与三星前后脚定档，Android XR 阵营（谷歌系统 + 高通芯片 + 各家硬件）正以「轻本体 + 端侧算力单元 + 云端 Gemini」的组合对撞 Meta 的一体化路线，年末 AI 眼镜货架将首次真正拥挤。",
       tags: ["XREAL", "AURA", "Android XR", "骁龙 Reality Elite"],
       url: "https://www.ithome.com/1/010/564.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/4f343202-ef87-42ee-8610-8d717697019e.jpg",
+      image: "images/archive/issue-42/n65.jpg",
       imageCap: "XREAL AURA（图源：IT之家）",
       highlight: false
     },
@@ -74,7 +74,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "IT之家 10 月 8 日报道：腾讯宣布 AI 办公产品 WorkBuddy 上线独立文件浏览器——用户在文件资源管理器或 Finder 中找到文件后右键选择 WorkBuddy 打开，即可在独立窗口查看文件并直接调用 AI 分析、修改或继续处理。\n能力细节：支持 Word、Excel、PPT、PDF、Markdown、HTML 等格式；多文件标签页切换，每份文件都有独立的 Buddy 对话；可选中正文段落让 AI 针对性改写、润色或补充，结果直接落到文档对应位置。\n本地闭环：修改完成后 Ctrl/Command+S 直接写回本地文件，Markdown 自动保存，HTML 退出编辑时自动保存；还支持跨格式产出，例如打开 Excel 直接说「按这份数据，帮我做一个网页版汇报」。\n端侧视角：桌面智能体最难的一步是「敢让它动本地文件」——WorkBuddy 把文件浏览、编辑与 AI 对话合并进一个窗口并保留用户亲手修改权，是国产大厂在 GUI Agent 本地文件能力上的一次实打实落地。",
       tags: ["腾讯", "WorkBuddy", "桌面智能体", "本地文件"],
       url: "https://www.ithome.com/1/010/562.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/31723ed3-0461-4ff4-8e30-dd92a8c22cd7.png",
+      image: "images/archive/issue-42/n66.png",
       imageCap: "WorkBuddy 文件浏览器（图源：IT之家）",
       highlight: false
     },
@@ -85,8 +85,8 @@ WEEKLY_ARCHIVE[42] = {
       detail: "产品要点：10 月 7 日前后发布，定位「随你成长的记忆电脑（a memory computer that grows with you）」——核心主张是个人上下文与智能应放在自己拥有的硬件上，而非云端。\n硬件配置：家用主机形态，NVIDIA RTX 5060 Ti 独显；2TB Memchip 可插拔记忆模块，存储可扩展至 16TB。\n模型与隐私：本地运行 Qwen 3.8 27B 主模型（另有约 8B 小模型分工），摄取文档/消息/文件后由本地 AI 组织、关联并支持全量检索，数据不出设备。\n购买与节奏：首批预订 59 美元（可退款），2026 年 12 月中旬发货、先覆盖美国；企业侧另有 Oki Core（读取团队代码、工单与消息做商业智能）。\n端侧视角：这是「个人数据主权」路线的标志性消费硬件——与 DGX Spark 类桌面算力盒不同，Oki Home 卖的不是裸算力而是「本地模型 × 个人记忆库」的成品体验；Qwen 3.8 27B 跑在消费级 GPU 上也再次印证开源旗舰→端侧蒸馏的部署水位；与同期 OpenAI DevDay 的 Agent Builder 形成企业/个人两条路线的对照。",
       tags: ["Oki Home", "记忆电脑", "本地AI", "Qwen"],
       url: "https://explainx.ai/blog/oki-home-1799-local-ai-memory-computer-memchip-qwen-3-8-27b-2026",
-      image: "",
-      imageCap: "",
+      image: "images/archive/issue-42/n122.webp",
+      imageCap: "Oki Home 记忆电脑（图源：ExplainX）",
       highlight: false
     },
     {
@@ -96,7 +96,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "Google 开发者博客消息：Google DeepMind 发布 EmbeddingGemma 2——同等尺寸最佳的开放权重多模态嵌入模型，原生将文本、图像、视频帧与音频映射进单一统一向量空间；为本地搜索与媒体检索而生，省去串联图像描述、语音转文本、文本嵌入多模型的延迟与内存开销。\n资源占用：专为本地隐私优先应用设计，740M 参数；模块化编码器设计——纯文本权重仅需约 191MB 活动内存，全多模态约 567MB（Google Pixel 11 Pro 实测）。\n决策引擎用法：无需任何训练数据或微调，模型可将用户输入直接与分类标签/描述匹配，毫秒级完成零样本意图路由——正是「快系统」路由思想在端侧嵌入模型上的直接实现。\n上手与生态：Google AI Edge Gallery 新增 Instant Media Search 与 Video Moments Finder 两个交互演示（本地媒体自然语言检索，向量存于设备端 SQLite），Mac 端可体验 AI Edge Foresight；未来数周模型将以服务形式登陆 Android ML Kit，并提供 NPU 加速。\n端侧视角：统一向量空间 + 百兆级内存占用，意味着「跨模态语义搜索」正式成为手机端的基座能力——相册、笔记、文档的本地检索与端侧 RAG 不再需要云端往返，隐私与离线场景同时受益。",
       tags: ["Google", "EmbeddingGemma 2", "多模态嵌入", "端侧检索"],
       url: "https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/",
-      image: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/embeddinggemma2-banner_169.width-1300.png",
+      image: "images/archive/issue-42/n67.png",
       imageCap: "EmbeddingGemma 2（图源：Google）",
       highlight: true
     },
@@ -107,7 +107,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "TechCrunch 10 月 7 日报道：微软在旧金山 Tech Week 期间的活动上公布了 Surface Laptop Ultra 的规格与价格——两档基础型号分别 2599 美元与 3700 美元起（更强芯片），选配更高内存/存储可达 5900 美元，最高配已售罄；同场发布搭载 RTX Spark 芯片的开发者工作站 Surface RTX Spark Dev Box，6000 美元起，预装 VS Code、GitHub Copilot CLI、WSL 与 PowerShell 7。\n设计定位：两款设备均为本地免费运行 AI 模型而设计——CPU、GPU、统一内存及散热等硬件均为此改造；同时也胜任内容创作、视频处理与游戏。\n系统侧才是重点：改版 Windows 11 引入「Execution Containers」（官方名 Microsoft Execution Containers，MXC）——让组织可以定义 AI 智能体能访问哪些文件与资源；微软官方博客已确认 MXC 于同期在 Windows 11 正式全面可用（GA）。\n纳德拉的表态：「过去三四年我们意识到，光有模型做不成任何事——你真正需要的是编排，是模型之外的内存，是能整合多模型、上下文、记忆与行动空间的 harness 层」；微软要把这套能力「不仅给自家应用，也给任何人的智能体——这就是 Windows 平台未来的意义」。背景：英伟达今年 6 月已与微软及一批 PC 厂商达成基于 RTX Spark 芯片打造 AI 与智能体就绪 Windows PC 的协议。\n端侧视角：Execution Containers 下放全部 Win11 用户，意味着 Windows 正在把自己改造成「智能体操作系统」——沙箱、编排、记忆成为平台级原语；RTX Spark 上 PC 则给端侧模型提供了新的硬件底座，AI PC 竞争从营销标签（Copilot+ 已退役）转入真刀真枪的智能体基础设施。",
       tags: ["微软", "英伟达", "RTX Spark", "Surface Laptop Ultra", "智能体沙箱"],
       url: "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/",
-      image: "https://techcrunch.com/wp-content/uploads/2026/10/Microsoft-Surface-Laptop-Ultra.png",
+      image: "images/archive/issue-42/n62.webp",
       imageCap: "Surface Laptop Ultra（图源：TechCrunch）",
       highlight: true
     },
@@ -118,7 +118,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "9to5Mac 10 月 7 日报道：最新 Apple Intelligence 模型最高需要 14GB 存储空间，对 256GB 机型的用户构成显著占用；独立开发者 Om Lahore 为此开发了移除工具 RemoveMacAI。\n风险与争议：9to5Mac 提醒深度移除有风险——Apple Intelligence 与 macOS 27 深度耦合，强行移除可能影响基本功能；但有观点认为苹果将不得不提供官方移除途径。\nDaring Fireball 的 John Gruber 指出真正的压力来自机构用户：一些组织规定禁装 AI 工具，「在 Apple Intelligence 可被移除之前完全不允许 Golden Gate 系统」——这意味着不买只预装 Golden Gate 的新 Mac 硬件。\n端侧视角：端侧 AI 的「不可卸载」正在从个人吐槽变成采购阻力——存储占用 + 合规要求双重挤压下，「官方可移除」或将成为端侧 AI 的合规底线，与挪威对 AI 眼镜的监管动议同属端侧 AI 治理大潮的两面。",
       tags: ["Apple Intelligence", "macOS 27", "可卸载性", "RemoveMacAI"],
       url: "https://9to5mac.com/2026/10/07/apple-may-have-to-officially-support-apple-intelligence-removal-on-macs-to-protect-sales/",
-      image: "https://9to5mac.com/wp-content/uploads/sites/6/2024/10/macbook-air-apple-intelligence.jpg",
+      image: "images/archive/issue-42/n63.jpg",
       imageCap: "Apple Intelligence 存储（图源：9to5Mac）",
       highlight: false
     },
@@ -129,7 +129,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "9to5Mac 10 月 7 日报道：Meta 的主动式智能体应用 Muse 推出 iPad 版更新，同时新增多项连接器——此前该应用已连续数周占据 iPhone 应用下载榜首位。\n产品线节奏：Muse 于 9 月首发 iPhone 版，数日后即推出 Mac 版，如今补齐 iPad——三周内完成手机、电脑、平板三端覆盖。\n竞争位势：9to5Mac 将 Muse 定位为与 Grok Bot、ChatGPT Dots、OpenClaw 竞争的主动式智能体工具，iPhone/iPad 版免费上架 App Store。\n端侧视角：在隐私争议（未经授权同步 Mac 短信库、硬件化 Muse Charm）与监管审视之外，Muse 的生态扩张速度并未放缓——多端覆盖 + 连接器扩张是智能体产品抢占「默认入口」的标准打法。",
       tags: ["Meta Muse", "iPad", "智能体应用"],
       url: "https://9to5mac.com/2026/10/07/meta-launches-muse-for-ipad-following-weeks-as-the-top-iphone-app/",
-      image: "https://9to5mac.com/wp-content/uploads/sites/6/2026/09/Muse-by-Meta.webp",
+      image: "images/archive/issue-42/n64.jpg",
       imageCap: "Muse for iPad（图源：9to5Mac）",
       highlight: false
     },
@@ -140,7 +140,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "卫报 10 月 5 日报道：挪威政府计划提交法案，在公园、海滩、博物馆、购物中心、学校、幼儿园、医疗机构、健身房与公共活动等场所临时禁用带摄像头的智能眼镜，私人使用仍然允许——这使其成为首个提出国家级 AI 眼镜临时禁令的主要国家。\n官方表态：数字事务大臣 Torgeir Micaelsen 称「新的强大技术正在进入社会，人们面临在不知情时被拍照、摄像或录音的风险」，「我们不想要一个人们在习惯不被监视的场所里还要担心被记录的社会」。工党少数派政府需争取其他党派支持，同时已责成专家小组起草长期监管方案。\n对照背景：英美已出现零散限制——法院、酒吧、影院与部分餐厅禁用或限制智能眼镜；Meta 自 2023 年初以来售出至少 900 万副雷朋智能眼镜。就在两天前，荷兰眼镜连锁 Hans Anders 刚宣布停售 Meta 雷朋眼镜。\n端侧视角：AI 眼镜隐私议题完成三级跳——场馆禁拍、零售渠道停售、如今是国家立法动议；「临时禁令 + 长期规则并行」的挪威路径若通过，将成为其他欧洲国家的监管模板，硬件侧的隐私设计（指示灯、物理遮挡、无摄像头版本）将从产品差异点变为合规底线。",
       tags: ["挪威", "AI眼镜", "隐私监管", "临时禁令"],
       url: "https://www.theguardian.com/world/2026/oct/05/norway-temporary-ban-smart-glasses-public-places",
-      image: "https://i.guim.co.uk/img/media/40af5768117abd5443d47eba0a698ad852dd88a1/451_0_4085_3270/master/4085.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=7b05d2c122a783977bd623fb1520c5d1",
+      image: "images/archive/issue-42/n60.jpg",
       imageCap: "挪威拟临时禁用 AI 智能眼镜（图源：卫报）",
       highlight: true
     },
@@ -151,7 +151,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "IT之家 10 月 5 日报道（彭博社）：高通已获得支撑华为新型「逻辑折叠」（LogicFolding）芯片制造技术的专利许可，彭博社称这对华为及其在海外 AI 市场的推动力是一笔胜利。首款采用该技术的芯片为华为海思麒麟 9050 Pro——双裸片垂直堆叠，晶体管密度显著提升而面积小于前代。\n报道解读：与高通的协议有助于验证华为的芯片制造能力；华为视新架构为提升半导体性能的突破，帮助缩小与台积电等行业领导者的差距——该方法着重于提升数据传输速度，弥补光刻机方面的不足。\n更大背景：华为与高通同日宣布达成长期、广泛的专利许可协议，包含双方在 5G、计算、人工智能、网络等领域的专利组合交叉许可，高通还将收购华为在计算、AI、网络等领域的部分美国专利；华为称交易完成后其全部专利许可协议累计总金额预计将超过 69 亿美元。\n端侧视角：继麒麟 τ 家族随 Mate 90 齐发后，逻辑折叠架构再获高通许可与交叉授权背书——在光刻受限的环境下，先进封装正成为国产端侧芯片算力提升的关键增量，该架构也进入对外技术输出阶段。",
       tags: ["华为", "高通", "逻辑折叠", "专利授权"],
       url: "https://www.ithome.com/1/009/852.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/028e7003-f16a-4adc-b600-fb6f4a27537d.png",
+      image: "images/archive/issue-42/n58.png",
       imageCap: "高通×华为专利许可（图源：IT之家）",
       highlight: true
     },
@@ -162,7 +162,7 @@ WEEKLY_ARCHIVE[42] = {
       detail: "IT之家 10 月 5 日报道：荷兰大型眼镜连锁企业 Hans Anders 宣布暂停在荷兰与比利时销售 Meta 雷朋智能眼镜，成为较早采取此类行动的零售商之一。\n背景：随着隐私抗议升温、监管警示及诉讼压力增加，智能眼镜正面临更广泛的抵制浪潮；此前多起酒吧、演出场所的禁拍事件均集中于带摄像头的眼镜产品。\n端侧视角：AI 眼镜的隐私问题正从舆论争议走向渠道抵制——继场馆禁拍、应用商店下架风波之后，抵制首次蔓延到眼镜零售渠道；硬件侧的隐私设计（录制指示灯、物理遮挡、无摄像头版本）正从可选项变成渠道准入项。",
       tags: ["Meta", "雷朋智能眼镜", "隐私", "AI眼镜"],
       url: "https://www.ithome.com/1/009/798.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/8/373f8d53-b946-46bd-9bc3-694c7e7017dc.jpg",
+      image: "images/archive/issue-42/n59.jpg",
       imageCap: "Meta 雷朋智能眼镜（图源：IT之家）",
       highlight: false
     },

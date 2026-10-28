@@ -516,7 +516,7 @@
     var list = slice.map(function (p) {
       return '<a class="post-item' + (p.e ? " edge" : "") + '" href="' + esc(p.u) + '" target="_blank" rel="noopener">' +
         '<span class="post-date">' + esc(p.d || "—") + "</span>" +
-        '<span class="post-main"><b class="post-title">' + esc(p.t) + "</b>" +
+        '<span class="post-main"><b class="post-title">' + esc(p.t || (p.s ? p.s.slice(0, 42) + "…" : "（未取到标题）")) + "</b>" +
         (p.s ? '<i class="post-desc">' + esc(p.s) + "</i>" : "") + "</span>" +
         (p.e ? '<span class="post-flag">端侧</span>' : "") + "</a>";
     }).join("");

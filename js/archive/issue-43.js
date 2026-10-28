@@ -19,8 +19,8 @@ WEEKLY_ARCHIVE[43] = {
       detail: "事件要点：央视新闻报道，我国首个走完「大模型备案—终端入网」完整合规流程的 AI 智能体手机开售；其核心交互是屏幕自动化——AI 读懂屏幕内容、模拟人的点击与滑动来完成任务，但豆包手机助手被超百款应用集体拒绝——不是无法使用，而是禁止豆包助手操控应用。\n抵触原因：应用方一怕安全责任——智能体被植入恶意软件或泄露隐私时责任如何划定没有先例；二怕商业生态——用户关系、核心数据、流量入口的主导权，不愿交由手机厂商的 AI 统一调度。\n路线之争：与「读屏幕」相对的是定向 API 接口路线，只开放有限操作入口；历史上早期搜索引擎抓取数据同样遭集体抵制，最终以 Robots 协议划定边界，SAEP 被寄望复刻这一路径。\nSAEP 要点：第三方应用可自主声明操作边界，明确允许或拒绝 AI 助手的屏幕自动化操作，明确拒绝的应用将不再被自动化执行；规则公示期 30 天。\n专家观点：中科院软件所高级工程师郑森文认为，SAEP 有望解决三个痛点——风控一刀切会误伤授权智能体、冲突从事后博弈变事前协商、标准化声明降低数百万款应用的协商成本；但要成为行业标准仍需各方博弈与主管部门规范。\n端侧视角：智能体手机的成败不只在模型与系统，更在应用生态的调度权分配——继阶跃 Step AOS 重构系统、微信 A2A 开放操作之后，本周端侧智能体主线第三次撞上「生态博弈」；SAEP 若立得住，将是端侧智能体拿到应用生态通行证的关键一步。",
       tags: ["豆包", "智能体手机", "SAEP", "应用生态"],
       url: "https://www.chinanews.com.cn/sh/2026/10-18/10716588.shtml",
-      image: "",
-      imageCap: "",
+      image: "images/archive/issue-43/n95.jpg",
+      imageCap: "超百款 App 拒绝豆包助手操控（图：新浪财经）",
       highlight: false
     },
     {
@@ -30,7 +30,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "曝光要点（古尔曼 10 月 18 日《Power On》）：产品并非 HomeView 的直接继任机型，而是定位更高端的版本；9 英寸屏幕+电动机械臂，可围绕底座 360 度旋转、通过语音识别自动转向说话的人；最快 2027 年发布，可能更像一款陪伴型产品。\n项目脉络：苹果在机械臂领域布局多年，2024 年有传闻称苹果想把造车项目的机器人技术转入家庭领域，当年 8 月首次曝出类「iPad+机械臂」家用机器人项目（代号 J595，2022 年即获高管团队批准立项），售价传闻约 1000 美元，分析师郭明錤曾给出最早 2028 年量产的判断。\n近期节奏：苹果 9 月已发布智能家居中枢 HomeView（特努斯任 CEO 后第二场发布活动），并官宣当地时间 10 月 28 日在洛杉矶举办第三场发布活动「Pro and tell」（预计触屏 MacBook Pro 等）——机器人本体预计不在本场，但智能家居产品线密集落子为 J595 铺路。\n端侧视角：家用桌面机器人是继智能音箱、AI 眼镜之后又一个常开端侧 AI 入口形态——「语音识别+自动转向跟踪」意味着多模态常开感知必须在端侧低延迟完成；J595 与 OpenAI 正在打造的无屏智能音箱属同一场「AI 入口卡位战」（两家刚因 AI 设备机密对簿公堂），2027 年前后端侧 AI 硬件将迎来苹果正式入场。",
       tags: ["苹果", "家用机器人", "J595", "HomeView"],
       url: "https://www.ithome.com/1/014/611.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/0e4e812a-0688-4265-949d-289ebd400a59.jpg",
+      image: "images/archive/issue-43/n106.jpg",
       imageCap: "苹果 HomeView 智能家庭中枢与机械臂构想（图：IT之家）",
       highlight: false
     },
@@ -41,7 +41,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 17 日报道：微信鸿蒙版 App 现已支持使用小艺发送微信——据博主 @伤心萨摩耶Ciuciu 透露，鸿蒙微信移动版 8.0.22 更新接入 A2A 能力，支持语音唤醒小艺发送指令操作微信。\n能力边界：当前支持向好友发送文字消息（不支持发送表情）、发起语音或视频通话；暂不支持操作微信向群聊发送消息或发起通话，也不支持操作微信分身；小艺版本需更新至 11.7.8.303。\n端侧视角：这是 A2A（Agent-to-Agent）协议一周内第二次公开落地——上一例是 Rokid 眼镜经 A2A 调用腾讯出行打车，这次是鸿蒙系统智能体小艺经 A2A 操作微信；超级 App 开放智能体操作入口，意味着「智能体接管应用」从演示走进普通用户手机，语音发微信只是第一步。",
       tags: ["微信", "鸿蒙", "A2A协议", "小艺"],
       url: "https://www.ithome.com/1/014/331.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/46e1790f-ecca-4dc5-8d98-4d5dc9253c84.jpg",
+      image: "images/archive/issue-43/n91.jpg",
       imageCap: "微信鸿蒙版（图源：IT之家）",
       highlight: false
     },
@@ -52,7 +52,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "模型背景（官方公告）：V4.1 Flash 于 9 月 10 日发布，是 DeepSeek 全新模型结构系列中的最小尺寸模型——Causal-Encoder-Decoder 不对称结构（输入激活 8B、输出激活 16B）的 552B MoE，具备原生多模态视觉理解；基准测试超越包括 DeepSeek V4 Pro 在内的旗舰模型，官方已计划下线 V4 Pro 并将其请求路由至 V4.1 Flash。\n缓存架构：新一代结构大幅压缩 KV Cache——对 HBM（显存）的需求降至上一代的 1/4、对 SSD 降至 1/8；配套 arXiv 论文披露采用 CSA2（Compressed Sparse Attention 2）跨层 KV 复用，全局 KV 约 890 B/token 并支持 100 万 token 上下文。Agent 场景缓存命中费用占比高，KV 压缩直接大幅降低长时程智能体任务成本。\n1017 更新：各基准能力较上一版明显提升，任务运行时间与输出长度缩短——多个 Harness 下达到新的性能-费用帕累托最优；基于自反馈强化学习增强从零构建完整项目的能力（游戏开发、3D 建模），可承接提示极简的「许愿式」编程；针对 DeepSeek Harness、腾讯 CodeBuddy 与 WorkBuddy 适配优化。\n生态与开源：权重延续 MIT 许可在 HuggingFace 与 ModelScope 开放；腾讯 WorkBuddy/CodeBuddy 与 OpenCode 作为官方合作伙伴全量接入；定价采用峰谷模式（闲时为高峰一半）。\n端侧视角：KV 缓存是长上下文与 Agent 的第一内存瓶颈——「显存 1/4」的架构级压缩意味着同等硬件可承载 4 倍并发或 4 倍长度的上下文，与论文板块的 PriorityFEC 缓存交接、精度调度同题；MIT 权重让本地部署与蒸馏路线完全开放。",
       tags: ["DeepSeek", "V4.1 Flash", "KV缓存", "CSA2", "MIT开源"],
       url: "https://www.ithome.com/1/014/328.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/ca365e64-d286-4a9b-842d-37162dbd5fe2.jpg",
+      image: "images/archive/issue-43/n92.jpg",
       imageCap: "DeepSeek V4.1-Flash-1017（图源：IT之家）",
       highlight: false
     },
@@ -63,7 +63,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 17 日报道（Wccftech）：开发者 abhi245y 基于资深 AI 工程师 Mert Cobanov 的 PS5LM（llama.cpp 移植项目）开发原生 GPU 应用 PS5LM Plus，让越狱后的 PS5 在本地运行 Qwen3.8-27B 等大模型。\n技术路径：早期版本靠 CPU 运行 27B 模型约 1 token/分钟；新版移植 Mesa 开源项目的 AMD RADV 驱动并通过 Vulkan 计算接口让 llama.cpp 原生运行——可用内存从约 6GB 提升至 11.4GB。\n性能：依托 PS5 的 448GB/s 内存带宽，Qwen3.8-27B（高度量化）生成速度 20.9 token/s，GPU 占用 100%、CPU 仅 2%；更小模型更快——Gemma 4 E4B 约 61 token/s、Llama 3.2 3B 达 124 token/s。\n生态玩法：内置网页聊天界面，局域网 8081 端口提供 API 服务，兼容 OpenAI 与 Anthropic API 格式，opencode、Codex、Claude Code 等工具可直接调用 PS5 上的模型。\n端侧视角：这证明了游戏主机的统一内存架构天然适合本地推理——448GB/s 带宽超过多数桌面独显；不过 16GB 统一内存仍限制模型规模，且越狱有封号风险，属社区样本而非推荐玩法。",
       tags: ["PS5", "本地推理", "llama.cpp", "Vulkan"],
       url: "https://www.ithome.com/1/014/372.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/643504c8-98d7-469d-8baf-64185024da7e.png",
+      image: "images/archive/issue-43/n93.png",
       imageCap: "PS5LM Plus（图源：IT之家）",
       highlight: false
     },
@@ -73,7 +73,7 @@ WEEKLY_ARCHIVE[43] = {
       summary: "Meta 发布迄今最强的美国开放权重模型 Muse Spark Open——总参数 8160 亿、每 token 激活 420 亿（稀疏 MoE），100 万 token 上下文、原生多模态，主攻编程与智能体长程任务；权重已在 Hugging Face 开放下载。官方主打本地部署：借助最新 MLX 框架，两台 M5 Ultra Mac Studio（合计约 1TB 统一内存）即可本地运行，扎克伯格公开感谢与苹果新 CEO 特努斯团队的合作，特努斯回应「Mac Studio 正持续拓展端侧 AI 边界」。",
       detail: "发布要点：总参数 8160 亿、每次推理激活 420 亿（稀疏 MoE 架构），上下文窗口 100 万 token；原生多模态（文本/图像/视频/音频输入）；主打编程与智能体工作流——长周期任务、复杂软件工程与多步推理；权重已在 Hugging Face 开放下载，官方支持 SGLang / vLLM / MLX 三条部署路径，并针对 AMD、苹果、英特尔与英伟达芯片优化；API 经 Baseten、Groq、OpenRouter、Together AI 等平台提供。\n本地部署：官方演示「前沿模型搬上桌面」——两台 M5 Ultra Mac Studio 经最新版 MLX 框架协同（单机最高 512GB 统一内存、两台合计约 1TB，内存带宽 1.2TB/s），现场演示本地修改 iOS 开源客户端代码与操作 DaVinci Resolve 剪辑视频；扎克伯格特别感谢与苹果新 CEO 约翰·特努斯及苹果团队的合作，特努斯在评论区回应「Mac Studio 正持续拓展端侧 AI 边界」。\n端侧视角：816B 本身不是端侧量级，但端侧意义在两头——开放权重是端侧小模型的「水源」（蒸馏母体与量化对象），而 Meta×Apple 围绕 MLX 的本地化合作，把「前沿模型本地跑」从玩家圈推向工作站主流，是开放权重生态与端侧部署工具链合流的标志性一步。\n事件线：本条为「Meta Muse 生态」线的开放权重落子——10-13 发布云端前沿模型 Muse Wonder 后，三天内补齐开源侧。\n合作背景（据 CNBC、Axios、TechCrunch 报道补核）：Apple 与 Meta 达成合作，共同使 Muse Spark Open 更易于在 M5 Ultra Mac Studio（含集群配置）上本地运行——本地部署带来安全与隐私优势并节省云成本；Axios 评价这是两家长期不和的公司「为 AI 尽释前嫌」。",
       url: "https://zhidx.com/p/601572.html",
-      image: "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/268742_Mac_Studio_AKrales_0025.jpg?quality=90&strip=all",
+      image: "images/archive/issue-43/n90.jpg",
       imageCap: "Mac Studio 本地跑前沿模型（图：The Verge）",
       tags: ["Meta", "Muse Spark Open", "开放权重", "MLX", "Mac Studio"],
       highlight: true
@@ -85,7 +85,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 16 日报道：腾讯混元宣布推出智能体记忆框架 Hy Memory 2.0，开源专用模型、记忆框架与 MemHub 应用三层能力——可独立使用也可组合成完整 Memory 方案；已在腾讯内部金融、资讯、知识管理、办公 Agent、社交娱乐与游戏等业务落地。\n框架层：负责聊天、工作、代码三类记忆的存储、更新与进化，SDK 接入 Agent——业界首个提出工作记忆与代码记忆的记忆框架；四套基准上对比 Mem0、MemOS、EverOS 等开源框架均第一：工作记忆平均分 55.31%（领先次优 10.2 个百分点），代码问答准确率 64.2%，聊天记忆准确率 72.6% 且每题 Token 减少 39.3%。\n记忆设计：聊天记忆从零散事实升级为完整事件脉络（合并重复、剥离冲突）；工作记忆以多维度记录任务目标、已确定做法与阶段结果，复用经验前先判断适用条件；长程任务每次续开前自动找回相关决定与仍然适用的经验。\n模型层：Hy-Memory-30A3B 专为记忆场景训练（约 3B 激活参数）——在四套评测框架宏观平均 55.49%，高于 Claude Opus 5 的 54.62%、DeepSeek V4.1 Flash 的 53.64% 与 Qwen3-30B-A3B 的 44.37%。\n端侧视角：记忆是智能体的「外置海马体」——3B 激活的专用模型规模可端侧部署；MemHub 把记忆放回本地并以插件打通 10 种 AI 工具（WorkBuddy、Cursor、Codex、Qwen Code、DeepSeek Harness 等），与此前开源的 TeamAI 同构成腾讯的智能体基础设施拼图。",
       tags: ["腾讯混元", "Hy Memory", "智能体记忆", "开源"],
       url: "https://www.ithome.com/1/014/108.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/aed8144f-1191-4985-9350-654f5c1f29bd.png",
+      image: "images/archive/issue-43/n87.png",
       imageCap: "Hy Memory 2.0（图源：IT之家）",
       highlight: true
     },
@@ -96,7 +96,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 16 日报道：乐奇 Rokid 宣布与腾讯出行服务合作，上线行业首个 AI 眼镜原生打车服务——接入腾讯出行服务 Agent 后，用户只需说出目的地，眼镜即可完成从识别需求、发起叫车，到选择下单、支付车费的打车全流程，并提示车辆信息与预计到达时间。\n协作架构：乐奇眼镜 Agent 负责理解需求与感知交互，腾讯出行服务 Agent 提供覆盖全流程的 AI 打车——双方通过 A2A（Agent-to-Agent）标准协议实现智能体直连。\n能力封装：腾讯出行把地点推荐、上下车点选择、附近车辆查询、预估价格与多车型比价、一键下单、订单状态实时同步、免密支付等能力封装为面向智能穿戴设备的标准化服务，眼镜端按需调用。\n边界诚实：涉及支付、改目的地与取消订单时，手机仍是更稳妥的后备入口——Rokid 称理想形态是眼镜负责发起需求、实时提醒与环境交互，手机负责复杂确认与异常处理；语音叫车同时降低老人、儿童等群体的使用门槛。\n端侧视角：这是 A2A 智能体互联协议的首个消费级落地样本——AI 眼镜的竞争从硬件参数转向「谁能把服务生态接进视野」，与千问眼镜的虹膜支付、鸿蒙座舱的车载自动化同属「智能体接管服务入口」这条主线。",
       tags: ["Rokid", "腾讯出行", "AI眼镜", "A2A协议"],
       url: "https://www.ithome.com/1/013/964.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/94ab9317-6d25-4d64-a334-5e730ae61024.jpg",
+      image: "images/archive/issue-43/n88.jpg",
       imageCap: "AI 眼镜原生打车（图源：IT之家）",
       highlight: false
     },
@@ -107,7 +107,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 16 日报道：XREAL 在海外发布新款 AR 眼镜 One Pro Plus，定价 599 美元（约合 4015 元）——主打面板亮度与人体工程学升级。\n显示：双 0.55 英寸索尼 Micro-OLED 面板，峰值亮度最高 1200 尼特（前代 700 尼特）；新增 AI HDR 功能借助 AI 改善画面对比度，并提供标准、电影、阅读三种显示模式。\n结构与引擎：重新设计的鼻托结构改善长时间佩戴舒适性；改进的 Real 3D 引擎可将普通 2D 内容转换为空间感 3D 画面，处理帧率最高 60 FPS；仍搭载自研 X1 空间计算芯片，视场角维持 57 度。\n端侧视角：显示素质（亮度/HDR/3D 转换）是 AI 眼镜「信息呈现层」的硬指标——X1 芯片承担空间计算与 3D 转换的端侧负载；XREAL 在 AURA（Android XR 全场景）之外以 One 系列迭代显示旗舰线，双线并进对撞 Meta。",
       tags: ["XREAL", "AR眼镜", "AI HDR", "Micro-OLED"],
       url: "https://www.ithome.com/1/014/137.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/c35c3078-9523-40c5-af87-f27f51e613a4.png",
+      image: "images/archive/issue-43/n89.png",
       imageCap: "XREAL One Pro Plus（图源：IT之家）",
       highlight: false
     },
@@ -117,7 +117,7 @@ WEEKLY_ARCHIVE[43] = {
       summary: "谷歌 10 月上旬发布 Gemini 4 Argon 的机器人能力——在具身推理基准 ERQA 纯推理得分 87%，超过所有其他前沿模型；Real2Sim 流水线从单张桌面照片合成数十个任务、数千个仿真回合，把下游 VLA 真机成功率从 56% 提升到 75%、完成时间从 35 秒压缩到 24 秒。同期 OpenAI 向全量 ChatGPT 用户推送 GPT-6 Sol/Luna，Physical Intelligence 开放 Pi API Beta，DeepSeek 以约 1.4 亿元参与宇树科创板战略配售——具身大脑赛道挤满巨头。",
       detail: "谷歌侧（另据腾讯新闻 10 月 14 日 Argon 发布报道交叉核验）：Gemini 4 Argon 定位「通用物理推理模型」，具身推理基准 ERQA 纯推理得分 87%；演示链路为「视频生成 MuJoCo 仿真孪生—人手遥操作转移到双臂人形—真机复现」；Real2Sim 从单张桌面照片生成数十个任务、数千个仿真回合，下游 VLA 真机成功率 56%→75%、完成时间 35 秒→24 秒，合成 4500+ 域随机化剧集；抓取放置任务自我改进，首次 58.9 秒、第 3 次迭代 17.4 秒。\n行业格局：OpenAI 于 10 月 7 日向全量用户推送 GPT-6 Sol/Luna（Intelligent UI）；Physical Intelligence 10 月 13 日开放 Pi API Beta（上传数据—托管微调—云端推理—真机执行）；DeepSeek 以约 1.4 亿元参与宇树科创板 IPO 战略配售（锁定 36 个月）；宇树王兴兴在工博会表示具身拐点「快则一两年」。亿欧分析点名四类「最先承压」的公司：套壳方案商、传统示教集成商、单任务垂直 VLA 初创与低质仿真建模商。\n端侧视角：具身智能当前主流是「云端大脑 + 端侧小脑」分层——旗舰模型负责规划与仿真训练，机器人本体上的端侧控制器负责实时执行；Argon 的 Real2Sim 合成流水线同时也是端侧 VLA 小模型的训练数据水源（数千仿真回合可直接用于蒸馏），云端旗舰每一次升级都在抬高本体端侧控制器的对齐目标。\n收录定位：云端旗舰的具身升级直接决定端侧控制器的对齐目标与训练数据水位——「云端大脑 + 端侧小脑」的分层格局由此越发清晰。",
       url: "https://news.qq.com/rain/a/20261016A0EHO000",
-      image: "https://inews.gtimg.com/om_ls/Oxy-e5rt3p5ARbTThUkaoJ_MKKTth5gwsTBIRKSt6uDaoAA_640330/0",
+      image: "images/archive/issue-43/n105.png",
       imageCap: "Gemini 4 Argon 具身能力引发行业震动（图：腾讯新闻）",
       tags: ["Google", "Gemini 4 Argon", "具身智能", "VLA"],
       highlight: false
@@ -129,8 +129,8 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 15 日报道：苹果董事会执行主席库克在上海接受澎湃新闻、界面新闻等媒体采访时确认，苹果智能（Apple Intelligence）及相关阿里千问大模型已获得批准，将于 10 月晚些时候面向中国用户发布测试版本。\n功能范围：首批上线实时翻译、书写工具、照片清除工具等，但 Siri AI 不在此次发布范围之内；库克称「很高兴首批核心的苹果智能功能可以慢慢上线」。\n模型侧：此次获批涉及的阿里系模型包括通义千问（大语言模型）与通义万相（图像及视频生成）；彭博社古尔曼此前报道，苹果计划 12 月随 iOS 27.3 为中国用户正式推送，首批功能与 2024 年海外首发版基本一致。\n背景：同日商务部部长王文涛会见库克，就中美经贸关系、人工智能发展等议题交流；国行 iPhone 备案信息此前已新增 Apple 智能、通义千问、通义万相三个大模型编号。\n端侧视角：Apple Intelligence 入华采用「本地+合规云端模型」组合——端侧推理叠加获批的国产大模型，为跨国端侧 AI 的数据合规提供了首个大型样本；Siri AI 缺席首批也说明深度智能体能力仍卡在合规与能力双重门槛上。",
       tags: ["Apple Intelligence", "库克", "通义千问", "入华"],
       url: "https://www.ithome.com/1/013/478.htm",
-      image: "",
-      imageCap: "",
+      image: "images/archive/issue-43/n84.png",
+      imageCap: "库克确认 Apple Intelligence 入华（图：腾讯新闻）",
       highlight: true
     },
     {
@@ -140,7 +140,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 15 日报道（TechRadar）：英伟达 CEO 黄仁勋在伦敦 Build a Claw 活动上表示，OpenClaw 是迄今最重要的模型之一，将推动机器人等多个行业进步——「人工智能迎来转折点，开始变得实用」。\n定位：黄仁勋称 OpenClaw 是「首个真正可信的智能体运行框架」，像外骨骼的大语言模型——本质是为 LLM 提供实时运行框架，「电机、关节、车轮和机械臂都只是工具，最终要由电脑运行的智能体操控」。\n安全设计：他类比互联网早期——网页可获得硬件完全控制权，最直接的解法是容器隔离（操作系统内再运行一个 OS），为此英伟达开发了 OpenShell 系统：开发自主系统时首先假设任何对象不可信、仅授予最低权限。\n权限管控：「让一个自主系统做煎蛋，就没必要给它电锯，它只需要一口煎锅」；英伟达会持续监控自主系统，机器人违反规则或越权即告警，「我们可以决定是否让它闭嘴」。\n端侧视角：OpenShell 与 Windows 的 Execution Containers、OpenClaw 的企业级权限治理同题——智能体运行框架的竞争已经从「能跑」进入「可信隔离+最小权限」阶段，零信任容器正成为端侧智能体的标配底座。",
       tags: ["黄仁勋", "OpenClaw", "OpenShell", "零信任", "智能体安全"],
       url: "https://www.ithome.com/1/013/610.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/bd325a6f-8b9d-4ffb-8dba-b86d624b61fe.jpg",
+      image: "images/archive/issue-43/n85.jpg",
       imageCap: "黄仁勋谈 OpenClaw（图源：IT之家）",
       highlight: false
     },
@@ -151,7 +151,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "发布要点：PrismML 于 10 月 15 日发布博文推出 Ternary Bonsai 2 系列 2B/4B/9B 三个规格，底座为阿里 Qwen3.5，支持文本与图片输入；权重以 Apache 2.0 许可开放。\n三元权重：模型参数仅用 -1、0、+1 三种数值编码，配合 FP16 分组缩放（等效约 1.76 bit）——2B/4B/9B 的存储占用分别约 0.43GB、0.95GB 与 2GB，一部手机即可装下覆盖轻量任务到复杂工作流的完整模型线。\n实测性能：iPhone 18 Pro Max 本地推理 2B 模型最高 120 token/s、9B 模型最高 34 token/s；官方称在 RTX 4090 与 M5 Pro 等硬件上相较对应全精度模型可实现最高 5 倍吞吐量与 3 倍能效。\n部署与产品线：经 llama.cpp 在 NVIDIA GPU 运行、经 MLX 在 Mac/iPhone/iPad 部署；与 9 月发布的 Bonsai 2 27B（1-bit 量化压缩至 3.9GB、保留 98.2% 综合基准性能）组成 2B—27B 完整端侧产品线。\n端侧视角：继苹果端侧模型 14GB 占用争议、华为 30B MoE 上机之后，三元/1-bit 极限压缩成为端侧模型的第三条路线——「近无损压缩 + 手机级吞吐」若经第三方复现，Agent 常驻手机的存储门槛将被大幅拉低；另据 36 氪报道苹果已接触 PrismML（未获官方证实）。",
       tags: ["PrismML", "Ternary Bonsai 2", "三元权重", "端侧模型"],
       url: "https://www.ithome.com/1/013/894.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/5097a109-353a-4c05-8d0c-c9d262e1fe3c.png",
+      image: "images/archive/issue-43/n96.png",
       imageCap: "Ternary Bonsai 2（图源：IT之家）",
       highlight: false
     },
@@ -162,7 +162,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "产品要点：从 BubblePal 到 CocoMate 再到「光之召唤」，跃然创新的第三代 AI 玩具以奥特曼 IP 为载体、可佩戴彩色计时器形态——能量光效、实体按键与受力自动断开的安全挂绳；官方零售价 599 元，首发赠流量卡与迪迦 NFC 主题币。\n交互能力：按压触发与自由实时对话两种模式；角色设定、知识内容与长期记忆能力让对话可持续积累；好友可经 4G 或 Wi-Fi 远距离组队对讲，AI 互动剧场与 NFC 主题内容扩展玩法。\n技术底座：基于跃然 2.0 技术平台，自研虚拟操作系统降低内容适配难度，边缘节点通信架构支撑设备间实时连接，支持持续更新；配套 App 提供内容推送、设备管理与使用管理。\n端侧视角：AI 玩具是端侧智能体在儿童场景的先落地产物——长期记忆 + 角色设定 + 实时通信的组合本质是「陪伴型 Personal Agent」；跃然之外，字节「显眼包」（内测不对外售卖）、珞博芙崽等已形成赛道，大模型厂商的儿童端入口之争正在展开。",
       tags: ["跃然创新", "AI玩具", "光之召唤", "陪伴智能体"],
       url: "https://sz.ifeng.com/c/8xDX2OH7dM9",
-      image: "https://q0.itc.cn/q_70/images03/20261016/b3c4a9adb1654be8a869b02033b0a085.png",
+      image: "images/archive/issue-43/n97.png",
       imageCap: "光之召唤奥特曼 AI 互动对话器（图：搜狐科技）",
       highlight: false
     },
@@ -172,7 +172,7 @@ WEEKLY_ARCHIVE[43] = {
       summary: "苹果 7 月起诉 OpenAI 挖角并窃取商业秘密后，OpenAI 10 月中旬提交反诉文件：指控一名前员工（在 OpenAI 任职约六个月后重返苹果）离职当日将逾百份涉密文件发至个人账户——包含未发布设备的详细图像与高度机密的工程制造数据，并曾向苹果高管演示相关产品计划；苹果否认，称「未发现任何支持 OpenAI 指控的证据」。联邦法官 Davila 表示「极有可能」支持对仍在 OpenAI 任职的前苹果员工发出禁令，但称全面检查设备与代码库是「极其苛刻的要求」，苹果随后将检查范围缩小至少数离职员工。",
       detail: "事件脉络：苹果 7 月先行起诉，指 OpenAI 系统性挖角并窃取商业秘密；OpenAI 反诉文件指控前员工离职当日转移逾百份涉密文件（未发布设备详细图像、高度机密工程与制造数据），并警告苹果工程师或将据此影响其即将推出的产品；苹果回应称有严格政策防止新员工滥用前雇主保密信息，未发现支持指控的证据，并指 OpenAI 意在转移诉讼焦点。\n硬件背景：OpenAI 首款硬件据报道为「无屏幕的小型智能音箱」，设计职能由收购的前苹果设计师 Jonny Ive 团队（io 公司）接管——设备尚未发布即爆发机密之争，凸显 AI 硬件工程的稀缺性。\n端侧视角：此案争夺的核心资产正是「AI 设备团队与工程机密」——OpenAI 的无屏智能音箱是其押注端侧硬件的首作，诉讼结果将直接影响端侧 AI 设备赛道的竞争格局；对端侧读者，这是观察大模型厂商「从云到端」卡位战的标志性诉讼。\n收录定位：AI 设备团队与工程机密正成为大模型厂商「从云到端」卡位战的核心资产，此案值得端侧读者持续跟踪。",
       url: "https://news.qq.com/rain/a/20261015A02U0X00",
-      image: "https://inews.gtimg.com/news_ls/O8_URXmiGb-vn1SMocFN8L7z6TDGj8L7WLvKEQawiy0asAA_640330/0",
+      image: "images/archive/issue-43/n104.jpg",
       imageCap: "OpenAI 与苹果商业秘密纠纷升级（图：腾讯新闻）",
       tags: ["OpenAI", "苹果", "商业秘密", "AI硬件"],
       highlight: false
@@ -184,7 +184,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 14 日报道：华为智能汽车解决方案 BU 发布乾崑答网友问第 17 期，集中解答鸿蒙座舱「智慧场景」与 MoLA 2.0 小艺智能体的能力边界。\n智慧场景：一套「条件+动作」的车载自动化规则——触发条件包括主驾入座、挂入 D 挡、到达设定时间、副驾入座等；条件满足后自动执行播报日程、启动导航、调节空调、播放专属音乐、开启座椅功能等操作。\n场景示例：下班放松场景（挂入 D 挡→自动播放舒缓音乐+启动回家导航）；仪式感惊喜场景（副驾入座并系安全带→座椅按摩+生日祝福播报+生日歌）。\n智能体侧：基于 MoLA 2.0 架构的小艺智能体涵盖导航、人车交互、影音、畅聊、点餐等多款智能体；核心的超模糊地址搜索支持仅凭场景特征、相对位置、出行目的的口语化描述定位目的地。\n端侧视角：座舱是端侧智能体少有的「高确定性」落地场景——条件触发+多设备执行的自动化规则正是 GUI Agent 的车载形态，MoLA 2.0 多智能体架构则把任务拆解为可组合的专用智能体。",
       tags: ["鸿蒙座舱", "智慧场景", "小艺智能体", "车载自动化"],
       url: "https://www.ithome.com/1/012/979.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/0cbed7a7-e45e-466b-acb2-846f25b71fe5.jpg",
+      image: "images/archive/issue-43/n83.jpg",
       imageCap: "鸿蒙座舱智慧场景（图源：IT之家）",
       highlight: false
     },
@@ -195,8 +195,8 @@ WEEKLY_ARCHIVE[43] = {
       detail: "报告要点：10 月 14 日于济南 AIIC2026「端侧智能论坛」发布，由信通院人工智能所副总工程师闫树解读；核心判断是端侧智能并非「在本地跑大模型」，而是以本地为主、端云协同的全栈能力体系。\n五层架构：智能硬件层（异构计算与高效存储支撑模型运行）、基础软件层（编译适配与资源调度打通模型到硬件的部署路径）、端侧模型层（轻量化与高效推理）、端侧应用层（智能体与原生应用）、端侧安全信任层（模型、数据与智能体执行的可信边界）。\n产业判断：端侧智能催生五大原生产品形态——个人智能、空间智能、移动智能、行业智能节点与具身智能；应用方式正由单点功能向持续服务、多设备协同和任务闭环演进，加快渗透消费娱乐、智慧家庭、办公、出行与健康等真实场景。\n配套动作：论坛同场启动「端侧智能测试平台共建计划」（华为、中兴、vivo、荣耀、小米、联通等参与）并发布端侧智能测试平台 1.0——测评标准先行的意图明显。\n端侧视角：这是国内权威机构首次为端侧智能给出体系化产业定义——五层架构与五大产品形态为「端侧 AI」划定了与云端 AI 并列的产业坐标系，测试平台共建计划把主流终端厂与运营商拉进同一测评框架，后续评测结果可能成为行业事实门槛（与工信部 AI 终端智能化分级 L1-L4 国标互为补充）。",
       tags: ["信通院", "端侧智能", "产业报告", "端云协同"],
       url: "https://www.sohu.com/a/1091069506_121124361",
-      image: "",
-      imageCap: "",
+      image: "images/archive/issue-43/n120.png",
+      imageCap: "信通院《端侧智能产业发展报告（2026 年）》发布（图：搜狐）",
       highlight: false
     },
     {
@@ -205,7 +205,7 @@ WEEKLY_ARCHIVE[43] = {
       summary: "三星 Galaxy Glasses 曝光最终形态参数：整机约 41 克、搭载骁龙 AR1 Gen1 眼镜专用端侧芯片，预计 11 月上市——继通过 FCC 认证后规格基本齐备，直接对标 Meta 雷朋眼镜的轻量无屏音频 AI 路线。",
       detail: "曝光要点：整机约 41 克，为同类 AI 眼镜最轻一档；搭载高通骁龙 AR1 Gen1（眼镜专用端侧芯片），运行 Android XR 并集成谷歌 Gemini；预计 11 月上市，与此前 FCC 认证信息一致。\n端侧视角：AR1 Gen1 是高通为眼镜单独开辟的端侧芯片线——41 克机身内完成拍照、翻译与助手推理，轻量化 + 专用芯片已成为 AI 眼镜收敛后的共识形态；上市后将形成 Meta、三星与安卓系三方对垒。\n事件线：本条为「三星 Galaxy 眼镜」线的参数落定进展（此前已过 FCC 认证）。",
       url: "https://www.sohu.com/a/1086993778_114760",
-      image: "https://q4.itc.cn/q_70/images03/20261013/a62f702de1394c888d172b90185a6f2f.jpeg", imageCap: "三星首款智能眼镜（图：搜狐科技）",
+      image: "images/archive/issue-43/n70.jpg", imageCap: "三星首款智能眼镜（图：搜狐科技）",
       tags: ["三星", "Galaxy Glasses", "AI眼镜", "骁龙 AR1"]
     },
     {
@@ -214,7 +214,7 @@ WEEKLY_ARCHIVE[43] = {
       summary: "Meta 发布 Muse Wonder 系列前沿模型：主打长期记忆与代理任务，部分基准测试超越 Anthropic 与 OpenAI 同档模型；扎克伯格称 Meta 已在 AI 前沿追上竞争对手——Muse 智能体生态补齐自研模型底座。",
       detail: "发布要点：Muse Wonder 主打长期记忆（Active Memory）与代理任务执行，多家评测显示部分基准超越 Claude Opus 5.5 与 GPT-6 Astra；输出 API 定价每百万 token 20 美元；扎克伯格同时表示模型迭代速度将明显加快。\n端侧视角：Muse 线此前以智能体（应用层）见长、模型层依赖开源系，Wonder 补上了自研前沿底座——「智能体 × 前沿模型」闭环后，其眼镜侧端云协同的想象空间被打开。\n事件线：本条为「Meta Muse 生态」线的模型层重大进展。",
       url: "https://news.qq.com/rain/a/20261013A03H7Q00",
-      image: "https://inews.gtimg.com/om_ls/OXUNwzgxePLjd2e8ZzKetm8elNq1W7VNavVuOPzY", imageCap: "Muse Wonder 发布（图：腾讯新闻）",
+      image: "images/archive/issue-43/n71.jpg", imageCap: "Muse Wonder 发布（图：腾讯新闻）",
       tags: ["Meta", "Muse Wonder", "前沿模型", "智能体"],
       highlight: true
     },
@@ -225,7 +225,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 13 日报道：阶跃终端首款大模型原生智能体手机 STEPX Neo 先行版正式发布——搭载骁龙 8 系芯片，16GB+256GB 规格，碳黑/硅银两色；「软硬模三位一体」全栈价 3999 元（包含手机本体、StepAOS+Step Studio 与 Step 系列模型）。今日开启预售，10 月 16 日首销；先行版用户享连续 12 个月、每月百亿 Token 额度的 STEPX Token Plan。\n系统侧：Step AOS 1.0 宣称从零为智能体打造——长期记忆、任务调度、安全机制融入系统底层；双入口界面让用户与智能体互相可达，大量系统原子能力可被个人智能体「阶跃 Amoo」直接调用，能记住用户、更能替用户完成任务。\n硬件侧：智能体听觉增强系统由六麦克风阵列、低功耗音频感知芯片与 Whisper 1.0 拾音算法组成——复杂声场中准确识人，低功耗芯片独立运行 24 小时耗电仅 1.2%；双屏联动系统主动支持人机互动共享，背屏提供智能体专属表达。\n生态侧：Step 5 Preview 正式接入腾讯 WorkBuddy，把更强推理与 Agent 能力带入真实办公场景（深度研究、数据分析、PPT 生成等），10 月 25 日前限时免费；另推「阶跃 Amoo 成长计划」，前 1 万名达标用户获「星辰船票」，未来五年可 0 元置换任意 STEPX 新终端。\n端侧视角：区别于「手机外挂 AI 助手」的既有路线，STEPX Neo 把模型、系统、硬件三层按智能体重构——这是智能体手机从概念到商品的关键一步，其 Step AOS 与 Amoo 的实际任务完成度将是行业检验「原生」成色的第一块试金石。\n端侧模型（据凤凰评测与发布会报道补核）：搭载阶跃自研端侧基座模型 Step Edge——为终端硬件定制，本地 tool call 延迟低至 0.1 秒，支持多模态本地处理（无网可执行系统设置等简单指令）；Step-GUI Edge（前身 Gelab-Zero，4B 参数）为首款真正部署到手机的 GUI 模型，配合 GUI-MCP 协议可跨 200 多个 App 执行操作。\n架构与云端：采用「端侧快反应、云侧深思考」的端云协同——复杂任务交由云端 Step 5 等旗舰模型（Step Pro 旗舰推理模型参数量超 1.5 万亿）；芯片为骁龙 8 Gen 5，6260mAh 电池 + 80W 快充，6.36 英寸 1.5K 120Hz OLED。",
       tags: ["阶跃星辰", "STEPX Neo", "智能体手机", "Step AOS"],
       url: "https://www.ithome.com/1/012/556.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/16a74b51-3eb5-4a14-9608-ed9bb0803f1c.jpg",
+      image: "images/archive/issue-43/n79.jpg",
       imageCap: "STEPX Neo 先行版（图源：IT之家）",
       highlight: true
     },
@@ -236,7 +236,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 13 日报道：千问 AI 硬件 2026 新品发布会推出 N1/Pro 系列 AI 眼镜，核心围绕个人智能体理念——让 AI 从被动等待转向主动服务。N1 标准版 2899 元起，提供影像、主动感知、更换电池等核心能力，主打第一视角记录。\nPro 版创新：N1 Pro 在标准版之上新增高精度眼动交互、金融级虹膜核验支付（看一眼即可付款）、全天候健康监测——可采集心率、血氧、皮肤温度，提供主任医师级 AI 健康解读与 AI 情绪疗愈。\n硬件底座：全系三芯异构算力平台；5000 万像素超感影像系统支持 4K 录像、实况照片与多重防抖；全天候主动感知可自动会议记录、出行提醒；双电池可换电设计——N1 综合续航 9 小时、N1 Pro 8 小时，随时更换镜腿电池。\n同日开售的千问 AI 耳夹式耳机到手 1099 元：Bose 大师调音、0.5mm 记忆钛丝耳夹形态，IP55 防护；支持录音实时转写、离线本地录音、92 语种转写纪要与 89 种语言 AI 翻译（面对面/通话模式），耳机续航 9 小时、配合充电仓 40 小时。\n端侧视角：眼镜「看得见的交互」（眼动/虹膜）+ 耳机「听得懂的翻译」（89 语种）+ 主动感知，千问把 Personal Agent 拆进三类穿戴硬件——眼镜承担身份与支付、耳机承担语言与记录，与手机端智能体互为入口，AI 硬件的「智能体下半场」竞争正式开局。\n开售价格（华尔街见闻）：叠加国补与限时优惠后，N1 标准套装到手 2218 元起、超级续航套装 2446 元起；N1 Pro 标准套装到手 2600 元起、超级续航套装 2827 元起。",
       tags: ["千问", "AI眼镜", "AI耳机", "个人智能体"],
       url: "https://www.ithome.com/1/012/400.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/2ed58d28-7886-48f9-aff3-dce1c8a8069f.png",
+      image: "images/archive/issue-43/n80.png",
       imageCap: "千问 N1 系列 AI 眼镜（图源：IT之家）",
       highlight: true
     },
@@ -247,7 +247,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 13 日报道：面壁智能推出新一代端侧多模态大模型 MiniCPM-V 4.7——35B-A3B 与 1B 两种规格，其中 35B-A3B 是 MiniCPM-V 系列首个 MoE 模型。\n加速技术：基于最新 LES（前瞻专家调度）推理加速——35B-A3B 版本是首个支持端侧无损流畅运行的开源 MoE 模型，在 iPhone 17 Pro Max 上以仅 3GB 内存达到 13+ token/s 的解码速度。\n生态适配：同时支持 iOS、安卓和鸿蒙，并适配 Intel、AMD、Arm、瑞芯微、后摩等芯片平台，覆盖更多移动设备与本地计算场景；同步开源 Self-Replay Fine-Tuning（SRFT）微调方案，帮助开发者低成本扩展模型能力、减少灾难性遗忘。\n跑分对照：35B-A3B 在 Instruct 模式下以更短推理时间取得比 Qwen3.6 35B-A3B 更高的综合得分；1B 版本相对 MiniCPM-V 4.6 持续提升，综合得分与推理效率均显著领先 Qwen3.5 0.8B。\n端侧视角：「35B 级 MoE 无损进手机」把端侧多模态的规模上限又推高一档——3GB 内存的占用意味着中端机也能跑；瑞芯微、后摩等国产芯片平台进入官方适配清单，端侧模型与国产算力的组合拳正在成型。",
       tags: ["面壁智能", "MiniCPM-V", "端侧MoE", "LES加速"],
       url: "https://www.ithome.com/1/012/483.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/2c50c051-fc36-4558-bbd8-81e026a34460.png",
+      image: "images/archive/issue-43/n75.png",
       imageCap: "MiniCPM-V 4.7（图源：IT之家）",
       highlight: false
     },
@@ -258,7 +258,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 13 日报道：苹果发布 Apple HomeView 智能家居管理设备，标准版与壁挂版定价均为 299 美元（约合 2005 元）；首批 6 国当日预购，11 月 13 日正式开售。\n硬件：A18 芯片；7 英寸 Liquid Retina 方形屏（1088×1088、220ppi、0.3~500nits 自动亮度）；1200 万像素摄像头（f/2.4）；Wi-Fi 6E、蓝牙 6.0、Thread；需搭配 iOS/iPadOS 27.2 以上设备使用。\n智能与隐私：搭载基于 Apple Intelligence 的 Siri；面部识别最多 6 位家庭成员、按人切换信息/FaceTime/日历/提醒事项/查找的个人内容，苹果强调个人内容不会向其他家庭成员开放；配套 Schneider Home 壁挂支架 59.95~129.95 美元。\n设计：铝合金机身+不锈钢铰链连接半球形扬声器底座；表盘式个性化界面（支持人像景深的照片、随动作响应的流动界面、史努比动画界面），可作全家共享电子相框。\n端侧视角：继手机、PC 之后，苹果把 Apple Intelligence 的本地推理落进家庭中枢——A18 承载的 Siri 成为家庭场景的常驻智能体入口，「识别到谁就为谁服务」的多用户隔离正是端侧个性化推理的样板间。",
       tags: ["苹果", "HomeView", "智能家居中枢", "Apple Intelligence"],
       url: "https://www.ithome.com/1/012/566.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/d80467b3-e134-48d1-abd0-d08b89dba809.jpg",
+      image: "images/archive/issue-43/n81.jpg",
       imageCap: "Apple HomeView（图源：IT之家）",
       highlight: false
     },
@@ -269,7 +269,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 13 日报道：爱芯元智在 2026 中国国际工业博览会发布 AX8860 系列大算力 AI 芯片，定位大模型在边缘与端侧落地的算力底座。\n规格：16 核 Arm Cortex-A55 CPU+自研 NPU，256 TOPS 混合精度算力（原生 FP4、无稀疏性）；最高 128GB LPDDR5X、256-bit 位宽 273 GB/s 带宽；6nm 制程，支持 PCIe 5.0。\n形态与扩展：覆盖 40W 专用模块、单槽 PCIe 卡与单槽四芯方案，并规划 Mini PC/口袋 PC；支持 256 Gbps 网络接口——双芯级联 512 TOPS、四芯 1024 TOPS，扩展效率约 80%。\n生态：支持 vLLM、SGLang、PyTorch 主流推理框架与 ONNX、Hugging Face 格式开箱即用，兼容 OpenAI API 接口，配套量化/转换/编译/调试完整工具链；同步发布元曦模组 A256S 并展出推理卡与推理服务器。\n性能与价格：Qwen 27B 模型上 prefill 比 NVIDIA DGX Spark 快 25%、decode 快 30%；Sipeed 宣称整机定价接近 DGX Spark 的一半（DGX Spark 64GB 版 4999 美元起）。路线图：Axera 8950（500 TOPS）与 8970（700+ TOPS）。",
       tags: ["爱芯元智", "AX8860", "边缘算力", "FP4"],
       url: "https://www.ithome.com/1/012/551.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/23a83269-d2f5-49f8-ac2c-650dd47ce39b.png",
+      image: "images/archive/issue-43/n82.png",
       imageCap: "AX8860 发布（图源：IT之家）",
       highlight: false
     },
@@ -280,7 +280,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "量子位 10 月 13 日报道：APUS AI（麒麟合盛网络技术股份有限公司）宣布开源 Personal Agent 产品 Reflex Agent——基于自研开源决策模型 Reflex 构建 Harness，结合 Continuum 记忆引擎，由模型驱动 Harness 核心控制逻辑。\n架构差异：与主要依赖代码和提示词组织 Harness 的传统方案不同，Reflex Agent 由决策模型承担模型路由、技能选择、结果审查和执行监督，通过「决策—执行—反馈—再决策」循环推动任务持续向前——APUS 称之为 Loop Working：Agent 不只回答问题，更要围绕用户目标持续行动。\n记忆机制：Continuum 记忆引擎提供无限记忆（持续积累任务信息）、无损记忆（保留原始内容及关联）与无损输入（历史信息以原始内容参与决策）；「无限上下文」并非突破单次模型调用的输入长度限制，而是让记忆与任务周期不再受限于单次窗口。\n性能与开源：实验室实测相关测试场景响应速度最快达 Claude Code、Codex 等主流 Agent 的 3 倍；MIT 协议开源，提供桌面端、Web 与 SDK。\n端侧视角：决策模型接管 Harness 是「快系统」思想向智能体框架的延伸——路由与审查交给小而快的决策模型，恰与 Jev 路线、EmbeddingGemma 零样本路由同场竞技；开源桌面端形态也让个人 Agent 的本地部署多了一个可复现样本。",
       tags: ["APUS", "Reflex Agent", "决策模型", "开源Agent"],
       url: "https://www.qbitai.com/2026/10/503165.html",
-      image: "https://i.qbitai.com/wp-content/uploads/2026/10/d1a31ac10b6da805f34d746e2d4d7d8f.png",
+      image: "images/archive/issue-43/n86.png",
       imageCap: "Reflex Agent（图源：量子位）",
       highlight: false
     },
@@ -291,7 +291,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "发布要点（OPPO 官方通稿，10 月 13 日深圳）：ColorOS 17 面向全球发布，系统级 AI 能力包括——AI Mind Pilot 新增智能体模式（Agent Mode），可直接处理设备本地存储的照片与文件；AI Mind Space 个人信息中心以记忆合集自动归类相关内容并生成摘要；AI Mind Suggest 在恰当时刻主动推送晨报、出行与航班提醒；OSee 把识别、检索、扫描与翻译整合为一处视觉 AI 入口。\n端侧防诈：AI Call Guard「由端侧 AI 检测驱动，通话中实时监测」，可识别合成语音与 AI 换脸两类欺诈风险（首发于印尼、印度与泰国市场）；Private Computing Cloud 端到端加密新增后量子安全能力与双重加密机制，透明度报告可查询每次 AI 服务的调用时间与操作。\n性能引擎：Luminous 渲染引擎的统一渲染架构最高降低 30% 渲染负载与 25% 渲染内存占用；Laminar Flow 引擎使应用启动稳定性提升 55%、图库缩略图加载提速 50%、后台驻留应用增加 25% 以上；模拟六年老化测试仍保留 90% 以上初始流畅度。\n推送节奏：Find X10 系列首发搭载，全球升级 10 月 29 日启动并逐批覆盖 OPPO/一加/真我机型；国内正式版升级计划 10 月 8 日已开启，首批含 Find N6、Find X9 系列与一加 15 等，10 月 16 日、20 日后续批次陆续推送。\n端侧视角：继阶跃 Step AOS、鸿蒙小艺之后，又一系统级「智能体 OS」把调度权收到系统层——看点有二：智能体模式直调本地文件，把隐私数据处理留在设备内；端侧实时防诈把欺诈识别压进通话链路；叠加 OPPO/一加/真我三大品牌的机型覆盖面，端侧智能体正从旗舰专属走向规模铺量。",
       tags: ["OPPO", "ColorOS 17", "端侧智能体", "AI防诈"],
       url: "https://www.techritual.com/2026/10/13/591644/",
-      image: "https://www.techritual.com/wp-content/uploads/2026/10/featured-591644.jpg",
+      image: "images/archive/issue-43/n94.jpg",
       imageCap: "ColorOS 17 全球推广计划（图：Techritual）",
       highlight: false
     },
@@ -301,7 +301,7 @@ WEEKLY_ARCHIVE[43] = {
       summary: "华为鸿蒙 HarmonyOS 7 的小艺 AI 快捷栏上线时间公布：预计 10 月底分批推送——小艺以常驻桌面底栏形态提供跨应用服务与主动推荐，系统级智能体从「唤起式」走向「常驻式」。",
       detail: "功能要点：小艺 AI 快捷栏常驻桌面底部，支持跨应用拖拽、主动服务推荐与任务直达，10 月底起分批推送至鸿蒙 7 设备。\n端侧视角：与 Mate 90 端侧 30B MoE 大模型是同一条能力主线——端侧推理支撑常驻入口，智能体从「被唤起」变为「始终在场」，是系统级 Agent 交互形态的关键一步。\n事件线：本条为「华为小艺」线的系统层进展。",
       url: "https://news.qq.com/rain/a/20261012A0AW7B00",
-      image: "https://inews.gtimg.com/om_ls/OQoVukSf-71Z753J8WHxPujfz3910cq64_2Azx04", imageCap: "小艺 AI 快捷栏（图：腾讯新闻）",
+      image: "images/archive/issue-43/n72.jpg", imageCap: "小艺 AI 快捷栏（图：腾讯新闻）",
       tags: ["华为", "小艺智能体", "HarmonyOS", "系统级智能体"]
     },
     {
@@ -310,7 +310,7 @@ WEEKLY_ARCHIVE[43] = {
       summary: "安克 AI 会议耳机飞书版开售，1799 元：支持线上线下全场景录音、转写内容接入飞书生态——AI 耳机从翻译场景延伸到会议生产力，hearables 办公化路线成型。",
       detail: "产品要点：支持线上会议与线下面对面谈话的全场景录音转写，内容沉淀进飞书文档生态；售价 1799 元。\n端侧视角：AI 耳机赛道此前以翻译与降噪为主，此款把「录音-转写-办公生态」打通，是 hearables 向生产力工具进阶的代表案例；配件大厂入场也验证了 AI 耳机的需求确定性。\n边界说明：AI 配件以功能含端侧 AI（转写/翻译/降噪）为收录标准，无 AI 的纯配件不收。",
       url: "https://finance.sina.com.cn/tech/digi/2026-10-12/doc-iniuypex5250689.shtml",
-      image: "https://n.sinaimg.cn/spider20261012/74/w820h1654/20261012/d37f-18eda77204c38", imageCap: "安克 AI 会议耳机飞书版（图：新浪科技）",
+      image: "images/archive/issue-43/n73.jpg", imageCap: "安克 AI 会议耳机飞书版（图：新浪科技）",
       tags: ["安克", "AI耳机", "hearables", "会议转写"]
     },
     {
@@ -319,7 +319,7 @@ WEEKLY_ARCHIVE[43] = {
       summary: "三星披露存储路线：超 400 层 V-NAND 与扩展的 z NAND 产品线，三款面向 AI 设备的定制内存在研——端侧大模型带动存储定制化，内存容量与带宽成为 AI 终端新瓶颈。",
       detail: "路线要点：三星计划将 V-NAND 堆叠层数推过 400 层，并扩大低延迟 z NAND 产品线，其中三款定制 AI 内存面向智能体设备在研。\n端侧视角：端侧跑大模型的瓶颈正从算力转向内存——苹果 14GB 端侧模型占用的争议、高通 100B 端侧路线图，都指向存储定制化；三星此役是把「AI 内存」做成独立品类。\n事件线：本条为「端侧算力供应链」线的存储侧进展。",
       url: "https://www.sohu.com/a/1086612801_166680",
-      image: "https://q9.itc.cn/q_70/images03/20261012/d1cccf72156046858c48945e17c6", imageCap: "三星存储路线（图：搜狐科技）",
+      image: "images/archive/issue-43/n74.jpg", imageCap: "三星存储路线（图：搜狐科技）",
       tags: ["三星", "z NAND", "AI内存", "端侧存储"]
     },
     {
@@ -329,7 +329,7 @@ WEEKLY_ARCHIVE[43] = {
       detail: "IT之家 10 月 12 日报道：高通总裁兼首席执行官安蒙（Cristiano Amon）上月骁龙峰会期间接受采访表示，已有人工智能企业要求高通在 2028 年推出支持 100B 参数模型本地运行的智能手机移动平台。\n端侧意义：若 100B 模型端侧运行成为现实，本地模型体验与多智能体协同的效果都将显著提升——当前旗舰端侧模型仍在 30B 量级（华为 Mate 90 已落地端侧 30B MoE），2028 年 100B 目标意味着三代左右的代际跃迁。\n市场判断：安蒙认为 AI 智能体将推动下一轮智能手机「超级周期」，吸收因价格飙升而迟滞的换机需求；智能眼镜是他最看好的可穿戴 AI 设备；低功耗领域的技术积累则是高通面向数据中心的宝贵财富。\n通信侧：6G 预计在 2028 年洛杉矶奥运会有望演示新一代无线通信技术，早期部署 2029~2030 年启动——高清视频持续上传让每个人都能为 AI 提供实时的现实世界数据。",
       tags: ["高通", "安蒙", "100B端侧", "智能体手机"],
       url: "https://www.ithome.com/1/011/991.htm",
-      image: "https://img.ithome.com/newsuploadfiles/2026/10/4da85392-ef76-4d5f-a7f4-78a8a55b943b.jpg",
+      image: "images/archive/issue-43/n78.jpg",
       imageCap: "高通 CEO 安蒙（图源：IT之家）",
       highlight: false
     }

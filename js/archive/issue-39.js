@@ -18,7 +18,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "Meta Connect 2026 于当地时间 9 月 23 日开幕，站长之家（AIbase）9 月 24 日报道：个人智能体 Muse 贯穿全场，扎克伯格称要让数十亿人用上「超级智能」。\nMuse 生态：「Hey Muse」全面接入智能眼镜；Muse 拥有自己的邮箱（可直接替用户收发处理）；Mac 端 Muse App 可直接操作电脑——从语音助手升级为「全面智能体」。Muse 9 月 8 日推出后已登顶美区 App Store 与 Google Play 免费榜。\n硬件矩阵：Ray-Ban Meta Audio Glasses（无摄像头、43g、12 小时续航 + 充电盒 48 小时，$349）主打隐私形态；Ray-Ban Meta Gen 3（$449，12MP 摄像头、6 麦克风、通话降噪 90%、9 小时续航）；入门线 Meta Adventurer $249 起——2026 年底三大产品线合计将超 100 款 AI 眼镜。\n更远一步：Meta VR Glasses 重量仅 100g（约为 Quest 3 的 1/5），采用「眼镜 + 口袋计算单元」形态，2027 年春上市（$1299）；另公布电子宠物形态的独立 Muse 终端 Muse Charm（内置小屏 / 麦克风 / 扬声器，年底前推出）与眼镜听力增强能力。",
       tags: ["Meta Connect", "Muse", "AI眼镜", "智能体"],
       url: "https://www.chinaz.com/ainews/31346.shtml",
-      image: "https://n.sinaimg.cn/spider20260924/155/w660h295/20260924/36e9-20c2ba611e35c3a2649f53d623dc854e.jpg",
+      image: "images/archive/issue-39/n32.jpg",
       imageCap: "配图来自原文页面",
       highlight: true
     },
@@ -29,7 +29,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "9 月 24 日，第二代乐奇（Rokid）AI 眼镜在第五届数贸会全球首秀，AR圈在现场体验后给出三个关键词：更潮、更强、更舒适。\n方法论看点是「不减配」：带显示的 AI 眼镜通常先定电子件再包一个壳，二代乐奇把顺序反过来——先定框形与佩戴，再让光学与重量适配，把 AI 眼镜「做回一副眼镜」。\n行业背景：Q2 全球智能眼镜出货同比 +35%（见本板块另一条），Meta Connect 同日发布多款新品——Rokid 代表的中国玩家与 Meta 在「下一代端侧 AI 入口」上正面竞速。",
       tags: ["Rokid", "乐奇二代", "AI眼镜", "数贸会"],
       url: "https://news.qq.com/rain/a/20260924A09SWC00",
-      image: "https://inews.gtimg.com/om_ls/Onebi6GvNnxq_zXqA_k_IiUTTp1_N4uR8y_QVPZ6py5E0AA_640330/0",
+      image: "images/archive/issue-39/n27.jpg",
       imageCap: "配图来自原文页面"
     },
     {
@@ -39,7 +39,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "央广网 9 月 24 日报道：9 月 23 日云栖大会期间，斑马智能正式发布新一代全模态端侧大模型 AutoOmni 2.0-23B-A3B，AutoClaw 2.0 智舱协作服务实车方案同步亮相。\n技术要点：模型采用 MoE 混合专家架构（命名中的 A3B 即激活参数约 3B 量级的稀疏架构），官方称在智能座舱场景下普通任务处理能力堪比 10 倍参数量级的云模型，复杂任务端云协同处理。\n行业语境：车载是端侧大模型落地最快的场景之一（车规算力 + 私密性强 + 交互高频）；同期云栖大会 AI 新品密集发布，端侧算力被业内评价为「全面爆发」。",
       tags: ["云栖大会", "AutoOmni 2.0", "智能座舱", "MoE"],
       url: "https://news.qq.com/rain/a/20260924A07A9800",
-      image: "https://inews.gtimg.com/om_ls/OgUErLUkrqPgOv1hN-ljbN8wvZoECL9qAdZsuHRFHioAYAA_640330/0",
+      image: "images/archive/issue-39/n21.png",
       imageCap: "配图来自原文页面"
     },
     {
@@ -49,7 +49,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "Jev 是 TypeSafe AI（前 OpenAI 研究员 Diogo Almeida 创办）9 月 15 日开放早期访问的新模型，被媒体称为「哑巴 AI」：\n它基于 transformer 架构，但不是 LLM——不写文章、不写代码、不陪聊，放弃逐 token 的文本生成，直接输出「类型安全的概率化决策」并内置校准（calibration），对标心理学中快思考的「系统一」能力。因此它高速、轻量，官方与第三方评测称在相关决策任务上比传统 LLM 快约 200 倍、便宜约 400 倍，且从机制上避免幻觉。\n有多轰动：发布 3 天内获 Vercel、Cloudflare、LangChain 等主流平台整合；内测开放不到 36 小时涌入 14 万开发者；同日公司宣布完成 DCVC 领投的 4000 万美元种子轮。TechCrunch 评价其为「一种新型 AI 模型」，Wikipedia 已收录词条。\n36氪追问《Jev 真是新范式吗？》：它在企业自动化（分类、风控、路由等结构化决策）中优势明显，但复杂推理与开放生成仍需与传统 LLM 配合——「快系统 + 慢系统」的组合成为新的工程范式。",
       tags: ["Jev", "TypeSafe AI", "系统一模型", "决策模型"],
       url: "https://www.36kr.com/p/3988372551990276",
-      image: "https://img.36krcdn.com/hsossms/20260918/v2_cfa5dfb20fde4be3b974bd19767f8254@000000@ai_oswg679481oswg2304oswg1728_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
+      image: "images/archive/issue-39/n11.jpg",
       imageCap: "配图来自原文页面",
       highlight: true
     },
@@ -60,7 +60,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "小米 18 Pro 系列于 9 月 23 日晚正式发布，全球首发 2nm 制程的骁龙8E6（第六代骁龙8至尊版，8 Elite Gen 6）。\n定价与销售：起售价 5999 元，发布即开售；另推出透明特别版，起售价 9999 元——雷军发文称「惊艳亮相」，卢伟冰登台演讲。\n规格要点：骁龙8E6 此前跑分已显示安卓单核最高分，配合 LPDDR6 内存与澎湃 OS4；影像配双 2 亿像素与防窥屏。\n意义：这是 2nm 制程 + 面向智能体的 Hexagon NPU 首次到达消费者手中——高通本周在骁龙峰会上主讲的「端侧智能体时代」，发布当晚起即可被真实买到。",
       tags: ["小米 18 Pro", "骁龙8E6", "2nm", "发布即开售"],
       url: "https://news.qq.com/rain/a/20260923A0BVK600",
-      image: "https://inews.gtimg.com/om_ls/OKuU0fqca7EVcsSxL7UByEwTtbeNlwlhfknP5NhmYcpacAA_640330/0",
+      image: "images/archive/issue-39/n26.png",
       imageCap: "配图来自原文页面",
       highlight: true
     },
@@ -71,7 +71,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "9 月 22–24 日骁龙峰会（毛伊岛）进行中，高通正式发布第六代骁龙8双旗舰处理器（8 Elite Gen 6 与更高档的 Extreme），官方口径「正式迈入端侧智能体 AI 新时代」。\n规格：2nm 制程；Oryon CPU 最高 5.11GHz；Hexagon NPU 新增 Element Accelerator（元素加速器）与更大共享内存，端侧可运行最高 300 亿参数模型；GPU 性能大幅提升，Extreme 档面向超旗舰机型。\n落地：小米 18 Pro 已于 9 月 23 日晚首发搭载骁龙8E6 登场、发布即开售（见本板块另一条）；泄露定价约 320 美元，后续首发机型年底前密集亮相。\n配合此前联发科天玑 9600 Pro（同样宣称 30B 端侧模型），「2nm + 端侧智能体」已成为本轮旗舰 SoC 的共同卖点。",
       tags: ["骁龙8 Elite Gen 6", "2nm", "Hexagon NPU", "端侧智能体"],
       url: "https://news.qq.com/rain/a/20260923A038CO00",
-      image: "https://inews.gtimg.com/om_ls/Orkpllb6bRi833C9vvqznHvULMUg3qfyylgzlyfcb1Kb0AA_640330/0",
+      image: "images/archive/issue-39/n2.png",
       imageCap: "配图来自原文页面",
       highlight: true
     },
@@ -82,7 +82,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "9 月 23 日消息，手机端侧AI备案名单新增 3 款：荣耀 YOYO Claw、小米 miclaw 与阶跃终端 AI。\n两个信号值得注意：其一，「Claw」式命名在荣耀与小米之间撞名，说明「端侧智能体助手」已成手机厂商的标配产品线，竞争进入命名与定位层面的贴身战；其二，阶跃星辰的终端 AI 榜上有名——与本周其 600B 旗舰 Step 5 Preview 发布形成「云端旗舰 + 终端模型」的两翼布局。\n结合此前首批 7 款手机端侧模型备案（华为小艺、OPPO AndesGPT、vivo 蓝心、Apple 智能、小米、努比亚豆包、三星），名单正快速扩容，端侧生成式 AI 进入规模化合规落地阶段。",
       tags: ["端侧AI备案", "YOYO Claw", "miclaw", "阶跃终端AI"],
       url: "https://news.qq.com/rain/a/20260923A0BOJU00",
-      image: "https://inews.gtimg.com/om_ls/Oa689SH8m5hjUH8ytR5dYdoVJwCTyPLgJpOQwPCr09aPwAA_640330/0",
+      image: "images/archive/issue-39/n20.jpg",
       imageCap: "配图来自原文页面"
     },
     {
@@ -92,7 +92,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "文章核心判断：AI 开始争夺硬件控制权。\n案例：字节跳动以豆包手机（努比亚 NaviX Ultra）切入整机；阿里将推出千问平板，并被曝有千元级办公 AI 硬件在途（见本板块另一条）——大模型厂商不再满足于做系统里的一个 App，而是要定义设备本身。\n逻辑：端侧模型 + 智能体时代，硬件入口意味着数据、场景与话语权；自己做硬件才能端到端优化「模型-芯片-系统」。\n这也解释了本周的另一面：高通把 NPU 面向智能体重构、手机厂商密集备案端侧模型——芯片厂、模型厂、整机厂三方都在向对方的腹地渗透。",
       tags: ["AI硬件", "豆包手机", "千问平板", "终端入口"],
       url: "https://finance.sina.com.cn/wm/2026-09-23/doc-inisvivv6005017.shtml",
-      image: "https://n.sinaimg.cn/front20260923ac/776/w788h788/20260923/df4f-ca2049e794c96ff7b188d67464dd3fbc.jpg",
+      image: "images/archive/issue-39/n22.jpg",
       imageCap: "配图来自原文页面"
     },
     {
@@ -110,7 +110,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "9 月 23 日（周三），苹果宣布搭载 M5 系列芯片的新款 Mac mini 与 Mac Studio 开始发货，起售价分别为 4499 元与 19999 元。\n与以往的性能叙事不同，本轮营销主线是「端侧 AI 算力」：苹果强调新款 Mac 的神经网络引擎算力大幅提升，可在本地直接运行主流大模型，帮用户省下云端推理按 token 计费的开支，并主打本地运行的安全与隐私优势。\n背景：在智能体开发与私有部署需求带动下，「本地 AI 主机」成为新战场——英伟达 DGX Spark、小米 AI Cube（8 月底发布）与新款 Mac 台式机正面竞争，端侧算力形态正从手机 / PC 延伸到桌面。",
       tags: ["苹果 Mac", "M5", "端侧AI", "本地大模型"],
       url: "https://finance.sina.com.cn/roll/2026-09-23/doc-inistvut5489395.shtml",
-      image: "https://n.sinaimg.cn/spider20260923/54/w578h276/20260923/704d-66796a662bd6b5a37a13b74a669a6401.png",
+      image: "images/archive/issue-39/n30.png",
       imageCap: "配图来自原文页面"
     },
     {
@@ -120,7 +120,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "9 月 23 日消息：小米 18 Fold 首销激活近 8 万台，同比暴增 300%；该机 9 月 12 日开售当日即约 3.6 万台，小米许斐称首销较上代大折叠增长超三倍。\n产品底色：小米首款「中折叠」旗舰（7.58 吋内屏、219g），起售价 10999 元、小米首款万元机；核心是自研三件套——玄戒 O3 旗舰 SoC、澎湃 OS4 与 MiMo 端侧大模型（首款搭载机型），配合 LPDDR6 高带宽内存，端侧模型内存与带宽占用直降约 30%、精度几乎无损。\n意义：端侧模型手机不再只是发布会概念——首款 MiMo 机型在万元档拿下首销激活 +300%，说明「端侧 AI + 自研芯片」正在成为高端机的真实购买理由。",
       tags: ["小米 18 Fold", "MiMo 端侧模型", "玄戒 O3", "首销激活"],
       url: "https://www.sohu.com/a/1080077450_120073936",
-      image: "https://q0.itc.cn/images01/20260923/775d114521c248e1baffe87bef1bb6fd.png",
+      image: "images/archive/issue-39/n4.png",
       imageCap: "配图来自原文页面"
     },
     {
@@ -130,7 +130,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "据腾讯新闻 9 月 22 日报道，高通技术公司宣布与谷歌展开合作，将骁龙 X Elite 平台引入首批 Googlebook 笔记本电脑。\nGooglebook 是谷歌今年 5 月正式推出的全新旗舰级笔记本品类：运行安卓系统、定位高于 Chromebook，类似「安卓版的 MacBook」；产品内置 Gemini Intelligence，可为用户主动提供个性化帮助——这是「系统级端侧 AI」在笔记本上的落地。\n首批机型：戴尔、惠普的骁龙 X Elite 版 Googlebook 率先开售，联想也在首批名单中（首批均定位 1200 美元档高端市场）；另据 Digital Trends，后续低价款 Googlebook 拟采用老款骁龙平台，把价位下探至约 700 美元。\n官方动作同步：高通官方博客同日发布《Qualcomm × Cartesia 联手为骁龙 X 系列的 Googlebook 带来语音 AI》。\n背景：谷歌本周还宣布了联发科 CX C10 Max 驱动 Googlebook 的合作路线（见本板块另一条）——Googlebook 作为「端侧 AI 笔记本」新品类，已形成高通 / 联发科双平台竞逐的格局。",
       tags: ["Googlebook", "骁龙 X Elite", "Gemini Intelligence", "高通×谷歌"],
       url: "https://news.qq.com/rain/a/20260922A03CRB00",
-      image: "https://inews.gtimg.com/om_ls/Op9IiQxeF066H1lYzfYWV9vB-FmpNs0cl8PhSiZL_WxH4AA_640330/0",
+      image: "images/archive/issue-39/n29.png",
       imageCap: "配图来自原文页面",
       highlight: true
     },
@@ -141,7 +141,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "9 月 22 日消息：阿里在云栖大会期间推出新一代千问 AI 眼镜 N1 系列，10 月 13 日开售。\n差异化能力集中在「眼睛」：眼动追踪交互与虹膜支付——把生物识别与交互都收进眼镜形态，配合千问端侧模型的多模态理解能力。\n放在本周语境里：千问 AI 眼镜 + 此前曝出的千问平板与千元级千问办公硬件——「千问」正从模型品牌变成一条完整的 AI 硬件产品线，与豆包做手机形成大模型厂商硬件化的两条代表路线。",
       tags: ["千问AI眼镜", "N1 系列", "眼动追踪", "虹膜支付"],
       url: "https://finance.sina.com.cn/tech/roll/2026-09-22/doc-inisspzf8887020.shtml",
-      image: "https://n.sinaimg.cn/spider20260922/200/w600h400/20260922/1460-c181d25bcbc3c4ba6b6012d0510fc11a.png",
+      image: "images/archive/issue-39/n33.png",
       imageCap: "配图来自原文页面"
     },
     {
@@ -151,7 +151,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "9 月 21 日独家消息：阿里首款千问办公 AI 硬件将推出，产品线指向 QwenNote，售价或在千元级。\n定位是「随身办公 AI 终端」：依托千问端侧模型 + 云端算力，覆盖会议记录、文档处理、翻译等办公高频场景，与手机形成互补而非替代关系。\n放在本周语境里看：豆包做手机、阿里造平板与办公硬件、康冠携手阶跃出 AI PC——模型厂商的硬件化已经是集体动作，而非个案。",
       tags: ["千问", "QwenNote", "办公AI硬件", "阿里"],
       url: "https://www.sohu.com/a/1079171780_553580",
-      image: "https://q7.itc.cn/q_70/images03/20260921/43bc4f6ae13f400699272bf498964ac0.jpeg",
+      image: "images/archive/issue-39/n23.jpg",
       imageCap: "配图来自原文页面"
     },
     {
@@ -161,7 +161,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "东吴证券 9 月 21 日报告指出：系统级 Agent 进入加速期。\n落地节奏：豆包手机助手消费者版随努比亚 NaviX Ultra 实现量产（本周期内开售）；荣耀、vivo、OPPO 的系统级智能体密集布局，成为下半年最确定的产业主线。\n技术路线：执行框架 Harness 开始系统级商用；GUI（直接操作图形界面）与 A2A（智能体间通信）两条路线并行演进。\n学术侧本周亦有呼应：本期科研板块的单板机 MCP 式工具调用可靠性基准与车载 SLM 函数调用两篇论文指向同一问题——让小模型在端侧可靠地「动手」。",
       tags: ["系统级Agent", "GUI", "A2A", "智能体手机"],
       url: "https://news.qq.com/rain/a/20260921A046EN00",
-      image: "https://inews.gtimg.com/om_ls/On-vObCIUNjBT2QmAbIIetUc87uUIwDooLRvnRrAl6QSwAA_640330/0",
+      image: "images/archive/issue-39/n12.jpg",
       imageCap: "配图来自原文页面",
       highlight: true
     },
@@ -172,7 +172,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "据 9to5Google 与 Tom's Hardware 9 月 21 日报道，联发科下一代旗舰笔记本芯片 Dimensity CX C10 Max 正式亮相：3nm 制程，规格与 Kompanio Ultra 相近（NPU 算力面向 Chromebook Plus 级 AI 任务），将驱动谷歌新发起的 Googlebook 产品计划，联想率先推出搭载机型。\n这是联发科在手机旗舰（天玑 9600 Pro）之外，向 PC / ChromeOS 端侧 AI 市场的又一次进攻——与高通骁龙 X、MediaTek/NVIDIA 合作路线形成三方竞逐。\n配合上周发布的天玑 9600 Pro（首款 2nm 手机 SoC、支持 30B 端侧模型），联发科本周在端侧 AI 芯片两端（手机 + 笔记本）全面落子。",
       tags: ["联发科", "Dimensity CX C10 Max", "Googlebook", "AI PC"],
       url: "https://9to5google.com/2026/09/21/mediatek-googlebook-dimensity-cx-c10-max/",
-      image: "https://9to5google.com/wp-content/uploads/sites/4/2026/09/mediatek-dimensity-cx-c10-max-2.jpg",
+      image: "images/archive/issue-39/n18.jpg",
       imageCap: "配图来自原文页面"
     },
     {
@@ -190,7 +190,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "《端侧AI之战正式打响｜巨潮》一文盘点端侧 AI 整机动态：努比亚 NaviX Ultra（豆包手机二代）于 9 月 16 日正式发布并开售，5499 元起（12GB+512GB，16GB+1TB 版 7499 元），由中兴通讯努比亚全链路主导、与字节跳动合作，搭载第五代骁龙8至尊版平台与豆包手机助手消费者版。\n产品核心是把 AI 智能体技术从工程样机推进到规模化量产商用：围绕「听得懂、能干活、记得住、够安全」四大能力，支持全场景自然语义理解，可自主跨应用完成比价下单、行程规划等多步骤任务——手机从「你操作它」变成「它帮你办事」。该机此前在 WAIC 2026 亮相并获 SAIL 卓越人工智能引领者奖。\n同场竞争：苹果 Apple 智能 + 全新 Siri AI 已在 WWDC26 发布；刚上市的小米 18 Fold 内置 Xiaomi 端侧模型。文章判断：跳出耗资巨大的云端大模型军备竞赛、转向端侧模型研发，正成为更多企业深度参与 AI 浪潮的路径。",
       tags: ["豆包", "NaviX Ultra", "AI智能体手机", "努比亚"],
       url: "https://www.sohu.com/a/1077629065_122014422",
-      image: "https://q3.itc.cn/q_70/images03/20260918/8e7d8da3bcd743c8b9362d1748862d0b.png",
+      image: "images/archive/issue-39/n3.png",
       imageCap: "配图来自原文页面"
     },
     {
@@ -200,7 +200,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "OPPO 发布全天候主动式 AI 硬件「心力球」，预计今年晚些时候到来。\n新品类的关键词是「主动式」：不再等待用户指令，而是全天候感知场景并主动给出建议——端侧智能体需要一个常在的物理载体，这与此轮 AI OS 换代、系统级 Agent 落地是同一逻辑。\n行业语境：豆包做手机、阿里造平板、OPPO 做主动式硬件——模型厂商与手机厂商都在探索「App 之外」的 AI 硬件形态。",
       tags: ["OPPO", "心力球", "主动式AI硬件", "新品类"],
       url: "https://news.qq.com/rain/a/20260917A0AMVQ00",
-      image: "https://n.sinaimg.cn/spider20260917/328/w660h468/20260917/c755-7cd5ebbefefefe578f1beb8079dfa7a9.jpg",
+      image: "images/archive/issue-39/n28.jpg",
       imageCap: "配图来自原文页面"
     },
     {
@@ -210,7 +210,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "9 月 17 日盘中雷达援引机构数据：二季度全球智能眼镜出货量同比增长超 35%，市场已从早期尝鲜进入快速放量阶段；机构预计 2026 年全年出货量达 3500 万副、同比增长约 40%。\n结构特征：本轮增长由高价产品驱动——高价位段贡献主要增量，AI 功能渗透率提升是核心动力；这与本周 Rokid 二代眼镜定档首秀、国内厂商密集发布的节奏互相印证。\n行业判断：眼镜是天然的全天候传感器位置，但隐私与功耗约束使其比手机更依赖端侧小模型——多模态理解与主动式 AI 记忆成为差异化卖点，AI 眼镜被视为「下一代端侧 AI 入口」的有力候选。",
       tags: ["智能眼镜", "出货量", "端侧AI入口", "研报数据"],
       url: "https://news.qq.com/rain/a/20260917A094OI00",
-      image: "https://inews.gtimg.com/om_ls/OibaM2RBN3EUOegjbSW6pJSWrxp__NurbEjgy1NfmPIk0AA_640330/0",
+      image: "images/archive/issue-39/n24.png",
       imageCap: "配图来自原文页面"
     },
     {
@@ -220,7 +220,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "9 月 17 日，谷歌宣布即日起任何 AI 智能体都可接入 Google Home MCP Server：此前仅向部分开发者开放，现已面向所有智能体开放。\n能力边界：任何遵循 MCP 协议的智能体（任何厂商、任何 MCP 客户端）均能发现、订阅并控制 Google Home 生态中的兼容设备——灯光、窗帘、电视、扫地机器人等。\n配合谷歌此前宣布 Google Home 支持非谷歌认证设备，智能家居正在变成「智能体可编程」的端侧执行环境：端侧 Agent + MCP 协议 + 家居设备，构成端侧智能体落地的最大存量场景。",
       tags: ["Google Home MCP", "智能家居", "智能体", "MCP"],
       url: "https://news.qq.com/rain/a/20260917A0188X00",
-      image: "https://inews.gtimg.com/om_ls/OcMWl6SXFpExJYkdEbsRbbBds82lb6l0wFw7Mm_TUlgPMAA_640330/0",
+      image: "images/archive/issue-39/n31.jpg",
       imageCap: "配图来自原文页面"
     }
   ],
@@ -251,7 +251,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "研究背景：随着物理世界智能化推进，「云-边协作 LLM」成为有前景的部署路线：云端提供统一的知识底座，边缘侧做领域个性化。但现有云边范式难以平衡「全局共识」与「本地个性化」——两边目标并不天然一致。\n问题形式化：本文首次把云边 LLM 协作建模为个性化双层优化（bilevel optimization）：上层优化边缘侧个性化目标，下层管理云端知识迁移，二者协调演化，从而在数学上同时刻画「共识」与「个性」。\n方法（CIDERS 求解器）：把模型分解为「可学习骨干 + 信使（messenger）」两部分——云端对可学习骨干执行知识迁移，关键机制是共识变量校正（consensus-variate correction）：把全局轨迹嵌入每一步本地个性化更新中，调和个性化与共识的冲突；配套任务感知蒸馏。\n理论：给出局部轨迹的几何刻画与完整收敛性保证，揭示「个性化程度 vs 全局收敛速度」之间存在显式的权衡结构。\n实验：在压缩边缘路径上，数学推理提升 3.1×、代码生成提升 1.7×，指令任务相对提升 10%；机制实验把增益归因于早期共识校正协调与任务感知蒸馏。",
       tags: ["云边协同", "双层优化", "个性化"],
       url: "https://arxiv.org/abs/2609.15664",
-      image: "https://arxiv.org/html/2609.15664v1/figure_5_control_statistics_pca.png",
+      image: "images/archive/issue-39/p2.png",
       imageCap: "论文图表 · 图源：arXiv 论文原文"
     },
     {
@@ -283,7 +283,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "研究背景：车载语音助手必须在严格的内存与时延约束下，把自然语言请求翻译成准确的车辆函数调用，这让小语言模型（SLM）成为端侧部署的有力候选。一个关键设计问题是：如何向模型呈现「可调用的函数面」？\n两种方案：其一是为每个函数训练专用 Functional Token（FT，固定键）——推理紧凑，但只能调用训练时学过的函数；其二是把函数的 JSON Schema 直接放进提示词（Schema-in-Prompt, SIP，可读模式）——能泛化到未见函数，代价是提示更长、推理开销更大。\n基准构建：基于 Android Automotive 的 79 个车辆函数，构建 9,822 条单轮样本，包含 held-out（留出）函数与应当拒绝的域外请求；在 270M–1.7B 四个 SLM 上做对等微调对比。\n主要发现：已见函数上，270M 模型即可追平 1.7B，综合最佳出现在 0.6B；held-out 函数上 FT 按构造零准确率，而 SIP 随规模显著提升；域外请求上 FT 会错误调用训练过的不可用函数，SIP 则能依据所提供的函数列表更可靠地拒绝。\n结论与代价：函数面的表示方式（而非模型规模）决定了 SLM 函数调用的能力与失败模式；SIP 的灵活性以更高内存占用与推理延迟为代价，作者还给出解释 SIP 泛化能力的理论分析。",
       tags: ["车载智能体", "SLM", "函数调用"],
       url: "https://arxiv.org/abs/2609.09476",
-      image: "https://arxiv.org/html/2609.09476v1/figures/teaser.png",
+      image: "images/archive/issue-39/p5.png",
       imageCap: "论文结构图 · 图源：arXiv 论文原文"
     },
     {
@@ -325,7 +325,7 @@ WEEKLY_ARCHIVE[39] = {
       detail: "研究背景：边缘 AI 的模型选型通常只看单一指标——准确率、时延、内存、能耗或安全之一；而一个可部署的语言模型必须同时平衡这五个维度。\n方法：提出可复现的「全息可持续性得分（Holistic Sustainability Score, HSS）」，按三重底线（triple bottom line）组织：经济支柱（能力 + 系统效率）、环境支柱（运行时 GPU 能耗）、社会支柱（有害提示的鲁棒性，以攻击成功率近似）。实验覆盖 5 个 BF16 原生 SLM 与 5 个 LLM，后者在 BF16 / INT8 / NF4 4-bit / GPTQ 4-bit / GGUF Q4 五种量化下共形成 30 种实测配置；能力用 5 个零样本基准评估，效率测时延/吞吐/峰值显存/能耗。\n结果：综合排名第一的是 Qwen3-30B-A3B / GGUF Q4（93.38 分），其次 Mistral-Small-24B / GGUF Q4（92.40）；SLM 中排名最高的是 Phi-4-mini / BF16（89.49）。\n结论：「原生训练的小模型必然是更可持续的边缘选择」这一假设并不普适成立——优化得当的量化大模型可以在整体上胜出；量化是系统级的设计选择，而非单调的「精度-效率」折衷。作者同时说明 HSS 得分相对于其比较池与代理指标定义。",
       tags: ["模型选择", "量化", "可持续性"],
       url: "https://arxiv.org/abs/2609.00665",
-      image: "https://arxiv.org/html/2609.00665v1/figures/figure_1.png",
+      image: "images/archive/issue-39/p9.png",
       imageCap: "论文结构图 · 图源：arXiv 论文原文"
     },
     {
