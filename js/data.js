@@ -8,8 +8,8 @@
  *   python scripts\fetch_paper_figs.py  # 抓取论文结构图(arXiv HTML版)
  * 收录规则：资讯只收最近一周(运行日往前7天)的事件，超出窗口的
  * 厂商动态不放卡片(由厂商雷达标注覆盖)；来源只用简体中文或英文。
- * 字段：url=阅读原文(具体文章页)；image=详情配图(og:image或论文图,
- *       无则前端自动生成兜底封面)；imageCap=配图说明
+ * 字段：url=阅读原文(具体文章页)；image=详情配图(og:image或正文图, 必配——
+ *       源站被墙/无图时换用第三方报道图源并标明图源, 不得空图上站)
  * ============================================================ */
 const WEEKLY_DATA = {
 
@@ -27,9 +27,11 @@ const WEEKLY_DATA = {
       id: "n128", cat: "AI硬件", source: "智东西", date: "2026-10-27",
       title: "Rokid 发布首款全彩 AI 眼镜 Rokid Color：0.16cc Micro-LED 光机、4999 元起，55 克全天候佩戴，同场 Glasses 2 与乐奇魔戒组成全家族",
       summary: "Rokid 杭州发布会推出首款全彩 AI 眼镜 Rokid Color——与 JBD 独家定制的 0.16cc Micro-LED 全彩光机约一颗绿豆大小，1677 万色、色域 167%sRGB，整机 55 克，售价 4999 元起（祝铭明称「不赚钱交个朋友」）。同场发布搭载高通骁龙 AR1+ 的 Rokid Glasses 2（3699 元起、续航提升约 50%）与「乐奇魔戒」Rokid Ring（预售价 998 元，微手势隔空操作）；雷鸟创新同日公布全彩 AI 眼镜，行业进入全彩时代。",
-      detail: "发布：10 月 27 日杭州发布会，Rokid（中文名乐奇）首款全彩 AI 眼镜 Rokid Color 作为压轴亮相，4999 元起；官方定位 Glasses 是「工具」、Color 是「内容」，称全彩显示标志着 AI 眼镜生态闭环的「iPhone 时刻」。\n规格：Color 采用与 JBD 独家定制的 0.16cc Micro-LED 全彩光机（约一颗绿豆大小），1677 万色、色域达 167%sRGB，双目全彩显示，整机 55 克面向全天候佩戴。\n全家桶：Rokid Glasses 2（3699 元起、国补后 3199 元起）国内首发第一代高通骁龙 AR1+ 平台、搭配 6nm 恒玄双芯架构，1200 万像素摄像头，续航整体提升约 50%，充电盒 2170mAh 可充 6 次；通话翻译支持 89 种语言，可经 Rokid Prism 连接器调用 Codex、OpenClaw 等桌面智能体；「乐奇魔戒」Rokid Ring（预售价 998 元）以微手势实现滑切歌、响指拍照、把任意平面当触摸板，兼有健康监测。\n市场注脚：尼尔森数据显示乐奇 AI 眼镜连续三季度中国销量份额第一，Counterpoint 数据显示 2026 年上半年带显示 AI 眼镜全球第一；生态已有 47000 余名开发者与 700 余个智能体。",
+      detail: "发布：10 月 27 日杭州发布会，Rokid（中文名乐奇）首款全彩 AI 眼镜 Rokid Color 作为压轴亮相，4999 元起；官方定位 Glasses 是「工具」、Color 是「内容」，称全彩显示标志着 AI 眼镜生态闭环的「iPhone 时刻」。现场屏幕另显示 5499 元玳瑁色版本，交付自 2027 年 4 月起陆续发货。\n规格：Color 采用与 JBD 独家定制的 0.16cc Micro-LED 全彩光机（约一颗绿豆大小），1677 万色、色域达 167%sRGB，双目全彩显示，整机 55 克面向全天候佩戴。\n全家桶：Rokid Glasses 2（3699 元起、国补后 3199 元起）国内首发第一代高通骁龙 AR1+ 平台、搭配 6nm 恒玄双芯架构，1200 万像素摄像头，续航整体提升约 50%，充电盒 2170mAh 可充 6 次；通话翻译支持 89 种语言，可经 Rokid Prism 连接器调用 Codex、OpenClaw 等桌面智能体；「乐奇魔戒」Rokid Ring（预售价 998 元）以微手势实现滑切歌、响指拍照、把任意平面当触摸板，兼有健康监测。\n市场注脚：尼尔森数据显示乐奇 AI 眼镜连续三季度中国销量份额第一，Counterpoint 数据显示 2026 年上半年带显示 AI 眼镜全球第一；生态已有 47000 余名开发者与 700 余个智能体。",
       tags: ["Rokid", "全彩光机", "Micro-LED", "AI眼镜", "乐奇魔戒"],
       url: "https://zhidx.com/p/604685.html",
+      image: "https://oss.zhidx.com/0c02179614d925e8e7fcdb487073ffbd/6ae13b00/uploads/2026/10/6ae0663558532_6ae066354f330_6ae066354f304_%E6%9C%AA%E6%A0%87%E9%A2%98-1.png",
+      imageCap: "Rokid Color 发布会舞台（图源：智东西）",
       highlight: false
     },
     {
@@ -39,6 +41,8 @@ const WEEKLY_DATA = {
       detail: "定位：10 月 27 日发布，灵光 2.0 从「能聊会做」升级为「事务管理者」——AI 拥有时间维度，能处理跨数小时到数天的长周期事务，主动识别需求并在关键节点提醒。\n能力：①跨会话记忆——依托独立云主机，用户退出对话后任务继续运行，记住上下文并长期跟踪（宠物照护、儿童疫苗、车辆年检等）；②主动监测——授权后持续盯价（机票、酒店降价 24 小时提醒）、从群消息提取待办、分析账单识别闲置续费订阅；③长程任务调度——打通支付宝账单/会员/出行、钉钉、飞书、邮箱与米家，支持调用 MCP 与 CLI 工具。\n安全：通过蚂蚁 APASS 统一账号与安全管理——授权密钥与 Agent 分离托管，用户可随时查看、调整、撤销授权，意图安全与隐私保护纳入执行流程。\n端侧视角：执行主体在云主机而非端侧，但入口覆盖手机 App 与米家设备——「云主机驻留+多端触达」是 Personal Agent 在端侧算力成熟前的过渡形态，与千问「我的应用」、谷歌 ACE 同周落子，个人智能体基础设施之争正在加速。",
       tags: ["蚂蚁", "灵光", "个人智能体", "跨会话记忆", "APASS"],
       url: "https://www.leiphone.com/category/industrynews/IxG2F47VLIt3uTOW.html",
+      image: "https://static.leiphone.com/uploads/new/images/20261027/6ae0047b9eeb8.png",
+      imageCap: "灵光 2.0 发布（图源：雷峰网）",
       highlight: false
     },
     {
@@ -70,6 +74,8 @@ const WEEKLY_DATA = {
       detail: "发布：10 月 26 日官方博客《Introducing GPT-6.1 Terra》，口号是「快而强的 computer use，面向所有人」；经由 API、Codex 与 ChatGPT Work 提供。\n定价：API 输入 1 美元、输出 5 美元（每百万 token，第三方测评口径）——较 GPT-5.6 Terra 与 GPT-6.1 Sol（输入 2 美元、输出 10 美元）便宜约 50%；另据称推理速度提升约 3 倍。\n能力：在离线 computer use 基准 OSWorld 2.0 上，标准档 57.6%（单次成本约 0.29 美元）、高难度档 60.0%（约 1.01 美元），距旗舰 Astra 最高努力档约 2.1 个百分点、成本约为其 1/7；支持托管（云端）与本地（Playwright）两种 computer use 实现方式，社区普遍将其评为当前性价比最优的 computer use 模型。\n端侧视角：computer use 的「大脑」在云端、「手」在本机——Terra 主打本地 Playwright 执行路径，意味着个人电脑正在成为智能体的标准执行端；当旗舰能力以五分之一价格下放，端侧 Agent 编排层的门槛被进一步拉低，与本周谷歌 ACE、蚂蚁灵光 2.0 同属「智能体基础设施」落子。",
       tags: ["OpenAI", "GPT-6.1 Terra", "computer use", "智能体", "API定价"],
       url: "https://openai.com/index/introducing-gpt-6-1-terra",
+      image: "https://kingy.ai/wp-content/uploads/2026/10/gpt-6-1-terra-pricing-benchmarks.jpg",
+      imageCap: "GPT-6.1 Terra 定价与基准对比（图源：kingy.ai）",
       highlight: false
     },
     {
@@ -79,6 +85,8 @@ const WEEKLY_DATA = {
       detail: "发布：10 月 26 日官方博客，主题是「与学术社区共建科学理解」——不只宣布成果，更披露研究者可以如何验证并在其上继续研究的协作路径。\n成果：①宣称证明所有维度的 Kakeya 猜想（含每个方向线段的集合问题）；②对指数时间假设（ETH——3-SAT 不能在亚指数时间内求解的复杂性理论基石假设）给出反驳性论证，若成立将动摇参数化复杂性理论的根基；③量子色动力学方向：GPT-5.2 曾提出胶子振幅公式，经内部模型形式化证明并由论文人类作者验证，被称为与标准模型相关的理论物理新结果；此前还涉及 Yang-Mills 存在性与质量缺口相关的讨论。\n争议与边界：这些宣称仍需广泛的同行评审与形式化验证才能被数学界接受；社区评论指出部分物理结果包含相当程度的人类引导，并非完全自主发现——OpenAI 在博客中强调的「可验证、可复用」正是针对这一信任缺口。\n端侧视角：当模型开始产出「需要人类数学家验证」的候选科学成果，AI 的科学角色从辅助计算转向「猜想生成器」；验证依赖 Lean 等形式化工具与学术共同体——这条「模型生成、形式化验证、人类确认」的链条，与端侧 Agent 的可验证执行是同一命题在科学侧的镜像。",
       tags: ["OpenAI", "AI4Science", "数学猜想", "可验证性", "学术合作"],
       url: "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+      image: "https://static.scientificamerican.com/dam/asset/beebd885-990e-44e5-b388-d36bbcb5c747/Math-dots-neural-network.jpeg?m=1791487919.76",
+      imageCap: "数学与神经网络的交汇（图源：Scientific American）",
       highlight: false
     },
     {
