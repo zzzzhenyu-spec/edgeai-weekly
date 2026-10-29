@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-label="量化全景地图">
+  <defs>
+    <linearGradient id="qm-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="400" fill="url(#qm-bg)" rx="14"/>
+  <text x="480" y="46" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">量化的三个问题：怎么表示 · 怎么映射 · 参数怎么求</text>
+
+  <!-- 上排：精度阶梯 -->
+  <g font-family="monospace">
+    <rect x="60" y="80" width="230" height="120" rx="10" fill="#818cf814" stroke="#818cf8" stroke-width="1.5"/>
+    <text x="175" y="112" text-anchor="middle" font-size="17" font-weight="700" fill="#818cf8">FP16</text>
+    <text x="175" y="138" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">65,536 种取值 · 2 字节</text>
+    <text x="175" y="160" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">动态范围大 · 间隔不均匀</text>
+    <text x="175" y="182" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">训练与云端推理的默认精度</text>
+
+    <rect x="365" y="80" width="230" height="120" rx="10" fill="#22d3ee12" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="480" y="112" text-anchor="middle" font-size="17" font-weight="700" fill="#22d3ee">INT8</text>
+    <text x="480" y="138" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">256 种取值 · 1 字节</text>
+    <text x="480" y="160" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">几乎无损的常用档位</text>
+    <text x="480" y="182" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">LLM.int8() / SmoothQuant 主场</text>
+
+    <rect x="670" y="80" width="230" height="120" rx="10" fill="#fbbf2412" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="785" y="112" text-anchor="middle" font-size="17" font-weight="700" fill="#fbbf24">INT4</text>
+    <text x="785" y="138" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">16 种取值 · 0.5 字节</text>
+    <text x="785" y="160" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">端侧大模型的生存档位</text>
+    <text x="785" y="182" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">GPTQ / AWQ / Q4_K_M 主场</text>
+  </g>
+  <path d="M296 140 h58" stroke="#5f7194" stroke-width="1.6" marker-end="url(#qm-arrow)"/>
+  <path d="M601 140 h58" stroke="#5f7194" stroke-width="1.6" marker-end="url(#qm-arrow)"/>
+  <defs><marker id="qm-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 z" fill="#5f7194"/></marker></defs>
+
+  <!-- 下排：三问 -->
+  <g font-family="sans-serif">
+    <rect x="60" y="250" width="260" height="110" rx="10" fill="#ffffff08" stroke="#ffffff2a" stroke-width="1"/>
+    <text x="190" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#22d3ee">① 数怎么表示</text>
+    <text x="190" y="310" text-anchor="middle" font-size="12.5" fill="#b6c0d6">浮点：符号+指数+尾数</text>
+    <text x="190" y="332" text-anchor="middle" font-size="12.5" fill="#b6c0d6">定点：等距格子，没有浮动</text>
+
+    <rect x="350" y="250" width="260" height="110" rx="10" fill="#ffffff08" stroke="#ffffff2a" stroke-width="1"/>
+    <text x="480" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#818cf8">② 值怎么对应</text>
+    <text x="480" y="310" text-anchor="middle" font-size="12.5" fill="#b6c0d6">q = round(x/scale) + zero</text>
+    <text x="480" y="332" text-anchor="middle" font-size="12.5" fill="#b6c0d6">对称/非对称 · per-张量/通道/组</text>
+
+    <rect x="640" y="250" width="260" height="110" rx="10" fill="#ffffff08" stroke="#ffffff2a" stroke-width="1"/>
+    <text x="770" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#fbbf24">③ 参数怎么求</text>
+    <text x="770" y="310" text-anchor="middle" font-size="12.5" fill="#b6c0d6">PTQ：校准数据定 scale</text>
+    <text x="770" y="332" text-anchor="middle" font-size="12.5" fill="#b6c0d6">QAT：训练中适应格子</text>
+  </g>
+  <path d="M190 204 v40" stroke="#5f7194" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <path d="M480 204 v40" stroke="#5f7194" stroke-width="1.4" stroke-dasharray="4 4"/>
+  <path d="M785 204 v40" stroke="#5f7194" stroke-width="1.4" stroke-dasharray="4 4"/>
+</svg>

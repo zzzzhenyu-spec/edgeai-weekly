@@ -350,15 +350,15 @@ papers: [
     knowledge: {
     /* 每周一个知识点（KNOWLEDGE_PLAN.md 16 讲周更，2026-10-25 首期）：weekly 只放元数据+lesson 指针，
        正文与配图在 knowledge/ 子项目（lessons/lesson-NN.js + assets/），点开卡片按需加载 */
-    weekly: { no: 1, lesson: 1,
-      week: "2026.10.16 — 10.26",
-      title: "大模型是怎么装进手机的：一次端侧推理的完整旅程",
-      hook: "一台 12GB 内存的手机，凭什么跑得动一个「原始体积上百 GB」的大模型？答案是一条环环相扣的流水线：压缩、分阶段计算、缓存复用、专用芯片——本讲把它从头到尾走一遍。",
-      next: "第 2 讲 · 量化入门：从 FP16 到 4-bit，模型体积是怎么压到四分之一的"
+    weekly: { no: 2, lesson: 2,
+      week: "2026.10.26 — 11.01",
+      title: "量化入门：从 FP16 到 4-bit——定点表示、对称/非对称、PTQ 与 QAT",
+      hook: "同一个数，FP16 用 16 个比特、65,536 种取值来存；4-bit 只给 16 个等距格子。量化就是这场「搬家」——怎么搬、搬到哪个格子、由谁说了算。看懂这一讲，GPTQ、AWQ、Q4_K_M 就不再是黑话。",
+      next: "第 3 讲 · 经典量化算法 I：LLM.int8() 与 GPTQ——异常值与 Hessian 量化"
     },
     plan: [
-      { no: 1, title: "大模型是怎么装进手机的：一次端侧推理的完整旅程", week: "10.25 上线" },
-      { no: 2, title: "量化入门：从 FP16 到 4-bit——定点表示、对称/非对称、PTQ 与 QAT", week: "11.01" },
+      { no: 1, title: "大模型是怎么装进手机的：一次端侧推理的完整旅程", week: "已完结 · 10.16—10.25" },
+      { no: 2, title: "量化入门：从 FP16 到 4-bit——定点表示、对称/非对称、PTQ 与 QAT", week: "本周 · 10.30 上线" },
       { no: 3, title: "经典量化算法 I：LLM.int8() 与 GPTQ——异常值与 Hessian 量化", week: "11.08" },
       { no: 4, title: "经典量化算法 II：AWQ 与 SmoothQuant——激活感知的权重缩放", week: "11.15" },
       { no: 5, title: "GGUF 与 k-quants：Q4_K_M 们是什么；FP4/FP8 低比特前沿", week: "11.22" },

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-label="量化粒度 per-tensor per-channel per-group">
+  <defs>
+    <linearGradient id="gr-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="380" fill="url(#gr-bg)" rx="14"/>
+  <text x="480" y="42" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">一把尺子还是一百把：量化粒度越细，格子贴得越准</text>
+
+  <!-- 权重条带（三行共用视觉元素：格子条 + 尺子） -->
+  <!-- per-tensor -->
+  <g font-family="sans-serif">
+    <text x="70" y="80" font-size="13.5" font-weight="700" fill="#e879f9">per-tensor · 一套 (scale, zero) 量全部</text>
+    <g>
+      <rect x="70" y="92" width="540" height="26" rx="5" fill="#ffffff0a" stroke="#ffffff26" stroke-width="1"/>
+      <g stroke="#e879f9" stroke-width="1.6"><line x1="70" y1="86" x2="70" y2="124"/><line x1="610" y1="86" x2="610" y2="124"/></g>
+      <path d="M70 124 h540" stroke="#e879f9" stroke-width="1.6"/>
+      <text x="625" y="110" font-size="12.5" fill="#99a5bf" font-family="monospace">scale × 1</text>
+    </g>
+    <text x="70" y="138" font-size="12.5" fill="#99a5bf">最省事；范围被极大值撑爆时误差最大</text>
+
+    <!-- per-channel -->
+    <text x="70" y="182" font-size="13.5" font-weight="700" fill="#22d3ee">per-channel · 每个输出通道一套</text>
+    <g>
+      <rect x="70" y="194" width="540" height="26" rx="5" fill="#ffffff0a" stroke="#ffffff26" stroke-width="1"/>
+      <g stroke="#22d3ee" stroke-width="1.3">
+        <line x1="178" y1="188" x2="178" y2="226"/><line x1="286" y1="188" x2="286" y2="226"/>
+        <line x1="394" y1="188" x2="394" y2="226"/><line x1="502" y1="188" x2="502" y2="226"/>
+      </g>
+      <text x="625" y="212" font-size="12.5" fill="#99a5bf" font-family="monospace">scale × 通道数</text>
+    </g>
+    <text x="70" y="240" font-size="12.5" fill="#99a5bf">权重量化的事实默认（每行一把尺子），8bit 场景近乎标配</text>
+
+    <!-- per-group -->
+    <text x="70" y="284" font-size="13.5" font-weight="700" fill="#fbbf24">per-group · 每 128 个连续值一套（k-quants 的做法）</text>
+    <g>
+      <rect x="70" y="296" width="540" height="26" rx="5" fill="#ffffff0a" stroke="#ffffff26" stroke-width="1"/>
+      <g stroke="#fbbf24" stroke-width="1.1">
+        <line x1="104.5" y1="290" x2="104.5" y2="328"/><line x1="139" y1="290" x2="139" y2="328"/>
+        <line x1="173.5" y1="290" x2="173.5" y2="328"/><line x1="208" y1="290" x2="208" y2="328"/>
+        <line x1="242.5" y1="290" x2="242.5" y2="328"/><line x1="277" y1="290" x2="277" y2="328"/>
+        <line x1="311.5" y1="290" x2="311.5" y2="328"/><line x1="346" y1="290" x2="346" y2="328"/>
+        <line x1="380.5" y1="290" x2="380.5" y2="328"/><line x1="415" y1="290" x2="415" y2="328"/>
+        <line x1="449.5" y1="290" x2="449.5" y2="328"/><line x1="484" y1="290" x2="484" y2="328"/>
+        <line x1="518.5" y1="290" x2="518.5" y2="328"/><line x1="553" y1="290" x2="553" y2="328"/>
+        <line x1="587.5" y1="290" x2="587.5" y2="328"/>
+      </g>
+      <text x="625" y="314" font-size="12.5" fill="#99a5bf" font-family="monospace">scale × (权重/128)</text>
+    </g>
+    <text x="70" y="342" font-size="12.5" fill="#99a5bf">4bit 的主流粒度：额外开销约 128 分之一的 scale 存储（≈1.6%），几乎免费</text>
+  </g>
+
+  <!-- 右侧对比卡 -->
+  <g font-family="sans-serif">
+    <rect x="700" y="80" width="220" height="262" rx="10" fill="#ffffff08" stroke="#ffffff26" stroke-width="1"/>
+    <text x="810" y="112" text-anchor="middle" font-size="13.5" font-weight="700" fill="#e8ecf6">怎么选</text>
+    <text x="810" y="146" text-anchor="middle" font-size="12.5" fill="#b6c0d6">INT8：per-channel</text>
+    <text x="810" y="170" text-anchor="middle" font-size="12.5" fill="#b6c0d6">基本无感</text>
+    <text x="810" y="206" text-anchor="middle" font-size="12.5" fill="#b6c0d6">INT4：per-group 128</text>
+    <text x="810" y="230" text-anchor="middle" font-size="12.5" fill="#b6c0d6">+ 聪明的校准算法</text>
+    <text x="810" y="266" text-anchor="middle" font-size="12.5" fill="#b6c0d6">GGUF 的 Q4_K_M：</text>
+    <text x="810" y="290" text-anchor="middle" font-size="12.5" fill="#b6c0d6">组分块 + 组内再取超参</text>
+    <text x="810" y="322" text-anchor="middle" font-size="12.5" fill="#99a5bf">（第 5 讲拆 k-quants）</text>
+  </g>
+</svg>

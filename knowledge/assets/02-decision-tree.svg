@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-label="量化方法选择决策树">
+  <defs>
+    <linearGradient id="dt-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+    <marker id="dt-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 z" fill="#5f7194"/></marker>
+  </defs>
+  <rect width="960" height="420" fill="url(#dt-bg)" rx="14"/>
+  <text x="480" y="44" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">收束成一张图：拿到模型，怎么选量化</text>
+
+  <!-- 根 -->
+  <rect x="380" y="70" width="200" height="48" rx="10" fill="#ffffff0e" stroke="#ffffff30" stroke-width="1.2"/>
+  <text x="480" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#e8ecf6" font-family="sans-serif">有训练资源与数据吗？</text>
+
+  <!-- 左：QAT -->
+  <path d="M380 94 H230 V150" stroke="#5f7194" stroke-width="1.5" fill="none" marker-end="url(#dt-arrow)"/>
+  <text x="292" y="88" font-size="12.5" fill="#22d3ee" font-family="sans-serif">能重新训练</text>
+  <rect x="110" y="154" width="240" height="88" rx="10" fill="#fbbf2410" stroke="#fbbf24" stroke-width="1.4"/>
+  <text x="230" y="184" text-anchor="middle" font-size="14" font-weight="700" fill="#fbbf24" font-family="sans-serif">QAT 量化感知训练</text>
+  <text x="230" y="208" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">HAQ：方案随硬件反馈一起搜</text>
+  <text x="230" y="230" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">LSQ：步长当参数学出来</text>
+
+  <!-- 右：PTQ -->
+  <path d="M580 94 H700 V150" stroke="#5f7194" stroke-width="1.5" fill="none" marker-end="url(#dt-arrow)"/>
+  <text x="612" y="88" font-size="12.5" fill="#818cf8" font-family="sans-serif">不能 / 不想训练</text>
+  <rect x="590" y="154" width="220" height="88" rx="10" fill="#818cf814" stroke="#818cf8" stroke-width="1.4"/>
+  <text x="700" y="184" text-anchor="middle" font-size="14" font-weight="700" fill="#818cf8" font-family="sans-serif">PTQ 训练后量化</text>
+  <text x="700" y="208" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">校准 128–512 条样本</text>
+  <text x="700" y="230" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">笔记本几分钟出结果</text>
+
+  <!-- PTQ 分两支：8bit / 4bit -->
+  <path d="M640 242 V286 H480 V320" stroke="#5f7194" stroke-width="1.5" fill="none" marker-end="url(#dt-arrow)"/>
+  <text x="576" y="280" font-size="12.5" fill="#99a5bf" font-family="sans-serif">求稳</text>
+  <path d="M760 242 V286 H820 V320" stroke="#5f7194" stroke-width="1.5" fill="none" marker-end="url(#dt-arrow)"/>
+  <text x="792" y="280" font-size="12.5" fill="#99a5bf" font-family="sans-serif">求小</text>
+
+  <rect x="360" y="324" width="240" height="70" rx="10" fill="#22d3ee12" stroke="#22d3ee" stroke-width="1.4"/>
+  <text x="480" y="350" text-anchor="middle" font-size="13.5" font-weight="700" fill="#22d3ee" font-family="sans-serif">8bit · per-channel</text>
+  <text x="480" y="372" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">LLM.int8() / SmoothQuant</text>
+
+  <rect x="700" y="324" width="240" height="70" rx="10" fill="#fbbf2410" stroke="#fbbf24" stroke-width="1.4"/>
+  <text x="820" y="350" text-anchor="middle" font-size="13.5" font-weight="700" fill="#fbbf24" font-family="sans-serif">4bit · per-group(128)</text>
+  <text x="820" y="372" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">GPTQ / AWQ / GGUF k-quants</text>
+
+  <!-- 左下补充：更低位 -->
+  <path d="M230 242 V286 H280 V324" stroke="#5f7194" stroke-width="1.5" fill="none" marker-end="url(#dt-arrow)"/>
+  <text x="246" y="280" font-size="12.5" fill="#99a5bf" font-family="sans-serif">极限压</text>
+  <rect x="110" y="328" width="230" height="66" rx="10" fill="#e879f912" stroke="#e879f9" stroke-width="1.4"/>
+  <text x="225" y="354" text-anchor="middle" font-size="13.5" font-weight="700" fill="#e879f9" font-family="sans-serif">2bit / 1.58bit 及以下</text>
+  <text x="225" y="376" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">要动结构（第 5 讲前沿）</text>
+
+  <text x="480" y="412" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">下一讲：GPTQ 如何用 Hessian 决定「谁保精度、谁被压扁」；LLM.int8() 如何把离群值单独请出去</text>
+</svg>

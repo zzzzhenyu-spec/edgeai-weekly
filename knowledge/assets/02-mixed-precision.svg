@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="混合精度与离群值">
+  <defs>
+    <linearGradient id="mx-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="360" fill="url(#mx-bg)" rx="14"/>
+  <text x="480" y="44" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">误差不均匀：少数离群通道，逼出「混合精度」</text>
+
+  <!-- 层堆叠：首尾 FP16、中间多数 INT4、个别敏感层 INT8 -->
+  <g font-family="monospace">
+    <rect x="90" y="76" width="150" height="30" rx="6" fill="#818cf826" stroke="#818cf8" stroke-width="1.3"/>
+    <text x="165" y="96" text-anchor="middle" font-size="12.5" fill="#818cf8">embedding · FP16</text>
+
+    <rect x="90" y="112" width="150" height="30" rx="6" fill="#22d3ee1c" stroke="#22d3ee" stroke-width="1.1"/>
+    <text x="165" y="132" text-anchor="middle" font-size="12.5" fill="#22d3ee">L0 · INT4</text>
+    <rect x="90" y="148" width="150" height="30" rx="6" fill="#22d3ee1c" stroke="#22d3ee" stroke-width="1.1"/>
+    <text x="165" y="168" text-anchor="middle" font-size="12.5" fill="#22d3ee">L1 · INT4</text>
+
+    <rect x="90" y="184" width="150" height="30" rx="6" fill="#fbbf2420" stroke="#fbbf24" stroke-width="1.3"/>
+    <text x="165" y="204" text-anchor="middle" font-size="12.5" fill="#fbbf24">L2 · 敏感 · INT8</text>
+
+    <rect x="90" y="220" width="150" height="30" rx="6" fill="#22d3ee1c" stroke="#22d3ee" stroke-width="1.1"/>
+    <text x="165" y="240" text-anchor="middle" font-size="12.5" fill="#22d3ee">L3 · INT4</text>
+    <rect x="90" y="256" width="150" height="30" rx="6" fill="#22d3ee1c" stroke="#22d3ee" stroke-width="1.1"/>
+    <text x="165" y="276" text-anchor="middle" font-size="12.5" fill="#22d3ee">… · INT4</text>
+
+    <rect x="90" y="292" width="150" height="30" rx="6" fill="#818cf826" stroke="#818cf8" stroke-width="1.3"/>
+    <text x="165" y="312" text-anchor="middle" font-size="12.5" fill="#818cf8">lm_head · FP16</text>
+  </g>
+  <text x="255" y="140" font-size="12.5" fill="#99a5bf" font-family="sans-serif">首尾层对误差最敏感 → 留高精度</text>
+  <text x="255" y="208" font-size="12.5" fill="#99a5bf" font-family="sans-serif">中间层安静 → 尽情压到 4bit</text>
+
+  <!-- 右：离群值现象 -->
+  <g font-family="sans-serif">
+    <rect x="470" y="76" width="440" height="180" rx="12" fill="#ffffff08" stroke="#ffffff26" stroke-width="1"/>
+    <text x="690" y="106" text-anchor="middle" font-size="13.5" font-weight="700" fill="#e8ecf6">LLM.int8() 的发现（2022，第 3 讲主角）</text>
+    <!-- 激活幅度条：多数矮条 + 个别高条 -->
+    <g>
+      <rect x="500" y="180" width="14" height="40" fill="#22d3ee66"/><rect x="518" y="192" width="14" height="28" fill="#22d3ee66"/>
+      <rect x="536" y="184" width="14" height="36" fill="#22d3ee66"/><rect x="554" y="196" width="14" height="24" fill="#22d3ee66"/>
+      <rect x="572" y="188" width="14" height="32" fill="#22d3ee66"/><rect x="590" y="194" width="14" height="26" fill="#22d3ee66"/>
+      <rect x="608" y="200" width="14" height="20" fill="#22d3ee66"/>
+      <rect x="632" y="112" width="14" height="108" fill="#fbbf24"/>
+      <rect x="650" y="186" width="14" height="34" fill="#22d3ee66"/><rect x="668" y="198" width="14" height="22" fill="#22d3ee66"/>
+      <rect x="686" y="190" width="14" height="30" fill="#22d3ee66"/><rect x="704" y="196" width="14" height="24" fill="#22d3ee66"/>
+      <rect x="722" y="120" width="14" height="100" fill="#e879f9"/>
+      <rect x="746" y="188" width="14" height="32" fill="#22d3ee66"/><rect x="764" y="198" width="14" height="22" fill="#22d3ee66"/>
+      <rect x="782" y="192" width="14" height="28" fill="#22d3ee66"/><rect x="800" y="198" width="14" height="22" fill="#22d3ee66"/>
+      <rect x="818" y="186" width="14" height="34" fill="#22d3ee66"/><rect x="836" y="196" width="14" height="24" fill="#22d3ee66"/>
+      <rect x="854" y="190" width="14" height="30" fill="#22d3ee66"/><rect x="872" y="198" width="14" height="22" fill="#22d3ee66"/>
+    </g>
+    <line x1="500" y1="220" x2="890" y2="220" stroke="#ffffff30" stroke-width="1.4"/>
+    <text x="690" y="244" text-anchor="middle" font-size="12.5" fill="#b6c0d6">个别隐藏维度的激活是其他维度的数十倍（金色/粉色高条）</text>
+  </g>
+  <g font-family="sans-serif">
+    <rect x="470" y="272" width="440" height="62" rx="10" fill="#fbbf2410" stroke="#fbbf2466" stroke-width="1"/>
+    <text x="690" y="298" text-anchor="middle" font-size="12.5" fill="#b6c0d6">解法：0.1% 的离群通道单独走 FP16，其余 99.9% 压 INT8，</text>
+    <text x="690" y="320" text-anchor="middle" font-size="12.5" fill="#b6c0d6">两路矩阵乘完再相加——几乎无损的 8bit 推理</text>
+  </g>
+</svg>

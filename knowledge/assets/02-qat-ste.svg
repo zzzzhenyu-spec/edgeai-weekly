@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-label="QAT 量化感知训练与 STE">
+  <defs>
+    <linearGradient id="qa-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+    <marker id="qa-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 z" fill="#5f7194"/></marker>
+  </defs>
+  <rect width="960" height="400" fill="url(#qa-bg)" rx="14"/>
+  <text x="480" y="44" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">QAT 量化感知训练：让模型在训练中就「住进」格子（右侧动态演示权重吸附格点）</text>
+
+  <!-- 左：伪量化计算图 -->
+  <g font-family="sans-serif">
+    <rect x="60" y="80" width="420" height="200" rx="12" fill="#ffffff08" stroke="#ffffff26" stroke-width="1"/>
+    <text x="270" y="110" text-anchor="middle" font-size="13.5" font-weight="700" fill="#e8ecf6">训练图里插入「伪量化」节点</text>
+    <rect x="90" y="130" width="100" height="44" rx="8" fill="#818cf814" stroke="#818cf8" stroke-width="1.3"/>
+    <text x="140" y="157" text-anchor="middle" font-size="13" fill="#818cf8" font-family="monospace">权重 w</text>
+    <rect x="220" y="130" width="120" height="44" rx="8" fill="#22d3ee12" stroke="#22d3ee" stroke-width="1.3"/>
+    <text x="280" y="151" text-anchor="middle" font-size="12.5" fill="#22d3ee" font-family="monospace">q(w) 伪量化</text>
+    <text x="280" y="167" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="monospace">round→落格→还原</text>
+    <rect x="370" y="130" width="86" height="44" rx="8" fill="#e879f912" stroke="#e879f9" stroke-width="1.3"/>
+    <text x="413" y="157" text-anchor="middle" font-size="13" fill="#e879f9" font-family="monospace">前向</text>
+    <path d="M190 152 h24" stroke="#5f7194" stroke-width="1.5" marker-end="url(#qa-arrow)"/>
+    <path d="M340 152 h24" stroke="#5f7194" stroke-width="1.5" marker-end="url(#qa-arrow)"/>
+
+    <text x="270" y="212" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="monospace">q(w) = clamp( round(w / s) + z ) × s − z×s</text>
+    <text x="270" y="242" text-anchor="middle" font-size="12.5" fill="#fbbf24">反向梯度怎么传？STE 直通估计器：∂q/∂w ≈ 1</text>
+    <text x="270" y="264" text-anchor="middle" font-size="12.5" fill="#99a5bf">（把取整当作不存在，梯度照常回传，模型学着把权重</text>
+    <text x="270" y="284" text-anchor="middle" font-size="12.5" fill="#99a5bf">「搬」到对损失伤害最小的格点附近）</text>
+  </g>
+
+  <!-- 右：吸附动画 -->
+  <g>
+    <rect x="520" y="80" width="400" height="200" rx="12" fill="#ffffff08" stroke="#ffffff26" stroke-width="1"/>
+    <text x="720" y="110" text-anchor="middle" font-size="13.5" font-weight="700" fill="#e8ecf6">训练轮次推进：散乱 → 吸附格点</text>
+    <!-- 格线 -->
+    <g stroke="#22d3ee44" stroke-width="1.2">
+      <line x1="560" y1="130" x2="560" y2="255"/><line x1="620" y1="130" x2="620" y2="255"/>
+      <line x1="680" y1="130" x2="680" y2="255"/><line x1="740" y1="130" x2="740" y2="255"/>
+      <line x1="800" y1="130" x2="800" y2="255"/><line x1="860" y1="130" x2="860" y2="255"/>
+    </g>
+    <text x="720" y="276" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">INT4 格点（每格 0.4）</text>
+    <!-- 权重点：动画在散乱位置与格点间循环切换 -->
+    <g fill="#fbbf24">
+      <circle r="5"><animate attributeName="cx" values="585;600;585" dur="3s" repeatCount="indefinite" calcMode="discrete"/><animate attributeName="cy" values="165;160;165" dur="3s" repeatCount="indefinite" calcMode="discrete"/></circle>
+      <circle r="5"><animate attributeName="cx" values="655;680;655" dur="3s" repeatCount="indefinite" calcMode="discrete"/><animate attributeName="cy" values="205;200;205" dur="3s" repeatCount="indefinite" calcMode="discrete"/></circle>
+      <circle r="5"><animate attributeName="cx" values="715;740;715" dur="3s" repeatCount="indefinite" calcMode="discrete"/><animate attributeName="cy" values="150;145;150" dur="3s" repeatCount="indefinite" calcMode="discrete"/></circle>
+      <circle r="5"><animate attributeName="cx" values="790;800;790" dur="3s" repeatCount="indefinite" calcMode="discrete"/><animate attributeName="cy" values="225;220;225" dur="3s" repeatCount="indefinite" calcMode="discrete"/></circle>
+      <circle r="5"><animate attributeName="cx" values="835;860;835" dur="3s" repeatCount="indefinite" calcMode="discrete"/><animate attributeName="cy" values="180;175;180" dur="3s" repeatCount="indefinite" calcMode="discrete"/></circle>
+    </g>
+  </g>
+
+  <!-- 底部对比 -->
+  <g font-family="sans-serif">
+    <rect x="60" y="304" width="420" height="72" rx="10" fill="#22d3ee0e" stroke="#22d3ee66" stroke-width="1"/>
+    <text x="270" y="332" text-anchor="middle" font-size="13" font-weight="700" fill="#22d3ee">PTQ：几分钟 · 免训练 · 精度略降</text>
+    <text x="270" y="356" text-anchor="middle" font-size="12.5" fill="#99a5bf">开源社区 / 端侧自部署的主流路线</text>
+    <rect x="520" y="304" width="400" height="72" rx="10" fill="#fbbf2410" stroke="#fbbf2466" stroke-width="1"/>
+    <text x="720" y="332" text-anchor="middle" font-size="13" font-weight="700" fill="#fbbf24">QAT：要数据要算力 · 精度最好</text>
+    <text x="720" y="356" text-anchor="middle" font-size="12.5" fill="#99a5bf">手机厂商出厂模型常用（HAQ 连量化方案一起搜索）</text>
+  </g>
+</svg>

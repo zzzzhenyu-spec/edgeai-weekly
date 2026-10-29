@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="PTQ 训练后量化流水线">
+  <defs>
+    <linearGradient id="pq-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+    <marker id="pq-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 z" fill="#5f7194"/></marker>
+  </defs>
+  <rect width="960" height="360" fill="url(#pq-bg)" rx="14"/>
+  <text x="480" y="44" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">PTQ 训练后量化：不训练、几分钟、一台笔记本就能做完</text>
+
+  <!-- 流水线：FP模型 → 校准数据 → 统计范围 → 求scale → 量化 → 评估 -->
+  <g font-family="sans-serif">
+    <rect x="50" y="90" width="140" height="96" rx="10" fill="#818cf814" stroke="#818cf8" stroke-width="1.4"/>
+    <text x="120" y="126" text-anchor="middle" font-size="13.5" font-weight="700" fill="#818cf8">训练好的</text>
+    <text x="120" y="146" text-anchor="middle" font-size="13.5" font-weight="700" fill="#818cf8">FP16 模型</text>
+    <text x="120" y="168" text-anchor="middle" font-size="12.5" fill="#99a5bf">不需要原始训练集</text>
+
+    <rect x="220" y="90" width="150" height="96" rx="10" fill="#22d3ee12" stroke="#22d3ee" stroke-width="1.4"/>
+    <text x="295" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#22d3ee">喂校准样本</text>
+    <text x="295" y="144" text-anchor="middle" font-size="12.5" fill="#b6c0d6">128 – 512 条文本</text>
+    <text x="295" y="164" text-anchor="middle" font-size="12.5" fill="#99a5bf">前向一遍即可</text>
+
+    <rect x="400" y="90" width="170" height="96" rx="10" fill="#fbbf2410" stroke="#fbbf24" stroke-width="1.4"/>
+    <text x="485" y="120" text-anchor="middle" font-size="13.5" font-weight="700" fill="#fbbf24">统计每层范围</text>
+    <text x="485" y="142" text-anchor="middle" font-size="12.5" fill="#b6c0d6">min/max · 99.9% 分位</text>
+    <text x="485" y="162" text-anchor="middle" font-size="12.5" fill="#99a5bf">KL 散度（熵校准）</text>
+
+    <rect x="600" y="90" width="140" height="96" rx="10" fill="#22d3ee12" stroke="#22d3ee" stroke-width="1.4"/>
+    <text x="670" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#22d3ee">定 scale/zero</text>
+    <text x="670" y="144" text-anchor="middle" font-size="12.5" fill="#b6c0d6">按粒度分组求解</text>
+    <text x="670" y="164" text-anchor="middle" font-size="12.5" fill="#99a5bf">round 落格</text>
+
+    <rect x="770" y="90" width="140" height="96" rx="10" fill="#e879f912" stroke="#e879f9" stroke-width="1.4"/>
+    <text x="840" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#e879f9">量化产物</text>
+    <text x="840" y="144" text-anchor="middle" font-size="12.5" fill="#b6c0d6">INT4/8 权重文件</text>
+    <text x="840" y="164" text-anchor="middle" font-size="12.5" fill="#99a5bf">可直接端侧部署</text>
+
+    <path d="M190 138 h24" stroke="#5f7194" stroke-width="1.6" marker-end="url(#pq-arrow)"/>
+    <path d="M370 138 h24" stroke="#5f7194" stroke-width="1.6" marker-end="url(#pq-arrow)"/>
+    <path d="M570 138 h24" stroke="#5f7194" stroke-width="1.6" marker-end="url(#pq-arrow)"/>
+    <path d="M740 138 h24" stroke="#5f7194" stroke-width="1.6" marker-end="url(#pq-arrow)"/>
+  </g>
+
+  <!-- 底部：范围统计的门道 -->
+  <g font-family="sans-serif">
+    <rect x="50" y="216" width="860" height="118" rx="10" fill="#ffffff08" stroke="#ffffff26" stroke-width="1"/>
+    <text x="74" y="248" font-size="13.5" font-weight="700" fill="#e8ecf6">范围统计的门道：别让一个离群值毁掉整层</text>
+    <g font-size="12.5" fill="#b6c0d6">
+      <text x="74" y="278">· min/max：最直观，但一个 +60 的异常激活会把 scale 撑到 3.75/格——其余 ±0.5 的正常值全挤进同一格</text>
+      <text x="74" y="302">· 99.9% 分位：截掉头尾极端值，牺牲 0.1% 换回整层分辨率（GGUF/TensorRT 的常用档）</text>
+      <text x="74" y="326">· 更聪明的路：GPTQ 用 Hessian「代价敏感」地决定每个权重怎么落格——下一讲的主角</text>
+    </g>
+  </g>
+</svg>
