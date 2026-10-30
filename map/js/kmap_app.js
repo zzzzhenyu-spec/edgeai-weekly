@@ -1,0 +1,567 @@
+/* ============================================================
+ * 端侧大模型知识地图 · 渲染与交互（kmap_app.js）
+ * ------------------------------------------------------------
+ * 职责：把 kmap_data.js 渲染成思维导图（主干 → 领域分支 → 概念叶子）+ SVG 连线，
+ *       提供搜索 / 难度筛选 / 知识一览（建议顺序）/ 右侧详情抽屉。
+ * 约定：所有数据文本经 textContent 注入（无 innerHTML 拼接），
+ *       ref 链接仅允许 http(s)，页面双击 file:// 直开可用。
+ * ============================================================ */
+(function () {
+  "use strict";
+
+  var K = window.KMAP;
+  var $ = function (id) { return document.getElementById(id); };
+
+  var state = { q: "", level: "all", route: false, selected: null };
+  var byId = {};          // id -> node 数据
+  var domById = {};       // id -> 卡片 DOM
+  var edges = [];         // 去重后的关联边
+  var pathNodes = [];     // 按建议顺序排列的知识一览节点
+  var pathPairs = [];     // 相邻两步的 [a, b]
+  var LEVELS = ["入门", "进阶"];
+
+  K.nodes.forEach(function (n) { byId[n.id] = n; });
+
+  /* ---------- 边收集：无向去重（同一对节点只保留先登记的一条） ---------- */
+  (function () {
+    var seen = {};
+    K.nodes.forEach(function (n) {
+      (n.related || []).forEach(function (r) {
+        if (!byId[r.to]) return;
+        var key = n.id < r.to ? n.id + "|" + r.to : r.to + "|" + n.id;
+        if (seen[key]) return;
+        seen[key] = 1;
+        edges.push({ from: n.id, to: r.to, kind: r.kind === "lead" ? "lead" : "rel", note: r.note || "" });
+      });
+    });
+  })();
+
+  /* ---------- 新手路线链（按 path 序号） ---------- */
+  pathNodes = K.nodes.filter(function (n) { return n.path; })
+    .sort(function (a, b) { return a.path - b.path; });
+  for (var i = 0; i < pathNodes.length - 1; i++) {
+    pathPairs.push([pathNodes[i].id, pathNodes[i + 1].id]);
+  }
+
+  /* ---------- 工具 ---------- */
+  function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : null; }
+  function debounce(fn, ms) {
+    var t = 0;
+    return function () { clearTimeout(t); t = setTimeout(fn, ms); };
+  }
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  /* ---------- 筛选匹配 ---------- */
+  function nodeMatches(n) {
+    if (state.level !== "all" && n.level !== state.level) return false;
+    if (state.q) {
+      var hay = (n.title + " " + n.en + " " + n.oneLiner + " " + (n.keys || []).join(" ")).toLowerCase();
+      if (hay.indexOf(state.q) < 0) return false;
+    }
+    return true;
+  }
+
+  /* ---------- 地图渲染（思维导图：左主干 → 领域分支 → 概念叶子） ---------- */
+  function renderMap() {
+    var wrap = $("kmap-inner");
+    wrap.textContent = "";
+    domById = {};
+
+    var mmap = el("div", "mmap");
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.id = "kmap-edges";
+    svg.setAttribute("aria-hidden", "true");
+    mmap.appendChild(svg);
+
+    /* 主干 */
+    var root = el("div", "mroot");
+    root.appendChild(el("b", null, "端侧大模型"));
+    root.appendChild(el("span", null, "基础知识 · BASICS"));
+    mmap.appendChild(root);
+
+    /* 分支列 */
+    var branches = el("div", "mbranches");
+    var maxCount = 0;
+    K.domains.forEach(function (d) {
+      var c = K.nodes.filter(function (n) { return n.domain === d.id; }).length;
+      if (c > maxCount) maxCount = c;
+    });
+
+    K.domains.forEach(function (d) {
+      var br = el("div", "mbranch");
+      br.dataset.domain = d.id;
+      br.style.setProperty("--daccent", d.accent);
+
+      var dn = el("div", "mnode");
+      var dnHead = el("div", "mn-head");
+      dnHead.appendChild(el("span", "kd-ico", d.name.charAt(0)));
+      var dnT = el("div", "mn-title");
+      dnT.appendChild(el("b", null, d.name));
+      dnT.appendChild(el("span", "kd-count"));
+      dnHead.appendChild(dnT);
+      dn.appendChild(dnHead);
+      dn.appendChild(el("p", "kd-desc", d.desc));
+      br.appendChild(dn);
+
+      var lv = el("div", "mleaves");
+      var nodes = K.nodes.filter(function (n) { return n.domain === d.id; });
+      nodes.forEach(function (n) { lv.appendChild(renderCard(n, d)); });
+      if (nodes.length < maxCount) {
+        var ghost = el("div", "knode knode-ghost");
+        ghost.setAttribute("aria-hidden", "true");
+        ghost.appendChild(el("div", "kn-en", "MORE COMING"));
+        ghost.appendChild(el("p", "kn-liner", "加一个概念 = 在 kmap_data.js 里加一个对象，地图自动长出来"));
+        lv.appendChild(ghost);
+      }
+      br.appendChild(lv);
+      branches.appendChild(br);
+    });
+
+    mmap.appendChild(branches);
+    wrap.appendChild(mmap);
+    wrap.appendChild(el("div", "empty-note", "没有匹配的概念，换个词试试"));
+    applyFilter();
+  }
+
+  function renderCard(n, d) {
+    var c = el("article", "knode");
+    c.dataset.id = n.id;
+    c.tabIndex = 0;
+    c.setAttribute("role", "button");
+    c.setAttribute("aria-label", n.title + "，" + n.oneLiner);
+    c.style.setProperty("--daccent", d.accent);
+
+    c.appendChild(el("span", "kn-badge", n.path ? String(n.path) : ""));
+    var top = el("div", "kn-top");
+    top.appendChild(el("h3", null, n.title));
+    var lv = el("span", "kn-level lv-" + (LEVELS.indexOf(n.level) >= 0 ? n.level : "入门"), n.level);
+    top.appendChild(lv);
+    c.appendChild(top);
+    c.appendChild(el("div", "kn-en", n.en));
+    c.appendChild(el("p", "kn-liner", n.oneLiner));
+
+    c.addEventListener("click", function () { openNode(n.id); });
+    c.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openNode(n.id); }
+    });
+    c.addEventListener("mouseenter", function () { focusNode(n.id, true); });
+    c.addEventListener("mouseleave", function () { focusNode(n.id, false); });
+
+    domById[n.id] = c;
+    return c;
+  }
+
+  /* ---------- 筛选应用（节点显隐 + 计数 + 重画连线） ---------- */
+  function applyFilter() {
+    var visible = 0;
+    K.nodes.forEach(function (n) {
+      var ok = nodeMatches(n);
+      domById[n.id].classList.toggle("filtered-out", !ok);
+      domById[n.id].classList.toggle("on-path", !!n.path); /* CSS 由 .route-on 祖先控制显隐 */
+      if (ok) visible++;
+    });
+    K.domains.forEach(function (d) {
+      var nodes = K.nodes.filter(function (n) { return n.domain === d.id; });
+      var vis = nodes.filter(nodeMatches).length;
+      var sec = document.querySelector('.mbranch[data-domain="' + d.id + '"]');
+      if (sec) {
+        sec.classList.toggle("dom-hidden", vis === 0);
+        sec.querySelector(".kd-count").textContent = vis + " / " + nodes.length;
+      }
+    });
+    var mapEl = $("kmap");
+    mapEl.classList.toggle("has-empty", visible === 0);
+    $("kmap-count").textContent = visible + " / " + K.nodes.length + " 个概念";
+    /* 同步绘制（不依赖 rAF：页面不可见时 rAF 会被节流，曾导致空地图） */
+    drawEdges();
+  }
+
+  /* ---------- SVG 连线 ---------- */
+  function svgEl(tag, attrs) {
+    var e = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  /* 布局坐标（offset 系，不受 transform/滚动影响）：所有元素 offsetParent 均为 .mmap */
+  function anchorOf(elm) {
+    return {
+      left: elm.offsetLeft, right: elm.offsetLeft + elm.offsetWidth,
+      top: elm.offsetTop, bottom: elm.offsetTop + elm.offsetHeight,
+      cx: elm.offsetLeft + elm.offsetWidth / 2, cy: elm.offsetTop + elm.offsetHeight / 2
+    };
+  }
+  function cardAnchor(id) {
+    var c = domById[id];
+    if (!c || c.classList.contains("filtered-out")) return null;
+    return anchorOf(c);
+  }
+  /* 领域主题色(#rrggbb) → rgba()，纯颜色字符串换算 */
+  function accentRgba(hex, alpha) {
+    var m = (hex || "").toLowerCase().match(/^#?([0-9a-f]{6})$/);
+    if (!m) return "rgba(129,140,248," + alpha + ")";
+    var v = parseInt(m[1], 16);
+    return "rgba(" + ((v >> 16) & 255) + "," + ((v >> 8) & 255) + "," + (v & 255) + "," + alpha + ")";
+  }
+
+  /* 同列中是否还夹着别的可见卡片（决定竖直连线直连还是绕行；offset 坐标系） */
+  function hasCardBetween(a, b) {
+    var ids = Object.keys(domById);
+    for (var i = 0; i < ids.length; i++) {
+      var c = domById[ids[i]];
+      if (!c || c.classList.contains("filtered-out")) continue;
+      var ccx = c.offsetLeft + c.offsetWidth / 2, ccy = c.offsetTop + c.offsetHeight / 2;
+      if (Math.abs(ccx - a.cx) > 8) continue;
+      var lo = Math.min(a.cy, b.cy), hi = Math.max(a.cy, b.cy);
+      if (ccy > lo + 6 && ccy < hi - 6) return true;
+    }
+    return false;
+  }
+
+  function edgePath(a, b, sameCol) {
+    if (sameCol && !hasCardBetween(a, b)) {
+      /* 同列相邻卡：底边 → 顶边的短竖线 */
+      if (b.cy >= a.cy) {
+        return "M " + a.cx + " " + a.bottom + " C " + a.cx + " " + (a.bottom + 30) + ", " +
+          b.cx + " " + (b.top - 30) + ", " + b.cx + " " + b.top;
+      }
+      return "M " + a.cx + " " + a.top + " C " + a.cx + " " + (a.top - 30) + ", " +
+        b.cx + " " + (b.bottom + 30) + ", " + b.cx + " " + b.bottom;
+    }
+    if (sameCol) {
+      /* 同列隔卡：绕行列间 gutter（左列最左则走右侧 gutter），避免穿过中间卡片背后 */
+      var leftGutter = a.left > 30;
+      var gx = leftGutter ? a.left - 22 : a.right + 22;
+      var y0 = a.cy, y1 = b.cy;
+      var mid0 = y0 + (y1 > y0 ? 26 : -26), mid1 = y1 - (y1 > y0 ? 26 : -26);
+      return "M " + a.left + " " + y0 +
+        " C " + (a.left + (leftGutter ? -16 : 16)) + " " + y0 + ", " + gx + " " + mid0 + ", " + gx + " " + mid0 +
+        " L " + gx + " " + mid1 +
+        " C " + gx + " " + mid1 + ", " + (b.left + (leftGutter ? -16 : 16)) + " " + y1 + ", " + b.left + " " + y1;
+    }
+    var fwd = b.cx >= a.cx;
+    var sx = fwd ? a.right : a.left, sy = a.cy;
+    var tx = fwd ? b.left - 10 : b.right + 10, ty = b.cy; /* 箭头离目标卡留 10px 间隙，不顶边 */
+    var dx = Math.min(Math.max(Math.abs(tx - sx) * 0.45, 36), 150);
+    return "M " + sx + " " + sy + " C " + (sx + (fwd ? dx : -dx)) + " " + sy + ", " +
+      (tx + (fwd ? -dx : dx)) + " " + ty + ", " + tx + " " + ty;
+  }
+
+  function drawEdges() {
+    var svg = $("kmap-edges");
+    var mmap = document.querySelector(".mmap");
+    if (!svg || !mmap || window.getComputedStyle(svg).display === "none") return;
+    svg.textContent = "";
+    svg.setAttribute("width", mmap.offsetWidth);
+    svg.setAttribute("height", mmap.offsetHeight);
+    svg.setAttribute("viewBox", "0 0 " + mmap.offsetWidth + " " + mmap.offsetHeight);
+
+    var defs = svgEl("defs", {});
+    var mk = svgEl("marker", { id: "arr", viewBox: "0 0 10 10", refX: "8", refY: "5",
+      markerWidth: "5.5", markerHeight: "5.5", orient: "auto-start-reverse" });
+    mk.appendChild(svgEl("path", { d: "M 0 1 L 9 5 L 0 9 z", fill: "rgba(34,211,238,0.42)" }));
+    defs.appendChild(mk);
+    var mkR = svgEl("marker", { id: "arrRoute", viewBox: "0 0 10 10", refX: "8", refY: "5",
+      markerWidth: "6.5", markerHeight: "6.5", orient: "auto-start-reverse" });
+    mkR.appendChild(svgEl("path", { d: "M 0 1 L 9 5 L 0 9 z", fill: "#fbbf24" }));
+    defs.appendChild(mkR);
+    var grad = svgEl("linearGradient", { id: "routeGrad", x1: "0", y1: "0", x2: "1", y2: "0" });
+    [["0%", "#22d3ee"], ["50%", "#818cf8"], ["100%", "#e879f9"]].forEach(function (s) {
+      grad.appendChild(svgEl("stop", { offset: s[0], "stop-color": s[1] }));
+    });
+    defs.appendChild(grad);
+    svg.appendChild(defs);
+
+    /* —— 思维导图主干与分支连线（常显，领域主题色） —— */
+    var rootEl = document.querySelector(".mroot");
+    if (rootEl) {
+      var ra = anchorOf(rootEl);
+      document.querySelectorAll(".mbranch").forEach(function (br) {
+        if (br.classList.contains("dom-hidden")) return;
+        var d = K.domains.filter(function (x) { return x.id === br.dataset.domain; })[0];
+        if (!d) return;
+        var dn = anchorOf(br.querySelector(".mnode"));
+
+        /* 主干 → 领域分支（dx 按实际间距比例取值：间距不足时控制点会互相越过，曲线会打出回钩） */
+        var dx = Math.min(Math.abs(dn.left - ra.right) * 0.45, 70);
+        svg.appendChild(svgEl("path", {
+          d: "M " + ra.right + " " + ra.cy + " C " + (ra.right + dx) + " " + ra.cy +
+             ", " + (dn.left - dx) + " " + dn.cy + ", " + dn.left + " " + dn.cy,
+          "class": "kedge-branch",
+          stroke: accentRgba(d.accent, 0.78), "stroke-width": "2.6"
+        }));
+
+        /* 分支 → 概念叶子：第一列接分支节点，第二列从前一张卡横向续接（叶子两列网格） */
+        var leaves = Array.prototype.slice.call(
+          br.querySelectorAll(".knode:not(.knode-ghost):not(.filtered-out)"));
+        var rows = {};
+        leaves.forEach(function (cardEl) {
+          var rk = Math.round(cardEl.offsetTop / 28);
+          (rows[rk] = rows[rk] || []).push(cardEl);
+        });
+        Object.keys(rows).forEach(function (rk) {
+          var row = rows[rk].sort(function (a, b) { return a.offsetLeft - b.offsetLeft; });
+          row.forEach(function (cardEl, idx) {
+            var la = anchorOf(cardEl);
+            var from = idx === 0 ? dn : anchorOf(row[idx - 1]);
+            var lx = 22;
+            svg.appendChild(svgEl("path", {
+              d: "M " + from.right + " " + from.cy + " C " + (from.right + lx) + " " + from.cy +
+                 ", " + (la.left - lx) + " " + la.cy + ", " + la.left + " " + la.cy,
+              "class": "kedge-branch kedge-leaf",
+              stroke: accentRgba(d.accent, idx === 0 ? 0.68 : 0.45), "stroke-width": "1.9"
+            }));
+          });
+        });
+      });
+    }
+
+    /* —— 跨领域关联（默认隐入背景，悬停/选中点亮） —— */
+    edges.forEach(function (e) {
+      var a = cardAnchor(e.from), b = cardAnchor(e.to);
+      if (!a || !b) return;
+      var sameCol = Math.abs(a.cx - b.cx) < 8;
+      var p = svgEl("path", {
+        d: edgePath(a, b, sameCol),
+        "class": "kedge kedge-extra " + (e.kind === "lead" ? "kedge-lead" : "kedge-rel"),
+        "data-from": e.from, "data-to": e.to
+      });
+      if (e.kind === "lead") p.setAttribute("marker-end", "url(#arr)");
+      svg.appendChild(p);
+    });
+
+    /* —— 知识一览：建议阅读顺序链（相邻步连线，与 related 数据无关） —— */
+    if (state.route) {
+      pathPairs.forEach(function (pair) {
+        var a = cardAnchor(pair[0]), b = cardAnchor(pair[1]);
+        if (!a || !b) return;
+        var sameCol = Math.abs(a.cx - b.cx) < 8;
+        svg.appendChild(svgEl("path", {
+          d: edgePath(a, b, sameCol),
+          "class": "kedge kedge-route",
+          "data-from": pair[0], "data-to": pair[1],
+          "marker-end": "url(#arrRoute)"
+        }));
+      });
+    }
+  }
+
+  /* ---------- 悬停聚焦：点亮邻边与邻居 ---------- */
+  function focusNode(id, on) {
+    if (state.selected) return; /* 抽屉打开时保持选中态高亮 */
+    setFocus(id, on);
+  }
+  function setFocus(id, on) {
+    document.querySelectorAll('.kedge[data-from="' + id + '"], .kedge[data-to="' + id + '"]')
+      .forEach(function (p) { p.classList.toggle("hl", on); });
+    edges.forEach(function (e) {
+      if (e.from === id && domById[e.to]) domById[e.to].classList.toggle("hl-n", on);
+      if (e.to === id && domById[e.from]) domById[e.from].classList.toggle("hl-n", on);
+    });
+    if (domById[id]) domById[id].classList.toggle("hl-self", on);
+    $("kmap-inner").classList.toggle("has-focus", on);
+  }
+  function clearFocus() {
+    document.querySelectorAll(".kedge.hl").forEach(function (p) { p.classList.remove("hl"); });
+    document.querySelectorAll(".knode.hl-n").forEach(function (c) { c.classList.remove("hl-n"); });
+    document.querySelectorAll(".knode.hl-self").forEach(function (c) { c.classList.remove("hl-self"); });
+    $("kmap-inner").classList.remove("has-focus");
+  }
+
+  /* ---------- 详情抽屉 ---------- */
+  function openNode(id) {
+    var n = byId[id];
+    if (!n) return;
+    if (state.selected) setFocus(state.selected, false);
+    state.selected = id;
+    clearFocus();
+    setFocus(id, true);
+    Object.keys(domById).forEach(function (k) {
+      domById[k].classList.toggle("sel", k === id);
+    });
+
+    var d = K.domains.filter(function (x) { return x.id === n.domain; })[0] || K.domains[0];
+    var body = $("panel-body");
+    body.textContent = "";
+    body.scrollTop = 0;
+
+    var kick = el("div", "panel-kicker");
+    var dchip = el("span", "kd-chip", d.icon + " " + d.name);
+    dchip.style.cssText = "--daccent:" + d.accent;
+    kick.appendChild(dchip);
+    kick.appendChild(el("span", "kn-level lv-" + n.level, n.level));
+    if (n.path) kick.appendChild(el("span", "path-chip", "建议顺序 · 第 " + n.path + " 步"));
+    body.appendChild(kick);
+
+    body.appendChild(el("h3", null, n.title));
+    body.appendChild(el("div", "kde-en", n.en));
+    body.appendChild(el("div", "kde-liner", n.oneLiner));
+
+    var det = el("div", "panel-detail");
+    (n.detail || []).forEach(function (p) { det.appendChild(el("p", null, p)); });
+    body.appendChild(det);
+
+    if (n.keys && n.keys.length) {
+      body.appendChild(el("h4", "kde-h", "关键数字"));
+      var ul = el("ul", "kde-keys");
+      n.keys.forEach(function (k) { ul.appendChild(el("li", null, k)); });
+      body.appendChild(ul);
+    }
+
+    var relEdges = edges.filter(function (e) { return e.from === n.id || e.to === n.id; });
+    if (relEdges.length) {
+      body.appendChild(el("h4", "kde-h", "关联概念"));
+      var rw = el("div", "kde-related");
+      relEdges.forEach(function (e) {
+        var other = e.from === n.id ? e.to : e.from;
+        var arrow = e.kind === "lead" ? "→ " : "↔ ";
+        var b = el("button", "kde-rel");
+        b.appendChild(el("b", null, arrow + byId[other].title));
+        if (e.note) b.appendChild(el("span", null, e.note));
+        b.addEventListener("click", function () { openNode(other); flashCard(other); });
+        rw.appendChild(b);
+      });
+      body.appendChild(rw);
+    }
+
+    if (n.refs && n.refs.length) {
+      body.appendChild(el("h4", "kde-h", "延伸阅读"));
+      var rf = el("div", "kde-refs");
+      n.refs.forEach(function (r) {
+        var u = safeUrl(r.url);
+        var a = el("a", "kde-ref", r.name);
+        a.href = u || "";
+        a.target = "_blank";
+        a.rel = "noopener";
+        if (!u) a.classList.add("kde-ref-nol");
+        rf.appendChild(a);
+      });
+      body.appendChild(rf);
+    }
+
+    /* 路线上一站 / 下一站 */
+    if (n.path) {
+      var prev = pathNodes[n.path - 2], next = pathNodes[n.path];
+      var nav = el("div", "kde-route-nav");
+      [["← 上一个", prev], ["下一个 →", next]].forEach(function (it) {
+        var label = it[0], target = it[1];
+        var b = el("button", "kde-nav" + (target ? "" : " kde-nav-off"), label);
+        if (target) b.addEventListener("click", function () { openNode(target.id); flashCard(target.id); });
+        nav.appendChild(b);
+      });
+      body.appendChild(nav);
+    }
+
+    $("detail-panel").classList.add("open");
+    $("overlay").classList.add("show");
+    document.body.classList.add("panel-open");
+    try { history.replaceState(null, "", "#node/" + id); } catch (err) { /* file:// 下可能受限，忽略 */ }
+  }
+
+  function closePanel() {
+    if (state.selected) { setFocus(state.selected, false); }
+    state.selected = null;
+    clearFocus();
+    Object.keys(domById).forEach(function (k) { domById[k].classList.remove("sel"); });
+    $("detail-panel").classList.remove("open");
+    $("overlay").classList.remove("show");
+    document.body.classList.remove("panel-open");
+    /* 清掉深链，避免刷新又自动弹出抽屉 */
+    try { history.replaceState(null, "", location.pathname + location.search); } catch (err) { /* file:// 下可能受限，忽略 */ }
+  }
+
+  function flashCard(id) {
+    var c = domById[id];
+    if (!c) return;
+    c.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
+  }
+
+  /* ---------- 工具栏：搜索 / 难度 / 路线开关 ---------- */
+  function renderToolbar() {
+    var q = $("kmap-q");
+    q.addEventListener("input", debounce(function () {
+      state.q = q.value.trim().toLowerCase();
+      applyFilter();
+    }, 140));
+
+    var chips = $("level-chips");
+    var lvCounts = { all: K.nodes.length };
+    LEVELS.forEach(function (lv) {
+      lvCounts[lv] = K.nodes.filter(function (n) { return n.level === lv; }).length;
+    });
+    [["all", "全部"], ["入门", "入门"], ["进阶", "进阶"]].forEach(function (it, idx) {
+      var c = el("button", "chip" + (idx === 0 ? " on" : ""));
+      c.appendChild(el("span", null, it[1]));
+      c.appendChild(el("span", "cnt", String(lvCounts[it[0]] || 0)));
+      c.addEventListener("click", function () {
+        state.level = it[0];
+        chips.querySelectorAll(".chip").forEach(function (x) { x.classList.remove("on"); });
+        c.classList.add("on");
+        applyFilter();
+      });
+      chips.appendChild(c);
+    });
+
+    var rt = $("route-toggle");
+    rt.addEventListener("click", function () {
+      state.route = !state.route;
+      rt.classList.toggle("on", state.route);
+      rt.setAttribute("aria-pressed", state.route ? "true" : "false");
+      $("kmap").classList.toggle("route-on", state.route);
+      drawEdges();
+    });
+  }
+
+  /* ---------- 首屏统计 ---------- */
+  function renderStats() {
+    var meta = $("intro-meta");
+    meta.textContent = "";
+    var parts = [
+      [K.domains.length, " 大分支"],
+      [K.nodes.length, " 个概念"],
+      [edges.length, " 条关联"],
+      ["", pathNodes.length + " 步建议顺序"]
+    ];
+    parts.forEach(function (p, i) {
+      if (i > 0) meta.appendChild(el("span", null, "  ·  "));
+      if (p[0] !== "") meta.appendChild(el("b", null, String(p[0])));
+      meta.appendChild(document.createTextNode(p[1]));
+    });
+    $("footer-meta").textContent =
+      "数据 v" + K.version + " · 更新于 " + K.updated +
+      "  ·  加新概念只改 js/kmap_data.js，扩展指南见 README.md";
+  }
+
+  /* ---------- 启动 ---------- */
+  function init() {
+    renderMap();
+    renderToolbar();
+    renderStats();
+
+    $("panel-close").addEventListener("click", closePanel);
+    $("overlay").addEventListener("click", closePanel);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closePanel();
+    });
+
+    if (window.ResizeObserver) {
+      new ResizeObserver(debounce(drawEdges, 120)).observe($("kmap-inner"));
+    }
+    window.addEventListener("resize", debounce(drawEdges, 120));
+
+    /* 深链：#node/<id> 直开详情（分享 / 未来嵌入用） */
+    var m = (location.hash || "").match(/^#node\/([a-z0-9_-]+)$/i);
+    if (m && byId[m[1]]) setTimeout(function () { openNode(m[1]); }, 250);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();

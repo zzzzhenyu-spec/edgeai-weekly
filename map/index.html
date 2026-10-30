@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>端侧大模型知识分享 · On-Device LLM Knowledge</title>
+  <meta name="description" content="端侧大模型基础知识思维导图：领域分支展开，点击概念看白话详解，带圈数字为建议阅读顺序" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='.5' stop-color='%23818cf8'/%3E%3Cstop offset='1' stop-color='%23e879f9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='44' text-anchor='middle' fill='%2305070d' font-weight='bold' font-family='sans-serif'%3E%E5%9B%BE%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-fx" aria-hidden="true"></div>
+
+  <!-- ============ 顶栏：品牌 + 搜索 ============ -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="mark">图</span>
+      <span class="brand-name">端侧大模型知识分享<small>ON-DEVICE LLM · KNOWLEDGE</small></span>
+    </div>
+    <label class="searchbox">
+      <span aria-hidden="true">🔎</span>
+      <input id="kmap-q" type="search" placeholder="搜概念、术语或关键词…" aria-label="搜索概念" />
+    </label>
+  </header>
+
+  <!-- ============ 标题区：居中紧凑，地图优先 ============ -->
+  <section class="intro">
+    <div class="intro-glow" aria-hidden="true"></div>
+    <p class="kicker">端侧大模型 · 基础知识</p>
+    <h1>端侧大模型<em>知识分享</em></h1>
+    <p class="intro-sub">基础知识按领域分支展开：每个概念一句话先懂个大概，点开读详解与关键数字；卡片上的带圈数字是建议阅读顺序。</p>
+    <p class="intro-meta" id="intro-meta"></p>
+  </section>
+
+  <!-- ============ 地图控制行 ============ -->
+  <div class="map-ctrl">
+    <div class="chips" id="level-chips"></div>
+    <button class="route-btn" id="route-toggle" aria-pressed="false"><i></i>知识一览</button>
+    <span class="count-note" id="kmap-count"></span>
+    <span class="legend-inline" aria-hidden="true">
+      <i class="lg-solid"></i>分支<i class="lg-dash"></i>关联（悬停亮）<i class="lg-grad"></i>顺序
+    </span>
+  </div>
+
+  <!-- ============ 知识地图 ============ -->
+  <main>
+    <section id="kmap" class="kmap" aria-label="知识地图">
+      <div class="kmap-scroll">
+        <div id="kmap-inner" class="kmap-inner"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="site-footer">
+    <div id="footer-meta"></div>
+  </footer>
+
+  <!-- ============ 详情抽屉（右侧） ============ -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="detail-panel" id="detail-panel" aria-label="概念详情面板">
+    <div class="panel-glow"></div>
+    <button class="panel-close" id="panel-close" aria-label="关闭">✕</button>
+    <div class="panel-body" id="panel-body"></div>
+  </aside>
+
+  <script src="js/kmap_data.js"></script>
+  <script src="js/kmap_app.js"></script>
+</body>
+</html>
