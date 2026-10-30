@@ -89,28 +89,30 @@
     });
 
     K.domains.forEach(function (d) {
-      /* 分区面板：同色边框 + 外缘光晕圈住该分支的概念卡（分组靠容器，不靠逐卡连线） */
+      /* 分支行：[分支节点] + [概念卡纵向展开]，连线由 drawEdges 扇形绘制 */
       var br = el("div", "mbranch");
       br.dataset.domain = d.id;
       br.style.setProperty("--daccent", d.accent);
 
-      var head = el("div", "mpanel-head");
-      head.setAttribute("role", "button");
-      head.setAttribute("tabindex", "0");
-      head.setAttribute("aria-expanded", "true");
-      head.setAttribute("aria-label", d.name + "，点击收起或展开该分支的概念");
-      head.appendChild(el("span", "kd-ico", d.name.charAt(0)));
-      var ht = el("div", "mn-title");
-      ht.appendChild(el("b", null, d.name));
-      ht.appendChild(el("span", "kd-count"));
-      head.appendChild(ht);
-      head.appendChild(el("span", "mn-caret", "▾"));
-      head.addEventListener("click", function () { toggleBranch(d.id); });
-      head.addEventListener("keydown", function (e) {
+      var dn = el("div", "mnode");
+      dn.setAttribute("role", "button");
+      dn.setAttribute("tabindex", "0");
+      dn.setAttribute("aria-expanded", "true");
+      dn.setAttribute("aria-label", d.name + "，点击收起或展开该分支的概念");
+      var dnHead = el("div", "mn-head");
+      dnHead.appendChild(el("span", "kd-ico", d.name.charAt(0)));
+      var dnT = el("div", "mn-title");
+      dnT.appendChild(el("b", null, d.name));
+      dnT.appendChild(el("span", "kd-count"));
+      dnHead.appendChild(dnT);
+      dnHead.appendChild(el("span", "mn-caret", "▾"));
+      dn.appendChild(dnHead);
+      dn.appendChild(el("p", "kd-desc", d.desc));
+      dn.addEventListener("click", function () { toggleBranch(d.id); });
+      dn.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleBranch(d.id); }
       });
-      br.appendChild(head);
-      br.appendChild(el("p", "kd-desc", d.desc));
+      br.appendChild(dn);
 
       var lv = el("div", "mleaves");
       var nodes = K.nodes.filter(function (n) { return n.domain === d.id; });
@@ -220,8 +222,8 @@
     var br = document.querySelector('.mbranch[data-domain="' + domainId + '"]');
     if (!br) return;
     var collapsed = br.classList.toggle("collapsed");
-    var head = br.querySelector(".mpanel-head");
-    if (head) head.setAttribute("aria-expanded", collapsed ? "false" : "true");
+    var node = br.querySelector(".mnode");
+    if (node) node.setAttribute("aria-expanded", collapsed ? "false" : "true");
     drawEdges();
   }
 
@@ -310,7 +312,7 @@
     defs.appendChild(mk);
     svg.appendChild(defs);
 
-    /* —— 主干 → 分区面板：一一对应的肘形连线（仅 3 条，几何上不可能乱） —— */
+    /* —— 思维导图扇形连线（anchorOf 已修 offsetParent 链，端点精确落边） —— */
     var rootEl = document.querySelector(".mroot");
     if (rootEl) {
       var ra = anchorOf(rootEl);
@@ -318,13 +320,32 @@
         if (br.classList.contains("dom-hidden")) return;
         var d = K.domains.filter(function (x) { return x.id === br.dataset.domain; })[0];
         if (!d) return;
-        var pa = anchorOf(br);
-        var midX = Math.round((ra.right + pa.left) / 2);
+        var dn = anchorOf(br.querySelector(".mnode"));
+
+        /* 主干 → 分支节点：S 曲线（dx 严格 < 间距一半，杜绝控制点反穿回钩） */
+        var dx = Math.min(Math.abs(dn.left - ra.right) * 0.45, 70);
         svg.appendChild(svgEl("path", {
-          d: roundedPath([[ra.right, ra.cy], [midX, ra.cy], [midX, pa.cy], [pa.left, pa.cy]]),
+          d: "M " + ra.right + " " + ra.cy + " C " + (ra.right + dx) + " " + ra.cy +
+             ", " + (dn.left - dx) + " " + dn.cy + ", " + dn.left + " " + dn.cy,
           "class": "kedge-branch", fill: "none",
           stroke: accentRgba(d.accent, 0.8), "stroke-width": "2.4", "stroke-linecap": "round"
         }));
+
+        /* 分支 → 概念卡：扇形曲线，每条精确接卡片左缘 */
+        if (!br.classList.contains("collapsed")) {
+          var cards = Array.prototype.slice.call(
+            br.querySelectorAll(".knode:not(.knode-ghost):not(.filtered-out)"));
+          cards.forEach(function (cardEl) {
+            var la = anchorOf(cardEl);
+            var dx2 = Math.min(Math.abs(la.left - dn.right) * 0.5, 56);
+            svg.appendChild(svgEl("path", {
+              d: "M " + dn.right + " " + dn.cy + " C " + (dn.right + dx2) + " " + dn.cy +
+                 ", " + (la.left - dx2) + " " + la.cy + ", " + la.left + " " + la.cy,
+              "class": "kedge-branch kedge-leaf", fill: "none",
+              stroke: accentRgba(d.accent, 0.62), "stroke-width": "1.9", "stroke-linecap": "round"
+            }));
+          });
+        }
       });
     }
 

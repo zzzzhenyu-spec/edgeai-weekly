@@ -231,41 +231,40 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
 }
 .mroot span { display: block; margin-top: 6px; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; color: var(--text-faint); }
 
-.mbranches { display: flex; flex-direction: column; gap: 26px; }
-
-/* 分区面板：同色边框 + 外缘光晕圈住该分支的概念（分组靠容器，不靠逐卡连线） */
-.mbranch {
-  display: flex; flex-direction: column; gap: 10px;
-  width: 342px; padding: 14px 16px 13px; border-radius: 20px;
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--daccent) 7%, transparent), rgba(255, 255, 255, 0.012));
-  border: 1px solid color-mix(in srgb, var(--daccent) 36%, transparent);
-  box-shadow:
-    0 0 36px -12px color-mix(in srgb, var(--daccent) 55%, transparent),
-    inset 0 0 28px -16px color-mix(in srgb, var(--daccent) 42%, transparent);
-}
+.mbranches { display: flex; flex-direction: column; gap: 30px; }
+.mbranch { display: flex; align-items: center; }
 .mbranch.dom-hidden { display: none; }
-.mbranch.collapsed .mleaves, .mbranch.collapsed .kd-desc { display: none; }
 
-.mpanel-head {
-  display: flex; align-items: center; gap: 10px;
-  cursor: pointer; padding: 3px 5px; margin: 0 -5px; border-radius: 12px;
-  transition: background 0.2s;
+/* 分支节点：主题色小卡，可点击收起/展开 */
+.mnode {
+  flex: none; width: 186px; margin-right: 48px;
+  padding: 12px 14px; border-radius: 15px;
+  background: linear-gradient(rgba(255,255,255,0.045), rgba(255,255,255,0.045)), #0c1322;
+  border: 1px solid color-mix(in srgb, var(--daccent) 38%, transparent);
+  box-shadow: 0 10px 30px -18px color-mix(in srgb, var(--daccent) 45%, transparent);
+  cursor: pointer;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
-.mpanel-head:hover { background: color-mix(in srgb, var(--daccent) 9%, transparent); }
-.mpanel-head:focus-visible { outline: 1px solid rgba(34, 211, 238, 0.6); outline-offset: 2px; }
-.mn-title { min-width: 0; flex: 1; display: flex; flex-direction: column; line-height: 1.35; }
-.mn-title b { font-size: 16px; font-weight: 800; color: var(--daccent); }
+.mnode:hover {
+  border-color: color-mix(in srgb, var(--daccent) 62%, transparent);
+  box-shadow: 0 12px 32px -16px color-mix(in srgb, var(--daccent) 60%, transparent);
+  transform: translateY(-2px);
+}
+.mnode:focus-visible { outline: 1px solid rgba(34,211,238,0.6); outline-offset: 3px; }
+.mn-head { display: flex; align-items: center; gap: 10px; }
+.mn-title { min-width: 0; display: flex; flex-direction: column; line-height: 1.35; }
+.mn-title b { font-size: 15.5px; font-weight: 800; color: var(--daccent); }
 .mn-caret {
-  flex: none; font-size: 11px; color: var(--daccent);
+  flex: none; margin-left: auto; font-size: 11px; color: var(--daccent);
   transition: transform 0.25s; opacity: 0.85;
 }
 .mbranch.collapsed .mn-caret { transform: rotate(-90deg); }
 .kd-count { font-family: var(--mono); font-size: 10px; color: var(--text-faint); white-space: nowrap; }
-.kd-desc { margin: 0; font-size: 11.5px; color: var(--text-faint); line-height: 1.5; }
+.kd-desc { margin: 0; margin-top: 6px; font-size: 11.5px; color: var(--text-faint); line-height: 1.5; }
 
-.mleaves { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.mleaves { display: flex; flex-direction: column; gap: 10px; width: 300px; }
 .mleaves .knode { width: auto; }
+.mbranch.collapsed .mleaves { display: none; }
 
 /* 领域分支图标：名称首字字符块（三色明度拉齐） */
 .kd-ico {
@@ -512,9 +511,10 @@ body.panel-open { overflow: hidden; }
 }
 
 /* ---------------- 响应式 ---------------- */
-/* 窄屏：面板占满可视宽，主干区收缩，靠 .kmap-scroll 横向滚动 */
+/* 窄屏：分支节点与卡片略收窄，靠 .kmap-scroll 横向滚动 */
 @media (max-width: 920px) {
-  .mbranch { width: 316px; }
+  .mleaves { width: 278px; }
+  .mnode { width: 164px; margin-right: 40px; }
   .mroot { width: 128px; margin-right: 44px; }
 }
 @media (max-width: 760px) {
