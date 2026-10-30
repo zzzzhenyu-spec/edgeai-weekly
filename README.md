@@ -8,10 +8,17 @@
 
 ## 近 7 天速览
 
-### 端侧Agent（4 条）
+### 行业关注事件（1 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-29 | [开源推理引擎 Strata 发布 0.2.8：一键把大模型装上消费级电脑，本地跑 OpenAI/Anthropic 兼容接口，上线一个月 35,994 星](https://github.com/Niko1221/Strata) | GitHub（Niko1221/Strata） |
+
+### 端侧Agent（5 条）
+
+| 日期 | 要闻 | 来源 |
+|------|------|------|
+| 2026-10-28 | [Anthropic 岗位插件库 knowledge-work-plugins：把「财务顾问」等知识岗位的领域知识与工具打包给 Claude Cowork，33,851 星本周仍在高频迭代](https://github.com/anthropics/knowledge-work-plugins) | GitHub（anthropics/knowledge-work-plugins） |
 | 2026-10-27 | [微信输入法上线「AI 录音笔」：录音实时转写为结构化网页，自动剔噪、提炼重点、生成图表，iOS/安卓/电脑全平台开放](https://www.ithome.com/1/018/492.htm) | IT之家 |
 | 2026-10-27 | [蚂蚁灵光 2.0 发布：从「任务执行者」升级「事务管理者」——跨会话记忆、主动盯办与支付宝生态工具链](https://www.leiphone.com/category/industrynews/IxG2F47VLIt3uTOW.html) | 雷峰网 |
 | 2026-10-25 | [阿里千问Go!上线「我的应用」：一句话搭建专属应用、无需编程，接入 Meoo 自动完成部署上线，限时邀测](https://m.sohu.com/a/1092521376_122014422) | IT之家 |
@@ -41,11 +48,12 @@
 |------|------|------|
 | 2026-10-28 | [华为终端发布会八款齐发：Pura 90 Plus 与畅享 100 全系登场，详解麒麟「韬」系列——逻辑折叠晶体管密度提升 28%、跨层带宽 125TB/s](https://zhidx.com/p/604988.html) | 智东西 |
 
-### 大模型厂商（4 条）
+### 大模型厂商（5 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-10-29 | [谷歌发布 Gemini 4 Carbon：面向持续智能体工作流的新旗舰，综合榜登顶超越 Opus 5.5 与 GPT-6 Astra，间接提示注入攻击零得手](https://zhidx.com/p/605392.html) | 智东西 |
+| 2026-10-27 | [Liquid AI 单日放出 LFM3 全家族：三混合架构 2B 级 6 款覆盖文本/视觉/音频/Omni/决策，4-bit 约 1GB 内存，1.7B 平均分超 Qwen3.5-4B](https://www.liquid.ai/blog/lfm3) | Liquid AI 官方博客 |
 | 2026-10-26 | [OpenAI 官宣 GPT-6.1 Terra：把「快而强」的 computer use 打到每百万 token 输出 5 美元，OSWorld 追至距旗舰约 2 个百分点](https://openai.com/index/introducing-gpt-6-1-terra) | OpenAI 官方 |
 | 2026-10-26 | [OpenAI 披露与学术社区共建科学理解：模型在 Kakeya 猜想、指数时间假设与量子色动力学上的成果及可验证路径](https://openai.com/index/building-scientific-understanding-with-academic-communities) | OpenAI 官方 |
 | 2026-10-24 | [月之暗面发布 Kimi K3.1 Pro：3 万亿级参数 MoE、100 万 token 上下文，编程智能体测评超 GPT-6，权重 11 月 4 日前开源](https://www.ithome.com/1/017/284.htm) | IT之家 |

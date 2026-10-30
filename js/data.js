@@ -24,6 +24,17 @@ const WEEKLY_DATA = {
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
     {
+      id: "n138", cat: "行业关注事件", source: "GitHub（Niko1221/Strata）", date: "2026-10-29",
+      title: "开源推理引擎 Strata 发布 0.2.8：一键把大模型装上消费级电脑，本地跑 OpenAI/Anthropic 兼容接口，上线一个月 35,994 星",
+      summary: "个人开发者 Niko Veit 的开源项目 Strata 发布 0.2.8——定位「大模型的一键安装包」：桌面应用与终端两种形态，Windows/Linux/macOS 安装器双击即用，在本地起 OpenAI/Anthropic 兼容接口，Claude Code、Codex CLI、OpenCode 等编码工具直连本地模型。主推 Qwen3.8-Flash-Next（ISTA-DASLab/Unsloth 量化包，最低 IQ2_XS），另支持 Qwen3.6-35B-A3B 与 DeepSeek V4.1-Flash-1017（1.75-2.25 bpw，放不进内存的部分从 SSD 流式读取，约需 245GB 磁盘）。硬件覆盖 NVIDIA RTX 20-50 系、AMD RX 6000-9070 与 AI PRO R9700、Intel Arc（Linux）、Apple M1 及以上、Strix Halo。仓库 9 月 24 日创建，一个月 35,994 星；MIT 许可。",
+      detail: "项目：Strata 0.2.8 于 10 月 29 日发布；安装后 strata launch 一条命令选模型开跑，strata connect 输出编码工具对接指引。\n模型：Qwen3.8-Flash-Next 推荐 ISTA-DASLab 量化（Q2_0 至 IQ3_S，Coder 版 IQ1_M），Unsloth 提供 UD-Q4_K_XL 到 Q8_0；DeepSeek V4.1-Flash-1017 需 239-274GB 磁盘，实测 RTX 3060 12GB+46GB 内存跑出 9-11 token/s，4 张 AI PRO R9700 达 74-77 token/s，Strix Halo 统一内存 19-21 token/s（代码）。\n工具链：通过本地的 OpenAI/Anthropic 兼容接口，已适配 Claude Code、Codex CLI、OpenCode、Hermes Agent 等编码工具。\n生态位：已被多篇本地推理后端横评与 Ollama、vLLM、llama.cpp 并列讨论。\n端侧视角：端侧推理的门槛正从「会编译 llama.cpp」降到「双击安装器」——本地兼容层让云端编码工具无缝切换到本地模型，隐私与零成本跑智能体工作流成为默认选项；对行业的意义可对标当年 LM Studio 的普及，且进一步打通了终端与工具链。",
+      tags: ["Strata", "本地推理", "量化包", "OpenAI 兼容接口", "开源"],
+      url: "https://github.com/Niko1221/Strata",
+      image: "images/news/n138.png",
+      imageCap: "Strata 仓库卡片（图源：GitHub·Niko1221/Strata）",
+      highlight: true
+    },
+    {
       id: "n135", cat: "大模型厂商", source: "智东西", date: "2026-10-29",
       title: "谷歌发布 Gemini 4 Carbon：面向持续智能体工作流的新旗舰，综合榜登顶超越 Opus 5.5 与 GPT-6 Astra，间接提示注入攻击零得手",
       summary: "谷歌凌晨发布 Gemini 4 系列新旗舰 Carbon——专为可连续数天推进的智能体工作流构建，在 Artificial Analysis 综合指数以 59 分登顶，超越 Claude Opus 5.5 与 GPT-6 Astra；编程（SWE-sweep、Terminal-Bench 4.0）与智能体（Agents' Last Exam 77.4%）多项第一，安全方向 SEC-bench Pro 88.2%、间接提示注入攻击成功率 0%。定价与 Argon 持平（输入 2 美元/输出 10 美元每百万 token），先向网络安全防御者分阶段开放。同场财报：谷歌云收入同比大涨 103%、积压订单 5610 亿美元。",
@@ -57,6 +68,17 @@ const WEEKLY_DATA = {
       highlight: false
     },
     {
+      id: "n139", cat: "端侧Agent", source: "GitHub（anthropics/knowledge-work-plugins）", date: "2026-10-28",
+      title: "Anthropic 岗位插件库 knowledge-work-plugins：把「财务顾问」等知识岗位的领域知识与工具打包给 Claude Cowork，33,851 星本周仍在高频迭代",
+      summary: "Anthropic 官方开源的 knowledge-work-plugins 是桌面 AI 助理 Claude Cowork 的「岗位插件」仓库——把某一职能的领域知识、工作流与外部工具连接（Skills、连接器、斜杠命令）打包成可安装单元，兼容 Claude Code；1 月开源以来累计 33,851 星。本周持续扩充：10 月 28 日更新插件市场清单，10 月 27 日升级「财务顾问」岗位插件与安全指引。Apache-2.0 许可。",
+      detail: "机制：每个插件按「岗位」组织——内置该职能的技能（Skills）、外部系统连接器与团队惯用命令，Claude Cowork 装上后即可沿该岗位的工作流干活，产出文档、表格与演示稿等桌面件。\n本周动态：10 月 28 日插件市场清单更新（marketplace.json），10 月 27 日 claude-for-financial-advisors 岗位插件升级与 security-guidance 2.0.17。\n产品侧：Claude Cowork 为 Anthropic 桌面端 AI 助理，任务可在桌面启动、手机查看进度；官方同步开出 Cowork 实操课程。\n端侧视角：跑在用户桌面上的本地智能体+按岗位封装的知识包，是「专家工作流标准化下放」的雏形——与 Harness²、The Agentic Scientist 代表的「外围系统工程」是同一潮流：模型不动，外围的知识、工具与流程封装越来越值钱。",
+      tags: ["Anthropic", "Claude Cowork", "岗位插件", "Agent Skills", "开源"],
+      url: "https://github.com/anthropics/knowledge-work-plugins",
+      image: "images/news/n139.png",
+      imageCap: "knowledge-work-plugins 仓库卡片（图源：GitHub·anthropics）",
+      highlight: false
+    },
+    {
       id: "n132", cat: "芯片厂商", source: "Apple 官方", date: "2026-10-28",
       title: "苹果发布 M6 款 MacBook Pro：双 16 核神经引擎较 M5 提速最高 1.9 倍，GPU 核内神经加速器加持，本地跑大模型成为标配卖点",
       summary: "苹果官方发布搭载 M6 的 14 英寸 MacBook Pro（iMac 同步换芯）——双 16 核神经网络引擎较 M5 提速最高 1.9 倍；12 核 GPU 每个核心内置神经加速器，端侧 AI 较 M5 最高提升 25%、较 M1 机型最高 13 倍；16GB 统一内存标配（可选 32GB）、带宽最高 170GB/s，官方主打「本地运行大模型」、Siri AI（macOS 27.2 beta）、端侧图像生成与超分辨率。10 月 28 日预购、11 月 6 日发售，15999 元起，续航最长 24 小时。",
@@ -76,6 +98,17 @@ const WEEKLY_DATA = {
       url: "https://zhidx.com/p/604988.html",
       image: "images/news/n133.png",
       imageCap: "华为终端新品发布会（图源：智东西）",
+      highlight: false
+    },
+    {
+      id: "n140", cat: "大模型厂商", source: "Liquid AI 官方博客", date: "2026-10-27",
+      title: "Liquid AI 单日放出 LFM3 全家族：三混合架构 2B 级 6 款覆盖文本/视觉/音频/Omni/决策，4-bit 约 1GB 内存，1.7B 平均分超 Qwen3.5-4B",
+      summary: "Liquid AI 发布第三代 Liquid Foundation Models 全家族 6 款——LFM3-1.7B（文本，256K 上下文）、LFM3-VL-2B（视觉，首次支持视频）、LFM3-Audio-2B（18 种语言）、LFM3-Omni-2B（2.2B，首个全模态）与两款决策模型 d1-2B/d1-Omni-2B。三混合架构：24 层中 13 层门控短卷积、5 层滑窗注意力、6 层全局注意力，预训练 22T token；1.7B 文本模型基准平均 49.37 分超过更大的 Qwen3.5-4B，浏览器与企业任务上胜 Qwen3.5-9B，视觉版平均 71.4 分追平 Gemma 4 12B。文本模型 4-bit 量化约 1GB 内存、128K 上下文 KV cache 仅 1.6GB；llama.cpp/MLX/vLLM/SGLang 均支持，覆盖 Apple、AMD、NVIDIA 与 Qualcomm Hexagon NPU，AMD 主打 Ryzen AI PC 本地运行，权重开放于 Hugging Face。",
+      detail: "家族：一天内放出全部 6 款，全部围绕约 2B 级同一骨干——文本（256K 上下文）、视觉（1.9B，128K 上下文）、音频（2B，18 种语言）、Omni（2.2B，首个全模态）、决策 d1 两款。\n架构：三混合（tri-hybrid）24 层布局，另配逐头门控注意力、部分 RoPE 与 Sandwich norm；架构由覆盖 14 种设备/后端的硬件在环搜索选定。\n基准：1.7B 平均 49.37 超 Qwen3.5-4B，WebArena、AutomationBench 等浏览器/企业任务击败 Qwen3.5-9B；视觉版平均 71.4 匹配 Gemma 4 12B，音频对比 Qwen2.5-Omni、Kimi-Audio 等。\n本地：4-bit 约 1GB 内存，单 GPU 可微调，主打微调后端侧部署；Qualcomm Hexagon NPU 在支持列表，AMD 称其适合 Ryzen AI 处理器的 AI PC 本地运行。\n端侧视角：这是本月最「端侧原生」的旗舰开源发布——全家族压在 2B 级、按手机与 NPU 后端做硬件在环搜索，把「小模型+前沿后训练」路线推进到全模态；对手机/PC 厂商的本地多模态助手选型是直接可用的候选。",
+      tags: ["Liquid AI", "LFM3", "端侧模型", "多模态", "开放权重"],
+      url: "https://www.liquid.ai/blog/lfm3",
+      image: "images/news/n140.jpg",
+      imageCap: "LFM3（图源：Liquid AI 官方博客）",
       highlight: false
     },
     {
