@@ -497,6 +497,41 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
 
 body.panel-open { overflow: hidden; }
 
+/* ---------------- 公共知识区 ---------------- */
+.shares { margin-top: 36px; }
+.shares-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+.shares-head h2 {
+  font-size: 17px; font-weight: 800; display: flex; align-items: center; gap: 10px;
+}
+.shares-head h2::before {
+  content: ""; width: 4px; height: 16px; border-radius: 2px;
+  background: var(--grad); display: inline-block;
+}
+.shares-head span { font-size: 12px; color: var(--text-faint); font-family: var(--mono); letter-spacing: 0.02em; }
+
+.shares-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.share-card {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 14px 16px; border-radius: 14px;
+  background: linear-gradient(rgba(255,255,255,0.04), rgba(255,255,255,0.04)), #0c1322;
+  border: 1px solid var(--border); text-decoration: none; cursor: pointer;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.share-card:hover {
+  border-color: rgba(34, 211, 238, 0.45); transform: translateY(-3px);
+  box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.55), 0 0 22px -10px rgba(34, 211, 238, 0.35);
+}
+.sc-top { display: flex; align-items: center; gap: 8px; }
+.sc-top b { font-size: 13.5px; color: var(--text); font-weight: 700; flex: 1; min-width: 0; line-height: 1.5; }
+.sc-tag {
+  flex: none; font-size: 10.5px; font-family: var(--mono); color: var(--accent);
+  border: 1px solid rgba(34, 211, 238, 0.35); background: rgba(34, 211, 238, 0.08);
+  border-radius: 999px; padding: 1px 9px;
+}
+.sc-arrow { flex: none; font-style: normal; font-size: 12px; color: var(--text-faint); }
+.share-card:hover .sc-arrow { color: var(--accent); }
+.share-card p { font-size: 12.5px; color: var(--text-dim); line-height: 1.62; }
+
 /* ---------------- 页脚 ---------------- */
 .site-footer {
   border-top: 1px solid var(--border); margin-top: 26px;

@@ -22,7 +22,7 @@
  * ============================================================ */
 
 window.KMAP = {
-  version: "0.1.0",
+  version: "0.2.0",
   updated: "2026-10-30",
 
   /* ---------------- 领域（分区列） ----------------
@@ -323,6 +323,48 @@ window.KMAP = {
         { name: "Apple · Private Cloud Compute（端云边界的官方博客）", url: "https://security.apple.com/blog/private-cloud-compute/" },
         { name: "RouteLLM（arXiv:2406.18665，学习给大/小模型分流请求）", url: "https://arxiv.org/abs/2406.18665" }
       ]
+    }
+  ],
+
+  /* ---------------- 公共知识区：网络上的好分享（持续收录） ----------------
+   * 加一条 = 追加一个对象 { name, desc, url, tag }，url 仅接受 http(s)。
+   * tag 建议：视频 / 课程 / 路线图 / 工具 / 报告 / 博客 */
+  shares: [
+    {
+      name: "3Blue1Brown · 神经网络系列",
+      desc: "最经典的可视化入门：从矩阵乘法一路讲到 Transformer，直觉拉满",
+      url: "https://www.youtube.com/watch?v=aircAruvnKk",
+      tag: "视频"
+    },
+    {
+      name: "Karpathy · 从零手搓 GPT",
+      desc: "两小时跟着 Karpathy 逐行写出 nanoGPT，大模型每一层在干嘛全看懂",
+      url: "https://www.youtube.com/watch?v=kCc8FmZ1fvY",
+      tag: "视频"
+    },
+    {
+      name: "mlabonne/llm-course",
+      desc: "GitHub 高星学习路线图：基础 → 训练 → 部署三轨道，配 Colab 实操",
+      url: "https://github.com/mlabonne/llm-course",
+      tag: "路线图"
+    },
+    {
+      name: "Hugging Face · LLM Course",
+      desc: "官方免费课程：分词、模型、微调到部署的体系化教材",
+      url: "https://huggingface.co/learn/llm-course/chapter1/1",
+      tag: "课程"
+    },
+    {
+      name: "llama.cpp",
+      desc: "端侧推理的事实标准，README 即最好的上手文档",
+      url: "https://github.com/ggml-org/llama.cpp",
+      tag: "工具"
+    },
+    {
+      name: "Apple · 端侧基础模型技术报告",
+      desc: "3B 模型如何装进手机的一手工程细节（PDF 原文）",
+      url: "https://machinelearning.apple.com/papers/apple_intelligence_foundation_language_models.pdf",
+      tag: "报告"
     }
   ]
 };

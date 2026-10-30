@@ -331,11 +331,12 @@
           stroke: accentRgba(d.accent, 0.8), "stroke-width": "2.4", "stroke-linecap": "round"
         }));
 
-        /* 分支 → 概念卡：扇形曲线，每条精确接卡片左缘 */
+        /* 分支 → 概念卡：只画首末两条扇形曲线（中间卡不画线，简洁；加卡不增线） */
         if (!br.classList.contains("collapsed")) {
           var cards = Array.prototype.slice.call(
             br.querySelectorAll(".knode:not(.knode-ghost):not(.filtered-out)"));
-          cards.forEach(function (cardEl) {
+          cards.forEach(function (cardEl, ci) {
+            if (cards.length > 2 && ci !== 0 && ci !== cards.length - 1) return;
             var la = anchorOf(cardEl);
             var dx2 = Math.min(Math.abs(la.left - dn.right) * 0.5, 56);
             svg.appendChild(svgEl("path", {
@@ -497,6 +498,28 @@
     c.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
   }
 
+  /* ---------- 公共知识区：网络好分享（数据驱动，链接卡片） ---------- */
+  function renderShares() {
+    var grid = $("shares-grid");
+    if (!grid || !K.shares) return;
+    grid.textContent = "";
+    K.shares.forEach(function (s) {
+      var u = safeUrl(s.url);
+      var a = el("a", "share-card");
+      a.href = u || "";
+      a.target = "_blank";
+      a.rel = "noopener";
+      if (!u) { a.removeAttribute("href"); a.removeAttribute("target"); }
+      var top = el("div", "sc-top");
+      top.appendChild(el("b", null, s.name));
+      if (s.tag) top.appendChild(el("span", "sc-tag", s.tag));
+      top.appendChild(el("i", "sc-arrow", "↗"));
+      a.appendChild(top);
+      a.appendChild(el("p", null, s.desc || ""));
+      grid.appendChild(a);
+    });
+  }
+
   /* ---------- 工具栏：搜索 / 难度 / 路线开关 ---------- */
   function renderToolbar() {
     var q = $("kmap-q");
@@ -558,6 +581,7 @@
     renderMap();
     renderToolbar();
     renderStats();
+    renderShares();
 
     $("panel-close").addEventListener("click", closePanel);
     $("overlay").addEventListener("click", closePanel);
