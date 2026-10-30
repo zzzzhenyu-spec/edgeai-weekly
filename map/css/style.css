@@ -147,13 +147,13 @@ button { font-family: var(--font); }
 /* ---------------- 地图控制行 + 图例行 ---------------- */
 .map-ctrl {
   display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;
-  max-width: 1240px; margin: 24px auto 18px; padding: 0 24px;
+  max-width: 1240px; margin: 32px auto 10px; padding: 0 24px;
 }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips { display: flex; flex-wrap: nowrap; gap: 8px; }
 .chip {
   font-size: 13px; color: var(--text-dim); padding: 7px 17px; border-radius: 999px;
   border: 1px solid var(--border); background: transparent; cursor: pointer;
-  transition: all 0.25s; user-select: none;
+  transition: all 0.25s; user-select: none; white-space: nowrap;
 }
 .chip:hover { color: var(--text); border-color: rgba(129,140,248,0.4); }
 .chip.on {
@@ -182,18 +182,16 @@ button { font-family: var(--font); }
 }
 .route-btn.on i { background: #05070d; }
 
-.count-note {
-  font-family: var(--mono); font-size: 10.5px; color: var(--text-faint);
-  letter-spacing: 0.02em; white-space: nowrap; margin-left: 10px; opacity: 0.9;
+/* 图例/计数行：单行居中，与控制行各自完整，不参差换行 */
+.ctrl-sub {
+  display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; gap: 6px;
+  margin: 0 auto 22px; padding: 0 16px;
+  font-family: var(--mono); font-size: 11.5px; color: var(--text-faint); letter-spacing: 0.02em;
 }
-
-.legend-inline {
-  display: inline-flex; align-items: center; gap: 4px; margin-left: 14px; padding-left: 14px;
-  border-left: 1px solid rgba(148, 163, 184, 0.22);
-  font-family: var(--mono); font-size: 11px; color: var(--text-faint); white-space: nowrap;
-}
-.legend-inline i { margin: 0 3px 0 8px; }
-.legend-inline i:first-child { margin-left: 0; }
+.ctrl-sub i { margin: 0 3px 0 9px; }
+.ctrl-sub i:first-of-type { margin-left: 0; }
+.ctrl-sub #kmap-count { white-space: nowrap; }
+.lg-sep { opacity: 0.4; margin: 0 2px; }
 .lg-solid { display: inline-block; width: 30px; height: 2.5px; border-radius: 2px; background: linear-gradient(90deg, #22d3ee, #a78bfa, #fb923c); vertical-align: 3px; }
 .lg-dash { display: inline-block; width: 28px; height: 0; border-top: 2px dashed rgba(129, 140, 248, 0.85); vertical-align: 3px; }
 .lg-num {
@@ -260,7 +258,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
 }
 .mbranch.collapsed .mn-caret { transform: rotate(-90deg); }
 .kd-count { font-family: var(--mono); font-size: 10px; color: var(--text-faint); white-space: nowrap; }
-.kd-desc { margin: 0; margin-top: 6px; font-size: 11.5px; color: var(--text-faint); line-height: 1.5; }
+.kd-desc { margin: 0; margin-top: 6px; font-size: 12px; color: var(--text-faint); line-height: 1.58; }
 
 .mleaves { display: flex; flex-direction: column; gap: 10px; width: 300px; }
 .mleaves .knode { width: auto; }
@@ -443,8 +441,8 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
   background: color-mix(in srgb, var(--daccent, #22d3ee) 6%, rgba(255,255,255,0.02));
   font-size: 14.5px; color: var(--text); line-height: 1.8;
 }
-.panel-detail p { font-size: 14.5px; color: var(--text-dim); margin-bottom: 13px; line-height: 1.9; }
-.panel-detail p:first-child { color: var(--text); font-size: 15px; }
+.panel-detail p { font-size: 15px; color: var(--text-dim); margin-bottom: 13px; line-height: 1.92; }
+.panel-detail p:first-child { color: var(--text); font-size: 15.5px; }
 
 .kde-h {
   display: flex; align-items: center; gap: 10px;
@@ -530,7 +528,7 @@ body.panel-open { overflow: hidden; }
 }
 .sc-arrow { flex: none; font-style: normal; font-size: 12px; color: var(--text-faint); }
 .share-card:hover .sc-arrow { color: var(--accent); }
-.share-card p { font-size: 12.5px; color: var(--text-dim); line-height: 1.62; }
+.share-card p { font-size: 13px; color: var(--text-dim); line-height: 1.66; }
 
 /* ---------------- 页脚 ---------------- */
 .site-footer {
@@ -559,4 +557,6 @@ body.panel-open { overflow: hidden; }
   main { padding: 0 16px 50px; }
   .panel-body { padding: 26px 22px 40px; }
   .kde-keys { gap: 6px; }
+  .ctrl-sub { flex-wrap: wrap; row-gap: 4px; }
+  .chips { flex-wrap: wrap; justify-content: center; }
 }

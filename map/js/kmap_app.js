@@ -45,10 +45,16 @@
     var t = 0;
     return function () { clearTimeout(t); t = setTimeout(fn, ms); };
   }
+  /* 中西文之间渲染层补空格（对齐周报站展示规范；数据原文不动） */
+  function tx(s) {
+    return String(s == null ? "" : s)
+      .replace(/([\u4e00-\u9fff\u2460-\u24ff])([A-Za-z0-9])/g, "$1 $2")
+      .replace(/([A-Za-z0-9])([\u4e00-\u9fff\u2460-\u24ff])/g, "$1 $2");
+  }
   function el(tag, cls, text) {
     var e = document.createElement(tag);
     if (cls) e.className = cls;
-    if (text != null) e.textContent = text;
+    if (text != null) e.textContent = tx(text);
     return e;
   }
 
