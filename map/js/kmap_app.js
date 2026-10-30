@@ -17,7 +17,6 @@
   var domById = {};       // id -> 卡片 DOM
   var edges = [];         // 去重后的关联边
   var pathNodes = [];     // 按建议顺序排列的知识一览节点
-  var pathPairs = [];     // 相邻两步的 [a, b]
   var LEVELS = ["入门", "进阶"];
 
   K.nodes.forEach(function (n) { byId[n.id] = n; });
@@ -36,12 +35,9 @@
     });
   })();
 
-  /* ---------- 新手路线链（按 path 序号） ---------- */
+  /* ---------- 建议阅读顺序（按 path 序号） ---------- */
   pathNodes = K.nodes.filter(function (n) { return n.path; })
     .sort(function (a, b) { return a.path - b.path; });
-  for (var i = 0; i < pathNodes.length - 1; i++) {
-    pathPairs.push([pathNodes[i].id, pathNodes[i + 1].id]);
-  }
 
   /* ---------- 工具 ---------- */
   function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : null; }
@@ -140,6 +136,7 @@
   function renderCard(n, d) {
     var c = el("article", "knode");
     c.dataset.id = n.id;
+    if (n.path) c.style.setProperty("--step", n.path); /* 知识一览：按步数瀑布弹跳 */
     c.tabIndex = 0;
     c.setAttribute("role", "button");
     c.setAttribute("aria-label", n.title + "，" + n.oneLiner);
@@ -305,15 +302,6 @@
       markerWidth: "5.5", markerHeight: "5.5", orient: "auto-start-reverse" });
     mk.appendChild(svgEl("path", { d: "M 0 1 L 9 5 L 0 9 z", fill: "rgba(34,211,238,0.42)" }));
     defs.appendChild(mk);
-    var mkR = svgEl("marker", { id: "arrRoute", viewBox: "0 0 10 10", refX: "8", refY: "5",
-      markerWidth: "6.5", markerHeight: "6.5", orient: "auto-start-reverse" });
-    mkR.appendChild(svgEl("path", { d: "M 0 1 L 9 5 L 0 9 z", fill: "#fbbf24" }));
-    defs.appendChild(mkR);
-    var grad = svgEl("linearGradient", { id: "routeGrad", x1: "0", y1: "0", x2: "1", y2: "0" });
-    [["0%", "#22d3ee"], ["50%", "#818cf8"], ["100%", "#e879f9"]].forEach(function (s) {
-      grad.appendChild(svgEl("stop", { offset: s[0], "stop-color": s[1] }));
-    });
-    defs.appendChild(grad);
     svg.appendChild(defs);
 
     /* —— 思维导图主干与分支连线（常显，领域主题色） —— */
@@ -377,20 +365,8 @@
       svg.appendChild(p);
     });
 
-    /* —— 知识一览：建议阅读顺序链（相邻步连线，与 related 数据无关） —— */
-    if (state.route) {
-      pathPairs.forEach(function (pair) {
-        var a = cardAnchor(pair[0]), b = cardAnchor(pair[1]);
-        if (!a || !b) return;
-        var sameCol = Math.abs(a.cx - b.cx) < 8;
-        svg.appendChild(svgEl("path", {
-          d: edgePath(a, b, sameCol),
-          "class": "kedge kedge-route",
-          "data-from": pair[0], "data-to": pair[1],
-          "marker-end": "url(#arrRoute)"
-        }));
-      });
-    }
+    /* 知识一览不再画跨图顺序连线（横穿三分支是视觉混乱之源）：
+       顺序由常显的带圈数字徽章表达，开关只做「聚焦」——路线上节点点亮、其余压暗。 */
   }
 
   /* ---------- 悬停聚焦：点亮邻边与邻居 ---------- */
