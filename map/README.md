@@ -11,8 +11,8 @@
 ## 快速开始
 
 ```bash
-git clone https://github.com/zzzzhenyu-spec/edge-llm-knowledge-map.git
-# 双击 index.html 即可；或起任意静态服务器：
+# 已克隆本仓库：git pull 拿最新内容
+# 双击 index.html 即可离线打开；或起任意静态服务器：
 python -m http.server 8080
 ```
 
