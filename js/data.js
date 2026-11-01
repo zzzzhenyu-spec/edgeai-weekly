@@ -33,7 +33,19 @@ const WEEKLY_DATA = {
       image: "images/news/n143.jpg",
       imageCap: "千问接入国行 Apple 智能（图源：爱范儿）",
       highlight: false
+    },    {
+      id: "n148", cat: "行业关注事件", source: "智东西", date: "2026-10-31",
+      title: "DeepSeek 开源 Super-agent 原型 dsh-superagent：Router+Worker 双层架构让 AI 指挥 AI 干活，可接入 GitHub 与飞书主动处理任务",
+      summary: "DeepSeek 团队开源 Super-agent 设计探索原型 dsh-superagent-prototype（MIT 协议）——一个主动性编码 Agent，以 DeepSeek Harness 插件包形式封装，针对单个 GitHub 仓库工作。核心架构为 Router+Worker 双层：Router 负责任务调度，Worker 执行具体编码，实现「AI 指挥 AI」；可接入 GitHub 与飞书——工作群里讨论某个 Bug 时它能主动感知并处理，自动对接 CI 与 Issue 开发流程。团队强调自主性与克制并重，会主动干活也懂得何时闭嘴。",
+      detail: "发布：10 月 31 日开源至 deepseek-ai/dsh-superagent-prototype（MIT 协议），属研究原型非正式产品，定位验证技术路线。\n架构：Router+Worker 双层——Router 负责全局调度与任务分解，Worker 执行具体编码工作，实现多 Agent 协作的「指挥-执行」模式。\n能力：主动性编码 Agent，针对单个 GitHub 仓库工作——接入 GitHub 和飞书后，工作群里讨论某个 Bug 时能主动感知并处理；自动对接 CI、Issue 等开发流程，形成「感知-分析-修复-提交」闭环。\n设计哲学：自主性与克制并重——Agent 会主动干活但也懂得不过度打扰用户，何时主动何时等待由 Router 层判断。\n诚实边界：DeepSeek 团队在文章结尾坦言该架构尚未完全解决所有问题，仍在持续探索中。\n端侧视角：这是继 ACE（谷歌）、灵光 2.0（蚂蚁）之后又一层级的智能体基础设施——前两者解决「智能体需要什么算力与环境」，dsh-superagent 解决「多个智能体如何协作」；开源生态的 Agent 框架正在从单 Agent 工具链走向多 Agent 编排，端侧执行层（OpenCode/WorkBuddy 等）的上层调度有了开源参照。",
+      tags: ["DeepSeek", "Super-agent", "开源", "多Agent协作", "Router-Worker"],
+      url: "https://zhidx.com/p/606311.html",
+      image: "images/news/n148.png",
+      imageCap: "dsh-superagent 架构（图源：智东西）",
+      highlight: false
     },
+,
+
     {
       id: "n146", cat: "AI硬件", source: "凤凰财经", date: "2026-10-30",
       title: "智元联合清华与无问芯穹发布群体经验学习范式 CEL：96 台真机集群成功率从 86.7% 提升至 98.3%，机器人开始互相学习",
