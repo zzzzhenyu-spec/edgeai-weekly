@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 45 期（2026.10.25 — 10.31 · 近 7 天）
+## 2026 · 第 45 期（2026.10.26 — 11.01）
 
-**近 7 天导读**：近 7 天聚焦：国行 Apple 智能官宣接入阿里千问（Siri/写作/视觉智能三线打通，12 月正式推送）成为「大模型×手机」最高规格落地；端侧算力密集换代——苹果十月双波（M6 与首款触屏 MacBook Pro）、华为麒麟「韬」逻辑折叠、新芯航途 X7 Ultra 与爱芯元智 AX8860 推进车端边端量产。模型侧 Gemini 4 Carbon 登顶综合榜、Kimi K3.1 Pro 开源、小米 0.8B 文档模型与 Liquid LFM3、Strata 掀起本地部署与轻量化热潮；终端形态密集创新：Rokid Color 开启全彩 AI 眼镜时代，「订阅送硬件」的 Wowoker 重构企业手机，ISHO Ring 切入无感 AI 睡眠，微信把 AI 录音笔做进输入法；具身智能跨过量产分水岭并开始建立自己的度量衡（智元 Worken 有效智能工时）。 今日新增：国行 Apple 智能接入千问官宣、小米开源 Xiaomi-OCR-0 文档模型、智元发布物理 AI 度量衡 Worken。
+**近 7 天导读**：本期聚焦：端侧 AI 密集换代周。苹果「十月双波」连发（基础款 M6 与首款触屏 MacBook Pro，M5 Max 整机本地跑数千亿参数模型），华为详解麒麟「韬」系列逻辑折叠（晶体管密度 +28%、跨层带宽 125TB/s），新芯航途 X7 Ultra 与爱芯元智 AX8860 把 256 至 700 TOPS 级大模型芯片推向车端与边端量产。国行 Apple 智能官宣接入阿里千问（Siri、写作与视觉智能三线打通，12 月正式推送），成为「大模型×手机」最高规格落地。AI 眼镜进入全彩时代（Rokid Color 4999 元起领衔、雷鸟同日亮方案），Wowoker 以「订阅智能体服务、硬件赠送」重构企业手机，ISHO Ring 切入无感 AI 睡眠生态，微信把 AI 录音笔做进输入法。Gemini 4 Carbon 登顶综合榜、Kimi K3.1 Pro 开源、小米 0.8B 文档模型与 Liquid LFM3 掀起本地部署热潮。具身智能跨过量产分水岭并建立自己的度量衡（智元 Worken 有效智能工时），群体学习让 96 台机器人集群成功率升至 98.3%。AI PC 换机潮因内存虹吸落空，端侧轻量化紧迫性再上台阶。
 
 ## 近 7 天速览
 
@@ -14,26 +14,25 @@
 |------|------|------|
 | 2026-10-29 | [开源推理引擎 Strata 发布 0.2.8：一键把大模型装上消费级电脑，本地跑 OpenAI/Anthropic 兼容接口，上线一个月 35,994 星](https://github.com/Niko1221/Strata) | GitHub（Niko1221/Strata） |
 
-### 端侧Agent（4 条）
+### 端侧Agent（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-10-28 | [Anthropic 岗位插件库 knowledge-work-plugins：把「财务顾问」等知识岗位的领域知识与工具打包给 Claude Cowork，33,851 星本周仍在高频迭代](https://github.com/anthropics/knowledge-work-plugins) | GitHub（anthropics/knowledge-work-plugins） |
 | 2026-10-27 | [微信输入法上线「AI 录音笔」：录音实时转写为结构化网页，自动剔噪、提炼重点、生成图表，iOS/安卓/电脑全平台开放](https://www.ithome.com/1/018/492.htm) | IT之家 |
 | 2026-10-27 | [蚂蚁灵光 2.0 发布：从「任务执行者」升级「事务管理者」——跨会话记忆、主动盯办与支付宝生态工具链](https://www.leiphone.com/category/industrynews/IxG2F47VLIt3uTOW.html) | 雷峰网 |
-| 2026-10-25 | [阿里千问Go!上线「我的应用」：一句话搭建专属应用、无需编程，接入 Meoo 自动完成部署上线，限时邀测](https://m.sohu.com/a/1092521376_122014422) | IT之家 |
 
 ### AI硬件（7 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-30 | [智元联合清华与无问芯穹发布群体经验学习范式 CEL：96 台真机集群成功率从 86.7% 提升至 98.3%，机器人开始互相学习](https://finance.ifeng.com/c/8xdnytFdKqj) | 凤凰财经 |
 | 2026-10-29 | [智元发布物理 AI 度量衡 Worken（有效智能工时）：活跃机器人数量 × 自主工作时长 × 产出效能比，给具身智能一个「Token」](https://k.sina.com.cn/article_5952915705_162d248f906703rymu.html) | 新浪科技 |
 | 2026-10-29 | [王腾创业首作 ISHO Ring 正式发布：智能戒指 1799 元起配 AI 睡眠生态，iFlow 温控系统以双 BCG 感知带实现无感监测，订单已破千](https://baike.baidu.com/item/ISHO%20Ring) | 凤凰网科技 |
 | 2026-10-29 | [苹果发布首款触屏 MacBook Pro：PROLED XDR 双层串联 OLED、Mac 历史上首次触控与灵动岛，M5 Max 最高 128GB 内存整机本地跑千亿参数模型](https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/) | Apple 官方 |
 | 2026-10-27 | [Rokid 发布首款全彩 AI 眼镜 Rokid Color：0.16cc Micro-LED 光机、4999 元起，55 克全天候佩戴，同场 Glasses 2 与乐奇魔戒组成全家族](https://zhidx.com/p/604685.html) | 智东西 |
 | 2026-10-26 | [小米开源 AI 硬件 HachimoDock「哈基米机」亮相：约 150 元自制成本复刻万能 AI 桌宠，语音操控电脑 Agent、现场生成新组件](https://www.ithome.com/1/017/842.htm) | IT之家 |
 | 2026-10-26 | [智元正式发布安规级重载具身机器人精灵 G2 Max：双臂额定负载 40 公斤、精度 ±0.5 毫米，进厂接重活](https://www.ithome.com/1/017/951.htm) | IT之家 |
-| 2026-10-25 | [启元机器人第 5000 台个人机器人下线：日产能从 10 余台提至 200 余台、每 2.5 分钟一台，Q1/T1 均 19999 元起 9 月发售](https://www.ithome.com/1/017/672.htm) | IT之家 |
 
 ### 芯片厂商（2 条）
 
@@ -60,6 +59,12 @@
 | 2026-10-26 | [OpenAI 官宣 GPT-6.1 Terra：把「快而强」的 computer use 打到每百万 token 输出 5 美元，OSWorld 追至距旗舰约 2 个百分点](https://openai.com/index/introducing-gpt-6-1-terra) | OpenAI 官方 |
 | 2026-10-26 | [OpenAI 披露与学术社区共建科学理解：模型在 Kakeya 猜想、指数时间假设与量子色动力学上的成果及可验证路径](https://openai.com/index/building-scientific-understanding-with-academic-communities) | OpenAI 官方 |
 
+### 行业动态（1 条）
+
+| 日期 | 要闻 | 来源 |
+|------|------|------|
+| 2026-10-28 | [AI PC 换机潮落空：AI 需求虹吸内存产能致全球 PC 出货暴跌 21%，DRAM 涨价 208% 倒逼售价攀升](https://tech.fxxz.com/article/9064.html) | 快科技 |
+
 ## 科研前沿（10 篇）
 
 - **arXiv 新作跟踪（10 篇，预印本）**：[CovNav: Conformal Prediction-Guided Adaptive Inference for…](https://arxiv.org/abs/2610.27677)；[Context-Aware Prompt Injection Detection via Small Languag…](https://arxiv.org/abs/2610.28364)；[LLMs Prompted for Legal Context Refuse More: Overrefusal f…](https://arxiv.org/abs/2610.26211)；[MX-Like Tensor Core for LLM Inference with NPU Integration…](https://arxiv.org/abs/2610.26083)；[Muse Glimmer 30B: An On-Device Agentic Model](https://arxiv.org/abs/2610.24628)；[MedPAO-Assist: Edge-Deployable, Modality-Aware Agentic AI …](https://arxiv.org/abs/2610.26913)；[From Billion-Scale to Million-Scale Language Models: Opera…](https://arxiv.org/abs/2610.23534)；[FederatedBytes: Tokenizer-Free, Byte-Level Small Language …](https://arxiv.org/abs/2610.22906)；[MemLLM: End-to-end In-Storage Acceleration of On-device RA…](https://arxiv.org/abs/2610.22579)；[BiShield-TEE: On the (In-)Security of Unilateral Weight Ob…](https://arxiv.org/abs/2610.21565)
@@ -72,4 +77,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-10-31。
+- 数据更新于 2026-11-01。
