@@ -15,15 +15,15 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 46 期",
-    weekRange: "2026.10.26 — 11.01 · 近 7 天",
-    updated: "2026-11-01",
+    weekRange: "2026.10.27 — 11.02 · 近 7 天",
+    updated: "2026-11-02",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：端侧算力密集换代——苹果十月双波（基础款 M6 与首款触屏 MacBook Pro，M5 Max 可整机本地跑数千亿参数模型），华为详解麒麟「韬」系列逻辑折叠，新芯航途 X7 Ultra 与爱芯元智 AX8860 把大模型芯片推向车端与边端量产。国行 Apple 智能官宣接入阿里千问（Siri、写作与视觉智能三线打通，12 月正式推送），Gemini 4 Carbon 登顶综合榜、小米开源 0.8B 文档模型、Liquid LFM3 全家族掀起本地部署热潮。AI 眼镜进入全彩时代（Rokid Color 领衔），Wowoker 重构企业手机、ISHO Ring 切入 AI 睡眠、微信 AI 录音笔做进输入法；具身智能跨过量产分水岭并建立度量衡（智元 Worken），群体学习让 96 台机器人集群成功率升至 98.3%。AI PC 换机潮因内存虹吸落空，端侧轻量化紧迫性再上台阶。\n第 46 期滚动窗口开启。"
+    editorsNote: "近 7 天聚焦：谷歌 DeepMind 发布 Genie 4 实时交互世界模型（原生音频+Gemini 在环驱动，定位机器人与智能体的安全训练环境）；Mistral 开源 1T 参数 Large 4 权重（490 亿激活，编程智能体 Token 消耗较 GLM-5.3 省 47%），欧洲最大开放权重旗舰与中国开源阵营形成欧亚两线。XREAL Aura 成为首款 Android XR 有线眼镜——眼镜体不到 95 克、骁龙 Reality Elite 首发算力盒，1099 美元开订；英伟达开源 340 亿参数语音转录模型 Nemotron 3.5 Transcribe（Mamba+MoE 混合架构，30 秒录音 0.13 秒转完），面壁开源 MiniCPM-OCR「读判分离」套件（1.3B 四项基准第一+首创 2B 质检员），端侧模型开源潮再添两员。国行 Apple 智能官宣接入阿里千问（12 月正式推送），Gemini 4 Carbon 登顶综合榜、小米开源 0.8B 文档模型；据 The Information 爆料 Meta 联手傅利叶打造 Muse 物理化身人形原型 Max（英伟达 Thor、3 个月成型）。端侧算力密集换代：苹果 M6 与首款触屏 MacBook Pro、华为麒麟「韬」详解、新芯航途 X7 Ultra 落地边端量产。\n今日新增：Genie 4 世界模型、Mistral Large 4 开源、XREAL Aura 开订、Nemotron Transcribe 开源、MiniCPM-OCR 开源、Meta×傅利叶 Max 爆料。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
   news: [
-    {
+{
       id: "n143", cat: "手机厂商", source: "智东西", date: "2026-10-31",
       title: "国行 Apple 智能官宣接入阿里千问：Siri 问答、系统级写作与视觉智能三线打通，11 月 4 日开发者 Beta 开测、12 月正式推送",
       summary: "阿里巴巴官宣与苹果达成合作——千问大模型全面接入国行 Apple 智能：Siri 可直接调用千问回答问答并支持用文档和照片提问（发送前征得用户同意）；系统写作工具新增「千问创作」可按主题生成内容与图像；视觉智能支持「询问千问」识别相机所见。11 月 4 日起随 iOS 开发者 Beta 开放测试，12 月随 iOS 27.3 正式版面向中国用户推送；用户请求与生成回复均不会被用于模型训练。",
@@ -32,8 +32,10 @@ const WEEKLY_DATA = {
       url: "https://zhidx.com/p/606181.html",
       image: "images/news/n143.jpg",
       imageCap: "千问接入国行 Apple 智能（图源：爱范儿）",
-      highlight: false
-    },    {
+      highlight: true
+    },
+
+{
       id: "n148", cat: "行业关注事件", source: "智东西", date: "2026-10-31",
       title: "DeepSeek 开源 Super-agent 原型 dsh-superagent：Router+Worker 双层架构让 AI 指挥 AI 干活，可接入 GitHub 与飞书主动处理任务",
       summary: "DeepSeek 团队开源 Super-agent 设计探索原型 dsh-superagent-prototype（MIT 协议）——一个主动性编码 Agent，以 DeepSeek Harness 插件包形式封装，针对单个 GitHub 仓库工作。核心架构为 Router+Worker 双层：Router 负责任务调度，Worker 执行具体编码，实现「AI 指挥 AI」；可接入 GitHub 与飞书——工作群里讨论某个 Bug 时它能主动感知并处理，自动对接 CI 与 Issue 开发流程。团队强调自主性与克制并重，会主动干活也懂得何时闭嘴。",
@@ -44,9 +46,20 @@ const WEEKLY_DATA = {
       imageCap: "dsh-superagent 架构（图源：智东西）",
       highlight: false
     },
-,
 
     {
+      id: "n154", cat: "行业关注事件", source: "新浪科技", date: "2026-10-31",
+      title: "据 The Information 爆料：Meta 联手傅利叶打造 Muse「物理化身」人形机器人原型 Max，1.5 米高搭载英伟达 Thor，3 个月做出已启动二代",
+      summary: "据 The Information 援引知情人士，Meta 已与中国机器人公司傅利叶合作打造人形机器人原型「Max」——被视为 Meta Muse 模型的物理化身：身高约 1.5 米、体重约 48 公斤、搭载英伟达 Thor 芯片，硬件基于傅利叶前三代产品重新定制（身高比例、头显、摄像头与新手脚模块），研发仅用 3 个月。项目由扎克伯格亲自带队，第二代 Max 2 已启动开发，暂无正式上市时间表。",
+      detail: "爆料：The Information 独家（10 月 31 日），国内多源转述规格一致；Meta 与傅利叶均未官方确认，属高可信爆料而非官宣，后续以官方口径为准。\n规格：身高接近 5 英尺（约 1.5 米）、体重约 106 磅（约 48 公斤）；搭载英伟达 Thor 机器人芯片；硬件基于傅利叶前三代产品，重新定制身高比例、头部设计、显示屏与摄像头，新增手部脚部模块。\n进度：研发仅用 3 个月；已启动第二代 Max 2 开发；目标是协助 Meta 机器人部门完善后续产品，暂无正式上市时间表。\n端侧视角：Muse 开放权重旗舰第一次有了「物理化身」——开放权重模型+中国供应链+英伟达端侧算力（Thor）的组合，具身智能「模型-本体」分工再添一例，傅利叶由此进入全球机器人叙事中心。",
+      tags: ["Meta", "傅利叶", "人形机器人", "Muse", "具身智能"],
+      url: "https://finance.sina.com.cn/tech/digi/2026-11-01/doc-inixepty4337025.shtml",
+      image: "images/news/n154.png",
+      imageCap: "Meta×傅利叶机器人原型 Max（图源：新浪科技）",
+      highlight: false
+    },
+
+{
       id: "n146", cat: "AI硬件", source: "凤凰财经", date: "2026-10-30",
       title: "智元联合清华与无问芯穹发布群体经验学习范式 CEL：96 台真机集群成功率从 86.7% 提升至 98.3%，机器人开始互相学习",
       summary: "清华大学、无问芯穹与智元机器人联合提出群体经验学习（Collective Experience Learning，CEL）新范式——机器人不再仅依靠人类示教，而是借鉴群体中其他机器人同伴的真实作业轨迹作为经验来源。在 96 台真实机器人集群验证中，相同训练时间下任务成功率从 16 台的 86.7% 提升至 98.3%；配套 FERT 失败引导经验检索机制提高经验复用效率，为具身智能规模化落地提供从数据到智能的全栈闭环路径。",
@@ -57,7 +70,8 @@ const WEEKLY_DATA = {
       imageCap: "CEL 群体经验学习示意（图源：凤凰财经）",
       highlight: false
     },
-    {
+
+{
       id: "n144", cat: "大模型厂商", source: "GitHub（xiaomi-research）", date: "2026-10-30",
       title: "小米开源 0.8B 文档理解模型 Xiaomi-OCR-0：单一模型覆盖解析/抽取/问答三任务，OmniDocBench 1B 以下第一",
       summary: "小米开源轻量级文档理解模型 Xiaomi-OCR-0——仅 0.8B 参数的统一 OCR 视觉语言模型，以 Qwen3.5-0.8B-Base 为起点、在约 1.7 亿条 OCR 中心样本上训练，单一模型同时支持文档解析、关键信息抽取与 OCR 视觉问答三大任务，OmniDocBench 1B 以下级别排名第一；权重与推理代码上线 Hugging Face 与 GitHub，社区 GGUF 量化版已出现。",
@@ -68,7 +82,8 @@ const WEEKLY_DATA = {
       imageCap: "Xiaomi-OCR-0 仓库卡（图源：GitHub）",
       highlight: false
     },
-    {
+
+{
       id: "n145", cat: "AI硬件", source: "新浪科技", date: "2026-10-29",
       title: "智元发布物理 AI 度量衡 Worken（有效智能工时）：活跃机器人数量 × 自主工作时长 × 产出效能比，给具身智能一个「Token」",
       summary: "2026 智元创新日上，联合创始人彭志辉发布首个定义物理 AI 价值的度量衡 Worken（有效智能工时）——公式为「活跃机器人数量 × 自主工作时长 × 产出效能比」，用于度量具身智能部署态的真实产出。数字 AI 以 Token 度量思考量，Worken 则把「机器人能否持续自主干活、干成多少活」压缩为可追踪指标，推动机器人价值评估从「出货量」走向「创造价值」。同场发布《2026 具身智能产业创新报告》并披露上半年营收近 20 亿元。",
@@ -79,7 +94,8 @@ const WEEKLY_DATA = {
       imageCap: "智元创新日 Worken 发布（图源：新浪科技）",
       highlight: false
     },
-    {
+
+{
       id: "n141", cat: "手机厂商", source: "搜狐", date: "2026-10-29",
       title: "深兰联合华为鸿蒙生态发布全球首款大模型智能体工作手机 Wowoker：麒麟芯片+端侧大模型，「订阅智能体服务、硬件配套赠送」重构卖机模式",
       summary: "深兰科技联合华为鸿蒙生态与中国移动发布全球首款大模型智能体工作手机 Wowoker——华为麒麟芯片与 HarmonyOS 底座，融合深兰多模态大模型、决策模型与 AgentOS 智能体编排体系，端侧运行支持 AI 通话分身（声音克隆复刻机主声线）、智能话术库与 AI 辅助回复，面向客户开发、营销转化等企业销售全流程。商业模式为「硬件+SaaS+数据+AI」四位一体：企业订阅三年智能体服务包即配套华为规格终端——硬件从一次性买卖变成智能体服务的载体，现场完成多场订购签约。",
@@ -90,7 +106,8 @@ const WEEKLY_DATA = {
       imageCap: "Wowoker 发布会（图源：搜狐/快科技）",
       highlight: false
     },
-    {
+
+{
       id: "n142", cat: "AI硬件", source: "凤凰网科技", date: "2026-10-29",
       title: "王腾创业首作 ISHO Ring 正式发布：智能戒指 1799 元起配 AI 睡眠生态，iFlow 温控系统以双 BCG 感知带实现无感监测，订单已破千",
       summary: "前 REDMI 总经理王腾创立的今日宜休（ISHO）举行首场发布会：ISHO Ring 智能戒指标准版 1799 元、Pro 版 2199 元（钛合金内外圈无断缝一体成型，支持睡眠分期、精力管理、日晒监测与运动识别），配套发布 9999 元起的 iFlow 智能温控系统——双 BCG 感知带免穿戴监测心跳、呼吸与体动（支持双人独立），8 个床温传感器与卧室温湿度传感器联动调节睡眠环境；同步推出「ISHO Intelligence」技术体系（ISHO Personal Agent 与生理信号大模型），构建「监测-分析-干预-进化」AI 睡眠健康生态。发布会后订单量已过千件。",
@@ -101,7 +118,8 @@ const WEEKLY_DATA = {
       imageCap: "ISHO Ring（图源：凤凰网科技）",
       highlight: false
     },
-    {
+
+{
       id: "n138", cat: "行业关注事件", source: "GitHub（Niko1221/Strata）", date: "2026-10-29",
       title: "开源推理引擎 Strata 发布 0.2.8：一键把大模型装上消费级电脑，本地跑 OpenAI/Anthropic 兼容接口，上线一个月 35,994 星",
       summary: "个人开发者 Niko Veit 的开源项目 Strata 发布 0.2.8——定位「大模型的一键安装包」：桌面应用与终端两种形态，Windows/Linux/macOS 安装器双击即用，在本地起 OpenAI/Anthropic 兼容接口，Claude Code、Codex CLI、OpenCode 等编码工具直连本地模型。主推 Qwen3.8-Flash-Next（ISTA-DASLab/Unsloth 量化包，最低 IQ2_XS），另支持 Qwen3.6-35B-A3B 与 DeepSeek V4.1-Flash-1017（1.75-2.25 bpw，放不进内存的部分从 SSD 流式读取，约需 245GB 磁盘）。硬件覆盖 NVIDIA RTX 20-50 系、AMD RX 6000-9070 与 AI PRO R9700、Intel Arc（Linux）、Apple M1 及以上、Strix Halo。仓库 9 月 24 日创建，一个月 35,994 星；MIT 许可。",
@@ -112,7 +130,8 @@ const WEEKLY_DATA = {
       imageCap: "Strata 仓库卡片（图源：GitHub·Niko1221/Strata）",
       highlight: true
     },
-    {
+
+{
       id: "n135", cat: "大模型厂商", source: "智东西", date: "2026-10-29",
       title: "谷歌发布 Gemini 4 Carbon：面向持续智能体工作流的新旗舰，综合榜登顶超越 Opus 5.5 与 GPT-6 Astra，间接提示注入攻击零得手",
       summary: "谷歌凌晨发布 Gemini 4 系列新旗舰 Carbon——专为可连续数天推进的智能体工作流构建，在 Artificial Analysis 综合指数以 59 分登顶，超越 Claude Opus 5.5 与 GPT-6 Astra；编程（SWE-sweep、Terminal-Bench 4.0）与智能体（Agents' Last Exam 77.4%）多项第一，安全方向 SEC-bench Pro 88.2%、间接提示注入攻击成功率 0%。定价与 Argon 持平（输入 2 美元/输出 10 美元每百万 token），先向网络安全防御者分阶段开放。同场财报：谷歌云收入同比大涨 103%、积压订单 5610 亿美元。",
@@ -123,7 +142,8 @@ const WEEKLY_DATA = {
       imageCap: "Gemini 4 Carbon（图源：智东西）",
       highlight: false
     },
-    {
+
+{
       id: "n136", cat: "AI硬件", source: "Apple 官方", date: "2026-10-29",
       title: "苹果发布首款触屏 MacBook Pro：PROLED XDR 双层串联 OLED、Mac 历史上首次触控与灵动岛，M5 Max 最高 128GB 内存整机本地跑千亿参数模型",
       summary: "苹果「十月双波」第二波落地：全新设计 MacBook Pro（14/16 英寸）首发 PROLED XDR 双层串联 OLED（HDR/SDR 峰值 2000 尼特、对比度 1000 万比 1、10–120Hz），Mac 历史上首次引入触控与灵动岛（承载 Spotlight、实时活动与 Siri AI）；搭载 M5 Pro/Max（Pro 线停留 M5 代际，与昨日基础款 M6 形成分层），GPU 每核内置神经加速器，M5 Max 最高 128GB 统一内存、官方称可「完全在设备上运行数千亿参数大模型」。国行 22999 元起，11 月 6 日发售。",
@@ -134,7 +154,8 @@ const WEEKLY_DATA = {
       imageCap: "MacBook Pro（PROLED XDR）（图源：Apple Newsroom）",
       highlight: false
     },
-    {
+
+{
       id: "n137", cat: "芯片厂商", source: "IT之家", date: "2026-10-29",
       title: "新芯航途发布智驾大模型芯片 X7 Ultra：700 TOPS 端到端智驾算力，中国首发量产 Armv9 车规 CPU，X7 系列已装车 10 款",
       summary: "XHEART 新芯航途发布智驾大模型芯片 X7 Ultra——700 TOPS 大模型算力（量产模型实测 99.99% 对齐），搭载中国首发量产的 Armv9 车规级 CPU（性能提升 20%、能效提升 10%）；超大核 NPU 架构核内数据互联达 TB/s 级、计算利用率 98.7%，针对 Transformer 关键算子优化。对比行业旗舰内存带宽消耗下降 80%、能效翻倍；X7 系列量产 8 个月累计出货超 20 万颗、装车 10 款，Momenta 与 QNX 参与量产平台合作。",
@@ -145,7 +166,32 @@ const WEEKLY_DATA = {
       imageCap: "X7 Ultra（图源：IT之家）",
       highlight: false
     },
+
     {
+      id: "n150", cat: "大模型厂商", source: "IT之家", date: "2026-10-29",
+      title: "Mistral 开源 1T 参数 Large 4 权重：490 亿激活原生多模态，编程智能体 Token 消耗较 GLM-5.3 省 47%，欧洲最大开放权重旗舰落地",
+      summary: "法国 Mistral AI 正式开放 Mistral Large 4（代号 Le Chonk）模型权重——1 万亿总参数、490 亿激活（含嵌入与输出层 520 亿）的原生多模态模型，在其欧洲自有数据中心用 3800 块 Grace Blackwell GPU 从零训练。编程智能体指数 48% 与 GLM-5.3 基本持平，但平均每任务 Token 消耗少 47%。修改版 MIT 许可：个人、学术、微调与常规商用免费，MaaS 转售需单独授权。",
+      detail: "开源：10 月 29 日开放权重（Hugging Face: mistralai/Mistral-Large-4-1T-A52B），此版为三周前初版经政府与企业实测后的性能优化升级版。\n规格：1T 总参数、490 亿激活的原生多模态 MoE；3800 块 NVIDIA Grace Blackwell 在欧洲自有数据中心从零训练——欧洲 AI 主权旗帜的旗舰落地。\n性能：Artificial Analysis Coding Agent Index 得分 48%，与领先开源模型 GLM-5.3 基本持平，但平均每个任务消耗的 Token 数量减少 47%。\n许可：修改版 MIT——个人、学术、修改、微调与常规商业化免费；面向 MaaS 转售的云服务商须单独获取商业授权。在线版定价输入 0.70 美元/百万 Token、缓存输入 0.07 美元、输出 2.10 美元。\n端侧视角：开放权重旗舰是端侧小模型蒸馏与量化的上游「水源」——欧洲线开放权重与中国厂商阵营（DeepSeek/GLM/Kimi/Qwen）形成欧亚两线，开源生态的模型底座选择更多元。",
+      tags: ["Mistral", "Large 4", "开放权重", "MoE", "欧洲AI"],
+      url: "https://www.ithome.com/1/019/865.htm",
+      image: "images/news/n150.png",
+      imageCap: "Mistral Large 4 权重开放（图源：IT之家）",
+      highlight: true
+    },
+
+    {
+      id: "n152", cat: "大模型厂商", source: "智东西", date: "2026-10-29",
+      title: "英伟达开源语音转录模型 Nemotron 3.5 Transcribe：340 亿参数 Mamba+MoE 混合架构，30 秒录音 0.13 秒转完",
+      summary: "英伟达发布并开源语音转录模型 Nemotron 3.5 Transcribe——总参数约 340 亿、单次激活约 43 亿，骨干为 Nemotron 3.5 Lightning 30B-A3B（52 层中 23 层 Mamba-2、23 层 MoE、仅 6 层 Attention）。支持 40 种语言、最长 1 小时录音、六种自然语言指令切换的转写形态；英文 9 大公开测试集平均词错误率 4.71% 优于 Qwen3-ASR-1.7B。单卡 RTX PRO 6000 Blackwell 上 30 秒音频约 0.13 秒转完，配套 Granary-v2 开放数据集。",
+      detail: "开源：10 月 29 日发布并开放权重与技术报告，配套 46 万小时级开放语音数据集 Granary-v2（伪标注、人工改进与语音翻译数据为主要训练源）。\n规格：总参数约 340 亿、激活约 43 亿；骨干 52 层=23 层 Mamba-2（长序列）+23 层 MoE（稀疏激活）+6 层 Attention——混合架构在保留总参数规模的同时压住单次推理算力。\n能力：40 种语言、最长 1 小时录音无需分段；六种指令切换形态——逐字、书面化、上下文辅助、说话人标注、非言语信息、语音翻译；并行编码器分别处理语音与说话人信息。\n成绩：英文 Open ASR Leaderboard 9 测试集平均词错误率 4.71%（Qwen3-ASR-1.7B 为 4.94%）；多人发言转写 15.80% 优于专用级联系统；强化学习把英文词错率从 4.34% 再压到 4.00%。\n效率：单张 RTX PRO 6000 Blackwell 上，NVFP4 量化+DFlash2 解码最高每秒处理 2238 秒音频，30 秒音频约 0.13 秒；提供 BF16、FP8、NVFP4 三档精度适配不同显存。\n端侧视角：语音转录是 AI 录音笔、会议耳机等端侧品类的核心模型底座——「大总参+小激活」路线在语音模态再次成立，单工作站可跑的门槛让硬件厂商可直接跟进。",
+      tags: ["Nemotron", "语音转录", "英伟达", "开源", "Mamba"],
+      url: "https://zhidx.com/p/605500.html",
+      image: "images/news/n152.png",
+      imageCap: "Nemotron 3.5 Transcribe 模型概览（图源：MindStudio）",
+      highlight: false
+    },
+
+{
       id: "n147", cat: "行业动态", source: "快科技", date: "2026-10-28",
       title: "AI PC 换机潮落空：AI 需求虹吸内存产能致全球 PC 出货暴跌 21%，DRAM 涨价 208% 倒逼售价攀升",
       summary: "受 AI 服务器对先进存储产能的虹吸效应影响，全球 PC 市场 Q3 出货量同比大跌 21%——三星、SK 海力士与美光将超 70% 先进产能转向高利润 AI 存储（HBM/企业级 DRAM/NAND），单台 AI 服务器存储需求是传统设备的 8 至 10 倍，DDR4 缺货导致 RAM 价格一度暴涨 208%。DRAM 与 SSD 已占 PC 组件成本近四成，惠普、戴尔等品牌出货量显著下滑，IDC 预计价格难回低位，「涨价抑制换机」正在取代此前预期的「AI 换机潮」。",
@@ -156,7 +202,8 @@ const WEEKLY_DATA = {
       imageCap: "全球 PC 出货量趋势（图源：什么值得买）",
       highlight: false
     },
-    {
+
+{
       id: "n139", cat: "端侧Agent", source: "GitHub（anthropics/knowledge-work-plugins）", date: "2026-10-28",
       title: "Anthropic 岗位插件库 knowledge-work-plugins：把「财务顾问」等知识岗位的领域知识与工具打包给 Claude Cowork，33,851 星本周仍在高频迭代",
       summary: "Anthropic 官方开源的 knowledge-work-plugins 是桌面 AI 助理 Claude Cowork 的「岗位插件」仓库——把某一职能的领域知识、工作流与外部工具连接（Skills、连接器、斜杠命令）打包成可安装单元，兼容 Claude Code；1 月开源以来累计 33,851 星。本周持续扩充：10 月 28 日更新插件市场清单，10 月 27 日升级「财务顾问」岗位插件与安全指引。Apache-2.0 许可。",
@@ -167,7 +214,8 @@ const WEEKLY_DATA = {
       imageCap: "knowledge-work-plugins 仓库卡片（图源：GitHub·anthropics）",
       highlight: false
     },
-    {
+
+{
       id: "n132", cat: "芯片厂商", source: "Apple 官方", date: "2026-10-28",
       title: "苹果发布 M6 款 MacBook Pro：双 16 核神经引擎较 M5 提速最高 1.9 倍，GPU 核内神经加速器加持，本地跑大模型成为标配卖点",
       summary: "苹果官方发布搭载 M6 的 14 英寸 MacBook Pro（iMac 同步换芯）——双 16 核神经网络引擎较 M5 提速最高 1.9 倍；12 核 GPU 每个核心内置神经加速器，端侧 AI 较 M5 最高提升 25%、较 M1 机型最高 13 倍；16GB 统一内存标配（可选 32GB）、带宽最高 170GB/s，官方主打「本地运行大模型」、Siri AI（macOS 27.2 beta）、端侧图像生成与超分辨率。10 月 28 日预购、11 月 6 日发售，15999 元起，续航最长 24 小时。",
@@ -178,7 +226,8 @@ const WEEKLY_DATA = {
       imageCap: "14 英寸 MacBook Pro（M6）（图源：Apple Newsroom）",
       highlight: false
     },
-    {
+
+{
       id: "n133", cat: "手机厂商", source: "智东西", date: "2026-10-28",
       title: "华为终端发布会八款齐发：Pura 90 Plus 与畅享 100 全系登场，详解麒麟「韬」系列——逻辑折叠晶体管密度提升 28%、跨层带宽 125TB/s",
       summary: "何刚升任华为董事后的首场终端发布会一次性推出八款新品：Pura 90 Plus（一英寸 RYYB 主摄、F1.6–F4.0 可变光圈、麒麟 9025、5499 元起 10 月 31 日开售）、畅享 100 全系三款（Pro Max 搭 8800mAh 电池与 8000nits 屏、双向北斗卫星消息，1999 元起）等。会上详解麒麟「韬」系列：麒麟 9050 Pro 采用逻辑折叠架构，每平方毫米容纳 2.38 亿个晶体管、密度提升 28%，跨层带宽 125TB/s、关键路径时延降低 30%，NPU 性能较上代提升 140%。",
@@ -189,7 +238,32 @@ const WEEKLY_DATA = {
       imageCap: "华为终端新品发布会（图源：智东西）",
       highlight: false
     },
+
     {
+      id: "n151", cat: "AI硬件", source: "Google Blog", date: "2026-10-28",
+      title: "首款 Android XR 有线眼镜 XREAL Aura 开订：眼镜体不到 95 克、骁龙 Reality Elite 首发算力盒，1099 美元起谷歌商店同售",
+      summary: "谷歌与 XREAL 联合推出 XREAL AURA——首款由 Android XR 驱动的有线 XR 眼镜：透明镜片直视真实世界并投影空间内容、70 度视场角，眼镜本体不到 95 克，重计算与电池放在分体算力盒（高通骁龙 Reality Elite 平台首发）。Gemini 深度集成——看你所见、跨应用对话、分享视野高亮。美国、加拿大、韩国当日开订，日本 11 月 2 日跟进，1099 美元起（年底前），11 月中旬发货。",
+      detail: "开订：10 月 28 日美国、加拿大、韩国开订，日本 11 月 2 日跟进——xreal.com/aura 与美国 BestBuy 同售，1099 美元起步价持续到年底，11 月中旬开始发货。\n形态：首款 Android XR 有线眼镜——透明镜片直视真实世界+空间内容投影，70 度视场角；眼镜体不到 95 克，算力与电池在分体 puck，高通骁龙 Reality Elite 平台在其上首发。\n交互：Gemini on Android XR 理解真实世界与屏幕上的一切，自然语言跨应用协作；新增「分享视野」——Gemini 在房间或屏幕上高亮指出该看哪里。\n生态：Google Play 数百万应用+150 余个 XR 专属应用；Wired Mirroring 把笔记本屏幕变为可摆放窗口；镜片调暗即私密影院，检测到人靠近自动恢复透明。\n端侧视角：Android XR 生态首个「有线分体」落地终端——谷歌用「轻眼镜+算力盒」绕开一体机重量瓶颈，高通拿到 XR 端侧算力新阵地，中国硬件厂商首次深度进入全球 XR 操作系统的首发阵营。",
+      tags: ["XREAL", "Android XR", "AI眼镜", "骁龙", "Gemini"],
+      url: "https://blog.google/products-and-platforms/platforms/android/xreal-aura/",
+      image: "images/news/n151.png",
+      imageCap: "XREAL Aura 佩戴场景（图源：Google Blog）",
+      highlight: false
+    },
+
+    {
+      id: "n153", cat: "大模型厂商", source: "面壁智能", date: "2026-10-28",
+      title: "面壁开源 MiniCPM-OCR 系列：1.3B 识别模型四项基准全球第一，首创 2B「AI 质检员」给 OCR 结果打分，12 芯片平台首日适配",
+      summary: "面壁智能联合 OpenBMB 开源 MiniCPM-OCR 系列，采用「读判分离」架构——MiniCPM-OCR 1.0（1.3B）负责识别：无需图像预处理即可解析中英双语复杂文本、表格与数学公式，六项 OCR 基准四项第一，真实复杂场景 OmniDocBench 93.68 分；MiniCPM-OCR Jev（2B）是首个文档「AI 质检员」，对照原图给识别结果打分，达阈值可免人工复核。FlagOS 已完成 12 个芯片平台的 Day 0 适配。",
+      detail: "开源：10 月 28 日开源（OpenBMB/MiniCPM-V 仓库），系列含识别与质检两款模型，llama.cpp 与 Ollama 首日可跑。\n读：MiniCPM-OCR 1.0（1.3B）——无需图像预处理解析中英双语复杂文本、表格与数学公式；六项基准四项第一，真实拍摄复杂场景 OmniDocBench 93.68 分，解析能力与效率双第一。\n判：MiniCPM-OCR Jev（2B）——首个文档「AI 质检员」，对照原图检查文字、公式与表格识别结果并打分，达阈值内容免人工复核，把「可信 OCR」从单模型死磕参数转向读判分离。\n适配：FlagOS 完成 12 个芯片平台的 Day 0 适配——从手机 SoC 到开发板可直接部署。\n端侧视角：1.3B+2B 的组合单机可跑，OCR 这个最普及的端侧 AI 场景（文档扫描、证件识别、拍照翻译）第一次有了带质检的开源全套件；面壁延续「小参数量+全平台适配」的端侧路线。",
+      tags: ["MiniCPM-OCR", "面壁智能", "开源", "OCR", "端侧模型"],
+      url: "https://github.com/OpenBMB/MiniCPM-V",
+      image: "images/news/n153.png",
+      imageCap: "MiniCPM-OCR 读判分离架构（图源：OpenBMB）",
+      highlight: false
+    },
+
+{
       id: "n140", cat: "大模型厂商", source: "Liquid AI 官方博客", date: "2026-10-27",
       title: "Liquid AI 单日放出 LFM3 全家族：三混合架构 2B 级 6 款覆盖文本/视觉/音频/Omni/决策，4-bit 约 1GB 内存，1.7B 平均分超 Qwen3.5-4B",
       summary: "Liquid AI 发布第三代 Liquid Foundation Models 全家族 6 款——LFM3-1.7B（文本，256K 上下文）、LFM3-VL-2B（视觉，首次支持视频）、LFM3-Audio-2B（18 种语言）、LFM3-Omni-2B（2.2B，首个全模态）与两款决策模型 d1-2B/d1-Omni-2B。三混合架构：24 层中 13 层门控短卷积、5 层滑窗注意力、6 层全局注意力，预训练 22T token；1.7B 文本模型基准平均 49.37 分超过更大的 Qwen3.5-4B，浏览器与企业任务上胜 Qwen3.5-9B，视觉版平均 71.4 分追平 Gemma 4 12B。文本模型 4-bit 量化约 1GB 内存、128K 上下文 KV cache 仅 1.6GB；llama.cpp/MLX/vLLM/SGLang 均支持，覆盖 Apple、AMD、NVIDIA 与 Qualcomm Hexagon NPU，AMD 主打 Ryzen AI PC 本地运行，权重开放于 Hugging Face。",
@@ -200,7 +274,8 @@ const WEEKLY_DATA = {
       imageCap: "LFM3（图源：Liquid AI 官方博客）",
       highlight: false
     },
-    {
+
+{
       id: "n128", cat: "AI硬件", source: "智东西", date: "2026-10-27",
       title: "Rokid 发布首款全彩 AI 眼镜 Rokid Color：0.16cc Micro-LED 光机、4999 元起，55 克全天候佩戴，同场 Glasses 2 与乐奇魔戒组成全家族",
       summary: "Rokid 杭州发布会推出首款全彩 AI 眼镜 Rokid Color——与 JBD 独家定制的 0.16cc Micro-LED 全彩光机约一颗绿豆大小，1677 万色、色域 167%sRGB，整机 55 克，售价 4999 元起（祝铭明称「不赚钱交个朋友」）。同场发布搭载高通骁龙 AR1+ 的 Rokid Glasses 2（3699 元起、续航提升约 50%）与「乐奇魔戒」Rokid Ring（预售价 998 元，微手势隔空操作）；雷鸟创新同日公布全彩 AI 眼镜，行业进入全彩时代。",
@@ -211,7 +286,8 @@ const WEEKLY_DATA = {
       imageCap: "Rokid Color 发布会舞台（图源：智东西）",
       highlight: false
     },
-    {
+
+{
       id: "n134", cat: "端侧Agent", source: "IT之家", date: "2026-10-27",
       title: "微信输入法上线「AI 录音笔」：录音实时转写为结构化网页，自动剔噪、提炼重点、生成图表，iOS/安卓/电脑全平台开放",
       summary: "腾讯宣布微信输入法 4.0.0 版本推出「AI 录音笔」——手机端经键盘工具栏或 App 内打开、电脑端快捷键 V 唤起，录音实时转写为结构清晰的网页：自动剔除错别字与口水话、按上下文修正、提炼重点梳理逻辑，并可自动生成图表、图示与交互页面，支持方言识别。iOS、Android、Mac 与 Windows 已全平台上线，升级最新版即可使用。",
@@ -222,7 +298,8 @@ const WEEKLY_DATA = {
       imageCap: "微信输入法 AI 录音笔（图源：快科技）",
       highlight: false
     },
-    {
+
+{
       id: "n129", cat: "端侧Agent", source: "雷峰网", date: "2026-10-27",
       title: "蚂蚁灵光 2.0 发布：从「任务执行者」升级「事务管理者」——跨会话记忆、主动盯办与支付宝生态工具链",
       summary: "蚂蚁集团发布灵光 2.0 个人智能体——核心升级「记得住、盯得牢、办得了」：依托独立云主机突破单次对话限制实现跨会话记忆与数天级长程任务跟踪；授权后可 24 小时盯机票酒店降价、梳理钉钉班级群提取待办、分析支付宝账单识别闲置订阅；打通支付宝/钉钉/飞书/米家等生态并支持调用 MCP 与 CLI 工具。授权密钥与 Agent 分离托管、用户可随时撤销。灵光 App 上线 6 天下载量曾突破 200 万。",
@@ -233,50 +310,19 @@ const WEEKLY_DATA = {
       imageCap: "灵光 2.0 发布（图源：雷峰网）",
       highlight: false
     },
+
     {
-      id: "n125", cat: "AI硬件", source: "IT之家", date: "2026-10-26",
-      title: "小米开源 AI 硬件 HachimoDock「哈基米机」亮相：约 150 元自制成本复刻万能 AI 桌宠，语音操控电脑 Agent、现场生成新组件",
-      summary: "小米技术委创新产品团队在 2026 观猹大会亮相开源 AI 硬件 HachimoDock——硬件自制成本约 150 元、全开源可自行复刻。它把桌面宠物做成 Agent 的「身体」：桌宠实时呈现 Codex 等后台智能体的工作状态，用户语音操控电脑端 Agent、说出想法即可现场生成并运行新组件，还能联动智能家居、化身快捷麦克风或内置万款游戏的小游戏机。",
-      detail: "发布：10 月 26 日 2026 观猹大会（杭州）期间正式亮相，此前 10 月下旬 WTCC 2026 已先行透露；由小米技术委创新产品团队孵化，社区昵称「哈基米机」。\n能力：个性化桌宠显示 Agent 后台工作状态（如 Codex 等编程智能体）、语音指令操控电脑端 Agent、与 AI 协作现场生成并运行新组件、智能家居控制；也可作为快捷语音输入麦克风或内置万款游戏的小游戏机。\n开源：硬件与设计全开源（立创开源硬件平台已上线复刻资料），自制成本约 150 元，用户可自由改造——官方定位「给 AI Agent 一个身体」的开放底座。\n入口意义：Agent 不只住在对话框里——150 元的开源硬件把智能体状态可视化与桌面入口做成人人可复刻的实体，与近期开放邀测的 MiMo 桌面客户端共同构成小米的桌面 Agent 布局。",
-      tags: ["小米", "开源硬件", "AI桌宠", "桌面Agent", "智能家居"],
-      url: "https://www.ithome.com/1/017/842.htm",
-      image: "images/news/n125.png",
-      imageCap: "HachimoDock（图源：IT之家）",
+      id: "n149", cat: "大模型厂商", source: "Google Blog", date: "2026-10-27",
+      title: "谷歌 DeepMind 发布 Genie 4 实时交互世界模型：原生音频+物理模拟，Gemini 在环驱动，定位机器人与智能体的安全训练环境",
+      summary: "DeepMind 发布新一代世界模型 Genie 4——用文本与图像提示生成照片级逼真的可探索世界，可用自然语言实时转向（移动镜头、改变天气、引入角色），并首次原生实时生成环境音、音乐与交互对话。Gemini Omni 锚定真实世界的外观与行为，其他 Gemini 模型提供复杂推理维持模拟连贯。谷歌称「模拟世界是通向 AGI 的关键一步」——为机器人与智能体提供安全训练环境。已向受信测试者开放，将登陆 Google AI Ultra 的 Project Genie 与 Gemini API。",
+      detail: "发布：10 月 27 日官宣（Google Blog 官方通稿），已向有限受信测试者开放，后续登陆 Google AI Ultra 订阅的 Project Genie、Gemini API 与 AI Studio 早期合作。\n能力：实时交互世界模拟——设定初始事件后用自然语言实时转向，移动镜头、改变天气、引入新角色；世界原生生成音频（环境音、音乐、交互式对话），为 Genie 系列首次。\n架构：融合 Gemini 家族——Gemini Omni 负责锚定模拟世界的真实外观与行为，其他 Gemini 模型提供复杂推理、维持模拟的连贯与连续性。\n定位：谷歌明确将世界模拟视为通向 AGI 的关键路径——为机器人与智能体提供安全训练环境，并放大影视、新闻、游戏与制造业的创意工具。\n端侧视角：世界模型是具身智能的「训练场」——机器人厂商需要的虚拟练习环境由此而来；具身训练环境正成为大模型厂商的新战场。",
+      tags: ["Genie 4", "世界模型", "DeepMind", "具身智能", "实时交互"],
+      url: "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/",
+      image: "images/news/n149.png",
+      imageCap: "Genie 4 世界模拟演示（图源：Google Blog）",
       highlight: true
     },
-    {
-      id: "n124", cat: "AI硬件", source: "IT之家", date: "2026-10-26",
-      title: "智元正式发布安规级重载具身机器人精灵 G2 Max：双臂额定负载 40 公斤、精度 ±0.5 毫米，进厂接重活",
-      summary: "智元 10 月 26 日正式发布重载具身机器人精灵 G2 Max——双臂额定负载 40 公斤（峰值 50 公斤）、单臂 20 公斤，手臂重复定位精度 ±0.5 毫米，重载搬运与精细作业兼得。电商仓储场景作业成功率超 99%，每小时可拆垛 80 箱、码垛 75 箱并支持 24 小时连续作业；已在多条产线投入运行并落地京东物流智狼仓，是「进厂接重活」的重载路线在真实生产场景的规模化落地。",
-      detail: "发布：10 月 26 日智元官方正式发布精灵 G2 Max，定位「安规级重载具身机器人」——今年 7 月世界人工智能大会（WAIC）上曾与京东物流联合亮相并宣布将部署于京东物流智狼仓，本次为正式发布并披露量产运行数据。\n规格：双臂额定负载 40 公斤、峰值可达 50 公斤，单臂负载 20 公斤；手臂重复定位精度不超过 ±0.5 毫米（亚毫米级），在重载之外保留精细操作能力。\n落地：电商仓储场景作业成功率超 99%，每小时拆垛 80 箱、码垛 75 箱，可 24 小时不间断搬运码垛；已投运多条产线，媒体报道其已进入智元自身机器人产线承担制造环节（「机器人造机器人」），京东物流智狼仓为人形形态之外重载具身作业的代表性部署场景。\n意义：在 Optimus、启元等聚焦人形整机量产的同时，智元以重载工业路线打开第二条商业化通道——具身智能的规模落地不只有人形一条路，工厂与物流的重活先于人形走进日常。",
-      tags: ["智元", "具身机器人", "重载机器人", "工业落地", "量产交付"],
-      url: "https://www.ithome.com/1/017/951.htm",
-      image: "images/news/n124.png",
-      imageCap: "精灵 G2 Max（图源：IT之家）",
-      highlight: true
-    },
-    {
-      id: "n130", cat: "大模型厂商", source: "OpenAI 官方", date: "2026-10-26",
-      title: "OpenAI 官宣 GPT-6.1 Terra：把「快而强」的 computer use 打到每百万 token 输出 5 美元，OSWorld 追至距旗舰约 2 个百分点",
-      summary: "OpenAI 发布 GPT-6.1 Terra，官方定位「把快速且强大的 computer use（计算机操作）带给所有人」，API、Codex 与 ChatGPT Work 可用。第三方测评口径下 API 定价输入 1 美元、输出 5 美元（每百万 token），比 GPT-5.6 Terra 与 GPT-6.1 Sol 便宜约 50%；在离线 computer use 基准 OSWorld 2.0 上标准档得分 57.6%、高难度档 60.0%——与旗舰 Astra 最高努力档差距约 2.1 个百分点，而成本约为其七分之一。",
-      detail: "发布：10 月 26 日官方博客《Introducing GPT-6.1 Terra》，口号是「快而强的 computer use，面向所有人」；经由 API、Codex 与 ChatGPT Work 提供。\n定价：API 输入 1 美元、输出 5 美元（每百万 token，第三方测评口径）——较 GPT-5.6 Terra 与 GPT-6.1 Sol（输入 2 美元、输出 10 美元）便宜约 50%；另据称推理速度提升约 3 倍。\n能力：在离线 computer use 基准 OSWorld 2.0 上，标准档 57.6%（单次成本约 0.29 美元）、高难度档 60.0%（约 1.01 美元），距旗舰 Astra 最高努力档约 2.1 个百分点、成本约为其 1/7；支持托管（云端）与本地（Playwright）两种 computer use 实现方式，社区普遍将其评为当前性价比最优的 computer use 模型。\n端侧视角：computer use 的「大脑」在云端、「手」在本机——Terra 主打本地 Playwright 执行路径，意味着个人电脑正在成为智能体的标准执行端；当旗舰能力以五分之一价格下放，端侧 Agent 编排层的门槛被进一步拉低，与本周谷歌 ACE、蚂蚁灵光 2.0 同属「智能体基础设施」落子。",
-      tags: ["OpenAI", "GPT-6.1 Terra", "computer use", "智能体", "API定价"],
-      url: "https://openai.com/index/introducing-gpt-6-1-terra",
-      image: "images/news/n130.jpg",
-      imageCap: "GPT-6.1 Terra 定价与基准对比（图源：kingy.ai）",
-      highlight: false
-    },
-    {
-      id: "n131", cat: "大模型厂商", source: "OpenAI 官方", date: "2026-10-26",
-      title: "OpenAI 披露与学术社区共建科学理解：模型在 Kakeya 猜想、指数时间假设与量子色动力学上的成果及可验证路径",
-      summary: "OpenAI 发布博客《与学术社区共建科学理解》，系统分享模型在三大数学物理难题上的成果——宣称在所有维度证明 Kakeya 猜想、对复杂性理论基石「指数时间假设（ETH）」给出反驳论证、以及在量子色动力学（QCD）上提出新的胶子振幅公式（由模型提出、内部模型形式化证明、人类作者验证）——并重点说明研究者如何验证这些结果并在此基础上继续构建。成果尚待同行评审与形式化检验确认，社区亦提醒部分结果包含大量人类引导。",
-      detail: "发布：10 月 26 日官方博客，主题是「与学术社区共建科学理解」——不只宣布成果，更披露研究者可以如何验证并在其上继续研究的协作路径。\n成果：①宣称证明所有维度的 Kakeya 猜想（含每个方向线段的集合问题）；②对指数时间假设（ETH——3-SAT 不能在亚指数时间内求解的复杂性理论基石假设）给出反驳性论证，若成立将动摇参数化复杂性理论的根基；③量子色动力学方向：GPT-5.2 曾提出胶子振幅公式，经内部模型形式化证明并由论文人类作者验证，被称为与标准模型相关的理论物理新结果；此前还涉及 Yang-Mills 存在性与质量缺口相关的讨论。\n争议与边界：这些宣称仍需广泛的同行评审与形式化验证才能被数学界接受；社区评论指出部分物理结果包含相当程度的人类引导，并非完全自主发现——OpenAI 在博客中强调的「可验证、可复用」正是针对这一信任缺口。\n端侧视角：当模型开始产出「需要人类数学家验证」的候选科学成果，AI 的科学角色从辅助计算转向「猜想生成器」；验证依赖 Lean 等形式化工具与学术共同体——这条「模型生成、形式化验证、人类确认」的链条，与端侧 Agent 的可验证执行是同一命题在科学侧的镜像。",
-      tags: ["OpenAI", "AI4Science", "数学猜想", "可验证性", "学术合作"],
-      url: "https://openai.com/index/building-scientific-understanding-with-academic-communities",
-      image: "images/news/n131.jpg",
-      imageCap: "数学与神经网络的交汇（图源：Scientific American）",
-      highlight: false
-    }
+
   ],
 papers: [
     {
