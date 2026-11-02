@@ -723,3 +723,13 @@ body.panel-open { overflow: hidden; }
 
 /* 数字微强调: 带单位的关键参数(51%/100亿美元/17.6×/30B)等宽字体+柔和暖色, 扫读锚点 */
 .num-hl { font-family: var(--mono); color: #f0cf96; letter-spacing: 0.01em; }
+
+/* 关键语句自动提亮(v3.5): 段内结论句/里程碑句整句提亮一档——纯亮度层级(--text-dim→--text),
+   不加粗不加底色不加标记符号; 与前缀粗体/数字暖金/关键词冷蓝构成静态强调体系, 全文限 3 句。
+   句内数字换深一档金(视觉评审: 白句里的原金色对比被削弱) */
+.ks-line { color: var(--text); }
+.ks-line .num-hl { color: #e2bc82; }
+
+/* 正文日期微标(v3.5): 「10 月 28 日/2026-10-28」式时间点换等宽灰青字族,
+   事件脉络扫读锚——刻意降饱和与关键词蓝(#8fd4ff)拉开色相(视觉评审: 原青色与关键词蓝易混淆) */
+.date-hint { font-family: var(--mono); color: #9ab8c7; letter-spacing: 0.01em; }

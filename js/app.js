@@ -69,6 +69,41 @@
     return t.replace(/^([^<：]{2,10})：/, '<span class="lead-k">$1</span>：');
   }
 
+  /* 关键语句自动提亮(v3.5): 段内识别结论句/里程碑句, 整句提亮一档——纯亮度层级, 无底色无标记符号。
+     规则: 句含强标志词(首发/突破/开源/登顶…)且句长 8-110 字; 每段至多 1 句(取首个命中, 通常即该段结论句),
+     每条正文至多 3 句(state.left 由调用处控制); 单句短段(「端侧视角：」类结论段)同样可整段提亮;
+     详情首段本身已是提亮导语段(p:first-child), 调用处从第 2 段起才传入。
+     实现注意: 在 richTag/leadK 之后的 HTML 串上按中文句号切分——已核查全部内联标签
+     (em.kw-hl / span.num-hl / b.rp-b / span.rp-q / span.lead-k / span.date-hint)内容均不含句读, 切分不会截断标签 */
+  var KS_MARK_RE = /(首个|首次|首款|首搭|突破|超越|领先|唯一|独家|开源|免费开放|上线|开售|发售|量产|交付|落地|同比增长|环比增长|提升|提高|下降|下滑|刷新|登顶|最大|最快|最高|最小|最轻|最薄|全球第[一二三四五六七八九十]|行业第[一二三四五六七八九十])/;
+  function keyLine(html, state) {
+    if (!state || state.left <= 0) return html;
+    var parts = html.split("。");
+    var out = [], done = false;
+    for (var i = 0; i < parts.length; i++) {
+      var seg = parts[i];
+      if (!seg && i === parts.length - 1) continue;
+      var sent = seg + (i < parts.length - 1 ? "。" : "");
+      /* 句长与标志词都在「去标签纯文本」上判定——HTML 串里每个高亮标签虚增 20+ 字符,
+         直接测 html 长度会把含标签的正常句误杀成超长句(实测 23 卡仅 1 卡命中的根因) */
+      var plain = seg.replace(/<[^>]+>/g, "");
+      if (!done && plain.length >= 8 && plain.length <= 110 && KS_MARK_RE.test(plain)) {
+        out.push('<span class="ks-line">' + sent + "</span>");
+        done = true;
+        state.left--;
+      } else {
+        out.push(sent);
+      }
+    }
+    return out.join("");
+  }
+  /* 正文日期微标(v3.5): 「10 月 28 日 / 2026-10-28」式时间点换等宽冷青字族, 事件脉络扫读锚(与暖金数字一冷一暖呼应)。
+     在 richTag 之后替换——月/日不在 NUM_RE 单位表, 日期串始终是裸文本, 不会嵌进 num-hl */
+  var DATE_HINT_RE = /\d{1,2}\s*月\s*\d{1,2}\s*日|20\d{2}-\d{1,2}-\d{1,2}/g;
+  function dateHint(t) {
+    return t.replace(DATE_HINT_RE, function (m) { return '<span class="date-hint">' + m + "</span>"; });
+  }
+
   /* ---------- 论文分类配色 ---------- */
   var CAT_COLOR = {
     "推理与系统": "#22d3ee",
@@ -703,12 +738,18 @@
     if (item.url) {
       actions = '<div class="panel-actions"><a class="btn-src" href="' + esc(item.url) + '" target="_blank" rel="noopener">阅读原文 ↗</a></div>';
     }
+    /* v3.5 文本增强管线: richTag(关键词/数字/加粗/引号) → leadK(前缀) → dateHint(日期微标)
+       → keyLine(结论句整句提亮, 首段已是提亮导语段故豁免, 全文限 3 句) */
+    var ksState = { left: 3 };
     var paras = String(item.detail || item.summary).split("\n").filter(Boolean)
-      .map(function (p) { return "<p>" + leadK(richTag(p, item.tags)) + "</p>"; }).join("");
+      .map(function (p, i) {
+        var t = dateHint(leadK(richTag(p, item.tags)));
+        return "<p>" + (i > 0 ? keyLine(t, ksState) : t) + "</p>";
+      }).join("");
     if (type === "knowledge") {
       /* 知识分享：正文 [figN] 占位行替换为图文块（figures 在 lesson 文件中定义） */
       var figs = item.figures || {};
-      paras = String(item.detail || item.summary).split("\n").filter(Boolean).map(function (p) {
+      paras = String(item.detail || item.summary).split("\n").filter(Boolean).map(function (p, i) {
         var m = String(p).match(/^\[(fig\w+)\]$/);
         if (m && figs[m[1]]) {
           var f = figs[m[1]];
@@ -718,7 +759,8 @@
             (f.link ? "</a>" : "") +
             "<figcaption>" + esc(f.cap) + "</figcaption></figure>";
         }
-        return "<p>" + leadK(richTag(p, item.tags)) + "</p>";
+        var tk = dateHint(leadK(richTag(p, item.tags)));
+        return "<p>" + (i > 0 ? keyLine(tk, ksState) : tk) + "</p>";
       }).join("");
     }
     var krefs = "";
