@@ -131,7 +131,7 @@
   /* 期次渲染（可重入）：切换期数时整体重绘，事件绑定全部在初始化区一次性完成 */
   function renderIssue() {
     $("hero-kicker").innerHTML = "VOL." + ((D.meta.issue.match(/\d+(?=\s*期)/) || [""])[0]) + " · " + esc(D.meta.weekRange) + " · WEEKLY BRIEFING" +
-      (D.meta.status === "rolling" ? ' <span class="roll-badge"><i></i>每日更新中</span>' : "");
+      (D.meta.status === "rolling" ? ' <span class="roll-badge"><i></i>每日更新 · ' + esc((D.meta.updated || "").slice(5)) + '</span>' : "");
     /* 导读正文：引导词「近 7 天聚焦」（归档期为「本期聚焦」）主题色高亮、「今日新增」另起一行且用滚动徽章同源绿 */
     var noteBody = pangu(esc(D.meta.editorsNote))
       .replace(/(近 7 天聚焦|本期聚焦)：/, '<span class="note-lead">$1</span>：')
