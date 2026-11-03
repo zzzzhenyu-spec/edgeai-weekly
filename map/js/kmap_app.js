@@ -120,7 +120,7 @@
       });
       br.appendChild(dn);
 
-      var lv = el("div", "mleaves");
+      var lv = el("div", "mleaves" + (d.cols === 2 ? " cols2" : ""));
       var nodes = K.nodes.filter(function (n) { return n.domain === d.id; });
       nodes.forEach(function (n) { lv.appendChild(renderCard(n, d)); });
       if (nodes.length < maxCount) {
@@ -312,10 +312,6 @@
     svg.setAttribute("viewBox", "0 0 " + mmap.offsetWidth + " " + mmap.offsetHeight);
 
     var defs = svgEl("defs", {});
-    var mk = svgEl("marker", { id: "arr", viewBox: "0 0 10 10", refX: "8", refY: "5",
-      markerWidth: "5.5", markerHeight: "5.5", orient: "auto-start-reverse" });
-    mk.appendChild(svgEl("path", { d: "M 0 1 L 9 5 L 0 9 z", fill: "rgba(34,211,238,0.42)" }));
-    defs.appendChild(mk);
     svg.appendChild(defs);
 
     /* —— 思维导图扇形连线（anchorOf 已修 offsetParent 链，端点精确落边） —— */
@@ -337,37 +333,40 @@
           stroke: accentRgba(d.accent, 0.8), "stroke-width": "2.4", "stroke-linecap": "round"
         }));
 
-        /* 分支 → 概念卡：只画首末两条扇形曲线（中间卡不画线，简洁；加卡不增线） */
+        /* 分支 → 概念卡：包络线只画到第一列的首、末两张卡（两列布局时第二列靠同色分组，无线） */
         if (!br.classList.contains("collapsed")) {
           var cards = Array.prototype.slice.call(
             br.querySelectorAll(".knode:not(.knode-ghost):not(.filtered-out)"));
-          cards.forEach(function (cardEl, ci) {
-            if (cards.length > 2 && ci !== 0 && ci !== cards.length - 1) return;
-            var la = anchorOf(cardEl);
-            var dx2 = Math.min(Math.abs(la.left - dn.right) * 0.5, 56);
-            svg.appendChild(svgEl("path", {
-              d: "M " + dn.right + " " + dn.cy + " C " + (dn.right + dx2) + " " + dn.cy +
-                 ", " + (la.left - dx2) + " " + la.cy + ", " + la.left + " " + la.cy,
-              "class": "kedge-branch kedge-leaf", fill: "none",
-              stroke: accentRgba(d.accent, 0.62), "stroke-width": "1.9", "stroke-linecap": "round"
-            }));
-          });
+          if (cards.length) {
+            var minX = Math.min.apply(null, cards.map(function (c) { return anchorOf(c).left; }));
+            var col1 = cards.filter(function (c) { return anchorOf(c).left - minX < 8; });
+            var ends = col1.length > 1 ? [col1[0], col1[col1.length - 1]] : [col1[0]];
+            ends.forEach(function (cardEl) {
+              var la = anchorOf(cardEl);
+              var dx2 = Math.min(Math.abs(la.left - dn.right) * 0.5, 56);
+              svg.appendChild(svgEl("path", {
+                d: "M " + dn.right + " " + dn.cy + " C " + (dn.right + dx2) + " " + dn.cy +
+                   ", " + (la.left - dx2) + " " + la.cy + ", " + la.left + " " + la.cy,
+                "class": "kedge-branch kedge-leaf", fill: "none",
+                stroke: accentRgba(d.accent, 0.62), "stroke-width": "1.9", "stroke-linecap": "round"
+              }));
+            });
+          }
         }
       });
     }
 
-    /* —— 跨领域关联（默认隐入背景，悬停/选中点亮） —— */
+    /* —— 跨领域关联（默认隐藏，悬停/选中点亮；不带箭头——
+       不同走线方向下箭头进卡角度忽上忽下，观感混乱，前置/相关语义改由抽屉 →/↔ 表达） —— */
     edges.forEach(function (e) {
       var a = cardAnchor(e.from), b = cardAnchor(e.to);
       if (!a || !b) return;
       var sameCol = Math.abs(a.cx - b.cx) < 8;
-      var p = svgEl("path", {
+      svg.appendChild(svgEl("path", {
         d: edgePath(a, b, sameCol),
         "class": "kedge kedge-extra " + (e.kind === "lead" ? "kedge-lead" : "kedge-rel"),
         "data-from": e.from, "data-to": e.to
-      });
-      if (e.kind === "lead") p.setAttribute("marker-end", "url(#arr)");
-      svg.appendChild(p);
+      }));
     });
 
     /* 知识一览不再画跨图顺序连线（横穿三分支是视觉混乱之源）：
