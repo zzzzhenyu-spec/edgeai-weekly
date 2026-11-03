@@ -212,16 +212,24 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
 }
 .kmap.has-empty .mmap { display: none; }
 #kmap-edges { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: visible; }
-.mroot, .mbranches { position: relative; z-index: 1; }
+.mroot, .mside { position: relative; z-index: 1; }
 
-/* —— 思维导图：左主干 → 领域分支 → 概念叶子 —— */
-.mmap { position: relative; z-index: 1; display: flex; align-items: center; min-width: max-content; padding: 4px 0; }
+/* —— 思维导图：主干居中，分支左右两列放射 —— */
+.mmap {
+  position: relative; z-index: 1;
+  display: flex; align-items: center;
+  width: max-content; min-width: max-content; margin: 0 auto;
+  padding: 4px 0;
+}
 .mroot {
-  flex: none; width: 172px; margin-right: 66px;
+  flex: none; width: 172px; margin: 0 62px;
   padding: 26px 18px; border-radius: 20px; text-align: center;
-  background: linear-gradient(rgba(255,255,255,0.065), rgba(255,255,255,0.055)), #0d1526;
-  border: 1px solid rgba(129, 140, 248, 0.62);
-  box-shadow: 0 0 54px -8px rgba(129, 140, 248, 0.55), inset 0 0 26px -12px rgba(129, 140, 248, 0.55);
+  background: linear-gradient(rgba(255,255,255,0.07), rgba(255,255,255,0.045)), #0d1526;
+  border: 1px solid rgba(129, 140, 248, 0.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 0 26px -8px rgba(129, 140, 248, 0.35),
+    0 0 90px -28px rgba(129, 140, 248, 0.6);
 }
 .mroot b {
   display: block; font-size: 21px; font-weight: 800; line-height: 1.35;
@@ -229,8 +237,10 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
 }
 .mroot span { display: block; margin-top: 6px; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; color: var(--text-faint); }
 
-.mbranches { display: flex; flex-direction: column; gap: 30px; }
+.mside { display: flex; flex-direction: column; gap: 30px; }
 .mbranch { display: flex; align-items: center; }
+.mbranch-left { flex-direction: row-reverse; }
+.mbranch-left .mnode { margin-right: 0; margin-left: 48px; }
 .mbranch.dom-hidden { display: none; }
 
 /* 分支节点：主题色小卡，可点击收起/展开 */
@@ -239,13 +249,17 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
   padding: 12px 14px; border-radius: 15px;
   background: linear-gradient(rgba(255,255,255,0.045), rgba(255,255,255,0.045)), #0c1322;
   border: 1px solid color-mix(in srgb, var(--daccent) 38%, transparent);
-  box-shadow: 0 10px 30px -18px color-mix(in srgb, var(--daccent) 45%, transparent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 14px 34px -22px color-mix(in srgb, var(--daccent) 55%, transparent);
   cursor: pointer;
-  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s, opacity 0.38s ease;
 }
 .mnode:hover {
   border-color: color-mix(in srgb, var(--daccent) 62%, transparent);
-  box-shadow: 0 12px 32px -16px color-mix(in srgb, var(--daccent) 60%, transparent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 16px 38px -20px color-mix(in srgb, var(--daccent) 65%, transparent);
   transform: translateY(-2px);
 }
 .mnode:focus-visible { outline: 1px solid rgba(34,211,238,0.6); outline-offset: 3px; }
@@ -283,7 +297,8 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
   border: 1px solid var(--border);
   border-left: 3px solid color-mix(in srgb, var(--daccent) 50%, transparent);
   cursor: pointer; overflow: visible;
-  transition: transform 0.32s cubic-bezier(0.22,1,0.36,1), border-color 0.32s, box-shadow 0.32s, background 0.32s, opacity 0.32s;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.32s cubic-bezier(0.22,1,0.36,1), border-color 0.32s, box-shadow 0.32s, background 0.32s, opacity 0.38s ease;
   display: flex; flex-direction: column; gap: 5px;
 }
 .knode::before {
@@ -296,7 +311,10 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
   transform: translateY(-4px);
   background: linear-gradient(rgba(255,255,255,0.065), rgba(255,255,255,0.065)), #101a30;
   border-color: color-mix(in srgb, var(--daccent) 55%, transparent);
-  box-shadow: 0 22px 44px -16px rgba(0,0,0,0.6), 0 0 32px -10px color-mix(in srgb, var(--daccent) 42%, transparent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 26px 50px -24px rgba(0, 0, 0, 0.75),
+    0 0 56px -24px color-mix(in srgb, var(--daccent) 65%, transparent);
 }
 .knode:focus-visible { outline: 1px solid rgba(34,211,238,0.6); outline-offset: 3px; }
 .knode.filtered-out { display: none; }
@@ -309,11 +327,13 @@ main { max-width: 1280px; margin: 0 auto; padding: 0 24px 60px; }
 .knode.sel { border-color: color-mix(in srgb, var(--daccent) 80%, transparent); box-shadow: 0 0 30px -8px color-mix(in srgb, var(--daccent) 55%, transparent); }
 
 /* 悬停聚焦时轻微压暗无关节点 */
-/* 悬停聚焦：无关节点明显压暗，邻接卡与关联线显著点亮 */
-.kmap-inner.has-focus .knode:not(.hl-self):not(.hl-n) { opacity: 0.32; }
-.kmap-inner.has-focus .kedge:not(.hl) { stroke-opacity: 0.04; }
-.kmap-inner.has-focus .kedge-branch { opacity: 0.45; }
-.kmap-inner.has-focus .kedge-branch.hl { opacity: 1; }
+/* 悬停聚焦：无关联的渐变退场（近乎消失），所属分支与邻接关系保留点亮 */
+.kmap-inner.has-focus .knode:not(.hl-self):not(.hl-n) { opacity: 0.05; }
+.kmap-inner.has-focus .mbranch:not(.hl-host) .mnode { opacity: 0.08; }
+.kmap-inner.has-focus .knode-ghost { opacity: 0.03; }
+.kmap-inner.has-focus .kedge:not(.hl) { stroke-opacity: 0.03; }
+.kmap-inner.has-focus .kedge-branch { stroke-opacity: 0.18; transition: stroke-opacity 0.35s; }
+.kmap-inner.has-focus .kedge-branch.hl { stroke-opacity: 1; }
 
 .kn-top { display: flex; align-items: baseline; gap: 8px; }
 .kn-top h3 { font-size: 15.5px; font-weight: 700; line-height: 1.45; flex: 1; min-width: 0; }
@@ -528,7 +548,10 @@ body.panel-open { overflow: hidden; }
 }
 .share-card:hover {
   border-color: rgba(34, 211, 238, 0.45); transform: translateY(-3px);
-  box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.55), 0 0 22px -10px rgba(34, 211, 238, 0.35);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 36px -18px rgba(0, 0, 0, 0.65),
+    0 0 40px -20px rgba(34, 211, 238, 0.5);
 }
 .sc-top { display: flex; align-items: center; gap: 8px; }
 .sc-top b { font-size: 13.5px; color: var(--text); font-weight: 700; flex: 1; min-width: 0; line-height: 1.5; }

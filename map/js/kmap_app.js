@@ -80,14 +80,10 @@
     svg.setAttribute("aria-hidden", "true");
     mmap.appendChild(svg);
 
-    /* 主干 */
-    var root = el("div", "mroot");
-    root.appendChild(el("b", null, "端侧大模型"));
-    root.appendChild(el("span", null, "基础知识 · BASICS"));
-    mmap.appendChild(root);
+    /* 两侧分支容器：主干居中，分支左右放射（side: "left" 挂左侧） */
+    var leftSide = el("div", "mside mside-left");
+    var rightSide = el("div", "mside mside-right");
 
-    /* 分支列 */
-    var branches = el("div", "mbranches");
     var maxCount = 0;
     K.domains.forEach(function (d) {
       var c = K.nodes.filter(function (n) { return n.domain === d.id; }).length;
@@ -95,8 +91,7 @@
     });
 
     K.domains.forEach(function (d) {
-      /* 分支行：[分支节点] + [概念卡纵向展开]，连线由 drawEdges 扇形绘制 */
-      var br = el("div", "mbranch");
+      var br = el("div", "mbranch" + (d.side === "left" ? " mbranch-left" : ""));
       br.dataset.domain = d.id;
       br.style.setProperty("--daccent", d.accent);
 
@@ -131,10 +126,17 @@
         lv.appendChild(ghost);
       }
       br.appendChild(lv);
-      branches.appendChild(br);
+      (d.side === "left" ? leftSide : rightSide).appendChild(br);
     });
 
-    mmap.appendChild(branches);
+    /* 主干居中 */
+    var root = el("div", "mroot");
+    root.appendChild(el("b", null, "端侧大模型"));
+    root.appendChild(el("span", null, "基础知识 · BASICS"));
+
+    mmap.appendChild(leftSide);
+    mmap.appendChild(root);
+    mmap.appendChild(rightSide);
     wrap.appendChild(mmap);
     wrap.appendChild(el("div", "empty-note", "没有匹配的概念，换个词试试"));
     applyFilter();
@@ -202,7 +204,7 @@
   }
 
   /* 布局坐标（mmap 本地坐标系）：必须沿 offsetParent 链累加——
-     offsetLeft 只相对最近的定位祖先（如 .mbranches），直接用会整体偏移、线画进空白 */
+     offsetLeft 只相对最近的定位祖先（如 .mside），直接用会整体偏移、线画进空白 */
   function anchorOf(elm) {
     var mmap = document.querySelector(".mmap");
     var x = 0, y = 0, e = elm;
@@ -314,7 +316,7 @@
     var defs = svgEl("defs", {});
     svg.appendChild(defs);
 
-    /* —— 思维导图扇形连线（anchorOf 已修 offsetParent 链，端点精确落边） —— */
+    /* —— 两列放射连线：右分支向右展，左分支镜像向左展（anchorOf 已修 offsetParent 链） —— */
     var rootEl = document.querySelector(".mroot");
     if (rootEl) {
       var ra = anchorOf(rootEl);
@@ -322,32 +324,42 @@
         if (br.classList.contains("dom-hidden")) return;
         var d = K.domains.filter(function (x) { return x.id === br.dataset.domain; })[0];
         if (!d) return;
+        var isLeft = br.classList.contains("mbranch-left");
         var dn = anchorOf(br.querySelector(".mnode"));
 
         /* 主干 → 分支节点：S 曲线（dx 严格 < 间距一半，杜绝控制点反穿回钩） */
-        var dx = Math.min(Math.abs(dn.left - ra.right) * 0.45, 70);
+        var dx = Math.min(Math.abs((isLeft ? dn.right - ra.left : dn.left - ra.right)) * 0.45, 70);
         svg.appendChild(svgEl("path", {
-          d: "M " + ra.right + " " + ra.cy + " C " + (ra.right + dx) + " " + ra.cy +
-             ", " + (dn.left - dx) + " " + dn.cy + ", " + dn.left + " " + dn.cy,
+          d: isLeft
+            ? "M " + ra.left + " " + ra.cy + " C " + (ra.left - dx) + " " + ra.cy +
+              ", " + (dn.right + dx) + " " + dn.cy + ", " + dn.right + " " + dn.cy
+            : "M " + ra.right + " " + ra.cy + " C " + (ra.right + dx) + " " + ra.cy +
+              ", " + (dn.left - dx) + " " + dn.cy + ", " + dn.left + " " + dn.cy,
           "class": "kedge-branch", fill: "none",
+          "data-domain": d.id,
           stroke: accentRgba(d.accent, 0.8), "stroke-width": "2.4", "stroke-linecap": "round"
         }));
 
-        /* 分支 → 概念卡：包络线只画到第一列的首、末两张卡（两列布局时第二列靠同色分组，无线） */
+        /* 分支 → 概念卡：包络线只画靠主干一侧的首、末两张卡（另一列靠同色分组，无线） */
         if (!br.classList.contains("collapsed")) {
           var cards = Array.prototype.slice.call(
             br.querySelectorAll(".knode:not(.knode-ghost):not(.filtered-out)"));
           if (cards.length) {
-            var minX = Math.min.apply(null, cards.map(function (c) { return anchorOf(c).left; }));
-            var col1 = cards.filter(function (c) { return anchorOf(c).left - minX < 8; });
-            var ends = col1.length > 1 ? [col1[0], col1[col1.length - 1]] : [col1[0]];
+            var lefts = cards.map(function (c) { return anchorOf(c).left; });
+            var edgeX = isLeft ? Math.max.apply(null, lefts) : Math.min.apply(null, lefts);
+            var col = cards.filter(function (c) { return Math.abs(anchorOf(c).left - edgeX) < 8; });
+            var ends = col.length > 1 ? [col[0], col[col.length - 1]] : [col[0]];
             ends.forEach(function (cardEl) {
               var la = anchorOf(cardEl);
-              var dx2 = Math.min(Math.abs(la.left - dn.right) * 0.5, 56);
+              var dx2 = Math.min(Math.abs(isLeft ? dn.left - la.right : la.left - dn.right) * 0.5, 56);
               svg.appendChild(svgEl("path", {
-                d: "M " + dn.right + " " + dn.cy + " C " + (dn.right + dx2) + " " + dn.cy +
-                   ", " + (la.left - dx2) + " " + la.cy + ", " + la.left + " " + la.cy,
+                d: isLeft
+                  ? "M " + dn.left + " " + dn.cy + " C " + (dn.left - dx2) + " " + dn.cy +
+                    ", " + (la.right + dx2) + " " + la.cy + ", " + la.right + " " + la.cy
+                  : "M " + dn.right + " " + dn.cy + " C " + (dn.right + dx2) + " " + dn.cy +
+                    ", " + (la.left - dx2) + " " + la.cy + ", " + la.left + " " + la.cy,
                 "class": "kedge-branch kedge-leaf", fill: "none",
+                "data-domain": d.id,
                 stroke: accentRgba(d.accent, 0.62), "stroke-width": "1.9", "stroke-linecap": "round"
               }));
             });
@@ -386,12 +398,20 @@
       if (e.to === id && domById[e.from]) domById[e.from].classList.toggle("hl-n", on);
     });
     if (domById[id]) domById[id].classList.toggle("hl-self", on);
+    /* 所属分支整体保留（节点与连线），其余渐变退场 */
+    var host = domById[id] ? domById[id].closest(".mbranch") : null;
+    if (host) {
+      host.classList.toggle("hl-host", on);
+      document.querySelectorAll('.kedge-branch[data-domain="' + host.dataset.domain + '"]')
+        .forEach(function (p) { p.classList.toggle("hl", on); });
+    }
     $("kmap-inner").classList.toggle("has-focus", on);
   }
   function clearFocus() {
-    document.querySelectorAll(".kedge.hl").forEach(function (p) { p.classList.remove("hl"); });
+    document.querySelectorAll(".kedge.hl, .kedge-branch.hl").forEach(function (p) { p.classList.remove("hl"); });
     document.querySelectorAll(".knode.hl-n").forEach(function (c) { c.classList.remove("hl-n"); });
     document.querySelectorAll(".knode.hl-self").forEach(function (c) { c.classList.remove("hl-self"); });
+    document.querySelectorAll(".mbranch.hl-host").forEach(function (b) { b.classList.remove("hl-host"); });
     $("kmap-inner").classList.remove("has-focus");
   }
 
