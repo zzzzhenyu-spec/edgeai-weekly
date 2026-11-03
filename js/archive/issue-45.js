@@ -325,6 +325,30 @@ WEEKLY_ARCHIVE[45] = {
     },
 
 {
+      id: "n163", cat: "行业动态", source: "腾讯新闻", date: "2026-10-27",
+      title: "彭博：机器人「大脑」公司 Physical Intelligence 洽谈 ≥10 亿美元新融资，估值约 200 亿美元一年翻近四倍且目前零营收",
+      summary: "据彭博社报道，机器人基础模型公司 Physical Intelligence（π0 模型出品方，约 80 人团队）正在洽谈新一轮至少 10 亿美元融资，估值约 200 亿美元——从 2024 年 11 月 A 轮的 24 亿美元、今年早些时候的约 115 亿美元一路翻升，而公司目前尚无产品化收入。分析称其融资效率（估值/融资比）高于 Figure AI 等同行，愿景是成为「机器人的安卓」。",
+      detail: "传闻：彭博社约 10 月 27 日报道（国内腾讯科技、智通财经等多源转述），融资仍在洽谈中、尚未官宣——数字以最终官宣为准。\n轨迹：2024 年 3 月种子轮起步，2024 年 11 月 A 轮 4 亿美元（估值 24 亿美元），2025 年 11 月约 56 亿美元，今年早些时候约 115 亿美元，本轮洽谈约 200 亿美元——具身智能模型层估值一年翻近四倍。\n公司：专注机器人基础模型（视觉-语言-动作），约 80 人，已发布首个机器人基础模型 π0；当前零营收，估值锚定的是「机器人的安卓」生态卡位。\n端侧视角：具身智能模型层的资本定价狂飙——零收入 200 亿美元意味着市场把机器人端侧「大脑」当作操作系统级入口提前定价，与本体厂商（宇树们的财报两本账）形成投入-定价的镜像。",
+      tags: ["Physical Intelligence", "具身智能", "融资", "机器人基础模型", "π0"],
+      url: "https://new.qq.com/rain/a/20261028A05QCH00",
+      image: "images/news/n163.png",
+      imageCap: "Physical Intelligence 融资轨迹（图源：腾讯新闻）",
+      highlight: false
+    },
+
+{
+      id: "n164", cat: "大模型厂商", source: "百度官方", date: "2026-10-27",
+      title: "百度开源文心 Unlimited OCR 2：总参 3B 激活仅 500M，SR-SWA 把文档解析上限推向「无限页」，实测一次解析 3600 页",
+      summary: "百度发布并开源文心 Unlimited OCR 2——总参数量 3B、单次推理仅激活约 500M，核心创新 SR-SWA（稀疏参考滑动窗口注意力）把超长序列的文本-视觉注意力压缩到固定大小引用集，使每步解码延迟与内存占用近常数，在有限上下文内实现无界文档解析：实测一次请求解析《哈利·波特》全系列 7 部超 3600 页。MPDocBench 与 MarathonDocBench 双榜 SOTA，权重开源于 Hugging Face。",
+      detail: "开源：10 月 27 日发布（官方模型卡 Release 记录），代码与权重同步开源至 GitHub 与 Hugging Face（baidu/Unlimited-OCR-2），并上线百度智能云与 AI 开放平台；论文 Unlimited OCR Works（arXiv 2606.23050）。\n架构：总参 3B、激活约 500M；SR-SWA 将文本-视觉注意力交互压缩到固定大小的工作引用集（如 512 token），消除文档变长时的二次方注意力与内存瓶颈；原生支持版面要素切分、跨页合并与表格合并。\n成绩：数十页级 MPDocBench 与极端百页级 MarathonDocBench 双榜 SOTA；推理支持 Transformers 与 SGLang（推荐部署）。\n端侧视角：OCR 是最普及的端侧 AI 场景，「3B 总参+500M 激活+常数级内存」的组合把千页文档解析拉进消费级算力可承受范围——与面壁 MiniCPM-OCR（1.3B 读判分离）同周开源，端侧 OCR 的「无限页」军备赛开打。",
+      tags: ["文心", "OCR", "百度", "开源", "文档解析"],
+      url: "https://huggingface.co/baidu/Unlimited-OCR-2",
+      image: "images/news/n164.png",
+      imageCap: "Unlimited OCR 2 架构（图源：Hugging Face 模型卡）",
+      highlight: false
+    },
+
+{
       id: "n125", cat: "AI硬件", source: "IT之家", date: "2026-10-26",
       title: "小米开源 AI 硬件 HachimoDock「哈基米机」亮相：约 150 元自制成本复刻万能 AI 桌宠，语音操控电脑 Agent、现场生成新组件",
       summary: "小米技术委创新产品团队在 2026 观猹大会亮相开源 AI 硬件 HachimoDock——硬件自制成本约 150 元、全开源可自行复刻。它把桌面宠物做成 Agent 的「身体」：桌宠实时呈现 Codex 等后台智能体的工作状态，用户语音操控电脑端 Agent、说出想法即可现场生成并运行新组件，还能联动智能家居、化身快捷麦克风或内置万款游戏的小游戏机。",
