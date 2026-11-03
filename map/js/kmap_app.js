@@ -115,7 +115,7 @@
       });
       br.appendChild(dn);
 
-      var lv = el("div", "mleaves" + (d.cols === 2 ? " cols2" : ""));
+      var lv = el("div", "mleaves" + (d.cols === 1 ? " single" : ""));
       var nodes = K.nodes.filter(function (n) { return n.domain === d.id; });
       nodes.forEach(function (n) { lv.appendChild(renderCard(n, d)); });
       if (nodes.length < maxCount) {
