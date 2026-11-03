@@ -24,17 +24,6 @@ const WEEKLY_DATA = {
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
     {
-      id: "n159", cat: "AI硬件", source: "新浪财经", date: "2026-10-31",
-      title: "罗技 MX KEYPAD 国行 799 元发售：9 个 LCD 自定义键一键调用 WorkBuddy，AI 入口硬件化再添一类",
-      summary: "罗技 MX KEYPAD「创意工作台」国行 10 月 31 日发售，定价 799 元（美国 9 月 8 日以 99.99 美元先行）——9 个全彩可自定义 LCD 按键+2 个翻页按钮、每个应用最多 15 页配置，深度兼容腾讯 WorkBuddy（装插件一键调用默认快捷配置，国行购买赠送 WorkBuddy 积分）。Logi Actions SDK 支持开发者构建插件与宏、可借编程智能体生成集成代码，同期推出 MX Master 4 开发者特别版鼠标。",
-      detail: "发售：10 月 31 日国行开售 799 元；美国市场 9 月 8 日以 99.99 美元率先发售。\n形态：9 个全彩可自定义 LCD 按键+2 个翻页按钮，每个应用最多 15 页操作；按键不作打字用，主打启动命令、运行宏与快捷操作。\nAI 集成：深度兼容腾讯 WorkBuddy——安装插件后一键调用默认快捷配置并可自定义更多快捷操作；国行购买赠送 WorkBuddy 积分。\n生态：Logi Actions SDK 主导开发者生态，可构建自定义插件、宏、脚本与快捷键，并可用编程智能体生成集成代码；同期推出 MX Master 4 开发者特别版（MX 系列首个特别版，终端风格设计）。\n端侧视角：AI 入口硬件化再添新品类——继 Copilot 键之后，LCD 可编程键与国产 AI 助手（WorkBuddy）的官方级配对，外设大厂把「一键唤起 AI」做成了标配能力。",
-      tags: ["罗技", "MX KEYPAD", "WorkBuddy", "AI配件", "外设"],
-      url: "https://finance.sina.com.cn/tech/digi/2026-10-31/doc-inixavkz4014346.shtml",
-      image: "images/news/n159.png",
-      imageCap: "MX KEYPAD（图源：搜狐科技）",
-      highlight: false
-    },
-    {
       id: "n155", cat: "大模型厂商", source: "亿邦动力", date: "2026-11-02",
       title: "美团发布 LongCat-2.5：1.6 万亿参数原生多模态、全程国产算力训练，面向长程智能体任务比肩国际闭源模型",
       summary: "美团发布新一代大模型 LongCat-2.5——面向长程智能体任务的原生多模态模型，总参数 1.6 万亿，训练全程由国产算力完成，整体能力比肩国际成熟闭源模型与头部开源模型。在 6 月 LongCat-2.0（首次在国产算力上完成万亿参数全流程训练与推理）基础上，强化原生视觉理解与智能体编程，并优化国产算力上的长上下文训练与推理效率。王兴明确「不做 Token 工厂」，模型服务本地生活主业——配套 AI 经营工作台「妙手」已服务古茗、徐升记、益禾堂等连锁品牌。",
@@ -54,6 +43,17 @@ news: [
       url: "https://www.cls.cn/detail/2522336",
       image: "images/news/n156.png",
       imageCap: "趋境科技（图源：腾讯新闻）",
+      highlight: false
+    },
+    {
+      id: "n159", cat: "AI硬件", source: "新浪财经", date: "2026-10-31",
+      title: "罗技 MX KEYPAD 国行 799 元发售：9 个 LCD 自定义键一键调用 WorkBuddy，AI 入口硬件化再添一类",
+      summary: "罗技 MX KEYPAD「创意工作台」国行 10 月 31 日发售，定价 799 元（美国 9 月 8 日以 99.99 美元先行）——9 个全彩可自定义 LCD 按键+2 个翻页按钮、每个应用最多 15 页配置，深度兼容腾讯 WorkBuddy（装插件一键调用默认快捷配置，国行购买赠送 WorkBuddy 积分）。Logi Actions SDK 支持开发者构建插件与宏、可借编程智能体生成集成代码，同期推出 MX Master 4 开发者特别版鼠标。",
+      detail: "发售：10 月 31 日国行开售 799 元；美国市场 9 月 8 日以 99.99 美元率先发售。\n形态：9 个全彩可自定义 LCD 按键+2 个翻页按钮，每个应用最多 15 页操作；按键不作打字用，主打启动命令、运行宏与快捷操作。\nAI 集成：深度兼容腾讯 WorkBuddy——安装插件后一键调用默认快捷配置并可自定义更多快捷操作；国行购买赠送 WorkBuddy 积分。\n生态：Logi Actions SDK 主导开发者生态，可构建自定义插件、宏、脚本与快捷键，并可用编程智能体生成集成代码；同期推出 MX Master 4 开发者特别版（MX 系列首个特别版，终端风格设计）。\n端侧视角：AI 入口硬件化再添新品类——继 Copilot 键之后，LCD 可编程键与国产 AI 助手（WorkBuddy）的官方级配对，外设大厂把「一键唤起 AI」做成了标配能力。",
+      tags: ["罗技", "MX KEYPAD", "WorkBuddy", "AI配件", "外设"],
+      url: "https://finance.sina.com.cn/tech/digi/2026-10-31/doc-inixavkz4014346.shtml",
+      image: "images/news/n159.png",
+      imageCap: "MX KEYPAD（图源：搜狐科技）",
       highlight: false
     },
     {
