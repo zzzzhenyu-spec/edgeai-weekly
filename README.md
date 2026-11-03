@@ -16,19 +16,22 @@
 | 2026-10-31 | [据 The Information 爆料：Meta 联手傅利叶打造 Muse「物理化身」人形机器人原型 Max，1.5 米高搭载英伟达 Thor，3 个月做出已启动二代](https://finance.sina.com.cn/tech/digi/2026-11-01/doc-inixepty4337025.shtml) | 新浪科技 |
 | 2026-10-29 | [开源推理引擎 Strata 发布 0.2.8：一键把大模型装上消费级电脑，本地跑 OpenAI/Anthropic 兼容接口，上线一个月 35,994 星](https://github.com/Niko1221/Strata) | GitHub（Niko1221/Strata） |
 
-### 端侧Agent（3 条）
+### 端侧Agent（4 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-29 | [微信支付智慧经营机器人首次进店上岗：混元端侧小模型+天籁音频落地 7-ELEVEN 第 2000 家门店](https://feng.ifeng.com/c/8xeRcOsI31X) | 凤凰科技 |
 | 2026-10-28 | [Anthropic 岗位插件库 knowledge-work-plugins：把「财务顾问」等知识岗位的领域知识与工具打包给 Claude Cowork，33,851 星本周仍在高频迭代](https://github.com/anthropics/knowledge-work-plugins) | GitHub（anthropics/knowledge-work-plugins） |
 | 2026-10-27 | [微信输入法上线「AI 录音笔」：录音实时转写为结构化网页，自动剔噪、提炼重点、生成图表，iOS/安卓/电脑全平台开放](https://www.ithome.com/1/018/492.htm) | IT之家 |
 | 2026-10-27 | [蚂蚁灵光 2.0 发布：从「任务执行者」升级「事务管理者」——跨会话记忆、主动盯办与支付宝生态工具链](https://www.leiphone.com/category/industrynews/IxG2F47VLIt3uTOW.html) | 雷峰网 |
 
-### AI硬件（7 条）
+### AI硬件（9 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-10-31 | [罗技 MX KEYPAD 国行 799 元发售：9 个 LCD 自定义键一键调用 WorkBuddy，AI 入口硬件化再添一类](https://finance.sina.com.cn/tech/digi/2026-10-31/doc-inixavkz4014346.shtml) | 新浪财经 |
 | 2026-10-30 | [智元联合清华与无问芯穹发布群体经验学习范式 CEL：96 台真机集群成功率从 86.7% 提升至 98.3%，机器人开始互相学习](https://finance.ifeng.com/c/8xdnytFdKqj) | 凤凰财经 |
+| 2026-10-29 | [智元发布具身交互大模型 WITA-OMNI：全双工同时听说、平均响应约 600 毫秒比行业快三倍，曾登顶全双工对话评测全球第一](https://www.sohu.com/a/1094291629_122014422) | 搜狐科技 |
 | 2026-10-29 | [智元创新日发布具身基座模型 GO-3 Preview：自研 WRAM 架构一举登顶 RoboDojo 等三大权威榜单，刷新开源 SOTA 且年底全面开源](https://news.qq.com/rain/a/20261029A07M4P00) | 腾讯新闻 |
 | 2026-10-29 | [智元发布物理 AI 度量衡 Worken（有效智能工时）：活跃机器人数量 × 自主工作时长 × 产出效能比，给具身智能一个「Token」](https://k.sina.com.cn/article_5952915705_162d248f906703rymu.html) | 新浪科技 |
 | 2026-10-29 | [王腾创业首作 ISHO Ring 正式发布：智能戒指 1799 元起配 AI 睡眠生态，iFlow 温控系统以双 BCG 感知带实现无感监测，订单已破千](https://baike.baidu.com/item/ISHO%20Ring) | 凤凰网科技 |
