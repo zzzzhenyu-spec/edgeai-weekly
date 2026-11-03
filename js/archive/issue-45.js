@@ -211,6 +211,17 @@ WEEKLY_ARCHIVE[45] = {
       highlight: false
     },
     {
+      id: "n149", cat: "大模型厂商", source: "Google Blog", date: "2026-10-27",
+      title: "谷歌 DeepMind 发布 Genie 4 实时交互世界模型：原生音频+物理模拟，Gemini 在环驱动，定位机器人与智能体的安全训练环境",
+      summary: "DeepMind 发布新一代世界模型 Genie 4——用文本与图像提示生成照片级逼真的可探索世界，可用自然语言实时转向（移动镜头、改变天气、引入角色），并首次原生实时生成环境音、音乐与交互对话。Gemini Omni 锚定真实世界的外观与行为，其他 Gemini 模型提供复杂推理维持模拟连贯。谷歌称「模拟世界是通向 AGI 的关键一步」——为机器人与智能体提供安全训练环境。已向受信测试者开放，将登陆 Google AI Ultra 的 Project Genie 与 Gemini API。",
+      detail: "发布：10 月 27 日官宣（Google Blog 官方通稿），已向有限受信测试者开放，后续登陆 Google AI Ultra 订阅的 Project Genie、Gemini API 与 AI Studio 早期合作。\n能力：实时交互世界模拟——设定初始事件后用自然语言实时转向，移动镜头、改变天气、引入新角色；世界原生生成音频（环境音、音乐、交互式对话），为 Genie 系列首次。\n架构：融合 Gemini 家族——Gemini Omni 负责锚定模拟世界的真实外观与行为，其他 Gemini 模型提供复杂推理、维持模拟的连贯与连续性。\n定位：谷歌明确将世界模拟视为通向 AGI 的关键路径——为机器人与智能体提供安全训练环境，并放大影视、新闻、游戏与制造业的创意工具。\n端侧视角：世界模型是具身智能的「训练场」——机器人厂商需要的虚拟练习环境由此而来；具身训练环境正成为大模型厂商的新战场。（勘误补录：本条事件属本期日历周，11 月 2 日经对撞复盘补收，特此勘误入档。）",
+      tags: ["Genie 4", "世界模型", "DeepMind", "具身智能", "实时交互"],
+      url: "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/",
+      image: "images/news/n149.png",
+      imageCap: "Genie 4 世界模拟演示（图源：Google Blog）",
+      highlight: true
+    },
+    {
       id: "n125", cat: "AI硬件", source: "IT之家", date: "2026-10-26",
       title: "小米开源 AI 硬件 HachimoDock「哈基米机」亮相：约 150 元自制成本复刻万能 AI 桌宠，语音操控电脑 Agent、现场生成新组件",
       summary: "小米技术委创新产品团队在 2026 观猹大会亮相开源 AI 硬件 HachimoDock——硬件自制成本约 150 元、全开源可自行复刻。它把桌面宠物做成 Agent 的「身体」：桌宠实时呈现 Codex 等后台智能体的工作状态，用户语音操控电脑端 Agent、说出想法即可现场生成并运行新组件，还能联动智能家居、化身快捷麦克风或内置万款游戏的小游戏机。",

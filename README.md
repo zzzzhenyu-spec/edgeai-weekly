@@ -4,7 +4,7 @@
 
 ## 2026 · 第 46 期（2026.10.27 — 11.02 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：谷歌 DeepMind 发布 Genie 4 实时交互世界模型（原生音频+Gemini 在环驱动，定位机器人与智能体的安全训练环境）；Mistral 开源 1T 参数 Large 4 权重（490 亿激活，编程智能体 Token 消耗较 GLM-5.3 省 47%），欧洲最大开放权重旗舰与中国开源阵营形成欧亚两线。XREAL Aura 成为首款 Android XR 有线眼镜——眼镜体不到 95 克、骁龙 Reality Elite 首发算力盒，1099 美元开订；英伟达开源 340 亿参数语音转录模型 Nemotron 3.5 Transcribe（Mamba+MoE 混合架构，30 秒录音 0.13 秒转完），面壁开源 MiniCPM-OCR「读判分离」套件（1.3B 四项基准第一+首创 2B 质检员），端侧模型开源潮再添两员。国行 Apple 智能官宣接入阿里千问（12 月正式推送），Gemini 4 Carbon 登顶综合榜、小米开源 0.8B 文档模型；据 The Information 爆料 Meta 联手傅利叶打造 Muse 物理化身人形原型 Max（英伟达 Thor、3 个月成型）。端侧算力密集换代：苹果 M6 与首款触屏 MacBook Pro、华为麒麟「韬」详解、新芯航途 X7 Ultra 落地边端量产。 今日新增：Genie 4 世界模型、Mistral Large 4 开源、XREAL Aura 开订、Nemotron Transcribe 开源、MiniCPM-OCR 开源、Meta×傅利叶 Max 爆料。
+**近 7 天导读**：近 7 天聚焦：谷歌 DeepMind 发布 Genie 4 实时交互世界模型（原生音频+Gemini 在环驱动，定位机器人与智能体的安全训练环境）；Mistral 开源 1T 参数 Large 4 权重（490 亿激活，编程智能体 Token 消耗较 GLM-5.3 省 47%），欧洲最大开放权重旗舰与中国开源阵营形成欧亚两线。XREAL Aura 成为首款 Android XR 有线眼镜——眼镜体不到 95 克、骁龙 Reality Elite 首发算力盒，1099 美元开订；英伟达开源 340 亿参数语音转录模型 Nemotron 3.5 Transcribe（Mamba+MoE 混合架构，30 秒录音 0.13 秒转完），面壁开源 MiniCPM-OCR「读判分离」套件（1.3B 四项基准第一+首创 2B 质检员），端侧模型开源潮再添两员。国行 Apple 智能官宣接入阿里千问（12 月正式推送），Gemini 4 Carbon 登顶综合榜、小米开源 0.8B 文档模型；据 The Information 爆料 Meta 联手傅利叶打造 Muse 物理化身人形原型 Max（英伟达 Thor、3 个月成型）。端侧算力密集换代：苹果 M6 与首款触屏 MacBook Pro、华为麒麟「韬」详解、新芯航途 X7 Ultra 落地边端量产。 今日新增：美团 LongCat-2.5（1.6 万亿参数全程国产算力）、智谱×摩尔线程 Token 工厂；昨日新增：Genie 4 世界模型、Mistral Large 4 开源、XREAL Aura 开订、Nemotron Transcribe 开源、MiniCPM-OCR 开源、Meta×傅利叶 Max 爆料。
 
 ## 近 7 天速览
 
@@ -50,10 +50,11 @@
 | 2026-10-29 | [深兰联合华为鸿蒙生态发布全球首款大模型智能体工作手机 Wowoker：麒麟芯片+端侧大模型，「订阅智能体服务、硬件配套赠送」重构卖机模式](https://m.sohu.com/a/1095005561_120285954) | 搜狐 |
 | 2026-10-28 | [华为终端发布会八款齐发：Pura 90 Plus 与畅享 100 全系登场，详解麒麟「韬」系列——逻辑折叠晶体管密度提升 28%、跨层带宽 125TB/s](https://zhidx.com/p/604988.html) | 智东西 |
 
-### 大模型厂商（7 条）
+### 大模型厂商（8 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-02 | [美团发布 LongCat-2.5：1.6 万亿参数原生多模态、全程国产算力训练，面向长程智能体任务比肩国际闭源模型](https://www.ebrun.com/20261102/718021.shtml) | 亿邦动力 |
 | 2026-10-30 | [小米开源 0.8B 文档理解模型 Xiaomi-OCR-0：单一模型覆盖解析/抽取/问答三任务，OmniDocBench 1B 以下第一](https://github.com/xiaomi-research/Xiaomi-OCR-0) | GitHub（xiaomi-research） |
 | 2026-10-29 | [谷歌发布 Gemini 4 Carbon：面向持续智能体工作流的新旗舰，综合榜登顶超越 Opus 5.5 与 GPT-6 Astra，间接提示注入攻击零得手](https://zhidx.com/p/605392.html) | 智东西 |
 | 2026-10-29 | [Mistral 开源 1T 参数 Large 4 权重：490 亿激活原生多模态，编程智能体 Token 消耗较 GLM-5.3 省 47%，欧洲最大开放权重旗舰落地](https://www.ithome.com/1/019/865.htm) | IT之家 |
@@ -62,10 +63,11 @@
 | 2026-10-27 | [Liquid AI 单日放出 LFM3 全家族：三混合架构 2B 级 6 款覆盖文本/视觉/音频/Omni/决策，4-bit 约 1GB 内存，1.7B 平均分超 Qwen3.5-4B](https://www.liquid.ai/blog/lfm3) | Liquid AI 官方博客 |
 | 2026-10-27 | [谷歌 DeepMind 发布 Genie 4 实时交互世界模型：原生音频+物理模拟，Gemini 在环驱动，定位机器人与智能体的安全训练环境](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/) | Google Blog |
 
-### 行业动态（1 条）
+### 行业动态（2 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-02 | [趋境科技联合智谱与摩尔线程发布国产异构推理「AI Token 工厂」解决方案，打通模型—推理—芯片产业闭环](https://www.cls.cn/detail/2522336) | 财联社 |
 | 2026-10-28 | [AI PC 换机潮落空：AI 需求虹吸内存产能致全球 PC 出货暴跌 21%，DRAM 涨价 208% 倒逼售价攀升](https://tech.fxxz.com/article/9064.html) | 快科技 |
 
 ## 科研前沿（10 篇）
@@ -80,4 +82,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-11-02。
+- 数据更新于 2026-11-03。
