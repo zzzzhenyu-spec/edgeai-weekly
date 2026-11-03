@@ -24,11 +24,12 @@
 | 2026-10-27 | [微信输入法上线「AI 录音笔」：录音实时转写为结构化网页，自动剔噪、提炼重点、生成图表，iOS/安卓/电脑全平台开放](https://www.ithome.com/1/018/492.htm) | IT之家 |
 | 2026-10-27 | [蚂蚁灵光 2.0 发布：从「任务执行者」升级「事务管理者」——跨会话记忆、主动盯办与支付宝生态工具链](https://www.leiphone.com/category/industrynews/IxG2F47VLIt3uTOW.html) | 雷峰网 |
 
-### AI硬件（6 条）
+### AI硬件（7 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-10-30 | [智元联合清华与无问芯穹发布群体经验学习范式 CEL：96 台真机集群成功率从 86.7% 提升至 98.3%，机器人开始互相学习](https://finance.ifeng.com/c/8xdnytFdKqj) | 凤凰财经 |
+| 2026-10-29 | [智元创新日发布具身基座模型 GO-3 Preview：自研 WRAM 架构一举登顶 RoboDojo 等三大权威榜单，刷新开源 SOTA 且年底全面开源](https://news.qq.com/rain/a/20261029A07M4P00) | 腾讯新闻 |
 | 2026-10-29 | [智元发布物理 AI 度量衡 Worken（有效智能工时）：活跃机器人数量 × 自主工作时长 × 产出效能比，给具身智能一个「Token」](https://k.sina.com.cn/article_5952915705_162d248f906703rymu.html) | 新浪科技 |
 | 2026-10-29 | [王腾创业首作 ISHO Ring 正式发布：智能戒指 1799 元起配 AI 睡眠生态，iFlow 温控系统以双 BCG 感知带实现无感监测，订单已破千](https://baike.baidu.com/item/ISHO%20Ring) | 凤凰网科技 |
 | 2026-10-29 | [苹果发布首款触屏 MacBook Pro：PROLED XDR 双层串联 OLED、Mac 历史上首次触控与灵动岛，M5 Max 最高 128GB 内存整机本地跑千亿参数模型](https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/) | Apple 官方 |
