@@ -1,6 +1,6 @@
 /* 自动生成: scripts/archive.py (勿手改) · 历史期次索引（新→旧） */
 window.WEEKLY_ISSUES = [
-  {"no": 45, "label": "2026 · 第 45 期", "range": "2026.10.26 — 11.01", "updated": "2026-11-01", "news": 32, "papers": 10},
+  {"no": 45, "label": "2026 · 第 45 期", "range": "2026.10.26 — 11.01", "updated": "2026-11-01", "news": 33, "papers": 10},
   {"no": 44, "label": "2026 · 第 44 期", "range": "2026.10.19 — 10.25", "updated": "2026-10-25", "news": 18, "papers": 10},
   {"no": 43, "label": "2026 · 第 43 期", "range": "2026.10.12 — 10.18", "updated": "2026-10-18", "news": 30, "papers": 10},
   {"no": 42, "label": "2026 · 第 42 期", "range": "2026.10.05 — 10.11", "updated": "2026-10-11", "news": 14, "papers": 10},
