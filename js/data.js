@@ -156,6 +156,18 @@ news: [
     },
 
 {
+      id: "n183", cat: "行业动态", source: "雷峰网", date: "2026-11-03",
+      title: "谷歌×Mercor 发布工程 Agent 基准 PLE：85 项真实工程任务，最强 Agent 仅得 48.3%——91% 单项达标≠可交付",
+      summary: "Google 与 Mercor 11 月 3 日发布 Physical-Engineering's Last Exam（PLE）：85 项机械、电气、土木与结构工程任务（机械 30/电气 27/土木 18/结构 10），平均每项约 61 份真实工程文件（PDF/表格/邮件/CAD/BIM，混有作废版本作陷阱）。56 项隐藏测试中 Claude Opus 5.5+Claude Code 得分 48.3%（GPT 6 Astra 45.8%、Gemini 4 Argon 40.6%）；共同创作任务里它平均满足 91% 的单项约束，却只有 41.3% 的交付设计通过全部硬性安全与可行性检查。",
+      detail: "发布要点：11 月 3 日 Google AI & Infrastructure 研究团队与 Mercor 联合发布，属「Last Exam」系列第三弹（继 Humanity's Last Exam 考知识、Agents' Last Exam 考数字工作之后，考物理世界的工程交付）；44 项任务由持证工程师编写、41 项由 Creator-Solver 对抗机制生成，已开放 29 项公开任务与评测容器。\n为什么难：PLE 采用硬约束门控——全部安全与可行性硬检查通过后才能拿成本优化分；工程设计约束相互耦合（管径→水阻→水泵工况→换热能力），改一处牵动全盘；85 项任务累计 5170 份文件且引用关系复杂，模型要维护带依赖关系的设计状态。同一模型同一任务跑 3 次，单任务得分平均跨度达 15.4 个百分点。\n端侧视角：PLE 的两个发现对端侧 Agent 直接成立——「单项能力达标≠整体可交付」，端侧 Agent 评估也要看全约束通过率而非单项分；「验证器是 Agent 核心基建」，本地长流程 Agent 资源更紧，增量检查与状态失效传播机制（改什么重算什么）是端侧落地工程 Agent 的前置件。",
+      tags: ["Google", "Mercor", "Agent基准", "工程Agent"],
+      url: "https://www.leiphone.com/category/ai/YZ0bP2vh94KY45RG.html",
+      image: "images/news/n183.jpg",
+      imageCap: "PLE：工程 Agent 的可行域瓶颈（图：雷峰网）",
+      highlight: false
+    },
+
+{
       id: "n167", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-02",
       title: "月之暗面发布 Kimi 游戏开发与创意工作解决方案：K3.1 Pro+Kimi Code+Work 三层组合，接入 Unity/UE/Blender 插件",
       summary: "月之暗面正式发布「游戏开发与创意工作解决方案」——基于 Kimi K3.1 Pro 模型、Kimi Code 与 Kimi Work 系列 Agent 产品的组合方案，接入 Unity、Unreal Engine、Blender 等专业游戏开发工具插件，面向游戏团队的开发与创意工作流提效。这是 Kimi 继 K3.1 Pro（10-24 发布、11 月开放开源权重）之后向垂直行业工作流的第一次系统化落地。",

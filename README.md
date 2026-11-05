@@ -60,10 +60,11 @@
 | 2026-11-02 | [美团发布 LongCat-2.5：1.6 万亿参数原生多模态、全程国产算力训练，面向长程智能体任务比肩国际闭源模型](https://www.ebrun.com/20261102/718021.shtml) | 亿邦动力 |
 | 2026-10-30 | [小米开源 0.8B 文档理解模型 Xiaomi-OCR-0：单一模型覆盖解析/抽取/问答三任务，OmniDocBench 1B 以下第一](https://github.com/xiaomi-research/Xiaomi-OCR-0) | GitHub（xiaomi-research） |
 
-### 行业动态（2 条）
+### 行业动态（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-03 | [谷歌×Mercor 发布工程 Agent 基准 PLE：85 项真实工程任务，最强 Agent 仅得 48.3%——91% 单项达标≠可交付](https://www.leiphone.com/category/ai/YZ0bP2vh94KY45RG.html) | 雷峰网 |
 | 2026-11-02 | [趋境科技联合智谱与摩尔线程发布国产异构推理「AI Token 工厂」解决方案，打通模型—推理—芯片产业闭环](https://www.cls.cn/detail/2522336) | 财联社 |
 | 2026-10-30 | [Omdia 预估 AI PC 出货占比 2027 年达 60%：69% 办公用户愿为端侧 AI 溢价，但仅 9% 将 AI 列为主要换机原因](https://www.ithome.com/1/019/852.htm) | IT之家 |
 
