@@ -18,11 +18,35 @@ const WEEKLY_DATA = {
     weekRange: "2026.10.30 — 11.05 · 近 7 天",
     updated: "2026-11-05",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：腾讯混元 Hy4 正式版（770B MoE 首次引入视觉理解，跻身全球最强开源）与 Mistral Large 4（1T 参数）双旗舰开源，MIT「权重空间编程」实现 GPT-6 Astra 直接修改 Qwen 权重（数学正确率 7.9%→48.1%）。国行 Apple 智能开测（Siri 直调千问、12 月正式推送）点燃端侧主线——端侧 AI 概念今日集体大涨（润欣 20cm 涨停、乐鑫创历史新高）。智元创新日三层配齐（GO-3+WITA-OMNI+灵渠 OS 底层开源约 2 亿行），优必选发布 Thinker-Sim 具身仿真平台；联想开天首款信创 AI 主机实现全链路国产化（本地跑 35B），国科微规划 GK6950 端侧 AI 芯片瞄准具身智能。XREAL Aura 开启 Android XR 有线眼镜时代，三星首款 AI 眼镜 12 月中旬上市在即，Omdia 预估 2027 AI PC 渗透率冲 60%。\n今日新增：Kimi Hosted Agents 托管智能体、端侧 AI 概念集体大涨（千问国行 Apple 智能开测催化）、国科微 GK6950 端侧 AI 芯片规划。"
+    editorsNote: "近 7 天聚焦：腾讯混元 Hy4 正式版（770B MoE 首次引入视觉理解，跻身全球最强开源）与 Mistral Large 4（1T 参数）双旗舰开源，MIT「权重空间编程」实现 GPT-6 Astra 直接修改 Qwen 权重（数学正确率 7.9%→48.1%）。国行 Apple 智能开测（Siri 直调千问、12 月正式推送）点燃端侧主线——端侧 AI 概念今日集体大涨（润欣 20cm 涨停、乐鑫创历史新高）。智元创新日三层配齐（GO-3+WITA-OMNI+灵渠 OS 底层开源约 2 亿行），优必选发布 Thinker-Sim 具身仿真平台；联想开天首款信创 AI 主机实现全链路国产化（本地跑 35B），国科微规划 GK6950 端侧 AI 芯片瞄准具身智能。XREAL Aura 开启 Android XR 有线眼镜时代，三星首款 AI 眼镜 12 月中旬上市在即，Omdia 预估 2027 AI PC 渗透率冲 60%。\n今日新增：Kimi Hosted Agents 托管智能体、端侧 AI 概念集体大涨（千问国行 Apple 智能开测催化）、国科微 GK6950 端侧 AI 芯片规划、高通进博会全球首展 6G 终端原型机+AI Recall 眼镜、Neuralink 植入者意念操控扫地机器人、Nothing 首款 AI 原生硬件定档 12 月、影目 INMO Future 一体式空间 AI 眼镜。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+      id: "n180", cat: "芯片厂商", source: "凤凰科技", date: "2026-11-05",
+      title: "高通进博会全球首展 6G 终端原型机：AI Recall 眼镜以每秒 2 帧拍摄+边缘侧 AI 处理，6G 作为 AI 原生网络",
+      summary: "高通在进博会展出全球首个符合 3GPP 最新 6G 定义的终端原型机实物（首次走出实验室）——面向 6G 的 AI Recall（AI 记忆）演示：智能眼镜以每秒 2 帧拍摄周围物体，画面经手机上传至边缘侧服务器做 AI 处理与记忆检索，体现 6G 作为「AI 原生网络」的方向。展台同时呈现从个人 AI 到物理 AI 的全线生态（手机/AI PC/智能体设备/智能眼镜/汽车/机器人）。",
+      detail: "首展：进博会（11 月 5 日开幕）全球首次公开 6G 终端原型机实物——符合 3GPP 最新 6G 定义，标志 6G 从技术研究走向系统化验证（IT之家/凤凰/进博会官网/同花顺多源）。\n演示：AI Recall 眼镜——每秒 2 帧拍摄捕捉周围物体，经手机上传至边缘侧服务器 AI 处理（记忆检索等），体现 6G 面向 AI 应用的「AI 原生网络」方向。\n生态：连续第九年参加进博会，展台覆盖旗舰手机、AI PC、智能体设备、智能眼镜、汽车、机器人多品类——从个人 AI 到物理 AI 全线。\n端侧视角：6G 原型机+AI Recall 组合揭示了端侧 AI 的下一层架构——眼镜只做「采集端」，AI 处理放在边缘侧服务器，6G 网络承载数据流；这种「轻端侧+边缘 AI」架构与 XREAL Aura 的「轻眼镜+算力盒」同构，都是把算力从眼镜本体移出去——端侧 AI 的形态正在分化出「端侧算力派」与「边缘算力派」两条路线。",
+      tags: ["高通", "6G", "AI Recall", "智能眼镜", "边缘计算"],
+      url: "https://www.ithome.com/1/022/906.htm",
+      image: "images/news/n180.png",
+      imageCap: "高通 6G 终端原型机进博会展出（图源：IT之家）",
+      highlight: false
+    },
+
+{
+      id: "n181", cat: "行业关注事件", source: "新浪科技", date: "2026-11-05",
+      title: "Neuralink 第 22 位植入者意念操控 Matic 扫地机器人：植入 28 小时后即实现，脑机接口从屏幕走进物理世界",
+      summary: "Neuralink 第 22 位植入者、渐冻症患者 Zach McManus 静坐轮椅仅凭意念操控 Matic 扫地机器人——植入手术仅 28 小时后即首次实现，被称为「世界上第一台纯意念控制的扫地机器人」。Matic 搭载 5 颗 RGB 摄像头可在本地绘制 3D 地图并自主选择吸尘/拖地模式；Neuralink 捕捉运动意图转化为数字指令——光标控制从屏幕内走到了物理世界。",
+      detail: "演示：Neuralink 第 22 位植入者 Zach McManus（渐冻症 ALS 患者）用意念操控 Matic 扫地机器人（11 月 5 日多源：新浪/36氪/Readhub/Neurapod）——植入 28 小时后即首次实现。\n技术：Neuralink 直接捕捉脑海中的运动意图，「移动」「点击」等念头转化为数字指令；Matic 搭载 5 颗 RGB 摄像头本地绘制房间 3D 地图自主识别环境（吸尘/拖地模式）。\n局限：Matic 仍无法清洁狭窄空间、尘袋水箱容量有限；演示性质而非产品化交付。\n端侧视角：脑机接口×端侧机器人的首次实用级对话——Matic 的本地 3D 地图+自主模式选择正是端侧 AI 的能力，而 Neuralink 把「指令端」从手指/语音扩展到意念；当输入端（BCI）和执行端（端侧机器人）都成熟，这条链路就是「意念→端侧 Agent→物理动作」的完整雏形。",
+      tags: ["Neuralink", "脑机接口", "Matic", "扫地机器人", "具身智能"],
+      url: "https://news.sina.cn/ai/2026-11-05/detail-inixsmka6116499.d.html",
+      image: "images/news/n181.png",
+      imageCap: "意念操控扫地机器人演示（图源：新浪科技）",
+      highlight: false
+    },
+
 {
       id: "n178", cat: "端侧Agent", source: "IT之家", date: "2026-11-05",
       title: "月之暗面发布 Kimi Hosted Agents 托管智能体：Harness 作为云端服务提供，有状态会话+持久沙箱+纯 HTTP 接入",
@@ -34,6 +58,7 @@ news: [
       imageCap: "Kimi Hosted Agents 发布（图源：IT之家）",
       highlight: false
     },
+
 {
       id: "n177", cat: "行业关注事件", source: "财联社", date: "2026-11-05",
       title: "端侧 AI 概念集体大涨：润欣科技 20cm 涨停、乐鑫科技创历史新高，千问国行 Apple 智能开测点燃端侧主线",
@@ -55,6 +80,30 @@ news: [
       url: "https://news.mydrivers.com/1/1163/1163455.htm",
       image: "images/news/n176.png",
       imageCap: "国科微端侧 AI 布局（图源：快科技）",
+      highlight: false
+    },
+
+{
+      id: "n179", cat: "AI硬件", source: "VR陀螺", date: "2026-11-04",
+      title: "Nothing 首款 AI 原生硬件定档 12 月出货：不带新屏幕、不可能做成 App，裴宇称之为「一件工具」",
+      summary: "Nothing 创始人裴宇在 X 宣布首款 AI 原生硬件 12 月正式出货，给出三个关键定义：①它是一件工具（面向生产力场景）；②它没有「新」的屏幕（不配备新增屏幕）；③它不可能是一个 App（功能无法被手机应用替代）。这是裴宇一个月前提出「AI 原生设备与 AI 操作系统」构想后的首款实体产品——评论认为这可能是 2026 年 AI 硬件的拐点信号（无屏 AI 设备探索方向）。",
+      detail: "官宣：11 月 4 日裴宇在 X 宣布 12 月出货（VR陀螺/动点科技/至顶网/网易多源）。\n三大定义：①一件工具——带 Nothing 一贯的个性与用心，面向生产力场景；②没有「新」屏幕——不增加新屏幕的设计；③不可能是 App——功能无法通过手机应用简单替代。\n背景：距裴宇提出「AI 原生设备与 AI 操作系统」构想约一个月——该构想主张 AI 设备不应是「手机+AI 功能」而应是原生为 AI 交互设计的硬件。\n端侧视角：继 Friend 吊坠、AI Pin、Oki Home 之后，又一家消费电子厂商正式入局「非手机形态 AI 原生硬件」——裴宇的三个定义（工具/无新屏/非 App）划清了与「手机外设」的界限；12 月出货是硬节点，产品形态届时揭晓。",
+      tags: ["Nothing", "AI原生硬件", "裴宇", "无屏设备", "生产力"],
+      url: "https://www.vrtuoluo.cn/546344.html",
+      image: "images/news/n179.png",
+      imageCap: "Nothing AI 原生硬件（图源：VR陀螺）",
+      highlight: false
+    },
+
+{
+      id: "n182", cat: "AI硬件", source: "界面新闻", date: "2026-11-04",
+      title: "影目发布一体式空间 AI 眼镜 INMO Future：双目 1080P 全彩+6DoF 空间锚定，无需连手机独立计算",
+      summary: "影目科技发布第四代 AI+AR 空间智能眼镜 INMO Future——一体式独立计算（无需连主机/手机），双目 1080P 全彩显示（行业一体式普遍约 500×380，Future 左右眼均升至 1080P），36 度视场角、入眼亮度最高 800 尼特、阵列光波导方案；搭载高通高性能空间处理芯片+自研空间感知算法，支持 6DoF 空间锚定与 AR 应用——定义「消费级空间智能终端」。",
+      detail: "发布：11 月 4 日发布（解放日报/界面/搜狐/93913 多源）。\n显示：双目 1080P 全彩（行业一体式全彩 AI 眼镜分辨率普遍约 500×380，Future 左右眼均升至 1080P）；36 度视场角、入眼亮度最高 800 尼特、阵列光波导。\n计算：一体式独立计算——无需连接主机、不依赖手机；高通高性能空间处理芯片+自研空间感知算法，6DoF 空间锚定支持 AR 应用。\n端侧视角：AI 眼镜赛道正在分化——XREAL Aura 走「有线分体+边缘算力盒」路线、高通 6G 演示走「轻采集+边缘 AI」路线，而 INMO Future 坚持把算力塞进眼镜本体（一体式独立计算）——三条路线同周亮相，AI 眼镜的形态之战正式开打。",
+      tags: ["影目", "INMO Future", "空间智能", "AR眼镜", "一体式"],
+      url: "https://www.jiemian.com/article/15293631.html",
+      image: "images/news/n182.png",
+      imageCap: "INMO Future 空间智能眼镜（图源：凤凰财经）",
       highlight: false
     },
 

@@ -4,14 +4,15 @@
 
 ## 2026 · 第 46 期（2026.10.30 — 11.05 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：腾讯混元 Hy4 正式版（770B MoE 首次引入视觉理解，跻身全球最强开源）与 Mistral Large 4（1T 参数）双旗舰开源，MIT「权重空间编程」实现 GPT-6 Astra 直接修改 Qwen 权重（数学正确率 7.9%→48.1%）。国行 Apple 智能开测（Siri 直调千问、12 月正式推送）点燃端侧主线——端侧 AI 概念今日集体大涨（润欣 20cm 涨停、乐鑫创历史新高）。智元创新日三层配齐（GO-3+WITA-OMNI+灵渠 OS 底层开源约 2 亿行），优必选发布 Thinker-Sim 具身仿真平台；联想开天首款信创 AI 主机实现全链路国产化（本地跑 35B），国科微规划 GK6950 端侧 AI 芯片瞄准具身智能。XREAL Aura 开启 Android XR 有线眼镜时代，三星首款 AI 眼镜 12 月中旬上市在即，Omdia 预估 2027 AI PC 渗透率冲 60%。 今日新增：Kimi Hosted Agents 托管智能体、端侧 AI 概念集体大涨（千问国行 Apple 智能开测催化）、国科微 GK6950 端侧 AI 芯片规划。
+**近 7 天导读**：近 7 天聚焦：腾讯混元 Hy4 正式版（770B MoE 首次引入视觉理解，跻身全球最强开源）与 Mistral Large 4（1T 参数）双旗舰开源，MIT「权重空间编程」实现 GPT-6 Astra 直接修改 Qwen 权重（数学正确率 7.9%→48.1%）。国行 Apple 智能开测（Siri 直调千问、12 月正式推送）点燃端侧主线——端侧 AI 概念今日集体大涨（润欣 20cm 涨停、乐鑫创历史新高）。智元创新日三层配齐（GO-3+WITA-OMNI+灵渠 OS 底层开源约 2 亿行），优必选发布 Thinker-Sim 具身仿真平台；联想开天首款信创 AI 主机实现全链路国产化（本地跑 35B），国科微规划 GK6950 端侧 AI 芯片瞄准具身智能。XREAL Aura 开启 Android XR 有线眼镜时代，三星首款 AI 眼镜 12 月中旬上市在即，Omdia 预估 2027 AI PC 渗透率冲 60%。 今日新增：Kimi Hosted Agents 托管智能体、端侧 AI 概念集体大涨（千问国行 Apple 智能开测催化）、国科微 GK6950 端侧 AI 芯片规划、高通进博会全球首展 6G 终端原型机+AI Recall 眼镜、Neuralink 植入者意念操控扫地机器人、Nothing 首款 AI 原生硬件定档 12 月、影目 INMO Future 一体式空间 AI 眼镜。
 
 ## 近 7 天速览
 
-### 行业关注事件（3 条）
+### 行业关注事件（4 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-05 | [Neuralink 第 22 位植入者意念操控 Matic 扫地机器人：植入 28 小时后即实现，脑机接口从屏幕走进物理世界](https://news.sina.cn/ai/2026-11-05/detail-inixsmka6116499.d.html) | 新浪科技 |
 | 2026-11-05 | [端侧 AI 概念集体大涨：润欣科技 20cm 涨停、乐鑫科技创历史新高，千问国行 Apple 智能开测点燃端侧主线](https://www.cls.cn/detail/2525789) | 财联社 |
 | 2026-10-31 | [DeepSeek 开源 Super-agent 原型 dsh-superagent：Router+Worker 双层架构让 AI 指挥 AI 干活，可接入 GitHub 与飞书主动处理任务](https://zhidx.com/p/606311.html) | 智东西 |
 | 2026-10-31 | [据 The Information 爆料：Meta 联手傅利叶打造 Muse「物理化身」人形机器人原型 Max，1.5 米高搭载英伟达 Thor，3 个月做出已启动二代](https://finance.sina.com.cn/tech/digi/2026-11-01/doc-inixepty4337025.shtml) | 新浪科技 |
@@ -23,10 +24,12 @@
 | 2026-11-05 | [月之暗面发布 Kimi Hosted Agents 托管智能体：Harness 作为云端服务提供，有状态会话+持久沙箱+纯 HTTP 接入](https://www.ithome.com/1/022/572.htm) | IT之家 |
 | 2026-11-02 | [月之暗面发布 Kimi 游戏开发与创意工作解决方案：K3.1 Pro+Kimi Code+Work 三层组合，接入 Unity/UE/Blender 插件](https://m.sohu.com/a/1096211105_655634) | 搜狐科技 |
 
-### AI硬件（6 条）
+### AI硬件（8 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-04 | [Nothing 首款 AI 原生硬件定档 12 月出货：不带新屏幕、不可能做成 App，裴宇称之为「一件工具」](https://www.vrtuoluo.cn/546344.html) | VR陀螺 |
+| 2026-11-04 | [影目发布一体式空间 AI 眼镜 INMO Future：双目 1080P 全彩+6DoF 空间锚定，无需连手机独立计算](https://www.jiemian.com/article/15293631.html) | 界面新闻 |
 | 2026-11-03 | [联想开天发布首款信创 AI 主机：兆芯 KX-7000+后摩「力擎」LQ50 全国产异构算力，本地跑 35B 大模型](https://www.ithome.com/1/021/779.htm) | IT之家 |
 | 2026-11-02 | [优必选发布具身智能仿真平台 Thinker-Sim：自研 Thinker-GS 高保真场景重建+SimReady 资产自动化生成，构建机器人训练与能力评测一站式体系](https://www.ithome.com/1/020/888.htm) | IT之家 |
 | 2026-11-02 | [消息称三星首款 AI 眼镜 12 月中旬登陆韩国美国：骁龙 AR1 Gen 1+Android XR 集成 Gemini，无屏语音交互续航 9 小时](https://www.ithome.com/1/020/866.htm) | IT之家 |
@@ -34,10 +37,11 @@
 | 2026-10-31 | [罗技 MX KEYPAD 国行 799 元发售：9 个 LCD 自定义键一键调用 WorkBuddy，AI 入口硬件化再添一类](https://finance.sina.com.cn/tech/digi/2026-10-31/doc-inixavkz4014346.shtml) | 新浪财经 |
 | 2026-10-30 | [智元联合清华与无问芯穹发布群体经验学习范式 CEL：96 台真机集群成功率从 86.7% 提升至 98.3%，机器人开始互相学习](https://finance.ifeng.com/c/8xdnytFdKqj) | 凤凰财经 |
 
-### 芯片厂商（1 条）
+### 芯片厂商（2 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-05 | [高通进博会全球首展 6G 终端原型机：AI Recall 眼镜以每秒 2 帧拍摄+边缘侧 AI 处理，6G 作为 AI 原生网络](https://www.ithome.com/1/022/906.htm) | 凤凰科技 |
 | 2026-11-05 | [国科微规划 GK6950 端侧 AI 芯片：面向人机交互与具身智能，配套 GK-VGGT-SLAM 流式空间智能方案](https://news.mydrivers.com/1/1163/1163455.htm) | 快科技 |
 
 ### 手机厂商（2 条）
