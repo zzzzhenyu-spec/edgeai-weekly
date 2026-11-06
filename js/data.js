@@ -18,11 +18,47 @@ const WEEKLY_DATA = {
     weekRange: "2026.10.31 — 11.06 · 近 7 天",
     updated: "2026-11-06",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：腾讯混元 Hy4 正式版（770B MoE 首次引入视觉理解，跻身全球最强开源）与 Mistral Large 4（1T 参数）双旗舰开源，MIT「权重空间编程」实现 GPT-6 Astra 直接修改 Qwen 权重（数学正确率 7.9%→48.1%）。国行 Apple 智能开测（Siri 直调千问、12 月正式推送）点燃端侧主线——端侧 AI 概念今日集体大涨（润欣 20cm 涨停、乐鑫创历史新高）。智元创新日三层配齐（GO-3+WITA-OMNI+灵渠 OS 底层开源约 2 亿行），优必选发布 Thinker-Sim 具身仿真平台；联想开天首款信创 AI 主机实现全链路国产化（本地跑 35B），国科微规划 GK6950 端侧 AI 芯片瞄准具身智能。XREAL Aura 开启 Android XR 有线眼镜时代，三星首款 AI 眼镜 12 月中旬上市在即，Omdia 预估 2027 AI PC 渗透率冲 60%。\n今日新增：谷歌×Mercor 工程Agent基准 PLE（85 项机械/电气/土木/结构任务，Claude Opus 5.5 + Claude Code 以 48.3% 登顶，但仅 41.3% 通过全部硬性安全检查）。"
+    editorsNote: "近 7 天聚焦：开源模型矩阵密集上新——腾讯混元 Hy4（770B MoE 视觉理解）、蚂蚁百灵 Ling-3.2-Flash（560B/激活 25B 三项基准超 Claude）、百度文心 5.5 Flash Base（280B/激活 14B 同尺寸 SOTA）、Mistral Large 4（1T 参数）同周登场，MIT 权重空间编程实现 GPT-6 Astra 直接修改 Qwen 权重。国行 Apple 智能开测点燃端侧主线——端侧 AI 概念大涨（润欣 20cm 涨停/乐鑫新高）、后摩智能数十亿元 B 轮标志端侧 AI 芯片进入规模化兑现期。Nothing 定档 12 月出货首款 AI 原生硬件（不带新屏/非 App），高通进博会全球首展 6G 终端原型机+AI Recall 眼镜，影目 INMO Future 一体式空间眼镜与 XREAL Aura 分体眼镜开启形态之争，Neuralink 植入者意念操控扫地机器人，智元创新日三层配齐（GO-3+WITA-OMNI+灵渠 OS 开源约 2 亿行），联想开天信创 AI 主机全链路国产化（本地跑 35B）。\n今日新增：蚂蚁百灵 Ling-3.2-Flash、百度文心 5.5 Flash Base 开源、后摩智能 B 轮融资、Kimi K3.1 Pro 权重如约开源（Agent Arena 开放模型榜首）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+      id: "n183", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-06",
+      title: "蚂蚁百灵发布 Ling-3.2-Flash：560B MoE 激活 25B 原生多模态，三项基准超越 Claude Opus 5",
+      summary: "蚂蚁百灵发布 Ling-3.2-Flash——稀疏 MoE 架构总参数 560B、每 Token 仅激活约 25B，原生融合视觉与语言能力（图像/文本/视频输入），上下文窗口 1M。重点强化复杂视觉理解、多模态长程 Agent、3D 理解与交互、医疗多模态四大能力；官方评测 OmniDocBench 1.5 得 92.21 分（对比 Claude Opus 5 max 的 90.56）等三项基准超越，基准总分几乎全面超越 DeepSeek v4.1 Flash 1017。",
+      detail: "发布：11 月 6 日发布（凤凰科技/搜狐/IT之家多源）。\n规格：稀疏 MoE 总参 560B、激活约 25B——能力与推理开销平衡；原生多模态（架构层融合视觉与语言，支持图像/文本/视频）；上下文 1M。\n成绩：OmniDocBench 1.5 得 92.21 分（Claude Opus 5 max 为 90.56）；ZEROBench 等三项基准超越 Claude；基准总分几乎全面超越 DeepSeek v4.1 Flash 1017。\n能力：复杂视觉理解、多模态长程 Agent、3D 理解与交互、医疗多模态——演示能将视觉意图转化为带动画的响应式前端页面，还能操作 Blender 等专业软件。\n端侧视角：Ling 系列历来 MIT 宽松开源+稀疏激活架构优化推理成本（Ling-3.0-Flash 曾以旗舰约 12.4% 的总参实现对齐），25B 激活的 MoE 意味着消费级 GPU 可部署——待权重上线后确认许可协议与端侧量化路径，这是蚂蚁继灵光 2.0 之后的又一条端云协同产品线。",
+      tags: ["蚂蚁百灵", "Ling-3.2-Flash", "MoE", "多模态", "开源"],
+      url: "https://tech.ifeng.com/c/8xpCRzyq65n",
+      image: "images/news/n183.png",
+      imageCap: "Ling-3.2-Flash 发布（图源：凤凰科技）",
+      highlight: false
+    },
+
+{
+      id: "n187", cat: "大模型厂商", source: "凤凰网", date: "2026-11-05",
+      title: "Kimi K3.1 Pro 权重如约开源：登顶 Agent Arena 开放模型榜首，2.8 万亿参数额外算力全部投入强化学习",
+      summary: "月之暗面 11 月 5 日正式开源 Kimi K3.1 Pro 完整模型权重（2.8 万亿参数，HuggingFace 全量开放）——兑现 11 月 4 日前的开源承诺。Agent Arena 智能体排行榜：开放权重模型第一名（全球所有参评模型第 13 名），工作/编程/聊天三个类别均居开放权重榜首；Bash 可靠性从此前的 -4.5% 显著跃升。参数量与上代持平——额外算力全部投入强化学习后训练。",
+      detail: "开源：11 月 5 日权重上线 HuggingFace（凤凰网/搜狐/多源），兑现承诺日。\n成绩：Agent Arena 智能体排行——开放权重模型第一名（全球总榜第 13 名）；工作/编程/聊天三类别开放权重榜首；Bash 可靠性从 -4.5% 显著提升。\n策略：参数量与上代持平，额外算力全部投入强化学习后训练——「同等参数量、更强后训练」路线。\n端侧视角：2.8T 开放权重的意义在蒸馏与量化上游——K3.1 Pro 是 Agent 能力标杆（Hosted Agents+游戏方案+本次权重开源三天连发），其 Agent 后训练方法论被完整开放后，端侧小模型的 Agent 蒸馏有了最强教师。",
+      tags: ["Kimi", "K3.1 Pro", "权重开源", "Agent Arena", "强化学习"],
+      url: "https://original.ifeng.com/c/8xnSmAvsf1e",
+      image: "images/news/n187.png",
+      imageCap: "K3.1 Pro 权重开源（图源：凤凰网）",
+      highlight: false
+    },
+
+{
+      id: "n184", cat: "大模型厂商", source: "第一财经", date: "2026-11-05",
+      title: "百度开源文心 5.5 Flash Base：280B 总参激活仅 14B，33.5T tokens 从零预训练刷新同尺寸 SOTA",
+      summary: "百度开源发布 ERNIE 5.5 Flash Base——稀疏 MoE 总参数 280B、每 Token 仅激活 14B，在 33.5T tokens 上从零完成预训练；训练上下文 128K、微调与推理阶段最长支持 1M tokens。技术创新：Latent-Gated Sparse Attention（37 层省缓存+6 层保精准检索）与 Multi-Router 多路由机制。在多个基准测试中刷新同尺寸模型成绩（SOTA），开放预训练终点权重供开发者继续训练行业专属模型。",
+      detail: "开源：11 月 5 日发布并开源权重（多源：moomoo/新浪/第一财经）。\n规格：稀疏 MoE 总参 280B、激活 14B——「同尺寸」中 14B 激活量级的效率旗舰；33.5T tokens 从零预训练（非蒸馏非剪枝）；上下文训练 128K、推理 1M。\n创新：Latent-Gated Sparse Attention——37 层用潜在门控稀疏注意力节省 KV 缓存+6 层保留完整注意力保精准检索；Multi-Router 多路由。\n成绩：多基准刷新同尺寸 SOTA。\n端侧视角：14B 激活+280B 总参的稀疏架构定位「消费级可跑的效率基座」——与百度此前的文心 Unlimited OCR 2（3B/500M 激活）形成大中小三层开源矩阵，开放预训练终点权重意味着企业可在终点上做行业微调而非从零训练，端侧行业模型的门槛又降了一档。",
+      tags: ["百度", "文心5.5", "开源", "MoE", "SOTA"],
+      url: "https://www.yicai.com/brief/103428150.html",
+      image: "images/news/n184.png",
+      imageCap: "文心 5.5 Flash Base 开源（图源：moomoo 资讯）",
+      highlight: false
+    },
+
 {
       id: "n180", cat: "芯片厂商", source: "凤凰科技", date: "2026-11-05",
       title: "高通进博会全球首展 6G 终端原型机：AI Recall 眼镜以每秒 2 帧拍摄+边缘侧 AI 处理，6G 作为 AI 原生网络",
@@ -80,6 +116,18 @@ news: [
       url: "https://news.mydrivers.com/1/1163/1163455.htm",
       image: "images/news/n176.png",
       imageCap: "国科微端侧 AI 布局（图源：快科技）",
+      highlight: false
+    },
+
+{
+      id: "n185", cat: "芯片厂商", source: "雷峰网", date: "2026-11-04",
+      title: "后摩智能完成数十亿元 B 轮融资：端侧大模型 AI 芯片进入规模化兑现期，M50 已以 10W 功耗跑出 160 TOPS",
+      summary: "后摩智能低调完成数十亿元 B 轮融资——端侧大模型 AI 芯片创业公司中融资规模最大的一笔。其 M50 芯片以 10W 功耗跑出 160 TOPS 算力（存算一体架构），已搭载于联想开天首款信创 AI 主机（力擎 LQ50 NPU）；本轮融资标志着端侧大模型 AI 芯片从技术验证期进入规模化兑现期——厂商开始从「芯片出货」走向「Token 生产」。",
+      detail: "融资：11 月 4 日报道（雷峰网/多源），数十亿元 B 轮——端侧 AI 芯片赛道最大单笔。\n技术：M50 芯片以 10W 功耗跑出 160 TOPS——存算一体架构打破冯·诺依曼瓶颈；已作为 NPU 搭载于联想开天信创 AI 主机（力擎 LQ50），配合兆芯 CPU 实现「全链路国产化」端侧算力闭环。\n定位：融资用途指向端侧大模型芯片的规模化量产与 Token 生产成本优化——从「卖芯片」走向「卖 Token 产能」。\n端侧视角：后摩是国产端侧 AI 芯片「存算一体」路线的代表——与联想信创主机的落地合作证明了国产 NPU 在政企市场的兑现能力；本轮融资+国科微 GK6950 规划+乐鑫创新高，端侧 AI 芯片正在从概念期集体跨入规模化交付期。",
+      tags: ["后摩智能", "B轮融资", "端侧AI芯片", "存算一体", "国产算力"],
+      url: "https://www.leiphone.com/category/industrynews/cyDQKpjtzDEPhrr8.html",
+      image: "images/news/n185.png",
+      imageCap: "后摩智能（图源：雷峰网）",
       highlight: false
     },
 
@@ -156,7 +204,7 @@ news: [
     },
 
 {
-      id: "n183", cat: "行业动态", source: "雷峰网", date: "2026-11-03",
+      id: "n186", cat: "行业动态", source: "雷峰网", date: "2026-11-03",
       title: "谷歌×Mercor 发布工程 Agent 基准 PLE：85 项真实工程任务，最强 Agent 仅得 48.3%——91% 单项达标≠可交付",
       summary: "Google 与 Mercor 11 月 3 日发布 Physical-Engineering's Last Exam（PLE）：85 项机械、电气、土木与结构工程任务（机械 30/电气 27/土木 18/结构 10），平均每项约 61 份真实工程文件（PDF/表格/邮件/CAD/BIM，混有作废版本作陷阱）。56 项隐藏测试中 Claude Opus 5.5+Claude Code 得分 48.3%（GPT 6 Astra 45.8%、Gemini 4 Argon 40.6%）；共同创作任务里它平均满足 91% 的单项约束，却只有 41.3% 的交付设计通过全部硬性安全与可行性检查。",
       detail: "发布要点：11 月 3 日 Google AI & Infrastructure 研究团队与 Mercor 联合发布，属「Last Exam」系列第三弹（继 Humanity's Last Exam 考知识、Agents' Last Exam 考数字工作之后，考物理世界的工程交付）；44 项任务由持证工程师编写、41 项由 Creator-Solver 对抗机制生成，已开放 29 项公开任务与评测容器。\n为什么难：PLE 采用硬约束门控——全部安全与可行性硬检查通过后才能拿成本优化分；工程设计约束相互耦合（管径→水阻→水泵工况→换热能力），改一处牵动全盘；85 项任务累计 5170 份文件且引用关系复杂，模型要维护带依赖关系的设计状态。同一模型同一任务跑 3 次，单任务得分平均跨度达 15.4 个百分点。\n端侧视角：PLE 的两个发现对端侧 Agent 直接成立——「单项能力达标≠整体可交付」，端侧 Agent 评估也要看全约束通过率而非单项分；「验证器是 Agent 核心基建」，本地长流程 Agent 资源更紧，增量检查与状态失效传播机制（改什么重算什么）是端侧落地工程 Agent 的前置件。",
