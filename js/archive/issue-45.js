@@ -73,6 +73,18 @@ WEEKLY_ARCHIVE[45] = {
     },
 
 {
+      id: "n213", cat: "行业动态", source: "IT之家", date: "2026-10-31",
+      title: "赛迪研究院：我国 AI 推理数据量首次超过训练数据量——日均词元调用超 175 万亿，较 2024 年初增长逾千倍",
+      summary: "工信部赛迪研究院报告显示：截至 2026 年 6 月，我国人工智能推理数据量首次超过训练数据量——日均词元（Token）调用量超过 175 万亿，较 2024 年初增长 1000 多倍；顶尖大模型迭代周期从数月压缩到数周甚至数天。这一里程碑标志我国 AI 从模型训练研发阶段迈入规模化产业应用阶段。",
+      detail: "报告：赛迪研究院发布（10 月 31 日-11 月 1 日多源报道：IT之家/中新网/36 氪）。\n数据：截至 2026 年 6 月推理数据量首超训练数据量；日均词元调用超 175 万亿，较 2024 年初增逾千倍。\n背景：2025 年我国 AI 训练+推理数据总量 199.48EB（同比 +42.86%），其中推理 101.34EB（人民日报/国家数据局口径）。\n节奏：顶尖大模型迭代周期从数月压缩至数周甚至数天。\n端侧视角：推理量首超训练量是行业从「造模型」转向「用模型」的量化拐点——推理需求爆炸直接推高端云协同的分流压力，也解释了端侧 AI 芯片（后摩 B 轮）与推理基建（Token 工厂）为何在同期密集获得资源；日均 175 万亿词元的调用面，端侧承接比例将成为下一年行业最重要的变量。\n勘误：2026-11-08 补录（第 45 期窗口内漏收，收录队列⓪消费）。",
+      url: "https://www.ithome.com/1/020/809.htm",
+      image: "images/news/n213.jpg",
+      imageCap: "赛迪人工智能产业报告（图源：智慧城市行业分析）",
+      tags: ["赛迪研究院", "推理数据", "产业报告", "行业拐点"],
+      highlight: false
+    },
+
+{
       id: "n146", cat: "AI硬件", source: "凤凰财经", date: "2026-10-30",
       title: "智元联合清华与无问芯穹发布群体经验学习范式 CEL：96 台真机集群成功率从 86.7% 提升至 98.3%，机器人开始互相学习",
       summary: "清华大学、无问芯穹与智元机器人联合提出群体经验学习（Collective Experience Learning，CEL）新范式——机器人不再仅依靠人类示教，而是借鉴群体中其他机器人同伴的真实作业轨迹作为经验来源。在 96 台真实机器人集群验证中，相同训练时间下任务成功率从 16 台的 86.7% 提升至 98.3%；配套 FERT 失败引导经验检索机制提高经验复用效率，为具身智能规模化落地提供从数据到智能的全栈闭环路径。",
@@ -105,6 +117,30 @@ WEEKLY_ARCHIVE[45] = {
       url: "https://www.ithome.com/1/019/852.htm",
       image: "images/news/n175.png",
       imageCap: "Omdia AI PC 出货占比预测（图源：IT之家）",
+      highlight: false
+    },
+
+{
+      id: "n211", cat: "行业关注事件", source: "爱范儿", date: "2026-10-30",
+      title: "DeepSeek 完成第二轮 1055 亿元融资、估值 6155 亿元：腾讯与宁德时代各投百亿，长鑫/中芯/vivo/美团等参投",
+      summary: "DeepSeek 完成第二轮融资，融资额 1055 亿元人民币、投后估值 6155 亿元——腾讯与宁德时代各出资百亿元级，长鑫存储、中芯国际、vivo、美团等产业资本参投。算力链（长鑫/中芯）、终端厂（vivo）与互联网平台同时入局，DeepSeek 的产业协同版图从芯片到终端首次成形。",
+      detail: "融资：10 月 30 日披露（爱范儿/多源财经覆盖）。\n结构：第二轮 1055 亿元；估值 6155 亿元；腾讯、宁德时代各百亿级；长鑫存储、中芯国际、vivo、美团等参投。\n信号：存储与代工双芯片股东+终端厂商+本地生活平台——DeepSeek 与国产算力、消费终端产业链深度绑定。\n端侧视角：vivo 参投是本轮最值得端侧侧注意的信号——终端厂直接持有模型公司股权，「模型进终端」的排他性合作预期升温；叠加宁德时代的能源与中芯的产能，DeepSeek 生态正在从单一模型公司变成「算力-模型-终端」纵向联盟。\n勘误：2026-11-08 补录（第 45 期窗口内漏收，收录队列⓪消费）。",
+      url: "https://www.ifanr.com/1686979",
+      image: "images/news/n211.jpg",
+      imageCap: "DeepSeek 第二轮融资（图源：爱范儿）",
+      tags: ["DeepSeek", "融资", "腾讯", "宁德时代", "vivo"],
+      highlight: false
+    },
+
+{
+      id: "n212", cat: "大模型厂商", source: "雷峰网", date: "2026-10-30",
+      title: "商汤开源 SenseNova Loop-9B-Preview：Looped Transformer 循环深度架构，同一组权重「跑两遍」实现推理深度自适应",
+      summary: "商汤开源 SenseNova Loop-9B-Preview——基于 Looped Transformer 循环深度架构：同一组权重对输入重复计算（B(B(h))，「同一组权重，跑两遍」）按需增加有效计算深度，在八项基准上与 Qwen 等同尺寸模型对比验证了循环深度换智能的路线，探索以计算换参数的端侧友好型扩展路径。",
+      detail: "开源：10 月 30 日（雷峰网/智源社区多源，GitHub 权重开放）。\n架构：Looped Transformer 循环深度——同一组变换权重循环执行多次，有效深度随循环次数伸缩；mHC 残差混合等设计稳定循环训练。\n对比：八项基准对标 Qwen、IQuest-Coder、Nanbeige 等同尺寸模型（雷峰网整理对比图表）。\n端侧视角：「以计算换参数」是端侧模型的经典杠杆——循环深度让 9B 权重按任务难度动态花更多算力，等于给端侧模型一个「想得更久」的旋钮而无需装更大权重；若该路线成熟，端侧设备的内存约束可以被算力时间部分替代。\n勘误：2026-11-08 补录（第 45 期窗口内漏收，收录队列⓪消费）。",
+      url: "https://www.leiphone.com/category/industrynews/f9tAHG0kPopK1Nnw.html",
+      image: "images/news/n212.jpg",
+      imageCap: "Loop-9B 八项基准对比（图源：雷峰网）",
+      tags: ["商汤", "Loop-9B", "循环深度", "开源模型"],
       highlight: false
     },
 
@@ -361,6 +397,18 @@ WEEKLY_ARCHIVE[45] = {
     },
 
 {
+      id: "n210", cat: "AI硬件", source: "LG 官方", date: "2026-10-28",
+      title: "LG 在 Q3 财报会细化机器人时间表：2027 Q1 发布英伟达 Isaac GR00T 双足人形，2030 年前后扩展家庭人形业务",
+      summary: "LG 电子在三季度财报电话会议上细化机器人路线——确认 2027 年第一季度公开发布基于英伟达 Isaac GR00T 平台的下一代双足人形机器人（搭载 Jetson Thor 机载计算），并计划 2030 年前后扩展进入家庭人形机器人业务、同步提及轮式家庭机器人 Cloid；年底前将收集 50 万小时机器人训练数据，田纳西工厂已部署轮式机器人做产线验证。",
+      detail: "披露：10 月 28 日 Q3 财报电话会议（8 月 14 日与英伟达签署 MOU 后的路线细化）。\n路线：2027 Q1 发布 Isaac GR00T 双足人形（Jetson Thor 机载计算+高级推理与控制）；2030 年前后扩展家庭人形业务；轮式家庭机器人 Cloid 同线推进。\n训练：融合 LG 自有执行器/传感器/电池的 One LG 体系；用英伟达 Omniverse、Cosmos 在虚拟环境训练；年底前收集 50 万小时机器人训练数据推进机器人基础模型（RFM）。\n落地：2026 年田纳西工厂洗衣机生产线部署轮式机器人 PoC。\n端侧视角：Jetson Thor 上机载计算意味着人形的感知决策完全在端侧闭环——LG 把「家电制造供应链+英伟达具身大脑」组合成第三个量产人形阵营（特斯拉自研、国内宇树智元之外的国际大厂路线），家庭场景 2030 时间表首次给出坐标。\n勘误：2026-11-08 补录（第 45 期窗口内漏收，收录队列⓪消费）。",
+      url: "https://www.lg.com/global/newsroom/news/corporate/lg-electronics-accelerates-robotics-collaboration-with-nvidia",
+      image: "images/news/n210.jpg",
+      imageCap: "LG×英伟达机器人合作签约（图源：LG Sciencepark）",
+      tags: ["LG", "人形机器人", "Isaac GR00T", "Jetson Thor"],
+      highlight: false
+    },
+
+{
       id: "n140", cat: "大模型厂商", source: "Liquid AI 官方博客", date: "2026-10-27",
       title: "Liquid AI 单日放出 LFM3 全家族：三混合架构 2B 级 6 款覆盖文本/视觉/音频/Omni/决策，4-bit 约 1GB 内存，1.7B 平均分超 Qwen3.5-4B",
       summary: "Liquid AI 发布第三代 Liquid Foundation Models 全家族 6 款——LFM3-1.7B（文本，256K 上下文）、LFM3-VL-2B（视觉，首次支持视频）、LFM3-Audio-2B（18 种语言）、LFM3-Omni-2B（2.2B，首个全模态）与两款决策模型 d1-2B/d1-Omni-2B。三混合架构：24 层中 13 层门控短卷积、5 层滑窗注意力、6 层全局注意力，预训练 22T token；1.7B 文本模型基准平均 49.37 分超过更大的 Qwen3.5-4B，浏览器与企业任务上胜 Qwen3.5-9B，视觉版平均 71.4 分追平 Gemma 4 12B。文本模型 4-bit 量化约 1GB 内存、128K 上下文 KV cache 仅 1.6GB；llama.cpp/MLX/vLLM/SGLang 均支持，覆盖 Apple、AMD、NVIDIA 与 Qualcomm Hexagon NPU，AMD 主打 Ryzen AI PC 本地运行，权重开放于 Hugging Face。",
@@ -489,6 +537,54 @@ WEEKLY_ARCHIVE[45] = {
       url: "https://openai.com/index/building-scientific-understanding-with-academic-communities",
       image: "images/news/n131.jpg",
       imageCap: "数学与神经网络的交汇（图源：Scientific American）",
+      highlight: false
+    },
+
+{
+      id: "n209", cat: "大模型厂商", source: "IT之家", date: "2026-10-26",
+      title: "腾讯混元开源同声传译大模型 Hy-SimulMT（30B-A3B）：3 秒级延迟优于人类译员，已上线 Hy 翻译 App",
+      summary: "腾讯混元开源同声传译大模型 Hy-SimulMT——总参数 30B、激活 3B 的稀疏架构，实现 3 秒级同传延迟、译文质量优于人类同传译员，支持中英日韩等多语言互译；模型已上线腾讯 Hy 翻译 App 供实际使用，权重开放下载。",
+      detail: "开源：10 月 26 日（IT 家/腾讯官方多源）。\n架构：30B 总参数、A3B 激活——同传场景对延迟极敏感，稀疏激活保证实时性。\n指标：3 秒级延迟；译文质量评测优于人类同传译员。\n落地：已上线 Hy 翻译 App，权重开放下载。\n端侧视角：同传是「低延迟+高并发」最苛刻的语音场景——A3B 激活架构的意图就是把译员级同传压进可部署算力；开源后端侧翻译（眼镜同传、离线会议翻译）可以直接复用这套权重，与千问眼镜的通话翻译、Phonon 端侧 TTS 组成端侧语音链路的完整开源拼图。\n勘误：2026-11-08 补录（第 45 期窗口内漏收，收录队列⓪消费）。",
+      url: "https://www.ithome.com/1/018/168.htm",
+      image: "images/news/n209.png",
+      imageCap: "Hy-SimulMT 同传模型（图源：IT之家）",
+      tags: ["混元", "Hy-SimulMT", "同声传译", "开源模型"],
+      highlight: false
+    },
+
+{
+      id: "n206", cat: "行业关注事件", source: "Anthropic 官方", date: "2026-10-26",
+      title: "Anthropic 公开提交 S-1 冲刺约 2 万亿美元估值 IPO：营收 5 个季度涨约 30 倍，同时背负约 8000 亿美元算力采购长单",
+      summary: "Anthropic 正式向美国证券交易委员会公开提交 S-1 注册文件，拟以代码「ANT」登陆纳斯达克，冲刺约 2 万亿美元估值、剑指史上最大 IPO——此前已于 6 月 1 日保密递交草案。招股书披露营收在 5 个季度内增长约 30 倍，但同期背负约 8000 亿美元的算力采购长单承诺，高增长与巨额资本开支的反差成为估值争议焦点。",
+      detail: "申报：10 月 26 日公开提交 S-1（代码 ANT/纳斯达克；6 月 1 日曾保密递交草案）。\n规模：拟冲击约 2 万亿美元估值——若达成将是史上最大 IPO。\n亮点：营收 5 个季度增长约 30 倍。\n争议：约 8000 亿美元算力采购长单构成巨额资本承诺——华尔街对「收入爆发 vs 算力负债」的定价分歧公开化（后续进展：11 月上旬 IPO 路演期间估值预期一度缩水至约 1-1.25 万亿美元）。\n端侧视角：史上最大 IPO 的资产负债表主角是算力长单——云端推理基建的军备竞赛已经大到需要公开市场融资承接；其融资成败将直接改写云端 Token 供给节奏，端云分工的临界点（多少推理必须留在端侧）由此被资本市场的定价机制间接决定。\n勘误：2026-11-08 补录（第 45 期窗口内漏收，收录队列⓪消费）。",
+      url: "https://www.anthropic.com/news/s1-sec",
+      image: "images/news/n206.jpg",
+      imageCap: "Anthropic 提交 S-1（图源：Anthropic 官方公告）",
+      tags: ["Anthropic", "IPO", "S-1", "算力长单"],
+      highlight: false
+    },
+
+{
+      id: "n207", cat: "AI硬件", source: "Apple 官方", date: "2026-10-26",
+      title: "iPad mini 迎史上最大更新：首搭 2nm A20 Pro 芯片并换装 OLED，AI 性能最高提升 4.5 倍、可在设备端运行大模型",
+      summary: "苹果发布史上最大更新的 iPad mini——首发搭载 2nm 制程 A20 Pro 芯片（迄今最先进的移动芯片制程）并首次换装 OLED 显示屏，AI 性能最高提升 4.5 倍，可在设备端运行大模型，成为小尺寸平板中端侧 AI 算力最强的设备。",
+      detail: "发布：10 月 26 日 Apple Newsroom 官宣（官方通稿，多源覆盖）。\n芯片：A20 Pro 首发 2nm 制程——移动芯片制程首次进入 2nm 世代。\n屏幕：iPad mini 产品线首次换装 OLED。\nAI：端侧 AI 性能最高提升 4.5 倍，支持在设备端运行大模型。\n端侧视角：2nm 首发落在 iPad mini 而非 iPhone/Pro 系——苹果用「最小机身装最强制程」验证 2nm 良率与功耗曲线，为后续旗舰铺路；对端侧 AI 而言，2nm 世代的能效跃升是本地跑大模型从「演示级」走向「日用级」的物理前提。\n勘误：2026-11-08 补录（第 45 期窗口内漏收，收录队列⓪消费）。",
+      url: "https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/",
+      image: "images/news/n207.jpg",
+      imageCap: "新款 iPad mini（图源：Apple Newsroom）",
+      tags: ["iPad mini", "A20 Pro", "2nm", "OLED", "端侧AI"],
+      highlight: false
+    },
+
+{
+      id: "n208", cat: "手机厂商", source: "Apple 官方", date: "2026-10-26",
+      title: "Siri AI 随 iOS 27.2 新增法/日/韩/葡/西五语并首次披露服务器侧功能每日用量上限，繁体中文年底跟进",
+      summary: "苹果随 iOS 27.2 正式推送宣布 Siri AI 新增法语、日语、韩语、葡萄牙语、西班牙语五种语言支持（此前仅英语）——用户需将设备语言设为支持语言之一；日语版官宣同时首次披露服务器侧功能存在每日用量上限（Usage Limits），部分 App 集成在 Beta 阶段暂不可用；繁体中文等更多语言计划年内跟进。",
+      detail: "推送：10 月 26 日随 iOS 27.2/iPadOS 27.2 正式版发布（Apple Newsroom 官宣；五语此前已随开发者 Beta 测试）。\n条件：需兼容 Apple 智能的设备，且设备语言设为五种支持语言之一；欧盟地区部分功能受限。\n口径：日文版官宣首次披露服务器侧功能每日用量上限——端侧处理不限量、上云部分按日限额的分界线首次官方化。\n路线：繁体中文等更多语言年内加入；27.2 同步为 Siri AI 带来记忆功能。\n端侧视角：「五语开放+云端限额」是苹果端云分工策略的首次透明化——本地模型承担常规理解与响应（不限量），大模型推理按日配额供给；这为行业立下「端侧保底、云端增值」的范式，也解释了苹果为何持续加码端侧模型能效。\n勘误：2026-11-08 补录（第 45 期窗口内漏收，收录队列⓪消费）。",
+      url: "https://www.apple.com/newsroom/2026/10/siri-ai-is-available-in-more-languages-starting-today",
+      image: "images/news/n208.jpg",
+      imageCap: "Siri AI 多语言支持（图源：Apple Newsroom）",
+      tags: ["Siri AI", "iOS 27.2", "多语言", "用量上限", "端云分工"],
       highlight: false
     },
 

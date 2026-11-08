@@ -109,11 +109,32 @@
     <div class="panel-body" id="panel-body"></div>
   </aside>
 
-  <script src="js/data.js"></script>
-  <script src="js/archive/manifest.js"></script>
-  <script src="js/github_repos.js"></script>
-  <script src="js/blogs.js"></script>
+  <script src="js/data.js" onerror="window.__loadFail=(window.__loadFail||[]).concat(['资讯数据'])"></script>
+  <script src="js/archive/manifest.js" onerror="window.__loadFail=(window.__loadFail||[]).concat(['往期数据'])"></script>
+  <script src="js/github_repos.js" onerror="window.__loadFail=(window.__loadFail||[]).concat(['开源雷达'])"></script>
+  <script src="js/blogs.js" onerror="window.__loadFail=(window.__loadFail||[]).concat(['博客库'])"></script>
   <script src="js/app.js"></script>
+  <script>
+    // 模块加载失败提示（2026-11-08）：辅助数据 404/网络失败此前静默回退，
+    // 用户无从知道某模块未加载——统一在页面顶部显示可关闭提示条
+    (function () {
+      window.addEventListener("DOMContentLoaded", function () {
+        var fails = window.__loadFail || [];
+        if (!fails.length) return;
+        var bar = document.createElement("div");
+        bar.className = "load-fail-bar";
+        bar.style.cssText = "position:sticky;top:0;z-index:999;background:#5c2e2e;color:#f3d9d9;padding:8px 16px;font-size:13px;display:flex;gap:12px;align-items:center;";
+        var span = document.createElement("span");
+        span.textContent = "部分内容加载失败：" + fails.join("、") + "。刷新重试，或检查网络后访问对应板块。";
+        var btn = document.createElement("button");
+        btn.textContent = "✕";
+        btn.style.cssText = "margin-left:auto;background:none;border:1px solid #a06a6a;color:#f3d9d9;border-radius:4px;padding:2px 8px;cursor:pointer;";
+        btn.onclick = function () { bar.remove(); };
+        bar.appendChild(span); bar.appendChild(btn);
+        (document.body || document.documentElement).prepend(bar);
+      });
+    })();
+  </script>
 
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "d3094157024244cfa6180e35a9a078d3"}'></script>
 </body>

@@ -24,6 +24,17 @@ WEEKLY_ARCHIVE[44] = {
       highlight: false
     },
     {
+      id: "n205", cat: "行业动态", source: "新浪财经", date: "2026-10-25",
+      title: "「工业具身智能第一股」微亿智造挂牌前 3 天暂缓港股 IPO：申购款不计息全额退还，原计划最高募资约 8 亿港元",
+      summary: "常州微亿智造（03275.HK）晚间公告：经考虑多项因素（包括现行市况），决定延迟全球发售及暂缓在港交所主板上市——原定 10 月 28 日挂牌（10 月 20 日起招股），临门 3 天急刹车。发行 3727.58 万股、发行价区间 16.63 至 21.46 港元、最高募资约 8 亿港元；白表 eIPO 申请股款将不计利息全数退还。公司表态仍致力于在适当时候完成上市。",
+      detail: "事件：10 月 25 日晚公告延迟全球发售（新浪财经/中新经纬多源）。\n安排：原定 10 月 28 日挂牌；发行 3727.58 万股，16.63-21.46 港元区间，最高募约 8 亿港元；电子退款指示 10 月 28 日发送，申购款不计息全退。\n基本面：工业具身智能机器人提供商，2023-2025 年收入 4.34 亿/6.00 亿/7.96 亿元（CAGR 35.4%），今年前 5 个月营收约 4 亿元。\n端侧视角：「工业具身智能第一股」在定价关口折戟，说明资本市场对具身智能已从概念溢价转向订单与利润验证——与同期 Optimus 量产、启元 5000 台下线的产业热度形成一冷一热对照：本体量产在加速，一级半市场的钱在变谨慎。\n勘误：2026-11-08 补录（第 44 期窗口内漏收，收录队列⓪消费）。",
+      url: "https://finance.sina.com.cn/stock/estate/integration/2026-10-25/doc-iniwnkhm6086398.shtml",
+      image: "images/archive/issue-44/n205.jpg",
+      imageCap: "微亿智造延迟全球发售公告（图源：搜狐财经）",
+      tags: ["微亿智造", "港股IPO", "工业具身智能"],
+      highlight: false
+    },
+    {
       id: "n116", cat: "AI硬件", source: "新浪科技", date: "2026-10-23",
       title: "智元发布一站式具身作业平台 Genie Studio 2.0：覆盖「采-训-测-推-编-管」全生命周期，最快 7 天完成新场景部署验证",
       summary: "智元「AI WAVE」七连发第二弹推出一站式全流程具身智能作业平台 Genie Studio 2.0——Flyflywheel 模型迭代、Agent 作业编排与 Monitor 多机运维三大模块打通机器人从「演示态」到「部署态」的门槛，最快 7 天即可完成全新作业场景从 0 到 1 的部署验证；已落地常州数控机床上下料（14 天产线验证）、均普智能 BMS 装配线（三台精灵 G2 成功率稳定 99.9% 以上、节拍 13 秒内、7×24 小时生产）与广州地铁 60 余台设备部署等案例。",
@@ -175,6 +186,28 @@ WEEKLY_ARCHIVE[44] = {
       url: "https://news.mydrivers.com/1/1158/1158784.htm",
       image: "images/archive/issue-44/n107.png",
       imageCap: "ISHO Ring 智能戒指（图：快科技）",
+      highlight: false
+    },
+    {
+      id: "n203", cat: "行业动态", source: "新浪财经", date: "2026-10-20",
+      title: "DeepSeek 开源线上推理框架 DeepInfer 并披露运营账本：单集群日吞吐 155 万亿 Token，每卡每小时收入 38 美元",
+      summary: "DeepSeek 开源支撑其线上大规模推理服务的核心框架 DeepInfer——支持英伟达与华为芯片，涵盖分布式推理、推测解码、SWA Bounded Replay、结构化输出等能力；同步披露一组运营账本：单集群日吞吐 155 万亿 Token（DeepSeek V4.1 Flash 服务），整体收入折合每卡每小时 38 美元。业内提醒该数字按谷电价口径、为集群总收入摊薄的平均值且是收入而非利润。",
+      detail: "开源：10 月 20 日（新浪财经/搜狐科技多源）。\n能力：支撑 DeepSeek 线上推理的核心框架——分布式推理/推测解码/SWA Bounded Replay/结构化输出；英伟达与华为双平台支持。\n账本：单集群日吞吐 155 万亿 Token；整体收入折合每卡每小时 38 美元（V4.1 Flash 服务）。\n口径提醒：38 美元是收入非利润；按谷电价计；为集群总收入除以全部卡数的摊薄均值，未计 GPU 折旧与运维。\n端侧视角：推理成本账本首次被头部厂商主动摊开——开源推理栈+透明单位经济学的组合，等于把「Token 工厂」的建设手册公开；对端侧的意义在于推理供给的边际成本曲线被锚定，端云协同的定价与分流策略有了可信参照系。\n勘误：2026-11-08 补录（第 44 期窗口内漏收，11-08 池内复热时发现本体未收）。",
+      url: "https://finance.sina.com.cn/jjxw/2026-10-20/doc-inivwpzf7722932.shtml",
+      image: "images/archive/issue-44/n203.jpg",
+      imageCap: "DeepSeek 开源推理框架 DeepInfer（图源：CSDN）",
+      tags: ["DeepSeek", "DeepInfer", "推理框架", "开源"],
+      highlight: false
+    },
+    {
+      id: "n204", cat: "端侧Agent", source: "Hugging Face", date: "2026-10-20",
+      title: "Gradium 开源端侧 TTS 套件 Phonon：31M/40M 两档量化后仅 64.5MB，首音 7.5ms、Seed-TTS 英文 WER 1.00% 登顶",
+      summary: "Gradium 开源端侧文字转语音套件 Phonon——31M（Apache 2.0）与 40M（CC BY-NC）两个规格，量化后最小 64.5MB，可在手机、笔记本、嵌入式硬件乃至浏览器内完全本地运行；首音延迟最低 7.5ms、部分配置最高 24 倍实时速度；Seed-TTS 英文基准 WER 1.00% 超过 NeuTTS 等对手，德语、西语可懂度排名第一，CPU 流式基准登顶。",
+      detail: "开源：10 月 20 日发布，11 月 5 日 Hugging Face 深度博客《A Closer Look at Phonon TTS》补齐基准细节。\n规格：31M（Apache 2.0 开源协议）/40M（CC BY-NC）两档；量化后 62-71MB、最小 64.5MB——完全本地运行。\n性能：首音延迟最低 7.5ms；31M 约 3.7 倍实时、部分配置最高 24 倍实时。\n基准：Seed-TTS 英文 WER 1.00%；德语/西语可懂度第一；CPU 流式 time-to-first-audio 基准第一；270+ 份人工评测投票支撑。\n端侧视角：端侧语音是端侧多模态最后几块短板之一——Phonon 把「浏览器可跑的 SOTA TTS」做成 64MB 的开源件，语音合成从云端 API 回到设备本地，隐私与离线场景（助残、车载、无网环境）的语音交互门槛被一次性抹平。\n勘误：2026-11-08 补录（第 44 期窗口内漏收）。",
+      url: "https://huggingface.co/blog/phonon-tts",
+      image: "images/archive/issue-44/n204.png",
+      imageCap: "Phonon 端侧 TTS 基准对比（图源：Hugging Face 博客）",
+      tags: ["Phonon", "TTS", "端侧语音", "开源", "Gradium"],
       highlight: false
     },
     {
