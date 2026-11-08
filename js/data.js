@@ -563,16 +563,16 @@ papers: [
     knowledge: {
     /* 每周一个知识点（KNOWLEDGE_PLAN.md 16 讲周更，2026-10-25 首期）：weekly 只放元数据+lesson 指针，
        正文与配图在 knowledge/ 子项目（lessons/lesson-NN.js + assets/），点开卡片按需加载 */
-    weekly: { no: 2, lesson: 2,
-      week: "2026.10.26 — 11.01",
-      title: "量化入门：从 FP16 到 4-bit——定点表示、对称/非对称、PTQ 与 QAT",
-      hook: "同一个数，FP16 用 16 个比特、65,536 种取值来存；4-bit 只给 16 个等距格子。量化就是这场「搬家」——怎么搬、搬到哪个格子、由谁说了算。看懂这一讲，GPTQ、AWQ、Q4_K_M 就不再是黑话。",
-      next: "第 3 讲 · 经典量化算法 I：LLM.int8() 与 GPTQ——异常值与 Hessian 量化"
+    weekly: { no: 3, lesson: 3,
+      week: "2026.11.03 — 11.09",
+      title: "经典量化算法 I：LLM.int8() 与 GPTQ——异常值与 Hessian 量化",
+      hook: "13B 以上模型一压 INT8 就「失智」——病根不是权重，是激活里几个大到离谱的值：一个 100 倍的离群值就能绑架整条量化刻度。一篇论文把 0.5% 的刺头拎出去用 FP16 养；另一篇让每一列的量化误差都记账补偿。端侧 4-bit 的直系祖先，就是这两篇。",
+      next: "第 4 讲 · 经典量化算法 II：AWQ 与 SmoothQuant——不切维度，把激活的难题搬给权重"
     },
     plan: [
       { no: 1, title: "大模型是怎么装进手机的：一次端侧推理的完整旅程", week: "已完结 · 10.16—10.25" },
-      { no: 2, title: "量化入门：从 FP16 到 4-bit——定点表示、对称/非对称、PTQ 与 QAT", week: "本周 · 10.30 上线" },
-      { no: 3, title: "经典量化算法 I：LLM.int8() 与 GPTQ——异常值与 Hessian 量化", week: "11.08" },
+      { no: 2, title: "量化入门：从 FP16 到 4-bit——定点表示、对称/非对称、PTQ 与 QAT", week: "已完结 · 10.26—11.01" },
+      { no: 3, title: "经典量化算法 I：LLM.int8() 与 GPTQ——异常值与 Hessian 量化", week: "本周 · 11.08 上线" },
       { no: 4, title: "经典量化算法 II：AWQ 与 SmoothQuant——激活感知的权重缩放", week: "11.15" },
       { no: 5, title: "GGUF 与 k-quants：Q4_K_M 们是什么；FP4/FP8 低比特前沿", week: "11.22" },
       { no: 6, title: "推理框架全景：从 llama.cpp 到 MNN 的选型地图", week: "11.29" },

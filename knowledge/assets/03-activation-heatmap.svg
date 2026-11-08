@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-label="激活异常值热图示意：固定维度跨序列稳定">
+  <defs>
+    <linearGradient id="ah-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="380" fill="url(#ah-bg)" rx="14"/>
+  <text x="480" y="42" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">异常值长什么样：固定维度、跨序列稳定</text>
+
+  <!-- 热图网格：行=token，列=维度 -->
+  <!-- 网格区 x:90..570, y:80..320；12 行 × 16 列，格 26×18，间距 2 -->
+  <g>
+    <!-- 正常格子（淡青）+ 离群列 d5 d11（金） -->
+    <!-- 用脚本思维手排：col x = 90 + c*30, row y = 80 + r*20 -->
+    <g fill="#22d3ee26" stroke="#22d3ee55" stroke-width="0.6">
+      <!-- 生成 12x16 全网格再覆盖金列太长，改为按列画：非离群列 -->
+      <!-- c0-3 -->
+      <rect x="90" y="80" width="26" height="18"/><rect x="90" y="100" width="26" height="18"/><rect x="90" y="120" width="26" height="18"/><rect x="90" y="140" width="26" height="18"/><rect x="90" y="160" width="26" height="18"/><rect x="90" y="180" width="26" height="18"/><rect x="90" y="200" width="26" height="18"/><rect x="90" y="220" width="26" height="18"/><rect x="90" y="240" width="26" height="18"/><rect x="90" y="260" width="26" height="18"/><rect x="90" y="280" width="26" height="18"/><rect x="90" y="300" width="26" height="18"/>
+      <rect x="120" y="80" width="26" height="18"/><rect x="120" y="100" width="26" height="18"/><rect x="120" y="120" width="26" height="18"/><rect x="120" y="140" width="26" height="18"/><rect x="120" y="160" width="26" height="18"/><rect x="120" y="180" width="26" height="18"/><rect x="120" y="200" width="26" height="18"/><rect x="120" y="220" width="26" height="18"/><rect x="120" y="240" width="26" height="18"/><rect x="120" y="260" width="26" height="18"/><rect x="120" y="280" width="26" height="18"/><rect x="120" y="300" width="26" height="18"/>
+      <rect x="150" y="80" width="26" height="18"/><rect x="150" y="100" width="26" height="18"/><rect x="150" y="120" width="26" height="18"/><rect x="150" y="140" width="26" height="18"/><rect x="150" y="160" width="26" height="18"/><rect x="150" y="180" width="26" height="18"/><rect x="150" y="200" width="26" height="18"/><rect x="150" y="220" width="26" height="18"/><rect x="150" y="240" width="26" height="18"/><rect x="150" y="260" width="26" height="18"/><rect x="150" y="280" width="26" height="18"/><rect x="150" y="300" width="26" height="18"/>
+      <rect x="180" y="80" width="26" height="18"/><rect x="180" y="100" width="26" height="18"/><rect x="180" y="120" width="26" height="18"/><rect x="180" y="140" width="26" height="18"/><rect x="180" y="160" width="26" height="18"/><rect x="180" y="180" width="26" height="18"/><rect x="180" y="200" width="26" height="18"/><rect x="180" y="220" width="26" height="18"/><rect x="180" y="240" width="26" height="18"/><rect x="180" y="260" width="26" height="18"/><rect x="180" y="280" width="26" height="18"/><rect x="180" y="300" width="26" height="18"/>
+      <!-- c5-9 -->
+      <rect x="240" y="80" width="26" height="18"/><rect x="240" y="100" width="26" height="18"/><rect x="240" y="120" width="26" height="18"/><rect x="240" y="140" width="26" height="18"/><rect x="240" y="160" width="26" height="18"/><rect x="240" y="180" width="26" height="18"/><rect x="240" y="200" width="26" height="18"/><rect x="240" y="220" width="26" height="18"/><rect x="240" y="240" width="26" height="18"/><rect x="240" y="260" width="26" height="18"/><rect x="240" y="280" width="26" height="18"/><rect x="240" y="300" width="26" height="18"/>
+      <rect x="270" y="80" width="26" height="18"/><rect x="270" y="100" width="26" height="18"/><rect x="270" y="120" width="26" height="18"/><rect x="270" y="140" width="26" height="18"/><rect x="270" y="160" width="26" height="18"/><rect x="270" y="180" width="26" height="18"/><rect x="270" y="200" width="26" height="18"/><rect x="270" y="220" width="26" height="18"/><rect x="270" y="240" width="26" height="18"/><rect x="270" y="260" width="26" height="18"/><rect x="270" y="280" width="26" height="18"/><rect x="270" y="300" width="26" height="18"/>
+      <rect x="300" y="80" width="26" height="18"/><rect x="300" y="100" width="26" height="18"/><rect x="300" y="120" width="26" height="18"/><rect x="300" y="140" width="26" height="18"/><rect x="300" y="160" width="26" height="18"/><rect x="300" y="180" width="26" height="18"/><rect x="300" y="200" width="26" height="18"/><rect x="300" y="220" width="26" height="18"/><rect x="300" y="240" width="26" height="18"/><rect x="300" y="260" width="26" height="18"/><rect x="300" y="280" width="26" height="18"/><rect x="300" y="300" width="26" height="18"/>
+      <rect x="330" y="80" width="26" height="18"/><rect x="330" y="100" width="26" height="18"/><rect x="330" y="120" width="26" height="18"/><rect x="330" y="140" width="26" height="18"/><rect x="330" y="160" width="26" height="18"/><rect x="330" y="180" width="26" height="18"/><rect x="330" y="200" width="26" height="18"/><rect x="330" y="220" width="26" height="18"/><rect x="330" y="240" width="26" height="18"/><rect x="330" y="260" width="26" height="18"/><rect x="330" y="280" width="26" height="18"/><rect x="330" y="300" width="26" height="18"/>
+      <rect x="360" y="80" width="26" height="18"/><rect x="360" y="100" width="26" height="18"/><rect x="360" y="120" width="26" height="18"/><rect x="360" y="140" width="26" height="18"/><rect x="360" y="160" width="26" height="18"/><rect x="360" y="180" width="26" height="18"/><rect x="360" y="200" width="26" height="18"/><rect x="360" y="220" width="26" height="18"/><rect x="360" y="240" width="26" height="18"/><rect x="360" y="260" width="26" height="18"/><rect x="360" y="280" width="26" height="18"/><rect x="360" y="300" width="26" height="18"/>
+      <!-- c12-15 -->
+      <rect x="450" y="80" width="26" height="18"/><rect x="450" y="100" width="26" height="18"/><rect x="450" y="120" width="26" height="18"/><rect x="450" y="140" width="26" height="18"/><rect x="450" y="160" width="26" height="18"/><rect x="450" y="180" width="26" height="18"/><rect x="450" y="200" width="26" height="18"/><rect x="450" y="220" width="26" height="18"/><rect x="450" y="240" width="26" height="18"/><rect x="450" y="260" width="26" height="18"/><rect x="450" y="280" width="26" height="18"/><rect x="450" y="300" width="26" height="18"/>
+      <rect x="480" y="80" width="26" height="18"/><rect x="480" y="100" width="26" height="18"/><rect x="480" y="120" width="26" height="18"/><rect x="480" y="140" width="26" height="18"/><rect x="480" y="160" width="26" height="18"/><rect x="480" y="180" width="26" height="18"/><rect x="480" y="200" width="26" height="18"/><rect x="480" y="220" width="26" height="18"/><rect x="480" y="240" width="26" height="18"/><rect x="480" y="260" width="26" height="18"/><rect x="480" y="280" width="26" height="18"/><rect x="480" y="300" width="26" height="18"/>
+      <rect x="510" y="80" width="26" height="18"/><rect x="510" y="100" width="26" height="18"/><rect x="510" y="120" width="26" height="18"/><rect x="510" y="140" width="26" height="18"/><rect x="510" y="160" width="26" height="18"/><rect x="510" y="180" width="26" height="18"/><rect x="510" y="200" width="26" height="18"/><rect x="510" y="220" width="26" height="18"/><rect x="510" y="240" width="26" height="18"/><rect x="510" y="260" width="26" height="18"/><rect x="510" y="280" width="26" height="18"/><rect x="510" y="300" width="26" height="18"/>
+      <rect x="540" y="80" width="26" height="18"/><rect x="540" y="100" width="26" height="18"/><rect x="540" y="120" width="26" height="18"/><rect x="540" y="140" width="26" height="18"/><rect x="540" y="160" width="26" height="18"/><rect x="540" y="180" width="26" height="18"/><rect x="540" y="200" width="26" height="18"/><rect x="540" y="220" width="26" height="18"/><rect x="540" y="240" width="26" height="18"/><rect x="540" y="260" width="26" height="18"/><rect x="540" y="280" width="26" height="18"/><rect x="540" y="300" width="26" height="18"/>
+    </g>
+    <!-- 离群列 d5(x=210) d11(x=390)：金色 -->
+    <g fill="#fbbf2455" stroke="#fbbf24" stroke-width="1">
+      <rect x="210" y="80" width="26" height="18"/><rect x="210" y="100" width="26" height="18"/><rect x="210" y="120" width="26" height="18"/><rect x="210" y="140" width="26" height="18"/><rect x="210" y="160" width="26" height="18"/><rect x="210" y="180" width="26" height="18"/><rect x="210" y="200" width="26" height="18"/><rect x="210" y="220" width="26" height="18"/><rect x="210" y="240" width="26" height="18"/><rect x="210" y="260" width="26" height="18"/><rect x="210" y="280" width="26" height="18"/><rect x="210" y="300" width="26" height="18"/>
+      <rect x="390" y="80" width="26" height="18"/><rect x="390" y="100" width="26" height="18"/><rect x="390" y="120" width="26" height="18"/><rect x="390" y="140" width="26" height="18"/><rect x="390" y="160" width="26" height="18"/><rect x="390" y="180" width="26" height="18"/><rect x="390" y="200" width="26" height="18"/><rect x="390" y="220" width="26" height="18"/><rect x="390" y="240" width="26" height="18"/><rect x="390" y="260" width="26" height="18"/><rect x="390" y="280" width="26" height="18"/><rect x="390" y="300" width="26" height="18"/>
+    </g>
+  </g>
+
+  <!-- 轴标签 -->
+  <text x="330" y="340" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">特征维度（d1 → d16）：离群只发生在少数固定列</text>
+  <text x="76" y="200" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif" transform="rotate(-90 76 200)">序列位置 t1 → t12</text>
+  <text x="223" y="72" text-anchor="middle" font-size="12.5" fill="#fbbf24" font-family="monospace">d5 ≈ −70</text>
+  <text x="403" y="72" text-anchor="middle" font-size="12.5" fill="#fbbf24" font-family="monospace">d11 ≈ +60</text>
+  <text x="150" y="72" text-anchor="middle" font-size="12.5" fill="#22d3ee" font-family="monospace">其余 |值| ≈ 0.2–3</text>
+
+  <!-- 右侧注解 -->
+  <g font-family="sans-serif">
+    <text x="620" y="110" font-size="13.5" font-weight="700" fill="#e8ecf6">三个关键观察</text>
+    <text x="620" y="138" font-size="12.5" fill="#b6c0d6">① 幅度：离群值可达正常激活的数十倍</text>
+    <text x="620" y="162" font-size="12.5" fill="#b6c0d6">② 位置：集中在固定特征维度，整列皆大</text>
+    <text x="620" y="186" font-size="12.5" fill="#b6c0d6">③ 稳定：跨 token、跨层高度一致，不是噪声</text>
+    <text x="620" y="222" font-size="12.5" fill="#99a5bf">→ 由模型结构决定，换个输入它还在那儿</text>
+    <text x="620" y="258" font-size="13" font-weight="700" fill="#fbbf24">涌现阈值：约 6.7B 参数</text>
+    <text x="620" y="282" font-size="12.5" fill="#b6c0d6">OPT-6.7B 起系统性出现，越大越多</text>
+  </g>
+</svg>

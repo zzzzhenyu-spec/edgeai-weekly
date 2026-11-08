@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-label="规模越大离群越多，混合精度撑住精度">
+  <defs>
+    <linearGradient id="sq-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="380" fill="url(#sq-bg)" rx="14"/>
+  <text x="480" y="42" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">规模越大，离群越多——混合精度撑住了</text>
+
+  <!-- 左图：离群维度占比 vs 规模 -->
+  <g>
+    <text x="270" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#fbbf24" font-family="sans-serif">离群特征维度占比 ↑</text>
+    <!-- 坐标区 x:100-440, y:96-300 -->
+    <line x1="100" y1="96" x2="100" y2="300" stroke="#5f7194" stroke-width="1.2"/>
+    <line x1="100" y1="300" x2="440" y2="300" stroke="#5f7194" stroke-width="1.2"/>
+    <!-- 金色上升曲线：6.7B 小拐点 → 175B 高 -->
+    <path d="M120 288 C 200 284, 240 278, 280 262 C 320 244, 360 210, 420 150" fill="none" stroke="#fbbf24" stroke-width="2.4"/>
+    <g fill="#fbbf24">
+      <circle cx="120" cy="288" r="4"/><circle cx="200" cy="283" r="4"/><circle cx="280" cy="262" r="4"/><circle cx="350" cy="218" r="4"/><circle cx="420" cy="150" r="4"/>
+    </g>
+    <g font-size="12.5" fill="#99a5bf" font-family="sans-serif" text-anchor="middle">
+      <text x="120" y="320">6.7B</text><text x="200" y="320">13B</text><text x="280" y="320">30B</text><text x="350" y="320">66B</text><text x="420" y="320">175B</text>
+    </g>
+    <text x="415" y="134" font-size="12.5" fill="#fbbf24" font-family="sans-serif" text-anchor="end">越大越多</text>
+    <text x="96" y="102" font-size="12.5" fill="#99a5bf" font-family="sans-serif" text-anchor="end">占比</text>
+  </g>
+
+  <!-- 右图：困惑度对比 -->
+  <g>
+    <text x="720" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#e8ecf6" font-family="sans-serif">13B 起：朴素 INT8 崩，LLM.int8() 贴住基线</text>
+    <!-- 坐标区 x:550-890, y:96-300 -->
+    <line x1="550" y1="96" x2="550" y2="300" stroke="#5f7194" stroke-width="1.2"/>
+    <line x1="550" y1="300" x2="890" y2="300" stroke="#5f7194" stroke-width="1.2"/>
+    <!-- FP16 基线：青色平稳 -->
+    <path d="M570 200 L 870 208" fill="none" stroke="#22d3ee" stroke-width="2.4"/>
+    <!-- LLM.int8()：紫色贴住基线 -->
+    <path d="M570 204 L 870 216" fill="none" stroke="#818cf8" stroke-width="2.4" stroke-dasharray="7 4"/>
+    <!-- naive INT8：粉色小规模贴住、13B 起飙升 -->
+    <path d="M570 206 L 640 210 C 690 214, 720 180, 760 130 C 800 90, 840 70, 870 60" fill="none" stroke="#e879f9" stroke-width="2.4"/>
+    <g font-size="12.5" font-family="sans-serif">
+      <text x="580" y="118" fill="#e879f9">朴素 INT8：困惑度起飞（越低越好）</text>
+      <text x="700" y="238" fill="#22d3ee">FP16 基线</text>
+      <text x="770" y="252" fill="#818cf8">LLM.int8()：全规模贴住</text>
+    </g>
+    <g font-size="12.5" fill="#99a5bf" font-family="sans-serif" text-anchor="middle">
+      <text x="590" y="320">6.7B</text><text x="660" y="320">13B</text><text x="730" y="320">30B</text><text x="800" y="320">66B</text><text x="870" y="320">175B</text>
+    </g>
+    <circle cx="660" cy="210" r="5" fill="none" stroke="#e879f9" stroke-width="1.6"/>
+    <text x="660" y="192" font-size="12.5" fill="#e879f9" font-family="sans-serif" text-anchor="middle">13B 起明显退化</text>
+  </g>
+
+  <!-- 底部收益条 -->
+  <g font-family="sans-serif">
+    <text x="480" y="352" text-anchor="middle" font-size="12.5" fill="#b6c0d6">收益：175B 批推理较 FP16 提速约 1.9 倍；代价：维度挑选与分解的少量额外开销（约百分之几量级）</text>
+  </g>
+</svg>

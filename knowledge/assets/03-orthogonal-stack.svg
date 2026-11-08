@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-label="W8A8 与 W4A16 正交叠加">
+  <defs>
+    <linearGradient id="os-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+    <marker id="os-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#5f7194"/>
+    </marker>
+  </defs>
+  <rect width="960" height="380" fill="url(#os-bg)" rx="14"/>
+  <text x="480" y="42" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">正交的两招：一个管激活，一个管权重，叠着用</text>
+
+  <!-- 左：W8A8 -->
+  <g>
+    <rect x="70" y="78" width="270" height="120" rx="10" fill="#818cf812" stroke="#818cf8" stroke-width="1.4"/>
+    <text x="205" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#818cf8" font-family="monospace">LLM.int8() → W8A8</text>
+    <text x="205" y="134" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">激活异常值切走 FP16 通道</text>
+    <text x="205" y="156" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">保精度、省显存、批推理提速</text>
+    <text x="205" y="182" text-anchor="middle" font-size="12.5" fill="#e8ecf6" font-family="sans-serif">关键词：算得准</text>
+  </g>
+
+  <!-- 右：W4A16 -->
+  <g>
+    <rect x="620" y="78" width="270" height="120" rx="10" fill="#22d3ee12" stroke="#22d3ee" stroke-width="1.4"/>
+    <text x="755" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#22d3ee" font-family="monospace">GPTQ → W4A16</text>
+    <text x="755" y="134" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">权重逐列量化+误差补偿</text>
+    <text x="755" y="156" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">体积压到约 1/4，近无损</text>
+    <text x="755" y="182" text-anchor="middle" font-size="12.5" fill="#e8ecf6" font-family="sans-serif">关键词：存得小</text>
+  </g>
+
+  <!-- 中：× 叠加 -->
+  <g>
+    <circle cx="480" cy="138" r="30" fill="#e879f912" stroke="#e879f9" stroke-width="1.5"/>
+    <text x="480" y="146" text-anchor="middle" font-size="20" font-weight="700" fill="#e879f9" font-family="monospace">×</text>
+  </g>
+  <line x1="344" y1="138" x2="444" y2="138" stroke="#5f7194" stroke-width="1.5"/>
+  <line x1="516" y1="138" x2="616" y2="138" stroke="#5f7194" stroke-width="1.5"/>
+
+  <!-- 叠加产物 -->
+  <line x1="480" y1="172" x2="480" y2="208" stroke="#5f7194" stroke-width="1.5" marker-end="url(#os-arrow)"/>
+  <g>
+    <rect x="230" y="216" width="500" height="74" rx="10" fill="#e879f90f" stroke="#e879f9" stroke-width="1.4"/>
+    <text x="480" y="244" text-anchor="middle" font-size="13.5" font-weight="700" fill="#e879f9" font-family="sans-serif">叠加 = 4-bit 权重 + 8-bit 激活：端侧部署的标配组合</text>
+    <text x="480" y="268" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">GPTQ 4-bit 格式至今是 llama.cpp / ExLlama 等生态的直系血统</text>
+  </g>
+
+  <!-- 遗留问题 → 第 4 讲 -->
+  <g>
+    <rect x="140" y="312" width="680" height="52" rx="10" fill="#fbbf240d" stroke="#fbbf24" stroke-width="1.2" stroke-dasharray="6 4"/>
+    <text x="480" y="334" text-anchor="middle" font-size="12.5" fill="#fbbf24" font-family="sans-serif">遗留问题：切维度救激活「不优雅」，且 W4A8 全 INT8 化仍难过异常值关</text>
+    <text x="480" y="354" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">下一讲：AWQ 与 SmoothQuant——不切维度，把激活的难题「搬」给权重</text>
+  </g>
+</svg>

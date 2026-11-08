@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 350" role="img" aria-label="一个离群值拉爆整条量化刻度">
+  <defs>
+    <linearGradient id="sb-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="350" fill="url(#sb-bg)" rx="14"/>
+  <text x="480" y="42" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">一个离群值，拉爆整条刻度</text>
+
+  <!-- 上：无离群 -->
+  <text x="80" y="86" font-size="13" font-weight="700" fill="#22d3ee" font-family="sans-serif">没有离群值时：INT8 刻度从容</text>
+  <rect x="80" y="100" width="540" height="40" rx="6" fill="#ffffff08" stroke="#ffffff2a" stroke-width="1"/>
+  <g stroke="#ffffff30" stroke-width="1">
+    <line x1="147" y1="100" x2="147" y2="140"/><line x1="214" y1="100" x2="214" y2="140"/><line x1="281" y1="100" x2="281" y2="140"/><line x1="348" y1="100" x2="348" y2="140"/><line x1="415" y1="100" x2="415" y2="140"/><line x1="482" y1="100" x2="482" y2="140"/><line x1="549" y1="100" x2="549" y2="140"/>
+  </g>
+  <g fill="#22d3ee">
+    <circle cx="120" cy="120" r="4"/><circle cx="186" cy="120" r="4"/><circle cx="232" cy="120" r="4"/><circle cx="298" cy="120" r="4"/><circle cx="352" cy="120" r="4"/><circle cx="430" cy="120" r="4"/><circle cx="475" cy="120" r="4"/><circle cx="560" cy="120" r="4"/>
+  </g>
+  <text x="648" y="125" font-size="12.5" fill="#99a5bf" font-family="sans-serif">scale = 3.2 → 256 级刻度，间隔 0.0125</text>
+  <text x="648" y="143" font-size="12.5" fill="#22d3ee" font-family="sans-serif">每个值都能落到不同的格子 ✓</text>
+
+  <!-- 下：有离群 -->
+  <text x="80" y="196" font-size="13" font-weight="700" fill="#fbbf24" font-family="sans-serif">混进一个 100 倍离群值后：刻度被 max 绑架</text>
+  <rect x="80" y="210" width="540" height="40" rx="6" fill="#ffffff08" stroke="#ffffff2a" stroke-width="1"/>
+  <g stroke="#ffffff18" stroke-width="0.6">
+    <line x1="84" y1="210" x2="84" y2="250"/><line x1="90" y1="210" x2="90" y2="250"/><line x1="96" y1="210" x2="96" y2="250"/><line x1="102" y1="210" x2="102" y2="250"/><line x1="108" y1="210" x2="108" y2="250"/><line x1="114" y1="210" x2="114" y2="250"/><line x1="120" y1="210" x2="120" y2="250"/><line x1="126" y1="210" x2="126" y2="250"/><line x1="132" y1="210" x2="132" y2="250"/><line x1="138" y1="210" x2="138" y2="250"/><line x1="144" y1="210" x2="144" y2="250"/><line x1="150" y1="210" x2="150" y2="250"/><line x1="156" y1="210" x2="156" y2="250"/><line x1="162" y1="210" x2="162" y2="250"/><line x1="168" y1="210" x2="168" y2="250"/><line x1="174" y1="210" x2="174" y2="250"/>
+  </g>
+  <!-- 正常值全部挤在最左 1-2 格 -->
+  <g fill="#22d3ee">
+    <circle cx="84" cy="230" r="4"/><circle cx="86" cy="230" r="4"/><circle cx="87" cy="230" r="4"/><circle cx="89" cy="230" r="4"/><circle cx="85" cy="230" r="4"/><circle cx="88" cy="230" r="4"/><circle cx="90" cy="230" r="4"/><circle cx="86.5" cy="230" r="4"/>
+  </g>
+  <!-- 离群值独占右侧 -->
+  <circle cx="612" cy="230" r="6" fill="#fbbf24"/>
+  <text x="612" y="276" text-anchor="middle" font-size="12.5" fill="#fbbf24" font-family="monospace">+320</text>
+  <text x="84" y="276" text-anchor="middle" font-size="12.5" fill="#22d3ee" font-family="monospace">0–3 的正常值全被压进第 0–1 格</text>
+  <text x="648" y="225" font-size="12.5" fill="#99a5bf" font-family="sans-serif">scale 被 max 撑到 320 → 一格 = 2.5</text>
+  <text x="648" y="243" font-size="12.5" fill="#e879f9" font-family="sans-serif">0.2 与 2.4 落进同一格 → 信息被抹平 ✗</text>
+
+  <text x="480" y="322" text-anchor="middle" font-size="12.5" fill="#99a5bf" font-family="sans-serif">per-channel 也没辙：离群维度是「整列皆大」，刻度在同列内依然被拉爆</text>
+</svg>
