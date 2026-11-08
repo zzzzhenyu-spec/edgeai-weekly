@@ -2,20 +2,18 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 46 期（2026.10.31 — 11.06 · 近 7 天）
+## 2026 · 第 46 期（2026.11.02 — 11.08 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：开源模型矩阵密集上新——腾讯混元 Hy4（770B MoE 视觉理解）、蚂蚁百灵 Ling-3.2-Flash（560B/激活 25B 三项基准超 Claude）、百度文心 5.5 Flash Base（280B/激活 14B 同尺寸 SOTA）、Mistral Large 4（1T 参数）同周登场，MIT 权重空间编程实现 GPT-6 Astra 直接修改 Qwen 权重。国行 Apple 智能开测点燃端侧主线——端侧 AI 概念大涨（润欣 20cm 涨停/乐鑫新高）、后摩智能数十亿元 B 轮标志端侧 AI 芯片进入规模化兑现期。Nothing 定档 12 月出货首款 AI 原生硬件（不带新屏/非 App），高通进博会全球首展 6G 终端原型机+AI Recall 眼镜，影目 INMO Future 一体式空间眼镜与 XREAL Aura 分体眼镜开启形态之争，Neuralink 植入者意念操控扫地机器人，智元创新日三层配齐（GO-3+WITA-OMNI+灵渠 OS 开源约 2 亿行），联想开天信创 AI 主机全链路国产化（本地跑 35B）。 今日新增：蚂蚁百灵 Ling-3.2-Flash、百度文心 5.5 Flash Base 开源、后摩智能 B 轮融资、Kimi K3.1 Pro 权重如约开源（Agent Arena 开放模型榜首）。
+**近 7 天导读**：近 7 天聚焦：开源模型矩阵密集上新——蚂蚁百灵 Ling-3.2-Flash（560B/25B 三项基准超 Claude）、百度文心 5.5 Flash Base（280B/14B 同尺寸 SOTA）、Kimi K3.1 Pro 权重如约开源（Agent Arena 开放模型榜首）与腾讯混元 Hy4 正式版（770B 视觉理解）同周登场。端侧 AI 主线持续升温——中国移动×智谱签署 GLM 接入移动云 MaaS 合作（国产算力到模型服务全链），Googlebook 11 月更新将端侧 AI 内存占用压缩近 40%（最多释放 6GB），后摩智能完成数十亿元 B 轮标志端侧 AI 芯片进入规模化兑现期，智元创新日三层配齐（GO-3+WITA-OMNI+灵渠 OS 开源约 2 亿行）。Nothing 定档 12 月首款 AI 原生硬件（不带新屏/非 App），高通进博会全球首展 6G 终端原型机+AI Recall 眼镜，影目 INMO Future 一体式空间眼镜与 XREAL Aura 分体眼镜开启形态之争，Neuralink 植入者意念操控扫地机器人，MIT 权重空间编程实现 GPT-6 Astra 直接修改 Qwen 权重。 今日新增（含近两日积压）：中国移动×智谱合作、智元灵犀 X2 焕新版、Googlebook 端侧 AI 内存优化。
 
 ## 近 7 天速览
 
-### 行业关注事件（4 条）
+### 行业关注事件（2 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-11-05 | [Neuralink 第 22 位植入者意念操控 Matic 扫地机器人：植入 28 小时后即实现，脑机接口从屏幕走进物理世界](https://news.sina.cn/ai/2026-11-05/detail-inixsmka6116499.d.html) | 新浪科技 |
 | 2026-11-05 | [端侧 AI 概念集体大涨：润欣科技 20cm 涨停、乐鑫科技创历史新高，千问国行 Apple 智能开测点燃端侧主线](https://www.cls.cn/detail/2525789) | 财联社 |
-| 2026-10-31 | [DeepSeek 开源 Super-agent 原型 dsh-superagent：Router+Worker 双层架构让 AI 指挥 AI 干活，可接入 GitHub 与飞书主动处理任务](https://zhidx.com/p/606311.html) | 智东西 |
-| 2026-10-31 | [据 The Information 爆料：Meta 联手傅利叶打造 Muse「物理化身」人形机器人原型 Max，1.5 米高搭载英伟达 Thor，3 个月做出已启动二代](https://finance.sina.com.cn/tech/digi/2026-11-01/doc-inixepty4337025.shtml) | 新浪科技 |
 
 ### 端侧Agent（2 条）
 
@@ -24,17 +22,16 @@
 | 2026-11-05 | [月之暗面发布 Kimi Hosted Agents 托管智能体：Harness 作为云端服务提供，有状态会话+持久沙箱+纯 HTTP 接入](https://www.ithome.com/1/022/572.htm) | IT之家 |
 | 2026-11-02 | [月之暗面发布 Kimi 游戏开发与创意工作解决方案：K3.1 Pro+Kimi Code+Work 三层组合，接入 Unity/UE/Blender 插件](https://m.sohu.com/a/1096211105_655634) | 搜狐科技 |
 
-### AI硬件（7 条）
+### AI硬件（6 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-06 | [智元发布灵犀 X2 焕新版双足人形机器人：旗舰版 31 自由度+选配灵巧手达 47 自由度，面向展馆文旅导览](https://original.ifeng.com/c/8xptAMvorxt) | 凤凰网 |
 | 2026-11-04 | [Nothing 首款 AI 原生硬件定档 12 月出货：不带新屏幕、不可能做成 App，裴宇称之为「一件工具」](https://www.vrtuoluo.cn/546344.html) | VR陀螺 |
 | 2026-11-04 | [影目发布一体式空间 AI 眼镜 INMO Future：双目 1080P 全彩+6DoF 空间锚定，无需连手机独立计算](https://www.jiemian.com/article/15293631.html) | 界面新闻 |
 | 2026-11-03 | [联想开天发布首款信创 AI 主机：兆芯 KX-7000+后摩「力擎」LQ50 全国产异构算力，本地跑 35B 大模型](https://www.ithome.com/1/021/779.htm) | IT之家 |
 | 2026-11-02 | [优必选发布具身智能仿真平台 Thinker-Sim：自研 Thinker-GS 高保真场景重建+SimReady 资产自动化生成，构建机器人训练与能力评测一站式体系](https://www.ithome.com/1/020/888.htm) | IT之家 |
 | 2026-11-02 | [消息称三星首款 AI 眼镜 12 月中旬登陆韩国美国：骁龙 AR1 Gen 1+Android XR 集成 Gemini，无屏语音交互续航 9 小时](https://www.ithome.com/1/020/866.htm) | IT之家 |
-| 2026-11-01 | [阿里千问 AI 眼镜 OTA 升级：新增通话翻译与媒体翻译，嘈杂环境同声传译抗噪再升级](https://www.ithome.com/1/020/768.htm) | IT之家 |
-| 2026-10-31 | [罗技 MX KEYPAD 国行 799 元发售：9 个 LCD 自定义键一键调用 WorkBuddy，AI 入口硬件化再添一类](https://finance.sina.com.cn/tech/digi/2026-10-31/doc-inixavkz4014346.shtml) | 新浪财经 |
 
 ### 芯片厂商（3 条）
 
@@ -48,8 +45,8 @@
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-06 | [Googlebook 11 月更新：端侧 AI 内存常驻占用压缩近 40%，16GB 机型最多释放 6GB 运行内存](https://tech.ifeng.com/c/8xpmRKLsDrt) | 凤凰网科技 |
 | 2026-11-04 | [国行 Apple 智能今日开启 Beta 测试：Siri 可直接调用千问，12 月随 iOS 27.3 正式推送](https://k.sina.com.cn/article_5952915705_162d248f906703sd1i.html) | 新浪财经 |
-| 2026-10-31 | [国行 Apple 智能官宣接入阿里千问：Siri 问答、系统级写作与视觉智能三线打通，11 月 4 日开发者 Beta 开测、12 月正式推送](https://zhidx.com/p/606181.html) | 智东西 |
 
 ### 大模型厂商（6 条）
 
@@ -62,10 +59,11 @@
 | 2026-11-03 | [MIT 提出「权重空间编程」：GPT-6 Astra 直接修改 Qwen 权重修复推理死循环，数学正确率从 7.9% 提至 48.1%](https://finance.sina.com.cn/tech/roll/2026-11-03/doc-inixkzym8904144.shtml) | 新浪科技 |
 | 2026-11-02 | [美团发布 LongCat-2.5：1.6 万亿参数原生多模态、全程国产算力训练，面向长程智能体任务比肩国际闭源模型](https://www.ebrun.com/20261102/718021.shtml) | 亿邦动力 |
 
-### 行业动态（2 条）
+### 行业动态（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-08 | [中国移动×智谱签署合作协议：GLM 系列模型接入移动云 MaaS 平台，国产算力到大模型服务全链合作](https://www.ithome.com/1/023/937.htm) | IT之家 |
 | 2026-11-03 | [谷歌×Mercor 发布工程 Agent 基准 PLE：85 项真实工程任务，最强 Agent 仅得 48.3%——91% 单项达标≠可交付](https://www.leiphone.com/category/ai/YZ0bP2vh94KY45RG.html) | 雷峰网 |
 | 2026-11-02 | [趋境科技联合智谱与摩尔线程发布国产异构推理「AI Token 工厂」解决方案，打通模型—推理—芯片产业闭环](https://www.cls.cn/detail/2522336) | 财联社 |
 
@@ -81,4 +79,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-11-06。
+- 数据更新于 2026-11-08。
