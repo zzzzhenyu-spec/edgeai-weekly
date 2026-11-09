@@ -14,16 +14,50 @@
 const WEEKLY_DATA = {
 
   meta: {
-    issue: "2026 · 第 46 期",
-    weekRange: "2026.11.02 — 11.08 · 近 7 天",
-    updated: "2026-11-08",
+    issue: "2026 · 第 47 期",
+    weekRange: "2026.11.03 — 11.09 · 近 7 天",
+    updated: "2026-11-09",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部印发智能体终端进网管理新规（预置智能体的手机/平板/可穿戴须过智能体适配验证+反诈前置评测，智能体将配唯一身份标识），苹果披露 HALO 机器人控制系统（宇树 G1+千问模型，零遥操作数据拿下 91% 成功率），宇树×巨星传奇限量 2000 台收藏机器狗与新华社×优必选仿生人形新闻主播标志机器人走向消费与媒体场景。进博会成端侧 AI 密集释放窗口——高通 6G 终端原型机+阶跃 STEPX Neo 智能体手机首秀+Hitch Open 物理智能开源平台（乒乓对打 142 拍刷新纪录）。模型侧开源矩阵继续上新——蚂蚁 Ling-3.2-Flash、百度文心 5.5 Flash Base、Kimi K3.1 Pro 开源与腾讯混元 Hy4 同周登场；京东×酷派把品牌 AI 眼镜打到 322 元（百元档首现），奔驰长轴 E 级首搭豆包大模型座舱，中国移动×智谱打通 GLM 到移动云 MaaS 全链。\n今日补录（11-05 至 11-08 视野缺口全面追平，共 12 条）：工信部智能体终端新规、苹果 HALO、宇树×巨星传奇 UNI-DOGGIE、新华社×优必选新闻主播、华为擎云 HM650 首款鸿蒙台式机、阶跃 STEPX Neo 进博首秀、Hitch Open、京东百元级 AI 眼镜、奔驰豆包座舱、比亚迪×vivo 智能体跨端、DeepSeek Harness 生态数据、特斯拉 Cybertruck 收尾转产。"
+    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：千问办公 2.0 Team Agent（首个多人×Agent 协作）、微信鸿蒙版破 9000 万次安装（鸿蒙终端本月预计破亿）、Gentle Monster 谷歌三星 AI 眼镜定档 11 月 12 日预订。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
 {
+      id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
+      title: "阿里发布千问办公 2.0：从个人助手升级 Team Agent，首个支持多人与 Agent 协作",
+      summary: "阿里巴巴发布千问办公 2.0——定位从个人 AI 助手升级为面向个人与组织协作的 Team Agent，上线首个支持多人与 Agent 协作的「协作」功能：数字员工（Agent）可带入工作群，实时关联钉钉群聊、听记、表格与文档作为协作上下文，支持多会话并行与任务指派。同步上线人机共创、主动自动任务、资料空间与三端互联等能力。",
+      detail: "发布：11 月 9 日官方公众号 14:22 发文《主动与协同，迈向 Team Agent 时代》（量子位/凤凰科技/IT之家多源，候选库 dom=2 rep=6）。\n协作：数字员工小Q 入群，多人+多 Agent 在共同上下文工作——群聊、听记、表格、文档实时关联；多会话并行、任务指派。\n升级：人机共创、自动任务（Agent 主动执行）、资料空间、三端互联。\n背景：千问办公 8 月上线 1.0 打磨个人 Agent 能力；企业需求从「告诉我怎么做」转向「帮我把它做完」。\n端侧视角：Agent 产品竞争从单兵效率转向团队协作上下文——谁能把组织知识流（群聊/文档/表格）接进 Agent 工作记忆，谁就拿到办公场景的入口；与 Kimi Hosted Agents（云端托管）同周看，「团队级 Agent」正在成为国产 Agent 产品的集体下一站。",
+      tags: ["千问办公", "Team Agent", "智能体协作", "阿里巴巴", "数字员工"],
+      url: "https://www.qbitai.com/2026/11/508694.html",
+      image: "images/news/n214.png",
+      imageCap: "千问办公 2.0 官方发布原文（图源：千问办公公众号）",
+      highlight: true
+    },
+
+{
+      id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
+      title: "微信鸿蒙版安装量超 9000 万次：HarmonyOS 终端用户本月预计突破 1 亿大关",
+      summary: "微信鸿蒙版 App 安装量已超过 9000 万次，华为 HarmonyOS 终端用户数预计本月突破 1 亿大关——鸿蒙生态完成国民级应用全量迁移后进入亿级用户规模区间，纯血鸿蒙的端侧 AI 服务（小艺智能体、系统级 AI 能力）随之获得亿级设备底座。",
+      detail: "数据：11 月 9 日报道（IT之家，华为官方口径）——微信鸿蒙版安装量超 9000 万次；HarmonyOS 终端用户数预计本月突破 1 亿。\n节点：鸿蒙 5 发布约一年完成国民应用全量原生迁移，终端规模站上亿级门槛。\n端侧视角：亿级终端是端侧 AI 分发的规模分水岭——系统级智能体（小艺）与第三方应用的端侧 AI 能力从此拥有与 iOS/安卓第三极对等的设备基数；配合本月华为 Mate X8（麒麟 9050 Pro 端侧大模型）预热，鸿蒙的端侧 AI 叙事从「生态补课」转入「规模兑现」。",
+      tags: ["鸿蒙", "微信", "HarmonyOS", "终端生态", "亿级用户"],
+      url: "https://www.ithome.com/1/024/099.htm",
+      image: "images/news/n215.jpg",
+      imageCap: "微信鸿蒙版安装量突破 9000 万（图源：IT之家）",
+      highlight: false
+    },
+
+{
+      id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09",
+      title: "Gentle Monster 首款 AI 眼镜定档：携手谷歌与三星、搭载 Gemini，11 月 12 日美国开启预订",
+      summary: "时尚眼镜巨头 Gentle Monster 首款 AI 智能眼镜定档——由 Gentle Monster 携手 Google 与 Samsung 打造，基于 Android XR 平台并搭载 Gemini：支持语音与文字实时翻译、智能导航、语音助手、环境感知与视觉信息识别及拍照抓拍，兼容 Android 与 iOS 设备。11 月 12 日在美国开启预订、12 月正式发售。",
+      detail: "定档：官网 Intelligent Eyewear 页面确认 11 月 12 日美国预订、12 月发售（多源报道，候选库 rep=2）。\n配置：Android XR 平台+Google Gemini；实时翻译（语音/文字）、智能导航、语音助手、环境感知辅助、视觉识别、拍照抓拍。\n兼容：Android 与 iOS 双生态。\n格局：与三星 Intelligent Eyewear、Warby Parker 首款眼镜同在 11 月 12 日开订——Android XR 生态第一波三款眼镜集体登陆美国市场。\n端侧视角：Android XR 首波采用「科技巨头出平台、时尚品牌出形态」的分工——Gentle Monster 把 AI 眼镜做进潮流光学渠道，与三星电子渠道、Warby Parker 眼镜直销渠道三线并进；12 月假日季交付意味着 Gemini 眼镜侧分发正式与 Meta 系正面争夺百镜大战的生态位。",
+      tags: ["Gentle Monster", "AI眼镜", "Android XR", "Gemini", "谷歌"],
+      url: "https://www.gentlemonster.com/int/zh-CN/intelligent-eyewear",
+      image: "images/news/n216.jpg",
+      imageCap: "Gentle Monster Intelligent Eyewear（图源：官网）",
+      highlight: false
+    },{
       id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
       title: "中国移动×智谱签署合作协议：GLM 系列模型接入移动云 MaaS 平台，国产算力到大模型服务全链合作",
       summary: "中国移动云公司与智谱签署合作协议——双方围绕国产算力、大模型服务和 AI 商业化展开深度合作，智谱 GLM 系列模型将接入移动云 MaaS 平台，合作涵盖 Token 技术创新、模型服务、产品打造、行业方案等，覆盖从底层算力供给、模型服务到商业化分发的完整产业链。",
@@ -34,7 +68,6 @@ news: [
       imageCap: "中国移动×智谱合作（图源：IT之家）",
       highlight: false
     },
-
 {
       id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
       title: "物理智能开源平台 Hitch Open 进博会全球发布：双机自主对打乒乓球 142 拍刷新世界纪录，0.3 秒完成感知决策",
@@ -46,7 +79,6 @@ news: [
       imageCap: "Hitch Open 展台机器人乒乓对打（图源：中新经纬）",
       highlight: false
     },
-
 {
       id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
       title: "2026 款奔驰长轴距 E 级上市 42.38 万元起：奔驰中国首次独立开发 AI 座舱，深度融合豆包大模型",
@@ -58,7 +90,6 @@ news: [
       imageCap: "2026 款长轴距 E 级（图源：凤凰汽车）",
       highlight: false
     },
-
 {
       id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
       title: "京东×酷派把品牌 AI 眼镜打到 322 元：C2M 定制+国补首批进入百元档，光波导眼镜销量同比增 3 倍",
@@ -70,7 +101,6 @@ news: [
       imageCap: "京东×酷派 AI 智能眼镜（图源：凤凰网）",
       highlight: false
     },
-
 {
       id: "n189", cat: "AI硬件", source: "凤凰网", date: "2026-11-06",
       title: "智元发布灵犀 X2 焕新版双足人形机器人：旗舰版 31 自由度+选配灵巧手达 47 自由度，面向展馆文旅导览",
@@ -82,7 +112,6 @@ news: [
       imageCap: "灵犀 X2 焕新版（图源：凤凰网）",
       highlight: false
     },
-
 {
       id: "n188", cat: "手机厂商", source: "凤凰网科技", date: "2026-11-06",
       title: "Googlebook 11 月更新：端侧 AI 内存常驻占用压缩近 40%，16GB 机型最多释放 6GB 运行内存",
@@ -94,7 +123,6 @@ news: [
       imageCap: "Googlebook 11 月更新（图源：凤凰网科技）",
       highlight: false
     },
-
 {
       id: "n183", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-06",
       title: "蚂蚁百灵发布 Ling-3.2-Flash：560B MoE 激活 25B 原生多模态，三项基准超越 Claude Opus 5",
@@ -106,7 +134,6 @@ news: [
       imageCap: "Ling-3.2-Flash 发布（图源：凤凰科技）",
       highlight: false
     },
-
 {
       id: "n194", cat: "行业动态", source: "中新社", date: "2026-11-06",
       title: "工信部印发智能体终端进网管理新规：预置智能体的手机/平板/可穿戴须过适配验证与反诈评测，智能体将配唯一身份标识",
@@ -118,7 +145,6 @@ news: [
       imageCap: "智能体互联系列国家标准应用推进专题会现场（图源：北京日报）",
       highlight: true
     },
-
 {
       id: "n195", cat: "手机厂商", source: "搜狐科技", date: "2026-11-06",
       title: "阶跃 STEPX Neo 智能体手机进博首秀：亮相高通展台，3999 元软硬模三位一体定价开放近百应用生态",
@@ -130,7 +156,6 @@ news: [
       imageCap: "STEPX Neo 智能体手机（图源：搜狐科技）",
       highlight: false
     },
-
 {
       id: "n196", cat: "AI硬件", source: "东方财富", date: "2026-11-06",
       title: "宇树×巨星传奇进博会首发收藏机器狗 UNI-DOGGIE：4.39 万元全球限量 2000 台，威刚首发采购 1000 台",
@@ -142,7 +167,6 @@ news: [
       imageCap: "UNI-DOGGIE 收藏机器狗（图源：腾讯新闻）",
       highlight: false
     },
-
 {
       id: "n202", cat: "行业动态", source: "路透社", date: "2026-11-06",
       title: "马斯克官宣 Cybertruck 收尾：2027 年中德州工厂转向 Cybercab 产能，公司资源重心移向机器人与 AI",
@@ -154,7 +178,6 @@ news: [
       imageCap: "特斯拉 Cybertruck（图源：新浪财经）",
       highlight: false
     },
-
 {
       id: "n187", cat: "大模型厂商", source: "凤凰网", date: "2026-11-05",
       title: "Kimi K3.1 Pro 权重如约开源：登顶 Agent Arena 开放模型榜首，2.8 万亿参数额外算力全部投入强化学习",
@@ -166,7 +189,6 @@ news: [
       imageCap: "K3.1 Pro 权重开源（图源：凤凰网）",
       highlight: false
     },
-
 {
       id: "n184", cat: "大模型厂商", source: "第一财经", date: "2026-11-05",
       title: "百度开源文心 5.5 Flash Base：280B 总参激活仅 14B，33.5T tokens 从零预训练刷新同尺寸 SOTA",
@@ -178,7 +200,6 @@ news: [
       imageCap: "文心 5.5 Flash Base 开源（图源：moomoo 资讯）",
       highlight: false
     },
-
 {
       id: "n180", cat: "芯片厂商", source: "凤凰科技", date: "2026-11-05",
       title: "高通进博会全球首展 6G 终端原型机：AI Recall 眼镜以每秒 2 帧拍摄+边缘侧 AI 处理，6G 作为 AI 原生网络",
@@ -190,7 +211,6 @@ news: [
       imageCap: "高通 6G 终端原型机进博会展出（图源：IT之家）",
       highlight: false
     },
-
 {
       id: "n181", cat: "行业关注事件", source: "新浪科技", date: "2026-11-05",
       title: "Neuralink 第 22 位植入者意念操控 Matic 扫地机器人：植入 28 小时后即实现，脑机接口从屏幕走进物理世界",
@@ -202,7 +222,6 @@ news: [
       imageCap: "意念操控扫地机器人演示（图源：新浪科技）",
       highlight: false
     },
-
 {
       id: "n178", cat: "端侧Agent", source: "IT之家", date: "2026-11-05",
       title: "月之暗面发布 Kimi Hosted Agents 托管智能体：Harness 作为云端服务提供，有状态会话+持久沙箱+纯 HTTP 接入",
@@ -214,7 +233,6 @@ news: [
       imageCap: "Kimi Hosted Agents 发布（图源：IT之家）",
       highlight: false
     },
-
 {
       id: "n177", cat: "行业关注事件", source: "财联社", date: "2026-11-05",
       title: "端侧 AI 概念集体大涨：润欣科技 20cm 涨停、乐鑫科技创历史新高，千问国行 Apple 智能开测点燃端侧主线",
@@ -226,7 +244,6 @@ news: [
       imageCap: "端侧 AI 概念集体走强（图源：凤凰财经）",
       highlight: false
     },
-
 {
       id: "n176", cat: "芯片厂商", source: "快科技", date: "2026-11-05",
       title: "国科微规划 GK6950 端侧 AI 芯片：面向人机交互与具身智能，配套 GK-VGGT-SLAM 流式空间智能方案",
@@ -238,7 +255,6 @@ news: [
       imageCap: "国科微端侧 AI 布局（图源：快科技）",
       highlight: false
     },
-
 {
       id: "n192", cat: "AI硬件", source: "IT之家", date: "2026-11-05",
       title: "华为擎云发布首款鸿蒙台式机 HM650 系列：麒麟 X90 桌面处理器，100% 国产化率面向政企市场",
@@ -250,7 +266,6 @@ news: [
       imageCap: "华为擎云 HM650 首款鸿蒙台式机（图源：IT之家）",
       highlight: false
     },
-
 {
       id: "n193", cat: "AI硬件", source: "凤凰网", date: "2026-11-05",
       title: "新华社×优必选发布全球首个仿生人形机器人新闻主播「新言」「新语」：张艺谋任形象主创，1:1 真人比例",
@@ -262,7 +277,6 @@ news: [
       imageCap: "仿生人形机器人新闻主播「新言」「新语」（图源：搜狐）",
       highlight: false
     },
-
 {
       id: "n200", cat: "手机厂商", source: "凤凰汽车", date: "2026-11-05",
       title: "比亚迪×vivo 签署战略合作：迪迪虾×蓝心小 V 双智能体跨端融合，首发落地腾势 N8 巨幕座舱",
@@ -274,7 +288,6 @@ news: [
       imageCap: "比亚迪×vivo 战略合作（图源：凤凰汽车）",
       highlight: false
     },
-
 {
       id: "n201", cat: "端侧Agent", source: "IT之家", date: "2026-11-05",
       title: "DeepSeek Harness 披露生态数据：日活 154 万、日耗 92 万亿 Token、3.5 万插件，官方插件市场将至",
@@ -286,7 +299,6 @@ news: [
       imageCap: "DeepSeek Harness（图源：IT之家）",
       highlight: true
     },
-
 {
       id: "n185", cat: "芯片厂商", source: "雷峰网", date: "2026-11-04",
       title: "后摩智能完成数十亿元 B 轮融资：端侧大模型 AI 芯片进入规模化兑现期，M50 已以 10W 功耗跑出 160 TOPS",
@@ -298,7 +310,6 @@ news: [
       imageCap: "后摩智能（图源：雷峰网）",
       highlight: false
     },
-
 {
       id: "n179", cat: "AI硬件", source: "VR陀螺", date: "2026-11-04",
       title: "Nothing 首款 AI 原生硬件定档 12 月出货：不带新屏幕、不可能做成 App，裴宇称之为「一件工具」",
@@ -310,7 +321,6 @@ news: [
       imageCap: "Nothing AI 原生硬件（图源：VR陀螺）",
       highlight: false
     },
-
 {
       id: "n182", cat: "AI硬件", source: "界面新闻", date: "2026-11-04",
       title: "影目发布一体式空间 AI 眼镜 INMO Future：双目 1080P 全彩+6DoF 空间锚定，无需连手机独立计算",
@@ -322,7 +332,6 @@ news: [
       imageCap: "INMO Future 空间智能眼镜（图源：凤凰财经）",
       highlight: false
     },
-
 {
       id: "n169", cat: "大模型厂商", source: "IT之家", date: "2026-11-04",
       title: "腾讯发布混元 Hy4 正式版：首次引入视觉理解跻身全球最强开源模型之列，权重近期开源",
@@ -334,7 +343,6 @@ news: [
       imageCap: "混元 Hy4 正式版发布（图源：IT之家）",
       highlight: true
     },
-
 {
       id: "n170", cat: "手机厂商", source: "新浪财经", date: "2026-11-04",
       title: "国行 Apple 智能今日开启 Beta 测试：Siri 可直接调用千问，12 月随 iOS 27.3 正式推送",
@@ -346,7 +354,6 @@ news: [
       imageCap: "国行 Apple 智能开测（图源：新浪财经）",
       highlight: false
     },
-
 {
       id: "n191", cat: "AI硬件", source: "Humanoids Daily", date: "2026-11-04",
       title: "苹果披露人形机器人控制系统 HALO：宇树 G1+千问模型零遥操作数据训练，360 次真实试验成功率 91%",
@@ -358,7 +365,6 @@ news: [
       imageCap: "苹果 HALO 控制宇树 G1（图源：Humanoids Daily）",
       highlight: true
     },
-
 {
       id: "n166", cat: "大模型厂商", source: "新浪科技", date: "2026-11-03",
       title: "MIT 提出「权重空间编程」：GPT-6 Astra 直接修改 Qwen 权重修复推理死循环，数学正确率从 7.9% 提至 48.1%",
@@ -370,7 +376,6 @@ news: [
       imageCap: "权重空间编程示意（图源：新浪科技）",
       highlight: false
     },
-
 {
       id: "n168", cat: "AI硬件", source: "IT之家", date: "2026-11-03",
       title: "联想开天发布首款信创 AI 主机：兆芯 KX-7000+后摩「力擎」LQ50 全国产异构算力，本地跑 35B 大模型",
@@ -382,7 +387,6 @@ news: [
       imageCap: "联想开天信创 AI 主机（图源：快科技）",
       highlight: false
     },
-
 {
       id: "n186", cat: "行业动态", source: "雷峰网", date: "2026-11-03",
       title: "谷歌×Mercor 发布工程 Agent 基准 PLE：85 项真实工程任务，最强 Agent 仅得 48.3%——91% 单项达标≠可交付",
@@ -395,67 +399,6 @@ news: [
       highlight: false
     },
 
-{
-      id: "n167", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-02",
-      title: "月之暗面发布 Kimi 游戏开发与创意工作解决方案：K3.1 Pro+Kimi Code+Work 三层组合，接入 Unity/UE/Blender 插件",
-      summary: "月之暗面正式发布「游戏开发与创意工作解决方案」——基于 Kimi K3.1 Pro 模型、Kimi Code 与 Kimi Work 系列 Agent 产品的组合方案，接入 Unity、Unreal Engine、Blender 等专业游戏开发工具插件，面向游戏团队的开发与创意工作流提效。这是 Kimi 继 K3.1 Pro（10-24 发布、11 月开放开源权重）之后向垂直行业工作流的第一次系统化落地。",
-      detail: "发布：11 月 2 日发布、11 月 3 日报道潮（搜狐/网易/观点网多源）。\n构成：K3.1 Pro（2.8 万亿参数旗舰）+ Kimi Code（代码）+ Kimi Work 系列 Agent（工作流编排）三层组合，接入 Unity/Unreal Engine/Blender 专业工具插件。\n定位：帮助游戏团队提升开发与创意工作效率——从设计、编码到资产制作的垂直行业方案。\n端侧视角：大模型厂商正从「发模型」转向「发行业工作流包」——游戏开发是 AI 渗透最快的创意产业之一，模型+代码+Agent 的三层组合与 Unity/UE 引擎插件的深度绑定，为国产模型在专业创意工具链的落地打了个样。",
-      tags: ["Kimi", "月之暗面", "游戏开发", "Agent", "工作流"],
-      url: "https://m.sohu.com/a/1096211105_655634",
-      image: "images/news/n167.png",
-      imageCap: "Kimi 游戏开发解决方案（图源：搜狐科技）",
-      highlight: false
-    },
-
-{
-      id: "n155", cat: "大模型厂商", source: "亿邦动力", date: "2026-11-02",
-      title: "美团发布 LongCat-2.5：1.6 万亿参数原生多模态、全程国产算力训练，面向长程智能体任务比肩国际闭源模型",
-      summary: "美团发布新一代大模型 LongCat-2.5——面向长程智能体任务的原生多模态模型，总参数 1.6 万亿，训练全程由国产算力完成，整体能力比肩国际成熟闭源模型与头部开源模型。在 6 月 LongCat-2.0（首次在国产算力上完成万亿参数全流程训练与推理）基础上，强化原生视觉理解与智能体编程，并优化国产算力上的长上下文训练与推理效率。王兴明确「不做 Token 工厂」，模型服务本地生活主业——配套 AI 经营工作台「妙手」已服务古茗、徐升记、益禾堂等连锁品牌。",
-      detail: "发布：11 月 2 日官宣，LongCat 系列第三代（2.0 于 6 月首次在国产算力完成万亿参数全流程训练与推理）。\n规格：总参数 1.6 万亿的原生多模态模型，训练全程国产算力；强化原生视觉理解与智能体编程能力，优化国产算力上的长上下文训练与推理效率——「国芯国模」再进一步。\n定位：CEO 王兴 8 月财报会口径——不会成为 Token 工厂，模型与 AI 产品用于支持主业、进入真实工作流解决真实问题。\n落地：技术博客案例显示模型可自主构建渠道利润表，识别支付 GMV 增长 23.2% 而渠道利润下降 1.7% 的增长质量问题并给出资源配置建议；AI 经营工作台「妙手」覆盖经营分析、门店管理与增长获客，已服务古茗、徐升记、益禾堂等连锁品牌。\n端侧视角：1.6 万亿参数全程国产算力训练是「国芯国模」路线的旗舰实证——国产算力从「能训练」走到「训出比肩闭源的旗舰」，为端侧蒸馏与量化提供了国产上游水源；智能体编程与长程任务能力也将沿妙手类工作台渗透到终端商家。",
-      tags: ["LongCat", "美团", "国产算力", "多模态", "智能体"],
-      url: "https://www.ebrun.com/20261102/718021.shtml",
-      image: "images/news/n155.png",
-      imageCap: "LongCat-2.5 技术博客案例（图源：亿邦动力）",
-      highlight: true
-    },
-
-{
-      id: "n156", cat: "行业动态", source: "财联社", date: "2026-11-02",
-      title: "趋境科技联合智谱与摩尔线程发布国产异构推理「AI Token 工厂」解决方案，打通模型—推理—芯片产业闭环",
-      summary: "趋境科技近日联合智谱与摩尔线程正式发布「国产异构推理高品质 AI Token 工厂解决方案」，率先打通「模型—推理—芯片」产业闭环，以底层系统工程重塑 Token 经济性——同等硬件投入下有效产出成倍提升，大幅降低综合成本。背景：趋境科技 10 月 26 日刚完成超 13 亿元 B 轮融资（年内累计 24 亿元），其 ATaaS 平台已在真实生产级环境实现国产芯片承载万亿级头部大模型。",
-      detail: "发布：11 月 2 日财联社电讯，趋境科技联合智谱（模型侧）与摩尔线程（芯片侧）发布联合方案，定位「国产异构推理高品质 AI Token 工厂」。\n闭环：方案打通「模型—推理—芯片」三层——智谱 GLM 系列模型、趋境 ATaaS 推理平台、摩尔线程国产 GPU，以底层系统工程重塑 Token 经济性，同等硬件投入下有效产出成倍提升。\n背景：趋境 10 月 26 日完成超 13 亿元 B 轮融资（年内累计 24 亿元），募集投向高品质 Token 产能扩张与推理底层技术研发；其平台已在真实生产级环境实现国产芯片承载万亿级头部大模型，整体性价比对标国际最领先算力。\n端侧视角：「Token 工厂」是端侧 AI 的云侧镜像——推理性价比的提升直接决定端云协同的分工边界（哪些任务留在端侧、哪些上云）；摩尔线程的「云-边-端」全栈矩阵意味着同一套国产推理栈有机会从云侧工厂延伸到边端设备。",
-      tags: ["Token工厂", "智谱", "摩尔线程", "国产算力", "推理"],
-      url: "https://www.cls.cn/detail/2522336",
-      image: "images/news/n156.png",
-      imageCap: "趋境科技（图源：腾讯新闻）",
-      highlight: false
-    },
-
-{
-      id: "n171", cat: "AI硬件", source: "IT之家", date: "2026-11-02",
-      title: "优必选发布具身智能仿真平台 Thinker-Sim：自研 Thinker-GS 高保真场景重建+SimReady 资产自动化生成，构建机器人训练与能力评测一站式体系",
-      summary: "优必选科技 11 月 2 日发布具身智能仿真平台 Thinker-Sim，构建覆盖真实场景数字化、规模化仿真数据合成、机器人能力评测的一站式技术体系。平台采用自研 Thinker-GS 高保真场景重建算法与全流程 SimReady 资产自动化生成技术，实现从真实场景采集、三维重建到仿真资产生成的高效转换，并内置标准化仿真任务模板，让真实世界快速进入仿真、验证机器人能力。",
-      detail: "发布：11 月 2 日优必选官宣（优必选公众号），IT之家一线报道。\n体系：一站式覆盖真实场景数字化、规模化仿真数据合成、机器人能力评测——基于真实工厂产线环境三维重建，可还原厂区空间布局、环境结构与视觉细节，并按训练、数据采集、算法评测等任务灵活加载机器人、生产设备、人员等前景资产。\n重建与资产：自研 Thinker-GS 高保真场景重建算法+全流程 SimReady 资产自动化生成——支持图文驱动的三维资产批量生成、低模拓扑优化、视觉材质生成与碰撞体自动配置，兼顾高质量视觉表现、物理仿真适配与规模化生产效率；可面向商业服务等场景快速生成数字孪生环境。\n评测：内置丰富的标准化仿真任务模板，覆盖机器人常用训练、数据合成与评测场景——无需从零搭建环境，模板选择与参数配置即可快速启动；支持仿真过程实时画面推流、任务状态监控与运行结果反馈。\n端侧视角：仿真平台是具身智能的「数据工厂」——真实世界高保真数字化与规模化数据合成直接决定机器人端侧策略的训练上限，标准化评测模板则让本体厂商能力对比有了统一基线；与 Genie 4（训练环境）、GO-3（基座模型）等共同补齐具身智能「训练-评测-部署」链路，头部本体厂商自建仿真基础设施的军备竞赛开打。",
-      tags: ["优必选", "Thinker-Sim", "具身智能", "仿真平台", "机器人评测"],
-      url: "https://www.ithome.com/1/020/888.htm",
-      image: "images/news/n171.png",
-      imageCap: "Thinker-Sim 具身智能仿真平台（图源：IT之家）",
-      highlight: false
-    },
-
-{
-      id: "n174", cat: "AI硬件", source: "IT之家", date: "2026-11-02",
-      title: "消息称三星首款 AI 眼镜 12 月中旬登陆韩国美国：骁龙 AR1 Gen 1+Android XR 集成 Gemini，无屏语音交互续航 9 小时",
-      summary: "据 TrendForce 11 月 2 日报道，三星计划 12 月中旬在韩国和美国推出品牌首款 AI 智能眼镜（命名暂定 Intelligent Eyewear，售价未定），首发市场不包括欧洲、中国和日本。该产品预计搭载高通骁龙 AR1 Gen 1 处理器、单次充电续航最长 9 小时，基于谷歌 Android XR 平台集成 Gemini AI，无显示屏、以语音交互为主，提供实时翻译与语音导航。",
-      detail: "传闻：TrendForce 11 月 2 日报道（三星尚未官宣，标题保留「消息称」口径）；12 月中旬韩国、美国首发，先评估两地需求与用户反馈再决定是否扩大市场。\n规格：预计搭载高通骁龙 AR1 Gen 1 处理器，单次充电续航最长 9 小时；基于谷歌 Android XR 平台、集成 Gemini AI，通过摄像头和麦克风感知环境，提供实时翻译、语音导航等功能；可拍摄文件与会议场景并将信息整理到 Galaxy 手机笔记 App；无显示屏，主要通过语音交互。\n设计：三星已与 Gentle Monster、Warby Parker 合作——今年 5 月 Google I/O 展示两种设计方案，上月伦敦 Galaxy Unpacked 活动另现两款设计。\n竞争：Meta 已深耕智能眼镜多年、产品覆盖高中低价格段；XREAL AURA 作为首款 Android XR 智能 AR 眼镜预计 11 月中旬在美国、加拿大、日本、韩国出货。\n端侧视角：骁龙 AR1 Gen 1+云端 Gemini 的组合延续 Meta Ray-Ban 范式——眼镜端侧只承担感知与音频交互、重推理放在云端，9 小时续航正是无屏轻负载设计的红利；安卓 XR 阵营（谷歌平台+三星整机+XREAL 先行出货）对 Meta 的合围将在 12 月正式开打，AI 眼镜「无屏语音+有屏 XR」双路线并进。",
-      tags: ["三星", "AI眼镜", "Android XR", "Gemini", "TrendForce"],
-      url: "https://www.ithome.com/1/020/866.htm",
-      image: "images/news/n174.jpg",
-      imageCap: "三星首款 AI 眼镜设计示意（图源：IT之家）",
-      highlight: false
-    },
-
-  ],
 papers: [
     {
       id: "p1", group: "recent", cat: "推理与系统", date: "2026-10-20",
