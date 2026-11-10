@@ -15,14 +15,58 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 47 期",
-    weekRange: "2026.11.03 — 11.09 · 近 7 天",
-    updated: "2026-11-09",
+    weekRange: "2026.11.04 — 11.10 · 近 7 天",
+    updated: "2026-11-10",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：千问办公 2.0 Team Agent（首个多人×Agent 协作）、微信鸿蒙版破 9000 万次安装（鸿蒙终端本月预计破亿）、Gentle Monster 谷歌三星 AI 眼镜定档 11 月 12 日预订。"
+    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：智元 WITA-Omni 具身全模态交互大模型正式版（全双工 400ms+免唤醒词）、蚂蚁灵波开源 LingBot-Touch 触觉基础模型、影目召回 4701 副 INMO AIR3（中美双召回闭环）、华为 MateBook Fold S 鸿蒙小折叠电脑三色官宣（11-14 预订）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+      id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
+      title: "智元发布 WITA-Omni 全模态大模型正式版：行业首个具身全模态端到端交互模型，触觉+本体状态输入、免唤醒词全双工",
+      summary: "智元正式发布 WITA-Omni（硅光动语全模态大模型）——行业首个具身全模态端到端交互大模型：基于机器人本体感知数据深度训练，在音视频之外新增触觉、本体状态等输入与动作、表情等输出；流式全双工架构实现边听、边想、边应、边动、边做表情，交互响应最快约 400 毫秒、平均约 600 毫秒（较业内平均快近 3 倍）；全模态拒识让机器人免唤醒词自然对话，支持上百种语言方言免切换交流与流式同传。",
+      detail: "发布：11 月 10 日晚间智元公众号官宣（IT之家 19:24 首发报道）。\n模态：音视频+触觉+本体状态输入；动作+表情输出——为物理世界而生的「交互大脑」。\n全双工：流式架构边听边想边应边动边做表情；最快约 400ms、平均约 600ms 响应，快业内近 3 倍。\n拒识：结合朝向/视频/音频/声纹/唇动/姿态/语义/上下文决策是否回应——多人交谈与环境广播下大幅降低误触发，全程免唤醒词。\n表现：几十种情绪按不同强度呈现；复杂内容在面部屏幕实时可视化；主动互动（迎宾握手/点赞回应/挥手相送）。\n前史：7 月 Preview 以 85.21 分登顶 DailyOmni 全模态理解榜（超千问/Gemini/豆包/英伟达），八项细分指标六项第一。\n端侧视角：具身交互的「全双工+免唤醒词」组合把机器人从指令式应答推进到在场式社交——400ms 响应与多模态拒识必须在本体侧闭环完成，云端链路做不到；与蚂蚁灵波触觉模型同日开源，具身智能的感知-交互栈正被中国公司分层补齐。",
+      tags: ["智元", "WITA-Omni", "具身智能", "全模态", "全双工"],
+      url: "https://www.ithome.com/1/025/122.htm",
+      image: "images/news/n218.jpg",
+      imageCap: "智元 WITA-Omni 发布（图源：IT之家）",
+      highlight: true
+    },
+{
+      id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
+      title: "蚂蚁灵波开源 LingBot-Touch 触觉基础模型：为通用大脑接入「手感」，26 项真机任务成功率提升 14-26 个百分点",
+      summary: "蚂蚁灵波开源具身触觉基础模型 LingBot-Touch——从「一脑多机」走向「一脑多手」，让机器人通用大脑获得可跨硬件复用的触觉「手感」：26 项真机测试任务成功率提升 14 至 26 个百分点。灵波 CEO 朱兴同日谈 Anthropic Fable 5.2：交互大模型与触觉基础模型两类协同将加速具身产业成熟。",
+      detail: "开源：11 月 10 日（IT之家/量子位/36 氪多源）。\n能力：触觉基础模型——为通用大脑接入「手感」；跨硬件复用（一脑多手）；26 项真机任务成功率提升 14-26 个百分点。\n背景：蚂蚁灵波 10 月底携机器人通用大脑亮相乌镇（一脑多机），触觉是通用大脑的最后几块感知拼图之一。\n呼应：智元同日发布 WITA-Omni 交互大模型——具身「交互大脑」与「触觉手感」同日双发。\n端侧视角：视觉模型可以云端生成、触觉必须端侧闭环——指尖力控与材质感知的延迟容忍是毫秒级，LingBot-Touch 开源等于把具身最难本地化的感知通道做成公共组件；机器人技术栈「VLM 层+触觉层」的分层生态正在成形。",
+      tags: ["蚂蚁灵波", "LingBot-Touch", "触觉模型", "具身智能", "开源"],
+      url: "https://www.ithome.com/1/024/701.htm",
+      image: "images/news/n219.png",
+      imageCap: "LingBot-Touch 触觉基础模型（图源：IT之家）",
+      highlight: false
+    },
+{
+      id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
+      title: "影目召回 4701 副 INMO AIR3 智能眼镜并提供 OTA 免费升级：此前已在美国召回，曾称国内用户不受影响",
+      summary: "影目科技宣布召回 4701 副 INMO AIR3 智能眼镜并进行 OTA 免费升级——此前该产品已在美国市场召回，官方曾表示国内用户不受影响，本次国内召回完成跨国售后闭环。这是 AI 眼镜品类进入大规模交付期后的首批千人级召回之一，质量与售后体系开始成为品类竞争变量。",
+      detail: "召回：11 月 10 日宣布，涉及 4701 副 INMO AIR3，OTA 免费升级方式（候选库 dom=2）。\n前情：此前已在美国召回同款，官方曾称国内用户不受影响——本次国内召回使跨国售后口径回归一致。\n端侧视角：AI 眼镜从首发抢跑进入交付质量竞争——眼镜是全天佩戴设备，OTA 修复能力（而非返厂）决定召回成本；百镜大战的下一轮分化变量将从参数转向质量体系与售后响应，首批千人级召回为全行业上了合规课。",
+      tags: ["影目", "INMO AIR3", "AI眼镜", "召回", "OTA升级"],
+      url: "https://www.ithome.com/1/024/893.htm",
+      image: "images/news/n220.jpg",
+      imageCap: "影目 INMO AIR3 召回（图源：IT之家）",
+      highlight: false
+    },
+{
+      id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
+      title: "华为 MateBook Fold S 鸿蒙小折叠电脑三色公布：全新背屏设计+Live 小方屏，11 月 14 日开启预订",
+      summary: "华为公布 MateBook Fold S 鸿蒙小折叠电脑三色外观——全新背屏设计搭载 Live 小方屏，11 月 14 日开启预订。继首款鸿蒙台式机擎云 HM650 与 MateBook 鸿蒙版之后，鸿蒙 PC 产品线再落一子，折叠形态与外副屏交互进入鸿蒙生态。",
+      detail: "官宣：11 月 10 日三色外观公布（余承东预告预热序列）。\n节点：11 月 14 日开启预订。\n形态：小折叠电脑+背屏 Live 小方屏——外副屏承载息屏显示、通知与助手入口类交互。\n序列：华为 PC 线本周期密集落子——擎云 HM650 首款鸿蒙台式机（麒麟 X90）、MateBook 鸿蒙版、MateBook Fold S 折叠新形态。\n端侧视角：Live 小方屏是鸿蒙 PC 的端侧 AI 新交互面——外副屏天然适合常显智能体状态与提醒（手机灵动胶囊的 PC 化）；折叠+副屏组合若配合小艺智能体，将定义鸿蒙 PC 区别于 Windows AI PC 的交互身份。",
+      tags: ["华为", "MateBook Fold S", "鸿蒙PC", "折叠电脑", "副屏"],
+      url: "https://www.ithome.com/1/024/600.htm",
+      image: "images/news/n221.jpg",
+      imageCap: "MateBook Fold S 三色外观（图源：IT之家）",
+      highlight: false
+    },
 {
       id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
       title: "阿里发布千问办公 2.0：从个人助手升级 Team Agent，首个支持多人与 Agent 协作",
@@ -34,7 +78,6 @@ news: [
       imageCap: "千问办公 2.0 官方发布原文（图源：千问办公公众号）",
       highlight: true
     },
-
 {
       id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
       title: "微信鸿蒙版安装量超 9000 万次：HarmonyOS 终端用户本月预计突破 1 亿大关",
@@ -46,7 +89,6 @@ news: [
       imageCap: "微信鸿蒙版安装量突破 9000 万（图源：IT之家）",
       highlight: false
     },
-
 {
       id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09",
       title: "Gentle Monster 首款 AI 眼镜定档：携手谷歌与三星、搭载 Gemini，11 月 12 日美国开启预订",
@@ -57,7 +99,9 @@ news: [
       image: "images/news/n216.jpg",
       imageCap: "Gentle Monster Intelligent Eyewear（图源：官网）",
       highlight: false
-    },{
+    },
+
+{
       id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
       title: "中国移动×智谱签署合作协议：GLM 系列模型接入移动云 MaaS 平台，国产算力到大模型服务全链合作",
       summary: "中国移动云公司与智谱签署合作协议——双方围绕国产算力、大模型服务和 AI 商业化展开深度合作，智谱 GLM 系列模型将接入移动云 MaaS 平台，合作涵盖 Token 技术创新、模型服务、产品打造、行业方案等，覆盖从底层算力供给、模型服务到商业化分发的完整产业链。",
@@ -68,6 +112,7 @@ news: [
       imageCap: "中国移动×智谱合作（图源：IT之家）",
       highlight: false
     },
+
 {
       id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
       title: "物理智能开源平台 Hitch Open 进博会全球发布：双机自主对打乒乓球 142 拍刷新世界纪录，0.3 秒完成感知决策",
@@ -79,6 +124,7 @@ news: [
       imageCap: "Hitch Open 展台机器人乒乓对打（图源：中新经纬）",
       highlight: false
     },
+
 {
       id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
       title: "2026 款奔驰长轴距 E 级上市 42.38 万元起：奔驰中国首次独立开发 AI 座舱，深度融合豆包大模型",
@@ -90,6 +136,7 @@ news: [
       imageCap: "2026 款长轴距 E 级（图源：凤凰汽车）",
       highlight: false
     },
+
 {
       id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
       title: "京东×酷派把品牌 AI 眼镜打到 322 元：C2M 定制+国补首批进入百元档，光波导眼镜销量同比增 3 倍",
@@ -101,6 +148,7 @@ news: [
       imageCap: "京东×酷派 AI 智能眼镜（图源：凤凰网）",
       highlight: false
     },
+
 {
       id: "n189", cat: "AI硬件", source: "凤凰网", date: "2026-11-06",
       title: "智元发布灵犀 X2 焕新版双足人形机器人：旗舰版 31 自由度+选配灵巧手达 47 自由度，面向展馆文旅导览",
@@ -112,6 +160,7 @@ news: [
       imageCap: "灵犀 X2 焕新版（图源：凤凰网）",
       highlight: false
     },
+
 {
       id: "n188", cat: "手机厂商", source: "凤凰网科技", date: "2026-11-06",
       title: "Googlebook 11 月更新：端侧 AI 内存常驻占用压缩近 40%，16GB 机型最多释放 6GB 运行内存",
@@ -123,6 +172,7 @@ news: [
       imageCap: "Googlebook 11 月更新（图源：凤凰网科技）",
       highlight: false
     },
+
 {
       id: "n183", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-06",
       title: "蚂蚁百灵发布 Ling-3.2-Flash：560B MoE 激活 25B 原生多模态，三项基准超越 Claude Opus 5",
@@ -134,6 +184,7 @@ news: [
       imageCap: "Ling-3.2-Flash 发布（图源：凤凰科技）",
       highlight: false
     },
+
 {
       id: "n194", cat: "行业动态", source: "中新社", date: "2026-11-06",
       title: "工信部印发智能体终端进网管理新规：预置智能体的手机/平板/可穿戴须过适配验证与反诈评测，智能体将配唯一身份标识",
@@ -145,6 +196,7 @@ news: [
       imageCap: "智能体互联系列国家标准应用推进专题会现场（图源：北京日报）",
       highlight: true
     },
+
 {
       id: "n195", cat: "手机厂商", source: "搜狐科技", date: "2026-11-06",
       title: "阶跃 STEPX Neo 智能体手机进博首秀：亮相高通展台，3999 元软硬模三位一体定价开放近百应用生态",
@@ -156,6 +208,7 @@ news: [
       imageCap: "STEPX Neo 智能体手机（图源：搜狐科技）",
       highlight: false
     },
+
 {
       id: "n196", cat: "AI硬件", source: "东方财富", date: "2026-11-06",
       title: "宇树×巨星传奇进博会首发收藏机器狗 UNI-DOGGIE：4.39 万元全球限量 2000 台，威刚首发采购 1000 台",
@@ -167,6 +220,7 @@ news: [
       imageCap: "UNI-DOGGIE 收藏机器狗（图源：腾讯新闻）",
       highlight: false
     },
+
 {
       id: "n202", cat: "行业动态", source: "路透社", date: "2026-11-06",
       title: "马斯克官宣 Cybertruck 收尾：2027 年中德州工厂转向 Cybercab 产能，公司资源重心移向机器人与 AI",
@@ -178,6 +232,7 @@ news: [
       imageCap: "特斯拉 Cybertruck（图源：新浪财经）",
       highlight: false
     },
+
 {
       id: "n187", cat: "大模型厂商", source: "凤凰网", date: "2026-11-05",
       title: "Kimi K3.1 Pro 权重如约开源：登顶 Agent Arena 开放模型榜首，2.8 万亿参数额外算力全部投入强化学习",
@@ -189,6 +244,7 @@ news: [
       imageCap: "K3.1 Pro 权重开源（图源：凤凰网）",
       highlight: false
     },
+
 {
       id: "n184", cat: "大模型厂商", source: "第一财经", date: "2026-11-05",
       title: "百度开源文心 5.5 Flash Base：280B 总参激活仅 14B，33.5T tokens 从零预训练刷新同尺寸 SOTA",
@@ -200,6 +256,7 @@ news: [
       imageCap: "文心 5.5 Flash Base 开源（图源：moomoo 资讯）",
       highlight: false
     },
+
 {
       id: "n180", cat: "芯片厂商", source: "凤凰科技", date: "2026-11-05",
       title: "高通进博会全球首展 6G 终端原型机：AI Recall 眼镜以每秒 2 帧拍摄+边缘侧 AI 处理，6G 作为 AI 原生网络",
@@ -211,6 +268,7 @@ news: [
       imageCap: "高通 6G 终端原型机进博会展出（图源：IT之家）",
       highlight: false
     },
+
 {
       id: "n181", cat: "行业关注事件", source: "新浪科技", date: "2026-11-05",
       title: "Neuralink 第 22 位植入者意念操控 Matic 扫地机器人：植入 28 小时后即实现，脑机接口从屏幕走进物理世界",
@@ -222,6 +280,7 @@ news: [
       imageCap: "意念操控扫地机器人演示（图源：新浪科技）",
       highlight: false
     },
+
 {
       id: "n178", cat: "端侧Agent", source: "IT之家", date: "2026-11-05",
       title: "月之暗面发布 Kimi Hosted Agents 托管智能体：Harness 作为云端服务提供，有状态会话+持久沙箱+纯 HTTP 接入",
@@ -233,6 +292,7 @@ news: [
       imageCap: "Kimi Hosted Agents 发布（图源：IT之家）",
       highlight: false
     },
+
 {
       id: "n177", cat: "行业关注事件", source: "财联社", date: "2026-11-05",
       title: "端侧 AI 概念集体大涨：润欣科技 20cm 涨停、乐鑫科技创历史新高，千问国行 Apple 智能开测点燃端侧主线",
@@ -244,6 +304,7 @@ news: [
       imageCap: "端侧 AI 概念集体走强（图源：凤凰财经）",
       highlight: false
     },
+
 {
       id: "n176", cat: "芯片厂商", source: "快科技", date: "2026-11-05",
       title: "国科微规划 GK6950 端侧 AI 芯片：面向人机交互与具身智能，配套 GK-VGGT-SLAM 流式空间智能方案",
@@ -255,6 +316,7 @@ news: [
       imageCap: "国科微端侧 AI 布局（图源：快科技）",
       highlight: false
     },
+
 {
       id: "n192", cat: "AI硬件", source: "IT之家", date: "2026-11-05",
       title: "华为擎云发布首款鸿蒙台式机 HM650 系列：麒麟 X90 桌面处理器，100% 国产化率面向政企市场",
@@ -266,6 +328,7 @@ news: [
       imageCap: "华为擎云 HM650 首款鸿蒙台式机（图源：IT之家）",
       highlight: false
     },
+
 {
       id: "n193", cat: "AI硬件", source: "凤凰网", date: "2026-11-05",
       title: "新华社×优必选发布全球首个仿生人形机器人新闻主播「新言」「新语」：张艺谋任形象主创，1:1 真人比例",
@@ -277,6 +340,7 @@ news: [
       imageCap: "仿生人形机器人新闻主播「新言」「新语」（图源：搜狐）",
       highlight: false
     },
+
 {
       id: "n200", cat: "手机厂商", source: "凤凰汽车", date: "2026-11-05",
       title: "比亚迪×vivo 签署战略合作：迪迪虾×蓝心小 V 双智能体跨端融合，首发落地腾势 N8 巨幕座舱",
@@ -288,6 +352,7 @@ news: [
       imageCap: "比亚迪×vivo 战略合作（图源：凤凰汽车）",
       highlight: false
     },
+
 {
       id: "n201", cat: "端侧Agent", source: "IT之家", date: "2026-11-05",
       title: "DeepSeek Harness 披露生态数据：日活 154 万、日耗 92 万亿 Token、3.5 万插件，官方插件市场将至",
@@ -299,6 +364,7 @@ news: [
       imageCap: "DeepSeek Harness（图源：IT之家）",
       highlight: true
     },
+
 {
       id: "n185", cat: "芯片厂商", source: "雷峰网", date: "2026-11-04",
       title: "后摩智能完成数十亿元 B 轮融资：端侧大模型 AI 芯片进入规模化兑现期，M50 已以 10W 功耗跑出 160 TOPS",
@@ -310,6 +376,7 @@ news: [
       imageCap: "后摩智能（图源：雷峰网）",
       highlight: false
     },
+
 {
       id: "n179", cat: "AI硬件", source: "VR陀螺", date: "2026-11-04",
       title: "Nothing 首款 AI 原生硬件定档 12 月出货：不带新屏幕、不可能做成 App，裴宇称之为「一件工具」",
@@ -321,6 +388,7 @@ news: [
       imageCap: "Nothing AI 原生硬件（图源：VR陀螺）",
       highlight: false
     },
+
 {
       id: "n182", cat: "AI硬件", source: "界面新闻", date: "2026-11-04",
       title: "影目发布一体式空间 AI 眼镜 INMO Future：双目 1080P 全彩+6DoF 空间锚定，无需连手机独立计算",
@@ -332,6 +400,7 @@ news: [
       imageCap: "INMO Future 空间智能眼镜（图源：凤凰财经）",
       highlight: false
     },
+
 {
       id: "n169", cat: "大模型厂商", source: "IT之家", date: "2026-11-04",
       title: "腾讯发布混元 Hy4 正式版：首次引入视觉理解跻身全球最强开源模型之列，权重近期开源",
@@ -343,6 +412,7 @@ news: [
       imageCap: "混元 Hy4 正式版发布（图源：IT之家）",
       highlight: true
     },
+
 {
       id: "n170", cat: "手机厂商", source: "新浪财经", date: "2026-11-04",
       title: "国行 Apple 智能今日开启 Beta 测试：Siri 可直接调用千问，12 月随 iOS 27.3 正式推送",
@@ -354,6 +424,7 @@ news: [
       imageCap: "国行 Apple 智能开测（图源：新浪财经）",
       highlight: false
     },
+
 {
       id: "n191", cat: "AI硬件", source: "Humanoids Daily", date: "2026-11-04",
       title: "苹果披露人形机器人控制系统 HALO：宇树 G1+千问模型零遥操作数据训练，360 次真实试验成功率 91%",
