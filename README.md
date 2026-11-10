@@ -23,7 +23,7 @@
 | 2026-11-05 | [月之暗面发布 Kimi Hosted Agents 托管智能体：Harness 作为云端服务提供，有状态会话+持久沙箱+纯 HTTP 接入](https://www.ithome.com/1/022/572.htm) | IT之家 |
 | 2026-11-05 | [DeepSeek Harness 披露生态数据：日活 154 万、日耗 92 万亿 Token、3.5 万插件，官方插件市场将至](https://www.sohu.com/a/1097925514_99900743) | IT之家 |
 
-### AI硬件（10 条）
+### AI硬件（9 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -36,7 +36,6 @@
 | 2026-11-04 | [Nothing 首款 AI 原生硬件定档 12 月出货：不带新屏幕、不可能做成 App，裴宇称之为「一件工具」](https://www.vrtuoluo.cn/546344.html) | VR陀螺 |
 | 2026-11-04 | [影目发布一体式空间 AI 眼镜 INMO Future：双目 1080P 全彩+6DoF 空间锚定，无需连手机独立计算](https://www.jiemian.com/article/15293631.html) | 界面新闻 |
 | 2026-11-04 | [苹果披露人形机器人控制系统 HALO：宇树 G1+千问模型零遥操作数据训练，360 次真实试验成功率 91%](https://www.humanoidsdaily.com/news/apple-halo-humanoid-synthetic-data-unitree-g1) | Humanoids Daily |
-| 2026-11-03 | [联想开天发布首款信创 AI 主机：兆芯 KX-7000+后摩「力擎」LQ50 全国产异构算力，本地跑 35B 大模型](https://www.ithome.com/1/021/779.htm) | IT之家 |
 
 ### 芯片厂商（3 条）
 
@@ -55,7 +54,7 @@
 | 2026-11-05 | [比亚迪×vivo 签署战略合作：迪迪虾×蓝心小 V 双智能体跨端融合，首发落地腾势 N8 巨幕座舱](https://auto.ifeng.com/c/8xodh2DImWJ) | 凤凰汽车 |
 | 2026-11-04 | [国行 Apple 智能今日开启 Beta 测试：Siri 可直接调用千问，12 月随 iOS 27.3 正式推送](https://k.sina.com.cn/article_5952915705_162d248f906703sd1i.html) | 新浪财经 |
 
-### 大模型厂商（5 条）
+### 大模型厂商（4 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -63,9 +62,8 @@
 | 2026-11-05 | [Kimi K3.1 Pro 权重如约开源：登顶 Agent Arena 开放模型榜首，2.8 万亿参数额外算力全部投入强化学习](https://original.ifeng.com/c/8xnSmAvsf1e) | 凤凰网 |
 | 2026-11-05 | [百度开源文心 5.5 Flash Base：280B 总参激活仅 14B，33.5T tokens 从零预训练刷新同尺寸 SOTA](https://www.yicai.com/brief/103428150.html) | 第一财经 |
 | 2026-11-04 | [腾讯发布混元 Hy4 正式版：首次引入视觉理解跻身全球最强开源模型之列，权重近期开源](https://www.ithome.com/1/022/035.htm) | IT之家 |
-| 2026-11-03 | [MIT 提出「权重空间编程」：GPT-6 Astra 直接修改 Qwen 权重修复推理死循环，数学正确率从 7.9% 提至 48.1%](https://finance.sina.com.cn/tech/roll/2026-11-03/doc-inixkzym8904144.shtml) | 新浪科技 |
 
-### 行业动态（6 条）
+### 行业动态（5 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -74,7 +72,6 @@
 | 2026-11-07 | [京东×酷派把品牌 AI 眼镜打到 322 元：C2M 定制+国补首批进入百元档，光波导眼镜销量同比增 3 倍](https://feng.ifeng.com/c/8xqtFAaroQ8) | 凤凰网 |
 | 2026-11-06 | [工信部印发智能体终端进网管理新规：预置智能体的手机/平板/可穿戴须过适配验证与反诈评测，智能体将配唯一身份标识](https://wap.eastmoney.com/a/202611063924763462.html) | 中新社 |
 | 2026-11-06 | [马斯克官宣 Cybertruck 收尾：2027 年中德州工厂转向 Cybercab 产能，公司资源重心移向机器人与 AI](https://www.worldjournal.com/wj/story/121172/9863563?zh-cn) | 路透社 |
-| 2026-11-03 | [谷歌×Mercor 发布工程 Agent 基准 PLE：85 项真实工程任务，最强 Agent 仅得 48.3%——91% 单项达标≠可交付](https://www.leiphone.com/category/ai/YZ0bP2vh94KY45RG.html) | 雷峰网 |
 
 ## 科研前沿（10 篇）
 

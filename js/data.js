@@ -364,40 +364,8 @@ news: [
       image: "images/news/n191.webp",
       imageCap: "苹果 HALO 控制宇树 G1（图源：Humanoids Daily）",
       highlight: true
-    },
-{
-      id: "n166", cat: "大模型厂商", source: "新浪科技", date: "2026-11-03",
-      title: "MIT 提出「权重空间编程」：GPT-6 Astra 直接修改 Qwen 权重修复推理死循环，数学正确率从 7.9% 提至 48.1%",
-      summary: "MIT 研究人员提出「权重空间编程」（Weight-Space Programming）：让 GPT-6 Astra 直接分析并修改 Qwen3.5-0.8B 的神经网络权重——无需梯度下降或重新训练，仅改动约 0.016% 的参数，MATH-500 测试正确率即从 7.9% 提升至 48.1%（约 6 倍），指令遵循能力也提升近两倍。Astra 检查权重后定位到导致模型反复陷入推理循环的关键问题——有评论指出「修的是死循环，不是智商」。",
-      detail: "发布：11 月 3 日多源报道（36氪/新浪/凤凰/知乎），MIT 团队工作公开。\n方法：权重空间编程——大模型（GPT-6 Astra）阅读另一个小模型（Qwen3.5-0.8B）的内部权重并直接修改，绕过梯度下降与重新训练的完整流程。\n结果：仅改动约 0.016% 参数，MATH-500 正确率 7.9%→48.1%（约 6 倍）；指令遵循能力提升近两倍。\n边界：Astra 修复的是「反复陷入推理循环」的权重病灶而非全面提升智力——「修的是死循环，不是智商」；能力上限与泛化范围仍待同行检验。\n端侧视角：「模型修理模型」的新范式——若权重手术可由强模型在本地完成，端侧小模型的自修复/自优化就有了技术路径；0.016% 的改动量也意味着修复包极小，端侧模型的「补丁分发」在工程上可行。",
-      tags: ["MIT", "权重空间编程", "GPT-6", "Qwen", "模型修复"],
-      url: "https://finance.sina.com.cn/tech/roll/2026-11-03/doc-inixkzym8904144.shtml",
-      image: "images/news/n166.png",
-      imageCap: "权重空间编程示意（图源：新浪科技）",
-      highlight: false
-    },
-{
-      id: "n168", cat: "AI硬件", source: "IT之家", date: "2026-11-03",
-      title: "联想开天发布首款信创 AI 主机：兆芯 KX-7000+后摩「力擎」LQ50 全国产异构算力，本地跑 35B 大模型",
-      summary: "联想开天发布首款信创 AI 主机——兆芯开先 KX-7000 八核处理器（自研内核微架构+Chiplet）搭配后摩智能「力擎」LQ50 NPU，本地算力 160 TOPS（INT8）、最高可选 320 TOPS 配置，可本地运行 35B 量级大模型；预装麒麟操作系统与天禧 AI Pro 智能体。国产 ZX86 CPU 与国产 NPU 协同的异构架构实现「全链路国产化」，1.6 升机身支持 7×24 小时自主执行 AI 任务，面向政企敏感数据闭环场景。",
-      detail: "发布：11 月 3 日发布（IT之家/新浪/快科技多源）。\n配置：兆芯开先 KX-7000 八核（自研内核微架构+Chiplet 技术）+ 后摩智能「力擎」LQ50 NPU——本地算力 160 TOPS INT8，最高可选 320 TOPS；可本地运行 35B 量级大模型。\n软件：预装麒麟操作系统与天禧 AI Pro 智能体。\n形态：1.6 升紧凑机身，支持 7×24 小时自主执行 AI 任务。\n端侧视角：「全链路国产化」的端侧算力样板——国产 CPU+国产 NPU+国产 OS+国产智能体第一次在 1.6 升主机里配齐完整闭环，160-320 TOPS 本地算力把 35B 模型拉进政企桌面的敏感数据场景，信创市场从「能用」走向「能跑 AI」的标志性产品。",
-      tags: ["联想", "信创", "AI主机", "兆芯", "后摩智能"],
-      url: "https://www.ithome.com/1/021/779.htm",
-      image: "images/news/n168.png",
-      imageCap: "联想开天信创 AI 主机（图源：快科技）",
-      highlight: false
-    },
-{
-      id: "n186", cat: "行业动态", source: "雷峰网", date: "2026-11-03",
-      title: "谷歌×Mercor 发布工程 Agent 基准 PLE：85 项真实工程任务，最强 Agent 仅得 48.3%——91% 单项达标≠可交付",
-      summary: "Google 与 Mercor 11 月 3 日发布 Physical-Engineering's Last Exam（PLE）：85 项机械、电气、土木与结构工程任务（机械 30/电气 27/土木 18/结构 10），平均每项约 61 份真实工程文件（PDF/表格/邮件/CAD/BIM，混有作废版本作陷阱）。56 项隐藏测试中 Claude Opus 5.5+Claude Code 得分 48.3%（GPT 6 Astra 45.8%、Gemini 4 Argon 40.6%）；共同创作任务里它平均满足 91% 的单项约束，却只有 41.3% 的交付设计通过全部硬性安全与可行性检查。",
-      detail: "发布要点：11 月 3 日 Google AI & Infrastructure 研究团队与 Mercor 联合发布，属「Last Exam」系列第三弹（继 Humanity's Last Exam 考知识、Agents' Last Exam 考数字工作之后，考物理世界的工程交付）；44 项任务由持证工程师编写、41 项由 Creator-Solver 对抗机制生成，已开放 29 项公开任务与评测容器。\n为什么难：PLE 采用硬约束门控——全部安全与可行性硬检查通过后才能拿成本优化分；工程设计约束相互耦合（管径→水阻→水泵工况→换热能力），改一处牵动全盘；85 项任务累计 5170 份文件且引用关系复杂，模型要维护带依赖关系的设计状态。同一模型同一任务跑 3 次，单任务得分平均跨度达 15.4 个百分点。\n端侧视角：PLE 的两个发现对端侧 Agent 直接成立——「单项能力达标≠整体可交付」，端侧 Agent 评估也要看全约束通过率而非单项分；「验证器是 Agent 核心基建」，本地长流程 Agent 资源更紧，增量检查与状态失效传播机制（改什么重算什么）是端侧落地工程 Agent 的前置件。",
-      tags: ["Google", "Mercor", "Agent基准", "工程Agent"],
-      url: "https://www.leiphone.com/category/ai/YZ0bP2vh94KY45RG.html",
-      image: "images/news/n183.jpg",
-      imageCap: "PLE：工程 Agent 的可行域瓶颈（图：雷峰网）",
-      highlight: false
-    },
+    }
+  ],
 
 papers: [
     {
