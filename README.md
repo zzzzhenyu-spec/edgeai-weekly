@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 47 期（2026.11.04 — 11.10 · 近 7 天）
+## 2026 · 第 47 期（2026.11.05 — 2026.11.11 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。 今日新增：智元 WITA-Omni 具身全模态交互大模型正式版（全双工 400ms+免唤醒词）、蚂蚁灵波开源 LingBot-Touch 触觉基础模型、影目召回 4701 副 INMO AIR3（中美双召回闭环）、华为 MateBook Fold S 鸿蒙小折叠电脑三色官宣（11-14 预订）。
+**近 7 天导读**：近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。 今日新增：麒麟 9050 官方详解（30B MoE 端侧离线仅占 2.5GB 内存）、Qwen4 预览版上线、谷歌 Pixel 引入类 PCC 私有云方案、Meta 开源 Muse Ember 轻量 Agent 执行模型。
 
 ## 近 7 天速览
 
@@ -23,7 +23,7 @@
 | 2026-11-05 | [月之暗面发布 Kimi Hosted Agents 托管智能体：Harness 作为云端服务提供，有状态会话+持久沙箱+纯 HTTP 接入](https://www.ithome.com/1/022/572.htm) | IT之家 |
 | 2026-11-05 | [DeepSeek Harness 披露生态数据：日活 154 万、日耗 92 万亿 Token、3.5 万插件，官方插件市场将至](https://www.sohu.com/a/1097925514_99900743) | IT之家 |
 
-### AI硬件（11 条）
+### AI硬件（8 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -35,37 +35,35 @@
 | 2026-11-06 | [宇树×巨星传奇进博会首发收藏机器狗 UNI-DOGGIE：4.39 万元全球限量 2000 台，威刚首发采购 1000 台](https://finance.eastmoney.com/a/202611063924713248.html) | 东方财富 |
 | 2026-11-05 | [华为擎云发布首款鸿蒙台式机 HM650 系列：麒麟 X90 桌面处理器，100% 国产化率面向政企市场](https://www.ithome.com/1/022/834.htm) | IT之家 |
 | 2026-11-05 | [新华社×优必选发布全球首个仿生人形机器人新闻主播「新言」「新语」：张艺谋任形象主创，1:1 真人比例](https://m.sohu.com/a/1097892604_122014422) | 凤凰网 |
-| 2026-11-04 | [Nothing 首款 AI 原生硬件定档 12 月出货：不带新屏幕、不可能做成 App，裴宇称之为「一件工具」](https://www.vrtuoluo.cn/546344.html) | VR陀螺 |
-| 2026-11-04 | [影目发布一体式空间 AI 眼镜 INMO Future：双目 1080P 全彩+6DoF 空间锚定，无需连手机独立计算](https://www.jiemian.com/article/15293631.html) | 界面新闻 |
-| 2026-11-04 | [苹果披露人形机器人控制系统 HALO：宇树 G1+千问模型零遥操作数据训练，360 次真实试验成功率 91%](https://www.humanoidsdaily.com/news/apple-halo-humanoid-synthetic-data-unitree-g1) | Humanoids Daily |
 
 ### 芯片厂商（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-11 | [华为官方详解麒麟 9050 系列：新一代达芬奇 NPU 性能提升 140%，30B MoE 全模态大模型端侧离线运行仅占 2.5GB 内存](https://original.ifeng.com/c/8xxkY6ktCXa) | 凤凰网 |
 | 2026-11-05 | [高通进博会全球首展 6G 终端原型机：AI Recall 眼镜以每秒 2 帧拍摄+边缘侧 AI 处理，6G 作为 AI 原生网络](https://www.ithome.com/1/022/906.htm) | 凤凰科技 |
 | 2026-11-05 | [国科微规划 GK6950 端侧 AI 芯片：面向人机交互与具身智能，配套 GK-VGGT-SLAM 流式空间智能方案](https://news.mydrivers.com/1/1163/1163455.htm) | 快科技 |
-| 2026-11-04 | [后摩智能完成数十亿元 B 轮融资：端侧大模型 AI 芯片进入规模化兑现期，M50 已以 10W 功耗跑出 160 TOPS](https://www.leiphone.com/category/industrynews/cyDQKpjtzDEPhrr8.html) | 雷峰网 |
 
 ### 手机厂商（4 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-11 | [谷歌 Pixel 11 月功能更新：引入类苹果 PCC 的私有云方案，Gemini Intelligence 自动化能力扩展](https://m.36kr.com/p/3551123276372102) | 36氪 |
 | 2026-11-06 | [Googlebook 11 月更新：端侧 AI 内存常驻占用压缩近 40%，16GB 机型最多释放 6GB 运行内存](https://tech.ifeng.com/c/8xpmRKLsDrt) | 凤凰网科技 |
 | 2026-11-06 | [阶跃 STEPX Neo 智能体手机进博首秀：亮相高通展台，3999 元软硬模三位一体定价开放近百应用生态](https://www.sohu.com/a/1098104093_116157) | 搜狐科技 |
 | 2026-11-05 | [比亚迪×vivo 签署战略合作：迪迪虾×蓝心小 V 双智能体跨端融合，首发落地腾势 N8 巨幕座舱](https://auto.ifeng.com/c/8xodh2DImWJ) | 凤凰汽车 |
-| 2026-11-04 | [国行 Apple 智能今日开启 Beta 测试：Siri 可直接调用千问，12 月随 iOS 27.3 正式推送](https://k.sina.com.cn/article_5952915705_162d248f906703sd1i.html) | 新浪财经 |
 
-### 大模型厂商（6 条）
+### 大模型厂商（7 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-11 | [阿里 Qwen4 预览版上线千问平台：新一代旗舰主打编程、Agent 与复杂任务，正式版即将发布](https://www.ithome.com/1/025/301.htm) | IT之家 |
 | 2026-11-10 | [智元发布 WITA-Omni 全模态大模型正式版：行业首个具身全模态端到端交互模型，触觉+本体状态输入、免唤醒词全双工](https://www.ithome.com/1/025/122.htm) | IT之家 |
 | 2026-11-10 | [蚂蚁灵波开源 LingBot-Touch 触觉基础模型：为通用大脑接入「手感」，26 项真机任务成功率提升 14-26 个百分点](https://www.ithome.com/1/024/701.htm) | IT之家 |
+| 2026-11-09 | [Meta 开源发布 Muse Ember：迄今最小多模态模型专攻 Agent 执行，1M 上下文、每百万输入 Token 仅 0.1 美元](https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution) | TechCrunch |
 | 2026-11-06 | [蚂蚁百灵发布 Ling-3.2-Flash：560B MoE 激活 25B 原生多模态，三项基准超越 Claude Opus 5](https://tech.ifeng.com/c/8xpCRzyq65n) | 凤凰科技 |
 | 2026-11-05 | [Kimi K3.1 Pro 权重如约开源：登顶 Agent Arena 开放模型榜首，2.8 万亿参数额外算力全部投入强化学习](https://original.ifeng.com/c/8xnSmAvsf1e) | 凤凰网 |
 | 2026-11-05 | [百度开源文心 5.5 Flash Base：280B 总参激活仅 14B，33.5T tokens 从零预训练刷新同尺寸 SOTA](https://www.yicai.com/brief/103428150.html) | 第一财经 |
-| 2026-11-04 | [腾讯发布混元 Hy4 正式版：首次引入视觉理解跻身全球最强开源模型之列，权重近期开源](https://www.ithome.com/1/022/035.htm) | IT之家 |
 
 ### 行业动态（6 条）
 
@@ -90,4 +88,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-11-10。
+- 数据更新于 2026-11-11。
