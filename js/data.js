@@ -15,10 +15,10 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 47 期",
-    weekRange: "2026.11.05 — 2026.11.11 · 近 7 天",
-    updated: "2026-11-11",
+    weekRange: "2026.11.06 — 2026.11.12 · 近 7 天",
+    updated: "2026-11-12",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：麒麟 9050 官方详解（30B MoE 端侧离线仅占 2.5GB 内存）、Qwen4 预览版上线、谷歌 Pixel 引入类 PCC 私有云方案、Meta 开源 Muse Ember 轻量 Agent 执行模型。"
+    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n近两日新增：Claude Fable 5.2 双旗舰补录（FrontierCode 49.1% 超 GPT-6 Astra、API 降价 20%）+麒麟 9050 官方详解、Qwen4 预览版、Pixel 类 PCC 私有云、Meta Muse Ember 开源。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -33,7 +33,7 @@ id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
       image: "images/news/n222.png",
       imageCap: "麒麟 9050 系列官方详解（图源：凤凰网）",
       highlight: true
-    },,,
+    },,,,
 
 {
 id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
@@ -45,7 +45,7 @@ id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
       image: "images/news/n224.png",
       imageCap: "Qwen4 预览版上线（图源：IT之家）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
@@ -57,7 +57,7 @@ id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
       image: "images/news/n225.jpg",
       imageCap: "Pixel 11 月功能更新（图源：9to5Google）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
@@ -69,7 +69,7 @@ id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
       image: "images/news/n218.jpg",
       imageCap: "智元 WITA-Omni 发布（图源：IT之家）",
       highlight: true
-    },,,
+    },,,,
 
 {
 id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
@@ -81,7 +81,7 @@ id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
       image: "images/news/n219.png",
       imageCap: "LingBot-Touch 触觉基础模型（图源：IT之家）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
@@ -93,7 +93,7 @@ id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
       image: "images/news/n220.jpg",
       imageCap: "影目 INMO AIR3 召回（图源：IT之家）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
@@ -104,8 +104,20 @@ id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
       url: "https://www.ithome.com/1/024/600.htm",
       image: "images/news/n221.jpg",
       imageCap: "MateBook Fold S 三色外观（图源：IT之家）",
+ highlight: false
+    },,
+
+{
+id: "n227", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-09",
+      title: "Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2 双旗舰：智能体编码基准 49.1% 超 GPT-6 Astra，API 降价 20%",
+      summary: "Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2 双旗舰——官方称在测试过的几乎所有能力上比 Opus 5.5 强一档：智能体编码基准 FrontierCode 2.0 得分 49.1%（GPT-6 Astra 为 42.8%），第三方对比显示共有基准全面领先且单价更低；输出速度较 5.1 提升最多 30%。API 价格下调 20%（输入 8 美元/百万 token、输出 40 美元），可选双倍价格开启 2.5 倍速输出。",
+      detail: "发布：11 月 9 日（凤凰科技/Datacamp/IT之家多源，候选库 dom=2）。\n性能：几乎所有能力较 Opus 5.5 强一档；FrontierCode 2.0 智能体编码 49.1% vs GPT-6 Astra 42.8%；Datacamp 对比共有基准全面领先且单 token 价格更低。\n速度：输出较 5.1 最多提升 30%。\n价格：API 下调 20%——输入 8 美元/百万 token、输出 40 美元；双倍价（16/80 美元）开 2.5 倍速输出；实测提醒：模型变聪明后单任务 token 消耗可能上升，实际成本未必更省。\n订阅：Max/Ultra 赠 Fable reset，Pro 发布当周可用。\n端侧视角：榜首易主+降价 20% 是云端 Agent 战争白热化的信号——编码智能体基准的大幅领先会直接抬高「云端执行+端侧编排」混合架构中云端的承接份额；对端侧的反向压力在于：当云端旗舰每 token 更便宜更聪明，端侧模型的价值锚点必须继续压在隐私、离线与延迟上，而非单纯算力性价比。",
+      tags: ["Anthropic", "Claude Fable", "Mythos", "智能体编码", "旗舰模型"],
+      url: "https://tech.ifeng.com/c/8xwEBlk190G",
+      image: "images/news/n227.jpg",
+      imageCap: "Claude Fable 5.2 发布（图源：凤凰科技）",
       highlight: false
-    },,,
+    },,
 
 {
 id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
@@ -117,7 +129,7 @@ id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
       image: "images/news/n214.png",
       imageCap: "千问办公 2.0 官方发布原文（图源：千问办公公众号）",
       highlight: true
-    },,,
+    },,,,
 
 {
 id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
@@ -129,7 +141,7 @@ id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
       image: "images/news/n215.jpg",
       imageCap: "微信鸿蒙版安装量突破 9000 万（图源：IT之家）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09",
@@ -141,7 +153,7 @@ id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09"
       image: "images/news/n216.jpg",
       imageCap: "Gentle Monster Intelligent Eyewear（图源：官网）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n226", cat: "大模型厂商", source: "TechCrunch", date: "2026-11-09",
@@ -153,7 +165,7 @@ id: "n226", cat: "大模型厂商", source: "TechCrunch", date: "2026-11-09",
       image: "images/news/n226.png",
       imageCap: "Meta Muse Ember（图源：TechCrunch）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
@@ -165,7 +177,7 @@ id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
       image: "images/news/n190.png",
       imageCap: "中国移动×智谱合作（图源：IT之家）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
@@ -177,7 +189,7 @@ id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
       image: "images/news/n198.jpg",
       imageCap: "Hitch Open 展台机器人乒乓对打（图源：中新经纬）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
@@ -189,7 +201,7 @@ id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
       image: "images/news/n199.jpg",
       imageCap: "2026 款长轴距 E 级（图源：凤凰汽车）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
@@ -201,7 +213,7 @@ id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
       image: "images/news/n197.jpg",
       imageCap: "京东×酷派 AI 智能眼镜（图源：凤凰网）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n189", cat: "AI硬件", source: "凤凰网", date: "2026-11-06",
@@ -213,7 +225,7 @@ id: "n189", cat: "AI硬件", source: "凤凰网", date: "2026-11-06",
       image: "images/news/n189.png",
       imageCap: "灵犀 X2 焕新版（图源：凤凰网）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n188", cat: "手机厂商", source: "凤凰网科技", date: "2026-11-06",
@@ -225,7 +237,7 @@ id: "n188", cat: "手机厂商", source: "凤凰网科技", date: "2026-11-06",
       image: "images/news/n188.png",
       imageCap: "Googlebook 11 月更新（图源：凤凰网科技）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n183", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-06",
@@ -237,7 +249,7 @@ id: "n183", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-06",
       image: "images/news/n183.png",
       imageCap: "Ling-3.2-Flash 发布（图源：凤凰科技）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n194", cat: "行业动态", source: "中新社", date: "2026-11-06",
@@ -249,7 +261,7 @@ id: "n194", cat: "行业动态", source: "中新社", date: "2026-11-06",
       image: "images/news/n194.jpg",
       imageCap: "智能体互联系列国家标准应用推进专题会现场（图源：北京日报）",
       highlight: true
-    },,,
+    },,,,
 
 {
 id: "n195", cat: "手机厂商", source: "搜狐科技", date: "2026-11-06",
@@ -261,7 +273,7 @@ id: "n195", cat: "手机厂商", source: "搜狐科技", date: "2026-11-06",
       image: "images/news/n195.png",
       imageCap: "STEPX Neo 智能体手机（图源：搜狐科技）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n196", cat: "AI硬件", source: "东方财富", date: "2026-11-06",
@@ -273,7 +285,7 @@ id: "n196", cat: "AI硬件", source: "东方财富", date: "2026-11-06",
       image: "images/news/n196.png",
       imageCap: "UNI-DOGGIE 收藏机器狗（图源：腾讯新闻）",
       highlight: false
-    },,,
+    },,,,
 
 {
 id: "n202", cat: "行业动态", source: "路透社", date: "2026-11-06",
@@ -286,138 +298,6 @@ id: "n202", cat: "行业动态", source: "路透社", date: "2026-11-06",
       imageCap: "特斯拉 Cybertruck（图源：新浪财经）",
       highlight: false
     },,,
-
-{
-id: "n187", cat: "大模型厂商", source: "凤凰网", date: "2026-11-05",
-      title: "Kimi K3.1 Pro 权重如约开源：登顶 Agent Arena 开放模型榜首，2.8 万亿参数额外算力全部投入强化学习",
-      summary: "月之暗面 11 月 5 日正式开源 Kimi K3.1 Pro 完整模型权重（2.8 万亿参数，HuggingFace 全量开放）——兑现 11 月 4 日前的开源承诺。Agent Arena 智能体排行榜：开放权重模型第一名（全球所有参评模型第 13 名），工作/编程/聊天三个类别均居开放权重榜首；Bash 可靠性从此前的 -4.5% 显著跃升。参数量与上代持平——额外算力全部投入强化学习后训练。",
-      detail: "开源：11 月 5 日权重上线 HuggingFace（凤凰网/搜狐/多源），兑现承诺日。\n成绩：Agent Arena 智能体排行——开放权重模型第一名（全球总榜第 13 名）；工作/编程/聊天三类别开放权重榜首；Bash 可靠性从 -4.5% 显著提升。\n策略：参数量与上代持平，额外算力全部投入强化学习后训练——「同等参数量、更强后训练」路线。\n端侧视角：2.8T 开放权重的意义在蒸馏与量化上游——K3.1 Pro 是 Agent 能力标杆（Hosted Agents+游戏方案+本次权重开源三天连发），其 Agent 后训练方法论被完整开放后，端侧小模型的 Agent 蒸馏有了最强教师。",
-      tags: ["Kimi", "K3.1 Pro", "权重开源", "Agent Arena", "强化学习"],
-      url: "https://original.ifeng.com/c/8xnSmAvsf1e",
-      image: "images/news/n187.png",
-      imageCap: "K3.1 Pro 权重开源（图源：凤凰网）",
-      highlight: false
-    },,,
-
-{
-id: "n184", cat: "大模型厂商", source: "第一财经", date: "2026-11-05",
-      title: "百度开源文心 5.5 Flash Base：280B 总参激活仅 14B，33.5T tokens 从零预训练刷新同尺寸 SOTA",
-      summary: "百度开源发布 ERNIE 5.5 Flash Base——稀疏 MoE 总参数 280B、每 Token 仅激活 14B，在 33.5T tokens 上从零完成预训练；训练上下文 128K、微调与推理阶段最长支持 1M tokens。技术创新：Latent-Gated Sparse Attention（37 层省缓存+6 层保精准检索）与 Multi-Router 多路由机制。在多个基准测试中刷新同尺寸模型成绩（SOTA），开放预训练终点权重供开发者继续训练行业专属模型。",
-      detail: "开源：11 月 5 日发布并开源权重（多源：moomoo/新浪/第一财经）。\n规格：稀疏 MoE 总参 280B、激活 14B——「同尺寸」中 14B 激活量级的效率旗舰；33.5T tokens 从零预训练（非蒸馏非剪枝）；上下文训练 128K、推理 1M。\n创新：Latent-Gated Sparse Attention——37 层用潜在门控稀疏注意力节省 KV 缓存+6 层保留完整注意力保精准检索；Multi-Router 多路由。\n成绩：多基准刷新同尺寸 SOTA。\n端侧视角：14B 激活+280B 总参的稀疏架构定位「消费级可跑的效率基座」——与百度此前的文心 Unlimited OCR 2（3B/500M 激活）形成大中小三层开源矩阵，开放预训练终点权重意味着企业可在终点上做行业微调而非从零训练，端侧行业模型的门槛又降了一档。",
-      tags: ["百度", "文心5.5", "开源", "MoE", "SOTA"],
-      url: "https://www.yicai.com/brief/103428150.html",
-      image: "images/news/n184.png",
-      imageCap: "文心 5.5 Flash Base 开源（图源：moomoo 资讯）",
-      highlight: false
-    },,,
-
-{
-id: "n180", cat: "芯片厂商", source: "凤凰科技", date: "2026-11-05",
-      title: "高通进博会全球首展 6G 终端原型机：AI Recall 眼镜以每秒 2 帧拍摄+边缘侧 AI 处理，6G 作为 AI 原生网络",
-      summary: "高通在进博会展出全球首个符合 3GPP 最新 6G 定义的终端原型机实物（首次走出实验室）——面向 6G 的 AI Recall（AI 记忆）演示：智能眼镜以每秒 2 帧拍摄周围物体，画面经手机上传至边缘侧服务器做 AI 处理与记忆检索，体现 6G 作为「AI 原生网络」的方向。展台同时呈现从个人 AI 到物理 AI 的全线生态（手机/AI PC/智能体设备/智能眼镜/汽车/机器人）。",
-      detail: "首展：进博会（11 月 5 日开幕）全球首次公开 6G 终端原型机实物——符合 3GPP 最新 6G 定义，标志 6G 从技术研究走向系统化验证（IT之家/凤凰/进博会官网/同花顺多源）。\n演示：AI Recall 眼镜——每秒 2 帧拍摄捕捉周围物体，经手机上传至边缘侧服务器 AI 处理（记忆检索等），体现 6G 面向 AI 应用的「AI 原生网络」方向。\n生态：连续第九年参加进博会，展台覆盖旗舰手机、AI PC、智能体设备、智能眼镜、汽车、机器人多品类——从个人 AI 到物理 AI 全线。\n端侧视角：6G 原型机+AI Recall 组合揭示了端侧 AI 的下一层架构——眼镜只做「采集端」，AI 处理放在边缘侧服务器，6G 网络承载数据流；这种「轻端侧+边缘 AI」架构与 XREAL Aura 的「轻眼镜+算力盒」同构，都是把算力从眼镜本体移出去——端侧 AI 的形态正在分化出「端侧算力派」与「边缘算力派」两条路线。",
-      tags: ["高通", "6G", "AI Recall", "智能眼镜", "边缘计算"],
-      url: "https://www.ithome.com/1/022/906.htm",
-      image: "images/news/n180.png",
-      imageCap: "高通 6G 终端原型机进博会展出（图源：IT之家）",
-      highlight: false
-    },,,
-
-{
-id: "n181", cat: "行业关注事件", source: "新浪科技", date: "2026-11-05",
-      title: "Neuralink 第 22 位植入者意念操控 Matic 扫地机器人：植入 28 小时后即实现，脑机接口从屏幕走进物理世界",
-      summary: "Neuralink 第 22 位植入者、渐冻症患者 Zach McManus 静坐轮椅仅凭意念操控 Matic 扫地机器人——植入手术仅 28 小时后即首次实现，被称为「世界上第一台纯意念控制的扫地机器人」。Matic 搭载 5 颗 RGB 摄像头可在本地绘制 3D 地图并自主选择吸尘/拖地模式；Neuralink 捕捉运动意图转化为数字指令——光标控制从屏幕内走到了物理世界。",
-      detail: "演示：Neuralink 第 22 位植入者 Zach McManus（渐冻症 ALS 患者）用意念操控 Matic 扫地机器人（11 月 5 日多源：新浪/36氪/Readhub/Neurapod）——植入 28 小时后即首次实现。\n技术：Neuralink 直接捕捉脑海中的运动意图，「移动」「点击」等念头转化为数字指令；Matic 搭载 5 颗 RGB 摄像头本地绘制房间 3D 地图自主识别环境（吸尘/拖地模式）。\n局限：Matic 仍无法清洁狭窄空间、尘袋水箱容量有限；演示性质而非产品化交付。\n端侧视角：脑机接口×端侧机器人的首次实用级对话——Matic 的本地 3D 地图+自主模式选择正是端侧 AI 的能力，而 Neuralink 把「指令端」从手指/语音扩展到意念；当输入端（BCI）和执行端（端侧机器人）都成熟，这条链路就是「意念→端侧 Agent→物理动作」的完整雏形。",
-      tags: ["Neuralink", "脑机接口", "Matic", "扫地机器人", "具身智能"],
-      url: "https://news.sina.cn/ai/2026-11-05/detail-inixsmka6116499.d.html",
-      image: "images/news/n181.png",
-      imageCap: "意念操控扫地机器人演示（图源：新浪科技）",
-      highlight: false
-    },,,
-
-{
-id: "n178", cat: "端侧Agent", source: "IT之家", date: "2026-11-05",
-      title: "月之暗面发布 Kimi Hosted Agents 托管智能体：Harness 作为云端服务提供，有状态会话+持久沙箱+纯 HTTP 接入",
-      summary: "月之暗面正式发布 Kimi Hosted Agents（托管智能体）——基于 Kimi Durable Harness，将支撑 Agent 运行的 Harness 框架作为云端服务（Harness as a Service）提供：企业无需自行搭建沙箱与会话基础设施，即可让智能体 7×24 小时执行长程任务。核心特性：有状态服务（会话历史、沙箱状态与产出文件持久化在服务端）、纯 HTTP+SSE 接入（无需 SDK，curl 即可调用）、智能体配置为持久化版本化对象（会话通过 agent_id 引用）、开箱即用的工具执行与失败恢复。",
-      detail: "发布：11 月 5 日正式发布（IT之家/搜狐/网易多源），产品文档已在 Kimi API 开放平台上线。\n定位：基于 Kimi Durable Harness 的全托管智能体运行环境——企业无需自建沙箱、会话基础设施，7×24 小时执行长程任务。\n特性：有状态服务——会话历史、沙箱状态与产出文件持久化在服务端，API 可归档/删除会话；纯 HTTP+SSE 接入，无需 SDK 兼容层；智能体是持久化版本化配置对象（模型选择/系统提示词/可用工具），会话通过 agent_id 引用；开箱即用含工具执行、沙箱、失败恢复。\n端侧视角：「Harness as a Service」把 Agent 基础设施从「开发者自己搭」变成「平台托管」——Kimi 继游戏开发解决方案后再次延伸 Agent 生态布局；端侧开发者的 Agent 可直接接入云端托管运行时，端云协同的 Agent 开发闭环正在成形。",
-      tags: ["Kimi", "Hosted Agents", "Harness", "云端服务", "智能体"],
-      url: "https://www.ithome.com/1/022/572.htm",
-      image: "images/news/n178.png",
-      imageCap: "Kimi Hosted Agents 发布（图源：IT之家）",
-      highlight: false
-    },,,
-
-{
-id: "n177", cat: "行业关注事件", source: "财联社", date: "2026-11-05",
-      title: "端侧 AI 概念集体大涨：润欣科技 20cm 涨停、乐鑫科技创历史新高，千问国行 Apple 智能开测点燃端侧主线",
-      summary: "端侧 AI 概念今日集体走强——润欣科技 20cm 涨停、博通集成涨停，乐鑫科技涨超 7% 创历史新高，瑞芯微、芯原股份、移远通信、天键股份涨超 5%。催化主线是国行 Apple 智能昨日开测（Siri 直调千问）与本周端侧 AI 密集落地（混元 Hy4/LongCat-2.5 国产算力/联想信创 AI 主机）——端侧 AI 概念从「官宣」进入「交付」阶段，芯片与模组厂商率先受益。",
-      detail: "行情：11 月 5 日端侧 AI 概念集体走强——润欣科技 20cm 涨停、博通集成涨停，乐鑫科技涨超 7% 股价创历史新高，瑞芯微、芯原股份、燕东微、移远通信涨超 5%；当日全市场超 4800 只个股上涨。\n催化：国行 Apple 智能昨日（11 月 4 日）开启 Beta 测试（Siri 直调千问，12 月正式推送）——端侧 AI 概念从「官宣」进入「交付」阶段；叠加本周端侧落地密集（腾讯混元 Hy4 正式版/美团 LongCat-2.5 国产算力训练/联想首款信创 AI 主机/进博会高通端侧展示）。\n端侧视角：端侧 AI 正在从「技术叙事」变成「产业基本面」——芯片（乐鑫/瑞芯微）、模组（润欣/博通/移远）率先兑现业绩预期，反映市场对「端侧 AI 出货量级」的定价正在加速；后续观察厂商 Q4 订单与出货数据能否兑现涨幅预期。",
-      tags: ["端侧AI", "概念股", "千问", "Apple智能", "产业落地"],
-      url: "https://www.cls.cn/detail/2525789",
-      image: "images/news/n177.png",
-      imageCap: "端侧 AI 概念集体走强（图源：凤凰财经）",
-      highlight: false
-    },,,
-
-{
-id: "n176", cat: "芯片厂商", source: "快科技", date: "2026-11-05",
-      title: "国科微规划 GK6950 端侧 AI 芯片：面向人机交互与具身智能，配套 GK-VGGT-SLAM 流式空间智能方案",
-      summary: "国科微公布端侧 AI 芯片新规划——GK6950 系列面向人机交互与具身智能（机器人）应用，针对端侧算力、内存、带宽与功耗有限且需低时延响应的挑战设计，在有限预算内兼顾响应速度、推理效率与空间精度，将于明年正式推出；配套推出轻量级 GK-VGGT-SLAM 流式空间智能方案支持机器人空间感知。公司已形成媒体显示、AI 视觉、车载电子与人机交互四大端侧 AI 产品系列，受益于端侧 AI 芯片放量前三季度归母净利润同比大增 5640%。",
-      detail: "规划：11 月 5 日公布（网易/快科技报道），GK6950 端侧 AI 芯片系列将于明年正式推出。\n定位：面向人机交互与具身智能（机器人）——端侧算力、内存、带宽与功耗预算有限且需低时延响应，在有限预算内兼顾响应速度、推理效率与空间精度。\n配套：轻量级 GK-VGGT-SLAM 流式空间智能方案——支持机器人空间感知（SLAM=同步定位与地图构建）。\n背景：国科微已形成媒体显示、AI 视觉、车载电子、人机交互四大端侧 AI 产品系列；端侧 AI SoC 布局机器人（含具身智能）、AI PC、无人机、工业计算；受益端侧 AI 芯片放量，前三季度归母净利润同比大增 5640%，全系鸿蒙适配。\n端侧视角：国产芯片厂商正从「通用 SoC」转向「场景专用端侧 AI SoC」——GK6950 面向机器人+人机交互的定位说明端侧 AI 芯片开始按场景分化出专用产品线；GK-VGGT-SLAM 的空间智能方案瞄准的是机器人空间感知这个尚未有成熟专用芯片的空窗。",
-      tags: ["国科微", "GK6950", "端侧AI芯片", "具身智能", "SLAM"],
-      url: "https://news.mydrivers.com/1/1163/1163455.htm",
-      image: "images/news/n176.png",
-      imageCap: "国科微端侧 AI 布局（图源：快科技）",
-      highlight: false
-    },,,
-
-{
-id: "n192", cat: "AI硬件", source: "IT之家", date: "2026-11-05",
-      title: "华为擎云发布首款鸿蒙台式机 HM650 系列：麒麟 X90 桌面处理器，100% 国产化率面向政企市场",
-      summary: "华为发布首款鸿蒙台式机擎云 HM650/HM650g——搭载麒麟 X90 桌面处理器，实现 100% 国产化率，面向政企客户（确认不在电商及线下体验门店出售）。鸿蒙 PC 产品线从笔记本扩展到台式机形态，补齐信创桌面算力最后一块拼图。",
-      detail: "发布：11 月 5 日（IT之家多源，候选库 dom=2）。\n产品：擎云 HM650/HM650g 首款鸿蒙台式机；麒麟 X90 桌面处理器；100% 国产化率。\n渠道：面向政企客户，确认不在电商及线下体验门店出售。\n端侧视角：鸿蒙 PC 从笔记本扩展到台式机——麒麟 X90 桌面处理器+全国产化率的组合瞄准信创市场的桌面端侧 AI 算力底座；与联想开天（兆芯 KX-7000+后摩力擎 LQ50）形成信创 AI 主机的双路线：鸿蒙全栈自研 vs 国产芯片异构组合。",
-      tags: ["华为", "擎云", "鸿蒙PC", "麒麟X90", "信创"],
-      url: "https://www.ithome.com/1/022/834.htm",
-      image: "images/news/n192.jpg",
-      imageCap: "华为擎云 HM650 首款鸿蒙台式机（图源：IT之家）",
-      highlight: false
-    },,,
-
-{
-id: "n193", cat: "AI硬件", source: "凤凰网", date: "2026-11-05",
-      title: "新华社×优必选发布全球首个仿生人形机器人新闻主播「新言」「新语」：张艺谋任形象主创，1:1 真人比例",
-      summary: "新华社与优必选联合研发的全球首个仿生人形机器人新闻主播「新言」「新语」在世界媒体峰会人工智能与中国式现代化论坛正式发布——两位主播采用 1:1 真人比例复刻，张艺谋任形象主创设计师，依托新华社 AI 时政资讯智能体「新华语典」，应用优必选从仿生皮肤、具身智能硬件、操作系统、情感大模型到整机量产的全栈技术。",
-      detail: "发布：11 月 5 日北京·第七届世界媒体峰会人工智能与中国式现代化论坛（凤凰网/搜狐/网易多源）。\n设计：1:1 真人比例复刻；张艺谋任形象主创设计师，专为新闻传播场景定制。\n技术：依托新华社 AI 时政资讯智能体「新华语典」；优必选全栈能力——仿生皮肤、具身智能硬件、操作系统、情感大模型、整机量产。\n端侧视角：新闻主播是「国家级媒体形象 IP×具身智能」的公开级应用落地——优必选把仿生外观+情感大模型+量产能力整体输出给权威机构，人形机器人应用场景从工厂、展馆进一步走向媒体与公共传播，情绪表达与仿生皮肤成为具身智能的新竞争维度。",
-      tags: ["优必选", "新华社", "人形机器人", "仿生", "新闻主播"],
-      url: "https://m.sohu.com/a/1097892604_122014422",
-      image: "images/news/n193.jpg",
-      imageCap: "仿生人形机器人新闻主播「新言」「新语」（图源：搜狐）",
-      highlight: false
-    },,,
-
-{
-id: "n200", cat: "手机厂商", source: "凤凰汽车", date: "2026-11-05",
-      title: "比亚迪×vivo 签署战略合作：迪迪虾×蓝心小 V 双智能体跨端融合，首发落地腾势 N8 巨幕座舱",
-      summary: "比亚迪与 vivo 正式签署战略合作协议，将合作推向「手车互融」新阶段——核心是两套 AI 智能体打通：比亚迪「迪迪虾」与 vivo「蓝心小 V」实现跨端 Agent 协同，而非车钥匙、投屏等浅层联动。多项行业首发能力将搭载于腾势 N8（全球首发巨幕智能座舱）；双方还规划今年底至 2027 年持续升级全系列手车互传体验。",
-      detail: "签约：11 月 5 日战略合作官宣（凤凰汽车/新浪财经/搜狐多源，候选库 3 簇散裂 dom=3）。\n融合：迪迪虾（比亚迪智能助手）×蓝心小 V（vivo 智能助手）跨端 Agent 协同——手机侧与车机侧智能体接力执行任务。\n落地：首发能力搭载腾势 N8 科技新境宽五座 SUV，适配其全球首发巨幕智能座舱。\n规划：2026 年底至 2027 年升级全系列手车互传（文件流转/导航接力）；手机 NFC 车钥匙与手表数字钥匙已量产。\n端侧视角：手车互联正从「连接」（钥匙/投屏）升级为「智能体跨端」——双方各出手机与车机入口，Agent 在两台设备间接力，这是继 vivo×比亚迪数字钥匙量产后第一次真正的跨端智能体协同；座舱 AI 竞争从单车型搭载模型转向生态级结盟。",
-      tags: ["vivo", "比亚迪", "智能体跨端", "蓝心小V", "腾势N8"],
-      url: "https://auto.ifeng.com/c/8xodh2DImWJ",
-      image: "images/news/n200.jpg",
-      imageCap: "比亚迪×vivo 战略合作（图源：凤凰汽车）",
-      highlight: false
-    },,,
-
-{
-id: "n201", cat: "端侧Agent", source: "IT之家", date: "2026-11-05",
-      title: "DeepSeek Harness 披露生态数据：日活 154 万、日耗 92 万亿 Token、3.5 万插件，官方插件市场将至",
-      summary: "DeepSeek 公布其 AI 智能体平台 DeepSeek Harness（DSH）最新进展——日活跃用户 154 万（基于官方 API 统计口径）、日消耗约 92 万亿 Token、第三方插件约 3.5 万个；首次明确将建设官方插件市场，并推出插件作者支持计划、开始向作者发放 Token 激励。DSH 采用「一切皆插件」开放架构，9 月 29 日推出桌面端产品后一个月内日活快速增长。",
-      detail: "披露：11 月 5 日晚官方公布（IT之家/开源中国多源，候选库 11-05 至 11-08 持续多事件发酵）。\n数据：日活 154 万（官方 API 口径）；日耗约 92 万亿 Token；第三方插件约 3.5 万个。\n生态：将建官方插件市场聚合分散插件；插件作者支持计划开放报名，官方发放 Token 激励。\n架构：一切皆插件——模型、工具、技能、会话、沙箱、存储均以插件形式接入。\n节奏：8 月 13 日 v0.1 → 9 月 29 日桌面端 → 11 月 4 日日活 154 万；下一步聚焦插件 API 与插件市场。\n端侧视角：桌面端 Agent 产品第一次出现国民级数据——154 万日活意味着 Agent Harness 从开发者工具走向大众应用；「一切皆插件+给作者发 Token」的生态打法复刻了浏览器扩展与小程序市场的成熟路径，端侧 Agent 的生态卡位战正式开打。",
-      tags: ["DeepSeek", "Harness", "智能体", "插件生态", "桌面端"],
-      url: "https://www.sohu.com/a/1097925514_99900743",
-      image: "images/news/n201.jpg",
-      imageCap: "DeepSeek Harness（图源：IT之家）",
-      highlight: true
-    }
   ],
 papers: [
     {
