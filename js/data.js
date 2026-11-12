@@ -18,11 +18,23 @@ const WEEKLY_DATA = {
     weekRange: "2026.11.06 — 2026.11.12 · 近 7 天",
     updated: "2026-11-12",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n近两日新增：Claude Fable 5.2 双旗舰补录（FrontierCode 49.1% 超 GPT-6 Astra、API 降价 20%）+麒麟 9050 官方详解、Qwen4 预览版、Pixel 类 PCC 私有云、Meta Muse Ember 开源。"
+    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n近两日新增：Claris Harbor（Mac 变本地 AI 服务器/雷雳 5 集群）、Gemini Robotics 2.5（奔驰产线 96%）、KORA OS（首个 AI 原生 AI PC 系统）、Ring 机器人部门（飞行监控无人机+巡逻机器人）、小米物联网设备模型白皮书（11.6 亿台实践开放）、Claude Fable 5.2 双旗舰、麒麟 9050 官方详解、Qwen4 预览、Pixel 类 PCC 私有云、Muse Ember 开源。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+      id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
+      title: "苹果子公司 Claris 暗测 Harbor 应用：Mac 变身本地 AI 服务器，雷雳 5 串联多机集群跑大模型",
+      summary: "苹果全资子公司 Claris 正在测试 Harbor 应用——将苹果芯片 Mac 变成本地 AI 服务器：单台可跑，也可用雷雳 5 接口连接多台 Mac 组集群运行更大规模 AI 模型；macOS Tahoe 26.2 已加入雷雳 5 RDMA（远程直接内存访问）支持提速集群传输。应用可自动检测设备、浏览并下载开放权重模型，零手动配置即获得端侧 AI 能力。目前处于早期体验阶段、尚未公开。",
+      detail: "曝光：11 月 11 日多源报道（IT之家/9to5Mac，候选池 3 簇此前未过目）。\n形态：单 Mac 或雷雳 5 多机集群——把闲置端侧算力拼成「桌面级 AI 机房」。\n系统：macOS Tahoe 26.2 已内置雷雳 5 RDMA 支持，集群数据传输提速。\n易用：自动检测雷雳 5 设备；浏览、下载开放权重模型；无需手动配置。\n状态：早期体验未向公众开放，App Store 页面曾短暂出现后下架。\n端侧视角：苹果首次官方系动作把「端侧算力组网」做成产品——Harbor 的意义不在单机跑模型（llama.cpp/Ollama 早就能做），而在雷雳 5 RDMA 让多台 Mac 的统一内存像一台机器一样被调度；若走向公开发布，Mac 集群将成为家庭与小团队跑开源大模型的最低门槛路径，也是苹果端侧优先路线在生产力侧的补全。",
+      tags: ["苹果", "Claris", "Harbor", "本地AI服务器", "雷雳5"],
+      url: "https://www.ithome.com/1/025/225.htm",
+      image: "images/news/n228.jpg",
+      imageCap: "Claris Harbor 应用（图源：IT之家）",
+      highlight: true
+    },
+
 {
 id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
       title: "华为官方详解麒麟 9050 系列：新一代达芬奇 NPU 性能提升 140%，30B MoE 全模态大模型端侧离线运行仅占 2.5GB 内存",
@@ -57,7 +69,55 @@ id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
       image: "images/news/n225.jpg",
       imageCap: "Pixel 11 月功能更新（图源：9to5Google）",
       highlight: false
-    },,,,
+    },
+
+{
+      id: "n230", cat: "大模型厂商", source: "DeepMind 官方", date: "2026-11-10",
+      title: "谷歌发布 Gemini Robotics 2.5：最强视觉-语言-动作模型，奔驰产线实测 96% 成功率，ASIMOV-Jailbreak 安全基准同步开源",
+      summary: "Google DeepMind 发布迄今最强视觉-语言-动作模型（VLA）Gemini Robotics 2.5——200 余项任务评测成功率较前代提升 30-100%、完成速度快 20-30%；在奔驰匈牙利与德国产线的真实验证中，Apptronik Apollo 2 人形机器人自主完成汽车零件分拣上料、成功率 96%。同步引入推理时物理安全引导（障碍物场景安全完成率 +33%、人员近旁 +43%），并开源抗越狱基准 ASIMOV-Jailbreak（Gemini 4 Argon 越狱抵抗率 99.5%）。",
+      detail: "发布：11 月 10 日 DeepMind 官方博客。\n能力：灵巧性（工具使用/柔性物体操作）、可靠性、安全性三线跃升；200+ 项任务评测（夹食物/打礼盒蝴蝶结/移液等）。\n实测：奔驰 Kecskemét 与 Sindelfingen 产线，Apollo 2（22 自由度五指 SharpaWave 手）自主 kitting 分拣，96% 成功率；Gemini Robotics ER 管流程+2.5 管手臂数据。\n安全：推理时危险规避引导；ASIMOV-Jailbreak 开源基准——数百条伪装危险指令×数十场景，Argon 抵抗率 99.5%（前代 ER2 为 82%）。\n加速器：Gemini 4 Argon 充当仿真引擎——从真实相机场景生成数千变体演练+数字孪生+失败归因，大幅压缩训练周期。\n端侧视角：VLA 头部模型首次把「产线级 96%」写进官方口径——具身智能从演示视频走到值班工位；ASIMOV-Jailbreak 把机器人安全评测标准化，与国内同期的 HALO/LIFE 形成中美具身安全研究的第一轮正面呼应。",
+      tags: ["谷歌", "Gemini Robotics", "VLA", "人形机器人", "具身安全"],
+      url: "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+      image: "images/news/n230.webp",
+      imageCap: "Apollo 2 在奔驰产线执行分拣（图源：Google DeepMind）",
+      highlight: true
+    },
+
+{
+      id: "n231", cat: "行业动态", source: "IT之家", date: "2026-11-10",
+      title: "首个「自下而上」的 AI PC 操作系统 KORA OS 发布：底层融入智能体工作流，骁龙 X2 Elite 有望成首发平台",
+      summary: "KORA Systems 发布全新操作系统 KORA OS——宣称首个专为 AI PC「自下而上」设计的操作系统：智能体工作流、上下文记忆与本地 AI 推理直接融入系统底层，目标让电脑从「打开应用完成操作」转向「表达意图、由 AI 协助完成」。基于 NixOS 构建，自研 Cortex 推理引擎调度 CPU/GPU/NPU 本地运行开放权重模型，内置 Wine/Proton 的 Windows 应用兼容层；正与高通合作，骁龙 X2 Elite 有望成为首款支持平台。",
+      detail: "发布：11 月 10 日公告、11 月 11 日多源报道。\n理念：AI 原生而非 AI 叠加——「神经工作区」按任务目标组织空间，系统围绕意图、上下文与记忆管理文件；传统文件夹与桌面应用保留但不再是核心。\n引擎：自研 Cortex 推理引擎调度 CPU/GPU/NPU；内置基于 llama.cpp 的 Lemma 引擎；系统自动判断任务云端处理还是留在本地。\n隐私：工作流记忆与上下文留在本机不出设备；每个工作区隔离沙箱运行，应用与 AI 智能体独立权限。\n兼容：Wine/Proton 转换层跑 Windows 应用，本地 AI 协助配置；骁龙 X2 Elite 首发平台，后续 AMD/Intel x86 与更多 Arm。\n团队：约 20 名工程师，创始成员来自 Cyanogen、Android 与 GameOS；企业版 HUMAIN OS 预计 2027 年发布。\n端侧视角：继鸿蒙 PC、ChromeOS 之后第三个向 Windows 发起形态级挑战的系统——KORA 把「本地跑开放权重+端云分流+沙箱化智能体」整套端侧 AI 栈做成 OS 的第一性设计；与骁龙 X2 Elite 绑定意味着 Arm on PC 战线又多一个盟友，值得跟踪其对 NPU 的调度深度是否超过 Windows 的 AI API 层。",
+      tags: ["KORA OS", "AI PC", "操作系统", "骁龙X2", "本地推理"],
+      url: "https://www.ithome.com/1/025/226.htm",
+      image: "images/news/n231.png",
+      imageCap: "KORA OS 界面（图源：IT之家）",
+      highlight: false
+    },
+
+{
+      id: "n232", cat: "AI硬件", source: "亚马逊官方", date: "2026-11-10",
+      title: "亚马逊 Ring 成立机器人部门并发布两款 AI 安防设备：249.99 美元家用飞行监控无人机 Drone Cam 与商用巡逻机器人 Rover Cam",
+      summary: "亚马逊 Ring 宣布成立 Ring Robotics 机器人业务部门，并发布两款 AI 安防设备——Drone Cam 家用室内飞行监控无人机（249.99 美元，警报触发后自动飞往现场查看，已向 FCC 申请批准、预计 2026 年 1 月下旬发货，系六年研发两度推迟后终于落地）与 Rover Cam 面向商店、仓库与办公场所的自主巡逻安防机器人。",
+      detail: "发布：11 月 10 日亚马逊官方公告（IT之家/凤凰网等多源）。\nDrone Cam：室内飞行监控无人机，249.99 美元；警报触发自动飞临现场查看；FCC 审批中，预计 2026 年 1 月下旬发货——六年研发、多次推迟后的量产落地，让家庭无需布满固定摄像头。\nRover Cam：商用自主巡逻安防机器人，面向商店/仓库/办公场景。\n格局：Ring 正式进军 AI 机器人赛道，与悬浮飞行家庭机器人 Halo H-1（10 月上市）等初创产品同场竞技。\n端侧视角：家用安防是飞行机器人第一个真量产场景——「按需飞到现场看一眼」对算力、避障与续航的要求全部压在端侧；Ring 背靠亚马逊的 AI 视觉栈与出货渠道，Drone Cam 若 1 月顺利交付，将成为家庭机器人渗透率的关键试金石。",
+      tags: ["亚马逊", "Ring", "无人机安防", "巡逻机器人", "家庭机器人"],
+      url: "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
+      image: "images/news/n232.png",
+      imageCap: "Ring Drone Cam 与 Rover Cam（图源：亚马逊官方）",
+      highlight: false
+    },
+
+{
+      id: "n229", cat: "行业动态", source: "腾讯新闻", date: "2026-11-10",
+      title: "小米联合北大发布《物联网设备模型技术白皮书》：11.6 亿台 AIoT 设备实践经验开放，定义 AI 原生物联网标准",
+      summary: "中国计算机学会泛在操作系统开放社区牵头、小米与北京大学联合编制的《物联网设备模型技术白皮书》正式发布——基于小米超过 11.6 亿台 AIoT 设备、200 多个品类、10000 多家合作伙伴的规模化实践，提出四层物模型架构与 Dynamic Service 动态服务机制（支持设备新功能自动发现与场景自适应），定义智能设备的「数字化通用语言」，向全行业开放共建 AI 原生物联网标准。",
+      detail: "发布：11 月 10 日（腾讯新闻/搜狐/ZOL/凤凰网多源）。\n编制：CCF 泛在操作系统开放社区牵头，小米+北京大学联合。\n底盘：小米 11.6 亿台 AIoT 设备实践、200+ 品类、10000+ 合作伙伴——卢伟冰：「把 11.6 亿台设备上验证过的技术和经验，正式开放给全行业」。\n核心：四层物模型架构+Dynamic Service 动态服务机制——突破静态物模型描述局限，设备新增功能自动发现、场景自适应调整；AI 融合与可信安全并列为三大突破。\n端侧视角：物模型是设备侧的「数字孪生底座」——当 11.6 亿台设备的描述语言统一并支持动态服务，智能体跨设备调用的成本从逐品牌适配降到读标准；这份白皮书实质是把小米澎湃生态的设备抽象层开放为行业公共品，为端侧智能体的万物互联铺路。",
+      tags: ["小米", "物联网", "白皮书", "AIoT", "物模型"],
+      url: "https://news.qq.com/rain/a/20261110A098L200",
+      image: "images/news/n229.jpg",
+      imageCap: "《物联网设备模型技术白皮书》发布（图源：腾讯新闻）",
+      highlight: false
+    },
 
 {
 id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
