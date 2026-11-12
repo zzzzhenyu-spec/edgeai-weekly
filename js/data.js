@@ -361,109 +361,109 @@ id: "n202", cat: "行业动态", source: "路透社", date: "2026-11-06",
   ],
 papers: [
     {
-      id: "p1", group: "recent", cat: "推理与系统", date: "2026-10-20",
-      title: "CovNav: Conformal Prediction-Guided Adaptive Inference for Object Goal Navigation",
-      authors: "CovNav Team 等",
-      venue: "arXiv:2610.27677", level: "预印本",
-      summary: "目标物体导航（ObjectNav）中云端大模型有时延与隐私风险、端侧小模型推理质量不足——CovNav 用共形预测（Conformal Prediction）引导自适应推理，按导航场景动态决定何时调用更强的模型能力，在未见环境中以空间常识（物体共现）引导智能体找到目标。",
-      detail: "背景：具身智能体要在未见过的环境里执行「找到一个床」这类目标导航，依赖物体共现等空间常识——大模型编码了这种常识，但部署在机器人上暴露质量与效率的取舍：云端模型带来时延与隐私风险，端侧小模型能力受限。\n方法：CovNav 以共形预测为引导机制做自适应推理——为导航决策提供统计意义上的置信边界，动态调节推理投入。\n端侧视角：共形预测给「小模型何时够用、何时必须升级」提供了有理论保证的判据，是端云协同导航从启发式走向可校准路线的代表性工作。",
-      tags: ["具身导航", "共形预测", "自适应推理", "端云协同"],
-      url: "https://arxiv.org/abs/2610.27677"
+      id: "p1", group: "recent", cat: "推理与系统", date: "2026-11-10",
+      title: "EngineAgent: Agentizing On-Device LLM Inference Engines with Inference Stack Hierarchy Awareness and Hardware Abilities",
+      authors: "Zhengxiang Huang 等",
+      venue: "arXiv:2611.14356", level: "预印本",
+      summary: "新模型架构与异构移动硬件让端侧推理引擎的适配成为反复出现的高成本系统工程——EngineAgent 把编码智能体引入推理引擎开发：以推理栈层次感知（转换/图构建/算子/硬件后端的跨层依赖）与硬件能力感知为核心，自动诊断跨主机-设备执行路径的失败，大幅降低新模型上端侧引擎的适配成本。",
+      detail: "问题：每支持一个新模型需要协调转换、图构建、算子与硬件后端的跨层改动，现有编码智能体看不到这些跨层依赖，也难以诊断主机-设备执行路径上的失败。\n方法：推理栈层次感知+硬件能力感知的智能体系统，自动完成引擎适配与失败定位。\n端侧视角：端侧引擎的「新模型支持速度」是生态瓶颈——把引擎适配本身 Agent 化，等于给端侧推理基建装上自动扩容能力。",
+      tags: ["推理引擎", "编码智能体", "端侧部署", "系统工程"],
+      url: "https://arxiv.org/abs/2611.14356"
     },
     {
-      id: "p2", group: "recent", cat: "安全与隐私", date: "2026-10-20",
-      title: "Context-Aware Prompt Injection Detection via Small Language Models in RAG Pipelines: nokast-secureRAG",
-      authors: "nokast Team 等",
-      venue: "arXiv:2610.28364", level: "预印本",
-      summary: "本地 RAG 系统面临间接提示注入与检索投毒——检索内容中的恶意指令被误当可信输入。nokast-secureRAG 用约 0.5B 参数的小语言模型充当检索与生成之间的「语义防火墙」：联合评估用户查询与检索上下文，对内容分类拦截，全程可在端侧运行。",
-      detail: "背景：本地检索增强生成（RAG）让端侧个性化推理成为可能，但检索到的内容可能夹带恶意指令（间接提示注入、检索投毒），被生成侧误信执行。\n方法：约 0.5B 参数小语言模型作为语义防火墙插在检索与生成之间——联合考察用户查询与检索上下文的语义关系，对是否存在注入意图做上下文感知分类。\n端侧视角：安全层也要端侧化——0.5B 量级说明「语义防火墙」可随主模型常驻设备本地，端侧 RAG 的安全闭环不依赖云端审查。",
-      tags: ["提示注入", "RAG安全", "语义防火墙", "小语言模型"],
-      url: "https://arxiv.org/abs/2610.28364"
+      id: "p2", group: "recent", cat: "端侧智能体", date: "2026-11-10",
+      title: "Mobile AI Factory: Building Specialized Language Models for Your Mobile Devices",
+      authors: "Mobile AI Factory Team 等",
+      venue: "arXiv:2611.13509", level: "预印本",
+      summary: "小模型只有为目标任务微调并按目标机型裁剪尺寸才能在手机上跑好，而这今天依赖反复的专家调参——Mobile AI Factory 是一个智能体系统：给定任务描述与目标手机，编排 LLM 自动选择基座、生成训练数据、执行微调与量化、按设备内存约束裁剪，产出一个可直接部署的专用 SLM，全流程无需专家介入。",
+      detail: "输入：任务规格+目标手机型号。\n流程：编排 LLM 选基座→数据合成→微调→量化→按设备内存约束定尺寸，产出即部署的专用小模型。\n端侧视角：「每个 App 一个专用小模型」的工厂化流水线——把端侧模型定制的边际成本从专家周级压到自动小时级，是 App 级端侧 AI 经济性成立的关键一步。",
+      tags: ["小模型工厂", "自动微调", "量化", "移动端"],
+      url: "https://arxiv.org/abs/2611.13509"
     },
     {
-      id: "p3", group: "recent", cat: "安全与隐私", date: "2026-10-19",
-      title: "LLMs Prompted for Legal Context Refuse More: Overrefusal from Small On-Premises LLMs in Criminal Legal Context",
-      authors: "Legal NLP Group 等",
-      venue: "arXiv:2610.26211", level: "预印本",
-      summary: "保密要求推动法律从业者转向本地小模型处理案卷（摘要/翻译/改写），但遵循提示规范自报身份（「我是律师…」）的习惯带来意外代价——此类「权威框架」会令模型在刑事法律语境中选择性拒答更多；过度拒答正成为端侧小模型落地的隐性质量税。",
-      detail: "背景：法律行业的保密要求使小型本地 LLM 成为日常任务（摘要、翻译、改写）的选择，案件数据不出内网。\n发现：用户按提示工程惯例声明角色（如「我是一名律师」）反而提高模型在刑事语境中的拒答率——权威框架触发选择性拒答，正常的法律工作流被频繁打断。\n端侧视角：本地部署解决了数据保密，却把云端侧的内容策略压缩进小模型——「过度拒答」是端侧小模型进入专业领域时被低估的行为缺陷，需要在模型与提示层同时校准。",
-      tags: ["过度拒答", "本地模型", "法律AI", "行为校准"],
-      url: "https://arxiv.org/abs/2610.26211"
+      id: "p3", group: "recent", cat: "端侧智能体", date: "2026-11-10",
+      title: "HandsOnAid: Building and Evaluating an Offline First-Aid Assistant",
+      authors: "HandsOnAid Team 等",
+      venue: "arXiv:2611.14059", level: "预印本",
+      summary: "无信号、无救护车的紧急场景下，手机上的小语言模型可以救命，但建议必须安全准确——HandsOnAid 用 5550 对急救问答（FirstAidQA）以 QLoRA 微调 4-bit Gemma 2B 构建离线急救助手，对比 7 种配置（基座/4-bit/8-bit/长度下限/安全护栏等），系统评测安全性与准确性的平衡。",
+      detail: "模型：4-bit Gemma 2B+QLoRA 微调，数据集 FirstAidQA 5550 对。\n评测：7 种配置对比——基础模型、4-bit 与 8-bit 微调、长度下限与安全护栏变体。\n端侧视角：离线可用是端侧模型不可替代的价值场景——急救建议的「安全优先」约束（拒答优于错答）为所有端侧高风险助手树立了评测范式。",
+      tags: ["离线助手", "急救", "QLoRA", "安全评测"],
+      url: "https://arxiv.org/abs/2611.14059"
     },
     {
-      id: "p4", group: "recent", cat: "推理与系统", date: "2026-10-19",
-      title: "MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration",
-      authors: "Architecture Lab 等",
-      venue: "arXiv:2610.26083", level: "预印本",
-      summary: "块缩放量化格式（OCP MX、NVFP4）已是 LLM 推理的高效数据格式，但共享缩放、权重与激活格式的组合设计空间从未被系统刻画——本文以软硬件协同设计探索该空间，寻找精度-硅面积的帕累托最优配置，并给出与 NPU 集成的张量核设计。",
-      detail: "背景：块缩放量化格式被广泛采用，但其设计空间（共享缩放位宽、权重与激活格式的组合）缺乏系统探索，精度与硅开销的联合权衡此前未被标定，真正的帕累托最优配置不明。\n方法：软硬件协同设计探索——在设计空间上系统评估精度与硬件代价，刻画帕累托前沿，并给出可集成 NPU 的类 MX 张量核实现。\n端侧视角：为端侧推理芯片的下一代张量核给出格式选型依据——在 NPU 面积与功耗约束下选择「够准且最省」的量化组合，是端侧算力持续下沉（本周 Synaptics SR200 同题）的学术侧支点。",
-      tags: ["块缩放量化", "张量核", "NPU", "软硬件协同"],
-      url: "https://arxiv.org/abs/2610.26083"
+      id: "p4", group: "recent", cat: "能效与评测", date: "2026-11-08",
+      title: "Compute Regeneration through Re-Productization: Reorganizing Retired Edge AI Hardware",
+      authors: "GEdgeBot Team 等",
+      venue: "arXiv:2611.11698", level: "预印本",
+      summary: "失去产品支持但算力仍可观的边缘硬件如何再利用——本文把「算力再生」当作系统设计问题：保留计算模组、重设计周边产品组织。案例 GEdgeBot 是一台基于退役 32GB Jetson AGX Xavier 的多语言服务机器人，盘点显示仅该模组即可支撑全部推理，整机暴露五个可复用能力面。",
+      detail: "方法：再产品化（re-productization）——保留计算核心、重构产品形态与系统组织。\n案例：32GB Jetson AGX Xavier 驱动的多语言服务机器人 GEdgeBot，源码级盘点算力与能力面。\n端侧视角：端侧算力的生命周期管理——退役不等于报废，为边缘硬件的循环利用提供了系统方法论。",
+      tags: ["硬件再利用", "Jetson", "服务机器人", "可持续计算"],
+      url: "https://arxiv.org/abs/2611.11698"
     },
     {
-      id: "p5", group: "recent", cat: "端侧智能体", date: "2026-10-17",
-      title: "Muse Glimmer 30B: An On-Device Agentic Model",
-      authors: "Meta 等",
-      venue: "arXiv:2610.24628", level: "预印本",
-      summary: "Meta 开源 30B 参数的因果语言模型 Muse Glimmer（带感知编码器），专为消费级硬件上的自主智能体任务打造——把多步推理、可靠工具使用与失败恢复整合进单一模型，可完全本地运行无需云端，接受文本与图像输入、输出文本。",
-      detail: "定位：开源 30B 参数模型+感知编码器，面向消费设备本地运行的智能体——多步推理、可靠工具调用与失败恢复一体化，不依赖云端基础设施。\n输入输出：文本与图像输入、文本输出；权重开放下载。\n端侧视角：30B 是「工作站/高端手机可承载」的端侧智能体量级——Meta 在开放权重侧（Muse Spark Open 816B 之后）补上智能体专型号，与本周 Muse 下月登陆 Meta 眼镜的财报叙事同源：模型-终端-订阅的端侧生态全栈正在成形。",
-      tags: ["Muse Glimmer", "端侧智能体", "开源模型", "工具使用"],
-      url: "https://arxiv.org/abs/2610.24628"
+      id: "p5", group: "recent", cat: "推理与系统", date: "2026-11-03",
+      title: "UMLoad: Fast On-Demand Model Loading on Unified Memory Architecture",
+      authors: "UMLoad Team 等",
+      venue: "arXiv:2611.04253", level: "预印本",
+      summary: "按需模型加载主导着交互式端侧 AI 的响应延迟——统一内存架构（UMA）本应让加载近乎免费（权重放在 GPU 已可见的内存），但现有框架仍沿用分立 GPU 时代的加载流程。UMLoad 在系统层解耦框架逻辑分配与物理放置，将统一内存上的模型加载显著加速。",
+      detail: "问题：交互式端侧 AI 首响延迟被按需加载权重主导；UMA 设备（手机 SoC/统一内存 PC）上框架仍走分立 GPU 加载路径，效率浪费巨大。\n方法：系统级加载加速器——解耦逻辑分配与物理放置，面向 UMA 重构加载流。\n端侧视角：多模型常驻切换（手机助手+Agent 工作流）时代，加载速度就是冷启动体验——UMLoad 补上了统一内存架构缺失的系统层。",
+      tags: ["统一内存", "模型加载", "延迟优化", "系统层"],
+      url: "https://arxiv.org/abs/2611.04253"
     },
     {
-      id: "p6", group: "recent", cat: "端侧智能体", date: "2026-10-17",
-      title: "MedPAO-Assist: Edge-Deployable, Modality-Aware Agentic AI for Radiology Report Structuring",
-      authors: "MedPAO Team 等",
-      venue: "arXiv:2610.26913", level: "预印本",
-      summary: "放射报告结构化长期被专有云端模型或需要高端 GPU 的大模型垄断，与临床对数据隐私和离线运行的要求冲突——MedPAO-Assist 是边缘可部署的智能体框架，按模态感知组织放射报告结构化流程，把医疗 AI 推回院内边缘。",
-      detail: "背景：LLM 做放射报告结构化要么用专有云模型、要么用需高端 GPU 的开源大模型——临床工作流要求数据隐私与离线运行，这是落地瓶颈。\n方案：MedPAO-Assist 边缘可部署智能体框架，模态感知（modality-aware）地组织结构化生成流程，适配影像科的环境约束。\n端侧视角：医疗是端侧 AI 的高价值刚需场景（隐私+离线+合规三重约束），智能体化（而非单纯小模型化）是边缘医疗应用的新形态。",
-      tags: ["边缘医疗", "放射报告", "智能体框架", "隐私计算"],
-      url: "https://arxiv.org/abs/2610.26913"
+      id: "p6", group: "recent", cat: "能效与评测", date: "2026-11-01",
+      title: "MedPsy: State-of-the-Art Small Medical Language Models for Efficient Edge Deployment",
+      authors: "MedPsy Team 等",
+      venue: "arXiv:2611.02011", level: "预印本",
+      summary: "最强开源医疗 LLM 太大无法私有部署到边缘设备，紧凑医疗模型在知识密集任务上又差距明显——MedPsy 构建了边缘内存预算内的小型医疗模型系列，并直面推理模型长思维链带来的串行解码、端到端延迟、能耗与 KV 缓存压力问题，在同尺寸取得领先。",
+      detail: "矛盾：推理型小模型产出长思维链，串行解码拖高延迟与能耗、KV 缓存挤占内存——边缘部署的双重约束。\n贡献：边缘内存预算内同尺寸最优的医疗小模型系列。\n端侧视角：医疗是端侧隐私的最强动机场景——「推理预算」与「内存预算」同时受限下的模型设计，为所有端侧推理模型提供了样板。",
+      tags: ["医疗小模型", "边缘部署", "KV缓存", "推理预算"],
+      url: "https://arxiv.org/abs/2611.02011"
     },
     {
-      id: "p7", group: "recent", cat: "安全与隐私", date: "2026-10-16",
-      title: "From Billion-Scale to Million-Scale Language Models: Operational Capabilities for Embedded Post-Exploitation",
-      authors: "Security Research Group 等",
-      venue: "arXiv:2610.23534", level: "预印本",
-      summary: "百万参数级超紧凑语言模型（SLM）因计算足迹极小，被视为未来「自主恶意软件」的候选载体——在连接受限、时延与隐私（攻击者视角）约束无法使用云端推理的场景下，本文系统评估超紧凑模型在入侵后渗透阶段的可运作能力。",
-      detail: "背景：SLM 在资源受限环境的价值正在被安全研究双面审视——同样的特性（低算力、离线、难审计）也使其可能成为自主恶意软件的推理引擎，而后渗透阶段的实际能力此前缺乏系统刻画。\n工作：面向嵌入式后渗透场景，评估百万参数级模型在无云端依赖时可支撑的操作能力边界。\n端侧视角：这是端侧模型能力的「压力测试反面样本」——小模型能做的，恶意负载同样能做；端侧安全体系（本期的语义防火墙、TEE 保护）需要与端侧模型能力同步演进，攻防两侧共用同一条小型化技术曲线。",
-      tags: ["小模型安全", "后渗透", "自主恶意软件", "威胁评估"],
-      url: "https://arxiv.org/abs/2610.23534"
+      id: "p7", group: "recent", cat: "端云协同", date: "2026-10-31",
+      title: "Communication-Efficient Model-Distributed Inference for CBRS Radar Detection",
+      authors: "CBRS-MDI Team 等",
+      venue: "arXiv:2611.00625", level: "预印本",
+      summary: "CBRS 共享频段（3550-3700 MHz）要求准确及时检测在役雷达——频谱图 YOLO 检测器在资源受限边缘设备上运行困难，本文用模型分布式推理（MDI）把模型切分到多台边缘设备协同执行，系统优化切分点与通信量，提升受限设备群的检测吞吐。",
+      detail: "场景：3550-3700 MHz 频段的雷达-蜂窝共存检测，YOLO 频谱图检测算力需求超出单台边缘设备。\n方法：模型分布式推理（MDI）——跨边缘设备切分模型，通信高效的切分策略。\n端侧视角：单设备算力不够时「多设备拼算力」是端侧推理的另一条扩展轴——与 Claris Harbor 的 Mac 集群思路在无线侧同构。",
+      tags: ["频谱感知", "模型切分", "分布式推理", "边缘设备群"],
+      url: "https://arxiv.org/abs/2611.00625"
     },
     {
-      id: "p8", group: "recent", cat: "推理与系统", date: "2026-10-16",
-      title: "FederatedBytes: Tokenizer-Free, Byte-Level Small Language Models for Efficient Multimodal Federated Learning",
-      authors: "FederatedBytes Team 等",
-      venue: "arXiv:2610.22906", level: "预印本",
-      summary: "联邦学习可在保护各端本地数据隐私的前提下汇总全局模型，但计算与通信开销阻碍其服务 NLP 与多模态负载——FederatedBytes 提出无分词器的字节级小语言模型，直接处理字节级文本与多模态数据，大幅降低联邦训练的通信与计算负担。",
-      detail: "背景：联邦学习（FL）让分布式客户端在不共享本地数据的前提下共建全局模型，隐私友好；但传统 NLP 管线的重计算与重通信使其难以覆盖当代工作负载。\n方法：字节级（tokenizer-free）小语言模型——绕开词表不一致问题（各端分词器差异是 FL 的隐性障碍），直接以字节为单位处理文本与多模态数据。\n端侧视角： tokenizer-free 是「同一模型在异构端侧设备间可联邦演化」的前提——字节数据天然对齐，端侧众设备协同训练的工程门槛随之下降。",
-      tags: ["字节级模型", "联邦学习", "多模态", "隐私训练"],
-      url: "https://arxiv.org/abs/2610.22906"
+      id: "p8", group: "recent", cat: "能效与评测", date: "2026-10-30",
+      title: "Compression Technique Interactions in Small Language Models: A Factorial Ablation",
+      authors: "Compression-Interactions Team 等",
+      venue: "arXiv:2611.00464", level: "预印本",
+      summary: "量化、剪枝与压缩后恢复技术组合使用时如何相互影响，实践缺乏系统指南——本文对四种 SLM 架构（2.7B-7B 参数）做了 72 种压缩配置的因子消融研究，扩展 48 种组合的次序分析，并在 30 个压缩模型上做基准精度验证与鲁棒性检验。",
+      detail: "设计：72 压缩配置×4 架构（2.7B-7B）因子消融+48 配置的施加次序分析+30 模型基准验证。\n发现：压缩技术间的交互效应显著——组合收益非叠加，施加次序影响最终精度。\n端侧视角：给「先量化还是先剪枝」这类日常工程决策提供了首批系统性证据，是端侧压缩落地的操作手册级工作。",
+      tags: ["模型压缩", "因子消融", "量化", "剪枝"],
+      url: "https://arxiv.org/abs/2611.00464"
     },
     {
-      id: "p9", group: "recent", cat: "推理与系统", date: "2026-10-15",
-      title: "MemLLM: End-to-end In-Storage Acceleration of On-device RAG using Precomputed KV Caches",
-      authors: "MemLLM Team 等",
-      venue: "arXiv:2610.22579", level: "预印本",
-      summary: "端侧 RAG 的长上下文预填（prefill）是主要瓶颈——离线预计算 KV 缓存虽省算力，但数 GB 缓存在设备窄互连上形成 I/O 墙；MemLLM 用存内计算（in-storage）端到端加速预计算 KV 缓存的读取与注入，让「外置记忆」真正可在端侧跑起来。",
-      detail: "背景：边缘设备上的 RAG 支持个性化推理且保隐私，但其长度不对称性使预填阶段成为瓶颈；服务器侧预计算 KV 缓存的方案搬到端侧后，多 GB 缓存经窄互连搬运形成严重 I/O 墙。\n方法：MemLLM 端到端存内加速——把预计算 KV 缓存的消费过程下沉到存储介质内部，绕开主互连搬运。\n端侧视角：与本期资讯侧的 KV 缓存压缩线（架构级压缩）互补——压缩让缓存变小，存内计算让缓存的读取不再走「总线」，两条路线共同拆端侧长上下文的 I/O 墙。",
-      tags: ["存内计算", "KV缓存", "端侧RAG", "预填加速"],
-      url: "https://arxiv.org/abs/2610.22579"
+      id: "p9", group: "recent", cat: "端侧智能体", date: "2026-10-30",
+      title: "Latent-Lens: Visual Perception in Small Language Models Through Latent Communication",
+      authors: "Latent-Lens Team 等",
+      venue: "arXiv:2610.41751", level: "预印本",
+      summary: "多智能体系统中独立 VLM 与小语言模型（SLM）以离散文本交换信息，构成空间与细粒度细节的损失瓶颈——SLM 容量有限尤其依赖输入信号质量。Latent-Lens 借鉴语言模型间潜空间通信方法，让 VLM 的视觉状态以潜变量形式注入 SLM，绕过文本瓶颈传递视觉感知。",
+      detail: "问题：VLM→SLM 文本转述丢失空间/细粒度信息，对小容量 SLM 伤害最大。\n方法：潜空间通信——视觉状态以潜变量直通注入 SLM。\n端侧视角：端侧多智能体（本机 VLM+本机 SLM）之间同样存在文本接口瓶颈——潜变量直连让「小模型组合」逼近大模型感知质量，是端侧模型乐高化的关键材料。",
+      tags: ["潜空间通信", "多智能体", "视觉感知", "小模型"],
+      url: "https://arxiv.org/abs/2610.41751"
     },
     {
-      id: "p10", group: "recent", cat: "安全与隐私", date: "2026-10-15",
-      title: "BiShield-TEE: On the (In-)Security of Unilateral Weight Obfuscation",
-      authors: "Zhiyuan Wang 等",
-      venue: "arXiv:2610.21565", level: "预印本",
-      summary: "揭示端侧 TEE 参数混淆的单边变换漏洞——混淆密钥被「解的唯一性」暴露，代表性方案 GroupCover 与 ArrowCloak 的保护可被击穿；提出双边混淆框架 BiShield-TEE，通过输入与输出维度联合混淆诱导「解的歧义性」重建保护。",
-      detail: "背景：端侧部署 LLM 越来越普遍（时延与隐私），但专有模型面临逆向与窃取风险；TEE 提供硬件隔离推理，但多数 TEE 参数混淆依赖单边矩阵变换（仅混淆输出侧）。\n漏洞：识别出「解的唯一性」（SDP）缺陷——混淆密钥被唯一确定，暴露真实密钥结构；攻击下 GroupCover 与 ArrowCloak 的保护降至可忽略，攻击准确率超过全屏蔽黑盒基线 2.4 倍并恢复接近完整的模型功能。\n方案：BiShield-TEE 双边框架，联合混淆输入与输出维度诱导歧义解，配合硬件保护重建有效的权重保密。",
-      tags: ["TEE", "模型保护", "参数混淆", "端侧安全"],
-      url: "https://arxiv.org/abs/2610.21565"
+      id: "p10", group: "recent", cat: "推理与系统", date: "2026-10-29",
+      title: "MulClip: A table-free activation function for reservoir computing on microcontrollers",
+      authors: "MulClip Team 等",
+      venue: "arXiv:2610.39343", level: "预印本",
+      summary: "MCU 上储备池计算的状态更新里，仅 tanh 求值就占 Cortex-M4 上 75% 的耗时——MulClip 提出无查表的轻量激活函数：只用比较、绝对值、乘法与减法引入曲率，并把裁剪阈值置于响应中段，在环形储备池上以极低开销逼近 tanh 的非线性表达。",
+      detail: "动机：Cortex-M4 实测 tanh 占状态更新 75% 耗时；查表法占 RAM。\n设计：比较+绝对值+乘法+减法四运算构造单调+折叠响应，阈值置于中段。\n端侧视角：把 MCU 级毫瓦算力上的激活函数成本再砍一刀——极限边缘（传感器节点/穿戴）上算子级优化仍是性价比最高的 AI 落地手段。",
+      tags: ["MCU", "激活函数", "储备池计算", "极致边缘"],
+      url: "https://arxiv.org/abs/2610.39343"
     },
+
   ],
 
-  /* ------------- 板块三：知识分享 ------------- */
-    knowledge: {
+knowledge: {
     /* 每周一个知识点（KNOWLEDGE_PLAN.md 16 讲周更，2026-10-25 首期）：weekly 只放元数据+lesson 指针，
        正文与配图在 knowledge/ 子项目（lessons/lesson-NN.js + assets/），点开卡片按需加载 */
     weekly: { no: 3, lesson: 3,
