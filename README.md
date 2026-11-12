@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 47 期（2026.11.06 — 2026.11.12 · 近 7 天）
+## 2026 · 第 47 期（2026.11.07 — 2026.11.13 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。 今日新增：优必选×沐曦合资造芯（曦选创智 5 亿天使轮/40 亿估值对标 Thor）、面壁 35B-A3B 跑进手机（3GB 内存）、Claude AI 办公全家桶×谷歌桌面端开战、北大系 aiXcompact-4B 上下文压缩开源（成本降 78%）。
+**近 7 天导读**：近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。 今日新增：优必选×沐曦合资造芯（曦选创智 5 亿天使轮）、面壁 35B-A3B 跑进手机、Claude AI 办公全家桶×谷歌桌面端开战、北大系 aiXcompact-4B 压缩开源、李沐 Boson Higgs Realtime Duplex 全双工（160ms 流式）。
 
 ## 近 7 天速览
 
@@ -15,7 +15,7 @@
 | 2026-11-11 | [AI 巨头桌面端开战：Claude 推 Whiteboards 等 AI 办公全家桶直挑微软，谷歌同日上线 Gemini 新旗舰+复刻 OpenCode 桌面应用](https://m.36kr.com/p/4064780118463617) | 36氪 |
 | 2026-11-09 | [阿里发布千问办公 2.0：从个人助手升级 Team Agent，首个支持多人与 Agent 协作](https://www.qbitai.com/2026/11/508694.html) | 量子位 |
 
-### AI硬件（7 条）
+### AI硬件（5 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -24,8 +24,6 @@
 | 2026-11-10 | [华为 MateBook Fold S 鸿蒙小折叠电脑三色公布：全新背屏设计+Live 小方屏，11 月 14 日开启预订](https://www.ithome.com/1/024/600.htm) | IT之家 |
 | 2026-11-09 | [Gentle Monster 首款 AI 眼镜定档：携手谷歌与三星、搭载 Gemini，11 月 12 日美国开启预订](https://www.gentlemonster.com/int/zh-CN/intelligent-eyewear) | Gentle Monster 官网 |
 | 2026-11-08 | [物理智能开源平台 Hitch Open 进博会全球发布：双机自主对打乒乓球 142 拍刷新世界纪录，0.3 秒完成感知决策](https://www.ithome.com/1/023/920.htm) | IT之家 |
-| 2026-11-06 | [智元发布灵犀 X2 焕新版双足人形机器人：旗舰版 31 自由度+选配灵巧手达 47 自由度，面向展馆文旅导览](https://original.ifeng.com/c/8xptAMvorxt) | 凤凰网 |
-| 2026-11-06 | [宇树×巨星传奇进博会首发收藏机器狗 UNI-DOGGIE：4.39 万元全球限量 2000 台，威刚首发采购 1000 台](https://finance.eastmoney.com/a/202611063924713248.html) | 东方财富 |
 
 ### 芯片厂商（2 条）
 
@@ -34,14 +32,12 @@
 | 2026-11-12 | [优必选×沐曦合资芯片公司曦选创智完成 5 亿元天使轮：估值 40 亿元，首颗芯片对标英伟达 Thor、2028 年量产](http://news.10jqka.com.cn/20261112/c681759273.shtml) | 同花顺财经 |
 | 2026-11-11 | [华为官方详解麒麟 9050 系列：新一代达芬奇 NPU 性能提升 140%，30B MoE 全模态大模型端侧离线运行仅占 2.5GB 内存](https://original.ifeng.com/c/8xxkY6ktCXa) | 凤凰网 |
 
-### 手机厂商（4 条）
+### 手机厂商（2 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-11-11 | [苹果子公司 Claris 暗测 Harbor 应用：Mac 变身本地 AI 服务器，雷雳 5 串联多机集群跑大模型](https://www.ithome.com/1/025/225.htm) | IT之家 |
 | 2026-11-11 | [谷歌 Pixel 11 月功能更新：引入类苹果 PCC 的私有云方案，Gemini Intelligence 自动化能力扩展](https://m.36kr.com/p/3551123276372102) | 36氪 |
-| 2026-11-06 | [Googlebook 11 月更新：端侧 AI 内存常驻占用压缩近 40%，16GB 机型最多释放 6GB 运行内存](https://tech.ifeng.com/c/8xpmRKLsDrt) | 凤凰网科技 |
-| 2026-11-06 | [阶跃 STEPX Neo 智能体手机进博首秀：亮相高通展台，3999 元软硬模三位一体定价开放近百应用生态](https://www.sohu.com/a/1098104093_116157) | 搜狐科技 |
 
 ### 大模型厂商（9 条）
 
@@ -55,9 +51,9 @@
 | 2026-11-10 | [蚂蚁灵波开源 LingBot-Touch 触觉基础模型：为通用大脑接入「手感」，26 项真机任务成功率提升 14-26 个百分点](https://www.ithome.com/1/024/701.htm) | IT之家 |
 | 2026-11-09 | [Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2 双旗舰：智能体编码基准 49.1% 超 GPT-6 Astra，API 降价 20%](https://tech.ifeng.com/c/8xwEBlk190G) | 凤凰科技 |
 | 2026-11-09 | [Meta 开源发布 Muse Ember：迄今最小多模态模型专攻 Agent 执行，1M 上下文、每百万输入 Token 仅 0.1 美元](https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution) | TechCrunch |
-| 2026-11-06 | [蚂蚁百灵发布 Ling-3.2-Flash：560B MoE 激活 25B 原生多模态，三项基准超越 Claude Opus 5](https://tech.ifeng.com/c/8xpCRzyq65n) | 凤凰科技 |
+| 2026-11-07 | [李沐 Boson AI 发布 Higgs Realtime Duplex 全双工多模态模型：160ms 流式处理，边听边说、边看边想+数字人输出](https://www.cnblogs.com/rtedev/p/23578685) | CSDN |
 
-### 行业动态（8 条）
+### 行业动态（6 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -67,8 +63,6 @@
 | 2026-11-08 | [中国移动×智谱签署合作协议：GLM 系列模型接入移动云 MaaS 平台，国产算力到大模型服务全链合作](https://www.ithome.com/1/023/937.htm) | IT之家 |
 | 2026-11-08 | [2026 款奔驰长轴距 E 级上市 42.38 万元起：奔驰中国首次独立开发 AI 座舱，深度融合豆包大模型](https://auto.ifeng.com/c/8xm3Ojm10u8) | 凤凰汽车 |
 | 2026-11-07 | [京东×酷派把品牌 AI 眼镜打到 322 元：C2M 定制+国补首批进入百元档，光波导眼镜销量同比增 3 倍](https://feng.ifeng.com/c/8xqtFAaroQ8) | 凤凰网 |
-| 2026-11-06 | [工信部印发智能体终端进网管理新规：预置智能体的手机/平板/可穿戴须过适配验证与反诈评测，智能体将配唯一身份标识](https://wap.eastmoney.com/a/202611063924763462.html) | 中新社 |
-| 2026-11-06 | [马斯克官宣 Cybertruck 收尾：2027 年中德州工厂转向 Cybercab 产能，公司资源重心移向机器人与 AI](https://www.worldjournal.com/wj/story/121172/9863563?zh-cn) | 路透社 |
 
 ## 科研前沿（10 篇）
 
@@ -82,4 +76,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-11-12。
+- 数据更新于 2026-11-13。

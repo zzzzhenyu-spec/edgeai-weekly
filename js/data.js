@@ -15,16 +15,16 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 47 期",
-    weekRange: "2026.11.06 — 2026.11.12 · 近 7 天",
-    updated: "2026-11-12",
+    weekRange: "2026.11.07 — 2026.11.13 · 近 7 天",
+    updated: "2026-11-13",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：优必选×沐曦合资造芯（曦选创智 5 亿天使轮/40 亿估值对标 Thor）、面壁 35B-A3B 跑进手机（3GB 内存）、Claude AI 办公全家桶×谷歌桌面端开战、北大系 aiXcompact-4B 上下文压缩开源（成本降 78%）。"
+    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：优必选×沐曦合资造芯（曦选创智 5 亿天使轮）、面壁 35B-A3B 跑进手机、Claude AI 办公全家桶×谷歌桌面端开战、北大系 aiXcompact-4B 压缩开源、李沐 Boson Higgs Realtime Duplex 全双工（160ms 流式）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
 {
-      id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
+id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
       title: "优必选×沐曦合资芯片公司曦选创智完成 5 亿元天使轮：估值 40 亿元，首颗芯片对标英伟达 Thor、2028 年量产",
       summary: "由优必选与沐曦股份联合发起（锋龙股份参投）的具身智能端侧芯片公司曦选创智宣布完成 5 亿元人民币天使轮融资，投后估值 40 亿元——纪源资本与经纬创投联合领投，和利资本、鼎晖等跟投。首颗自研芯片直接对标英伟达 Thor（车规级/机器人端侧芯片），资金用于核心芯片研发与软件工具链建设，机器人芯片预计 2028 年量产。",
       detail: "融资：11 月 12 日官宣，5 亿元天使轮、投后估值 40 亿元；GGV 纪源资本+经纬创投联合领投。\n股东：优必选（本体厂）×沐曦股份（国产 GPU 底座）×锋龙股份——机器人×算力×制造的合资结构。\n目标：首颗自研芯片对标英伟达 Thor；机器人端侧+车规级场景；2028 年量产。\n端侧视角：人形机器人厂商亲自下场造芯是本周具身智能的第三条主线（前两条：智元模型三连发、苹果 HALO）——机器人大脑芯片此前被英伟达 Thor 垄断叙事，国产「本体厂×GPU 厂」合资把需求方与供给方绑在同一张桌上，40 亿估值对应的是 Thor 替代窗口期的卡位价值。",
@@ -33,10 +33,10 @@ news: [
       image: "images/news/n236.jpg",
       imageCap: "国产 GPU 底座×机器人场景生态（图源：搜狐财经）",
       highlight: false
-    },
+    },,
 
 {
-      id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11-11",
+id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11-11",
       title: "面壁智能 35B 模型跑进手机：MiniCPM-V 4.7 35B-A3B 以 3GB 内存实现端侧多模态，iPhone 18 Pro Max 实测即问即答",
       summary: "面壁智能 MiniCPM-V 4.7 35B-A3B 端侧多模态模型密集演示落地——350 亿总参数 MoE 架构每次推理仅激活 30 亿参数，约 3GB 运行内存即可在手机/平板完成推理；在 iPhone 18 Pro Max 上的实测演示实现即问即答无需等待，是首个可在端侧无损流畅运行的开源 MoE 模型。行业观察同时指出旗舰手机可用内存仍是 35B 级模型落地的现实约束。",
       detail: "模型：MiniCPM-V 4.7 35B-A3B（10 月中开源），11 月 5 日 iPhone 18 Pro Max 实测演示、11 月 11 日起多源密集报道。\n架构：35B 总参数 MoE、激活 3B——首个端侧无损流畅运行的开源 MoE。\n门槛：约 3GB 运行内存完成手机/平板推理。\n生态：面壁与三星手机端侧 AI 合作、冲刺上市。\n端侧视角：端侧模型的参数天花板之争从 4B 直跳 35B MoE——激活 3B 的稀疏化路线让「大总参小激活」跨过手机内存红线；与麒麟 9050 官宣 30B 端侧（2.5GB 占用）同周出现，30B 级端侧模型从芯片侧与模型侧完成会师。",
@@ -45,10 +45,10 @@ news: [
       image: "images/news/n233.png",
       imageCap: "MiniCPM-V 4.7 端侧演示（图源：OpenBMB）",
       highlight: false
-    },
+    },,
 
 {
-      id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
+id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
       title: "AI 巨头桌面端开战：Claude 推 Whiteboards 等 AI 办公全家桶直挑微软，谷歌同日上线 Gemini 新旗舰+复刻 OpenCode 桌面应用",
       summary: "Anthropic 端出 Claude AI 办公全家桶——Claude Whiteboards 数字白板可在会议中与团队共同头脑风暴、把想法转化为带时间线/责任人/日期的看板，直接挑战微软 Office，消息当日微软股价大跌；同日谷歌 Gemini 新旗舰全面上线，并「一夜复刻」类 OpenCode 桌面应用（Google AI Ultra 订阅用户可在 Antigravity、Gemini 应用与搜索 AI 模式使用）。AI 御三家的竞争焦点正式从模型层转向桌面端产品。",
       detail: "Anthropic：Claude Whiteboards（白板→看板：时间线/责任人/日期）等办公全家桶，直击 Office 核心场景；当日微软股价应声下跌。\n谷歌：Gemini 新旗舰全面上线+类 OpenCode 桌面应用，Ultra 订阅三入口（Antigravity/Gemini 应用/搜索 AI 模式）。\n格局：OpenAI（Codex）×谷歌（补课）×Anthropic（狂飙）桌面端正式开打，国内模型专注编码与一站式追赶。\n端侧视角：桌面是端侧 Agent 的主战场——白板/表格/看板类办公工件全部在本地生成与协作，巨头把模型能力包装成桌面生产力套件的路线收敛；与千问办公 2.0 的 Team Agent 同属 Agent 产品化浪潮的不同切片。",
@@ -57,10 +57,10 @@ news: [
       image: "images/news/n234.jpg",
       imageCap: "Claude Whiteboards/Sheets/Data 发布（图源：36氪）",
       highlight: false
-    },
+    },,
 
 {
-      id: "n235", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
+id: "n235", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
       title: "北大系创企开源 aiXcompact-4B 上下文压缩模型：编程 Agent 推理成本降 78%、API 费用降 97%，单卡 A100 可私有部署",
       summary: "孵化自北大软件工程研究所的硅心科技（aiXcoder）开源上下文压缩专用模型 aiXcompact-4B——面向编程 Agent 长程任务：对历史轨迹做结构化处理（保留关键信息/精简工具返回/删除冗余+生成任务摘要），历史上下文平均压缩至原长度的 25.89%；接入 OpenCode 后 Terminal-Bench 准确率与 DeepSeek-V4-Pro 持平，单次 GPU 推理成本降 78%、单次 API 压缩请求约 0.019 元（较主流旗舰降约 97%）。",
       detail: "开源：11 月 11 日（GitHub 开放权重）。\n背景：SWE-bench Verified 实测单个编程 Agent 任务平均消耗约 417 万 token（单轮推理的 3500 倍），输入 token 占绝大部分——上下文压缩是 Agent 成本控制关键。\n方法：结构化判别三类决策（保留核心需求与决策/精简文件读取与测试输出/删除失效记录）+结构化任务摘要；教师模型蒸馏+4B 学生 LoRA 微调，真实研发轨迹训练。\n成绩：压缩评测综合分 0.7012 接近 DeepSeek-V4-Pro 的 0.7332；平均保留率 25.89%；单张 A100-40GB 私有部署。\n端侧视角：上下文压缩是长程 Agent 的「内存管理器」——4B 专用小模型接管高频压缩、大模型专注决策，大小模型分工把 Agent 运行成本砍掉一个数量级；专用小模型家族（aiXapply-4B/aiXpruner-4B）正是端侧化思路在云端 Agent 内部的复刻。",
@@ -69,10 +69,10 @@ news: [
       image: "images/news/n235.png",
       imageCap: "aiXcompact-4B 成本对比（图源：智东西）",
       highlight: false
-    },
+    },,
 
 {
-      id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
+id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
       title: "苹果子公司 Claris 暗测 Harbor 应用：Mac 变身本地 AI 服务器，雷雳 5 串联多机集群跑大模型",
       summary: "苹果全资子公司 Claris 正在测试 Harbor 应用——将苹果芯片 Mac 变成本地 AI 服务器：单台可跑，也可用雷雳 5 接口连接多台 Mac 组集群运行更大规模 AI 模型；macOS Tahoe 26.2 已加入雷雳 5 RDMA（远程直接内存访问）支持提速集群传输。应用可自动检测设备、浏览并下载开放权重模型，零手动配置即获得端侧 AI 能力。目前处于早期体验阶段、尚未公开。",
       detail: "曝光：11 月 11 日多源报道（IT之家/9to5Mac，候选池 3 簇此前未过目）。\n形态：单 Mac 或雷雳 5 多机集群——把闲置端侧算力拼成「桌面级 AI 机房」。\n系统：macOS Tahoe 26.2 已内置雷雳 5 RDMA 支持，集群数据传输提速。\n易用：自动检测雷雳 5 设备；浏览、下载开放权重模型；无需手动配置。\n状态：早期体验未向公众开放，App Store 页面曾短暂出现后下架。\n端侧视角：苹果首次官方系动作把「端侧算力组网」做成产品——Harbor 的意义不在单机跑模型（llama.cpp/Ollama 早就能做），而在雷雳 5 RDMA 让多台 Mac 的统一内存像一台机器一样被调度；若走向公开发布，Mac 集群将成为家庭与小团队跑开源大模型的最低门槛路径，也是苹果端侧优先路线在生产力侧的补全。",
@@ -81,7 +81,7 @@ news: [
       image: "images/news/n228.jpg",
       imageCap: "Claris Harbor 应用（图源：IT之家）",
       highlight: true
-    },
+    },,
 
 {
 id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
@@ -93,7 +93,7 @@ id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
       image: "images/news/n222.png",
       imageCap: "麒麟 9050 系列官方详解（图源：凤凰网）",
       highlight: true
-    },,,,
+    },,,,,
 
 {
 id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
@@ -105,7 +105,7 @@ id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
       image: "images/news/n224.png",
       imageCap: "Qwen4 预览版上线（图源：IT之家）",
       highlight: false
-    },,,,
+    },,,,,
 
 {
 id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
@@ -117,10 +117,10 @@ id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
       image: "images/news/n225.jpg",
       imageCap: "Pixel 11 月功能更新（图源：9to5Google）",
       highlight: false
-    },
+    },,
 
 {
-      id: "n230", cat: "大模型厂商", source: "DeepMind 官方", date: "2026-11-10",
+id: "n230", cat: "大模型厂商", source: "DeepMind 官方", date: "2026-11-10",
       title: "谷歌发布 Gemini Robotics 2.5：最强视觉-语言-动作模型，奔驰产线实测 96% 成功率，ASIMOV-Jailbreak 安全基准同步开源",
       summary: "Google DeepMind 发布迄今最强视觉-语言-动作模型（VLA）Gemini Robotics 2.5——200 余项任务评测成功率较前代提升 30-100%、完成速度快 20-30%；在奔驰匈牙利与德国产线的真实验证中，Apptronik Apollo 2 人形机器人自主完成汽车零件分拣上料、成功率 96%。同步引入推理时物理安全引导（障碍物场景安全完成率 +33%、人员近旁 +43%），并开源抗越狱基准 ASIMOV-Jailbreak（Gemini 4 Argon 越狱抵抗率 99.5%）。",
       detail: "发布：11 月 10 日 DeepMind 官方博客。\n能力：灵巧性（工具使用/柔性物体操作）、可靠性、安全性三线跃升；200+ 项任务评测（夹食物/打礼盒蝴蝶结/移液等）。\n实测：奔驰 Kecskemét 与 Sindelfingen 产线，Apollo 2（22 自由度五指 SharpaWave 手）自主 kitting 分拣，96% 成功率；Gemini Robotics ER 管流程+2.5 管手臂数据。\n安全：推理时危险规避引导；ASIMOV-Jailbreak 开源基准——数百条伪装危险指令×数十场景，Argon 抵抗率 99.5%（前代 ER2 为 82%）。\n加速器：Gemini 4 Argon 充当仿真引擎——从真实相机场景生成数千变体演练+数字孪生+失败归因，大幅压缩训练周期。\n端侧视角：VLA 头部模型首次把「产线级 96%」写进官方口径——具身智能从演示视频走到值班工位；ASIMOV-Jailbreak 把机器人安全评测标准化，与国内同期的 HALO/LIFE 形成中美具身安全研究的第一轮正面呼应。",
@@ -129,10 +129,10 @@ id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
       image: "images/news/n230.webp",
       imageCap: "Apollo 2 在奔驰产线执行分拣（图源：Google DeepMind）",
       highlight: true
-    },
+    },,
 
 {
-      id: "n231", cat: "行业动态", source: "IT之家", date: "2026-11-10",
+id: "n231", cat: "行业动态", source: "IT之家", date: "2026-11-10",
       title: "首个「自下而上」的 AI PC 操作系统 KORA OS 发布：底层融入智能体工作流，骁龙 X2 Elite 有望成首发平台",
       summary: "KORA Systems 发布全新操作系统 KORA OS——宣称首个专为 AI PC「自下而上」设计的操作系统：智能体工作流、上下文记忆与本地 AI 推理直接融入系统底层，目标让电脑从「打开应用完成操作」转向「表达意图、由 AI 协助完成」。基于 NixOS 构建，自研 Cortex 推理引擎调度 CPU/GPU/NPU 本地运行开放权重模型，内置 Wine/Proton 的 Windows 应用兼容层；正与高通合作，骁龙 X2 Elite 有望成为首款支持平台。",
       detail: "发布：11 月 10 日公告、11 月 11 日多源报道。\n理念：AI 原生而非 AI 叠加——「神经工作区」按任务目标组织空间，系统围绕意图、上下文与记忆管理文件；传统文件夹与桌面应用保留但不再是核心。\n引擎：自研 Cortex 推理引擎调度 CPU/GPU/NPU；内置基于 llama.cpp 的 Lemma 引擎；系统自动判断任务云端处理还是留在本地。\n隐私：工作流记忆与上下文留在本机不出设备；每个工作区隔离沙箱运行，应用与 AI 智能体独立权限。\n兼容：Wine/Proton 转换层跑 Windows 应用，本地 AI 协助配置；骁龙 X2 Elite 首发平台，后续 AMD/Intel x86 与更多 Arm。\n团队：约 20 名工程师，创始成员来自 Cyanogen、Android 与 GameOS；企业版 HUMAIN OS 预计 2027 年发布。\n端侧视角：继鸿蒙 PC、ChromeOS 之后第三个向 Windows 发起形态级挑战的系统——KORA 把「本地跑开放权重+端云分流+沙箱化智能体」整套端侧 AI 栈做成 OS 的第一性设计；与骁龙 X2 Elite 绑定意味着 Arm on PC 战线又多一个盟友，值得跟踪其对 NPU 的调度深度是否超过 Windows 的 AI API 层。",
@@ -141,10 +141,10 @@ id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
       image: "images/news/n231.png",
       imageCap: "KORA OS 界面（图源：IT之家）",
       highlight: false
-    },
+    },,
 
 {
-      id: "n232", cat: "AI硬件", source: "亚马逊官方", date: "2026-11-10",
+id: "n232", cat: "AI硬件", source: "亚马逊官方", date: "2026-11-10",
       title: "亚马逊 Ring 成立机器人部门并发布两款 AI 安防设备：249.99 美元家用飞行监控无人机 Drone Cam 与商用巡逻机器人 Rover Cam",
       summary: "亚马逊 Ring 宣布成立 Ring Robotics 机器人业务部门，并发布两款 AI 安防设备——Drone Cam 家用室内飞行监控无人机（249.99 美元，警报触发后自动飞往现场查看，已向 FCC 申请批准、预计 2026 年 1 月下旬发货，系六年研发两度推迟后终于落地）与 Rover Cam 面向商店、仓库与办公场所的自主巡逻安防机器人。",
       detail: "发布：11 月 10 日亚马逊官方公告（IT之家/凤凰网等多源）。\nDrone Cam：室内飞行监控无人机，249.99 美元；警报触发自动飞临现场查看；FCC 审批中，预计 2026 年 1 月下旬发货——六年研发、多次推迟后的量产落地，让家庭无需布满固定摄像头。\nRover Cam：商用自主巡逻安防机器人，面向商店/仓库/办公场景。\n格局：Ring 正式进军 AI 机器人赛道，与悬浮飞行家庭机器人 Halo H-1（10 月上市）等初创产品同场竞技。\n端侧视角：家用安防是飞行机器人第一个真量产场景——「按需飞到现场看一眼」对算力、避障与续航的要求全部压在端侧；Ring 背靠亚马逊的 AI 视觉栈与出货渠道，Drone Cam 若 1 月顺利交付，将成为家庭机器人渗透率的关键试金石。",
@@ -153,10 +153,10 @@ id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
       image: "images/news/n232.png",
       imageCap: "Ring Drone Cam 与 Rover Cam（图源：亚马逊官方）",
       highlight: false
-    },
+    },,
 
 {
-      id: "n229", cat: "行业动态", source: "腾讯新闻", date: "2026-11-10",
+id: "n229", cat: "行业动态", source: "腾讯新闻", date: "2026-11-10",
       title: "小米联合北大发布《物联网设备模型技术白皮书》：11.6 亿台 AIoT 设备实践经验开放，定义 AI 原生物联网标准",
       summary: "中国计算机学会泛在操作系统开放社区牵头、小米与北京大学联合编制的《物联网设备模型技术白皮书》正式发布——基于小米超过 11.6 亿台 AIoT 设备、200 多个品类、10000 多家合作伙伴的规模化实践，提出四层物模型架构与 Dynamic Service 动态服务机制（支持设备新功能自动发现与场景自适应），定义智能设备的「数字化通用语言」，向全行业开放共建 AI 原生物联网标准。",
       detail: "发布：11 月 10 日（腾讯新闻/搜狐/ZOL/凤凰网多源）。\n编制：CCF 泛在操作系统开放社区牵头，小米+北京大学联合。\n底盘：小米 11.6 亿台 AIoT 设备实践、200+ 品类、10000+ 合作伙伴——卢伟冰：「把 11.6 亿台设备上验证过的技术和经验，正式开放给全行业」。\n核心：四层物模型架构+Dynamic Service 动态服务机制——突破静态物模型描述局限，设备新增功能自动发现、场景自适应调整；AI 融合与可信安全并列为三大突破。\n端侧视角：物模型是设备侧的「数字孪生底座」——当 11.6 亿台设备的描述语言统一并支持动态服务，智能体跨设备调用的成本从逐品牌适配降到读标准；这份白皮书实质是把小米澎湃生态的设备抽象层开放为行业公共品，为端侧智能体的万物互联铺路。",
@@ -165,7 +165,7 @@ id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
       image: "images/news/n229.jpg",
       imageCap: "《物联网设备模型技术白皮书》发布（图源：腾讯新闻）",
       highlight: false
-    },
+    },,
 
 {
 id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
@@ -177,7 +177,7 @@ id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
       image: "images/news/n218.jpg",
       imageCap: "智元 WITA-Omni 发布（图源：IT之家）",
       highlight: true
-    },,,,
+    },,,,,
 
 {
 id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
@@ -189,7 +189,7 @@ id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
       image: "images/news/n219.png",
       imageCap: "LingBot-Touch 触觉基础模型（图源：IT之家）",
       highlight: false
-    },,,,
+    },,,,,
 
 {
 id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
@@ -201,7 +201,7 @@ id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
       image: "images/news/n220.jpg",
       imageCap: "影目 INMO AIR3 召回（图源：IT之家）",
       highlight: false
-    },,,,
+    },,,,,
 
 {
 id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
@@ -213,7 +213,7 @@ id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
       image: "images/news/n221.jpg",
       imageCap: "MateBook Fold S 三色外观（图源：IT之家）",
  highlight: false
-    },,
+    },,,
 
 {
 id: "n227", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-09",
@@ -225,7 +225,7 @@ id: "n227", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-09",
       image: "images/news/n227.jpg",
       imageCap: "Claude Fable 5.2 发布（图源：凤凰科技）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
@@ -237,7 +237,7 @@ id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
       image: "images/news/n214.png",
       imageCap: "千问办公 2.0 官方发布原文（图源：千问办公公众号）",
       highlight: true
-    },,,,
+    },,,,,
 
 {
 id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
@@ -249,7 +249,7 @@ id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
       image: "images/news/n215.jpg",
       imageCap: "微信鸿蒙版安装量突破 9000 万（图源：IT之家）",
       highlight: false
-    },,,,
+    },,
 
 {
 id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09",
@@ -261,7 +261,7 @@ id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09"
       image: "images/news/n216.jpg",
       imageCap: "Gentle Monster Intelligent Eyewear（图源：官网）",
       highlight: false
-    },,,,
+    },,,,,
 
 {
 id: "n226", cat: "大模型厂商", source: "TechCrunch", date: "2026-11-09",
@@ -273,7 +273,7 @@ id: "n226", cat: "大模型厂商", source: "TechCrunch", date: "2026-11-09",
       image: "images/news/n226.png",
       imageCap: "Meta Muse Ember（图源：TechCrunch）",
       highlight: false
-    },,,,
+    },,,,,
 
 {
 id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
@@ -285,7 +285,7 @@ id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
       image: "images/news/n190.png",
       imageCap: "中国移动×智谱合作（图源：IT之家）",
       highlight: false
-    },,,,
+    },,,,,
 
 {
 id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
@@ -297,7 +297,7 @@ id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
       image: "images/news/n198.jpg",
       imageCap: "Hitch Open 展台机器人乒乓对打（图源：中新经纬）",
       highlight: false
-    },,,,
+    },,,,,
 
 {
 id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
@@ -309,7 +309,19 @@ id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
       image: "images/news/n199.jpg",
       imageCap: "2026 款长轴距 E 级（图源：凤凰汽车）",
       highlight: false
-    },,,,
+    },,
+
+{
+id: "n237", cat: "大模型厂商", source: "CSDN", date: "2026-11-07",
+      title: "李沐 Boson AI 发布 Higgs Realtime Duplex 全双工多模态模型：160ms 流式处理，边听边说、边看边想+数字人输出",
+      summary: "李沐与 Alex Smola 联合创立的 Boson AI 发布全双工实时多模态交互模型 Higgs Realtime Duplex 研究预览——以 160 毫秒为单位处理连续输入输出流，像真人一样边听边说、边看边想：支持主动附和、识别用户打断、根据语音与视觉上下文判断回应时机，并可一边聊天一边干活；同系 Higgs Realtime 端到端模型已开放 API 并支持数字人输出。OpenAI 同期开放全双工语音模型 GPT-Live-1 API，行业正从轮次式语音转向持续双向交互。",
+      detail: "发布：研究预览版（11 月 7 日前后，CSDN/知乎/李沐 B 站技术讲解《边听边说、边看边想、还有一张脸的全双工模型》）。\n机制：160ms 为单位处理连续输入输出流——主动附和、打断识别、语音+视觉上下文判断回应时机。\n产品线：Higgs Realtime（端到端，已开放 API+数字人输出）/Higgs Realtime Duplex（全双工，候补名单）。\n底座：Higgs Audio V2 开源音频基座（Llama-3.2-3B、预训练超 1000 万小时音频）。\n对垒：OpenAI 同期开放 GPT-Live-1 全双工 API。\n端侧视角：全双工是语音交互的技术上限方向——160ms 粒度的流式决策必须贴近用户完成，端侧或近端推理是体验底座；与智元 WITA-Omni（具身全双工 400ms）同期出现，「持续在场式交互」正在手机助手与机器人两端同时落地。",
+      tags: ["李沐", "Boson AI", "Higgs", "全双工", "语音交互"],
+      url: "https://www.cnblogs.com/rtedev/p/23578685",
+      image: "images/news/n237.png",
+      imageCap: "Higgs Realtime 数字人演示（图源：CSDN）",
+      highlight: false
+    },,
 
 {
 id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
@@ -322,90 +334,6 @@ id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
       imageCap: "京东×酷派 AI 智能眼镜（图源：凤凰网）",
       highlight: false
     },,,,
-
-{
-id: "n189", cat: "AI硬件", source: "凤凰网", date: "2026-11-06",
-      title: "智元发布灵犀 X2 焕新版双足人形机器人：旗舰版 31 自由度+选配灵巧手达 47 自由度，面向展馆文旅导览",
-      summary: "智元机器人发布灵犀 X2 焕新版双足人形机器人——分为青春焕新版（30 自由度）与旗舰焕新版（31 自由度：头部 2+手臂 14+腰部 3+腿部 12），选配灵巧手后整体可达 47 自由度；膝关节峰值扭矩 120Nm，支持 UWB/Wi-Fi/4G/5G/蓝牙/GPS 多种通信。面向展馆文旅与导览导购场景——是灵犀 X2（半尺寸人形）量产线的迭代版本。",
-      detail: "发布：11 月 6 日发布（东方财富/凤凰网多源，候选库 dom=2 rep=3）。\n配置：旗舰焕新版 31 自由度（头部 2/手臂 14/腰部 3/腿部 12）；青春焕新版 30 自由度（头部 1/单臂 7）；选配灵巧手后可达 47 自由度。\n性能：膝关节峰值扭矩 120Nm；UWB/Wi-Fi/4G/5G/蓝牙/GPS 通信。\n场景：展馆文旅、导览导购——半尺寸人形在商业服务场景的量产迭代。\n端侧视角：灵犀 X2 是智元「远征（大）+灵犀（中）+精灵（小）」全尺寸矩阵的中坚产品线——焕新版标志着从首次量产（8 月开售）进入产品迭代周期，47 自由度+120Nm 扭矩把半尺寸人形的操作能力推到接近全尺寸水平。",
-      tags: ["智元", "灵犀X2", "人形机器人", "量产", "文旅"],
-      url: "https://original.ifeng.com/c/8xptAMvorxt",
-      image: "images/news/n189.png",
-      imageCap: "灵犀 X2 焕新版（图源：凤凰网）",
-      highlight: false
-    },,,,
-
-{
-id: "n188", cat: "手机厂商", source: "凤凰网科技", date: "2026-11-06",
-      title: "Googlebook 11 月更新：端侧 AI 内存常驻占用压缩近 40%，16GB 机型最多释放 6GB 运行内存",
-      summary: "谷歌为 Googlebook 笔记本推送 11 月更新——端侧 AI 模块内存常驻占用压缩近 40%，最多释放 3-6GB 运行内存（对 16GB 机型相当于总内存三分之一以上），多任务能力显著增强。更新包含 30 项修复和改进并附带 11 月安全补丁（版本 CL3B.260622.286.R2）。",
-      detail: "更新：11 月 6 日开始推送（凤凰网科技/腾讯新闻/搜狐多源，候选库 dom=2 rep=3）。\n优化：端侧 AI 内存常驻占用压缩近 40%——重点优化端侧 AI 的内存调度机制；16GB 机型最多释放 6GB、8GB 机型释放约 3GB。\n体验：打开大量浏览器标签页/高负载任务时更流畅、卡顿减少。\n版本：CL3B.260622.286.R2，含 30 项修复与 11 月安全补丁。\n端侧视角：端侧 AI 的内存瓶颈首次被系统性优化到「省出 1/3 内存」的量级——谷歌用工程手段（调度优化而非砍模型）释放了端侧 AI 的多任务空间，这意味着端侧模型不再是「独占资源」而是可与其他应用共存的系统级服务。",
-      tags: ["Googlebook", "端侧AI", "内存优化", "谷歌", "系统更新"],
-      url: "https://tech.ifeng.com/c/8xpmRKLsDrt",
-      image: "images/news/n188.png",
-      imageCap: "Googlebook 11 月更新（图源：凤凰网科技）",
-      highlight: false
-    },,,,
-
-{
-id: "n183", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-06",
-      title: "蚂蚁百灵发布 Ling-3.2-Flash：560B MoE 激活 25B 原生多模态，三项基准超越 Claude Opus 5",
-      summary: "蚂蚁百灵发布 Ling-3.2-Flash——稀疏 MoE 架构总参数 560B、每 Token 仅激活约 25B，原生融合视觉与语言能力（图像/文本/视频输入），上下文窗口 1M。重点强化复杂视觉理解、多模态长程 Agent、3D 理解与交互、医疗多模态四大能力；官方评测 OmniDocBench 1.5 得 92.21 分（对比 Claude Opus 5 max 的 90.56）等三项基准超越，基准总分几乎全面超越 DeepSeek v4.1 Flash 1017。",
-      detail: "发布：11 月 6 日发布（凤凰科技/搜狐/IT之家多源）。\n规格：稀疏 MoE 总参 560B、激活约 25B——能力与推理开销平衡；原生多模态（架构层融合视觉与语言，支持图像/文本/视频）；上下文 1M。\n成绩：OmniDocBench 1.5 得 92.21 分（Claude Opus 5 max 为 90.56）；ZEROBench 等三项基准超越 Claude；基准总分几乎全面超越 DeepSeek v4.1 Flash 1017。\n能力：复杂视觉理解、多模态长程 Agent、3D 理解与交互、医疗多模态——演示能将视觉意图转化为带动画的响应式前端页面，还能操作 Blender 等专业软件。\n端侧视角：Ling 系列历来 MIT 宽松开源+稀疏激活架构优化推理成本（Ling-3.0-Flash 曾以旗舰约 12.4% 的总参实现对齐），25B 激活的 MoE 意味着消费级 GPU 可部署——待权重上线后确认许可协议与端侧量化路径，这是蚂蚁继灵光 2.0 之后的又一条端云协同产品线。",
-      tags: ["蚂蚁百灵", "Ling-3.2-Flash", "MoE", "多模态", "开源"],
-      url: "https://tech.ifeng.com/c/8xpCRzyq65n",
-      image: "images/news/n183.png",
-      imageCap: "Ling-3.2-Flash 发布（图源：凤凰科技）",
-      highlight: false
-    },,,,
-
-{
-id: "n194", cat: "行业动态", source: "中新社", date: "2026-11-06",
-      title: "工信部印发智能体终端进网管理新规：预置智能体的手机/平板/可穿戴须过适配验证与反诈评测，智能体将配唯一身份标识",
-      summary: "工业和信息化部办公厅印发《关于加强智能体终端设备进网管理的通知》——预置智能体的手机、平板、可穿戴设备等智能体终端，须在进网检测中依据有关标准开展智能体适配验证，并依法开展涉诈风险安全评估和反诈能力前置性评测；终端上使用的智能体应参考智能体互联系列国家标准配备唯一身份标识。",
-      detail: "发文：11 月 6 日工信部办公厅印发（中新社/新浪财经/凤凰网多源，全网报道超 10 源）。\n四方面：①推动智能体适配——强化权限调用、通信能力、网络与数据安全、用户权益、任务执行管理；②改进进网管理——开展风险评估、完善电信设备进网检测机制、细化特别规定；③预置智能体终端管理——手机/平板/可穿戴进网检测须做智能体适配验证+涉诈风险评估+反诈前置评测；④智能体身份管理——配备唯一身份标识，逐步建立完善智能体终端监管规则。\n背景：2026 年 5 月《人工智能终端智能化分级》（GB/Z 177—2026）系列国标已发布，AI 终端进入有标可依阶段。\n端侧视角：「智能体终端」正式成为监管类目——AI 手机/平板/手表预置的智能体开始像摄像头、无线电模块一样纳入进网检测，「反诈前置评测+唯一身份标识」意味着智能体将实名上岗；端侧 AI 行业从参数竞争进入合规竞争阶段，头部厂商的合规能力将成为新的护城河。",
-      tags: ["工信部", "智能体终端", "监管新规", "AI手机", "反诈"],
-      url: "https://wap.eastmoney.com/a/202611063924763462.html",
-      image: "images/news/n194.jpg",
-      imageCap: "智能体互联系列国家标准应用推进专题会现场（图源：北京日报）",
-      highlight: true
-    },,,,
-
-{
-id: "n195", cat: "手机厂商", source: "搜狐科技", date: "2026-11-06",
-      title: "阶跃 STEPX Neo 智能体手机进博首秀：亮相高通展台，3999 元软硬模三位一体定价开放近百应用生态",
-      summary: "阶跃终端旗下 STEPX Neo 智能体手机首次亮相进博会并在高通展台展示——支付宝神券、剪映、携程等多项生态合作体验与智能体终端原生应用同台。STEPX Neo 于 10 月 13 日正式发布，搭载智能体原生操作系统 Step AOS 1.0 与六麦克风阵列等听觉增强硬件，先行版 3999 元采用「软硬模」三位一体定价，已向创客开放模型、系统、硬件与生态能力。",
-      detail: "事件：进博会首秀（11 月 6 日，搜狐科技多源，候选库 dom=2）。\n本体：10 月 13 日发布，Step AOS 1.0 智能体原生操作系统；六麦克风阵列等智能体听觉增强系统；10 月 16 日先行版 3999 元开售。\n定价：软硬模三位一体——手机硬件+Step AOS 系统+Step Studio 开发工具及 Step 系列模型服务打包。\n生态：向创客全面开放模型/系统/硬件/生态能力，传感器、摄像头、MiniLED 背屏等原子能力可调用，近百个应用在线。\n端侧视角：手机厂商在 OS 层叠加智能体之后，「智能体原生」整机玩家登场——STEPX Neo 把 OS、模型、开发工具按订阅制打包，绑定高通展台亮相意味着骁龙平台+智能体原生 OS 的端侧范式开始生态化；继荣耀/小米之后，端侧智能体的竞争从系统功能升级为「整机+开发平台」的生态竞争。",
-      tags: ["阶跃", "STEPX Neo", "智能体手机", "Step AOS", "进博会"],
-      url: "https://www.sohu.com/a/1098104093_116157",
-      image: "images/news/n195.png",
-      imageCap: "STEPX Neo 智能体手机（图源：搜狐科技）",
-      highlight: false
-    },,,,
-
-{
-id: "n196", cat: "AI硬件", source: "东方财富", date: "2026-11-06",
-      title: "宇树×巨星传奇进博会首发收藏机器狗 UNI-DOGGIE：4.39 万元全球限量 2000 台，威刚首发采购 1000 台",
-      summary: "宇树科技与巨星传奇（周杰伦关联 IP 公司）在进博会全球首发联名收藏机器狗 UNI-DOGGIE——售价 43900 元、全球限量 2000 台，定位全球首只「消费级收藏机器狗」：赛博朋克潮流艺术风格，具备爬坡、越障、倒立等运动能力，支持触摸反馈与情绪表达，配备摄像头与云端 AI 对话。经销商威刚科技首发采购 1000 台，巨星传奇港股当日盘中涨超 4%。",
-      detail: "首发：11 月 6 日进博会全球首发（东方财富/腾讯新闻/网易多源，港股 06683 盘中涨超 4%）。\n产品：UNI-DOGGIE 联名收藏机器狗，43900 元/全球限量 2000 台；运动能力（爬坡/越障/倒立）+触摸反馈（摸头部眼睛有反应）+情绪表达+摄像头+云端 AI 对话。\n商业：经销商威刚科技首发采购 1000 台（占限量一半）；融合「明星 IP×潮玩×科技」的赛博朋克潮流艺术定位。\n端侧视角：宇树把四足机器人从「极客玩具」推进「潮流收藏品」定价带——4.39 万元限量收藏+明星 IP 运营是四足机器人首次以潮玩形态进入消费市场，云端 AI 对话成为标配能力；机器人公司的商业化路径正在从 B 端展示向 C 端收藏品与 IP 联名扩展。",
-      tags: ["宇树", "巨星传奇", "UNI-DOGGIE", "机器狗", "进博会"],
-      url: "https://finance.eastmoney.com/a/202611063924713248.html",
-      image: "images/news/n196.png",
-      imageCap: "UNI-DOGGIE 收藏机器狗（图源：腾讯新闻）",
-      highlight: false
-    },,,,
-
-{
-id: "n202", cat: "行业动态", source: "路透社", date: "2026-11-06",
-      title: "马斯克官宣 Cybertruck 收尾：2027 年中德州工厂转向 Cybercab 产能，公司资源重心移向机器人与 AI",
-      summary: "马斯克在 X 平台宣布——特斯拉将于 2027 年年中左右在德克萨斯超级工厂逐步收尾 Cybertruck 生产，释放的产能转投自动驾驶出租车 Cybercab，公司资源重心进一步转向机器人与 AI 领域。Cybertruck 在销量疲软与多次召回压力下落幕；路透社称尚不清楚该车型是转移到其他工厂还是彻底终结（德州工厂是已知唯一具备生产能力的工厂）。",
-      detail: "官宣：马斯克 11 月 6 日（周五）X 平台发文（路透社/CNN/世界新闻网多源）。\n节奏：2027 年年中左右德州超级工厂逐步收尾 Cybertruck；产能转投 Cybercab 自动驾驶出租车。\n背景：Cybertruck 2025 年销量同比大跌 48%，三年仅卖出计划量约一成；多次召回；德州工厂是已知唯一具备该车型生产能力的工厂。\n余音：Cybertruck 首席工程师 Wes Morrill 称其为重要技术验证平台，技术将通过 Cybercab 延续。\n战略：公司整体资源重心转向机器人与 AI——Optimus 人形机器人与 FSD 的优先级进一步抬升。\n端侧视角：这是特斯拉把「车」的产能让位给「机器人+自动驾驶」的最明确信号——Cybercab（无方向盘的 Robotaxi）与 Optimus 共享 FSD 端侧推理栈，产能腾挪背后是端侧智能驾驶与具身智能成为特斯拉的主航道。",
-      tags: ["特斯拉", "Cybertruck", "Cybercab", "Optimus", "马斯克"],
-      url: "https://www.worldjournal.com/wj/story/121172/9863563?zh-cn",
-      image: "images/news/n202.jpg",
-      imageCap: "特斯拉 Cybertruck（图源：新浪财经）",
-      highlight: false
-    },,,
   ],
 papers: [
     {
