@@ -18,11 +18,59 @@ const WEEKLY_DATA = {
     weekRange: "2026.11.06 — 2026.11.12 · 近 7 天",
     updated: "2026-11-12",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n近两日新增：Claris Harbor（Mac 变本地 AI 服务器/雷雳 5 集群）、Gemini Robotics 2.5（奔驰产线 96%）、KORA OS（首个 AI 原生 AI PC 系统）、Ring 机器人部门（飞行监控无人机+巡逻机器人）、小米物联网设备模型白皮书（11.6 亿台实践开放）、Claude Fable 5.2 双旗舰、麒麟 9050 官方详解、Qwen4 预览、Pixel 类 PCC 私有云、Muse Ember 开源。"
+    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：优必选×沐曦合资造芯（曦选创智 5 亿天使轮/40 亿估值对标 Thor）、面壁 35B-A3B 跑进手机（3GB 内存）、Claude AI 办公全家桶×谷歌桌面端开战、北大系 aiXcompact-4B 上下文压缩开源（成本降 78%）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+      id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
+      title: "优必选×沐曦合资芯片公司曦选创智完成 5 亿元天使轮：估值 40 亿元，首颗芯片对标英伟达 Thor、2028 年量产",
+      summary: "由优必选与沐曦股份联合发起（锋龙股份参投）的具身智能端侧芯片公司曦选创智宣布完成 5 亿元人民币天使轮融资，投后估值 40 亿元——纪源资本与经纬创投联合领投，和利资本、鼎晖等跟投。首颗自研芯片直接对标英伟达 Thor（车规级/机器人端侧芯片），资金用于核心芯片研发与软件工具链建设，机器人芯片预计 2028 年量产。",
+      detail: "融资：11 月 12 日官宣，5 亿元天使轮、投后估值 40 亿元；GGV 纪源资本+经纬创投联合领投。\n股东：优必选（本体厂）×沐曦股份（国产 GPU 底座）×锋龙股份——机器人×算力×制造的合资结构。\n目标：首颗自研芯片对标英伟达 Thor；机器人端侧+车规级场景；2028 年量产。\n端侧视角：人形机器人厂商亲自下场造芯是本周具身智能的第三条主线（前两条：智元模型三连发、苹果 HALO）——机器人大脑芯片此前被英伟达 Thor 垄断叙事，国产「本体厂×GPU 厂」合资把需求方与供给方绑在同一张桌上，40 亿估值对应的是 Thor 替代窗口期的卡位价值。",
+      tags: ["优必选", "沐曦", "曦选创智", "机器人芯片", "对标Thor"],
+      url: "http://news.10jqka.com.cn/20261112/c681759273.shtml",
+      image: "images/news/n236.jpg",
+      imageCap: "国产 GPU 底座×机器人场景生态（图源：搜狐财经）",
+      highlight: false
+    },
+
+{
+      id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11-11",
+      title: "面壁智能 35B 模型跑进手机：MiniCPM-V 4.7 35B-A3B 以 3GB 内存实现端侧多模态，iPhone 18 Pro Max 实测即问即答",
+      summary: "面壁智能 MiniCPM-V 4.7 35B-A3B 端侧多模态模型密集演示落地——350 亿总参数 MoE 架构每次推理仅激活 30 亿参数，约 3GB 运行内存即可在手机/平板完成推理；在 iPhone 18 Pro Max 上的实测演示实现即问即答无需等待，是首个可在端侧无损流畅运行的开源 MoE 模型。行业观察同时指出旗舰手机可用内存仍是 35B 级模型落地的现实约束。",
+      detail: "模型：MiniCPM-V 4.7 35B-A3B（10 月中开源），11 月 5 日 iPhone 18 Pro Max 实测演示、11 月 11 日起多源密集报道。\n架构：35B 总参数 MoE、激活 3B——首个端侧无损流畅运行的开源 MoE。\n门槛：约 3GB 运行内存完成手机/平板推理。\n生态：面壁与三星手机端侧 AI 合作、冲刺上市。\n端侧视角：端侧模型的参数天花板之争从 4B 直跳 35B MoE——激活 3B 的稀疏化路线让「大总参小激活」跨过手机内存红线；与麒麟 9050 官宣 30B 端侧（2.5GB 占用）同周出现，30B 级端侧模型从芯片侧与模型侧完成会师。",
+      tags: ["面壁智能", "MiniCPM", "35B端侧", "MoE", "多模态"],
+      url: "https://news.qq.com/rain/a/20261111A058XQ00",
+      image: "images/news/n233.png",
+      imageCap: "MiniCPM-V 4.7 端侧演示（图源：OpenBMB）",
+      highlight: false
+    },
+
+{
+      id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
+      title: "AI 巨头桌面端开战：Claude 推 Whiteboards 等 AI 办公全家桶直挑微软，谷歌同日上线 Gemini 新旗舰+复刻 OpenCode 桌面应用",
+      summary: "Anthropic 端出 Claude AI 办公全家桶——Claude Whiteboards 数字白板可在会议中与团队共同头脑风暴、把想法转化为带时间线/责任人/日期的看板，直接挑战微软 Office，消息当日微软股价大跌；同日谷歌 Gemini 新旗舰全面上线，并「一夜复刻」类 OpenCode 桌面应用（Google AI Ultra 订阅用户可在 Antigravity、Gemini 应用与搜索 AI 模式使用）。AI 御三家的竞争焦点正式从模型层转向桌面端产品。",
+      detail: "Anthropic：Claude Whiteboards（白板→看板：时间线/责任人/日期）等办公全家桶，直击 Office 核心场景；当日微软股价应声下跌。\n谷歌：Gemini 新旗舰全面上线+类 OpenCode 桌面应用，Ultra 订阅三入口（Antigravity/Gemini 应用/搜索 AI 模式）。\n格局：OpenAI（Codex）×谷歌（补课）×Anthropic（狂飙）桌面端正式开打，国内模型专注编码与一站式追赶。\n端侧视角：桌面是端侧 Agent 的主战场——白板/表格/看板类办公工件全部在本地生成与协作，巨头把模型能力包装成桌面生产力套件的路线收敛；与千问办公 2.0 的 Team Agent 同属 Agent 产品化浪潮的不同切片。",
+      tags: ["Claude", "AI办公", "桌面Agent", "谷歌", "Whiteboards"],
+      url: "https://m.36kr.com/p/4064780118463617",
+      image: "images/news/n234.jpg",
+      imageCap: "Claude Whiteboards/Sheets/Data 发布（图源：36氪）",
+      highlight: false
+    },
+
+{
+      id: "n235", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
+      title: "北大系创企开源 aiXcompact-4B 上下文压缩模型：编程 Agent 推理成本降 78%、API 费用降 97%，单卡 A100 可私有部署",
+      summary: "孵化自北大软件工程研究所的硅心科技（aiXcoder）开源上下文压缩专用模型 aiXcompact-4B——面向编程 Agent 长程任务：对历史轨迹做结构化处理（保留关键信息/精简工具返回/删除冗余+生成任务摘要），历史上下文平均压缩至原长度的 25.89%；接入 OpenCode 后 Terminal-Bench 准确率与 DeepSeek-V4-Pro 持平，单次 GPU 推理成本降 78%、单次 API 压缩请求约 0.019 元（较主流旗舰降约 97%）。",
+      detail: "开源：11 月 11 日（GitHub 开放权重）。\n背景：SWE-bench Verified 实测单个编程 Agent 任务平均消耗约 417 万 token（单轮推理的 3500 倍），输入 token 占绝大部分——上下文压缩是 Agent 成本控制关键。\n方法：结构化判别三类决策（保留核心需求与决策/精简文件读取与测试输出/删除失效记录）+结构化任务摘要；教师模型蒸馏+4B 学生 LoRA 微调，真实研发轨迹训练。\n成绩：压缩评测综合分 0.7012 接近 DeepSeek-V4-Pro 的 0.7332；平均保留率 25.89%；单张 A100-40GB 私有部署。\n端侧视角：上下文压缩是长程 Agent 的「内存管理器」——4B 专用小模型接管高频压缩、大模型专注决策，大小模型分工把 Agent 运行成本砍掉一个数量级；专用小模型家族（aiXapply-4B/aiXpruner-4B）正是端侧化思路在云端 Agent 内部的复刻。",
+      tags: ["上下文压缩", "编程Agent", "aiXcoder", "开源", "成本优化"],
+      url: "https://zhidx.com/p/609168.html",
+      image: "images/news/n235.png",
+      imageCap: "aiXcompact-4B 成本对比（图源：智东西）",
+      highlight: false
+    },
+
 {
       id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
       title: "苹果子公司 Claris 暗测 Harbor 应用：Mac 变身本地 AI 服务器，雷雳 5 串联多机集群跑大模型",
