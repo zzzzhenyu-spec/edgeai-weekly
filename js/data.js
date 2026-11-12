@@ -18,11 +18,23 @@ const WEEKLY_DATA = {
     weekRange: "2026.11.07 — 2026.11.13 · 近 7 天",
     updated: "2026-11-13",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：优必选×沐曦合资造芯（曦选创智 5 亿天使轮）、面壁 35B-A3B 跑进手机、Claude AI 办公全家桶×谷歌桌面端开战、北大系 aiXcompact-4B 压缩开源、李沐 Boson Higgs Realtime Duplex 全双工（160ms 流式）。"
+    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：百度世界 2026（智能组织+文心闪电/一镜双模型）、文心 5.5 Flash Preview（2800 亿参数、11-25 开源）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+id: "n239", cat: "行业关注事件", source: "凤凰网", date: "2026-11-12",
+      title: "百度世界 2026：李彦宏首提「智能组织」——AI 下一幕，文心闪电深度思考+文心一镜微表情双模型发布",
+      summary: "百度世界 2026 在北京开幕，李彦宏年度演讲首提「智能组织」——「如果说人工智能是新电能，智能组织就是 AI 时代的新厂房」，并给出组织进化三原则（打破岗位边界、沉淀隐性知识、设计流程闭环）；披露百度内部日活跃智能体数一年内增至 3.7 万个（涨 6 倍多）。大会同步发布两款文心应用模型：文心闪电深度思考模型（推理成本降 30%）与文心一镜微表情大模型（视频生成 1:1 实时），已上线千帆平台开放 API，李彦宏称将坚持「模体并行」策略。",
+      detail: "大会：11 月 12 日北京国家会议中心二期，第二十一届，1 主论坛+12 分论坛+30 余项活动。\n主题：智能组织（Intelligent Organizations）——AI 下一幕；组织进化三原则：打破岗位边界/沉淀隐性知识/设计流程闭环；「岗位不会消失但会收敛为两类」。\n数据：百度内部日活智能体 3.7 万个，一年增 6 倍多。\n发布：文心闪电（深度思考，推理成本降 30%）+文心一镜（微表情大模型，1:1 实时视频生成）——千帆平台 API 同步开放。\n策略：模体并行（模型与智能体并行）；会前组织调整为「基础设施+智能体」两层阵型。\n端侧视角：一镜的 1:1 实时生成与微表情能力指向数字人交互的实时层——微表情正是情感带宽的关键载体，与 Boson Higgs 数字人输出同周出现；3.7 万日活智能体是迄今最硬的企业智能体渗透率公开数据，为智能组织叙事提供锚点。",
+      tags: ["百度世界", "智能组织", "文心闪电", "文心一镜", "李彦宏"],
+      url: "https://i.ifeng.com/c/8xzM4d8Y2gq",
+      image: "images/news/n239.jpg",
+      imageCap: "百度世界 2026 李彦宏演讲（图源：红星新闻）",
+      highlight: true
+    },,
+
 {
 id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
       title: "优必选×沐曦合资芯片公司曦选创智完成 5 亿元天使轮：估值 40 亿元，首颗芯片对标英伟达 Thor、2028 年量产",
@@ -33,29 +45,17 @@ id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
       image: "images/news/n236.jpg",
       imageCap: "国产 GPU 底座×机器人场景生态（图源：搜狐财经）",
       highlight: false
-    },,
+    },,,
 
 {
-id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11-11",
-      title: "面壁智能 35B 模型跑进手机：MiniCPM-V 4.7 35B-A3B 以 3GB 内存实现端侧多模态，iPhone 18 Pro Max 实测即问即答",
-      summary: "面壁智能 MiniCPM-V 4.7 35B-A3B 端侧多模态模型密集演示落地——350 亿总参数 MoE 架构每次推理仅激活 30 亿参数，约 3GB 运行内存即可在手机/平板完成推理；在 iPhone 18 Pro Max 上的实测演示实现即问即答无需等待，是首个可在端侧无损流畅运行的开源 MoE 模型。行业观察同时指出旗舰手机可用内存仍是 35B 级模型落地的现实约束。",
-      detail: "模型：MiniCPM-V 4.7 35B-A3B（10 月中开源），11 月 5 日 iPhone 18 Pro Max 实测演示、11 月 11 日起多源密集报道。\n架构：35B 总参数 MoE、激活 3B——首个端侧无损流畅运行的开源 MoE。\n门槛：约 3GB 运行内存完成手机/平板推理。\n生态：面壁与三星手机端侧 AI 合作、冲刺上市。\n端侧视角：端侧模型的参数天花板之争从 4B 直跳 35B MoE——激活 3B 的稀疏化路线让「大总参小激活」跨过手机内存红线；与麒麟 9050 官宣 30B 端侧（2.5GB 占用）同周出现，30B 级端侧模型从芯片侧与模型侧完成会师。",
-      tags: ["面壁智能", "MiniCPM", "35B端侧", "MoE", "多模态"],
-      url: "https://news.qq.com/rain/a/20261111A058XQ00",
-      image: "images/news/n233.png",
-      imageCap: "MiniCPM-V 4.7 端侧演示（图源：OpenBMB）",
-      highlight: false
-    },,
-
-{
-id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
-      title: "AI 巨头桌面端开战：Claude 推 Whiteboards 等 AI 办公全家桶直挑微软，谷歌同日上线 Gemini 新旗舰+复刻 OpenCode 桌面应用",
-      summary: "Anthropic 端出 Claude AI 办公全家桶——Claude Whiteboards 数字白板可在会议中与团队共同头脑风暴、把想法转化为带时间线/责任人/日期的看板，直接挑战微软 Office，消息当日微软股价大跌；同日谷歌 Gemini 新旗舰全面上线，并「一夜复刻」类 OpenCode 桌面应用（Google AI Ultra 订阅用户可在 Antigravity、Gemini 应用与搜索 AI 模式使用）。AI 御三家的竞争焦点正式从模型层转向桌面端产品。",
-      detail: "Anthropic：Claude Whiteboards（白板→看板：时间线/责任人/日期）等办公全家桶，直击 Office 核心场景；当日微软股价应声下跌。\n谷歌：Gemini 新旗舰全面上线+类 OpenCode 桌面应用，Ultra 订阅三入口（Antigravity/Gemini 应用/搜索 AI 模式）。\n格局：OpenAI（Codex）×谷歌（补课）×Anthropic（狂飙）桌面端正式开打，国内模型专注编码与一站式追赶。\n端侧视角：桌面是端侧 Agent 的主战场——白板/表格/看板类办公工件全部在本地生成与协作，巨头把模型能力包装成桌面生产力套件的路线收敛；与千问办公 2.0 的 Team Agent 同属 Agent 产品化浪潮的不同切片。",
-      tags: ["Claude", "AI办公", "桌面Agent", "谷歌", "Whiteboards"],
-      url: "https://m.36kr.com/p/4064780118463617",
-      image: "images/news/n234.jpg",
-      imageCap: "Claude Whiteboards/Sheets/Data 发布（图源：36氪）",
+id: "n240", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
+      title: "文心 5.5 Flash Preview 发布：总参数量 2800 亿、四能力对标旗舰，官宣 11 月 25 日开源",
+      summary: "百度发布文心 5.5 Flash Preview——总参数量 2800 亿，在复杂编程、知识工作、3D 建模、视频创作四大能力上对标旗舰级表现，官宣 11 月 25 日开源。文心系 RSI 进展同期披露：ERNIE Evolve 已用于最新模型研发。",
+      detail: "发布：11 月 11 日（大会前预热发布，候选库 rep=2）。\n规模：总参数量 2800 亿——Flash 系迄今最大。\n能力：复杂编程/知识工作/3D 建模/视频创作四线对标旗舰。\n开源：官宣 11 月 25 日开放权重——文心 5.5 家族继 Flash Base（280B/14B 激活）后再添重磅开源。\nRSI：ERNIE Evolve 已用于最新模型研发（11-09 披露）。\n端侧视角：2800 亿总参的 Flash 档走 MoE 稀疏激活路线——按 5.5 Flash Base 的激活比例推算，Preview 的激活参数有望压在手机可承载区间；11-25 开源日若同步放出小尺寸端侧档，将直接加入面壁 35B 与 Qwen4 端侧版的 11 月端侧基座竞赛。",
+      tags: ["百度", "文心5.5", "2800亿", "开源", "Flash"],
+      url: "https://zhidx.com/p/609002.html",
+      image: "images/news/n240.jpg",
+      imageCap: "文心 5.5 Flash Preview 发布（图源：智东西）",
       highlight: false
     },,
 
@@ -69,7 +69,31 @@ id: "n235", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
       image: "images/news/n235.png",
       imageCap: "aiXcompact-4B 成本对比（图源：智东西）",
       highlight: false
-    },,
+    },,,
+
+{
+id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
+      title: "AI 巨头桌面端开战：Claude 推 Whiteboards 等 AI 办公全家桶直挑微软，谷歌同日上线 Gemini 新旗舰+复刻 OpenCode 桌面应用",
+      summary: "Anthropic 端出 Claude AI 办公全家桶——Claude Whiteboards 数字白板可在会议中与团队共同头脑风暴、把想法转化为带时间线/责任人/日期的看板，直接挑战微软 Office，消息当日微软股价大跌；同日谷歌 Gemini 新旗舰全面上线，并「一夜复刻」类 OpenCode 桌面应用（Google AI Ultra 订阅用户可在 Antigravity、Gemini 应用与搜索 AI 模式使用）。AI 御三家的竞争焦点正式从模型层转向桌面端产品。",
+      detail: "Anthropic：Claude Whiteboards（白板→看板：时间线/责任人/日期）等办公全家桶，直击 Office 核心场景；当日微软股价应声下跌。\n谷歌：Gemini 新旗舰全面上线+类 OpenCode 桌面应用，Ultra 订阅三入口（Antigravity/Gemini 应用/搜索 AI 模式）。\n格局：OpenAI（Codex）×谷歌（补课）×Anthropic（狂飙）桌面端正式开打，国内模型专注编码与一站式追赶。\n端侧视角：桌面是端侧 Agent 的主战场——白板/表格/看板类办公工件全部在本地生成与协作，巨头把模型能力包装成桌面生产力套件的路线收敛；与千问办公 2.0 的 Team Agent 同属 Agent 产品化浪潮的不同切片。",
+      tags: ["Claude", "AI办公", "桌面Agent", "谷歌", "Whiteboards"],
+      url: "https://m.36kr.com/p/4064780118463617",
+      image: "images/news/n234.jpg",
+      imageCap: "Claude Whiteboards/Sheets/Data 发布（图源：36氪）",
+      highlight: false
+    },,,
+
+{
+id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11-11",
+      title: "面壁智能 35B 模型跑进手机：MiniCPM-V 4.7 35B-A3B 以 3GB 内存实现端侧多模态，iPhone 18 Pro Max 实测即问即答",
+      summary: "面壁智能 MiniCPM-V 4.7 35B-A3B 端侧多模态模型密集演示落地——350 亿总参数 MoE 架构每次推理仅激活 30 亿参数，约 3GB 运行内存即可在手机/平板完成推理；在 iPhone 18 Pro Max 上的实测演示实现即问即答无需等待，是首个可在端侧无损流畅运行的开源 MoE 模型。行业观察同时指出旗舰手机可用内存仍是 35B 级模型落地的现实约束。",
+      detail: "模型：MiniCPM-V 4.7 35B-A3B（10 月中开源），11 月 5 日 iPhone 18 Pro Max 实测演示、11 月 11 日起多源密集报道。\n架构：35B 总参数 MoE、激活 3B——首个端侧无损流畅运行的开源 MoE。\n门槛：约 3GB 运行内存完成手机/平板推理。\n生态：面壁与三星手机端侧 AI 合作、冲刺上市。\n端侧视角：端侧模型的参数天花板之争从 4B 直跳 35B MoE——激活 3B 的稀疏化路线让「大总参小激活」跨过手机内存红线；与麒麟 9050 官宣 30B 端侧（2.5GB 占用）同周出现，30B 级端侧模型从芯片侧与模型侧完成会师。",
+      tags: ["面壁智能", "MiniCPM", "35B端侧", "MoE", "多模态"],
+      url: "https://news.qq.com/rain/a/20261111A058XQ00",
+      image: "images/news/n233.png",
+      imageCap: "MiniCPM-V 4.7 端侧演示（图源：OpenBMB）",
+      highlight: false
+    },,,
 
 {
 id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
@@ -81,31 +105,7 @@ id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
       image: "images/news/n228.jpg",
       imageCap: "Claris Harbor 应用（图源：IT之家）",
       highlight: true
-    },,
-
-{
-id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
-      title: "华为官方详解麒麟 9050 系列：新一代达芬奇 NPU 性能提升 140%，30B MoE 全模态大模型端侧离线运行仅占 2.5GB 内存",
-      summary: "华为麒麟官方详解麒麟 9050 系列——首款「逻辑折叠」τ（韬）芯片，晶体管密度提升 53.5%；新一代达芬奇架构 NPU 性能提升 140%、功耗降低 66%，支持 30B MoE 全模态大模型在手机端离线运行、新增内存占用仅 2.5GB——断网也能完成复杂任务规划、智能修图与多模态感知。首发搭载华为 Mate 9 系列、Mate XT2 非凡大师，搭配 HarmonyOS 7。",
-      detail: "详解：11 月 11 日麒麟官方公众号发布（凤凰网/新浪/IT之家多源，候选库 dom=2 rep=3）。\n工艺：首款「逻辑折叠」技术 τ 芯片，晶体管密度提升 53.5%。\nNPU：新一代达芬奇架构——性能提升 140%、功耗降低 66%（华为实验室数据）。\n端侧模型：30B MoE 全模态大模型手机端离线运行，新增内存占用仅 2.5GB；断网可用复杂任务规划、智能修图、多模态感知。\nCPU（9050 Pro）：多核性能提升 23%，大核能效提升 41%。\n搭载：Mate 9 系列、Mate XT2 非凡大师+HarmonyOS 7。\n端侧视角：手机芯片首次把「30B MoE 端侧离线」写进量产官方规格——2.5GB 内存占用意味着 12GB 机型可以常驻模型而不挤压多任务，逻辑折叠工艺的密度红利被直接兑换成端侧模型算力；配合鸿蒙终端本月破亿，端侧 30B 时代的设备底盘已经就位。",
-      tags: ["麒麟9050", "达芬奇NPU", "30B端侧", "逻辑折叠", "华为"],
-      url: "https://original.ifeng.com/c/8xxkY6ktCXa",
-      image: "images/news/n222.png",
-      imageCap: "麒麟 9050 系列官方详解（图源：凤凰网）",
-      highlight: true
-    },,,,,
-
-{
-id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
-      title: "阿里 Qwen4 预览版上线千问平台：新一代旗舰主打编程、Agent 与复杂任务，正式版即将发布",
-      summary: "阿里新一代大模型 Qwen4 预览版已首发上线千问 AI 平台——重点提升编程、Agent 智能体与复杂任务处理能力，官方宣布 Qwen4 即将正式发布。按 Qwen 系历代的发布惯例，旗舰之后通常伴随全系开源（含 0.5B-4B 端侧小尺寸版本）。",
-      detail: "上线：11 月 11 日预览版首发千问平台（凤凰网/IT之家多源，候选库 dom=2 rep=3）。\n能力：编程、Agent、复杂任务处理为重点增强方向。\n节奏：Qwen4 系列正式发布在即（11 月初已有「一门四豪杰」多型号预热）。\n端侧视角：Qwen4 换代对端侧的意义在下一站——历代 Qwen 旗舰发布后数周内开放全系权重（Qwen3 曾带 0.6B-4B 端侧档），若 Qwen4 延续开源传统，端侧模型阵营将迎来新一轮基座换血；国行 Apple 智能已接入千问，Qwen4 端侧档也可能成为国行 Siri 的下一级引擎。",
-      tags: ["阿里", "Qwen4", "千问", "旗舰模型", "预览版"],
-      url: "https://www.ithome.com/1/025/301.htm",
-      image: "images/news/n224.png",
-      imageCap: "Qwen4 预览版上线（图源：IT之家）",
-      highlight: false
-    },,,,,
+    },,,
 
 {
 id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
@@ -117,31 +117,31 @@ id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
       image: "images/news/n225.jpg",
       imageCap: "Pixel 11 月功能更新（图源：9to5Google）",
       highlight: false
-    },,
+    },,,
 
 {
-id: "n230", cat: "大模型厂商", source: "DeepMind 官方", date: "2026-11-10",
-      title: "谷歌发布 Gemini Robotics 2.5：最强视觉-语言-动作模型，奔驰产线实测 96% 成功率，ASIMOV-Jailbreak 安全基准同步开源",
-      summary: "Google DeepMind 发布迄今最强视觉-语言-动作模型（VLA）Gemini Robotics 2.5——200 余项任务评测成功率较前代提升 30-100%、完成速度快 20-30%；在奔驰匈牙利与德国产线的真实验证中，Apptronik Apollo 2 人形机器人自主完成汽车零件分拣上料、成功率 96%。同步引入推理时物理安全引导（障碍物场景安全完成率 +33%、人员近旁 +43%），并开源抗越狱基准 ASIMOV-Jailbreak（Gemini 4 Argon 越狱抵抗率 99.5%）。",
-      detail: "发布：11 月 10 日 DeepMind 官方博客。\n能力：灵巧性（工具使用/柔性物体操作）、可靠性、安全性三线跃升；200+ 项任务评测（夹食物/打礼盒蝴蝶结/移液等）。\n实测：奔驰 Kecskemét 与 Sindelfingen 产线，Apollo 2（22 自由度五指 SharpaWave 手）自主 kitting 分拣，96% 成功率；Gemini Robotics ER 管流程+2.5 管手臂数据。\n安全：推理时危险规避引导；ASIMOV-Jailbreak 开源基准——数百条伪装危险指令×数十场景，Argon 抵抗率 99.5%（前代 ER2 为 82%）。\n加速器：Gemini 4 Argon 充当仿真引擎——从真实相机场景生成数千变体演练+数字孪生+失败归因，大幅压缩训练周期。\n端侧视角：VLA 头部模型首次把「产线级 96%」写进官方口径——具身智能从演示视频走到值班工位；ASIMOV-Jailbreak 把机器人安全评测标准化，与国内同期的 HALO/LIFE 形成中美具身安全研究的第一轮正面呼应。",
-      tags: ["谷歌", "Gemini Robotics", "VLA", "人形机器人", "具身安全"],
-      url: "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
-      image: "images/news/n230.webp",
-      imageCap: "Apollo 2 在奔驰产线执行分拣（图源：Google DeepMind）",
-      highlight: true
-    },,
-
-{
-id: "n231", cat: "行业动态", source: "IT之家", date: "2026-11-10",
-      title: "首个「自下而上」的 AI PC 操作系统 KORA OS 发布：底层融入智能体工作流，骁龙 X2 Elite 有望成首发平台",
-      summary: "KORA Systems 发布全新操作系统 KORA OS——宣称首个专为 AI PC「自下而上」设计的操作系统：智能体工作流、上下文记忆与本地 AI 推理直接融入系统底层，目标让电脑从「打开应用完成操作」转向「表达意图、由 AI 协助完成」。基于 NixOS 构建，自研 Cortex 推理引擎调度 CPU/GPU/NPU 本地运行开放权重模型，内置 Wine/Proton 的 Windows 应用兼容层；正与高通合作，骁龙 X2 Elite 有望成为首款支持平台。",
-      detail: "发布：11 月 10 日公告、11 月 11 日多源报道。\n理念：AI 原生而非 AI 叠加——「神经工作区」按任务目标组织空间，系统围绕意图、上下文与记忆管理文件；传统文件夹与桌面应用保留但不再是核心。\n引擎：自研 Cortex 推理引擎调度 CPU/GPU/NPU；内置基于 llama.cpp 的 Lemma 引擎；系统自动判断任务云端处理还是留在本地。\n隐私：工作流记忆与上下文留在本机不出设备；每个工作区隔离沙箱运行，应用与 AI 智能体独立权限。\n兼容：Wine/Proton 转换层跑 Windows 应用，本地 AI 协助配置；骁龙 X2 Elite 首发平台，后续 AMD/Intel x86 与更多 Arm。\n团队：约 20 名工程师，创始成员来自 Cyanogen、Android 与 GameOS；企业版 HUMAIN OS 预计 2027 年发布。\n端侧视角：继鸿蒙 PC、ChromeOS 之后第三个向 Windows 发起形态级挑战的系统——KORA 把「本地跑开放权重+端云分流+沙箱化智能体」整套端侧 AI 栈做成 OS 的第一性设计；与骁龙 X2 Elite 绑定意味着 Arm on PC 战线又多一个盟友，值得跟踪其对 NPU 的调度深度是否超过 Windows 的 AI API 层。",
-      tags: ["KORA OS", "AI PC", "操作系统", "骁龙X2", "本地推理"],
-      url: "https://www.ithome.com/1/025/226.htm",
-      image: "images/news/n231.png",
-      imageCap: "KORA OS 界面（图源：IT之家）",
+id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
+      title: "阿里 Qwen4 预览版上线千问平台：新一代旗舰主打编程、Agent 与复杂任务，正式版即将发布",
+      summary: "阿里新一代大模型 Qwen4 预览版已首发上线千问 AI 平台——重点提升编程、Agent 智能体与复杂任务处理能力，官方宣布 Qwen4 即将正式发布。按 Qwen 系历代的发布惯例，旗舰之后通常伴随全系开源（含 0.5B-4B 端侧小尺寸版本）。",
+      detail: "上线：11 月 11 日预览版首发千问平台（凤凰网/IT之家多源，候选库 dom=2 rep=3）。\n能力：编程、Agent、复杂任务处理为重点增强方向。\n节奏：Qwen4 系列正式发布在即（11 月初已有「一门四豪杰」多型号预热）。\n端侧视角：Qwen4 换代对端侧的意义在下一站——历代 Qwen 旗舰发布后数周内开放全系权重（Qwen3 曾带 0.6B-4B 端侧档），若 Qwen4 延续开源传统，端侧模型阵营将迎来新一轮基座换血；国行 Apple 智能已接入千问，Qwen4 端侧档也可能成为国行 Siri 的下一级引擎。",
+      tags: ["阿里", "Qwen4", "千问", "旗舰模型", "预览版"],
+      url: "https://www.ithome.com/1/025/301.htm",
+      image: "images/news/n224.png",
+      imageCap: "Qwen4 预览版上线（图源：IT之家）",
       highlight: false
-    },,
+    },,,,,,
+
+{
+id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
+      title: "华为官方详解麒麟 9050 系列：新一代达芬奇 NPU 性能提升 140%，30B MoE 全模态大模型端侧离线运行仅占 2.5GB 内存",
+      summary: "华为麒麟官方详解麒麟 9050 系列——首款「逻辑折叠」τ（韬）芯片，晶体管密度提升 53.5%；新一代达芬奇架构 NPU 性能提升 140%、功耗降低 66%，支持 30B MoE 全模态大模型在手机端离线运行、新增内存占用仅 2.5GB——断网也能完成复杂任务规划、智能修图与多模态感知。首发搭载华为 Mate 9 系列、Mate XT2 非凡大师，搭配 HarmonyOS 7。",
+      detail: "详解：11 月 11 日麒麟官方公众号发布（凤凰网/新浪/IT之家多源，候选库 dom=2 rep=3）。\n工艺：首款「逻辑折叠」技术 τ 芯片，晶体管密度提升 53.5%。\nNPU：新一代达芬奇架构——性能提升 140%、功耗降低 66%（华为实验室数据）。\n端侧模型：30B MoE 全模态大模型手机端离线运行，新增内存占用仅 2.5GB；断网可用复杂任务规划、智能修图、多模态感知。\nCPU（9050 Pro）：多核性能提升 23%，大核能效提升 41%。\n搭载：Mate 9 系列、Mate XT2 非凡大师+HarmonyOS 7。\n端侧视角：手机芯片首次把「30B MoE 端侧离线」写进量产官方规格——2.5GB 内存占用意味着 12GB 机型可以常驻模型而不挤压多任务，逻辑折叠工艺的密度红利被直接兑换成端侧模型算力；配合鸿蒙终端本月破亿，端侧 30B 时代的设备底盘已经就位。",
+      tags: ["麒麟9050", "达芬奇NPU", "30B端侧", "逻辑折叠", "华为"],
+      url: "https://original.ifeng.com/c/8xxkY6ktCXa",
+      image: "images/news/n222.png",
+      imageCap: "麒麟 9050 系列官方详解（图源：凤凰网）",
+      highlight: true
+    },,,,,,
 
 {
 id: "n232", cat: "AI硬件", source: "亚马逊官方", date: "2026-11-10",
@@ -153,7 +153,31 @@ id: "n232", cat: "AI硬件", source: "亚马逊官方", date: "2026-11-10",
       image: "images/news/n232.png",
       imageCap: "Ring Drone Cam 与 Rover Cam（图源：亚马逊官方）",
       highlight: false
-    },,
+    },,,
+
+{
+id: "n231", cat: "行业动态", source: "IT之家", date: "2026-11-10",
+      title: "首个「自下而上」的 AI PC 操作系统 KORA OS 发布：底层融入智能体工作流，骁龙 X2 Elite 有望成首发平台",
+      summary: "KORA Systems 发布全新操作系统 KORA OS——宣称首个专为 AI PC「自下而上」设计的操作系统：智能体工作流、上下文记忆与本地 AI 推理直接融入系统底层，目标让电脑从「打开应用完成操作」转向「表达意图、由 AI 协助完成」。基于 NixOS 构建，自研 Cortex 推理引擎调度 CPU/GPU/NPU 本地运行开放权重模型，内置 Wine/Proton 的 Windows 应用兼容层；正与高通合作，骁龙 X2 Elite 有望成为首款支持平台。",
+      detail: "发布：11 月 10 日公告、11 月 11 日多源报道。\n理念：AI 原生而非 AI 叠加——「神经工作区」按任务目标组织空间，系统围绕意图、上下文与记忆管理文件；传统文件夹与桌面应用保留但不再是核心。\n引擎：自研 Cortex 推理引擎调度 CPU/GPU/NPU；内置基于 llama.cpp 的 Lemma 引擎；系统自动判断任务云端处理还是留在本地。\n隐私：工作流记忆与上下文留在本机不出设备；每个工作区隔离沙箱运行，应用与 AI 智能体独立权限。\n兼容：Wine/Proton 转换层跑 Windows 应用，本地 AI 协助配置；骁龙 X2 Elite 首发平台，后续 AMD/Intel x86 与更多 Arm。\n团队：约 20 名工程师，创始成员来自 Cyanogen、Android 与 GameOS；企业版 HUMAIN OS 预计 2027 年发布。\n端侧视角：继鸿蒙 PC、ChromeOS 之后第三个向 Windows 发起形态级挑战的系统——KORA 把「本地跑开放权重+端云分流+沙箱化智能体」整套端侧 AI 栈做成 OS 的第一性设计；与骁龙 X2 Elite 绑定意味着 Arm on PC 战线又多一个盟友，值得跟踪其对 NPU 的调度深度是否超过 Windows 的 AI API 层。",
+      tags: ["KORA OS", "AI PC", "操作系统", "骁龙X2", "本地推理"],
+      url: "https://www.ithome.com/1/025/226.htm",
+      image: "images/news/n231.png",
+      imageCap: "KORA OS 界面（图源：IT之家）",
+      highlight: false
+    },,,
+
+{
+id: "n230", cat: "大模型厂商", source: "DeepMind 官方", date: "2026-11-10",
+      title: "谷歌发布 Gemini Robotics 2.5：最强视觉-语言-动作模型，奔驰产线实测 96% 成功率，ASIMOV-Jailbreak 安全基准同步开源",
+      summary: "Google DeepMind 发布迄今最强视觉-语言-动作模型（VLA）Gemini Robotics 2.5——200 余项任务评测成功率较前代提升 30-100%、完成速度快 20-30%；在奔驰匈牙利与德国产线的真实验证中，Apptronik Apollo 2 人形机器人自主完成汽车零件分拣上料、成功率 96%。同步引入推理时物理安全引导（障碍物场景安全完成率 +33%、人员近旁 +43%），并开源抗越狱基准 ASIMOV-Jailbreak（Gemini 4 Argon 越狱抵抗率 99.5%）。",
+      detail: "发布：11 月 10 日 DeepMind 官方博客。\n能力：灵巧性（工具使用/柔性物体操作）、可靠性、安全性三线跃升；200+ 项任务评测（夹食物/打礼盒蝴蝶结/移液等）。\n实测：奔驰 Kecskemét 与 Sindelfingen 产线，Apollo 2（22 自由度五指 SharpaWave 手）自主 kitting 分拣，96% 成功率；Gemini Robotics ER 管流程+2.5 管手臂数据。\n安全：推理时危险规避引导；ASIMOV-Jailbreak 开源基准——数百条伪装危险指令×数十场景，Argon 抵抗率 99.5%（前代 ER2 为 82%）。\n加速器：Gemini 4 Argon 充当仿真引擎——从真实相机场景生成数千变体演练+数字孪生+失败归因，大幅压缩训练周期。\n端侧视角：VLA 头部模型首次把「产线级 96%」写进官方口径——具身智能从演示视频走到值班工位；ASIMOV-Jailbreak 把机器人安全评测标准化，与国内同期的 HALO/LIFE 形成中美具身安全研究的第一轮正面呼应。",
+      tags: ["谷歌", "Gemini Robotics", "VLA", "人形机器人", "具身安全"],
+      url: "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+      image: "images/news/n230.webp",
+      imageCap: "Apollo 2 在奔驰产线执行分拣（图源：Google DeepMind）",
+      highlight: true
+    },,,
 
 {
 id: "n229", cat: "行业动态", source: "腾讯新闻", date: "2026-11-10",
@@ -165,43 +189,7 @@ id: "n229", cat: "行业动态", source: "腾讯新闻", date: "2026-11-10",
       image: "images/news/n229.jpg",
       imageCap: "《物联网设备模型技术白皮书》发布（图源：腾讯新闻）",
       highlight: false
-    },,
-
-{
-id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
-      title: "智元发布 WITA-Omni 全模态大模型正式版：行业首个具身全模态端到端交互模型，触觉+本体状态输入、免唤醒词全双工",
-      summary: "智元正式发布 WITA-Omni（硅光动语全模态大模型）——行业首个具身全模态端到端交互大模型：基于机器人本体感知数据深度训练，在音视频之外新增触觉、本体状态等输入与动作、表情等输出；流式全双工架构实现边听、边想、边应、边动、边做表情，交互响应最快约 400 毫秒、平均约 600 毫秒（较业内平均快近 3 倍）；全模态拒识让机器人免唤醒词自然对话，支持上百种语言方言免切换交流与流式同传。",
-      detail: "发布：11 月 10 日晚间智元公众号官宣（IT之家 19:24 首发报道）。\n模态：音视频+触觉+本体状态输入；动作+表情输出——为物理世界而生的「交互大脑」。\n全双工：流式架构边听边想边应边动边做表情；最快约 400ms、平均约 600ms 响应，快业内近 3 倍。\n拒识：结合朝向/视频/音频/声纹/唇动/姿态/语义/上下文决策是否回应——多人交谈与环境广播下大幅降低误触发，全程免唤醒词。\n表现：几十种情绪按不同强度呈现；复杂内容在面部屏幕实时可视化；主动互动（迎宾握手/点赞回应/挥手相送）。\n前史：7 月 Preview 以 85.21 分登顶 DailyOmni 全模态理解榜（超千问/Gemini/豆包/英伟达），八项细分指标六项第一。\n端侧视角：具身交互的「全双工+免唤醒词」组合把机器人从指令式应答推进到在场式社交——400ms 响应与多模态拒识必须在本体侧闭环完成，云端链路做不到；与蚂蚁灵波触觉模型同日开源，具身智能的感知-交互栈正被中国公司分层补齐。",
-      tags: ["智元", "WITA-Omni", "具身智能", "全模态", "全双工"],
-      url: "https://www.ithome.com/1/025/122.htm",
-      image: "images/news/n218.jpg",
-      imageCap: "智元 WITA-Omni 发布（图源：IT之家）",
-      highlight: true
-    },,,,,
-
-{
-id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
-      title: "蚂蚁灵波开源 LingBot-Touch 触觉基础模型：为通用大脑接入「手感」，26 项真机任务成功率提升 14-26 个百分点",
-      summary: "蚂蚁灵波开源具身触觉基础模型 LingBot-Touch——从「一脑多机」走向「一脑多手」，让机器人通用大脑获得可跨硬件复用的触觉「手感」：26 项真机测试任务成功率提升 14 至 26 个百分点。灵波 CEO 朱兴同日谈 Anthropic Fable 5.2：交互大模型与触觉基础模型两类协同将加速具身产业成熟。",
-      detail: "开源：11 月 10 日（IT之家/量子位/36 氪多源）。\n能力：触觉基础模型——为通用大脑接入「手感」；跨硬件复用（一脑多手）；26 项真机任务成功率提升 14-26 个百分点。\n背景：蚂蚁灵波 10 月底携机器人通用大脑亮相乌镇（一脑多机），触觉是通用大脑的最后几块感知拼图之一。\n呼应：智元同日发布 WITA-Omni 交互大模型——具身「交互大脑」与「触觉手感」同日双发。\n端侧视角：视觉模型可以云端生成、触觉必须端侧闭环——指尖力控与材质感知的延迟容忍是毫秒级，LingBot-Touch 开源等于把具身最难本地化的感知通道做成公共组件；机器人技术栈「VLM 层+触觉层」的分层生态正在成形。",
-      tags: ["蚂蚁灵波", "LingBot-Touch", "触觉模型", "具身智能", "开源"],
-      url: "https://www.ithome.com/1/024/701.htm",
-      image: "images/news/n219.png",
-      imageCap: "LingBot-Touch 触觉基础模型（图源：IT之家）",
-      highlight: false
-    },,,,,
-
-{
-id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
-      title: "影目召回 4701 副 INMO AIR3 智能眼镜并提供 OTA 免费升级：此前已在美国召回，曾称国内用户不受影响",
-      summary: "影目科技宣布召回 4701 副 INMO AIR3 智能眼镜并进行 OTA 免费升级——此前该产品已在美国市场召回，官方曾表示国内用户不受影响，本次国内召回完成跨国售后闭环。这是 AI 眼镜品类进入大规模交付期后的首批千人级召回之一，质量与售后体系开始成为品类竞争变量。",
-      detail: "召回：11 月 10 日宣布，涉及 4701 副 INMO AIR3，OTA 免费升级方式（候选库 dom=2）。\n前情：此前已在美国召回同款，官方曾称国内用户不受影响——本次国内召回使跨国售后口径回归一致。\n端侧视角：AI 眼镜从首发抢跑进入交付质量竞争——眼镜是全天佩戴设备，OTA 修复能力（而非返厂）决定召回成本；百镜大战的下一轮分化变量将从参数转向质量体系与售后响应，首批千人级召回为全行业上了合规课。",
-      tags: ["影目", "INMO AIR3", "AI眼镜", "召回", "OTA升级"],
-      url: "https://www.ithome.com/1/024/893.htm",
-      image: "images/news/n220.jpg",
-      imageCap: "影目 INMO AIR3 召回（图源：IT之家）",
-      highlight: false
-    },,,,,
+    },,,
 
 {
 id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
@@ -213,7 +201,43 @@ id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
       image: "images/news/n221.jpg",
       imageCap: "MateBook Fold S 三色外观（图源：IT之家）",
  highlight: false
-    },,,
+    },,,,
+
+{
+id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
+      title: "影目召回 4701 副 INMO AIR3 智能眼镜并提供 OTA 免费升级：此前已在美国召回，曾称国内用户不受影响",
+      summary: "影目科技宣布召回 4701 副 INMO AIR3 智能眼镜并进行 OTA 免费升级——此前该产品已在美国市场召回，官方曾表示国内用户不受影响，本次国内召回完成跨国售后闭环。这是 AI 眼镜品类进入大规模交付期后的首批千人级召回之一，质量与售后体系开始成为品类竞争变量。",
+      detail: "召回：11 月 10 日宣布，涉及 4701 副 INMO AIR3，OTA 免费升级方式（候选库 dom=2）。\n前情：此前已在美国召回同款，官方曾称国内用户不受影响——本次国内召回使跨国售后口径回归一致。\n端侧视角：AI 眼镜从首发抢跑进入交付质量竞争——眼镜是全天佩戴设备，OTA 修复能力（而非返厂）决定召回成本；百镜大战的下一轮分化变量将从参数转向质量体系与售后响应，首批千人级召回为全行业上了合规课。",
+      tags: ["影目", "INMO AIR3", "AI眼镜", "召回", "OTA升级"],
+      url: "https://www.ithome.com/1/024/893.htm",
+      image: "images/news/n220.jpg",
+      imageCap: "影目 INMO AIR3 召回（图源：IT之家）",
+      highlight: false
+    },,,,,,
+
+{
+id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
+      title: "蚂蚁灵波开源 LingBot-Touch 触觉基础模型：为通用大脑接入「手感」，26 项真机任务成功率提升 14-26 个百分点",
+      summary: "蚂蚁灵波开源具身触觉基础模型 LingBot-Touch——从「一脑多机」走向「一脑多手」，让机器人通用大脑获得可跨硬件复用的触觉「手感」：26 项真机测试任务成功率提升 14 至 26 个百分点。灵波 CEO 朱兴同日谈 Anthropic Fable 5.2：交互大模型与触觉基础模型两类协同将加速具身产业成熟。",
+      detail: "开源：11 月 10 日（IT之家/量子位/36 氪多源）。\n能力：触觉基础模型——为通用大脑接入「手感」；跨硬件复用（一脑多手）；26 项真机任务成功率提升 14-26 个百分点。\n背景：蚂蚁灵波 10 月底携机器人通用大脑亮相乌镇（一脑多机），触觉是通用大脑的最后几块感知拼图之一。\n呼应：智元同日发布 WITA-Omni 交互大模型——具身「交互大脑」与「触觉手感」同日双发。\n端侧视角：视觉模型可以云端生成、触觉必须端侧闭环——指尖力控与材质感知的延迟容忍是毫秒级，LingBot-Touch 开源等于把具身最难本地化的感知通道做成公共组件；机器人技术栈「VLM 层+触觉层」的分层生态正在成形。",
+      tags: ["蚂蚁灵波", "LingBot-Touch", "触觉模型", "具身智能", "开源"],
+      url: "https://www.ithome.com/1/024/701.htm",
+      image: "images/news/n219.png",
+      imageCap: "LingBot-Touch 触觉基础模型（图源：IT之家）",
+      highlight: false
+    },,,,,,
+
+{
+id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
+      title: "智元发布 WITA-Omni 全模态大模型正式版：行业首个具身全模态端到端交互模型，触觉+本体状态输入、免唤醒词全双工",
+      summary: "智元正式发布 WITA-Omni（硅光动语全模态大模型）——行业首个具身全模态端到端交互大模型：基于机器人本体感知数据深度训练，在音视频之外新增触觉、本体状态等输入与动作、表情等输出；流式全双工架构实现边听、边想、边应、边动、边做表情，交互响应最快约 400 毫秒、平均约 600 毫秒（较业内平均快近 3 倍）；全模态拒识让机器人免唤醒词自然对话，支持上百种语言方言免切换交流与流式同传。",
+      detail: "发布：11 月 10 日晚间智元公众号官宣（IT之家 19:24 首发报道）。\n模态：音视频+触觉+本体状态输入；动作+表情输出——为物理世界而生的「交互大脑」。\n全双工：流式架构边听边想边应边动边做表情；最快约 400ms、平均约 600ms 响应，快业内近 3 倍。\n拒识：结合朝向/视频/音频/声纹/唇动/姿态/语义/上下文决策是否回应——多人交谈与环境广播下大幅降低误触发，全程免唤醒词。\n表现：几十种情绪按不同强度呈现；复杂内容在面部屏幕实时可视化；主动互动（迎宾握手/点赞回应/挥手相送）。\n前史：7 月 Preview 以 85.21 分登顶 DailyOmni 全模态理解榜（超千问/Gemini/豆包/英伟达），八项细分指标六项第一。\n端侧视角：具身交互的「全双工+免唤醒词」组合把机器人从指令式应答推进到在场式社交——400ms 响应与多模态拒识必须在本体侧闭环完成，云端链路做不到；与蚂蚁灵波触觉模型同日开源，具身智能的感知-交互栈正被中国公司分层补齐。",
+      tags: ["智元", "WITA-Omni", "具身智能", "全模态", "全双工"],
+      url: "https://www.ithome.com/1/025/122.htm",
+      image: "images/news/n218.jpg",
+      imageCap: "智元 WITA-Omni 发布（图源：IT之家）",
+      highlight: true
+    },,,,,,
 
 {
 id: "n227", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-09",
@@ -224,6 +248,42 @@ id: "n227", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-09",
       url: "https://tech.ifeng.com/c/8xwEBlk190G",
       image: "images/news/n227.jpg",
       imageCap: "Claude Fable 5.2 发布（图源：凤凰科技）",
+      highlight: false
+    },,,,
+
+{
+id: "n226", cat: "大模型厂商", source: "TechCrunch", date: "2026-11-09",
+      title: "Meta 开源发布 Muse Ember：迄今最小多模态模型专攻 Agent 执行，1M 上下文、每百万输入 Token 仅 0.1 美元",
+      summary: "Meta 超级智能实验室发布 Muse Ember——迄今最小、最省成本的多模态模型，专为高吞吐 Agent 工作流执行设计（编码子任务、工具调用、文档摘要）：100 万 token 上下文窗口，定价每百万输入 token 仅 0.1 美元（约合每任务 0.14 美元），Apache 开源协议。与 Muse Glimmer 30B（端侧智能体）、Muse Spark 1.1（多模态推理）构成 Muse 家族三档。",
+      detail: "发布：11 月 9 日（TechCrunch/MarkTechPost 多源，候选库 dom=2）。\n定位：Meta 最小多模态模型——高吞吐 agent 执行（编码子任务/工具调用/文档摘要），非推理主力。\n指标：1M token 上下文；Artificial Analysis 36 分；约 0.14 美元/任务。\n价格：0.1 美元/百万输入 token——迄今最省。\n协议：Apache 开源。\n家族：Muse Glimmer 30B（端侧智能体、即将上智能眼镜）+Muse Spark 1.1（推理）+Ember（执行）三档成型。\n端侧视角：Muse 家族完成了「端侧 Glimmer-云端 Spark-廉价执行 Ember」的全栈分工——Ember 的超低价+开源把 Agent 执行层的边际成本压到可忽略，为端侧 Agent 的「本地编排+云端执行」混合架构提供了经济底座；若 Ember 尺寸后续下放到端侧可跑档位，将成为端侧 Agent 执行引擎的直接候选。",
+      tags: ["Meta", "Muse Ember", "Agent模型", "开源", "轻量化"],
+      url: "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution",
+      image: "images/news/n226.png",
+      imageCap: "Meta Muse Ember（图源：TechCrunch）",
+      highlight: false
+    },,,,,,
+
+{
+id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09",
+      title: "Gentle Monster 首款 AI 眼镜定档：携手谷歌与三星、搭载 Gemini，11 月 12 日美国开启预订",
+      summary: "时尚眼镜巨头 Gentle Monster 首款 AI 智能眼镜定档——由 Gentle Monster 携手 Google 与 Samsung 打造，基于 Android XR 平台并搭载 Gemini：支持语音与文字实时翻译、智能导航、语音助手、环境感知与视觉信息识别及拍照抓拍，兼容 Android 与 iOS 设备。11 月 12 日在美国开启预订、12 月正式发售。",
+      detail: "定档：官网 Intelligent Eyewear 页面确认 11 月 12 日美国预订、12 月发售（多源报道，候选库 rep=2）。\n配置：Android XR 平台+Google Gemini；实时翻译（语音/文字）、智能导航、语音助手、环境感知辅助、视觉识别、拍照抓拍。\n兼容：Android 与 iOS 双生态。\n格局：与三星 Intelligent Eyewear、Warby Parker 首款眼镜同在 11 月 12 日开订——Android XR 生态第一波三款眼镜集体登陆美国市场。\n端侧视角：Android XR 首波采用「科技巨头出平台、时尚品牌出形态」的分工——Gentle Monster 把 AI 眼镜做进潮流光学渠道，与三星电子渠道、Warby Parker 眼镜直销渠道三线并进；12 月假日季交付意味着 Gemini 眼镜侧分发正式与 Meta 系正面争夺百镜大战的生态位。",
+      tags: ["Gentle Monster", "AI眼镜", "Android XR", "Gemini", "谷歌"],
+      url: "https://www.gentlemonster.com/int/zh-CN/intelligent-eyewear",
+      image: "images/news/n216.jpg",
+      imageCap: "Gentle Monster Intelligent Eyewear（图源：官网）",
+      highlight: false
+    },,,,,,
+
+{
+id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
+      title: "微信鸿蒙版安装量超 9000 万次：HarmonyOS 终端用户本月预计突破 1 亿大关",
+      summary: "微信鸿蒙版 App 安装量已超过 9000 万次，华为 HarmonyOS 终端用户数预计本月突破 1 亿大关——鸿蒙生态完成国民级应用全量迁移后进入亿级用户规模区间，纯血鸿蒙的端侧 AI 服务（小艺智能体、系统级 AI 能力）随之获得亿级设备底座。",
+      detail: "数据：11 月 9 日报道（IT之家，华为官方口径）——微信鸿蒙版安装量超 9000 万次；HarmonyOS 终端用户数预计本月突破 1 亿。\n节点：鸿蒙 5 发布约一年完成国民应用全量原生迁移，终端规模站上亿级门槛。\n端侧视角：亿级终端是端侧 AI 分发的规模分水岭——系统级智能体（小艺）与第三方应用的端侧 AI 能力从此拥有与 iOS/安卓第三极对等的设备基数；配合本月华为 Mate X8（麒麟 9050 Pro 端侧大模型）预热，鸿蒙的端侧 AI 叙事从「生态补课」转入「规模兑现」。",
+      tags: ["鸿蒙", "微信", "HarmonyOS", "终端生态", "亿级用户"],
+      url: "https://www.ithome.com/1/024/099.htm",
+      image: "images/news/n215.jpg",
+      imageCap: "微信鸿蒙版安装量突破 9000 万（图源：IT之家）",
       highlight: false
     },,,
 
@@ -237,67 +297,7 @@ id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
       image: "images/news/n214.png",
       imageCap: "千问办公 2.0 官方发布原文（图源：千问办公公众号）",
       highlight: true
-    },,,,,
-
-{
-id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
-      title: "微信鸿蒙版安装量超 9000 万次：HarmonyOS 终端用户本月预计突破 1 亿大关",
-      summary: "微信鸿蒙版 App 安装量已超过 9000 万次，华为 HarmonyOS 终端用户数预计本月突破 1 亿大关——鸿蒙生态完成国民级应用全量迁移后进入亿级用户规模区间，纯血鸿蒙的端侧 AI 服务（小艺智能体、系统级 AI 能力）随之获得亿级设备底座。",
-      detail: "数据：11 月 9 日报道（IT之家，华为官方口径）——微信鸿蒙版安装量超 9000 万次；HarmonyOS 终端用户数预计本月突破 1 亿。\n节点：鸿蒙 5 发布约一年完成国民应用全量原生迁移，终端规模站上亿级门槛。\n端侧视角：亿级终端是端侧 AI 分发的规模分水岭——系统级智能体（小艺）与第三方应用的端侧 AI 能力从此拥有与 iOS/安卓第三极对等的设备基数；配合本月华为 Mate X8（麒麟 9050 Pro 端侧大模型）预热，鸿蒙的端侧 AI 叙事从「生态补课」转入「规模兑现」。",
-      tags: ["鸿蒙", "微信", "HarmonyOS", "终端生态", "亿级用户"],
-      url: "https://www.ithome.com/1/024/099.htm",
-      image: "images/news/n215.jpg",
-      imageCap: "微信鸿蒙版安装量突破 9000 万（图源：IT之家）",
-      highlight: false
-    },,
-
-{
-id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09",
-      title: "Gentle Monster 首款 AI 眼镜定档：携手谷歌与三星、搭载 Gemini，11 月 12 日美国开启预订",
-      summary: "时尚眼镜巨头 Gentle Monster 首款 AI 智能眼镜定档——由 Gentle Monster 携手 Google 与 Samsung 打造，基于 Android XR 平台并搭载 Gemini：支持语音与文字实时翻译、智能导航、语音助手、环境感知与视觉信息识别及拍照抓拍，兼容 Android 与 iOS 设备。11 月 12 日在美国开启预订、12 月正式发售。",
-      detail: "定档：官网 Intelligent Eyewear 页面确认 11 月 12 日美国预订、12 月发售（多源报道，候选库 rep=2）。\n配置：Android XR 平台+Google Gemini；实时翻译（语音/文字）、智能导航、语音助手、环境感知辅助、视觉识别、拍照抓拍。\n兼容：Android 与 iOS 双生态。\n格局：与三星 Intelligent Eyewear、Warby Parker 首款眼镜同在 11 月 12 日开订——Android XR 生态第一波三款眼镜集体登陆美国市场。\n端侧视角：Android XR 首波采用「科技巨头出平台、时尚品牌出形态」的分工——Gentle Monster 把 AI 眼镜做进潮流光学渠道，与三星电子渠道、Warby Parker 眼镜直销渠道三线并进；12 月假日季交付意味着 Gemini 眼镜侧分发正式与 Meta 系正面争夺百镜大战的生态位。",
-      tags: ["Gentle Monster", "AI眼镜", "Android XR", "Gemini", "谷歌"],
-      url: "https://www.gentlemonster.com/int/zh-CN/intelligent-eyewear",
-      image: "images/news/n216.jpg",
-      imageCap: "Gentle Monster Intelligent Eyewear（图源：官网）",
-      highlight: false
-    },,,,,
-
-{
-id: "n226", cat: "大模型厂商", source: "TechCrunch", date: "2026-11-09",
-      title: "Meta 开源发布 Muse Ember：迄今最小多模态模型专攻 Agent 执行，1M 上下文、每百万输入 Token 仅 0.1 美元",
-      summary: "Meta 超级智能实验室发布 Muse Ember——迄今最小、最省成本的多模态模型，专为高吞吐 Agent 工作流执行设计（编码子任务、工具调用、文档摘要）：100 万 token 上下文窗口，定价每百万输入 token 仅 0.1 美元（约合每任务 0.14 美元），Apache 开源协议。与 Muse Glimmer 30B（端侧智能体）、Muse Spark 1.1（多模态推理）构成 Muse 家族三档。",
-      detail: "发布：11 月 9 日（TechCrunch/MarkTechPost 多源，候选库 dom=2）。\n定位：Meta 最小多模态模型——高吞吐 agent 执行（编码子任务/工具调用/文档摘要），非推理主力。\n指标：1M token 上下文；Artificial Analysis 36 分；约 0.14 美元/任务。\n价格：0.1 美元/百万输入 token——迄今最省。\n协议：Apache 开源。\n家族：Muse Glimmer 30B（端侧智能体、即将上智能眼镜）+Muse Spark 1.1（推理）+Ember（执行）三档成型。\n端侧视角：Muse 家族完成了「端侧 Glimmer-云端 Spark-廉价执行 Ember」的全栈分工——Ember 的超低价+开源把 Agent 执行层的边际成本压到可忽略，为端侧 Agent 的「本地编排+云端执行」混合架构提供了经济底座；若 Ember 尺寸后续下放到端侧可跑档位，将成为端侧 Agent 执行引擎的直接候选。",
-      tags: ["Meta", "Muse Ember", "Agent模型", "开源", "轻量化"],
-      url: "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution",
-      image: "images/news/n226.png",
-      imageCap: "Meta Muse Ember（图源：TechCrunch）",
-      highlight: false
-    },,,,,
-
-{
-id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
-      title: "中国移动×智谱签署合作协议：GLM 系列模型接入移动云 MaaS 平台，国产算力到大模型服务全链合作",
-      summary: "中国移动云公司与智谱签署合作协议——双方围绕国产算力、大模型服务和 AI 商业化展开深度合作，智谱 GLM 系列模型将接入移动云 MaaS 平台，合作涵盖 Token 技术创新、模型服务、产品打造、行业方案等，覆盖从底层算力供给、模型服务到商业化分发的完整产业链。",
-      detail: "合作：11 月 6 日签约、11 月 8 日多源披露（IT之家/凤凰/证券之星）。\n内容：GLM 系列模型接入移动云 MaaS 平台；Token 技术创新、模型服务、产品打造、行业方案。\n链路：从国产算力供给到模型服务到商业化分发——运营商×国产大模型的系统性合作。\n端侧视角：运营商的算力网络+国产模型的组合正在打通「云端 Token 工厂」的国家级分发通道——移动云 MaaS 平台接入 GLM 后，端侧设备的端云协同推理将获得运营商级的 SLA 保障，这与趋境×智谱×摩尔线程的 Token 工厂方案形成「国家级+创业级」两层国产推理基建。",
-      tags: ["中国移动", "智谱", "GLM", "移动云", "国产算力"],
-      url: "https://www.ithome.com/1/023/937.htm",
-      image: "images/news/n190.png",
-      imageCap: "中国移动×智谱合作（图源：IT之家）",
-      highlight: false
-    },,,,,
-
-{
-id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
-      title: "物理智能开源平台 Hitch Open 进博会全球发布：双机自主对打乒乓球 142 拍刷新世界纪录，0.3 秒完成感知决策",
-      summary: "物理智能开源平台 Hitch Open 在进博会举行全球发布会——现场挑战环节两台机器人在无人工遥控下自主感知、决策、挥拍，连续对打 142 拍刷新该项目世界纪录。纪录由上海交通大学—上海创智学院高岳教授团队基于开源底座训练模型，与 Hitch Open 平台提供的统一本体联合创造，机器人需在 0.3 秒内完成感知与决策。",
-      detail: "发布：进博会现场全球发布（IT之家/上观新闻/中新经纬多源）。\n纪录：两台机器人无人遥控连续对打 142 拍，为此前 129 拍世界纪录的又一次刷新。\n分工：高岳教授团队基于开源底座训练模型；Hitch Open 提供统一本体；青瞳视觉高精度动捕提供支撑，双方宣布全球战略合作。\n实时性：每次击球需在 0.3 秒内完成感知与决策——具身智能的端侧实时推理极限压力测试。\n端侧视角：142 拍背后是「统一本体+开源底座」的物理智能训练栈——Hitch Open 把仿真训练到真机部署的全链路开源化，任何团队都能在同一套本体上复现和超越，具身智能从各家闭门调参进入开源共建时代。",
-      tags: ["Hitch Open", "物理智能", "具身智能", "开源平台", "进博会"],
-      url: "https://www.ithome.com/1/023/920.htm",
-      image: "images/news/n198.jpg",
-      imageCap: "Hitch Open 展台机器人乒乓对打（图源：中新经纬）",
-      highlight: false
-    },,,,,
+    },,,,,,
 
 {
 id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
@@ -309,7 +309,31 @@ id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
       image: "images/news/n199.jpg",
       imageCap: "2026 款长轴距 E 级（图源：凤凰汽车）",
       highlight: false
-    },,
+    },,,
+
+{
+id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
+      title: "物理智能开源平台 Hitch Open 进博会全球发布：双机自主对打乒乓球 142 拍刷新世界纪录，0.3 秒完成感知决策",
+      summary: "物理智能开源平台 Hitch Open 在进博会举行全球发布会——现场挑战环节两台机器人在无人工遥控下自主感知、决策、挥拍，连续对打 142 拍刷新该项目世界纪录。纪录由上海交通大学—上海创智学院高岳教授团队基于开源底座训练模型，与 Hitch Open 平台提供的统一本体联合创造，机器人需在 0.3 秒内完成感知与决策。",
+      detail: "发布：进博会现场全球发布（IT之家/上观新闻/中新经纬多源）。\n纪录：两台机器人无人遥控连续对打 142 拍，为此前 129 拍世界纪录的又一次刷新。\n分工：高岳教授团队基于开源底座训练模型；Hitch Open 提供统一本体；青瞳视觉高精度动捕提供支撑，双方宣布全球战略合作。\n实时性：每次击球需在 0.3 秒内完成感知与决策——具身智能的端侧实时推理极限压力测试。\n端侧视角：142 拍背后是「统一本体+开源底座」的物理智能训练栈——Hitch Open 把仿真训练到真机部署的全链路开源化，任何团队都能在同一套本体上复现和超越，具身智能从各家闭门调参进入开源共建时代。",
+      tags: ["Hitch Open", "物理智能", "具身智能", "开源平台", "进博会"],
+      url: "https://www.ithome.com/1/023/920.htm",
+      image: "images/news/n198.jpg",
+      imageCap: "Hitch Open 展台机器人乒乓对打（图源：中新经纬）",
+      highlight: false
+    },,,,,,
+
+{
+id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
+      title: "中国移动×智谱签署合作协议：GLM 系列模型接入移动云 MaaS 平台，国产算力到大模型服务全链合作",
+      summary: "中国移动云公司与智谱签署合作协议——双方围绕国产算力、大模型服务和 AI 商业化展开深度合作，智谱 GLM 系列模型将接入移动云 MaaS 平台，合作涵盖 Token 技术创新、模型服务、产品打造、行业方案等，覆盖从底层算力供给、模型服务到商业化分发的完整产业链。",
+      detail: "合作：11 月 6 日签约、11 月 8 日多源披露（IT之家/凤凰/证券之星）。\n内容：GLM 系列模型接入移动云 MaaS 平台；Token 技术创新、模型服务、产品打造、行业方案。\n链路：从国产算力供给到模型服务到商业化分发——运营商×国产大模型的系统性合作。\n端侧视角：运营商的算力网络+国产模型的组合正在打通「云端 Token 工厂」的国家级分发通道——移动云 MaaS 平台接入 GLM 后，端侧设备的端云协同推理将获得运营商级的 SLA 保障，这与趋境×智谱×摩尔线程的 Token 工厂方案形成「国家级+创业级」两层国产推理基建。",
+      tags: ["中国移动", "智谱", "GLM", "移动云", "国产算力"],
+      url: "https://www.ithome.com/1/023/937.htm",
+      image: "images/news/n190.png",
+      imageCap: "中国移动×智谱合作（图源：IT之家）",
+      highlight: false
+    },,,,,,
 
 {
 id: "n237", cat: "大模型厂商", source: "CSDN", date: "2026-11-07",
@@ -321,7 +345,7 @@ id: "n237", cat: "大模型厂商", source: "CSDN", date: "2026-11-07",
       image: "images/news/n237.png",
       imageCap: "Higgs Realtime 数字人演示（图源：CSDN）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
