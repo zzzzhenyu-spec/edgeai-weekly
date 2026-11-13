@@ -49,7 +49,7 @@
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
-| 2026-11-11 | [文心 5.5 Flash Preview 发布：总参数量 2800 亿、四能力对标旗舰，官宣 11 月 25 日开源](https://zhidx.com/p/609002.html) | 智东西 |
+| 2026-11-11 | [文心 5.5 Flash Preview 发布：总参 2800 亿 MoE 激活仅 140 亿、100 万 token 上下文，官宣 11 月 25 日开源](https://tech.ifeng.com/c/8xxwDIS2DX4) | 凤凰科技 |
 | 2026-11-11 | [北大系创企开源 aiXcompact-4B 上下文压缩模型：编程 Agent 推理成本降 78%、API 费用降 97%，单卡 A100 可私有部署](https://zhidx.com/p/609168.html) | 智东西 |
 | 2026-11-11 | [面壁智能 35B 模型跑进手机：MiniCPM-V 4.7 35B-A3B 以 3GB 内存实现端侧多模态，iPhone 18 Pro Max 实测即问即答](https://news.qq.com/rain/a/20261111A058XQ00) | 每日经济新闻 |
 | 2026-11-11 | [阿里 Qwen4 预览版上线千问平台：新一代旗舰主打编程、Agent 与复杂任务，正式版即将发布](https://www.ithome.com/1/025/301.htm) | IT之家 |
