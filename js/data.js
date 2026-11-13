@@ -18,11 +18,59 @@ const WEEKLY_DATA = {
     weekRange: "2026.11.07 — 2026.11.13 · 近 7 天",
     updated: "2026-11-13",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：百度世界 2026（智能组织+文心双模型）、文心 5.5 Flash Preview（2800 亿/11-25 开源）、2026 年 11 月 Pixel Drop（Gemini Intelligence+Pixel Tag，撤换此前误挂的 2025 旧闻）。"
+    editorsNote: "近 7 天聚焦：格局震动与政策供给同周落地——英伟达黄仁勋辞任 CEO（Colette Kress 临时接任，机器人端侧 Jetson Thor 与 AI PC 端侧 RTX Spark 双线前景生变），北京发布具身智能三年行动方案（20 万台年产能+5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单）。AI 眼镜进入商业落地密度期：三星 Intelligent Eyewear 395 美元开启预售（12 月 10 日韩美上市）、苹果供应链首证 AI 眼镜与摄像头 AirPods 双项目、京东酷派把百元档打进场。端侧基座竞赛白热化：文心 5.5 Flash（2800 亿 MoE）预告 11 月 25 日开源、面壁 35B 跑进手机、麒麟 9050 端侧 30B、Qwen4 预览上线、曦选创智 5 亿天使轮对标 Thor；联发科×英伟达 RTX Spark 以最高 128GB 统一内存重定义 AI PC，Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy。\n今日新增：北京具身智能三年行动方案、英伟达 CEO 交接、Gemini 4 Hydrogen、三星 AI 眼镜预售、联发科 RTX Spark 超级芯片、Tether QVAC BotPsy 开源、苹果 AI 眼镜供应链首证（快克智能）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+id: "n243", cat: "行业关注事件", source: "北京市经信局", date: "2026-11-13",
+      title: "北京发布具身智能机器人三年行动方案：2028 年 20 万台年产能、5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单",
+      summary: "《北京市具身智能机器人产业高质量发展行动方案（2026—2028 年）》正式公开（11 月 11 日印发、13 日经信局官网发布，共六大工程十九条）。目标到 2028 年培育不少于 5 家国际一流、10 家国内领先的人形机器人整机企业，在京形成 20 万台/年整机生产能力（京津冀整机产能占全国 25%），新增总规模超 50000PFlops 具身智能专用算力集群，并在 100 个真实场景采集超 100 万小时高质量数据。",
+      detail: "政策：《行动方案》11 月 11 日印发、11 月 12 日起媒体披露、11 月 13 日经信局官网发布，有效期至 2028 年 12 月 31 日。\n目标：国际一流人形整机企业不少于 5 家、国内领先 10 家；京津冀整机产能占全国 25%、关键零部件配套率超 60%。\n产能与算力：在京形成 20 万台/年整机生产能力；新增超 50000PFlops 专用算力集群；不少于 100 个真实场景采集超 100 万小时数据；整机额定负载达自重 40% 以上、平均无故障工作时间超 2000 小时。\n技术路线：支持 VLA（视觉语言动作）、世界模型、强化学习多路线融合；攻关长时记忆、「本地化轻量部署」与模型可解释性；基于 RISC-V 的系统级智算芯片与超低功耗智算芯片列入「应布局尽布局」清单。\n配套：紧缺人才进京落户、子女教育、住房、就医支持；具身智能机器人「一机一码」全生命周期管理体系。\n端侧视角：「本地化轻量部署」与 RISC-V 智算芯片首次被省级行动方案点名——机器人本体侧的模型轻量化、本地推理与自主芯片被同时纳入政策供给，与本周曦选创智（对标英伟达 Thor 的国产具身芯片）落子同一方向，北京把「大脑模型+端侧芯片」整条链路写进了三年施工图。",
+      tags: ["北京", "具身智能", "行动方案", "20万台", "本地化部署"],
+      url: "https://jxj.beijing.gov.cn/jxdt/zwyw/202611/t20261113_4944755.html",
+      image: "images/news/n243.jpg",
+      imageCap: "人形机器人运动会拳击赛现场（图源：北京市经信局官网）",
+      highlight: false
+    },
+
+{
+id: "n248", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-12",
+      title: "谷歌发布 Gemini 4 Hydrogen：主打智能体快速执行的高效率档，多项基准反超自家旗舰 Argon",
+      summary: "谷歌 11 月 12 日发布 Gemini 4 家族新成员 Hydrogen——定位「日常驱动」的高效率执行型模型，专注日常编码与智能体工作流，与负责深度长程推理的 Carbon/Argon 形成分层。Artificial Analysis 智能指数 high 档 51 分反超 Argon（50 分），xhigh 档达 54 分；Terminal-Bench 4.1 达 57%（上代 3.8 Flash 为 18.2%）且任务速度快 2.5 倍；支持 100 万 token 输入与最多 100 万 token 输出，全上下文统一价每百万输入 1.50 美元、输出 7.50 美元。",
+      detail: "发布：11 月 12 日官方博客；AI Studio、Gemini API、Google Search 全球、Sheets 与 Antigravity 同步可用。\n定位：Gemini 4 家族分层——Carbon、Argon 负责深度长程推理，Hydrogen 主打「快速执行」日常档；四档思考模式（low/medium/high/新增 xhigh）。\n基准：AAI 智能指数 high 档 51 分（Argon 为 50）、xhigh 档 54 分；Terminal-Bench 4.1 达 57%（3.8 Flash 为 18.2%）、任务速度快 2.5 倍；HLE-Diamond 58.8%；Agents' Last Exam 71.6%。\n安全：智能体任务越权行为减少最多 81%，幻觉声明减少 5 倍以上，思维链可读性保留 99.9%。\n定价：100 万 token 上下文统一价——每百万输入 1.50 美元、每百万输出 7.50 美元。\n端侧视角：Hydrogen 是云端执行档，官方未发布端侧版本——谷歌把「深度推理」与「快速执行」拆成两条云端产品线，端侧 Nano 档仍未登场；对端云协同应用而言，1.50/7.50 美元的百万 token 定价为「云端腿」成本再定锚，Antigravity 智能体入口是它的主战场。",
+      tags: ["谷歌", "Gemini 4", "Hydrogen", "智能体", "模型分层"],
+      url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      image: "images/news/n248.jpg",
+      imageCap: "Gemini 4 Hydrogen 发布（图源：Google 官方博客）",
+      highlight: false
+    },
+
+{
+id: "n244", cat: "AI硬件", source: "三星官方新闻室", date: "2026-11-12",
+      title: "三星首款 AI 眼镜 Intelligent Eyewear 开启预售：395 美元起、41 克无屏设计，12 月 10 日韩美上市",
+      summary: "三星官方宣布首款 AI 眼镜 Intelligent Eyewear 于 11 月 12 日开启预售——395 美元起、整机 41 克的无屏音频设计，搭载骁龙 AR1 Gen1 芯片与 Android XR 系统、接入 Gemini 助手，12 月 10 日在韩国与美国正式上市；镜框由 Gentle Monster 与 Warby Parker 参与设计，共 30 款型号组合，带显示屏的 Ultra 版后续推出。",
+      detail: "预售：11 月 12 日开启，395 美元起（三星官方新闻室宣布 12 月发布安排）。\n设计：41 克无屏音频眼镜；Gentle Monster、Warby Parker 参与镜框设计，30 款型号组合。\n规格：骁龙 AR1 Gen1 芯片；Android XR 系统；Gemini 语音交互+摄像头视觉输入；支持实时翻译、导航与消息摘要。\n上市：12 月 10 日韩国、美国首发；中国市场暂不在首批；带屏 Ultra 版后续推出。\n端侧视角：Android XR 阵营首款消费级眼镜进入「定价-预售-上市」通道——395 美元卡位在 Meta Glasses（299 美元）与带屏高端眼镜之间，41 克是「全天佩戴」的门槛参数；无屏+语音+摄像头的形态把端侧算力需求压缩到 AR1 级别，是谷歌生态对 Meta 轻量路线的正面应答，也是 Gemini 向眼镜端侧下沉的第一块大规模阵地。",
+      tags: ["三星", "Intelligent Eyewear", "Android XR", "AI眼镜", "Gemini"],
+      url: "https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world",
+      image: "images/news/n244.jpg",
+      imageCap: "三星 Intelligent Eyewear（图源：三星官方新闻室）",
+      highlight: false
+    },
+
+{
+id: "n242", cat: "行业关注事件", source: "英伟达官方/智东西", date: "2026-11-12",
+      title: "黄仁勋辞任英伟达 CEO：CFO Colette Kress 出任临时 CEO，3.8 万亿美元巨头突发掌门人交接",
+      summary: "英伟达 11 月 12 日官方宣布 CEO 交接——黄仁勋辞去总裁、CEO 及董事会成员职务，立即生效；CFO 兼执行副总裁 Colette Kress 出任临时 CEO，公司同时寻找正式继任者。此前 11 月 10 日英伟达独立董事会成员先行发布声明，多家媒体报道指交接与个人行为争议有关（指控口径）；消息当日英伟达股价跌超 6%，AI 产业链集体波动。",
+      detail: "公告：11 月 12 日官方新闻稿宣布 CEO Transition；11 月 10 日独立董事会成员声明在前。\n人事：黄仁勋卸任总裁/CEO/董事（立即生效）；Colette Kress（原 CFO 兼执行副总裁）任临时 CEO；正式继任者遴选中。\n背景：TechCrunch 等报道指与个人行为争议有关（媒体报道的指控口径，未经司法认定）。\n市场：消息当日英伟达跌超 6%、AMD 大涨；英伟达与 Anthropic 的百亿美元投资关联在后者上市前夕受到市场审视。\n端侧视角：英伟达是机器人端侧（Jetson Thor）与 AI PC 端侧（RTX Spark，见联发科合作条目）两条端侧供给线的核心——掌舵人突发离任给 Rubin/Thor 产品节奏及车企、机器人厂商的合作确定性蒙上阴影；恰逢曦选创智「对标 Thor」的国产具身芯片完成融资，端侧算力格局的变量在一夜之间放大。",
+      tags: ["英伟达", "黄仁勋", "CEO交接", "Colette Kress", "行业震动"],
+      url: "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+      image: "images/news/n242.jpg",
+      imageCap: "英伟达 CEO 交接公告（图源：英伟达官方新闻室）",
+      highlight: true
+    },
+
 {
 id: "n239", cat: "行业关注事件", source: "凤凰网", date: "2026-11-12",
       title: "百度世界 2026：李彦宏首提「智能组织」——AI 下一幕，文心闪电深度思考+文心一镜微表情双模型发布",
@@ -44,6 +92,30 @@ id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
       url: "http://news.10jqka.com.cn/20261112/c681759273.shtml",
       image: "images/news/n236.jpg",
       imageCap: "国产 GPU 底座×机器人场景生态（图源：搜狐财经）",
+      highlight: false
+    },
+
+{
+id: "n246", cat: "端侧Agent", source: "钜亨网/BlockBeats", date: "2026-11-11",
+      title: "Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy：基于 Qwen3.5 架构、手机本地运行，工具调用胜 2.5B 级",
+      summary: "稳定币巨头 Tether 的 AI 研究部门发布开放权重模型 QVAC BotPsy——8 亿参数、基于 Qwen3.5-0.8B 架构训练，Apache 2.0 许可开源，专为手机、电脑等个人设备本地运行设计；官方称其工具调用能力超过 2.5B 级模型，定位设备端 AI 智能体底座。",
+      detail: "发布：11 月 11 日（Tether AI Research，多家媒体跟进报道）。\n规格：8 亿参数；基于 Qwen3.5-0.8B 架构训练；Apache 2.0 开放权重。\n能力：设备端工具调用，无需云端；官方基准称超越 2.5B 级模型的工具调用表现。\n战略：QVAC（Quantum Versatile Compute）体系的端侧落子——今年 4 月 Tether 已开源 QVAC SDK 跨设备智能体框架，BotPsy 补上模型层。\n端侧视角：非 AI 巨头跨界端侧模型的又一样本——0.8B+Apache 2.0 把「手机本地智能体」的门槛拉到极低，与 DeepSeek Harness 插件体系同指「端侧智能体底座开源化」赛道；「大厂出基座、跨界玩家做微调与应用」的分工正在成形，QVAC 全家桶（SDK+模型）是目前最完整的一套非巨头开源方案。",
+      tags: ["Tether", "QVAC BotPsy", "0.8B", "开源", "端侧智能体"],
+      url: "https://m.cnyes.com/news/id/6659587",
+      image: "images/news/n246.jpg",
+      imageCap: "QVAC 手机端智能体界面（图源：Tether/Wired）",
+      highlight: false
+    },
+
+{
+id: "n245", cat: "芯片厂商", source: "新浪科技", date: "2026-11-11",
+      title: "联发科×英伟达 RTX Spark 超级芯片登陆 Windows 11 PC：Blackwell GPU+Grace CPU，最高 128GB 统一内存本地跑智能体",
+      summary: "联发科与英伟达联合打造的 RTX Spark 超级芯片正式登陆 Windows 11 PC——整合英伟达 Blackwell RTX GPU 与 Grace CPU，联发科设计专有内存控制器与一致性系统互连，最高支持 128GB 统一内存；首批整机覆盖华硕、戴尔、惠普、联想、微软、微星六大品牌，2026 年秋季大规模上市，主打本地 AI 智能体常驻运行——让 AI PC 从「能跑模型」迈向「能替人干活」。",
+      detail: "芯片：Blackwell RTX GPU+Grace CPU 超级芯片；联发科设计专有内存控制器与一致性系统互连架构。\n内存：24GB—128GB 统一内存配置可选，直击本地大模型的显存瓶颈。\n整机：华硕、戴尔、惠普、联想、微软、微星六大品牌首批；2026 年秋季大规模上市。\n定位：本地 AI 智能体（AI Agent）常驻运行，Windows 11 原生支持。\n端侧视角：128GB 统一内存把「本地常驻智能体」的内存天花板抬到桌面级——联发科（手机 SoC 大厂）×英伟达（AI 计算霸主）的组合拳，把 AI PC 竞争从 NPU 算力参数战升级为「统一内存+智能体生态」战，对高通骁龙 X 阵营形成正面压力；英伟达 CEO 交接同周落地，供应链绑定反而成了双方确定性的锚。",
+      tags: ["联发科", "英伟达", "RTX Spark", "AI PC", "统一内存"],
+      url: "https://finance.sina.com.cn/tech/roll/2026-11-12/doc-iniymsip3963100.shtml",
+      image: "images/news/n245.jpg",
+      imageCap: "RTX Spark AI PC 芯片平台（图源：英伟达官网）",
       highlight: false
     },
 
@@ -129,6 +201,18 @@ id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
       image: "images/news/n222.png",
       imageCap: "麒麟 9050 系列官方详解（图源：凤凰网）",
       highlight: true
+    },
+
+{
+id: "n247", cat: "AI硬件", source: "腾讯新闻/财联社", date: "2026-11-10",
+      title: "苹果 AI 眼镜供应链首度浮出水面：快克智能业绩会确认参与 AI 眼镜及带摄像头 AirPods 项目",
+      summary: "快克智能在 11 月 10 日三季度业绩说明会上确认，公司已参与苹果 AI 眼镜及新款智能耳机项目（新款耳机或为传闻中的带摄像头 AirPods），将拉动精密焊接装联与机器视觉检测业务。这是苹果 AI 眼镜供应链环节首次有上市公司公开确认参与，此前爆料显示苹果首款 AI 眼镜最快 2027 年亮相。",
+      detail: "确认：11 月 10 日快克智能 2026 年第三季度业绩说明会，公司层面口径（财联社、腾讯新闻等多源报道）。\n业务：精密焊接装联+机器视觉检测设备——眼镜与耳机的微小型化组装正是其工艺强项。\n时间线：苹果首款 AI 眼镜最快 2027 年亮相（此前分析师爆料口径）；带摄像头 AirPods 传闻已久，本次供应链确认是迄今最硬的证据。\n端侧视角：苹果 AI 硬件路线图首次在供应链层获得实名背书——眼镜+摄像头耳机双线并进意味着苹果端侧 AI 的载体战略是「多穿戴品类矩阵」而非单点产品；与华为星芒新品牌、三星眼镜预售同周，AI 眼镜正在从「发布预期」进入「供应链备货」阶段，2027 年将迎来三巨头同场。",
+      tags: ["苹果", "AI眼镜", "快克智能", "AirPods", "供应链"],
+      url: "https://news.qq.com/rain/a/20261110A09WK500",
+      image: "images/news/n247.jpg",
+      imageCap: "苹果 AirPods 产品线（图源：Apple 官网，非传闻产品渲染）",
+      highlight: false
     },
 
 {

@@ -4,38 +4,44 @@
 
 ## 2026 · 第 47 期（2026.11.07 — 2026.11.13 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。 今日新增：百度世界 2026（智能组织+文心双模型）、文心 5.5 Flash Preview（2800 亿/11-25 开源）、2026 年 11 月 Pixel Drop（Gemini Intelligence+Pixel Tag，撤换此前误挂的 2025 旧闻）。
+**近 7 天导读**：近 7 天聚焦：格局震动与政策供给同周落地——英伟达黄仁勋辞任 CEO（Colette Kress 临时接任，机器人端侧 Jetson Thor 与 AI PC 端侧 RTX Spark 双线前景生变），北京发布具身智能三年行动方案（20 万台年产能+5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单）。AI 眼镜进入商业落地密度期：三星 Intelligent Eyewear 395 美元开启预售（12 月 10 日韩美上市）、苹果供应链首证 AI 眼镜与摄像头 AirPods 双项目、京东酷派把百元档打进场。端侧基座竞赛白热化：文心 5.5 Flash（2800 亿 MoE）预告 11 月 25 日开源、面壁 35B 跑进手机、麒麟 9050 端侧 30B、Qwen4 预览上线、曦选创智 5 亿天使轮对标 Thor；联发科×英伟达 RTX Spark 以最高 128GB 统一内存重定义 AI PC，Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy。 今日新增：北京具身智能三年行动方案、英伟达 CEO 交接、Gemini 4 Hydrogen、三星 AI 眼镜预售、联发科 RTX Spark 超级芯片、Tether QVAC BotPsy 开源、苹果 AI 眼镜供应链首证（快克智能）。
 
 ## 近 7 天速览
 
-### 行业关注事件（1 条）
+### 行业关注事件（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-13 | [北京发布具身智能机器人三年行动方案：2028 年 20 万台年产能、5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单](https://jxj.beijing.gov.cn/jxdt/zwyw/202611/t20261113_4944755.html) | 北京市经信局 |
+| 2026-11-12 | [黄仁勋辞任英伟达 CEO：CFO Colette Kress 出任临时 CEO，3.8 万亿美元巨头突发掌门人交接](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition) | 英伟达官方/智东西 |
 | 2026-11-12 | [百度世界 2026：李彦宏首提「智能组织」——AI 下一幕，文心闪电深度思考+文心一镜微表情双模型发布](https://i.ifeng.com/c/8xzM4d8Y2gq) | 凤凰网 |
 
-### 端侧Agent（2 条）
+### 端侧Agent（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-11 | [Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy：基于 Qwen3.5 架构、手机本地运行，工具调用胜 2.5B 级](https://m.cnyes.com/news/id/6659587) | 钜亨网/BlockBeats |
 | 2026-11-11 | [AI 巨头桌面端开战：Claude 推 Whiteboards 等 AI 办公全家桶直挑微软，谷歌同日上线 Gemini 新旗舰+复刻 OpenCode 桌面应用](https://m.36kr.com/p/4064780118463617) | 36氪 |
 | 2026-11-09 | [阿里发布千问办公 2.0：从个人助手升级 Team Agent，首个支持多人与 Agent 协作](https://www.qbitai.com/2026/11/508694.html) | 量子位 |
 
-### AI硬件（5 条）
+### AI硬件（7 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-12 | [三星首款 AI 眼镜 Intelligent Eyewear 开启预售：395 美元起、41 克无屏设计，12 月 10 日韩美上市](https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world) | 三星官方新闻室 |
+| 2026-11-10 | [苹果 AI 眼镜供应链首度浮出水面：快克智能业绩会确认参与 AI 眼镜及带摄像头 AirPods 项目](https://news.qq.com/rain/a/20261110A09WK500) | 腾讯新闻/财联社 |
 | 2026-11-10 | [亚马逊 Ring 成立机器人部门并发布两款 AI 安防设备：249.99 美元家用飞行监控无人机 Drone Cam 与商用巡逻机器人 Rover Cam](https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot) | 亚马逊官方 |
 | 2026-11-10 | [华为 MateBook Fold S 鸿蒙小折叠电脑三色公布：全新背屏设计+Live 小方屏，11 月 14 日开启预订](https://www.ithome.com/1/024/600.htm) | IT之家 |
 | 2026-11-10 | [影目召回 4701 副 INMO AIR3 智能眼镜并提供 OTA 免费升级：此前已在美国召回，曾称国内用户不受影响](https://www.ithome.com/1/024/893.htm) | IT之家 |
 | 2026-11-09 | [Gentle Monster 首款 AI 眼镜定档：携手谷歌与三星、搭载 Gemini，11 月 12 日美国开启预订](https://www.gentlemonster.com/int/zh-CN/intelligent-eyewear) | Gentle Monster 官网 |
 | 2026-11-08 | [物理智能开源平台 Hitch Open 进博会全球发布：双机自主对打乒乓球 142 拍刷新世界纪录，0.3 秒完成感知决策](https://www.ithome.com/1/023/920.htm) | IT之家 |
 
-### 芯片厂商（2 条）
+### 芯片厂商（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-11-12 | [优必选×沐曦合资芯片公司曦选创智完成 5 亿元天使轮：估值 40 亿元，首颗芯片对标英伟达 Thor、2028 年量产](http://news.10jqka.com.cn/20261112/c681759273.shtml) | 同花顺财经 |
+| 2026-11-11 | [联发科×英伟达 RTX Spark 超级芯片登陆 Windows 11 PC：Blackwell GPU+Grace CPU，最高 128GB 统一内存本地跑智能体](https://finance.sina.com.cn/tech/roll/2026-11-12/doc-iniymsip3963100.shtml) | 新浪科技 |
 | 2026-11-11 | [华为官方详解麒麟 9050 系列：新一代达芬奇 NPU 性能提升 140%，30B MoE 全模态大模型端侧离线运行仅占 2.5GB 内存](https://original.ifeng.com/c/8xxkY6ktCXa) | 凤凰网 |
 
 ### 手机厂商（2 条）
@@ -45,10 +51,11 @@
 | 2026-11-11 | [苹果子公司 Claris 暗测 Harbor 应用：Mac 变身本地 AI 服务器，雷雳 5 串联多机集群跑大模型](https://www.ithome.com/1/025/225.htm) | IT之家 |
 | 2026-11-10 | [谷歌 2026 年 11 月 Pixel Drop：Gemini Intelligence 扩展至 Pixel 10、新品类 Pixel Tag 追踪器，随 Android 17 推送](https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop) | Google 官方 |
 
-### 大模型厂商（10 条）
+### 大模型厂商（11 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-12 | [谷歌发布 Gemini 4 Hydrogen：主打智能体快速执行的高效率档，多项基准反超自家旗舰 Argon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/) | Google 官方博客 |
 | 2026-11-11 | [文心 5.5 Flash Preview 发布：总参 2800 亿 MoE 激活仅 140 亿、100 万 token 上下文，官宣 11 月 25 日开源](https://tech.ifeng.com/c/8xxwDIS2DX4) | 凤凰科技 |
 | 2026-11-11 | [北大系创企开源 aiXcompact-4B 上下文压缩模型：编程 Agent 推理成本降 78%、API 费用降 97%，单卡 A100 可私有部署](https://zhidx.com/p/609168.html) | 智东西 |
 | 2026-11-11 | [面壁智能 35B 模型跑进手机：MiniCPM-V 4.7 35B-A3B 以 3GB 内存实现端侧多模态，iPhone 18 Pro Max 实测即问即答](https://news.qq.com/rain/a/20261111A058XQ00) | 每日经济新闻 |

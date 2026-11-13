@@ -12,7 +12,7 @@ window.GH_FRAMEWORKS = {
       "one": "阿里轻量级端侧推理引擎，CV 与 LLM 通吃",
       "intro": "阿里开源的深度学习推理引擎，覆盖手机、嵌入式与 IoT 全场景，自带模型转换、量化与训练压缩工具链。\n端侧视角：既能跑传统 CV 模型也支持端侧大模型推理（MNN-LLM），安卓/iOS/离线场景一把梭，是国产端侧部署的头部选择。\n适合想在国内移动生态做本地推理的工程团队。",
       "url": "https://github.com/alibaba/MNN",
-      "stars": 16507,
+      "stars": 16508,
       "lang": "C++",
       "pushed": "2026-11-12",
       "updates": [
@@ -45,7 +45,7 @@ window.GH_FRAMEWORKS = {
       "one": "手机端 CV 推理事实标准之一，无第三方依赖",
       "intro": "腾讯优图开源的手机端前向推理框架，零第三方依赖、包体小，CPU 指令级优化极深。\n端侧视角：移动端 CV 模型部署（检测/分割/超分）的老牌事实标准，与 MNN 同为国产端侧双雄；对 LLM 支持弱，定位偏传统 CV。\n适合对包体与 CPU 兼容性敏感的移动端 CV 项目。",
       "url": "https://github.com/Tencent/ncnn",
-      "stars": 24047,
+      "stars": 24049,
       "lang": "C++",
       "pushed": "2026-11-11",
       "updates": [
@@ -212,7 +212,7 @@ window.GH_FRAMEWORKS = {
       "one": "苹果官方 Apple silicon 本地推理框架",
       "intro": "苹果机器学习团队开源的数组计算框架与 LLM 推理栈，为统一内存架构设计，CPU/GPU 可混用同一块内存。\n端侧视角：Mac 本地大模型生态的事实基建之一（mlx-lm 之上长出 LM Studio 等产品），Apple silicon 跑大模型的「官方答案」。\n适合在 Mac 生态做本地推理与模型移植的工程师。",
       "url": "https://github.com/ml-explore/mlx",
-      "stars": 29153,
+      "stars": 29152,
       "lang": "C++",
       "pushed": "2026-11-11",
       "updates": [
@@ -277,7 +277,7 @@ window.GH_FRAMEWORKS = {
       "one": "Intel 端侧引擎，CPU/iGPU/NPU 一套 API",
       "intro": "Intel 的端侧推理与优化工具套件，一套 API 调度 x86 CPU、核显与 NPU，模型优化器负责转换与量化。\n端侧视角：AI PC（酷睿 Ultra NPU）与边缘盒子的官方路线，Windows/Linux 本地部署英特尔多核场景几乎默认选它。\n适合面向 AI PC 与 Intel 边缘硬件的应用。",
       "url": "https://github.com/openvinotoolkit/openvino",
-      "stars": 11151,
+      "stars": 11152,
       "lang": "C++",
       "pushed": "2026-11-13",
       "updates": [
@@ -308,7 +308,7 @@ window.GH_FRAMEWORKS = {
       "one": "本地 LLM 推理事实标准，GGUF 量化生态源头",
       "intro": "Georgi Gerganov 发起的纯 C/C++ 大模型推理引擎，GGML/GGUF 量化格式的源头，CPU 也能跑大模型，日常小版本日更。\n端侧视角：本地大模型开源生态的地基——Ollama 等主流本地运行时底层都用它；新模型社区支持几乎第一时间到位。\n适合一切想离线跑 LLM 的设备与场景。",
       "url": "https://github.com/ggml-org/llama.cpp",
-      "stars": 134591,
+      "stars": 134632,
       "lang": "C++",
       "pushed": "2026-11-13",
       "updates": [
@@ -372,17 +372,17 @@ window.GH_FRAMEWORKS = {
       "one": "端侧离线语音识别/合成框架",
       "intro": "Next-gen Kaldi 系的端侧语音框架，支持流式/离线 ASR、TTS、说话人识别，模型走 ONNX、无需联网服务。\n端侧视角：设备本地语音交互（眼镜/耳机/IoT）常用底座，跨安卓/iOS/Linux/嵌入式，配套模型生态完整。\n适合做离线语音助手与实时字幕类应用。",
       "url": "https://github.com/k2-fsa/sherpa-onnx",
-      "stars": 15908,
+      "stars": 15915,
       "lang": "C++",
-      "pushed": "2026-11-12",
+      "pushed": "2026-11-13",
       "updates": [
         {
           "v": "fa-models",
           "d": "2026-11-11",
           "notes": [
-            "This release contains acoustic models and pronunciation dictionaries for",
-            "forced alignment with",
-            "sherpa-onnx."
+            "Acoustic models and pronunciation dictionaries for forced alignment with",
+            "sherpa-onnx — English",
+            "(english_mfa v2.2.1 / v3.0.0 / v3.1.0) and Chinese"
           ]
         },
         {
@@ -436,7 +436,7 @@ window.GH_FRAMEWORKS = {
       "one": "谷歌端侧 CV/多模态管线框架",
       "intro": "Google 的跨平台端侧 ML 管线框架，内置人脸/手势/姿态等大量成品方案，图式编排（Graph）组装多模型流水线。\n端侧视角：安卓端 CV 能力（相机特效、手势交互）最常用的现成积木，也逐步接入 LLM/多模态任务。\n适合要快速集成成熟端侧 CV 能力的应用。",
       "url": "https://github.com/google-ai-edge/mediapipe",
-      "stars": 37657,
+      "stars": 37658,
       "lang": "C++",
       "pushed": "2026-11-13",
       "updates": [
@@ -500,7 +500,7 @@ window.GH_FRAMEWORKS = {
       "one": "瑞芯微 NPU 工具链，RK 系端侧盒子入口",
       "intro": "瑞芯微官方的 NPU 模型转换/量化/部署工具链，把 ONNX/PyTorch 模型编译为 RK3588/RK3576 等芯片的 NPU 指令。\n端侧视角：国产端侧开发板与盒子（AI 盒子、机器人、边缘小主机）跑本地模型的主流硬件入口之一。\n适合用 RK 系硬件做本地推理的极客与边缘设备团队。",
       "url": "https://github.com/airockchip/rknn-toolkit2",
-      "stars": 3543,
+      "stars": 3544,
       "lang": "C",
       "pushed": "2026-10-20",
       "updates": [
@@ -532,7 +532,7 @@ window.GH_FRAMEWORKS = {
       "one": "小米移动 AI 计算引擎，手机异构加速早期代表",
       "intro": "小米开源的移动端深度学习推理框架，针对手机 SoC 的 CPU/GPU/DSP 异构调度设计，早期端侧部署代表项目。\n端侧视角：手机厂商自研端侧框架开源的先行者，目前迭代节奏放缓，选型时更多作为参考实现。\n适合研究手机异构加速历史与老机型兼容场景。",
       "url": "https://github.com/XiaoMi/mace",
-      "stars": 5056,
+      "stars": 5055,
       "lang": "C++",
       "pushed": "2024-06-17",
       "updates": [
@@ -560,7 +560,7 @@ window.GH_REPOS = {
     {
       "name": "morluto/rea",
       "url": "https://github.com/morluto/rea",
-      "stars": 455441,
+      "stars": 455654,
       "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "lang": "TypeScript",
       "pushed": "2026-11-13",
@@ -570,7 +570,7 @@ window.GH_REPOS = {
     {
       "name": "deepseek-ai/deepseek-harness",
       "url": "https://github.com/deepseek-ai/deepseek-harness",
-      "stars": 279861,
+      "stars": 279946,
       "desc": "DeepSeek Harness: Everything is a Plugin.",
       "lang": "TypeScript",
       "pushed": "2026-11-11",
@@ -579,7 +579,7 @@ window.GH_REPOS = {
     {
       "name": "Ebony-Vinyl/dsh-our-free-model",
       "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
-      "stars": 71414,
+      "stars": 71548,
       "desc": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
       "lang": "JavaScript",
       "pushed": "2026-11-11",
@@ -588,7 +588,7 @@ window.GH_REPOS = {
     {
       "name": "yetone/magpie",
       "url": "https://github.com/yetone/magpie",
-      "stars": 35466,
+      "stars": 35559,
       "desc": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "lang": "Go",
       "pushed": "2026-11-13",
@@ -597,7 +597,7 @@ window.GH_REPOS = {
     {
       "name": "hypit-ai/hypit",
       "url": "https://github.com/hypit-ai/hypit",
-      "stars": 29555,
+      "stars": 29568,
       "desc": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
       "lang": "TypeScript",
       "pushed": "2026-11-11",
@@ -606,7 +606,7 @@ window.GH_REPOS = {
     {
       "name": "lexmount/moli",
       "url": "https://github.com/lexmount/moli",
-      "stars": 23557,
+      "stars": 23582,
       "desc": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
       "lang": "Rust",
       "pushed": "2026-11-13",
@@ -615,16 +615,16 @@ window.GH_REPOS = {
     {
       "name": "milind-soni/OpenMausBot",
       "url": "https://github.com/milind-soni/OpenMausBot",
-      "stars": 21751,
+      "stars": 21801,
       "desc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
       "lang": "TypeScript",
-      "pushed": "2026-11-12",
+      "pushed": "2026-11-13",
       "intro_cn": "开源 Grok Bot 替代品：内置虚拟机，机器人可执行任意任务"
     },
     {
       "name": "ccch1mneyyy/dsh-Go",
       "url": "https://github.com/ccch1mneyyy/dsh-Go",
-      "stars": 20850,
+      "stars": 20984,
       "desc": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
       "lang": "Dart",
       "pushed": "2026-11-13",
@@ -633,7 +633,7 @@ window.GH_REPOS = {
     {
       "name": "Vincentwei1021/video-shotcraft",
       "url": "https://github.com/Vincentwei1021/video-shotcraft",
-      "stars": 19003,
+      "stars": 19026,
       "desc": "AI video skill for Claude Code & Codex — cinematic, editable product promos with Remotion: 124 shot recipe cards, 150 motion previews, beat sync, sound design, Motion Workbench & JianYing (CapCut CN) export.",
       "lang": "TypeScript",
       "pushed": "2026-11-11",
@@ -642,7 +642,7 @@ window.GH_REPOS = {
     {
       "name": "google/elephant-goldfish-model",
       "url": "https://github.com/google/elephant-goldfish-model",
-      "stars": 18205,
+      "stars": 18242,
       "desc": "Open-source plugin for designing and reviewing software with agents",
       "lang": "Python",
       "pushed": "2026-11-13",
@@ -651,7 +651,7 @@ window.GH_REPOS = {
     {
       "name": "google/artemis",
       "url": "https://github.com/google/artemis",
-      "stars": 17347,
+      "stars": 17350,
       "desc": "ARTEMIS turns natural-language instructions into reliable Android automation. It automates end-to-end workflows, captures logs, and integrates seamlessly with AI coding assistants such as Antigravity, Codex, and Claude Code.  It also achieves 99%+ success rate on AndroidWorld Benchmark.",
       "lang": "Python",
       "pushed": "2026-10-01",
@@ -660,7 +660,7 @@ window.GH_REPOS = {
     {
       "name": "lemomo-ai/lemo-opuscar",
       "url": "https://github.com/lemomo-ai/lemo-opuscar",
-      "stars": 15324,
+      "stars": 15350,
       "desc": "A toolbox of film styles made in code for Claude Code: 99 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By Lemomo. · 一套用代码做片的风格工具箱：99 种现成风格，也能做出你自己的",
       "lang": "JavaScript",
       "pushed": "2026-11-12",
@@ -669,7 +669,7 @@ window.GH_REPOS = {
     {
       "name": "FareedKhan-dev/kimi-k3-in-c",
       "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
-      "stars": 11922,
+      "stars": 11928,
       "desc": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
       "lang": "C",
       "pushed": "2026-10-02",
