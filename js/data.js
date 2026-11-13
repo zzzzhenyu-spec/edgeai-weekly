@@ -18,7 +18,7 @@ const WEEKLY_DATA = {
     weekRange: "2026.11.07 — 2026.11.13 · 近 7 天",
     updated: "2026-11-13",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：百度世界 2026（智能组织+文心闪电/一镜双模型）、文心 5.5 Flash Preview（2800 亿参数、11-25 开源）。"
+    editorsNote: "近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。\n今日新增：百度世界 2026（智能组织+文心双模型）、文心 5.5 Flash Preview（2800 亿/11-25 开源）、2026 年 11 月 Pixel Drop（Gemini Intelligence+Pixel Tag，撤换此前误挂的 2025 旧闻）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -33,7 +33,7 @@ id: "n239", cat: "行业关注事件", source: "凤凰网", date: "2026-11-12",
       image: "images/news/n239.jpg",
       imageCap: "百度世界 2026 李彦宏演讲（图源：红星新闻）",
       highlight: true
-    },,
+    },
 
 {
 id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
@@ -45,7 +45,7 @@ id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
       image: "images/news/n236.jpg",
       imageCap: "国产 GPU 底座×机器人场景生态（图源：搜狐财经）",
       highlight: false
-    },,,
+    },
 
 {
 id: "n240", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-11",
@@ -57,7 +57,7 @@ id: "n240", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-11",
       image: "images/news/n240.jpg",
       imageCap: "文心 5.5 Flash Preview 发布（图源：智东西）",
       highlight: false
-    },,
+    },
 
 {
 id: "n235", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
@@ -69,7 +69,7 @@ id: "n235", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
       image: "images/news/n235.png",
       imageCap: "aiXcompact-4B 成本对比（图源：智东西）",
       highlight: false
-    },,,
+    },
 
 {
 id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
@@ -81,7 +81,7 @@ id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
       image: "images/news/n234.jpg",
       imageCap: "Claude Whiteboards/Sheets/Data 发布（图源：36氪）",
       highlight: false
-    },,,
+    },
 
 {
 id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11-11",
@@ -93,7 +93,7 @@ id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11
       image: "images/news/n233.png",
       imageCap: "MiniCPM-V 4.7 端侧演示（图源：OpenBMB）",
       highlight: false
-    },,,
+    },
 
 {
 id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
@@ -105,19 +105,7 @@ id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
       image: "images/news/n228.jpg",
       imageCap: "Claris Harbor 应用（图源：IT之家）",
       highlight: true
-    },,,
-
-{
-id: "n225", cat: "手机厂商", source: "36氪", date: "2026-11-11",
-      title: "谷歌 Pixel 11 月功能更新：引入类苹果 PCC 的私有云方案，Gemini Intelligence 自动化能力扩展",
-      summary: "谷歌发布 Pixel 11 月功能更新（Feature Drop）——引入类似苹果 PCC（私有云计算）的隐私方案，端侧与云侧混合部署处理敏感任务；Gemini Intelligence 自动化能力扩展至更多机型与场景。端云隐私分工成为安卓阵营跟进苹果的新战线。",
-      detail: "更新：11 月 11 日 Pixel Feature Drop（36氪/Android Authority 双源）。\n隐私：类苹果 PCC 的私有云方案——敏感数据端侧处理+可验证的云端隐私计算，端云混合部署成趋势。\n智能：Gemini Intelligence 自动化（automations）能力扩展到更多机型与场景。\n端侧视角：苹果 PCC 之后谷歌跟进私有云方案，端云隐私分工正从苹果独有变成行业标配路径——「端侧处理敏感数据、云端只做可验证计算」的架构共识形成，这直接抬高端侧模型地位：私有云方案的前提是端侧先把大部分推理吃下来。",
-      tags: ["谷歌", "Pixel", "私有云", "PCC", "Gemini"],
-      url: "https://m.36kr.com/p/3551123276372102",
-      image: "images/news/n225.jpg",
-      imageCap: "Pixel 11 月功能更新（图源：9to5Google）",
-      highlight: false
-    },,,
+    },
 
 {
 id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
@@ -129,7 +117,7 @@ id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
       image: "images/news/n224.png",
       imageCap: "Qwen4 预览版上线（图源：IT之家）",
       highlight: false
-    },,,,,,
+    },
 
 {
 id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
@@ -141,7 +129,19 @@ id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
       image: "images/news/n222.png",
       imageCap: "麒麟 9050 系列官方详解（图源：凤凰网）",
       highlight: true
-    },,,,,,
+    },
+
+{
+id: "n241", cat: "手机厂商", source: "Google 官方", date: "2026-11-10",
+      title: "谷歌 2026 年 11 月 Pixel Drop：Gemini Intelligence 扩展至 Pixel 10、新品类 Pixel Tag 追踪器，随 Android 17 推送",
+      summary: "谷歌发布 2026 年 11 月 Pixel 功能更新（Feature Drop）——Gemini Intelligence 智能能力扩展至 Pixel 10 系列（Pixel 11 新增 Gemini Call Screen 来电筛选），推出新品类 Pixel Tag 蓝牙追踪器，新增 Create My Widget 自定义小组件、Pixel Solver 与 Google Messages 的 HiLight 等功能，整体随 Android 17 系统推送。",
+      detail: "更新：11 月 10 日官方博客发布（Google Blog/Ars Technica 多源）。\n智能：Gemini Intelligence 扩展至 Pixel 10 家族；Pixel 11 增加 Gemini Call Screen 来电智能筛选。\n硬件：Pixel Tag——谷歌自有品牌蓝牙追踪器新品类。\n其他：Create My Widget 自定义小组件、Pixel Solver、HiLight for Google Messages、主屏图标样式扩展；随 Android 17 推送。\n端侧视角：Gemini Intelligence 按机型分层下放（10 代全量、11 代独占 Call Screen）是谷歌端侧 AI 的机型梯度策略——Pixel 作为 Android 端侧 AI 的第一试验田，其功能分层直接预告了 Android 生态的后续节奏。",
+      tags: ["谷歌", "Pixel", "Gemini Intelligence", "Pixel Tag", "Android 17"],
+      url: "https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop",
+      image: "images/news/n241.jpg",
+      imageCap: "2026 年 11 月 Pixel Drop（图源：Google 官方博客）",
+      highlight: false
+    },
 
 {
 id: "n232", cat: "AI硬件", source: "亚马逊官方", date: "2026-11-10",
@@ -153,7 +153,7 @@ id: "n232", cat: "AI硬件", source: "亚马逊官方", date: "2026-11-10",
       image: "images/news/n232.png",
       imageCap: "Ring Drone Cam 与 Rover Cam（图源：亚马逊官方）",
       highlight: false
-    },,,
+    },
 
 {
 id: "n231", cat: "行业动态", source: "IT之家", date: "2026-11-10",
@@ -165,7 +165,7 @@ id: "n231", cat: "行业动态", source: "IT之家", date: "2026-11-10",
       image: "images/news/n231.png",
       imageCap: "KORA OS 界面（图源：IT之家）",
       highlight: false
-    },,,
+    },
 
 {
 id: "n230", cat: "大模型厂商", source: "DeepMind 官方", date: "2026-11-10",
@@ -177,7 +177,7 @@ id: "n230", cat: "大模型厂商", source: "DeepMind 官方", date: "2026-11-10
       image: "images/news/n230.webp",
       imageCap: "Apollo 2 在奔驰产线执行分拣（图源：Google DeepMind）",
       highlight: true
-    },,,
+    },
 
 {
 id: "n229", cat: "行业动态", source: "腾讯新闻", date: "2026-11-10",
@@ -189,7 +189,7 @@ id: "n229", cat: "行业动态", source: "腾讯新闻", date: "2026-11-10",
       image: "images/news/n229.jpg",
       imageCap: "《物联网设备模型技术白皮书》发布（图源：腾讯新闻）",
       highlight: false
-    },,,
+    },
 
 {
 id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
@@ -201,7 +201,7 @@ id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
       image: "images/news/n221.jpg",
       imageCap: "MateBook Fold S 三色外观（图源：IT之家）",
  highlight: false
-    },,,,
+    },
 
 {
 id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
@@ -213,7 +213,7 @@ id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
       image: "images/news/n220.jpg",
       imageCap: "影目 INMO AIR3 召回（图源：IT之家）",
       highlight: false
-    },,,,,,
+    },
 
 {
 id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
@@ -225,7 +225,7 @@ id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
       image: "images/news/n219.png",
       imageCap: "LingBot-Touch 触觉基础模型（图源：IT之家）",
       highlight: false
-    },,,,,,
+    },
 
 {
 id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
@@ -237,7 +237,7 @@ id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
       image: "images/news/n218.jpg",
       imageCap: "智元 WITA-Omni 发布（图源：IT之家）",
       highlight: true
-    },,,,,,
+    },
 
 {
 id: "n227", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-09",
@@ -249,7 +249,7 @@ id: "n227", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-09",
       image: "images/news/n227.jpg",
       imageCap: "Claude Fable 5.2 发布（图源：凤凰科技）",
       highlight: false
-    },,,,
+    },
 
 {
 id: "n226", cat: "大模型厂商", source: "TechCrunch", date: "2026-11-09",
@@ -261,7 +261,7 @@ id: "n226", cat: "大模型厂商", source: "TechCrunch", date: "2026-11-09",
       image: "images/news/n226.png",
       imageCap: "Meta Muse Ember（图源：TechCrunch）",
       highlight: false
-    },,,,,,
+    },
 
 {
 id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09",
@@ -273,7 +273,7 @@ id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09"
       image: "images/news/n216.jpg",
       imageCap: "Gentle Monster Intelligent Eyewear（图源：官网）",
       highlight: false
-    },,,,,,
+    },
 
 {
 id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
@@ -285,7 +285,7 @@ id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
       image: "images/news/n215.jpg",
       imageCap: "微信鸿蒙版安装量突破 9000 万（图源：IT之家）",
       highlight: false
-    },,,
+    },
 
 {
 id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
@@ -297,7 +297,7 @@ id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
       image: "images/news/n214.png",
       imageCap: "千问办公 2.0 官方发布原文（图源：千问办公公众号）",
       highlight: true
-    },,,,,,
+    },
 
 {
 id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
@@ -309,7 +309,7 @@ id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
       image: "images/news/n199.jpg",
       imageCap: "2026 款长轴距 E 级（图源：凤凰汽车）",
       highlight: false
-    },,,
+    },
 
 {
 id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
@@ -321,7 +321,7 @@ id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
       image: "images/news/n198.jpg",
       imageCap: "Hitch Open 展台机器人乒乓对打（图源：中新经纬）",
       highlight: false
-    },,,,,,
+    },
 
 {
 id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
@@ -333,7 +333,7 @@ id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
       image: "images/news/n190.png",
       imageCap: "中国移动×智谱合作（图源：IT之家）",
       highlight: false
-    },,,,,,
+    },
 
 {
 id: "n237", cat: "大模型厂商", source: "CSDN", date: "2026-11-07",
@@ -345,7 +345,7 @@ id: "n237", cat: "大模型厂商", source: "CSDN", date: "2026-11-07",
       image: "images/news/n237.png",
       imageCap: "Higgs Realtime 数字人演示（图源：CSDN）",
       highlight: false
-    },,,
+    },
 
 {
 id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
@@ -357,7 +357,7 @@ id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
       image: "images/news/n197.jpg",
       imageCap: "京东×酷派 AI 智能眼镜（图源：凤凰网）",
       highlight: false
-    },,,,
+    },
   ],
 papers: [
     {

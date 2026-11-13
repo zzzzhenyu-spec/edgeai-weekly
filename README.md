@@ -4,7 +4,7 @@
 
 ## 2026 · 第 47 期（2026.11.07 — 2026.11.13 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。 今日新增：百度世界 2026（智能组织+文心闪电/一镜双模型）、文心 5.5 Flash Preview（2800 亿参数、11-25 开源）。
+**近 7 天导读**：近 7 天聚焦：政策与硬件共振——工信部智能体终端进网新规落地（AI 手机/平板预置智能体须过进网适配验证+反诈前置评测+唯一身份标识），苹果披露 HALO 机器人系统（宇树 G1+千问模型、91% 成功率）并开启国行 Apple 智能千问 Beta。进博会端侧密集释放：高通 6G 终端原型机、阶跃 STEPX Neo 智能体手机、宇树×巨星传奇收藏机器狗、Hitch Open 142 拍乒乓纪录、新华社×优必选仿生主播。开源模型矩阵同周上新（Ling-3.2-Flash/文心 5.5 Flash Base/Kimi K3.1 Pro 开源/混元 Hy4），DeepSeek Harness 日活 154 万，比亚迪×vivo 与奔驰豆包座舱把智能体跨端推上车，京东×酷派 322 元 AI 眼镜开启百元档。 今日新增：百度世界 2026（智能组织+文心双模型）、文心 5.5 Flash Preview（2800 亿/11-25 开源）、2026 年 11 月 Pixel Drop（Gemini Intelligence+Pixel Tag，撤换此前误挂的 2025 旧闻）。
 
 ## 近 7 天速览
 
@@ -43,7 +43,7 @@
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-11-11 | [苹果子公司 Claris 暗测 Harbor 应用：Mac 变身本地 AI 服务器，雷雳 5 串联多机集群跑大模型](https://www.ithome.com/1/025/225.htm) | IT之家 |
-| 2026-11-11 | [谷歌 Pixel 11 月功能更新：引入类苹果 PCC 的私有云方案，Gemini Intelligence 自动化能力扩展](https://m.36kr.com/p/3551123276372102) | 36氪 |
+| 2026-11-10 | [谷歌 2026 年 11 月 Pixel Drop：Gemini Intelligence 扩展至 Pixel 10、新品类 Pixel Tag 追踪器，随 Android 17 推送](https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop) | Google 官方 |
 
 ### 大模型厂商（10 条）
 
