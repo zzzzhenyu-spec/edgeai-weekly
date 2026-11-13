@@ -49,6 +49,18 @@ news: [
     },
 
 {
+      id: "n237", cat: "大模型厂商", source: "CSDN", date: "2026-11-07",
+      title: "李沐 Boson AI 发布 Higgs Realtime Duplex 全双工多模态模型：160ms 流式处理，边听边说、边看边想+数字人输出",
+      summary: "李沐与 Alex Smola 联合创立的 Boson AI 发布全双工实时多模态交互模型 Higgs Realtime Duplex 研究预览——以 160 毫秒为单位处理连续输入输出流，像真人一样边听边说、边看边想：支持主动附和、识别用户打断、根据语音与视觉上下文判断回应时机，并可一边聊天一边干活；同系 Higgs Realtime 端到端模型已开放 API 并支持数字人输出。OpenAI 同期开放全双工语音模型 GPT-Live-1 API，行业正从轮次式语音转向持续双向交互。",
+      detail: "发布：研究预览版（11 月 7 日前后，CSDN/知乎/李沐 B 站技术讲解《边听边说、边看边想、还有一张脸的全双工模型》）。\n机制：160ms 为单位处理连续输入输出流——主动附和、打断识别、语音+视觉上下文判断回应时机。\n产品线：Higgs Realtime（端到端，已开放 API+数字人输出）/Higgs Realtime Duplex（全双工，候补名单）。\n底座：Higgs Audio V2 开源音频基座（Llama-3.2-3B、预训练超 1000 万小时音频）。\n对垒：OpenAI 同期开放 GPT-Live-1 全双工 API。\n端侧视角：全双工是语音交互的技术上限方向——160ms 粒度的流式决策必须贴近用户完成，端侧或近端推理是体验底座；与智元 WITA-Omni（具身全双工 400ms）同期出现，「持续在场式交互」正在手机助手与机器人两端同时落地。",
+      tags: ["李沐", "Boson AI", "Higgs", "全双工", "语音交互"],
+      url: "https://www.cnblogs.com/rtedev/p/23578685",
+      image: "images/news/n237.png",
+      imageCap: "Higgs Realtime 数字人演示（图源：CSDN）",
+      highlight: false
+    },
+
+{
       id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
       title: "京东×酷派把品牌 AI 眼镜打到 322 元：C2M 定制+国补首批进入百元档，光波导眼镜销量同比增 3 倍",
       summary: "双 11 期间京东与酷派联合推出 AI 智能眼镜——原价 699 元叠加国补后到手 322 元，成为首批进入百元价位的品牌 AI 眼镜：800 万像素第一人称拍摄、音视频通话、在线翻译、AI 语音助手与会议记录。采用东莞产业带 C2M 反向定制+京东包销模式；京东双 11 光波导智能眼镜销售同比增长超 3 倍。",
@@ -57,6 +69,18 @@ news: [
       url: "https://feng.ifeng.com/c/8xqtFAaroQ8",
       image: "images/news/n197.jpg",
       imageCap: "京东×酷派 AI 智能眼镜（图源：凤凰网）",
+      highlight: false
+    },
+
+{
+      id: "n249", cat: "大模型厂商", source: "智东西", date: "2026-11-06",
+      title: "李飞飞 World Labs 收购后首秀：发布 Atlas 极速版 Frameboy，浏览器实时漫游世界模型（15FPS/1440p）",
+      summary: "李飞飞创立的世界模型公司 World Labs（9 月被 AMD 以约 82 亿美元收购）发布基于 Atlas 优化的实时流式生成演示 Frameboy——从云端 GPU 流式传输画面、速度最高 15FPS（约 67 毫秒一帧），画面分辨率最高 1440p（谷歌 Genie 3 为 720p/24FPS）；同步集成进网页应用 Viewfinder，用户逐帧搭建场景后即可在浏览器中实时漫游，Viewfinder 现处封闭测试阶段。",
+      detail: "发布：11 月 6 日（智东西报道，AMD 收购后团队首秀）。\n性能：Frameboy 流式输出最高 15FPS（约 67 毫秒/帧）；Atlas 分辨率最高 1440p——对比 Genie 3（720p/24FPS）以分辨率换帧率的另一条路线。\n产品：Frameboy 以流式叠加渲染模式集成进网页应用 Viewfinder——Atlas 逐帧构建场景（单张图片或一段文本即可从零生成），Frameboy 叠加层实时漫游；Viewfinder 封闭测试、开放等候名单。\n背景：Atlas 为 2026 年 9 月发布的自回归世界模型（像素级相机控制）；9 月 28 日 AMD 宣布约 82 亿美元全股票收购 World Labs，李飞飞将出任 AMD 执行副总裁兼首席科学家。\n端侧视角：Frameboy 目前依托云端 GPU、成本高于本地渲染——「打开浏览器实时体验世界模型」是交互入口的端侧化，算力仍在云端；15FPS/67ms 把世界模型的交互延迟门槛首次拉到与游戏渲染同量级，这条延迟线正是端云分割推理与本地流式生成未来要攻的关，AMD 收购后的软硬件整合值得持续跟踪。",
+      tags: ["李飞飞", "World Labs", "Frameboy", "世界模型", "AMD收购"],
+      url: "https://zhidx.com/p/607939.html",
+      image: "images/news/n249.jpg",
+      imageCap: "Atlas 世界模型官方视觉（图源：World Labs）",
       highlight: false
     },
 

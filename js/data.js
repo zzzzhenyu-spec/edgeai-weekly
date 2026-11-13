@@ -18,7 +18,7 @@ const WEEKLY_DATA = {
     weekRange: "2026.11.07 — 2026.11.13 · 近 7 天",
     updated: "2026-11-13",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：格局震动与政策供给同周落地——英伟达黄仁勋辞任 CEO（Colette Kress 临时接任，机器人端侧 Jetson Thor 与 AI PC 端侧 RTX Spark 双线前景生变），北京发布具身智能三年行动方案（20 万台年产能+5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单）。AI 眼镜进入商业落地密度期：三星 Intelligent Eyewear 395 美元开启预售（12 月 10 日韩美上市）、苹果供应链首证 AI 眼镜与摄像头 AirPods 双项目、京东酷派把百元档打进场。端侧基座竞赛白热化：文心 5.5 Flash（2800 亿 MoE）预告 11 月 25 日开源、面壁 35B 跑进手机、麒麟 9050 端侧 30B、Qwen4 预览上线、曦选创智 5 亿天使轮对标 Thor；联发科×英伟达 RTX Spark 以最高 128GB 统一内存重定义 AI PC，Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy。\n今日新增：北京具身智能三年行动方案、英伟达 CEO 交接、Gemini 4 Hydrogen、三星 AI 眼镜预售、联发科 RTX Spark 超级芯片、Tether QVAC BotPsy 开源、苹果 AI 眼镜供应链首证（快克智能）。"
+    editorsNote: "近 7 天聚焦：格局震动与政策供给同周落地——英伟达黄仁勋辞任 CEO（Colette Kress 临时接任，机器人端侧 Jetson Thor 与 AI PC 端侧 RTX Spark 双线前景生变），北京发布具身智能三年行动方案（20 万台年产能+5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单）。AI 眼镜进入商业落地密度期：三星 Intelligent Eyewear 395 美元开启预售（12 月 10 日韩美上市）、苹果供应链首证 AI 眼镜与摄像头 AirPods 双项目。端侧基座竞赛白热化：文心 5.5 Flash（2800 亿 MoE）预告 11 月 25 日开源、面壁 35B 跑进手机、麒麟 9050 端侧 30B、Qwen4 预览上线、曦选创智 5 亿天使轮对标 Thor；联发科×英伟达 RTX Spark 以最高 128GB 统一内存重定义 AI PC，Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy。\n今日新增：北京具身智能三年行动方案、英伟达 CEO 交接、Gemini 4 Hydrogen、三星 AI 眼镜预售、联发科 RTX Spark 超级芯片、Tether QVAC BotPsy 开源、苹果 AI 眼镜供应链首证（快克智能）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -419,29 +419,6 @@ id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
       highlight: false
     },
 
-{
-id: "n237", cat: "大模型厂商", source: "CSDN", date: "2026-11-07",
-      title: "李沐 Boson AI 发布 Higgs Realtime Duplex 全双工多模态模型：160ms 流式处理，边听边说、边看边想+数字人输出",
-      summary: "李沐与 Alex Smola 联合创立的 Boson AI 发布全双工实时多模态交互模型 Higgs Realtime Duplex 研究预览——以 160 毫秒为单位处理连续输入输出流，像真人一样边听边说、边看边想：支持主动附和、识别用户打断、根据语音与视觉上下文判断回应时机，并可一边聊天一边干活；同系 Higgs Realtime 端到端模型已开放 API 并支持数字人输出。OpenAI 同期开放全双工语音模型 GPT-Live-1 API，行业正从轮次式语音转向持续双向交互。",
-      detail: "发布：研究预览版（11 月 7 日前后，CSDN/知乎/李沐 B 站技术讲解《边听边说、边看边想、还有一张脸的全双工模型》）。\n机制：160ms 为单位处理连续输入输出流——主动附和、打断识别、语音+视觉上下文判断回应时机。\n产品线：Higgs Realtime（端到端，已开放 API+数字人输出）/Higgs Realtime Duplex（全双工，候补名单）。\n底座：Higgs Audio V2 开源音频基座（Llama-3.2-3B、预训练超 1000 万小时音频）。\n对垒：OpenAI 同期开放 GPT-Live-1 全双工 API。\n端侧视角：全双工是语音交互的技术上限方向——160ms 粒度的流式决策必须贴近用户完成，端侧或近端推理是体验底座；与智元 WITA-Omni（具身全双工 400ms）同期出现，「持续在场式交互」正在手机助手与机器人两端同时落地。",
-      tags: ["李沐", "Boson AI", "Higgs", "全双工", "语音交互"],
-      url: "https://www.cnblogs.com/rtedev/p/23578685",
-      image: "images/news/n237.png",
-      imageCap: "Higgs Realtime 数字人演示（图源：CSDN）",
-      highlight: false
-    },
-
-{
-id: "n197", cat: "行业动态", source: "凤凰网", date: "2026-11-07",
-      title: "京东×酷派把品牌 AI 眼镜打到 322 元：C2M 定制+国补首批进入百元档，光波导眼镜销量同比增 3 倍",
-      summary: "双 11 期间京东与酷派联合推出 AI 智能眼镜——原价 699 元叠加国补后到手 322 元，成为首批进入百元价位的品牌 AI 眼镜：800 万像素第一人称拍摄、音视频通话、在线翻译、AI 语音助手与会议记录。采用东莞产业带 C2M 反向定制+京东包销模式；京东双 11 光波导智能眼镜销售同比增长超 3 倍。",
-      detail: "事件：双 11 期间京东×酷派定制包销（凤凰网/网易/搜狐多源）。\n产品：酷派 AI 智能眼镜 699 元、国补后 322 元；800 万像素摄像头第一人称拍摄；音视频通话/在线翻译/AI 语音助手/会议记录。\n模式：C2M 反向定制+京东包销，产自东莞酷派研发生产基地。\n行业：雷鸟 iO 双 11 到手 1911 元、入门音频 AI 眼镜杀入千元以内；京东光波导智能眼镜销售同比增超 3 倍，雷鸟 iO 单品销量第一。\n隐忧：低价产品退货率、隐私争议与体验瓶颈仍在——行业尚未走出尝鲜怪圈。\n端侧视角：AI 眼镜价格带被产业带制造+平台包销直接砸穿到 300 元档——尝鲜门槛降到冲动消费区间，是 AI 眼镜从极客单品转向国民级消费电子的拐点信号；百元档与两千元档（雷鸟/Rokid）的分层市场正在同时成型。",
-      tags: ["AI眼镜", "京东", "酷派", "C2M", "价格战"],
-      url: "https://feng.ifeng.com/c/8xqtFAaroQ8",
-      image: "images/news/n197.jpg",
-      imageCap: "京东×酷派 AI 智能眼镜（图源：凤凰网）",
-      highlight: false
-    },
   ],
 papers: [
     {

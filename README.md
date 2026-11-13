@@ -4,7 +4,7 @@
 
 ## 2026 · 第 47 期（2026.11.07 — 2026.11.13 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：格局震动与政策供给同周落地——英伟达黄仁勋辞任 CEO（Colette Kress 临时接任，机器人端侧 Jetson Thor 与 AI PC 端侧 RTX Spark 双线前景生变），北京发布具身智能三年行动方案（20 万台年产能+5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单）。AI 眼镜进入商业落地密度期：三星 Intelligent Eyewear 395 美元开启预售（12 月 10 日韩美上市）、苹果供应链首证 AI 眼镜与摄像头 AirPods 双项目、京东酷派把百元档打进场。端侧基座竞赛白热化：文心 5.5 Flash（2800 亿 MoE）预告 11 月 25 日开源、面壁 35B 跑进手机、麒麟 9050 端侧 30B、Qwen4 预览上线、曦选创智 5 亿天使轮对标 Thor；联发科×英伟达 RTX Spark 以最高 128GB 统一内存重定义 AI PC，Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy。 今日新增：北京具身智能三年行动方案、英伟达 CEO 交接、Gemini 4 Hydrogen、三星 AI 眼镜预售、联发科 RTX Spark 超级芯片、Tether QVAC BotPsy 开源、苹果 AI 眼镜供应链首证（快克智能）。
+**近 7 天导读**：近 7 天聚焦：格局震动与政策供给同周落地——英伟达黄仁勋辞任 CEO（Colette Kress 临时接任，机器人端侧 Jetson Thor 与 AI PC 端侧 RTX Spark 双线前景生变），北京发布具身智能三年行动方案（20 万台年产能+5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单）。AI 眼镜进入商业落地密度期：三星 Intelligent Eyewear 395 美元开启预售（12 月 10 日韩美上市）、苹果供应链首证 AI 眼镜与摄像头 AirPods 双项目。端侧基座竞赛白热化：文心 5.5 Flash（2800 亿 MoE）预告 11 月 25 日开源、面壁 35B 跑进手机、麒麟 9050 端侧 30B、Qwen4 预览上线、曦选创智 5 亿天使轮对标 Thor；联发科×英伟达 RTX Spark 以最高 128GB 统一内存重定义 AI PC，Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy。 今日新增：北京具身智能三年行动方案、英伟达 CEO 交接、Gemini 4 Hydrogen、三星 AI 眼镜预售、联发科 RTX Spark 超级芯片、Tether QVAC BotPsy 开源、苹果 AI 眼镜供应链首证（快克智能）。
 
 ## 近 7 天速览
 
@@ -51,7 +51,7 @@
 | 2026-11-11 | [苹果子公司 Claris 暗测 Harbor 应用：Mac 变身本地 AI 服务器，雷雳 5 串联多机集群跑大模型](https://www.ithome.com/1/025/225.htm) | IT之家 |
 | 2026-11-10 | [谷歌 2026 年 11 月 Pixel Drop：Gemini Intelligence 扩展至 Pixel 10、新品类 Pixel Tag 追踪器，随 Android 17 推送](https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop) | Google 官方 |
 
-### 大模型厂商（11 条）
+### 大模型厂商（10 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -65,9 +65,8 @@
 | 2026-11-10 | [智元发布 WITA-Omni 全模态大模型正式版：行业首个具身全模态端到端交互模型，触觉+本体状态输入、免唤醒词全双工](https://www.ithome.com/1/025/122.htm) | IT之家 |
 | 2026-11-09 | [Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2 双旗舰：智能体编码基准 49.1% 超 GPT-6 Astra，API 降价 20%](https://tech.ifeng.com/c/8xwEBlk190G) | 凤凰科技 |
 | 2026-11-09 | [Meta 开源发布 Muse Ember：迄今最小多模态模型专攻 Agent 执行，1M 上下文、每百万输入 Token 仅 0.1 美元](https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution) | TechCrunch |
-| 2026-11-07 | [李沐 Boson AI 发布 Higgs Realtime Duplex 全双工多模态模型：160ms 流式处理，边听边说、边看边想+数字人输出](https://www.cnblogs.com/rtedev/p/23578685) | CSDN |
 
-### 行业动态（6 条）
+### 行业动态（5 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -76,7 +75,6 @@
 | 2026-11-09 | [微信鸿蒙版安装量超 9000 万次：HarmonyOS 终端用户本月预计突破 1 亿大关](https://www.ithome.com/1/024/099.htm) | IT之家 |
 | 2026-11-08 | [2026 款奔驰长轴距 E 级上市 42.38 万元起：奔驰中国首次独立开发 AI 座舱，深度融合豆包大模型](https://auto.ifeng.com/c/8xm3Ojm10u8) | 凤凰汽车 |
 | 2026-11-08 | [中国移动×智谱签署合作协议：GLM 系列模型接入移动云 MaaS 平台，国产算力到大模型服务全链合作](https://www.ithome.com/1/023/937.htm) | IT之家 |
-| 2026-11-07 | [京东×酷派把品牌 AI 眼镜打到 322 元：C2M 定制+国补首批进入百元档，光波导眼镜销量同比增 3 倍](https://feng.ifeng.com/c/8xqtFAaroQ8) | 凤凰网 |
 
 ## 科研前沿（10 篇）
 
