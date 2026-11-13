@@ -853,8 +853,8 @@
     var html = "";
     var G = (typeof GH_REPOS !== "undefined") ? GH_REPOS : window.GH_REPOS;
     if (G && G.repos && G.repos.length) {
-      html += '<div class="gh-head"><h4>GitHub · 高星新仓库</h4>' +
-        '<span class="gh-updated">近 120 天 · ' + esc(G.updated) + "</span></div>" +
+      html += '<div class="gh-head"><h4>GitHub · 高星新仓库（近 120 天）</h4>' +
+        '<span class="gh-updated">每日刷新 · ' + esc((G.updated || "").slice(5)) + "</span></div>" +
         '<div class="gh-list">' + G.repos.map(function (r, i) {
           var dot = GH_LANG_COLORS[i % GH_LANG_COLORS.length];
           return '<div class="gh-repo gh-tr" data-repo="' + esc(r.name) + '" role="button" tabindex="0" aria-label="查看仓库介绍">' +
@@ -868,11 +868,17 @@
     var FW = (typeof GH_FRAMEWORKS !== "undefined") ? GH_FRAMEWORKS : window.GH_FRAMEWORKS;
     if (FW && FW.frameworks && FW.frameworks.length) {
       html += '<div class="gh-head gh-head2"><h4>端侧框架精选 · 常驻</h4>' +
-        '<span class="gh-updated">★ ' + esc(FW.updated) + "</span></div>" +
+        '<span class="gh-updated">★ 每日刷新 · ' + esc((FW.updated || "").slice(5)) + "</span></div>" +
         '<div class="gh-list">' + FW.frameworks.map(function (f, i) {
           var dot = GH_LANG_COLORS[i % GH_LANG_COLORS.length];
+          // 近 7 天内发过新版 → 「上新版」徽标（面板日更后用户可见的变化信号）
+          var fresh = "";
+          if (f.updates && f.updates[0] && f.updates[0].d) {
+            var dd = Math.floor((Date.now() - new Date(f.updates[0].d + "T00:00:00Z").getTime()) / 86400000);
+            if (dd >= 0 && dd <= 7) fresh = '<em class="gh-new">上新版 ' + esc((f.updates[0].v || "").slice(0, 14)) + "</em>";
+          }
           return '<div class="gh-repo gh-fw" data-repo="' + esc(f.repo) + '" role="button" tabindex="0" aria-label="查看框架介绍">' +
-            '<div class="gh-name"><b>' + esc(f.name) + "</b>" +
+            '<div class="gh-name"><b>' + esc(f.name) + "</b>" + fresh +
             '<span class="gh-count">★ ' + esc(ghStars(f.stars)) + "</span></div>" +
             "<p>" + esc(f.one) + "</p>" +
             '<div class="gh-meta"><i style="background:' + dot + '"></i>' + esc(f.lang || "—") +
