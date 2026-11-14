@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 47 期（2026.11.07 — 2026.11.13 · 近 7 天）
+## 2026 · 第 47 期（2026.11.08 — 2026.11.14 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：格局震动与政策供给同周落地——英伟达黄仁勋辞任 CEO（Colette Kress 临时接任，机器人端侧 Jetson Thor 与 AI PC 端侧 RTX Spark 双线前景生变），北京发布具身智能三年行动方案（20 万台年产能+5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单）。AI 眼镜进入商业落地密度期：三星 Intelligent Eyewear 395 美元开启预售（12 月 10 日韩美上市）、苹果供应链首证 AI 眼镜与摄像头 AirPods 双项目。端侧基座竞赛白热化：文心 5.5 Flash（2800 亿 MoE）预告 11 月 25 日开源、面壁 35B 跑进手机、麒麟 9050 端侧 30B、Qwen4 预览上线、曦选创智 5 亿天使轮对标 Thor；联发科×英伟达 RTX Spark 以最高 128GB 统一内存重定义 AI PC，Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy。 今日新增：北京具身智能三年行动方案、英伟达 CEO 交接、Gemini 4 Hydrogen、三星 AI 眼镜预售、联发科 RTX Spark 超级芯片、Tether QVAC BotPsy 开源、苹果 AI 眼镜供应链首证（快克智能）。
+**近 7 天导读**：近 7 天聚焦：端侧 AI 从发布期进入交付期——苹果 HomeView 家庭中枢 299 美元正式开售（AI 硬件三线首个交付新品类），大众 ID.ERA 5X 以 9.99 万元把豆包 2.0 座舱+联发科 8676+征程 6H 双端侧芯片打成标配，三星 AI 眼镜 395 美元开启预售。格局与政策层：英伟达黄仁勋辞任 CEO（Colette Kress 临时接任），北京具身智能三年行动方案落地（20 万台年产能+5 万 P 算力）。技术面三条线并进：全双工语音一周三发（腾讯混元 Hy Realtime、Boson Higgs、OpenAI GPT-Live-1），端侧基座竞赛白热化（文心 5.5 预告 11-25 开源、面壁 35B 上机、麒麟 9050 连续披露新马良 GPU 与 AI ISP），Cloudflare 开源智能体专用浏览器 Kitesurf 补齐端侧智能体工具链。 今日新增：麒麟 9050 新马良 GPU/AI ISP 情报、Cloudflare Kitesurf 开源、大众 ID.ERA 5X 豆包座舱上市、腾讯混元 Hy Realtime、HomeView 与 Apple TV 4K 开售。
 
 ## 近 7 天速览
 
@@ -16,18 +16,20 @@
 | 2026-11-12 | [黄仁勋辞任英伟达 CEO：CFO Colette Kress 出任临时 CEO，3.8 万亿美元巨头突发掌门人交接](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition) | 英伟达官方/智东西 |
 | 2026-11-12 | [百度世界 2026：李彦宏首提「智能组织」——AI 下一幕，文心闪电深度思考+文心一镜微表情双模型发布](https://i.ifeng.com/c/8xzM4d8Y2gq) | 凤凰网 |
 
-### 端侧Agent（3 条）
+### 端侧Agent（4 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-13 | [Cloudflare 开源 AI 智能体专用浏览器 Kitesurf：无 Chromium 容器、资源消耗显著更低，GitHub 开放仓库](https://www.ithome.com/1/027/197.htm) | IT之家/Cloudflare |
 | 2026-11-11 | [Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy：基于 Qwen3.5 架构、手机本地运行，工具调用胜 2.5B 级](https://m.cnyes.com/news/id/6659587) | 钜亨网/BlockBeats |
 | 2026-11-11 | [AI 巨头桌面端开战：Claude 推 Whiteboards 等 AI 办公全家桶直挑微软，谷歌同日上线 Gemini 新旗舰+复刻 OpenCode 桌面应用](https://m.36kr.com/p/4064780118463617) | 36氪 |
 | 2026-11-09 | [阿里发布千问办公 2.0：从个人助手升级 Team Agent，首个支持多人与 Agent 协作](https://www.qbitai.com/2026/11/508694.html) | 量子位 |
 
-### AI硬件（7 条）
+### AI硬件（8 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-13 | [苹果 HomeView 与新 Apple TV 4K 正式开售：299 美元家庭中枢上市，苹果 AI 硬件进入交付期](https://tech.ifeng.com/c/8xz8XFlXHz2) | 凤凰科技 |
 | 2026-11-12 | [三星首款 AI 眼镜 Intelligent Eyewear 开启预售：395 美元起、41 克无屏设计，12 月 10 日韩美上市](https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world) | 三星官方新闻室 |
 | 2026-11-10 | [苹果 AI 眼镜供应链首度浮出水面：快克智能业绩会确认参与 AI 眼镜及带摄像头 AirPods 项目](https://news.qq.com/rain/a/20261110A09WK500) | 腾讯新闻/财联社 |
 | 2026-11-10 | [亚马逊 Ring 成立机器人部门并发布两款 AI 安防设备：249.99 美元家用飞行监控无人机 Drone Cam 与商用巡逻机器人 Rover Cam](https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot) | 亚马逊官方 |
@@ -36,10 +38,11 @@
 | 2026-11-09 | [Gentle Monster 首款 AI 眼镜定档：携手谷歌与三星、搭载 Gemini，11 月 12 日美国开启预订](https://www.gentlemonster.com/int/zh-CN/intelligent-eyewear) | Gentle Monster 官网 |
 | 2026-11-08 | [物理智能开源平台 Hitch Open 进博会全球发布：双机自主对打乒乓球 142 拍刷新世界纪录，0.3 秒完成感知决策](https://www.ithome.com/1/023/920.htm) | IT之家 |
 
-### 芯片厂商（3 条）
+### 芯片厂商（4 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-14 | [华为再披露麒麟 9050 细节：新马良 GPU 性能提升 40%、二代硬件光追，AI ISP 首次实现 2 亿像素融合拍](https://www.ithome.com/1/027/181.htm) | IT之家 |
 | 2026-11-12 | [优必选×沐曦合资芯片公司曦选创智完成 5 亿元天使轮：估值 40 亿元，首颗芯片对标英伟达 Thor、2028 年量产](http://news.10jqka.com.cn/20261112/c681759273.shtml) | 同花顺财经 |
 | 2026-11-11 | [联发科×英伟达 RTX Spark 超级芯片登陆 Windows 11 PC：Blackwell GPU+Grace CPU，最高 128GB 统一内存本地跑智能体](https://finance.sina.com.cn/tech/roll/2026-11-12/doc-iniymsip3963100.shtml) | 新浪科技 |
 | 2026-11-11 | [华为官方详解麒麟 9050 系列：新一代达芬奇 NPU 性能提升 140%，30B MoE 全模态大模型端侧离线运行仅占 2.5GB 内存](https://original.ifeng.com/c/8xxkY6ktCXa) | 凤凰网 |
@@ -51,10 +54,11 @@
 | 2026-11-11 | [苹果子公司 Claris 暗测 Harbor 应用：Mac 变身本地 AI 服务器，雷雳 5 串联多机集群跑大模型](https://www.ithome.com/1/025/225.htm) | IT之家 |
 | 2026-11-10 | [谷歌 2026 年 11 月 Pixel Drop：Gemini Intelligence 扩展至 Pixel 10、新品类 Pixel Tag 追踪器，随 Android 17 推送](https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop) | Google 官方 |
 
-### 大模型厂商（10 条）
+### 大模型厂商（11 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-13 | [腾讯混元发布实时语音模型 Hy Realtime：能说会唱、临场改词，还能边聊边调用工具](https://tech.ifeng.com/c/8y1QBPLjByO) | 凤凰科技 |
 | 2026-11-12 | [谷歌发布 Gemini 4 Hydrogen：主打智能体快速执行的高效率档，多项基准反超自家旗舰 Argon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/) | Google 官方博客 |
 | 2026-11-11 | [文心 5.5 Flash Preview 发布：总参 2800 亿 MoE 激活仅 140 亿、100 万 token 上下文，官宣 11 月 25 日开源](https://tech.ifeng.com/c/8xxwDIS2DX4) | 凤凰科技 |
 | 2026-11-11 | [北大系创企开源 aiXcompact-4B 上下文压缩模型：编程 Agent 推理成本降 78%、API 费用降 97%，单卡 A100 可私有部署](https://zhidx.com/p/609168.html) | 智东西 |
@@ -66,10 +70,11 @@
 | 2026-11-09 | [Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2 双旗舰：智能体编码基准 49.1% 超 GPT-6 Astra，API 降价 20%](https://tech.ifeng.com/c/8xwEBlk190G) | 凤凰科技 |
 | 2026-11-09 | [Meta 开源发布 Muse Ember：迄今最小多模态模型专攻 Agent 执行，1M 上下文、每百万输入 Token 仅 0.1 美元](https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution) | TechCrunch |
 
-### 行业动态（5 条）
+### 行业动态（6 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-13 | [大众 ID.ERA 5X 上市 9.99 万元起：行业首发豆包大模型 2.0 上车，联发科 8676 座舱芯片+地平线征程 6H 420TOPS](https://app.xinhuanet.com/news/article.html?articleId=20261113e85d7b5d0be34606b4117b6d7dd1730c) | 新华网/腾讯新闻 |
 | 2026-11-10 | [首个「自下而上」的 AI PC 操作系统 KORA OS 发布：底层融入智能体工作流，骁龙 X2 Elite 有望成首发平台](https://www.ithome.com/1/025/226.htm) | IT之家 |
 | 2026-11-10 | [小米联合北大发布《物联网设备模型技术白皮书》：11.6 亿台 AIoT 设备实践经验开放，定义 AI 原生物联网标准](https://news.qq.com/rain/a/20261110A098L200) | 腾讯新闻 |
 | 2026-11-09 | [微信鸿蒙版安装量超 9000 万次：HarmonyOS 终端用户本月预计突破 1 亿大关](https://www.ithome.com/1/024/099.htm) | IT之家 |
@@ -88,4 +93,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-11-13。
+- 数据更新于 2026-11-14。

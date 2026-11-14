@@ -15,14 +15,74 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 47 期",
-    weekRange: "2026.11.07 — 2026.11.13 · 近 7 天",
-    updated: "2026-11-13",
+    weekRange: "2026.11.08 — 2026.11.14 · 近 7 天",
+    updated: "2026-11-14",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：格局震动与政策供给同周落地——英伟达黄仁勋辞任 CEO（Colette Kress 临时接任，机器人端侧 Jetson Thor 与 AI PC 端侧 RTX Spark 双线前景生变），北京发布具身智能三年行动方案（20 万台年产能+5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单）。AI 眼镜进入商业落地密度期：三星 Intelligent Eyewear 395 美元开启预售（12 月 10 日韩美上市）、苹果供应链首证 AI 眼镜与摄像头 AirPods 双项目。端侧基座竞赛白热化：文心 5.5 Flash（2800 亿 MoE）预告 11 月 25 日开源、面壁 35B 跑进手机、麒麟 9050 端侧 30B、Qwen4 预览上线、曦选创智 5 亿天使轮对标 Thor；联发科×英伟达 RTX Spark 以最高 128GB 统一内存重定义 AI PC，Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy。\n今日新增：北京具身智能三年行动方案、英伟达 CEO 交接、Gemini 4 Hydrogen、三星 AI 眼镜预售、联发科 RTX Spark 超级芯片、Tether QVAC BotPsy 开源、苹果 AI 眼镜供应链首证（快克智能）。"
+    editorsNote: "近 7 天聚焦：端侧 AI 从发布期进入交付期——苹果 HomeView 家庭中枢 299 美元正式开售（AI 硬件三线首个交付新品类），大众 ID.ERA 5X 以 9.99 万元把豆包 2.0 座舱+联发科 8676+征程 6H 双端侧芯片打成标配，三星 AI 眼镜 395 美元开启预售。格局与政策层：英伟达黄仁勋辞任 CEO（Colette Kress 临时接任），北京具身智能三年行动方案落地（20 万台年产能+5 万 P 算力）。技术面三条线并进：全双工语音一周三发（腾讯混元 Hy Realtime、Boson Higgs、OpenAI GPT-Live-1），端侧基座竞赛白热化（文心 5.5 预告 11-25 开源、面壁 35B 上机、麒麟 9050 连续披露新马良 GPU 与 AI ISP），Cloudflare 开源智能体专用浏览器 Kitesurf 补齐端侧智能体工具链。\n今日新增：麒麟 9050 新马良 GPU/AI ISP 情报、Cloudflare Kitesurf 开源、大众 ID.ERA 5X 豆包座舱上市、腾讯混元 Hy Realtime、HomeView 与 Apple TV 4K 开售。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+id: "n250", cat: "芯片厂商", source: "IT之家", date: "2026-11-14",
+      title: "华为再披露麒麟 9050 细节：新马良 GPU 性能提升 40%、二代硬件光追，AI ISP 首次实现 2 亿像素融合拍",
+      summary: "华为继续披露麒麟 9050 系列情报——新马良 GPU 采用第四代微架构，性能提升 40%、功耗下降 45%，第二代硬件光追性能提升 78%（BVH 硬加速+FERT 专利求交+AO 加速管线），支持 AI 超分与端侧 3D 重建；AI ISP 集成像素专用 NPU，与通用 NPU 双引擎并行，支持 4K60 实时处理并首次实现 2 亿高像素融合拍照。此前官方已披露灵犀 CPU 与达芬奇 NPU（端侧 30B MoE），本次补齐 GPU 与影像侧拼图。",
+      detail: "披露：11 月 14 日（IT之家，麒麟 9050 系列情报连载的新一篇）。\nGPU：新马良第四代微架构——性能提升 40%、功耗下降 45%；二代硬件光追性能提升 78%（高性能光追单元/BVH 硬加速实时重建/FERT 专利求交/AO 加速管线）；AI 超分、HDR 增强、控显分离、端侧 3D 重建；马良 API 与 HarmonyOS 深度协同。\n影像：AI ISP 集成像素专用 NPU——与通用 NPU 双引擎并行，4K60 实时视频处理，首次实现 2 亿高像素融合拍照；18EV 高动态视频、长焦超清引擎、全链路 BT.2020 广色域。\n系列拼图：灵犀 CPU（9 核 16 线程）与达芬奇 NPU（端侧 30B MoE）此前已披露，「逻辑折叠」工艺晶体管密度提升 53.5%。\n端侧视角：麒麟 9050 的端侧算力叙事正在从「跑大模型」扩展到「渲染+影像双引擎」——GPU 侧 AI 超分与端侧 3D 重建、ISP 侧像素级 NPU，说明旗舰 SoC 的端侧 AI 已渗透到每个计算单元；2 亿像素融合拍是 NPU×ISP 协同的典型样本，也是国产移动影像算力的新锚点。",
+      tags: ["华为", "麒麟9050", "马良GPU", "AI ISP", "硬件光追"],
+      url: "https://www.ithome.com/1/027/181.htm",
+      image: "images/news/n250.jpg",
+      imageCap: "麒麟 9050 马良 GPU 情报（图源：IT之家）",
+      highlight: false
+    },
+
+{
+id: "n254", cat: "端侧Agent", source: "IT之家/Cloudflare", date: "2026-11-13",
+      title: "Cloudflare 开源 AI 智能体专用浏览器 Kitesurf：无 Chromium 容器、资源消耗显著更低，GitHub 开放仓库",
+      summary: "Cloudflare 宣布开源专为 AI 智能体打造的浏览器 Kitesurf——运行于 Cloudflare Workers 之上，无需任何 Chromium 进程或容器即可完成 HTML 解析、CSS 应用、页面 JavaScript 执行与截图渲染，支持 Chrome DevTools 协议；舍弃标签页、扩展等面向人类的功能，CPU 与内存消耗显著低于 Chromium，可并发更多智能体会话。Kitesurf 今年 8 月首次推出，本次开源后智能体开发者可自部署。",
+      detail: "开源：11 月 13 日官宣（Cloudflare 官方博客），GitHub 仓库同步开放。\n架构：运行于 Cloudflare Workers；无 Chromium 进程/容器；支持 Chrome DevTools 协议。\n取舍：砍掉标签页、主题、扩展、像素级渲染等人类向功能，聚焦智能体指标——Token 消耗、上下文窗口、并发会话、成本。\n资源：CPU 与内存消耗显著低于 Chromium（官方定性口径），可承载突发性 AI 驱动高并发负载。\n端侧视角：智能体浏览器的「轻量化」路线首次开源——与 Chromium 内核方案（Playwright/Puppeteer 系）相比，Kitesurf 把浏览器压缩为智能体的最小运行时；对端侧智能体尤其关键：低资源占用意味着本地智能体框架（如手机/边缘设备上的 Agent 运行时）可以负担得起一个「网页操作器官」，是端侧智能体工具链的重要拼图。",
+      tags: ["Cloudflare", "Kitesurf", "开源", "智能体浏览器", "AI Agent"],
+      url: "https://www.ithome.com/1/027/197.htm",
+      image: "images/news/n254.jpg",
+      imageCap: "Kitesurf 智能体浏览器（图源：IT之家）",
+      highlight: false
+    },
+
+{
+id: "n253", cat: "行业动态", source: "新华网/腾讯新闻", date: "2026-11-13",
+      title: "大众 ID.ERA 5X 上市 9.99 万元起：行业首发豆包大模型 2.0 上车，联发科 8676 座舱芯片+地平线征程 6H 420TOPS",
+      summary: "上汽大众 ID.ERA 5X 正式上市——限时权益价 9.99 万元起的都市纯电中型 SUV，是大众 CMP+CEA+ADAS 架构的全球首款量产车；行业首发豆包大模型 2.0 上车（全系标配，复杂语义理解提升 3.6%、响应延迟下降 20%，支持四音区识别与 9 种方言），座舱搭载 4nm 联发科 8676 车规芯片；高配 Ultra 版配行云辅助驾驶——地平线征程 6H 芯片 420TOPS 算力、大众×地平线「酷睿程」联合开发的 HS8 端到端物理 AI 大模型。",
+      detail: "上市：11 月 13 日正式上市（11 月 12-13 日多源），限时权益价 9.99 万元起，都市纯电中型 SUV。\n座舱：豆包大模型 2.0 行业首发上车、全系标配——复杂语义理解提升 3.6%、响应延迟下降 20%；连续对话、一句话多意图、四音区识别、9 种方言；智慧场景一句话直达（说「有点闷」同时开空调+座椅通风+天窗）；4nm 联发科 8676 车规级座舱芯片；10.25 英寸仪表+25.8 英寸 AR-HUD+15.6 英寸中控。\n智驾：高配 Ultra 版行云辅助驾驶——192 线激光雷达、地平线征程 6H、420TOPS 算力；大众×地平线「酷睿程」联合开发 HS8 端到端物理 AI 大模型。\n端侧视角：9.99 万元档把「双端侧 AI 芯片+大模型座舱+端到端物理 AI 智驾」打包成标配——豆包 2.0 跑在联发科 8676 座舱端、HS8 跑在征程 6H 智驾端，德系车企首次全栈采用中国端侧 AI 供应链；奔驰豆包座舱之后，外资车企的「中国式端侧智能化」正在从个案变成路线。",
+      tags: ["大众", "ID.ERA", "豆包大模型", "征程6H", "智能座舱"],
+      url: "https://app.xinhuanet.com/news/article.html?articleId=20261113e85d7b5d0be34606b4117b6d7dd1730c",
+      image: "images/news/n253.jpg",
+      imageCap: "大众 ID.ERA 5X（图源：腾讯新闻）",
+      highlight: false
+    },
+
+{
+id: "n252", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-13",
+      title: "腾讯混元发布实时语音模型 Hy Realtime：能说会唱、临场改词，还能边聊边调用工具",
+      summary: "腾讯混元发布实时语音模型 Hy Realtime——低延迟实时语音交互，在语音理解、指令遵循与拟人化表达上升级：不仅能说话还能唱歌，可理解用户临场修改指令实时调整输出，并支持在对话中调用工具执行任务。与李沐 Boson Higgs、OpenAI GPT-Live-1 等同期产品同场，「边听边说边干活」的全双工语音赛道一周内集齐三家大厂。",
+      detail: "发布：11 月 13 日（凤凰科技/MSN 多源）。\n能力：低延迟实时语音对话；能说会唱（语音生成覆盖歌唱）；临场修改——理解即兴指令实时调整输出；对话中调用工具执行任务。\n同系：混元 Hy ASR 3.0 preview（语音识别，多语种词错误率约 3%，元宝首发上线）。\n赛道：与 Boson Higgs Realtime Duplex（160ms 全双工）、OpenAI GPT-Live-1 API 同期——实时语音交互从「轮次式」转向「持续在场式」。\n端侧视角：全双工语音的流式决策延迟直接决定体验——唱歌与临场改词要求模型在百毫秒粒度上边生成边调整，这类实时交互最终要靠端侧或近端推理兜底延迟底线；一周内腾讯、Boson、OpenAI 三家同发，说明语音交互正成为端侧智能体的下一个入口级战场（手机助手、车载座舱、机器人同吃这条技术线）。",
+      tags: ["腾讯", "混元", "Hy Realtime", "实时语音", "全双工"],
+      url: "https://tech.ifeng.com/c/8y1QBPLjByO",
+      image: "images/news/n252.jpg",
+      imageCap: "混元 Hy Realtime（图源：凤凰科技）",
+      highlight: false
+    },
+
+{
+id: "n251", cat: "AI硬件", source: "凤凰科技", date: "2026-11-13",
+      title: "苹果 HomeView 与新 Apple TV 4K 正式开售：299 美元家庭中枢上市，苹果 AI 硬件进入交付期",
+      summary: "苹果首款智能家庭中枢 HomeView 与第四代 Apple TV 4K 于 11 月 13 日正式开售——两款均 299 美元起，澳大利亚、新西兰率先到货，加拿大、印度、英国等首发市场同步发售；HomeView 是苹果 AI 硬件三线（眼镜/耳机/家庭中枢）中首个正式交付的全新品类，Apple TV 4K 由 Siri AI 驱动。这是苹果年内最后两场重要硬件发布。",
+      detail: "开售：11 月 13 日（10 月中旬开启预购，澳新因时差率先到货）。\n价格：HomeView 与 Apple TV 4K 均 299 美元起（Apple TV 4K 香港 2399 港元）。\n首发：澳大利亚、加拿大、印度、新西兰、英国等。\n产品：HomeView 为 A18 芯片+Apple Intelligence 的家庭中枢（支持多人识人、只传「暗号」不传照片）；Apple TV 4K（第 4 代）由 Siri AI 驱动，苹果称「最具沉浸感的家庭娱乐设备」。\n端侧视角：HomeView 上市标志着苹果端侧 AI 从手机向家庭空间延伸的首个新品类落地——苹果 AI 眼镜与摄像头 AirPods 仍在供应链阶段（本周快克智能首证），家庭中枢率先交付；识人架构的隐私设计（特征暗号而非影像上云）是端侧 AI 处理敏感数据的示范样本，也是 homeOS 生态承接第三方智能体的第一块屏。",
+      tags: ["苹果", "HomeView", "Apple TV 4K", "家庭中枢", "开售"],
+      url: "https://tech.ifeng.com/c/8xz8XFlXHz2",
+      image: "images/news/n251.jpg",
+      imageCap: "HomeView 与 Apple TV 4K 开售（图源：凤凰科技）",
+      highlight: false
+    },
+
 {
 id: "n243", cat: "行业关注事件", source: "北京市经信局", date: "2026-11-13",
       title: "北京发布具身智能机器人三年行动方案：2028 年 20 万台年产能、5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单",
@@ -99,7 +159,7 @@ id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
 id: "n246", cat: "端侧Agent", source: "钜亨网/BlockBeats", date: "2026-11-11",
       title: "Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy：基于 Qwen3.5 架构、手机本地运行，工具调用胜 2.5B 级",
       summary: "稳定币巨头 Tether 的 AI 研究部门发布开放权重模型 QVAC BotPsy——8 亿参数、基于 Qwen3.5-0.8B 架构训练，Apache 2.0 许可开源，专为手机、电脑等个人设备本地运行设计；官方称其工具调用能力超过 2.5B 级模型，定位设备端 AI 智能体底座。",
-      detail: "发布：11 月 11 日（Tether AI Research，多家媒体跟进报道）。\n规格：8 亿参数；基于 Qwen3.5-0.8B 架构训练；Apache 2.0 开放权重。\n能力：设备端工具调用，无需云端；官方基准称超越 2.5B 级模型的工具调用表现。\n战略：QVAC（Quantum Versatile Compute）体系的端侧落子——今年 4 月 Tether 已开源 QVAC SDK 跨设备智能体框架，BotPsy 补上模型层。\n端侧视角：非 AI 巨头跨界端侧模型的又一样本——0.8B+Apache 2.0 把「手机本地智能体」的门槛拉到极低，与 DeepSeek Harness 插件体系同指「端侧智能体底座开源化」赛道；「大厂出基座、跨界玩家做微调与应用」的分工正在成形，QVAC 全家桶（SDK+模型）是目前最完整的一套非巨头开源方案。",
+      detail: "发布：11 月 11 日（Tether AI Research，多家媒体跟进报道；官方渠道暂未挂出模型卡，以上为媒体口径）。\n规格：8 亿参数；基于 Qwen3.5-0.8B 架构训练；Apache 2.0 开放权重。\n能力：设备端工具调用，无需云端；官方基准称超越 2.5B 级模型的工具调用表现。\n战略：QVAC（Quantum Versatile Compute）体系的端侧落子——今年 4 月 Tether 已开源 QVAC SDK 跨设备智能体框架，BotPsy 补上模型层。\n端侧视角：非 AI 巨头跨界端侧模型的又一样本——0.8B+Apache 2.0 把「手机本地智能体」的门槛拉到极低，与 DeepSeek Harness 插件体系同指「端侧智能体底座开源化」赛道；「大厂出基座、跨界玩家做微调与应用」的分工正在成形，QVAC 全家桶（SDK+模型）是目前最完整的一套非巨头开源方案。",
       tags: ["Tether", "QVAC BotPsy", "0.8B", "开源", "端侧智能体"],
       url: "https://m.cnyes.com/news/id/6659587",
       image: "images/news/n246.jpg",
