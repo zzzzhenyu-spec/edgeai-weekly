@@ -15,14 +15,38 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 47 期",
-    weekRange: "2026.11.08 — 2026.11.14 · 近 7 天",
-    updated: "2026-11-14",
-    status: "rolling",
-    editorsNote: "近 7 天聚焦：端侧 AI 从发布期进入交付期——苹果 HomeView 家庭中枢 299 美元正式开售（AI 硬件三线首个交付新品类），大众 ID.ERA 5X 以 9.99 万元把豆包 2.0 座舱+联发科 8676+征程 6H 双端侧芯片打成标配，三星 AI 眼镜 395 美元开启预售。格局与政策层：英伟达黄仁勋辞任 CEO（Colette Kress 临时接任），北京具身智能三年行动方案落地（20 万台年产能+5 万 P 算力）。技术面三条线并进：全双工语音一周三发（腾讯混元 Hy Realtime、Boson Higgs、OpenAI GPT-Live-1），端侧基座竞赛白热化（文心 5.5 预告 11-25 开源、面壁 35B 上机、麒麟 9050 连续披露新马良 GPU 与 AI ISP），Cloudflare 开源智能体专用浏览器 Kitesurf 补齐端侧智能体工具链。\n今日新增：麒麟 9050 新马良 GPU/AI ISP 情报、Cloudflare Kitesurf 开源、大众 ID.ERA 5X 豆包座舱上市、腾讯混元 Hy Realtime、HomeView 与 Apple TV 4K 开售。"
+    weekRange: "2026.11.09 — 11.15",
+    updated: "2026-11-15",
+    status: "final",
+    editorsNote: "本期聚焦：端侧 AI 的「交付周」——苹果 HomeView 家庭中枢 299 美元开售（AI 硬件三线首个交付品类）、大众 ID.ERA 5X 以 9.99 万元把豆包 2.0 座舱+联发科 8676+征程 6H 双端侧芯片打成标配、三星 AI 眼镜 395 美元开启预售（12 月 10 日韩美上市）、京东酷派把 AI 眼镜打入百元档——发布潮正式转入交付期。格局层剧震：黄仁勋辞任英伟达 CEO（Colette Kress 临时接任，机器人端侧 Thor 与 AI PC 端侧 RTX Spark 双线生变）；OpenAI 解散独立机器人团队，押注 GPT-6 Astra 通用模型直接充当机器人大脑。技术三条线并进：端侧基座竞赛升级（Edge0 开源 145B 笔记本本地跑、文心 5.5 预告 11 月 25 日开源、面壁 35B 上机、麒麟 9050 连续披露新马良 GPU 与 AI ISP），全双工语音一周三发（混元 Hy Realtime、Boson Higgs、OpenAI GPT-Live-1），政策供给共振（北京具身智能三年方案 20 万台产能+5 万 P 算力、韩国 8002 亿韩元端侧芯片路线图）。华为收官布局：星芒 AI 子品牌官宣、Mate X8 预热、MateBook Fold S 开启预订。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+id: "n259", cat: "手机厂商", source: "ezone/小米", date: "2026-11-15",
+      title: "小米 18 Pro 海外公布背屏适配：谷歌地图、Spotify、Gemini 等首批支持，11 月 18 日香港发布",
+      summary: "小米海外公布 18 Pro 系列背屏适配进展——谷歌地图、Spotify、Gemini 等应用首批支持背屏显示与操作，这是小米 18 Pro 首配背屏形态的关键生态准备；该机将于 11 月 18 日在香港发布并开售，主打「实用 AI 玩法」的背屏交互成为小米全新手机形态的核心卖点。",
+      detail: "适配：11 月 15 日海外公布，谷歌地图、Spotify、Gemini 等首批适配背屏。\n发布：11 月 18 日香港发布并开售（ezone/HK01 多源）。\n形态：小米 18 Pro 首配背屏——小米全新手机形态，背屏主打实用 AI 玩法。\n端侧视角：背屏正在成为旗舰机的「第二交互面」——Gemini 入列首批适配意味着背屏不只显示通知，而是承载完整 AI 助手入口；小米把形态创新（背屏）与 AI 入口（Gemini 适配）绑定营销，是国产旗舰在硬件同质化下用「AI+新形态」寻找差异化的样本，11 月 18 日发布会的背屏 AI 实机演示值得跟踪。",
+      tags: ["小米", "18 Pro", "背屏", "Gemini", "折叠形态"],
+      url: "https://ezone.hk/article/20117600/",
+      image: "images/news/n259.jpg",
+      imageCap: "小米 18 Pro 背屏形态（图源：ezone）",
+      highlight: false
+    },
+
+{
+id: "n258", cat: "手机厂商", source: "搜狐科技", date: "2026-11-15",
+      title: "华为 Mate X8 折叠屏外观公布：余承东官宣「就要来了」，屏幕、拍照、性能三线新突破",
+      summary: "华为公布 Mate X8 折叠屏旗舰外观，余承东官宣新机「就要来了」，并宣布屏幕、拍照、性能均有新突破——这是 Mate X 系列走过第八年的新一代旗舰，预计搭载麒麟新一代平台，发布窗口临近。同期华为 AI 硬件线密集预热：星芒子品牌（聚焦 AI 手机）官宣、MateBook Fold S 小折叠电脑已开启预订。",
+      detail: "公布：11 月 15 日外观公布+余承东官宣（多源）。\n节点：Mate X 系列第八年；屏幕、拍照、性能三线新突破（官方口径，规格待发布会）。\n同期：华为 OSTA 星芒子品牌官宣聚焦 AI 手机（11 月 20 日首秀预热）；MateBook Fold S 鸿蒙小折叠电脑开启预订。\n端侧视角：华为正在把「折叠旗舰+AI 子品牌+鸿蒙 AI 电脑」组成端侧 AI 硬件矩阵同步推进——Mate X8 大概率首发新一代麒麟端侧平台（麒麟 9050 系列情报本周连续披露），星芒 11 月 20 日首秀与 Mate X8 发布窗口前后脚，华为端侧 AI 的「品牌-芯片-形态」三线合围正在本月完成布局。",
+      tags: ["华为", "Mate X8", "折叠屏", "余承东", "麒麟"],
+      url: "https://www.sohu.com/a/1101872178_163726",
+      image: "images/news/n258.jpg",
+      imageCap: "华为 Mate X8 外观（图源：搜狐科技）",
+      highlight: false
+    },
+
 {
 id: "n250", cat: "芯片厂商", source: "IT之家", date: "2026-11-14",
       title: "华为再披露麒麟 9050 细节：新马良 GPU 性能提升 40%、二代硬件光追，AI ISP 首次实现 2 亿像素融合拍",
@@ -32,6 +56,30 @@ id: "n250", cat: "芯片厂商", source: "IT之家", date: "2026-11-14",
       url: "https://www.ithome.com/1/027/181.htm",
       image: "images/news/n250.jpg",
       imageCap: "麒麟 9050 马良 GPU 情报（图源：IT之家）",
+      highlight: false
+    },
+
+{
+id: "n256", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-13",
+      title: "Edge0 开源 145B 端侧模型：稀疏 MoE 每步仅激活约 10B，MacBook Pro 峰值内存 29GB 本地跑、解码 80 token/s",
+      summary: "Edge0 团队发布并开源 145B 参数端侧大模型 Edge0-145B——官方称为全球首个可在个人电脑本地流畅运行的 145B 级模型：稀疏 MoE 架构每推理步仅约 10B 参数参与计算，三级存储流水线（GPU 热专家+系统内存专家库+SSD 词表）令 MacBook Pro 峰值内存仅 29GB、解码超 80 token/s；权重以 NVFP4 量化发布，Day 0 支持 macOS/Windows/Linux 三平台（苹果 M 系+RTX 4090/5090），同步发布 Edge0-120B。",
+      detail: "发布：11 月 13 日（开源权重+推理框架+一键部署工具同步放出）。\n架构：稀疏专家 MoE——每 64 个专家共享两个大矩阵；总参 145B、每推理步仅约 10B 激活。\n工程：三级存储流水线——热专家常驻 GPU、约 40GB 专家库放系统内存、约 48GB 词表数据存 SSD；MacBook Pro 峰值内存 29GB、解码超 80 token/s；上下文 128K-256K。\n生态：NVFP4 量化权重；Day 0 支持 macOS/Windows/Linux（苹果 M 系芯片、RTX 4090/5090）；Terminal-Bench 2.1 得 86.52 分、DeepSWE 1.1 得 64.6 分（官方口径）。\n端侧视角：端侧模型规模纪录再破——此前端侧旗舰停留在 30-35B（麒麟 9050/面壁 35B），Edge0 用「超稀疏 MoE+存储分层」把 145B 总参塞进 29GB 内存，思路与文心 5.5（2800 亿总参激活 140 亿）同源：把「大总参小激活」从厂商定制芯片路线推进到消费级通用硬件路线；若基准可信，「笔记本跑百亿级激活模型」将从演示变成日常。",
+      tags: ["Edge0", "开源", "145B", "MoE", "本地运行"],
+      url: "https://www.sohu.com/a/1101025520_121423427",
+      image: "images/news/n256.jpg",
+      imageCap: "Edge0-145B 端侧模型（图源：搜狐科技）",
+      highlight: false
+    },
+
+{
+id: "n255", cat: "行业关注事件", source: "凤凰科技/财富", date: "2026-11-13",
+      title: "OpenAI 解散独立机器人团队：具身智能研究并入通用模型研发，GPT-6 Astra 直接充当机器人「大脑」",
+      summary: "据《财富》11 月 13 日报道，OpenAI 已解散独立的具身智能/机器人团队，将相关研究整合进通用大模型研发流程——官方回应称包括 GPT-6 Astra 在内的通用模型已能直接完成部分机器人任务。这一「通用模型即机器人大脑」的路线重组，与其 9 月 GPT-6 Astra 发布时 Altman 表态的 Action Efficiency 战略一脉相承。",
+      detail: "重组：11 月 13 日《财富》报道（东方财富、凤凰科技等转载），解散独立机器人团队。\n口径：官方回应——GPT-6 Astra 等通用模型已能直接用于部分机器人任务，具身智能研究并入通用大模型研发。\n脉络：9 月 GPT-6 Astra 发布前夕 Altman 首次明确机器人战略——底气来自 GPT-6 的 Action Efficiency（行动效率），而非自研人形硬件。\n端侧视角：「通用大模型直接当大脑」路线与「专用具身模型」路线（智元 WITA-Omni、谷歌 Genie 4 训练环境、英伟达 Thor 生态）正式分野——OpenAI 押注通用智能的具身涌现，把机器人还原为「通用模型的执行器」；对端侧产业而言，若通用模型直接驱动机器人成为主流，端侧推理需求将从「跑小模型」跃迁到「跑旗舰模型的最小激活档」，端云分工（机器人本体跑轻量执行层+云端跑通用大脑）的格局会加速定型。",
+      tags: ["OpenAI", "具身智能", "GPT-6 Astra", "机器人", "团队重组"],
+      url: "https://tech.ifeng.com/c/8y2QsVMnd4N",
+      image: "images/news/n255.jpg",
+      imageCap: "OpenAI 具身智能团队重组（图源：凤凰科技）",
       highlight: false
     },
 
@@ -116,6 +164,18 @@ id: "n244", cat: "AI硬件", source: "三星官方新闻室", date: "2026-11-12"
       url: "https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world",
       image: "images/news/n244.jpg",
       imageCap: "三星 Intelligent Eyewear（图源：三星官方新闻室）",
+      highlight: false
+    },
+
+{
+id: "n257", cat: "芯片厂商", source: "腾讯新闻", date: "2026-11-12",
+      title: "韩国公布端侧 AI 半导体路线图：项目总额 8002 亿韩元，2030 年前完成 10 款芯片开发验证",
+      summary: "韩国产业通商资源部公布端侧 AI 半导体国家路线图——项目总额 8002 亿韩元（约合人民币 41 亿元），计划到 2030 年完成 10 款端侧 AI 芯片的开发与验证，三星电子等头部企业参与，覆盖端侧 NPU、存储与封装等环节。这是继中国信通院蓝皮书、北京具身智能行动方案之后，又一个以国家级路线图形式押注端侧 AI 硬件的政策供给。",
+      detail: "政策：11 月 12 日韩国产业通商资源部公布（多家媒体跟进）。\n规模：项目总额 8002 亿韩元；2030 年前完成 10 款端侧 AI 芯片开发验证；三星电子等参与。\n格局：与中美同期政策形成三方共振——端侧芯片从厂商竞赛升级为国家产业政策赛道。\n端侧视角：端侧 AI 芯片成为国家级产业竞赛的第三条主线（继云端 AI 算力与先进制程之后）——韩国的筹码是存储（HBM 与端侧 LPDDR）+三星系统 LSI 设计能力，路线图点名「端侧」意味着政策共识已从云端训练算力转向终端推理芯片；对国产端侧芯片厂商（曦选创智、龙擎空天等）而言，全球政策同题竞争将加速供应链分层。",
+      tags: ["韩国", "端侧AI芯片", "路线图", "8002亿韩元", "三星"],
+      url: "https://news.qq.com/rain/a/20261112A0BJJT00",
+      image: "images/news/n257.jpg",
+      imageCap: "韩国端侧 AI 半导体路线图（图源：腾讯新闻）",
       highlight: false
     },
 
@@ -443,44 +503,38 @@ id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
       highlight: true
     },
 
-{
-id: "n199", cat: "行业动态", source: "凤凰汽车", date: "2026-11-08",
-      title: "2026 款奔驰长轴距 E 级上市 42.38 万元起：奔驰中国首次独立开发 AI 座舱，深度融合豆包大模型",
-      summary: "2026 款奔驰长轴距 E 级上市，售价 42.38 万元起——首次搭载奔驰中国研发团队主导、独立开发的全新 AI 智能座舱，虚拟助手深度融合字节跳动豆包大模型：语音最快 0.25 秒响应、多音区识别准确率 98%、最多存储 6 位用户声纹、支持全场景「可见即可说」；全系标配华为 HiCar，支持季度级 OTA 大版本升级。",
-      detail: "上市：2026 款长轴距 E 级 42.38 万元起（凤凰汽车/搜狐汽车）。\n座舱：奔驰中国团队首次主导独立开发——虚拟助手深度融合豆包大模型及相关交互技术。\n指标：语音最快 0.25 秒响应；多音区识别准确率 98%；6 位用户声纹个性化账户；全场景可见即可说。\n生态：全系标配华为 HiCar；高德车载导航帧率提升；季度性大版本 OTA，后续覆盖更多燃油与纯电车型。\n端侧视角：豆包大模型首次规模化上车豪华品牌——奔驰选择「本土大模型+本土生态（HiCar/高德）」组合而非自研模型，传统豪华品牌的 AI 座舱竞赛焦点从算力堆叠转向模型选型与本土化整合。",
-      tags: ["奔驰", "豆包大模型", "AI座舱", "智能汽车", "豆包上车"],
-      url: "https://auto.ifeng.com/c/8xm3Ojm10u8",
-      image: "images/news/n199.jpg",
-      imageCap: "2026 款长轴距 E 级（图源：凤凰汽车）",
-      highlight: false
-    },
-
-{
-id: "n198", cat: "AI硬件", source: "IT之家", date: "2026-11-08",
-      title: "物理智能开源平台 Hitch Open 进博会全球发布：双机自主对打乒乓球 142 拍刷新世界纪录，0.3 秒完成感知决策",
-      summary: "物理智能开源平台 Hitch Open 在进博会举行全球发布会——现场挑战环节两台机器人在无人工遥控下自主感知、决策、挥拍，连续对打 142 拍刷新该项目世界纪录。纪录由上海交通大学—上海创智学院高岳教授团队基于开源底座训练模型，与 Hitch Open 平台提供的统一本体联合创造，机器人需在 0.3 秒内完成感知与决策。",
-      detail: "发布：进博会现场全球发布（IT之家/上观新闻/中新经纬多源）。\n纪录：两台机器人无人遥控连续对打 142 拍，为此前 129 拍世界纪录的又一次刷新。\n分工：高岳教授团队基于开源底座训练模型；Hitch Open 提供统一本体；青瞳视觉高精度动捕提供支撑，双方宣布全球战略合作。\n实时性：每次击球需在 0.3 秒内完成感知与决策——具身智能的端侧实时推理极限压力测试。\n端侧视角：142 拍背后是「统一本体+开源底座」的物理智能训练栈——Hitch Open 把仿真训练到真机部署的全链路开源化，任何团队都能在同一套本体上复现和超越，具身智能从各家闭门调参进入开源共建时代。",
-      tags: ["Hitch Open", "物理智能", "具身智能", "开源平台", "进博会"],
-      url: "https://www.ithome.com/1/023/920.htm",
-      image: "images/news/n198.jpg",
-      imageCap: "Hitch Open 展台机器人乒乓对打（图源：中新经纬）",
-      highlight: false
-    },
-
-{
-id: "n190", cat: "行业动态", source: "IT之家", date: "2026-11-08",
-      title: "中国移动×智谱签署合作协议：GLM 系列模型接入移动云 MaaS 平台，国产算力到大模型服务全链合作",
-      summary: "中国移动云公司与智谱签署合作协议——双方围绕国产算力、大模型服务和 AI 商业化展开深度合作，智谱 GLM 系列模型将接入移动云 MaaS 平台，合作涵盖 Token 技术创新、模型服务、产品打造、行业方案等，覆盖从底层算力供给、模型服务到商业化分发的完整产业链。",
-      detail: "合作：11 月 6 日签约、11 月 8 日多源披露（IT之家/凤凰/证券之星）。\n内容：GLM 系列模型接入移动云 MaaS 平台；Token 技术创新、模型服务、产品打造、行业方案。\n链路：从国产算力供给到模型服务到商业化分发——运营商×国产大模型的系统性合作。\n端侧视角：运营商的算力网络+国产模型的组合正在打通「云端 Token 工厂」的国家级分发通道——移动云 MaaS 平台接入 GLM 后，端侧设备的端云协同推理将获得运营商级的 SLA 保障，这与趋境×智谱×摩尔线程的 Token 工厂方案形成「国家级+创业级」两层国产推理基建。",
-      tags: ["中国移动", "智谱", "GLM", "移动云", "国产算力"],
-      url: "https://www.ithome.com/1/023/937.htm",
-      image: "images/news/n190.png",
-      imageCap: "中国移动×智谱合作（图源：IT之家）",
-      highlight: false
-    },
-
   ],
 papers: [
+    {
+      id: "p11", group: "recent", cat: "推理与系统", date: "2026-11-12",
+      title: "Metal Sandbox: Isolated Execution and Command Scheduling for GPU Coding Agents on Apple Silicon",
+      authors: "Haozhe Wang 等",
+      venue: "arXiv:2611.17294", level: "预印本",
+      summary: "为 Apple Silicon 生成 Metal GPU 内核的编码智能体需要反复在「模型请求-开发命令-GPU 执行」间切换，GPU 大量时间在空转——Metal Sandbox 构建了跨多台互联 Mac 的智能体基础设施：每实例受限文件访问+原生命令执行+命令级调度，各智能体保留独立工作区与私有开发环境，GPU 空闲档位被命令调度复用，训练与评测效率大幅提升。",
+      detail: "问题：Metal 内核生成智能体的会话里 GPU 大部分 rollout 时间闲置。\n方法：受限 per-instance 文件访问+原生命令执行+跨互联 Mac 的命令级调度，多智能体并发且互不干扰。\n端侧视角：端侧推理基建（Metal/苹果芯片）的开发工具链正在 Agent 化——当「给端侧硬件写内核」本身交给智能体并行完成，端侧算子的迭代速度将摆脱人力瓶颈，这篇是基建自动化的底层设施。",
+      tags: ["Apple Silicon", "GPU智能体", "Metal", "调度系统"],
+      url: "https://arxiv.org/abs/2611.17294"
+    },
+    {
+      id: "p12", group: "recent", cat: "端云协同", date: "2026-11-12",
+      title: "Acoustic Respiratory Phase Detection on Mobile Devices",
+      authors: "Julian Szymanski 等",
+      venue: "arXiv:2611.16710", level: "预印本",
+      summary: "呼吸监测依赖接触式传感器或受控环境，本文提出仅用普通手机麦克风声学信号的非侵入呼吸相位检测框架——混合 CNN-Transformer 架构（局部频谱特征+长程时序建模）捕捉呼吸的周期结构，在 Foundation Dataset 上以留一被试（LOSO）协议评测，端侧即可运行，为健康监测与呼吸引导提供零硬件成本的方案。",
+      detail: "输入：普通智能手机麦克风录音，无需接触式传感器。\n架构：混合 CNN-Transformer——CNN 提局部频谱特征、Transformer 建模长程时序，捕捉呼吸周期结构。\n评测：留一被试（LOSO）协议跨被试泛化验证。\n端侧视角：手机麦克风是存量最大的健康传感入口——声学+轻量混合架构把呼吸监测的硬件成本降为零，与千问接入动态血糖仪同向：端侧 AI 正在把消费手机变成慢病与状态监测的通用终端。",
+      tags: ["声学感知", "呼吸监测", "手机", "混合架构"],
+      url: "https://arxiv.org/abs/2611.16710"
+    },
+    {
+      id: "p13", group: "recent", cat: "能效与评测", date: "2026-11-11",
+      title: "An Open-Architecture Dual-Core STM32-Based Neural Interface with Low-Latency On-Device AI",
+      authors: "Sipeng Liang 等",
+      venue: "arXiv:2611.15942", level: "预印本",
+      summary: "闭环神经调控需要低延迟的在线解码——本文基于双核 STM32H747 微控制器与 Intan 商用采集/刺激前端，构建开放架构的双向神经接口：支持 128 通道 20kSps 采集与 64 通道刺激，双核处理架构+双流内存层级实现低延迟端侧 AI 推理；机上验证两个神经解码模型——完全片上内存运行的紧凑 MLP，以及更大的时序模型分级驻留。",
+      detail: "硬件：STM32H747 双核 MCU+Intan 前端；128 采集通道×20 kSps+64 刺激通道。\n架构：双核分工+双流内存层级，支撑低延迟在线推理。\n模型：紧凑 MLP 全片上内存运行；更大时序模型分级驻留内存。\n端侧视角：植入式/穿戴神经接口是「极致端侧」的终极场景——毫瓦功耗、硬实时延迟约束下跑解码模型，开源架构让神经调控设备的科研迭代速度不再被闭门硬件卡住。",
+      tags: ["神经接口", "STM32", "闭环调控", "极致端侧"],
+      url: "https://arxiv.org/abs/2611.15942"
+    },
     {
       id: "p1", group: "recent", cat: "推理与系统", date: "2026-11-10",
       title: "EngineAgent: Agentizing On-Device LLM Inference Engines with Inference Stack Hierarchy Awareness and Hardware Abilities",
@@ -542,16 +596,6 @@ papers: [
       url: "https://arxiv.org/abs/2611.02011"
     },
     {
-      id: "p7", group: "recent", cat: "端云协同", date: "2026-10-31",
-      title: "Communication-Efficient Model-Distributed Inference for CBRS Radar Detection",
-      authors: "CBRS-MDI Team 等",
-      venue: "arXiv:2611.00625", level: "预印本",
-      summary: "CBRS 共享频段（3550-3700 MHz）要求准确及时检测在役雷达——频谱图 YOLO 检测器在资源受限边缘设备上运行困难，本文用模型分布式推理（MDI）把模型切分到多台边缘设备协同执行，系统优化切分点与通信量，提升受限设备群的检测吞吐。",
-      detail: "场景：3550-3700 MHz 频段的雷达-蜂窝共存检测，YOLO 频谱图检测算力需求超出单台边缘设备。\n方法：模型分布式推理（MDI）——跨边缘设备切分模型，通信高效的切分策略。\n端侧视角：单设备算力不够时「多设备拼算力」是端侧推理的另一条扩展轴——与 Claris Harbor 的 Mac 集群思路在无线侧同构。",
-      tags: ["频谱感知", "模型切分", "分布式推理", "边缘设备群"],
-      url: "https://arxiv.org/abs/2611.00625"
-    },
-    {
       id: "p8", group: "recent", cat: "能效与评测", date: "2026-10-30",
       title: "Compression Technique Interactions in Small Language Models: A Factorial Ablation",
       authors: "Compression-Interactions Team 等",
@@ -561,27 +605,6 @@ papers: [
       tags: ["模型压缩", "因子消融", "量化", "剪枝"],
       url: "https://arxiv.org/abs/2611.00464"
     },
-    {
-      id: "p9", group: "recent", cat: "端侧智能体", date: "2026-10-30",
-      title: "Latent-Lens: Visual Perception in Small Language Models Through Latent Communication",
-      authors: "Latent-Lens Team 等",
-      venue: "arXiv:2610.41751", level: "预印本",
-      summary: "多智能体系统中独立 VLM 与小语言模型（SLM）以离散文本交换信息，构成空间与细粒度细节的损失瓶颈——SLM 容量有限尤其依赖输入信号质量。Latent-Lens 借鉴语言模型间潜空间通信方法，让 VLM 的视觉状态以潜变量形式注入 SLM，绕过文本瓶颈传递视觉感知。",
-      detail: "问题：VLM→SLM 文本转述丢失空间/细粒度信息，对小容量 SLM 伤害最大。\n方法：潜空间通信——视觉状态以潜变量直通注入 SLM。\n端侧视角：端侧多智能体（本机 VLM+本机 SLM）之间同样存在文本接口瓶颈——潜变量直连让「小模型组合」逼近大模型感知质量，是端侧模型乐高化的关键材料。",
-      tags: ["潜空间通信", "多智能体", "视觉感知", "小模型"],
-      url: "https://arxiv.org/abs/2610.41751"
-    },
-    {
-      id: "p10", group: "recent", cat: "推理与系统", date: "2026-10-29",
-      title: "MulClip: A table-free activation function for reservoir computing on microcontrollers",
-      authors: "MulClip Team 等",
-      venue: "arXiv:2610.39343", level: "预印本",
-      summary: "MCU 上储备池计算的状态更新里，仅 tanh 求值就占 Cortex-M4 上 75% 的耗时——MulClip 提出无查表的轻量激活函数：只用比较、绝对值、乘法与减法引入曲率，并把裁剪阈值置于响应中段，在环形储备池上以极低开销逼近 tanh 的非线性表达。",
-      detail: "动机：Cortex-M4 实测 tanh 占状态更新 75% 耗时；查表法占 RAM。\n设计：比较+绝对值+乘法+减法四运算构造单调+折叠响应，阈值置于中段。\n端侧视角：把 MCU 级毫瓦算力上的激活函数成本再砍一刀——极限边缘（传感器节点/穿戴）上算子级优化仍是性价比最高的 AI 落地手段。",
-      tags: ["MCU", "激活函数", "储备池计算", "极致边缘"],
-      url: "https://arxiv.org/abs/2610.39343"
-    },
-
   ],
 
 knowledge: {
