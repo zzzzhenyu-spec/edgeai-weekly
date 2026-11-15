@@ -18,7 +18,7 @@ const WEEKLY_DATA = {
     weekRange: "2026.11.09 — 11.15 · 近 7 天",
     updated: "2026-11-15",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：端侧 AI 的「交付周」——苹果 HomeView 家庭中枢 299 美元开售、大众 ID.ERA 5X 以 9.99 万元把豆包 2.0 座舱+联发科 8676+征程 6H 双端侧芯片打成标配、三星 AI 眼镜 395 美元开启预售（12 月 10 日韩美上市）。格局层剧震：黄仁勋辞任英伟达 CEO（Kress 临时接任），OpenAI 解散机器人团队押注 GPT-6 Astra 直接当大脑。技术面：Edge0 开源 145B 端侧模型（笔记本本地跑、峰值内存 29GB），全双工语音一周三发（混元 Hy Realtime/Higgs/GPT-Live-1），麒麟 9050 连续披露新马良 GPU 与 AI ISP，北京具身三年方案与韩国 8002 亿韩元端侧芯片路线图同周落地；华为星芒 AI 子品牌官宣、Mate X8 预热、MateBook Fold S 预订，小米 18 Pro 背屏首批适配 Gemini（11 月 18 日香港发布）。\n今日新增：华为 Mate X8 外观公布、小米 18 Pro 背屏适配 Gemini、Edge0-145B 开源、OpenAI 具身智能团队重组、韩国端侧 AI 半导体路线图（第 47 期快照同日归档）。"
+    editorsNote: "近 7 天聚焦：端侧 AI 的「交付周」——苹果 HomeView 家庭中枢 299 美元开售、大众 ID.ERA 5X 以 9.99 万元把豆包 2.0 座舱+联发科 8676+征程 6H 双端侧芯片打成标配、三星 AI 眼镜 395 美元开启预售（12 月 10 日韩美上市）。格局层剧震：黄仁勋辞任英伟达 CEO（Kress 临时接任），OpenAI 解散机器人团队押注 GPT-6 Astra 直接当大脑。技术面：Edge0 开源 145B 端侧模型（笔记本本地跑、峰值内存 29GB），全双工语音一周三发（混元 Hy Realtime/Higgs/GPT-Live-1），麒麟 9050 连续披露新马良 GPU 与 AI ISP，北京具身三年方案与韩国 8002 亿韩元端侧芯片路线图同周落地；华为星芒 AI 子品牌官宣、Mate X8 预热、MateBook Fold S 预订，小米 18 Pro 背屏首批适配 Gemini（11 月 18 日香港发布）。\n今日新增：华为 Mate X8 外观公布、小米 18 Pro 背屏适配 Gemini、无界方舟开源 Edge0-145B、OpenAI 具身智能团队重组、韩国端侧 AI 半导体路线图、CES 2027 创新奖六款 AI 外设、华为系 openJiuwen 发布 RSI 原生 AgentOS（第 47 期快照同日归档）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -60,10 +60,22 @@ id: "n250", cat: "芯片厂商", source: "IT之家", date: "2026-11-14",
     },
 
 {
+id: "n262", cat: "端侧Agent", source: "openJiuwen/GitHub", date: "2026-11-13",
+      title: "华为系开源平台 openJiuwen 发布 RSI 原生 AgentOS：递归自我改进做进系统底座，智能体可「自由变身」持续迭代",
+      summary: "由华为 2012 实验室、华为云、终端与计算团队联合构建的开源智能体平台 openJiuwen 发布 RSI 原生 AgentOS——RSI（递归自我改进）首次成为操作系统的原生能力：在界面、网关、服务端与智能体执行各环节内置扩展点，覆盖运行全流程，智能体能力不再固定——用户指定功能需求后 Agent 可自行开发对应功能，实现「自由变身」与持续迭代。这是 openJiuwen 继 9 月双维度 RSI 框架、10 月企业级 AgentOS 之后的第三步。",
+      detail: "发布：11 月 13 日前后（openJiuwen 平台，GitHub 组织 openJiuwen-ai 开源）。\n能力：RSI 原生底座——界面/网关/服务端/Agent 执行四层扩展点；用户指定需求，Agent 自行开发功能并持续自我迭代。\n脉络：9 月首发双维度 RSI 框架；10 月开源企业级 AgentOS（蜂群协同+工作流编排）；本次把 RSI 下沉为系统原生层。\n背景：华为 10 月公布「原生智能操作系统」专利（系统级智能体作为 OS 核心服务）；HarmonyOS 7 已引入 Agent 架构，小艺日活 1.8 亿、日均唤醒 30 亿次。\n端侧视角：RSI 从论文概念（递归自我改进）走进操作系统层——「智能体出厂后能力固定」的行业痛点被系统化解决，而持续自我迭代的智能体必然需要贴近用户数据的本地运行环境；华为把 RSI 原生底座开源，等于把「Agent 的进化权」交给开发者生态，与 HarmonyOS 的 1.8 亿小艺日活形成「开源底座+商用终端」的双轨，是国产 AgentOS 路线上迄今最完整的一步。",
+      tags: ["华为", "openJiuwen", "AgentOS", "RSI", "开源"],
+      url: "https://github.com/openJiuwen-ai",
+      image: "images/news/n262.jpg",
+      imageCap: "openJiuwen 开源平台（图源：GitHub）",
+      highlight: false
+    },
+
+{
 id: "n256", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-13",
-      title: "Edge0 开源 145B 端侧模型：稀疏 MoE 每步仅激活约 10B，MacBook Pro 峰值内存 29GB 本地跑、解码 80 token/s",
-      summary: "Edge0 团队发布并开源 145B 参数端侧大模型 Edge0-145B——官方称为全球首个可在个人电脑本地流畅运行的 145B 级模型：稀疏 MoE 架构每推理步仅约 10B 参数参与计算，三级存储流水线（GPU 热专家+系统内存专家库+SSD 词表）令 MacBook Pro 峰值内存仅 29GB、解码超 80 token/s；权重以 NVFP4 量化发布，Day 0 支持 macOS/Windows/Linux 三平台（苹果 M 系+RTX 4090/5090），同步发布 Edge0-120B。",
-      detail: "发布：11 月 13 日（开源权重+推理框架+一键部署工具同步放出）。\n架构：稀疏专家 MoE——每 64 个专家共享两个大矩阵；总参 145B、每推理步仅约 10B 激活。\n工程：三级存储流水线——热专家常驻 GPU、约 40GB 专家库放系统内存、约 48GB 词表数据存 SSD；MacBook Pro 峰值内存 29GB、解码超 80 token/s；上下文 128K-256K。\n生态：NVFP4 量化权重；Day 0 支持 macOS/Windows/Linux（苹果 M 系芯片、RTX 4090/5090）；Terminal-Bench 2.1 得 86.52 分、DeepSWE 1.1 得 64.6 分（官方口径）。\n端侧视角：端侧模型规模纪录再破——此前端侧旗舰停留在 30-35B（麒麟 9050/面壁 35B），Edge0 用「超稀疏 MoE+存储分层」把 145B 总参塞进 29GB 内存，思路与文心 5.5（2800 亿总参激活 140 亿）同源：把「大总参小激活」从厂商定制芯片路线推进到消费级通用硬件路线；若基准可信，「笔记本跑百亿级激活模型」将从演示变成日常。",
+      title: "无界方舟开源 Edge0-145B 端侧模型：稀疏 MoE 每步仅激活约 10B，MacBook Pro 峰值内存 29GB 本地跑、解码 80 token/s",
+      summary: "无界方舟（ArkLab）11 月 12 日开源 145B 参数端侧大模型 Edge0-145B——业界首个可在个人电脑本地流畅运行的 145B 级开源模型：稀疏 MoE 架构每推理步仅约 10B 参数参与计算，三级存储流水线（Latent MoE+预测式专家路由+SSD 权重流式加载）令 MacBook Pro 峰值内存仅 29GB、解码超 80 token/s；权重以 NVFP4 量化在 HuggingFace 开放，配套推理框架与部署工具在 GitHub 开源，Day 0 支持 macOS/Windows/Linux 三平台（苹果 M 系+RTX 4090/5090），同步发布 Edge0-120B。",
+      detail: "发布：11 月 12 日无界方舟（ArkLab）官宣开源（权重+推理框架+一键部署工具同步放出）。\n架构：稀疏专家 MoE——每 64 个专家共享两个大矩阵；总参 145B、每推理步仅约 10B 激活。\n工程：三级存储流水线——热专家常驻 GPU、约 40GB 专家库放系统内存、约 48GB 词表数据存 SSD；核心技术为 Latent MoE、预测式专家路由与 SSD 权重流式传输；MacBook Pro 峰值内存 29GB、解码超 80 token/s；上下文 128K-256K。\n生态：NVFP4 量化权重（HuggingFace）；推理框架与 Edge0 Chat 应用开源（GitHub）；Day 0 支持 macOS/Windows/Linux（苹果 M 系芯片、RTX 4090/5090）；Terminal-Bench 2.1 得 86.52 分、DeepSWE 1.1 得 64.6 分（官方口径）。\n端侧视角：端侧模型规模纪录再破——此前端侧旗舰停留在 30-35B（麒麟 9050/面壁 35B），无界方舟用「超稀疏 MoE+存储分层」把 145B 总参塞进 29GB 内存，思路与文心 5.5（2800 亿总参激活 140 亿）同源：把「大总参小激活」从厂商定制芯片路线推进到消费级通用硬件路线；若基准可信，「笔记本跑百亿级激活模型」将从演示变成日常。",
       tags: ["Edge0", "开源", "145B", "MoE", "本地运行"],
       url: "https://www.sohu.com/a/1101025520_121423427",
       image: "images/news/n256.jpg",
@@ -164,6 +176,18 @@ id: "n244", cat: "AI硬件", source: "三星官方新闻室", date: "2026-11-12"
       url: "https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world",
       image: "images/news/n244.jpg",
       imageCap: "三星 Intelligent Eyewear（图源：三星官方新闻室）",
+      highlight: false
+    },
+
+{
+id: "n261", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-12",
+      title: "CES 2027 创新奖电脑外设类目六款 AI 硬件获奖：端侧「第二大脑」、无线 GPU 算力坞与 AI 代理审批坞上榜",
+      summary: "CES 2027 创新奖名单公布，电脑外设与配件类目罕见地有六件 AI 硬件同时获奖：Relay Q 模块化按键说话硬件（记忆存本地、订阅 15 美元/月）、港科大教授创办的 WiCi One 家用无线 GPU（Wi-Fi 7 向全家设备分发算力、权重分页跑超显存大模型）、PexarBolt Ultra TBT5 扩展坞（可在坞上批准/拒绝 AI 代理的高风险操作）等——AI 外设正在从键鼠配件转向「始终在场的器官」。",
+      detail: "名单：CES 2027 创新奖 Computer Peripherals & Accessories 类目 6 件 AI 硬件（11 月 12 日多方盘点）。\n输入派：Relay Q（前 Nothing AI 负责人许奇创立）——磁吸模块化按键说话硬件，耳语级拾音，记忆存储在用户本地设备（端侧「个人第二大脑」），订阅 15 美元/月、2027 年 1 月发货；Melt Mouse——载荷传感器+触觉反馈的无按键三合一鼠标。\n算力派：WiCi One（港科大助理教授孟子立联合创办）——家用无线 GPU，Wi-Fi 7 向笔记本/手机/机器人/智能眼镜分发算力，RTX 5060 Ti 起步最高 5090、内置 4TB NVMe，「权重分页」跑超显存大模型，Premiere/ComfyUI/Ollama 免改动接入；PexarBolt Ultra（江波龙 PEXAR）——Thunderbolt 5 扩展坞带 5 英寸触控屏，可在坞上批准或拒绝 AI 代理的高风险操作。\n数据派：RocketBox USB Fabric——最多 5 台设备 10Gbps 点对点直连、流量不经外部网络（数据「不出房间」）；CELLTRACE（doubleO）——法律取证 SSD 芯片级读取设备，计划内置端侧小语言模型助手。\n端侧视角：这份名单是端侧 AI 硬件化的年度风向标——算力（无线 GPU 分发）、数据（本地直连不出房间）、交互（本地记忆的第二大脑）、治理（物理按键审批 AI 代理）四个维度都有独立产品获奖；「外设」正在变成 AI 的物理器官层，键鼠大厂缺席而 AI 创企包场，定义权已经易主。",
+      tags: ["CES 2027", "AI外设", "创新奖", "第二大脑", "无线GPU"],
+      url: "https://www.163.com/dy/article/LBI1OR4V0556CAYF.html",
+      image: "images/news/n261.jpg",
+      imageCap: "CES 2027 创新奖 AI 外设（图源：网易/AING硬迹）",
       highlight: false
     },
 
