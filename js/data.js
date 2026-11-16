@@ -15,14 +15,26 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 48 期",
-    weekRange: "2026.11.09 — 11.15 · 近 7 天",
-    updated: "2026-11-15",
+    weekRange: "2026.11.10 — 2026.11.16 · 近 7 天",
+    updated: "2026-11-16",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：端侧 AI 的「交付周」——苹果 HomeView 家庭中枢 299 美元开售、大众 ID.ERA 5X 以 9.99 万元把豆包 2.0 座舱+联发科 8676+征程 6H 双端侧芯片打成标配、三星 AI 眼镜 395 美元开启预售（12 月 10 日韩美上市）。格局层剧震：黄仁勋辞任英伟达 CEO（Kress 临时接任），OpenAI 解散机器人团队押注 GPT-6 Astra 直接当大脑。技术面：Edge0 开源 145B 端侧模型（笔记本本地跑、峰值内存 29GB），全双工语音一周三发（混元 Hy Realtime/Higgs/GPT-Live-1），麒麟 9050 连续披露新马良 GPU 与 AI ISP，北京具身三年方案与韩国 8002 亿韩元端侧芯片路线图同周落地；华为星芒 AI 子品牌官宣、Mate X8 预热、MateBook Fold S 预订，小米 18 Pro 背屏首批适配 Gemini（11 月 18 日香港发布）。\n今日新增：华为 Mate X8 外观公布、小米 18 Pro 背屏适配 Gemini、无界方舟开源 Edge0-145B、OpenAI 具身智能团队重组、韩国端侧 AI 半导体路线图、CES 2027 创新奖六款 AI 外设、华为系 openJiuwen 发布 RSI 原生 AgentOS（第 47 期快照同日归档）。"
+    editorsNote: "近 7 天聚焦：端侧 AI 的「交付周」——苹果 HomeView 家庭中枢 299 美元开售、大众 ID.ERA 5X 以 9.99 万元把豆包 2.0 座舱+联发科 8676+征程 6H 双端侧芯片打成标配、三星 AI 眼镜 395 美元开启预售（12 月 10 日韩美上市）。格局层剧震：黄仁勋辞任英伟达 CEO（Kress 临时接任），OpenAI 解散机器人团队押注 GPT-6 Astra 直接当大脑。技术面：Edge0 开源 145B 端侧模型（笔记本本地跑、峰值内存 29GB），全双工语音一周三发（混元 Hy Realtime/Higgs/GPT-Live-1），麒麟 9050 连续披露新马良 GPU 与 AI ISP，北京具身三年方案与韩国 8002 亿韩元端侧芯片路线图同周落地；华为星芒 AI 子品牌官宣、Mate X8 预热、MateBook Fold S 预订，小米 18 Pro 背屏首批适配 Gemini（11 月 18 日香港发布）。\n今日新增：无界方舟开源 Edge0-145B、OpenAI 具身智能团队重组、韩国端侧 AI 半导体路线图、CES 2027 创新奖六款 AI 外设、华为系 openJiuwen RSI 原生 AgentOS、llama.cpp v1.0、厨房 AI 硬件 Trepo、阿里 Qwen4-Max 上线（2.4 万亿总参、后续小尺寸陆续开源）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+id: "n265", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-16",
+      title: "阿里 Qwen4-Max 正式上线：总参 2.4 万亿、每 token 激活约 71B、原生视觉+百万上下文，官宣后续小尺寸模型陆续开源",
+      summary: "阿里通义千问 Qwen4-Max 正式上线——总参数量 2.4 万亿（每 token 激活约 71B，另带 328B N-gram Embedding 参数），基于 Qwen4 系列全新架构，原生视觉能力、百万 token 上下文，主打专业工具运用与长程任务执行；预览版已接入千问办公、Qoder、千问 APP、QwenStudio 与阿里云百炼。官方明确 Max 只是 Qwen4 系列第一款，后续小尺寸模型将陆续开源（与 Max 同源技术路线与训练积累）。",
+      detail: "上线：11 月 16 日正式上线（预览版此前已接入千问办公/Qoder/千问 APP/QwenStudio/百炼 Token Plan）。\n规格：总参 2.4 万亿——每 token 激活约 71B+328B N-gram Embedding 参数；Qwen4 全新架构；原生视觉；百万 token 上下文。\n定位：专业工具运用+长程任务执行；任务成本较上代降低超 60%（官方口径）。\n开源：官方明确后续小尺寸模型陆续开源——同源技术路线与训练、对齐积累，针对小模型擅长场景做取舍。\n端侧视角：2.4 万亿总参激活 71B 的「超大总参+稀疏激活」是当前最激进的稀疏比（约 1/34）——与文心 5.5（1/20）、Edge0（1/14）同一技术方向的旗舰上限；真正的端侧悬念在小尺寸开源档：官方承诺同源路线意味着蒸馏/量化端侧版将继承 Max 的能力下限，「11 月端侧基座竞赛」（文心 5.5 开源 11 月 25 日、面壁 35B、麒麟 9050 30B）即将迎来 Qwen4 系列参战。",
+      tags: ["阿里", "Qwen4-Max", "2.4万亿", "开源预告", "稀疏激活"],
+      url: "https://m.sohu.com/a/1102096678_384789",
+      image: "images/news/n265.jpg",
+      imageCap: "Qwen4-Max 上线（图源：搜狐科技）",
+      highlight: false
+    },
+
 {
 id: "n259", cat: "手机厂商", source: "ezone/小米", date: "2026-11-15",
       title: "小米 18 Pro 海外公布背屏适配：谷歌地图、Spotify、Gemini 等首批支持，11 月 18 日香港发布",
@@ -45,7 +57,7 @@ id: "n258", cat: "手机厂商", source: "搜狐科技", date: "2026-11-15",
       image: "images/news/n258.jpg",
       imageCap: "华为 Mate X8 外观（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n250", cat: "芯片厂商", source: "IT之家", date: "2026-11-14",
@@ -60,6 +72,30 @@ id: "n250", cat: "芯片厂商", source: "IT之家", date: "2026-11-14",
     },
 
 {
+id: "n264", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-13",
+      title: "前特斯拉 Cybertruck 工程师创业做厨房助手硬件 Trepo：99 美元磁吸冰箱，视觉+旋钮+语音打通库存、菜谱与购物清单",
+      summary: "YC 2026 秋季批次创企 Trepo 推出首款厨房智能硬件 Kitchen Assistant——预售价 99 美元、磁吸冰箱门的桌面设备，配备朝下视觉摄像头、实体旋转旋钮与麦克风：扫购物小票、拍冰箱或把食材放到摄像头下即自动录入库存，系统按现有食材推荐菜谱并标注已有/缺少项，一键生成全家实时共享的购物清单——把「有什么食材、做什么饭、缺什么买」打通成闭环，做饭全程不用碰手机。",
+      detail: "产品：Kitchen Assistant（YC 2026 秋季批次 Trepo），11 月 13 日报道，预售价 99 美元；基础功能免费，Food Club 订阅 9.99 美元/月（预售赠 3 个月）。\n团队：前特斯拉高级电子设计工程师（Cybertruck）与前品牌营销负责人联合创立。\n交互：磁吸壁挂不占台面；朝下摄像头扫码识别食材、语音按键录购物项、轻扫空包装自动补清单、实体旋钮逐步看菜谱——适配双手沾油的做饭场景。\n闭环：库存管理（保质期追踪/剩菜提醒）→食谱匹配（短视频/网页/纸质菜谱导入，去广告只留清单与步骤）→全家共享购物清单（按商超分类排序）。\n端侧视角：AI 硬件正在渗透厨房动线——摄像头视觉识别+语音+实体旋钮的组合把「记录」拆解进拆快递、做饭、扔空瓶的自然动作，与 CES 获奖外设同向（AI 从屏幕走向物理器官）；饮食 AI 硬件已分化出餐盘识别（Odysslife）与食材端全流程（Trepo）两条路线，家庭场景的端侧 AI 入口竞争开始颗粒度细化。",
+      tags: ["Trepo", "厨房助手", "AI硬件", "视觉识别", "YC"],
+      url: "https://www.163.com/dy/article/LBL879B60556CAYF.html",
+      image: "images/news/n264.jpg",
+      imageCap: "Trepo Kitchen Assistant（图源：网易/AING硬迹）",
+      highlight: false
+    },
+
+{
+id: "n263", cat: "行业关注事件", source: "llama.cpp 官方/HF", date: "2026-11-13",
+      title: "llama.cpp 发布 v1.0.0：诞生三年半首个正式大版本，语义化版本+稳定 API 承诺，ggml 同步 1.0",
+      summary: "端侧推理事实标准 llama.cpp 发布 v1.0.0（与底层张量库 ggml v1.0.0 同步）——项目诞生约三年半后的首个正式大版本：从递增构建号（b4xxx）转向语义化版本，不兼容的公开 C API/ABI 变更对应主版本升级，并向下游承诺稳定 API；官方口径支持 150+ 种模型架构与多平台后端，为本地 AI 生态的集成与二次开发打下更坚实的基础。",
+      detail: "发布：11 月 13 日 v1.0.0（GitHub Releases+官方博客），底层张量库 ggml v1.0.0 同发。\n核心：语义化版本（semver）——从不透明构建号转为主版本/次版本/修订号规则，下游开发者可清晰预判何时需要修改集成代码。\n承诺：稳定 API——端侧推理生态的集成成本从「追构建号」变为「按版本契约」。\n体量：150+ 种模型架构支持、多平台后端（官方口径）。\n端侧视角：llama.cpp 是端侧推理的事实标准（桌面/移动/嵌入式的默认起点之一），1.0 的意义不在新功能而在「契约化」——语义化版本+稳定 API 让各类客户端与硬件厂商的集成从跟随式适配升级为版本化管理；本地 AI 生态从快速堆功能期进入承诺兼容期，是端侧推理基础设施成年的一步。",
+      tags: ["llama.cpp", "ggml", "端侧推理", "开源", "1.0"],
+      url: "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      image: "images/news/n263.jpg",
+      imageCap: "llama.cpp（图源：GitHub）",
+      highlight: false
+    },
+
+{
 id: "n262", cat: "端侧Agent", source: "openJiuwen/GitHub", date: "2026-11-13",
       title: "华为系开源平台 openJiuwen 发布 RSI 原生 AgentOS：递归自我改进做进系统底座，智能体可「自由变身」持续迭代",
       summary: "由华为 2012 实验室、华为云、终端与计算团队联合构建的开源智能体平台 openJiuwen 发布 RSI 原生 AgentOS——RSI（递归自我改进）首次成为操作系统的原生能力：在界面、网关、服务端与智能体执行各环节内置扩展点，覆盖运行全流程，智能体能力不再固定——用户指定功能需求后 Agent 可自行开发对应功能，实现「自由变身」与持续迭代。这是 openJiuwen 继 9 月双维度 RSI 框架、10 月企业级 AgentOS 之后的第三步。",
@@ -69,7 +105,7 @@ id: "n262", cat: "端侧Agent", source: "openJiuwen/GitHub", date: "2026-11-13",
       image: "images/news/n262.jpg",
       imageCap: "openJiuwen 开源平台（图源：GitHub）",
       highlight: false
-    },
+    },,
 
 {
 id: "n256", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-13",
@@ -81,7 +117,7 @@ id: "n256", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-13",
       image: "images/news/n256.jpg",
       imageCap: "Edge0-145B 端侧模型（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n255", cat: "行业关注事件", source: "凤凰科技/财富", date: "2026-11-13",
@@ -93,7 +129,7 @@ id: "n255", cat: "行业关注事件", source: "凤凰科技/财富", date: "202
       image: "images/news/n255.jpg",
       imageCap: "OpenAI 具身智能团队重组（图源：凤凰科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n254", cat: "端侧Agent", source: "IT之家/Cloudflare", date: "2026-11-13",
@@ -105,7 +141,7 @@ id: "n254", cat: "端侧Agent", source: "IT之家/Cloudflare", date: "2026-11-13
       image: "images/news/n254.jpg",
       imageCap: "Kitesurf 智能体浏览器（图源：IT之家）",
       highlight: false
-    },
+    },,
 
 {
 id: "n253", cat: "行业动态", source: "新华网/腾讯新闻", date: "2026-11-13",
@@ -117,7 +153,7 @@ id: "n253", cat: "行业动态", source: "新华网/腾讯新闻", date: "2026-1
       image: "images/news/n253.jpg",
       imageCap: "大众 ID.ERA 5X（图源：腾讯新闻）",
       highlight: false
-    },
+    },,
 
 {
 id: "n252", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-13",
@@ -129,7 +165,7 @@ id: "n252", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-13",
       image: "images/news/n252.jpg",
       imageCap: "混元 Hy Realtime（图源：凤凰科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n251", cat: "AI硬件", source: "凤凰科技", date: "2026-11-13",
@@ -141,7 +177,7 @@ id: "n251", cat: "AI硬件", source: "凤凰科技", date: "2026-11-13",
       image: "images/news/n251.jpg",
       imageCap: "HomeView 与 Apple TV 4K 开售（图源：凤凰科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n243", cat: "行业关注事件", source: "北京市经信局", date: "2026-11-13",
@@ -153,7 +189,7 @@ id: "n243", cat: "行业关注事件", source: "北京市经信局", date: "2026
       image: "images/news/n243.jpg",
       imageCap: "人形机器人运动会拳击赛现场（图源：北京市经信局官网）",
       highlight: false
-    },
+    },,
 
 {
 id: "n248", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-12",
@@ -165,7 +201,7 @@ id: "n248", cat: "大模型厂商", source: "Google 官方博客", date: "2026-1
       image: "images/news/n248.jpg",
       imageCap: "Gemini 4 Hydrogen 发布（图源：Google 官方博客）",
       highlight: false
-    },
+    },,
 
 {
 id: "n244", cat: "AI硬件", source: "三星官方新闻室", date: "2026-11-12",
@@ -177,7 +213,7 @@ id: "n244", cat: "AI硬件", source: "三星官方新闻室", date: "2026-11-12"
       image: "images/news/n244.jpg",
       imageCap: "三星 Intelligent Eyewear（图源：三星官方新闻室）",
       highlight: false
-    },
+    },,
 
 {
 id: "n261", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-12",
@@ -189,7 +225,7 @@ id: "n261", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-12",
       image: "images/news/n261.jpg",
       imageCap: "CES 2027 创新奖 AI 外设（图源：网易/AING硬迹）",
       highlight: false
-    },
+    },,
 
 {
 id: "n257", cat: "芯片厂商", source: "腾讯新闻", date: "2026-11-12",
@@ -201,7 +237,7 @@ id: "n257", cat: "芯片厂商", source: "腾讯新闻", date: "2026-11-12",
       image: "images/news/n257.jpg",
       imageCap: "韩国端侧 AI 半导体路线图（图源：腾讯新闻）",
       highlight: false
-    },
+    },,
 
 {
 id: "n242", cat: "行业关注事件", source: "英伟达官方/智东西", date: "2026-11-12",
@@ -213,7 +249,7 @@ id: "n242", cat: "行业关注事件", source: "英伟达官方/智东西", date
       image: "images/news/n242.jpg",
       imageCap: "英伟达 CEO 交接公告（图源：英伟达官方新闻室）",
       highlight: true
-    },
+    },,
 
 {
 id: "n239", cat: "行业关注事件", source: "凤凰网", date: "2026-11-12",
@@ -225,7 +261,7 @@ id: "n239", cat: "行业关注事件", source: "凤凰网", date: "2026-11-12",
       image: "images/news/n239.jpg",
       imageCap: "百度世界 2026 李彦宏演讲（图源：红星新闻）",
       highlight: true
-    },
+    },,
 
 {
 id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
@@ -237,7 +273,7 @@ id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
       image: "images/news/n236.jpg",
       imageCap: "国产 GPU 底座×机器人场景生态（图源：搜狐财经）",
       highlight: false
-    },
+    },,
 
 {
 id: "n246", cat: "端侧Agent", source: "钜亨网/BlockBeats", date: "2026-11-11",
@@ -249,7 +285,7 @@ id: "n246", cat: "端侧Agent", source: "钜亨网/BlockBeats", date: "2026-11-1
       image: "images/news/n246.jpg",
       imageCap: "QVAC 手机端智能体界面（图源：Tether/Wired）",
       highlight: false
-    },
+    },,
 
 {
 id: "n245", cat: "芯片厂商", source: "新浪科技", date: "2026-11-11",
@@ -261,7 +297,7 @@ id: "n245", cat: "芯片厂商", source: "新浪科技", date: "2026-11-11",
       image: "images/news/n245.jpg",
       imageCap: "RTX Spark AI PC 芯片平台（图源：英伟达官网）",
       highlight: false
-    },
+    },,
 
 {
 id: "n240", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-11",
@@ -273,7 +309,7 @@ id: "n240", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-11",
       image: "images/news/n240.jpg",
       imageCap: "文心 5.5 Flash Preview 发布（图源：智东西）",
       highlight: false
-    },
+    },,
 
 {
 id: "n235", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
@@ -285,7 +321,7 @@ id: "n235", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
       image: "images/news/n235.png",
       imageCap: "aiXcompact-4B 成本对比（图源：智东西）",
       highlight: false
-    },
+    },,
 
 {
 id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
@@ -297,7 +333,7 @@ id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
       image: "images/news/n234.jpg",
       imageCap: "Claude Whiteboards/Sheets/Data 发布（图源：36氪）",
       highlight: false
-    },
+    },,
 
 {
 id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11-11",
@@ -309,7 +345,7 @@ id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11
       image: "images/news/n233.png",
       imageCap: "MiniCPM-V 4.7 端侧演示（图源：OpenBMB）",
       highlight: false
-    },
+    },,
 
 {
 id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
@@ -321,7 +357,7 @@ id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
       image: "images/news/n228.jpg",
       imageCap: "Claris Harbor 应用（图源：IT之家）",
       highlight: true
-    },
+    },,
 
 {
 id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
@@ -333,7 +369,7 @@ id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
       image: "images/news/n224.png",
       imageCap: "Qwen4 预览版上线（图源：IT之家）",
       highlight: false
-    },
+    },,
 
 {
 id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
@@ -345,7 +381,7 @@ id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
       image: "images/news/n222.png",
       imageCap: "麒麟 9050 系列官方详解（图源：凤凰网）",
       highlight: true
-    },
+    },,
 
 {
 id: "n247", cat: "AI硬件", source: "腾讯新闻/财联社", date: "2026-11-10",
@@ -357,7 +393,7 @@ id: "n247", cat: "AI硬件", source: "腾讯新闻/财联社", date: "2026-11-10
       image: "images/news/n247.jpg",
       imageCap: "苹果 AirPods 产品线（图源：Apple 官网，非传闻产品渲染）",
       highlight: false
-    },
+    },,
 
 {
 id: "n241", cat: "手机厂商", source: "Google 官方", date: "2026-11-10",
@@ -369,7 +405,7 @@ id: "n241", cat: "手机厂商", source: "Google 官方", date: "2026-11-10",
       image: "images/news/n241.jpg",
       imageCap: "2026 年 11 月 Pixel Drop（图源：Google 官方博客）",
       highlight: false
-    },
+    },,
 
 {
 id: "n232", cat: "AI硬件", source: "亚马逊官方", date: "2026-11-10",
@@ -381,7 +417,7 @@ id: "n232", cat: "AI硬件", source: "亚马逊官方", date: "2026-11-10",
       image: "images/news/n232.png",
       imageCap: "Ring Drone Cam 与 Rover Cam（图源：亚马逊官方）",
       highlight: false
-    },
+    },,
 
 {
 id: "n231", cat: "行业动态", source: "IT之家", date: "2026-11-10",
@@ -393,7 +429,7 @@ id: "n231", cat: "行业动态", source: "IT之家", date: "2026-11-10",
       image: "images/news/n231.png",
       imageCap: "KORA OS 界面（图源：IT之家）",
       highlight: false
-    },
+    },,
 
 {
 id: "n230", cat: "大模型厂商", source: "DeepMind 官方", date: "2026-11-10",
@@ -405,7 +441,7 @@ id: "n230", cat: "大模型厂商", source: "DeepMind 官方", date: "2026-11-10
       image: "images/news/n230.webp",
       imageCap: "Apollo 2 在奔驰产线执行分拣（图源：Google DeepMind）",
       highlight: true
-    },
+    },,
 
 {
 id: "n229", cat: "行业动态", source: "腾讯新闻", date: "2026-11-10",
@@ -417,7 +453,7 @@ id: "n229", cat: "行业动态", source: "腾讯新闻", date: "2026-11-10",
       image: "images/news/n229.jpg",
       imageCap: "《物联网设备模型技术白皮书》发布（图源：腾讯新闻）",
       highlight: false
-    },
+    },,
 
 {
 id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
@@ -429,7 +465,7 @@ id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
       image: "images/news/n221.jpg",
       imageCap: "MateBook Fold S 三色外观（图源：IT之家）",
  highlight: false
-    },
+    },,
 
 {
 id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
@@ -441,7 +477,7 @@ id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
       image: "images/news/n220.jpg",
       imageCap: "影目 INMO AIR3 召回（图源：IT之家）",
       highlight: false
-    },
+    },,
 
 {
 id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
@@ -453,7 +489,7 @@ id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
       image: "images/news/n219.png",
       imageCap: "LingBot-Touch 触觉基础模型（图源：IT之家）",
       highlight: false
-    },
+    },,
 
 {
 id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
@@ -466,67 +502,6 @@ id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
       imageCap: "智元 WITA-Omni 发布（图源：IT之家）",
       highlight: true
     },
-
-{
-id: "n227", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-09",
-      title: "Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2 双旗舰：智能体编码基准 49.1% 超 GPT-6 Astra，API 降价 20%",
-      summary: "Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2 双旗舰——官方称在测试过的几乎所有能力上比 Opus 5.5 强一档：智能体编码基准 FrontierCode 2.0 得分 49.1%（GPT-6 Astra 为 42.8%），第三方对比显示共有基准全面领先且单价更低；输出速度较 5.1 提升最多 30%。API 价格下调 20%（输入 8 美元/百万 token、输出 40 美元），可选双倍价格开启 2.5 倍速输出。",
-      detail: "发布：11 月 9 日（凤凰科技/Datacamp/IT之家多源，候选库 dom=2）。\n性能：几乎所有能力较 Opus 5.5 强一档；FrontierCode 2.0 智能体编码 49.1% vs GPT-6 Astra 42.8%；Datacamp 对比共有基准全面领先且单 token 价格更低。\n速度：输出较 5.1 最多提升 30%。\n价格：API 下调 20%——输入 8 美元/百万 token、输出 40 美元；双倍价（16/80 美元）开 2.5 倍速输出；实测提醒：模型变聪明后单任务 token 消耗可能上升，实际成本未必更省。\n订阅：Max/Ultra 赠 Fable reset，Pro 发布当周可用。\n端侧视角：榜首易主+降价 20% 是云端 Agent 战争白热化的信号——编码智能体基准的大幅领先会直接抬高「云端执行+端侧编排」混合架构中云端的承接份额；对端侧的反向压力在于：当云端旗舰每 token 更便宜更聪明，端侧模型的价值锚点必须继续压在隐私、离线与延迟上，而非单纯算力性价比。",
-      tags: ["Anthropic", "Claude Fable", "Mythos", "智能体编码", "旗舰模型"],
-      url: "https://tech.ifeng.com/c/8xwEBlk190G",
-      image: "images/news/n227.jpg",
-      imageCap: "Claude Fable 5.2 发布（图源：凤凰科技）",
-      highlight: false
-    },
-
-{
-id: "n226", cat: "大模型厂商", source: "TechCrunch", date: "2026-11-09",
-      title: "Meta 开源发布 Muse Ember：迄今最小多模态模型专攻 Agent 执行，1M 上下文、每百万输入 Token 仅 0.1 美元",
-      summary: "Meta 超级智能实验室发布 Muse Ember——迄今最小、最省成本的多模态模型，专为高吞吐 Agent 工作流执行设计（编码子任务、工具调用、文档摘要）：100 万 token 上下文窗口，定价每百万输入 token 仅 0.1 美元（约合每任务 0.14 美元），Apache 开源协议。与 Muse Glimmer 30B（端侧智能体）、Muse Spark 1.1（多模态推理）构成 Muse 家族三档。",
-      detail: "发布：11 月 9 日（TechCrunch/MarkTechPost 多源，候选库 dom=2）。\n定位：Meta 最小多模态模型——高吞吐 agent 执行（编码子任务/工具调用/文档摘要），非推理主力。\n指标：1M token 上下文；Artificial Analysis 36 分；约 0.14 美元/任务。\n价格：0.1 美元/百万输入 token——迄今最省。\n协议：Apache 开源。\n家族：Muse Glimmer 30B（端侧智能体、即将上智能眼镜）+Muse Spark 1.1（推理）+Ember（执行）三档成型。\n端侧视角：Muse 家族完成了「端侧 Glimmer-云端 Spark-廉价执行 Ember」的全栈分工——Ember 的超低价+开源把 Agent 执行层的边际成本压到可忽略，为端侧 Agent 的「本地编排+云端执行」混合架构提供了经济底座；若 Ember 尺寸后续下放到端侧可跑档位，将成为端侧 Agent 执行引擎的直接候选。",
-      tags: ["Meta", "Muse Ember", "Agent模型", "开源", "轻量化"],
-      url: "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution",
-      image: "images/news/n226.png",
-      imageCap: "Meta Muse Ember（图源：TechCrunch）",
-      highlight: false
-    },
-
-{
-id: "n216", cat: "AI硬件", source: "Gentle Monster 官网", date: "2026-11-09",
-      title: "Gentle Monster 首款 AI 眼镜定档：携手谷歌与三星、搭载 Gemini，11 月 12 日美国开启预订",
-      summary: "时尚眼镜巨头 Gentle Monster 首款 AI 智能眼镜定档——由 Gentle Monster 携手 Google 与 Samsung 打造，基于 Android XR 平台并搭载 Gemini：支持语音与文字实时翻译、智能导航、语音助手、环境感知与视觉信息识别及拍照抓拍，兼容 Android 与 iOS 设备。11 月 12 日在美国开启预订、12 月正式发售。",
-      detail: "定档：官网 Intelligent Eyewear 页面确认 11 月 12 日美国预订、12 月发售（多源报道，候选库 rep=2）。\n配置：Android XR 平台+Google Gemini；实时翻译（语音/文字）、智能导航、语音助手、环境感知辅助、视觉识别、拍照抓拍。\n兼容：Android 与 iOS 双生态。\n格局：与三星 Intelligent Eyewear、Warby Parker 首款眼镜同在 11 月 12 日开订——Android XR 生态第一波三款眼镜集体登陆美国市场。\n端侧视角：Android XR 首波采用「科技巨头出平台、时尚品牌出形态」的分工——Gentle Monster 把 AI 眼镜做进潮流光学渠道，与三星电子渠道、Warby Parker 眼镜直销渠道三线并进；12 月假日季交付意味着 Gemini 眼镜侧分发正式与 Meta 系正面争夺百镜大战的生态位。",
-      tags: ["Gentle Monster", "AI眼镜", "Android XR", "Gemini", "谷歌"],
-      url: "https://www.gentlemonster.com/int/zh-CN/intelligent-eyewear",
-      image: "images/news/n216.jpg",
-      imageCap: "Gentle Monster Intelligent Eyewear（图源：官网）",
-      highlight: false
-    },
-
-{
-id: "n215", cat: "行业动态", source: "IT之家", date: "2026-11-09",
-      title: "微信鸿蒙版安装量超 9000 万次：HarmonyOS 终端用户本月预计突破 1 亿大关",
-      summary: "微信鸿蒙版 App 安装量已超过 9000 万次，华为 HarmonyOS 终端用户数预计本月突破 1 亿大关——鸿蒙生态完成国民级应用全量迁移后进入亿级用户规模区间，纯血鸿蒙的端侧 AI 服务（小艺智能体、系统级 AI 能力）随之获得亿级设备底座。",
-      detail: "数据：11 月 9 日报道（IT之家，华为官方口径）——微信鸿蒙版安装量超 9000 万次；HarmonyOS 终端用户数预计本月突破 1 亿。\n节点：鸿蒙 5 发布约一年完成国民应用全量原生迁移，终端规模站上亿级门槛。\n端侧视角：亿级终端是端侧 AI 分发的规模分水岭——系统级智能体（小艺）与第三方应用的端侧 AI 能力从此拥有与 iOS/安卓第三极对等的设备基数；配合本月华为 Mate X8（麒麟 9050 Pro 端侧大模型）预热，鸿蒙的端侧 AI 叙事从「生态补课」转入「规模兑现」。",
-      tags: ["鸿蒙", "微信", "HarmonyOS", "终端生态", "亿级用户"],
-      url: "https://www.ithome.com/1/024/099.htm",
-      image: "images/news/n215.jpg",
-      imageCap: "微信鸿蒙版安装量突破 9000 万（图源：IT之家）",
-      highlight: false
-    },
-
-{
-id: "n214", cat: "端侧Agent", source: "量子位", date: "2026-11-09",
-      title: "阿里发布千问办公 2.0：从个人助手升级 Team Agent，首个支持多人与 Agent 协作",
-      summary: "阿里巴巴发布千问办公 2.0——定位从个人 AI 助手升级为面向个人与组织协作的 Team Agent，上线首个支持多人与 Agent 协作的「协作」功能：数字员工（Agent）可带入工作群，实时关联钉钉群聊、听记、表格与文档作为协作上下文，支持多会话并行与任务指派。同步上线人机共创、主动自动任务、资料空间与三端互联等能力。",
-      detail: "发布：11 月 9 日官方公众号 14:22 发文《主动与协同，迈向 Team Agent 时代》（量子位/凤凰科技/IT之家多源，候选库 dom=2 rep=6）。\n协作：数字员工小Q 入群，多人+多 Agent 在共同上下文工作——群聊、听记、表格、文档实时关联；多会话并行、任务指派。\n升级：人机共创、自动任务（Agent 主动执行）、资料空间、三端互联。\n背景：千问办公 8 月上线 1.0 打磨个人 Agent 能力；企业需求从「告诉我怎么做」转向「帮我把它做完」。\n端侧视角：Agent 产品竞争从单兵效率转向团队协作上下文——谁能把组织知识流（群聊/文档/表格）接进 Agent 工作记忆，谁就拿到办公场景的入口；与 Kimi Hosted Agents（云端托管）同周看，「团队级 Agent」正在成为国产 Agent 产品的集体下一站。",
-      tags: ["千问办公", "Team Agent", "智能体协作", "阿里巴巴", "数字员工"],
-      url: "https://www.qbitai.com/2026/11/508694.html",
-      image: "images/news/n214.png",
-      imageCap: "千问办公 2.0 官方发布原文（图源：千问办公公众号）",
-      highlight: true
-    },
-
   ],
 papers: [
     {
