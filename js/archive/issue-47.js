@@ -433,6 +433,18 @@ id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
     },
 
 {
+id: "n272", cat: "行业关注事件", source: "Adobe 官方/路透", date: "2026-11-09",
+      title: "Adobe×迪士尼达成多年 AI 联盟：基于 Firefly Foundry 为迪士尼 IP 定制生成模型，同步扩展端侧 AI 能力",
+      summary: "迪士尼与 Adobe 宣布多年期 AI 联盟——以 Adobe Firefly Foundry 企业平台为核心，为迪士尼的 IP 与虚构世界联合开发定制生成式 AI 模型（商业化安全、以人为本），Adobe 同时宣布扩展端侧 AI 能力；Adobe 还成为迪士尼影业 StudioLAB 创新合作伙伴，与迪士尼创意及技术团队在 AI 叙事上协作。目标是让 AI 在迪士尼制作管线中规模化落地，同时保持模型私有并专门基于迪士尼 IP 库训练。",
+      detail: "官宣：11 月 9 日（Adobe Newsroom+路透双源）。\n核心：Firefly Foundry——企业级私有定制模型构建平台；迪士尼基于自有 IP 与角色训练定制生成模型。\n端侧：Adobe 同步宣布扩展端侧 AI 能力（on-device AI expansion），与定制模型并行。\n合作：Adobe 成为华特迪士尼影业 StudioLAB 创新合作伙伴。\n端侧视角：内容工业的「私有模型+端侧部署」组合样本——大厂定制模型不走公开 API 而走 Foundry 私有化，配合端侧 AI 扩展意味着创作者工作流（Adobe 全家桶）将把推理搬到本地；IP 安全（模型只在自己的资产上训练）是创意行业采用端侧 AI 的核心动机，与苹果 HomeView 的隐私叙事同构——「数据不出域」正在成为巨头共识。",
+      tags: ["Adobe", "迪士尼", "Firefly", "定制模型", "端侧AI"],
+      url: "https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance",
+      image: "images/news/n272.jpg",
+      imageCap: "Adobe×迪士尼 AI 联盟（图源：Adobe Newsroom）",
+      highlight: false
+    },
+
+{
 id: "n227", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-09",
       title: "Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2 双旗舰：智能体编码基准 49.1% 超 GPT-6 Astra，API 降价 20%",
       summary: "Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2 双旗舰——官方称在测试过的几乎所有能力上比 Opus 5.5 强一档：智能体编码基准 FrontierCode 2.0 得分 49.1%（GPT-6 Astra 为 42.8%），第三方对比显示共有基准全面领先且单价更低；输出速度较 5.1 提升最多 30%。API 价格下调 20%（输入 8 美元/百万 token、输出 40 美元），可选双倍价格开启 2.5 倍速输出。",
