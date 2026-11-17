@@ -34,20 +34,22 @@
 | 2026-11-11 | [Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy：基于 Qwen3.5 架构、手机本地运行，工具调用胜 2.5B 级](https://m.cnyes.com/news/id/6659587) | 钜亨网/BlockBeats |
 | 2026-11-11 | [AI 巨头桌面端开战：Claude 推 Whiteboards 等 AI 办公全家桶直挑微软，谷歌同日上线 Gemini 新旗舰+复刻 OpenCode 桌面应用](https://m.36kr.com/p/4064780118463617) | 36氪 |
 
-### AI硬件（5 条）
+### AI硬件（6 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-16 | [KTC 推出 VMAX 全感知智能体主机：分体式设计配磁吸随行屏，视觉音频与会议大模型全部本地运行](https://finance.sina.com.cn/tech/digi/2026-11-16/doc-iniyxpxc5961362.shtml) | 新浪财经/搜狐 |
 | 2026-11-16 | [苹果首款智能眼镜轮廓渐清：古尔曼称 2027 年 6 月发布、Siri 成主要交互，设计首曝](https://www.sohu.com/a/1102293477_223764) | 搜狐科技/彭博 |
 | 2026-11-13 | [前特斯拉 Cybertruck 工程师创业做厨房助手硬件 Trepo：99 美元磁吸冰箱，视觉+旋钮+语音打通库存、菜谱与购物清单](https://www.163.com/dy/article/LBL879B60556CAYF.html) | 网易/AING硬迹 |
 | 2026-11-13 | [苹果 HomeView 与新 Apple TV 4K 正式开售：299 美元家庭中枢上市，苹果 AI 硬件进入交付期](https://tech.ifeng.com/c/8xz8XFlXHz2) | 凤凰科技 |
 | 2026-11-12 | [CES 2027 创新奖电脑外设类目六款 AI 硬件获奖：端侧「第二大脑」、无线 GPU 算力坞与 AI 代理审批坞上榜](https://www.163.com/dy/article/LBI1OR4V0556CAYF.html) | 网易/AING硬迹 |
 | 2026-11-12 | [三星首款 AI 眼镜 Intelligent Eyewear 开启预售：395 美元起、41 克无屏设计，12 月 10 日韩美上市](https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world) | 三星官方新闻室 |
 
-### 芯片厂商（5 条）
+### 芯片厂商（6 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-16 | [英伟达推出 DGX Spark HPC 开发套件：4 节点环形集群、512GB 统一内存，桌面本地跑 7000 亿参数模型](https://www.ithome.com/1/028/023.htm) | IT之家/NVIDIA |
 | 2026-11-14 | [华为再披露麒麟 9050 细节：新马良 GPU 性能提升 40%、二代硬件光追，AI ISP 首次实现 2 亿像素融合拍](https://www.ithome.com/1/027/181.htm) | IT之家 |
 | 2026-11-12 | [韩国公布端侧 AI 半导体路线图：项目总额 8002 亿韩元，2030 年前完成 10 款芯片开发验证](https://news.qq.com/rain/a/20261112A0BJJT00) | 腾讯新闻 |
 | 2026-11-12 | [优必选×沐曦合资芯片公司曦选创智完成 5 亿元天使轮：估值 40 亿元，首颗芯片对标英伟达 Thor、2028 年量产](http://news.10jqka.com.cn/20261112/c681759273.shtml) | 同花顺财经 |

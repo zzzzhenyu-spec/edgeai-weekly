@@ -60,6 +60,30 @@ id: "n274", cat: "行业关注事件", source: "凤凰科技/Trajectory Labs", d
     },
 
 {
+id: "n279", cat: "AI硬件", source: "新浪财经/搜狐", date: "2026-11-16",
+      title: "KTC 推出 VMAX 全感知智能体主机：分体式设计配磁吸随行屏，视觉音频与会议大模型全部本地运行",
+      summary: "显示器厂商 KTC 推出创新分体式 AI 主机 VMAX——基于 Windows 迷你主机，整合云台摄像头、阵列麦克风与磁吸可拆卸的 VMAX GO 随行屏；主机本地集成视觉算法、音频算法、对话及会议纪要大模型，主打全本地 AI 能力。随行屏接驳主机时作为管理与操作界面，单独携带时变身便携录音副屏——支持远程语音指令下发，离线状态下也能独立采集音频信息。",
+      detail: "上市：11 月 16 日（新浪财经/搜狐/什么值得买多源）。\n形态：Windows 迷你主机+云台摄像头+阵列麦克风+VMAX GO 磁吸随行屏（分体式）。\n本地：视觉算法+音频算法+对话与会议纪要大模型全部本地运行。\n随行屏：接驳时为管理入口/操作界面；独立时为便携录音副屏——远程语音指令、离线独立采集音频。\n端侧视角：传统外设厂（KTC 以显示器为主业）开始造「AI 主机」——与 CES 获奖外设、Trepo 厨房助手同向：AI 硬件创业从手机/眼镜延伸到桌面与空间设备；「本地大模型+分体随身副屏」的组合把端侧智能体从软件形态实体化——会议纪要、录音、视觉感知全程不出设备，是隐私敏感场景（会议/医疗/法务）的端侧刚需样本。",
+      tags: ["KTC", "VMAX", "智能体主机", "随行屏", "本地大模型"],
+      url: "https://finance.sina.com.cn/tech/digi/2026-11-16/doc-iniyxpxc5961362.shtml",
+      image: "images/news/n279.jpg",
+      imageCap: "KTC VMAX 智能体主机（图源：搜狐科技）",
+      highlight: false
+    },
+
+{
+id: "n278", cat: "芯片厂商", source: "IT之家/NVIDIA", date: "2026-11-16",
+      title: "英伟达推出 DGX Spark HPC 开发套件：4 节点环形集群、512GB 统一内存，桌面本地跑 7000 亿参数模型",
+      summary: "英伟达在 SC26 大会推出 DGX Spark HPC 开发套件——4 台 DGX Spark（GB10 Grace Blackwell 超级芯片）经 ConnectX-7 直连组成环形集群、无需额外交换机，合计 512GB 统一内存与 20TB NVMe 存储，可本地部署最高 7000 亿参数模型，面向科学计算与 AI 开发者；配套 HPC SDK 的多节点部署指南同步推进，官方博客已演示 8 节点扩展至 1TB 内存的玩法。",
+      detail: "发布：SC26 大会（11 月 16 日前后，IT之家/钛媒体/Unite.ai 多源）。\n规格：4×DGX Spark（GB10 Grace Blackwell）；ConnectX-7 直连环形集群免交换机；512GB 统一内存（单节点 128GB）；20TB NVMe。\n能力：本地部署最高 7000 亿参数模型；面向科学计算与 AI 开发；官方博客演示 8 节点 1TB 内存跑前沿模型。\n工具：NVIDIA Sync 集群助手自动完成 2-4 台组网；HPC SDK 安装指南在途。\n端侧视角：「桌面超算」成为正式产品品类——DGX Spark 单机（128GB）已能本地跑百亿级激活模型（Edge0 同周验证 145B），四节点把上限推到 7000 亿参数，等于在桌面复现一个小型数据中心；与 RTX Spark（消费 AI PC）、Claris Harbor（Mac 集群）构成三条「本地算力规模化」路线——科研与开发者的重推理工作流正在从云端回流桌面。",
+      tags: ["英伟达", "DGX Spark", "HPC 套件", "集群", "本地大模型"],
+      url: "https://www.ithome.com/1/028/023.htm",
+      image: "images/news/n278.jpg",
+      imageCap: "DGX Spark 集群（图源：NVIDIA 官网）",
+      highlight: false
+    },
+
+{
 id: "n276", cat: "手机厂商", source: "MSN/多源", date: "2026-11-16",
       title: "华为星芒 O1 Pro 真机流出并开启预约：搭载麒麟 9030S 处理器，11 月 20 日首秀前热度拉满",
       summary: "华为全新 AI 子品牌星芒（OSTA）首款手机 O1 Pro 真机照片流出——消息称搭载麒麟 9030S 处理器，定位鸿蒙 AI 手机；华为终端同步官宣 11 月 17 日 10:08 开启 0 元预约，距 11 月 20 日星芒品牌首秀仅三天。星芒与 Mate X8（11 月 24 日发布）、MateBook Fold S 组成本月华为端侧 AI 硬件密集发布矩阵。",
