@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="AWQ 命门通道对照实验">
+  <defs>
+    <linearGradient id="ao-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="360" fill="url(#ao-bg)" rx="14"/>
+  <text x="480" y="42" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">AWQ 对照实验：同样是保护 1%，看保护谁</text>
+
+  <!-- 左：四柱误差对比 -->
+  <line x1="90" y1="270" x2="540" y2="270" stroke="#5f7194" stroke-width="1.4"/>
+  <rect x="120" y="112" width="64" height="158" fill="#ffffff22" stroke="#ffffff44" stroke-width="0.8"/>
+  <text x="152" y="102" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">基准</text>
+  <rect x="220" y="126" width="64" height="144" fill="#fbbf2440" stroke="#fbbf2466" stroke-width="0.8"/>
+  <text x="252" y="116" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">随机 1%</text>
+  <rect x="320" y="158" width="64" height="112" fill="#818cf844" stroke="#818cf866" stroke-width="0.8"/>
+  <text x="352" y="148" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">权值最大 1%</text>
+  <rect x="420" y="228" width="64" height="42" fill="#34d399" stroke="#34d399" stroke-width="1.2"/>
+  <text x="452" y="218" text-anchor="middle" font-size="12" font-weight="700" fill="#34d399" font-family="sans-serif">激活标记 1% ✓</text>
+  <text x="315" y="296" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">4-bit 量化误差（柱越矮越好，示意）</text>
+  <text x="315" y="318" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">命门通道不由权值大小决定，由激活幅度标记</text>
+
+  <!-- 右：路线取舍 -->
+  <rect x="580" y="86" width="330" height="104" rx="10" fill="#e879f910" stroke="#e879f9" stroke-width="1.2"/>
+  <text x="745" y="116" text-anchor="middle" font-size="13.5" font-weight="700" fill="#e879f9" font-family="sans-serif">老路：混精度切分 ✗</text>
+  <text x="745" y="142" text-anchor="middle" font-size="12" fill="#b6c0d6" font-family="sans-serif">1% 通道留 FP16 → 矩阵乘内部拆两路</text>
+  <text x="745" y="166" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">硬件不友好，LLM.int8() 的老问题</text>
+  <rect x="580" y="212" width="330" height="104" rx="10" fill="#34d39910" stroke="#34d399" stroke-width="1.4"/>
+  <text x="745" y="242" text-anchor="middle" font-size="13.5" font-weight="700" fill="#34d399" font-family="sans-serif">AWQ：缩放保护 ✓</text>
+  <text x="745" y="268" text-anchor="middle" font-size="12" fill="#b6c0d6" font-family="sans-serif">命门列放大 s 倍 + 激活同除 s</text>
+  <text x="745" y="292" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">权重保持纯 4-bit 统一格式</text>
+</svg>

@@ -15,8 +15,8 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 48 期",
-    weekRange: "2026.11.10 — 2026.11.16 · 近 7 天",
-    updated: "2026-11-16",
+    weekRange: "2026.11.11 — 2026.11.17 · 近 7 天",
+    updated: "2026-11-17",
     status: "rolling",
     editorsNote: "近 7 天聚焦：端侧 AI 的「交付周」——苹果 HomeView 家庭中枢 299 美元开售、大众 ID.ERA 5X 以 9.99 万元把豆包 2.0 座舱+联发科 8676+征程 6H 双端侧芯片打成标配、三星 AI 眼镜 395 美元开启预售（12 月 10 日韩美上市）。格局层剧震：黄仁勋辞任英伟达 CEO（Kress 临时接任），OpenAI 解散机器人团队押注 GPT-6 Astra 直接当大脑。技术面：Edge0 开源 145B 端侧模型（笔记本本地跑、峰值内存 29GB），全双工语音一周三发（混元 Hy Realtime/Higgs/GPT-Live-1），麒麟 9050 连续披露新马良 GPU 与 AI ISP，北京具身三年方案与韩国 8002 亿韩元端侧芯片路线图同周落地；华为星芒 AI 子品牌官宣、Mate X8 预热、MateBook Fold S 预订，小米 18 Pro 背屏首批适配 Gemini（11 月 18 日香港发布）。\n今日新增：llama.cpp v1.0、厨房 AI 硬件 Trepo、阿里 Qwen4-Max 上线、智元 LIFE 终身具身框架、Apple 健康AI 研究、苹果智能眼镜轮廓、韩国修能防 AI 作弊备战、开源鸿蒙轻 AI 越影、千问办公开放 10 款模型（Adobe×迪士尼端侧 AI 联盟补录进第 47 期归档）。"
   },
@@ -33,7 +33,7 @@ id: "n265", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-16",
       image: "images/news/n265.jpg",
       imageCap: "Qwen4-Max 上线（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n271", cat: "端侧Agent", source: "中华网科技/海思", date: "2026-11-16",
@@ -45,7 +45,7 @@ id: "n271", cat: "端侧Agent", source: "中华网科技/海思", date: "2026-11
       image: "images/news/n271.jpg",
       imageCap: "开源鸿蒙轻 AI 越影方案（图源：中华网科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n270", cat: "大模型厂商", source: "腾讯新闻/澎湃", date: "2026-11-16",
@@ -57,7 +57,7 @@ id: "n270", cat: "大模型厂商", source: "腾讯新闻/澎湃", date: "2026-1
       image: "images/news/n270.jpg",
       imageCap: "千问办公上线 10 款模型（图源：腾讯新闻）",
       highlight: false
-    },
+    },,
 
 {
 id: "n269", cat: "行业关注事件", source: "新浪财经/韩联社", date: "2026-11-16",
@@ -69,7 +69,7 @@ id: "n269", cat: "行业关注事件", source: "新浪财经/韩联社", date: "
       image: "images/news/n269.jpg",
       imageCap: "韩国高考防 AI 眼镜作弊备战（图源：搜狐/新浪财经）",
       highlight: false
-    },
+    },,
 
 {
 id: "n268", cat: "AI硬件", source: "搜狐科技/彭博", date: "2026-11-16",
@@ -81,7 +81,7 @@ id: "n268", cat: "AI硬件", source: "搜狐科技/彭博", date: "2026-11-16",
       image: "images/news/n268.jpg",
       imageCap: "苹果智能眼镜设计曝光（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n267", cat: "行业关注事件", source: "Apple 官方", date: "2026-11-15",
@@ -93,7 +93,7 @@ id: "n267", cat: "行业关注事件", source: "Apple 官方", date: "2026-11-15
       image: "images/news/n267.jpg",
       imageCap: "Apple Health AI Usage Study（图源：Apple Newsroom）",
       highlight: false
-    },
+    },,
 
 {
 id: "n259", cat: "手机厂商", source: "ezone/小米", date: "2026-11-15",
@@ -105,7 +105,7 @@ id: "n259", cat: "手机厂商", source: "ezone/小米", date: "2026-11-15",
       image: "images/news/n259.jpg",
       imageCap: "小米 18 Pro 背屏形态（图源：ezone）",
       highlight: false
-    },
+    },,
 
 {
 id: "n258", cat: "手机厂商", source: "搜狐科技", date: "2026-11-15",
@@ -117,7 +117,7 @@ id: "n258", cat: "手机厂商", source: "搜狐科技", date: "2026-11-15",
       image: "images/news/n258.jpg",
       imageCap: "华为 Mate X8 外观（图源：搜狐科技）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n250", cat: "芯片厂商", source: "IT之家", date: "2026-11-14",
@@ -129,7 +129,7 @@ id: "n250", cat: "芯片厂商", source: "IT之家", date: "2026-11-14",
       image: "images/news/n250.jpg",
       imageCap: "麒麟 9050 马良 GPU 情报（图源：IT之家）",
       highlight: false
-    },
+    },,
 
 {
 id: "n264", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-13",
@@ -141,7 +141,7 @@ id: "n264", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-13",
       image: "images/news/n264.jpg",
       imageCap: "Trepo Kitchen Assistant（图源：网易/AING硬迹）",
       highlight: false
-    },
+    },,
 
 {
 id: "n263", cat: "行业关注事件", source: "llama.cpp 官方/HF", date: "2026-11-13",
@@ -153,7 +153,7 @@ id: "n263", cat: "行业关注事件", source: "llama.cpp 官方/HF", date: "202
       image: "images/news/n263.jpg",
       imageCap: "llama.cpp（图源：GitHub）",
       highlight: false
-    },
+    },,
 
 {
 id: "n262", cat: "端侧Agent", source: "openJiuwen/GitHub", date: "2026-11-13",
@@ -165,7 +165,7 @@ id: "n262", cat: "端侧Agent", source: "openJiuwen/GitHub", date: "2026-11-13",
       image: "images/news/n262.jpg",
       imageCap: "openJiuwen 开源平台（图源：GitHub）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n256", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-13",
@@ -177,7 +177,7 @@ id: "n256", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-13",
       image: "images/news/n256.jpg",
       imageCap: "Edge0-145B 端侧模型（图源：搜狐科技）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n255", cat: "行业关注事件", source: "凤凰科技/财富", date: "2026-11-13",
@@ -189,7 +189,7 @@ id: "n255", cat: "行业关注事件", source: "凤凰科技/财富", date: "202
       image: "images/news/n255.jpg",
       imageCap: "OpenAI 具身智能团队重组（图源：凤凰科技）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n254", cat: "端侧Agent", source: "IT之家/Cloudflare", date: "2026-11-13",
@@ -201,7 +201,7 @@ id: "n254", cat: "端侧Agent", source: "IT之家/Cloudflare", date: "2026-11-13
       image: "images/news/n254.jpg",
       imageCap: "Kitesurf 智能体浏览器（图源：IT之家）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n253", cat: "行业动态", source: "新华网/腾讯新闻", date: "2026-11-13",
@@ -213,7 +213,7 @@ id: "n253", cat: "行业动态", source: "新华网/腾讯新闻", date: "2026-1
       image: "images/news/n253.jpg",
       imageCap: "大众 ID.ERA 5X（图源：腾讯新闻）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n252", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-13",
@@ -225,7 +225,7 @@ id: "n252", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-13",
       image: "images/news/n252.jpg",
       imageCap: "混元 Hy Realtime（图源：凤凰科技）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n251", cat: "AI硬件", source: "凤凰科技", date: "2026-11-13",
@@ -237,7 +237,7 @@ id: "n251", cat: "AI硬件", source: "凤凰科技", date: "2026-11-13",
       image: "images/news/n251.jpg",
       imageCap: "HomeView 与 Apple TV 4K 开售（图源：凤凰科技）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n243", cat: "行业关注事件", source: "北京市经信局", date: "2026-11-13",
@@ -249,7 +249,7 @@ id: "n243", cat: "行业关注事件", source: "北京市经信局", date: "2026
       image: "images/news/n243.jpg",
       imageCap: "人形机器人运动会拳击赛现场（图源：北京市经信局官网）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n248", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-12",
@@ -261,7 +261,7 @@ id: "n248", cat: "大模型厂商", source: "Google 官方博客", date: "2026-1
       image: "images/news/n248.jpg",
       imageCap: "Gemini 4 Hydrogen 发布（图源：Google 官方博客）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n244", cat: "AI硬件", source: "三星官方新闻室", date: "2026-11-12",
@@ -273,7 +273,7 @@ id: "n244", cat: "AI硬件", source: "三星官方新闻室", date: "2026-11-12"
       image: "images/news/n244.jpg",
       imageCap: "三星 Intelligent Eyewear（图源：三星官方新闻室）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n261", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-12",
@@ -285,7 +285,7 @@ id: "n261", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-12",
       image: "images/news/n261.jpg",
       imageCap: "CES 2027 创新奖 AI 外设（图源：网易/AING硬迹）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n257", cat: "芯片厂商", source: "腾讯新闻", date: "2026-11-12",
@@ -297,7 +297,7 @@ id: "n257", cat: "芯片厂商", source: "腾讯新闻", date: "2026-11-12",
       image: "images/news/n257.jpg",
       imageCap: "韩国端侧 AI 半导体路线图（图源：腾讯新闻）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n242", cat: "行业关注事件", source: "英伟达官方/智东西", date: "2026-11-12",
@@ -309,7 +309,7 @@ id: "n242", cat: "行业关注事件", source: "英伟达官方/智东西", date
       image: "images/news/n242.jpg",
       imageCap: "英伟达 CEO 交接公告（图源：英伟达官方新闻室）",
       highlight: true
-    },,
+    },,,
 
 {
 id: "n239", cat: "行业关注事件", source: "凤凰网", date: "2026-11-12",
@@ -321,7 +321,7 @@ id: "n239", cat: "行业关注事件", source: "凤凰网", date: "2026-11-12",
       image: "images/news/n239.jpg",
       imageCap: "百度世界 2026 李彦宏演讲（图源：红星新闻）",
       highlight: true
-    },,
+    },,,
 
 {
 id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
@@ -333,7 +333,7 @@ id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
       image: "images/news/n236.jpg",
       imageCap: "国产 GPU 底座×机器人场景生态（图源：搜狐财经）",
       highlight: false
-    },
+    },,
 
 {
 id: "n266", cat: "端侧Agent", source: "腾讯新闻/新浪财经", date: "2026-11-11",
@@ -345,7 +345,7 @@ id: "n266", cat: "端侧Agent", source: "腾讯新闻/新浪财经", date: "2026
       image: "images/news/n266.jpg",
       imageCap: "智元 LIFE 框架（图源：腾讯新闻）",
       highlight: false
-    },
+    },,
 
 {
 id: "n246", cat: "端侧Agent", source: "钜亨网/BlockBeats", date: "2026-11-11",
@@ -357,7 +357,7 @@ id: "n246", cat: "端侧Agent", source: "钜亨网/BlockBeats", date: "2026-11-1
       image: "images/news/n246.jpg",
       imageCap: "QVAC 手机端智能体界面（图源：Tether/Wired）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n245", cat: "芯片厂商", source: "新浪科技", date: "2026-11-11",
@@ -369,7 +369,7 @@ id: "n245", cat: "芯片厂商", source: "新浪科技", date: "2026-11-11",
       image: "images/news/n245.jpg",
       imageCap: "RTX Spark AI PC 芯片平台（图源：英伟达官网）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n240", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-11",
@@ -381,7 +381,7 @@ id: "n240", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-11",
       image: "images/news/n240.jpg",
       imageCap: "文心 5.5 Flash Preview 发布（图源：智东西）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n235", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
@@ -393,7 +393,7 @@ id: "n235", cat: "大模型厂商", source: "智东西", date: "2026-11-11",
       image: "images/news/n235.png",
       imageCap: "aiXcompact-4B 成本对比（图源：智东西）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
@@ -405,7 +405,7 @@ id: "n234", cat: "端侧Agent", source: "36氪", date: "2026-11-11",
       image: "images/news/n234.jpg",
       imageCap: "Claude Whiteboards/Sheets/Data 发布（图源：36氪）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11-11",
@@ -417,7 +417,7 @@ id: "n233", cat: "大模型厂商", source: "每日经济新闻", date: "2026-11
       image: "images/news/n233.png",
       imageCap: "MiniCPM-V 4.7 端侧演示（图源：OpenBMB）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
@@ -429,7 +429,7 @@ id: "n228", cat: "手机厂商", source: "IT之家", date: "2026-11-11",
       image: "images/news/n228.jpg",
       imageCap: "Claris Harbor 应用（图源：IT之家）",
       highlight: true
-    },,
+    },,,
 
 {
 id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
@@ -441,7 +441,7 @@ id: "n223", cat: "大模型厂商", source: "IT之家", date: "2026-11-11",
       image: "images/news/n224.png",
       imageCap: "Qwen4 预览版上线（图源：IT之家）",
       highlight: false
-    },,
+    },,,
 
 {
 id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
@@ -454,126 +454,6 @@ id: "n222", cat: "芯片厂商", source: "凤凰网", date: "2026-11-11",
       imageCap: "麒麟 9050 系列官方详解（图源：凤凰网）",
       highlight: true
     },,
-
-{
-id: "n247", cat: "AI硬件", source: "腾讯新闻/财联社", date: "2026-11-10",
-      title: "苹果 AI 眼镜供应链首度浮出水面：快克智能业绩会确认参与 AI 眼镜及带摄像头 AirPods 项目",
-      summary: "快克智能在 11 月 10 日三季度业绩说明会上确认，公司已参与苹果 AI 眼镜及新款智能耳机项目（新款耳机或为传闻中的带摄像头 AirPods），将拉动精密焊接装联与机器视觉检测业务。这是苹果 AI 眼镜供应链环节首次有上市公司公开确认参与，此前爆料显示苹果首款 AI 眼镜最快 2027 年亮相。",
-      detail: "确认：11 月 10 日快克智能 2026 年第三季度业绩说明会，公司层面口径（财联社、腾讯新闻等多源报道）。\n业务：精密焊接装联+机器视觉检测设备——眼镜与耳机的微小型化组装正是其工艺强项。\n时间线：苹果首款 AI 眼镜最快 2027 年亮相（此前分析师爆料口径）；带摄像头 AirPods 传闻已久，本次供应链确认是迄今最硬的证据。\n端侧视角：苹果 AI 硬件路线图首次在供应链层获得实名背书——眼镜+摄像头耳机双线并进意味着苹果端侧 AI 的载体战略是「多穿戴品类矩阵」而非单点产品；与华为星芒新品牌、三星眼镜预售同周，AI 眼镜正在从「发布预期」进入「供应链备货」阶段，2027 年将迎来三巨头同场。",
-      tags: ["苹果", "AI眼镜", "快克智能", "AirPods", "供应链"],
-      url: "https://news.qq.com/rain/a/20261110A09WK500",
-      image: "images/news/n247.jpg",
-      imageCap: "苹果 AirPods 产品线（图源：Apple 官网，非传闻产品渲染）",
-      highlight: false
-    },,
-
-{
-id: "n241", cat: "手机厂商", source: "Google 官方", date: "2026-11-10",
-      title: "谷歌 2026 年 11 月 Pixel Drop：Gemini Intelligence 扩展至 Pixel 10、新品类 Pixel Tag 追踪器，随 Android 17 推送",
-      summary: "谷歌发布 2026 年 11 月 Pixel 功能更新（Feature Drop）——Gemini Intelligence 智能能力扩展至 Pixel 10 系列（Pixel 11 新增 Gemini Call Screen 来电筛选），推出新品类 Pixel Tag 蓝牙追踪器，新增 Create My Widget 自定义小组件、Pixel Solver 与 Google Messages 的 HiLight 等功能，整体随 Android 17 系统推送。",
-      detail: "更新：11 月 10 日官方博客发布（Google Blog/Ars Technica 多源）。\n智能：Gemini Intelligence 扩展至 Pixel 10 家族；Pixel 11 增加 Gemini Call Screen 来电智能筛选。\n硬件：Pixel Tag——谷歌自有品牌蓝牙追踪器新品类。\n其他：Create My Widget 自定义小组件、Pixel Solver、HiLight for Google Messages、主屏图标样式扩展；随 Android 17 推送。\n端侧视角：Gemini Intelligence 按机型分层下放（10 代全量、11 代独占 Call Screen）是谷歌端侧 AI 的机型梯度策略——Pixel 作为 Android 端侧 AI 的第一试验田，其功能分层直接预告了 Android 生态的后续节奏。",
-      tags: ["谷歌", "Pixel", "Gemini Intelligence", "Pixel Tag", "Android 17"],
-      url: "https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop",
-      image: "images/news/n241.jpg",
-      imageCap: "2026 年 11 月 Pixel Drop（图源：Google 官方博客）",
-      highlight: false
-    },,
-
-{
-id: "n232", cat: "AI硬件", source: "亚马逊官方", date: "2026-11-10",
-      title: "亚马逊 Ring 成立机器人部门并发布两款 AI 安防设备：249.99 美元家用飞行监控无人机 Drone Cam 与商用巡逻机器人 Rover Cam",
-      summary: "亚马逊 Ring 宣布成立 Ring Robotics 机器人业务部门，并发布两款 AI 安防设备——Drone Cam 家用室内飞行监控无人机（249.99 美元，警报触发后自动飞往现场查看，已向 FCC 申请批准、预计 2026 年 1 月下旬发货，系六年研发两度推迟后终于落地）与 Rover Cam 面向商店、仓库与办公场所的自主巡逻安防机器人。",
-      detail: "发布：11 月 10 日亚马逊官方公告（IT之家/凤凰网等多源）。\nDrone Cam：室内飞行监控无人机，249.99 美元；警报触发自动飞临现场查看；FCC 审批中，预计 2026 年 1 月下旬发货——六年研发、多次推迟后的量产落地，让家庭无需布满固定摄像头。\nRover Cam：商用自主巡逻安防机器人，面向商店/仓库/办公场景。\n格局：Ring 正式进军 AI 机器人赛道，与悬浮飞行家庭机器人 Halo H-1（10 月上市）等初创产品同场竞技。\n端侧视角：家用安防是飞行机器人第一个真量产场景——「按需飞到现场看一眼」对算力、避障与续航的要求全部压在端侧；Ring 背靠亚马逊的 AI 视觉栈与出货渠道，Drone Cam 若 1 月顺利交付，将成为家庭机器人渗透率的关键试金石。",
-      tags: ["亚马逊", "Ring", "无人机安防", "巡逻机器人", "家庭机器人"],
-      url: "https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot",
-      image: "images/news/n232.png",
-      imageCap: "Ring Drone Cam 与 Rover Cam（图源：亚马逊官方）",
-      highlight: false
-    },,
-
-{
-id: "n231", cat: "行业动态", source: "IT之家", date: "2026-11-10",
-      title: "首个「自下而上」的 AI PC 操作系统 KORA OS 发布：底层融入智能体工作流，骁龙 X2 Elite 有望成首发平台",
-      summary: "KORA Systems 发布全新操作系统 KORA OS——宣称首个专为 AI PC「自下而上」设计的操作系统：智能体工作流、上下文记忆与本地 AI 推理直接融入系统底层，目标让电脑从「打开应用完成操作」转向「表达意图、由 AI 协助完成」。基于 NixOS 构建，自研 Cortex 推理引擎调度 CPU/GPU/NPU 本地运行开放权重模型，内置 Wine/Proton 的 Windows 应用兼容层；正与高通合作，骁龙 X2 Elite 有望成为首款支持平台。",
-      detail: "发布：11 月 10 日公告、11 月 11 日多源报道。\n理念：AI 原生而非 AI 叠加——「神经工作区」按任务目标组织空间，系统围绕意图、上下文与记忆管理文件；传统文件夹与桌面应用保留但不再是核心。\n引擎：自研 Cortex 推理引擎调度 CPU/GPU/NPU；内置基于 llama.cpp 的 Lemma 引擎；系统自动判断任务云端处理还是留在本地。\n隐私：工作流记忆与上下文留在本机不出设备；每个工作区隔离沙箱运行，应用与 AI 智能体独立权限。\n兼容：Wine/Proton 转换层跑 Windows 应用，本地 AI 协助配置；骁龙 X2 Elite 首发平台，后续 AMD/Intel x86 与更多 Arm。\n团队：约 20 名工程师，创始成员来自 Cyanogen、Android 与 GameOS；企业版 HUMAIN OS 预计 2027 年发布。\n端侧视角：继鸿蒙 PC、ChromeOS 之后第三个向 Windows 发起形态级挑战的系统——KORA 把「本地跑开放权重+端云分流+沙箱化智能体」整套端侧 AI 栈做成 OS 的第一性设计；与骁龙 X2 Elite 绑定意味着 Arm on PC 战线又多一个盟友，值得跟踪其对 NPU 的调度深度是否超过 Windows 的 AI API 层。",
-      tags: ["KORA OS", "AI PC", "操作系统", "骁龙X2", "本地推理"],
-      url: "https://www.ithome.com/1/025/226.htm",
-      image: "images/news/n231.png",
-      imageCap: "KORA OS 界面（图源：IT之家）",
-      highlight: false
-    },,
-
-{
-id: "n230", cat: "大模型厂商", source: "DeepMind 官方", date: "2026-11-10",
-      title: "谷歌发布 Gemini Robotics 2.5：最强视觉-语言-动作模型，奔驰产线实测 96% 成功率，ASIMOV-Jailbreak 安全基准同步开源",
-      summary: "Google DeepMind 发布迄今最强视觉-语言-动作模型（VLA）Gemini Robotics 2.5——200 余项任务评测成功率较前代提升 30-100%、完成速度快 20-30%；在奔驰匈牙利与德国产线的真实验证中，Apptronik Apollo 2 人形机器人自主完成汽车零件分拣上料、成功率 96%。同步引入推理时物理安全引导（障碍物场景安全完成率 +33%、人员近旁 +43%），并开源抗越狱基准 ASIMOV-Jailbreak（Gemini 4 Argon 越狱抵抗率 99.5%）。",
-      detail: "发布：11 月 10 日 DeepMind 官方博客。\n能力：灵巧性（工具使用/柔性物体操作）、可靠性、安全性三线跃升；200+ 项任务评测（夹食物/打礼盒蝴蝶结/移液等）。\n实测：奔驰 Kecskemét 与 Sindelfingen 产线，Apollo 2（22 自由度五指 SharpaWave 手）自主 kitting 分拣，96% 成功率；Gemini Robotics ER 管流程+2.5 管手臂数据。\n安全：推理时危险规避引导；ASIMOV-Jailbreak 开源基准——数百条伪装危险指令×数十场景，Argon 抵抗率 99.5%（前代 ER2 为 82%）。\n加速器：Gemini 4 Argon 充当仿真引擎——从真实相机场景生成数千变体演练+数字孪生+失败归因，大幅压缩训练周期。\n端侧视角：VLA 头部模型首次把「产线级 96%」写进官方口径——具身智能从演示视频走到值班工位；ASIMOV-Jailbreak 把机器人安全评测标准化，与国内同期的 HALO/LIFE 形成中美具身安全研究的第一轮正面呼应。",
-      tags: ["谷歌", "Gemini Robotics", "VLA", "人形机器人", "具身安全"],
-      url: "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
-      image: "images/news/n230.webp",
-      imageCap: "Apollo 2 在奔驰产线执行分拣（图源：Google DeepMind）",
-      highlight: true
-    },,
-
-{
-id: "n229", cat: "行业动态", source: "腾讯新闻", date: "2026-11-10",
-      title: "小米联合北大发布《物联网设备模型技术白皮书》：11.6 亿台 AIoT 设备实践经验开放，定义 AI 原生物联网标准",
-      summary: "中国计算机学会泛在操作系统开放社区牵头、小米与北京大学联合编制的《物联网设备模型技术白皮书》正式发布——基于小米超过 11.6 亿台 AIoT 设备、200 多个品类、10000 多家合作伙伴的规模化实践，提出四层物模型架构与 Dynamic Service 动态服务机制（支持设备新功能自动发现与场景自适应），定义智能设备的「数字化通用语言」，向全行业开放共建 AI 原生物联网标准。",
-      detail: "发布：11 月 10 日（腾讯新闻/搜狐/ZOL/凤凰网多源）。\n编制：CCF 泛在操作系统开放社区牵头，小米+北京大学联合。\n底盘：小米 11.6 亿台 AIoT 设备实践、200+ 品类、10000+ 合作伙伴——卢伟冰：「把 11.6 亿台设备上验证过的技术和经验，正式开放给全行业」。\n核心：四层物模型架构+Dynamic Service 动态服务机制——突破静态物模型描述局限，设备新增功能自动发现、场景自适应调整；AI 融合与可信安全并列为三大突破。\n端侧视角：物模型是设备侧的「数字孪生底座」——当 11.6 亿台设备的描述语言统一并支持动态服务，智能体跨设备调用的成本从逐品牌适配降到读标准；这份白皮书实质是把小米澎湃生态的设备抽象层开放为行业公共品，为端侧智能体的万物互联铺路。",
-      tags: ["小米", "物联网", "白皮书", "AIoT", "物模型"],
-      url: "https://news.qq.com/rain/a/20261110A098L200",
-      image: "images/news/n229.jpg",
-      imageCap: "《物联网设备模型技术白皮书》发布（图源：腾讯新闻）",
-      highlight: false
-    },,
-
-{
-id: "n221", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
-      title: "华为 MateBook Fold S 鸿蒙小折叠电脑三色公布：全新背屏设计+Live 小方屏，11 月 14 日开启预订",
-      summary: "华为公布 MateBook Fold S 鸿蒙小折叠电脑三色外观——全新背屏设计搭载 Live 小方屏，11 月 14 日开启预订。继首款鸿蒙台式机擎云 HM650 与 MateBook 鸿蒙版之后，鸿蒙 PC 产品线再落一子，折叠形态与外副屏交互进入鸿蒙生态。",
-      detail: "官宣：11 月 10 日三色外观公布（余承东预告预热序列）。\n节点：11 月 14 日开启预订。\n形态：小折叠电脑+背屏 Live 小方屏——外副屏承载息屏显示、通知与助手入口类交互。\n序列：华为 PC 线本周期密集落子——擎云 HM650 首款鸿蒙台式机（麒麟 X90）、MateBook 鸿蒙版、MateBook Fold S 折叠新形态。\n端侧视角：Live 小方屏是鸿蒙 PC 的端侧 AI 新交互面——外副屏天然适合常显智能体状态与提醒（手机灵动胶囊的 PC 化）；折叠+副屏组合若配合小艺智能体，将定义鸿蒙 PC 区别于 Windows AI PC 的交互身份。",
-      tags: ["华为", "MateBook Fold S", "鸿蒙PC", "折叠电脑", "副屏"],
-      url: "https://www.ithome.com/1/024/600.htm",
-      image: "images/news/n221.jpg",
-      imageCap: "MateBook Fold S 三色外观（图源：IT之家）",
- highlight: false
-    },,
-
-{
-id: "n220", cat: "AI硬件", source: "IT之家", date: "2026-11-10",
-      title: "影目召回 4701 副 INMO AIR3 智能眼镜并提供 OTA 免费升级：此前已在美国召回，曾称国内用户不受影响",
-      summary: "影目科技宣布召回 4701 副 INMO AIR3 智能眼镜并进行 OTA 免费升级——此前该产品已在美国市场召回，官方曾表示国内用户不受影响，本次国内召回完成跨国售后闭环。这是 AI 眼镜品类进入大规模交付期后的首批千人级召回之一，质量与售后体系开始成为品类竞争变量。",
-      detail: "召回：11 月 10 日宣布，涉及 4701 副 INMO AIR3，OTA 免费升级方式（候选库 dom=2）。\n前情：此前已在美国召回同款，官方曾称国内用户不受影响——本次国内召回使跨国售后口径回归一致。\n端侧视角：AI 眼镜从首发抢跑进入交付质量竞争——眼镜是全天佩戴设备，OTA 修复能力（而非返厂）决定召回成本；百镜大战的下一轮分化变量将从参数转向质量体系与售后响应，首批千人级召回为全行业上了合规课。",
-      tags: ["影目", "INMO AIR3", "AI眼镜", "召回", "OTA升级"],
-      url: "https://www.ithome.com/1/024/893.htm",
-      image: "images/news/n220.jpg",
-      imageCap: "影目 INMO AIR3 召回（图源：IT之家）",
-      highlight: false
-    },,
-
-{
-id: "n219", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
-      title: "蚂蚁灵波开源 LingBot-Touch 触觉基础模型：为通用大脑接入「手感」，26 项真机任务成功率提升 14-26 个百分点",
-      summary: "蚂蚁灵波开源具身触觉基础模型 LingBot-Touch——从「一脑多机」走向「一脑多手」，让机器人通用大脑获得可跨硬件复用的触觉「手感」：26 项真机测试任务成功率提升 14 至 26 个百分点。灵波 CEO 朱兴同日谈 Anthropic Fable 5.2：交互大模型与触觉基础模型两类协同将加速具身产业成熟。",
-      detail: "开源：11 月 10 日（IT之家/量子位/36 氪多源）。\n能力：触觉基础模型——为通用大脑接入「手感」；跨硬件复用（一脑多手）；26 项真机任务成功率提升 14-26 个百分点。\n背景：蚂蚁灵波 10 月底携机器人通用大脑亮相乌镇（一脑多机），触觉是通用大脑的最后几块感知拼图之一。\n呼应：智元同日发布 WITA-Omni 交互大模型——具身「交互大脑」与「触觉手感」同日双发。\n端侧视角：视觉模型可以云端生成、触觉必须端侧闭环——指尖力控与材质感知的延迟容忍是毫秒级，LingBot-Touch 开源等于把具身最难本地化的感知通道做成公共组件；机器人技术栈「VLM 层+触觉层」的分层生态正在成形。",
-      tags: ["蚂蚁灵波", "LingBot-Touch", "触觉模型", "具身智能", "开源"],
-      url: "https://www.ithome.com/1/024/701.htm",
-      image: "images/news/n219.png",
-      imageCap: "LingBot-Touch 触觉基础模型（图源：IT之家）",
-      highlight: false
-    },,
-
-{
-id: "n218", cat: "大模型厂商", source: "IT之家", date: "2026-11-10",
-      title: "智元发布 WITA-Omni 全模态大模型正式版：行业首个具身全模态端到端交互模型，触觉+本体状态输入、免唤醒词全双工",
-      summary: "智元正式发布 WITA-Omni（硅光动语全模态大模型）——行业首个具身全模态端到端交互大模型：基于机器人本体感知数据深度训练，在音视频之外新增触觉、本体状态等输入与动作、表情等输出；流式全双工架构实现边听、边想、边应、边动、边做表情，交互响应最快约 400 毫秒、平均约 600 毫秒（较业内平均快近 3 倍）；全模态拒识让机器人免唤醒词自然对话，支持上百种语言方言免切换交流与流式同传。",
-      detail: "发布：11 月 10 日晚间智元公众号官宣（IT之家 19:24 首发报道）。\n模态：音视频+触觉+本体状态输入；动作+表情输出——为物理世界而生的「交互大脑」。\n全双工：流式架构边听边想边应边动边做表情；最快约 400ms、平均约 600ms 响应，快业内近 3 倍。\n拒识：结合朝向/视频/音频/声纹/唇动/姿态/语义/上下文决策是否回应——多人交谈与环境广播下大幅降低误触发，全程免唤醒词。\n表现：几十种情绪按不同强度呈现；复杂内容在面部屏幕实时可视化；主动互动（迎宾握手/点赞回应/挥手相送）。\n前史：7 月 Preview 以 85.21 分登顶 DailyOmni 全模态理解榜（超千问/Gemini/豆包/英伟达），八项细分指标六项第一。\n端侧视角：具身交互的「全双工+免唤醒词」组合把机器人从指令式应答推进到在场式社交——400ms 响应与多模态拒识必须在本体侧闭环完成，云端链路做不到；与蚂蚁灵波触觉模型同日开源，具身智能的感知-交互栈正被中国公司分层补齐。",
-      tags: ["智元", "WITA-Omni", "具身智能", "全模态", "全双工"],
-      url: "https://www.ithome.com/1/025/122.htm",
-      image: "images/news/n218.jpg",
-      imageCap: "智元 WITA-Omni 发布（图源：IT之家）",
-      highlight: true
-    },
   ],
 papers: [
     {
@@ -681,17 +561,17 @@ papers: [
 knowledge: {
     /* 每周一个知识点（KNOWLEDGE_PLAN.md 16 讲周更，2026-10-25 首期）：weekly 只放元数据+lesson 指针，
        正文与配图在 knowledge/ 子项目（lessons/lesson-NN.js + assets/），点开卡片按需加载 */
-    weekly: { no: 3, lesson: 3,
-      week: "2026.11.03 — 11.09",
-      title: "经典量化算法 I：LLM.int8() 与 GPTQ——异常值与 Hessian 量化",
-      hook: "13B 以上模型一压 INT8 就「失智」——病根不是权重，是激活里几个大到离谱的值：一个 100 倍的离群值就能绑架整条量化刻度。一篇论文把 0.5% 的刺头拎出去用 FP16 养；另一篇让每一列的量化误差都记账补偿。端侧 4-bit 的直系祖先，就是这两篇。",
-      next: "第 4 讲 · 经典量化算法 II：AWQ 与 SmoothQuant——不切维度，把激活的难题搬给权重"
+    weekly: { no: 4, lesson: 4,
+      week: "2026.11.17 — 11.22",
+      title: "经典量化算法 II：AWQ 与 SmoothQuant——不切维度，把激活的难题搬给权重",
+      hook: "切 0.5% 维度出去养 FP16，终究不优雅——这对论文发现了矩阵乘里一对「互逆旋钮」：激活除以 s、权重乘上 s，输出分毫不变，量化难度却从激活搬进了权重。SmoothQuant 搬完两头全压整数（W8A8），AWQ 用激活幅度护住 1% 命门通道（W4A16）。",
+      next: "第 5 讲 · GGUF 与 k-quants：Q4_K_M 们是什么；FP4/FP8 低比特前沿"
     },
     plan: [
       { no: 1, title: "大模型是怎么装进手机的：一次端侧推理的完整旅程", week: "已完结 · 10.16—10.25" },
       { no: 2, title: "量化入门：从 FP16 到 4-bit——定点表示、对称/非对称、PTQ 与 QAT", week: "已完结 · 10.26—11.01" },
-      { no: 3, title: "经典量化算法 I：LLM.int8() 与 GPTQ——异常值与 Hessian 量化", week: "本周 · 11.08 上线" },
-      { no: 4, title: "经典量化算法 II：AWQ 与 SmoothQuant——激活感知的权重缩放", week: "11.15" },
+      { no: 3, title: "经典量化算法 I：LLM.int8() 与 GPTQ——异常值与 Hessian 量化", week: "已完结 · 11.03—11.09" },
+      { no: 4, title: "经典量化算法 II：AWQ 与 SmoothQuant——激活感知的权重缩放", week: "本周 · 11.17 上线（原排 11.15，快照夜顺延）" },
       { no: 5, title: "GGUF 与 k-quants：Q4_K_M 们是什么；FP4/FP8 低比特前沿", week: "11.22" },
       { no: 6, title: "推理框架全景：从 llama.cpp 到 MNN 的选型地图", week: "11.29" },
       { no: 7, title: "投机解码：小模型起草、大模型验证的提速术", week: "12.06" },
@@ -726,18 +606,6 @@ knowledge: {
         text: "Windows AI 芯片路线的一手阵地：DirectML 在各家 NPU/GPU 上的端侧推理更新。",
         url: "https://devblogs.microsoft.com/directx/",
         intro: "微软 DevBlogs 的 DirectX 频道，Windows 端侧 AI 的底层通道——DirectML（DirectX 之上的机器学习推理层）与 Windows AI 平台的更新在此首发；Copilot+ PC 本地模型栈（ONNX Runtime + DirectML 执行提供方）的底层进展也常在此披露。\n看点：DirectML 新特性（NPU 支持范围、驱动级 AI 加速）、Windows AI 相关 API 演进。\n适合谁：做 Windows 平台（AI PC / Copilot+ PC）端侧推理与 NPU 适配的工程师。" },
-      { group: "厂商官方博客", name: "面壁智能数据洞察", type: "厂商研究博客", letter: "面",
-        text: "MiniCPM 技术解读与「知识密度」路线的持续输出，国产端侧模型的第一视角。",
-        url: "https://www.modelbest.cn",
-        intro: "面壁智能（ModelBest）官方渠道，持续输出 MiniCPM 系列端侧模型的技术解读：模型设计、量化方案、端侧推理优化与「知识密度定律」研究路线；官网新闻室同步发布商业化落地动态（如搭载三星旗舰）。\n看点：MiniCPM-V 多模态、MiniCPM-o 全模态、MiniCPM5-2B 与具身系列 MiniCPM-Robot 的发布说明；配套 Hugging Face / GitHub 开源仓库。\n适合谁：关注国产端侧模型第一视角、做中文场景端侧部署的团队。" },
-      { group: "个人博客", name: "Tianqi Chen 陈天奇", type: "个人博客", letter: "T",
-        text: "MLC LLM / TVM / MX 作者，用编译器视角系统解决端侧部署问题的开创者。",
-        url: "https://tqchen.github.io",
-        intro: "陈天奇（CMU 教授，Apache TVM / MLC-LLM / MX 生态作者）的个人博客。他把机器学习编译（MLC）作为方法论，系统回答「模型如何高效跑进各种硬件」——从 GPU 到手机 NPU。\n代表作：《Bringing LLMs to Any Device with MLC LLM》系列（在 iPhone/安卓上部署 Llama 的开创性实践）、MLC 课程讲义、以及关于 AI 系统技术栈演进的系列长文。\n适合谁：想从编译器与系统层面（而非调用 API 层面）理解端侧部署的学习者；配套开源课程可跟学。" },
-      { group: "个人博客", name: "Georgi Gerganov", type: "个人博客", letter: "G",
-        text: "llama.cpp / GGML / whisper.cpp 作者，GGUF 量化生态奠基人；端侧推理开源事实标准的源头。",
-        url: "https://ggerganov.com",
-        intro: "Georgi Gerganov 的个人站点。他是 llama.cpp、GGML、whisper.cpp 等项目的作者——GGUF 量化格式与 CPU 推理优化的事实标准，几乎所有端侧/本地推理工具链（Ollama、LM Studio 等）都构建在他的工作之上。\n看点：ggml 的架构笔记、量化方法的演进讨论，以及他近年创业（本地推理方向）后的实践分享；GitHub 动态本身就是端侧推理技术的风向标。\n适合谁：想理解「为什么 4-bit 量化能在笔记本/手机上跑大模型」底层原理的工程师。" },
       { group: "个人博客", name: "Tri Dao", type: "个人博客", letter: "T",
         text: "FlashAttention 作者，专注高效注意力与推理 Kernel；端侧推理框架大量复用他的工作。",
         url: "https://tridao.me",
@@ -790,18 +658,6 @@ knowledge: {
         text: "本地大模型运行时的版本动态与新模型支持说明，本地部署事实标准的风向标。",
         url: "https://ollama.com/blog",
         intro: "Ollama 官方博客。Ollama 把 llama.cpp 级的本地推理封装成「一条命令跑模型」的体验，是个人开发者本地跑大模型的事实标准（macOS/Linux/Windows 全平台）。\n看点：新版本的功能演进（多模态、工具调用、并发与上下文管理）与新模型上架说明——某端侧级模型首发可用常在这里最先出现。\n适合谁：在本地/私有环境部署开源模型的开发者与企业 IT；跟踪「本地大模型易用性」演进的产品经理。" },
-      { group: "端侧工具链官方", name: "ONNX / ONNX Runtime", type: "开放标准 · 推理引擎", letter: "O",
-        text: "跨框架模型交换标准与微软维护的高性能推理引擎，端侧部署中间格式的事实标准。",
-        url: "https://onnxruntime.ai",
-        intro: "ONNX 是开放的模型表示标准（PyTorch/TensorFlow 等框架导出的通用中间格式），ONNX Runtime 是微软维护的跨平台推理引擎（Windows/安卓/iOS/Linux/嵌入式），支持量化与多种执行提供方（CPU / DirectML / CoreML / QNN / XNNPACK）。\n看点：官网博客（onnxruntime.ai/blogs）与版本发布——移动端执行提供方、生成式 API 与量化工具 Olive 的更新；Windows AI PC 官方路线的必经一站。\n适合谁：需要「一次导出、多端运行」的应用工程师。版本动态另见本库「端侧工具链 Release 雷达」。" },
-      { group: "端侧工具链官方", name: "Intel OpenVINO Blog", type: "工具链官方博客", letter: "I",
-        text: "Intel 端侧推理引擎的优化实践：CPU/iGPU/NPU 一套 API，AI PC 与边缘盒子的官方路线。",
-        url: "https://blog.openvino.ai",
-        intro: "OpenVINO 是 Intel 的开源推理引擎（CPU/iGPU/NPU 统一 API），覆盖 AI PC（Core Ultra 的 NPU）、边缘计算盒与工业视觉场景；官方博客持续输出模型优化（NNCF 量化）、异构部署与生成式 AI 边缘侧实践的教程。\n看点：OpenVINO 新版本特性（NPU 支持与 LLM 边缘推理优化）、与 Intel 硬件联调的一手指南。\n适合谁：x86 生态做端侧部署、工业质检/边缘盒子方向的工程师。版本动态另见本库「端侧工具链 Release 雷达」。" },
-      { group: "端侧工具链官方", name: "Apple MLX 生态", type: "开源框架 · GitHub", letter: "M",
-        text: "苹果官方的 Apple silicon 本地推理框架：统一内存视角的数组库 + LLM 推理栈。",
-        url: "https://github.com/ml-explore/mlx",
-        intro: "MLX 是苹果机器学习研究团队（ml-explore）开源的 Apple silicon 数值计算与推理框架：针对统一内存架构设计（CPU/GPU 共享内存、零拷贝），配合 mlx-lm 可在 Mac 上高效运行大模型——「Mac 本地大模型」当前的事实标准之一（LM Studio 等产品的底层选项）。\n看点：框架与 mlx-lm 的版本节奏、Apple ML Research 博客上 MLX 相关研究（扩散模型加速、多模态端侧化）。\n适合谁：在 Mac 生态做本地推理与模型移植的工程师。版本动态另见本库「端侧工具链 Release 雷达」。" },
       { group: "端侧工具链官方", name: "端侧工具链 Release 雷达", type: "Release 聚合 · 每日跟踪", letter: "R",
         text: "14 个核心端侧项目的官方版本发布动态：本地推理/量化、移动端运行时、CV 框架、离线语音。",
         url: "https://github.com/topics/on-device",

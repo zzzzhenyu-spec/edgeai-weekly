@@ -2,7 +2,7 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 48 期（2026.11.10 — 2026.11.16 · 近 7 天）
+## 2026 · 第 48 期（2026.11.11 — 2026.11.17 · 近 7 天）
 
 **近 7 天导读**：近 7 天聚焦：端侧 AI 的「交付周」——苹果 HomeView 家庭中枢 299 美元开售、大众 ID.ERA 5X 以 9.99 万元把豆包 2.0 座舱+联发科 8676+征程 6H 双端侧芯片打成标配、三星 AI 眼镜 395 美元开启预售（12 月 10 日韩美上市）。格局层剧震：黄仁勋辞任英伟达 CEO（Kress 临时接任），OpenAI 解散机器人团队押注 GPT-6 Astra 直接当大脑。技术面：Edge0 开源 145B 端侧模型（笔记本本地跑、峰值内存 29GB），全双工语音一周三发（混元 Hy Realtime/Higgs/GPT-Live-1），麒麟 9050 连续披露新马良 GPU 与 AI ISP，北京具身三年方案与韩国 8002 亿韩元端侧芯片路线图同周落地；华为星芒 AI 子品牌官宣、Mate X8 预热、MateBook Fold S 预订，小米 18 Pro 背屏首批适配 Gemini（11 月 18 日香港发布）。 今日新增：llama.cpp v1.0、厨房 AI 硬件 Trepo、阿里 Qwen4-Max 上线、智元 LIFE 终身具身框架、Apple 健康AI 研究、苹果智能眼镜轮廓、韩国修能防 AI 作弊备战、开源鸿蒙轻 AI 越影、千问办公开放 10 款模型（Adobe×迪士尼端侧 AI 联盟补录进第 47 期归档）。
 
@@ -31,7 +31,7 @@
 | 2026-11-11 | [Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy：基于 Qwen3.5 架构、手机本地运行，工具调用胜 2.5B 级](https://m.cnyes.com/news/id/6659587) | 钜亨网/BlockBeats |
 | 2026-11-11 | [AI 巨头桌面端开战：Claude 推 Whiteboards 等 AI 办公全家桶直挑微软，谷歌同日上线 Gemini 新旗舰+复刻 OpenCode 桌面应用](https://m.36kr.com/p/4064780118463617) | 36氪 |
 
-### AI硬件（9 条）
+### AI硬件（5 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -40,10 +40,6 @@
 | 2026-11-13 | [苹果 HomeView 与新 Apple TV 4K 正式开售：299 美元家庭中枢上市，苹果 AI 硬件进入交付期](https://tech.ifeng.com/c/8xz8XFlXHz2) | 凤凰科技 |
 | 2026-11-12 | [三星首款 AI 眼镜 Intelligent Eyewear 开启预售：395 美元起、41 克无屏设计，12 月 10 日韩美上市](https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world) | 三星官方新闻室 |
 | 2026-11-12 | [CES 2027 创新奖电脑外设类目六款 AI 硬件获奖：端侧「第二大脑」、无线 GPU 算力坞与 AI 代理审批坞上榜](https://www.163.com/dy/article/LBI1OR4V0556CAYF.html) | 网易/AING硬迹 |
-| 2026-11-10 | [苹果 AI 眼镜供应链首度浮出水面：快克智能业绩会确认参与 AI 眼镜及带摄像头 AirPods 项目](https://news.qq.com/rain/a/20261110A09WK500) | 腾讯新闻/财联社 |
-| 2026-11-10 | [亚马逊 Ring 成立机器人部门并发布两款 AI 安防设备：249.99 美元家用飞行监控无人机 Drone Cam 与商用巡逻机器人 Rover Cam](https://www.aboutamazon.com/news/devices/ring-drone-cam-rover-cam-security-robot) | 亚马逊官方 |
-| 2026-11-10 | [华为 MateBook Fold S 鸿蒙小折叠电脑三色公布：全新背屏设计+Live 小方屏，11 月 14 日开启预订](https://www.ithome.com/1/024/600.htm) | IT之家 |
-| 2026-11-10 | [影目召回 4701 副 INMO AIR3 智能眼镜并提供 OTA 免费升级：此前已在美国召回，曾称国内用户不受影响](https://www.ithome.com/1/024/893.htm) | IT之家 |
 
 ### 芯片厂商（5 条）
 
@@ -55,16 +51,15 @@
 | 2026-11-11 | [联发科×英伟达 RTX Spark 超级芯片登陆 Windows 11 PC：Blackwell GPU+Grace CPU，最高 128GB 统一内存本地跑智能体](https://finance.sina.com.cn/tech/roll/2026-11-12/doc-iniymsip3963100.shtml) | 新浪科技 |
 | 2026-11-11 | [华为官方详解麒麟 9050 系列：新一代达芬奇 NPU 性能提升 140%，30B MoE 全模态大模型端侧离线运行仅占 2.5GB 内存](https://original.ifeng.com/c/8xxkY6ktCXa) | 凤凰网 |
 
-### 手机厂商（4 条）
+### 手机厂商（3 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-11-15 | [小米 18 Pro 海外公布背屏适配：谷歌地图、Spotify、Gemini 等首批支持，11 月 18 日香港发布](https://ezone.hk/article/20117600/) | ezone/小米 |
 | 2026-11-15 | [华为 Mate X8 折叠屏外观公布：余承东官宣「就要来了」，屏幕、拍照、性能三线新突破](https://www.sohu.com/a/1101872178_163726) | 搜狐科技 |
 | 2026-11-11 | [苹果子公司 Claris 暗测 Harbor 应用：Mac 变身本地 AI 服务器，雷雳 5 串联多机集群跑大模型](https://www.ithome.com/1/025/225.htm) | IT之家 |
-| 2026-11-10 | [谷歌 2026 年 11 月 Pixel Drop：Gemini Intelligence 扩展至 Pixel 10、新品类 Pixel Tag 追踪器，随 Android 17 推送](https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop) | Google 官方 |
 
-### 大模型厂商（12 条）
+### 大模型厂商（9 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -77,17 +72,12 @@
 | 2026-11-11 | [北大系创企开源 aiXcompact-4B 上下文压缩模型：编程 Agent 推理成本降 78%、API 费用降 97%，单卡 A100 可私有部署](https://zhidx.com/p/609168.html) | 智东西 |
 | 2026-11-11 | [面壁智能 35B 模型跑进手机：MiniCPM-V 4.7 35B-A3B 以 3GB 内存实现端侧多模态，iPhone 18 Pro Max 实测即问即答](https://news.qq.com/rain/a/20261111A058XQ00) | 每日经济新闻 |
 | 2026-11-11 | [阿里 Qwen4 预览版上线千问平台：新一代旗舰主打编程、Agent 与复杂任务，正式版即将发布](https://www.ithome.com/1/025/301.htm) | IT之家 |
-| 2026-11-10 | [谷歌发布 Gemini Robotics 2.5：最强视觉-语言-动作模型，奔驰产线实测 96% 成功率，ASIMOV-Jailbreak 安全基准同步开源](https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/) | DeepMind 官方 |
-| 2026-11-10 | [蚂蚁灵波开源 LingBot-Touch 触觉基础模型：为通用大脑接入「手感」，26 项真机任务成功率提升 14-26 个百分点](https://www.ithome.com/1/024/701.htm) | IT之家 |
-| 2026-11-10 | [智元发布 WITA-Omni 全模态大模型正式版：行业首个具身全模态端到端交互模型，触觉+本体状态输入、免唤醒词全双工](https://www.ithome.com/1/025/122.htm) | IT之家 |
 
-### 行业动态（3 条）
+### 行业动态（1 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-11-13 | [大众 ID.ERA 5X 上市 9.99 万元起：行业首发豆包大模型 2.0 上车，联发科 8676 座舱芯片+地平线征程 6H 420TOPS](https://app.xinhuanet.com/news/article.html?articleId=20261113e85d7b5d0be34606b4117b6d7dd1730c) | 新华网/腾讯新闻 |
-| 2026-11-10 | [首个「自下而上」的 AI PC 操作系统 KORA OS 发布：底层融入智能体工作流，骁龙 X2 Elite 有望成首发平台](https://www.ithome.com/1/025/226.htm) | IT之家 |
-| 2026-11-10 | [小米联合北大发布《物联网设备模型技术白皮书》：11.6 亿台 AIoT 设备实践经验开放，定义 AI 原生物联网标准](https://news.qq.com/rain/a/20261110A098L200) | 腾讯新闻 |
 
 ## 科研前沿（10 篇）
 
@@ -101,4 +91,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-11-16。
+- 数据更新于 2026-11-17。

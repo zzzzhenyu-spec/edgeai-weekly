@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="AWQ 与 SmoothQuant 搬家思想总览">
+  <defs>
+    <linearGradient id="mo-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+    <marker id="mo-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="960" height="360" fill="url(#mo-bg)" rx="14"/>
+  <text x="480" y="42" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">搬家思想：不切维度，把激活的量化难度搬给权重</text>
+
+  <!-- 左：激活（难） -->
+  <rect x="70" y="88" width="250" height="118" rx="10" fill="#fbbf2410" stroke="#fbbf24" stroke-width="1.4"/>
+  <text x="195" y="114" text-anchor="middle" font-size="14" font-weight="700" fill="#fbbf24" font-family="sans-serif">激活 X · 难量化</text>
+  <g>
+    <rect x="105" y="160" width="10" height="26" fill="#fbbf2455"/>
+    <rect x="121" y="166" width="10" height="20" fill="#fbbf2455"/>
+    <rect x="137" y="162" width="10" height="24" fill="#fbbf2455"/>
+    <rect x="153" y="106" width="10" height="80" fill="#fbbf24"/>
+    <rect x="169" y="164" width="10" height="22" fill="#fbbf2455"/>
+    <rect x="185" y="158" width="10" height="28" fill="#fbbf2455"/>
+    <rect x="201" y="100" width="10" height="86" fill="#fbbf24"/>
+    <rect x="217" y="162" width="10" height="24" fill="#fbbf2455"/>
+    <rect x="233" y="166" width="10" height="20" fill="#fbbf2455"/>
+    <rect x="249" y="160" width="10" height="26" fill="#fbbf2455"/>
+    <line x1="100" y1="186" x2="265" y2="186" stroke="#5f7194" stroke-width="1.2"/>
+  </g>
+  <text x="195" y="202" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">成片离群通道 · 百倍大值</text>
+
+  <!-- 中：等价缩放 -->
+  <g>
+    <rect x="360" y="118" width="240" height="52" rx="26" fill="#e879f914" stroke="#e879f9" stroke-width="1.4"/>
+    <text x="480" y="140" text-anchor="middle" font-size="13.5" font-weight="700" fill="#e879f9" font-family="sans-serif">等价缩放（互逆旋钮）</text>
+    <text x="480" y="159" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="monospace">X ÷ s ｜ W × s</text>
+  </g>
+  <line x1="325" y1="144" x2="352" y2="144" stroke="#fbbf24" stroke-width="1.6" marker-end="url(#mo-arrow)"/>
+  <line x1="608" y1="144" x2="635" y2="144" stroke="#fbbf24" stroke-width="1.6" marker-end="url(#mo-arrow)"/>
+
+  <!-- 右：权重（能扛） -->
+  <rect x="640" y="88" width="250" height="118" rx="10" fill="#22d3ee10" stroke="#22d3ee" stroke-width="1.4"/>
+  <text x="765" y="114" text-anchor="middle" font-size="14" font-weight="700" fill="#22d3ee" font-family="sans-serif">权重 W · 能扛</text>
+  <g>
+    <rect x="675" y="146" width="10" height="40" fill="#22d3ee55"/>
+    <rect x="691" y="138" width="10" height="48" fill="#22d3ee55"/>
+    <rect x="707" y="142" width="10" height="44" fill="#22d3ee55"/>
+    <rect x="723" y="134" width="10" height="52" fill="#22d3ee77"/>
+    <rect x="739" y="140" width="10" height="46" fill="#22d3ee55"/>
+    <rect x="755" y="144" width="10" height="42" fill="#22d3ee55"/>
+    <rect x="771" y="136" width="10" height="50" fill="#22d3ee77"/>
+    <rect x="787" y="142" width="10" height="44" fill="#22d3ee55"/>
+    <rect x="803" y="138" width="10" height="48" fill="#22d3ee55"/>
+    <rect x="819" y="144" width="10" height="42" fill="#22d3ee55"/>
+    <line x1="670" y1="186" x2="840" y2="186" stroke="#5f7194" stroke-width="1.2"/>
+  </g>
+  <text x="765" y="202" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">分布平缓 · 被撑开也扛得住</text>
+
+  <!-- 底部双路 -->
+  <rect x="88" y="248" width="360" height="82" rx="10" fill="#818cf812" stroke="#818cf8" stroke-width="1.3"/>
+  <text x="268" y="274" text-anchor="middle" font-size="13.5" font-weight="700" fill="#818cf8" font-family="monospace">SmoothQuant · ICML 2023</text>
+  <text x="268" y="296" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">搬完两头全压整数 → W8A8</text>
+  <text x="268" y="316" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">175B 无损 · 1.56× · 内存省一半</text>
+  <rect x="512" y="248" width="360" height="82" rx="10" fill="#e879f910" stroke="#e879f9" stroke-width="1.3"/>
+  <text x="692" y="274" text-anchor="middle" font-size="13.5" font-weight="700" fill="#e879f9" font-family="monospace">AWQ · MLSys 2024 最佳论文</text>
+  <text x="692" y="296" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">护住 1% 命门通道 → W4A16</text>
+  <text x="692" y="316" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">纯 4-bit 统一格式 · 端到端约 2.2×</text>
+  <line x1="480" y1="176" x2="268" y2="242" stroke="#5f7194" stroke-width="1.5" marker-end="url(#mo-arrow)"/>
+  <line x1="480" y1="176" x2="692" y2="242" stroke="#5f7194" stroke-width="1.5" marker-end="url(#mo-arrow)"/>
+</svg>

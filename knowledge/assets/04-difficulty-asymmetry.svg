@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="权重与激活的量化难度不对称">
+  <defs>
+    <linearGradient id="da-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="360" fill="url(#da-bg)" rx="14"/>
+  <text x="480" y="42" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">难度不对称：权重是软柿子，激活是硬骨头</text>
+
+  <!-- 左：权重直方图（平缓） -->
+  <g>
+    <text x="245" y="80" text-anchor="middle" font-size="13.5" font-weight="700" fill="#22d3ee" font-family="sans-serif">权重分布 · 安分守己</text>
+    <line x1="90" y1="270" x2="400" y2="270" stroke="#5f7194" stroke-width="1.4"/>
+    <rect x="112" y="238" width="24" height="32" fill="#22d3ee44"/>
+    <rect x="140" y="212" width="24" height="58" fill="#22d3ee66"/>
+    <rect x="168" y="182" width="24" height="88" fill="#22d3ee88"/>
+    <rect x="196" y="158" width="24" height="112" fill="#22d3eeaa"/>
+    <rect x="224" y="150" width="24" height="120" fill="#22d3ee"/>
+    <rect x="252" y="162" width="24" height="108" fill="#22d3eeaa"/>
+    <rect x="280" y="186" width="24" height="84" fill="#22d3ee88"/>
+    <rect x="308" y="214" width="24" height="56" fill="#22d3ee66"/>
+    <rect x="336" y="242" width="24" height="28" fill="#22d3ee44"/>
+    <!-- INT8 网格覆盖良好 -->
+    <g stroke="#34d399" stroke-width="1" stroke-dasharray="3 4" opacity="0.75">
+      <line x1="90" y1="288" x2="90" y2="130"/><line x1="150" y1="288" x2="150" y2="130"/>
+      <line x1="210" y1="288" x2="210" y2="130"/><line x1="270" y1="288" x2="270" y2="130"/>
+      <line x1="330" y1="288" x2="330" y2="130"/><line x1="390" y1="288" x2="390" y2="130"/>
+    </g>
+    <text x="245" y="312" text-anchor="middle" font-size="12" fill="#34d399" font-family="sans-serif">INT8 网格铺开 → 每根柱子都落得住格子</text>
+  </g>
+
+  <!-- 右：激活直方图（离群） -->
+  <g>
+    <text x="715" y="80" text-anchor="middle" font-size="13.5" font-weight="700" fill="#fbbf24" font-family="sans-serif">激活分布 · 成片离群</text>
+    <line x1="560" y1="270" x2="870" y2="270" stroke="#5f7194" stroke-width="1.4"/>
+    <rect x="576" y="196" width="18" height="74" fill="#fbbf2455"/>
+    <rect x="598" y="182" width="18" height="88" fill="#fbbf2455"/>
+    <rect x="620" y="200" width="18" height="70" fill="#fbbf2455"/>
+    <rect x="642" y="172" width="18" height="98" fill="#fbbf2455"/>
+    <rect x="664" y="188" width="18" height="82" fill="#fbbf2455"/>
+    <rect x="686" y="92" width="18" height="178" fill="#fbbf24"/>
+    <rect x="708" y="198" width="18" height="72" fill="#fbbf2455"/>
+    <rect x="730" y="176" width="18" height="94" fill="#fbbf2455"/>
+    <rect x="752" y="84" width="18" height="186" fill="#fbbf24"/>
+    <rect x="774" y="190" width="18" height="80" fill="#fbbf2455"/>
+    <rect x="796" y="182" width="18" height="88" fill="#fbbf2455"/>
+    <rect x="818" y="96" width="18" height="174" fill="#fbbf24"/>
+    <!-- 被撑爆的网格 -->
+    <g stroke="#e879f9" stroke-width="1" stroke-dasharray="3 4" opacity="0.75">
+      <line x1="560" y1="288" x2="560" y2="76"/><line x1="680" y1="288" x2="680" y2="76"/>
+      <line x1="800" y1="288" x2="800" y2="76"/><line x1="870" y1="288" x2="870" y2="76"/>
+    </g>
+    <text x="715" y="312" text-anchor="middle" font-size="12" fill="#e879f9" font-family="sans-serif">离群撑爆刻度 → 正常值全挤进一两格</text>
+  </g>
+
+  <!-- 中缝结论 -->
+  <rect x="430" y="128" width="100" height="150" rx="10" fill="#ffffff06" stroke="#ffffff22" stroke-width="1"/>
+  <text x="480" y="168" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">同一层里</text>
+  <text x="480" y="196" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">一边好压</text>
+  <text x="480" y="224" text-anchor="middle" font-size="12.5" fill="#b6c0d6" font-family="sans-serif">一边难压</text>
+  <text x="480" y="254" text-anchor="middle" font-size="13" font-weight="700" fill="#e8ecf6" font-family="sans-serif">→ 搬家去</text>
+</svg>

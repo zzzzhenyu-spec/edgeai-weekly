@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="AWQ 离线网格搜索流程">
+  <defs>
+    <linearGradient id="as-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+    <marker id="as-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#5f7194"/>
+    </marker>
+  </defs>
+  <rect width="960" height="360" fill="url(#as-bg)" rx="14"/>
+  <text x="480" y="40" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">AWQ 的 s 不训练：校准 + 网格搜索，一次离线搞定</text>
+
+  <!-- 流程四步 -->
+  <rect x="60" y="72" width="190" height="88" rx="10" fill="#fbbf2410" stroke="#fbbf24" stroke-width="1.2"/>
+  <text x="155" y="100" text-anchor="middle" font-size="13.5" font-weight="700" fill="#fbbf24" font-family="sans-serif">512 条校准文本</text>
+  <text x="155" y="124" text-anchor="middle" font-size="12" fill="#b6c0d6" font-family="sans-serif">只过一遍前向</text>
+  <text x="155" y="146" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">收集各层激活统计</text>
+  <line x1="258" y1="116" x2="292" y2="116" stroke="#5f7194" stroke-width="1.6" marker-end="url(#as-arrow)"/>
+
+  <rect x="298" y="72" width="200" height="88" rx="10" fill="#818cf812" stroke="#818cf8" stroke-width="1.2"/>
+  <text x="398" y="100" text-anchor="middle" font-size="13.5" font-weight="700" fill="#818cf8" font-family="sans-serif">逐通道候选缩放</text>
+  <text x="398" y="124" text-anchor="middle" font-size="12" fill="#b6c0d6" font-family="monospace">s = 激活幅度 ^ β</text>
+  <text x="398" y="146" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">β 在 0–1 之间取约 20 档</text>
+  <line x1="506" y1="116" x2="540" y2="116" stroke="#5f7194" stroke-width="1.6" marker-end="url(#as-arrow)"/>
+
+  <rect x="546" y="72" width="180" height="88" rx="10" fill="#22d3ee10" stroke="#22d3ee" stroke-width="1.2"/>
+  <text x="636" y="100" text-anchor="middle" font-size="13.5" font-weight="700" fill="#22d3ee" font-family="sans-serif">逐档试量化</text>
+  <text x="636" y="124" text-anchor="middle" font-size="12" fill="#b6c0d6" font-family="sans-serif">每层比输出差异</text>
+  <text x="636" y="146" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">挑误差最小的一档</text>
+  <line x1="734" y1="116" x2="768" y2="116" stroke="#5f7194" stroke-width="1.6" marker-end="url(#as-arrow)"/>
+
+  <rect x="774" y="72" width="130" height="88" rx="10" fill="#34d39912" stroke="#34d399" stroke-width="1.4"/>
+  <text x="839" y="100" text-anchor="middle" font-size="13.5" font-weight="700" fill="#34d399" font-family="sans-serif">纯 4-bit 权重</text>
+  <text x="839" y="124" text-anchor="middle" font-size="12" fill="#b6c0d6" font-family="sans-serif">统一格式导出</text>
+  <text x="839" y="146" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">AutoAWQ / vLLM</text>
+
+  <!-- β-误差曲线 -->
+  <g>
+    <text x="300" y="212" text-anchor="middle" font-size="13" font-weight="700" fill="#e8ecf6" font-family="sans-serif">每层都在找这条谷底</text>
+    <line x1="120" y1="320" x2="480" y2="320" stroke="#5f7194" stroke-width="1.4"/>
+    <line x1="120" y1="320" x2="120" y2="200" stroke="#5f7194" stroke-width="1.4"/>
+    <path d="M140 226 C 220 300, 250 310, 300 310 C 360 310, 390 250, 460 224" fill="none" stroke="#22d3ee" stroke-width="2.2"/>
+    <circle cx="300" cy="310" r="6" fill="#34d399"/>
+    <text x="300" y="296" text-anchor="middle" font-size="11.5" fill="#34d399" font-family="sans-serif">最优 β</text>
+    <text x="300" y="342" text-anchor="middle" font-size="11.5" fill="#99a5bf" font-family="sans-serif">缩放强度 β →（示意）</text>
+    <text x="100" y="262" text-anchor="end" font-size="11.5" fill="#99a5bf" font-family="sans-serif" transform="rotate(-90 100 262)">输出差异</text>
+  </g>
+
+  <!-- 右侧三个零 -->
+  <g font-family="sans-serif">
+    <rect x="546" y="212" width="358" height="36" rx="8" fill="#ffffff06" stroke="#ffffff22" stroke-width="1"/>
+    <text x="725" y="236" text-anchor="middle" font-size="12.5" fill="#b6c0d6">零反向传播 —— 不动模型一个梯度</text>
+    <rect x="546" y="256" width="358" height="36" rx="8" fill="#ffffff06" stroke="#ffffff22" stroke-width="1"/>
+    <text x="725" y="280" text-anchor="middle" font-size="12.5" fill="#b6c0d6">零回归 —— 无需 QAT / 微调</text>
+    <rect x="546" y="300" width="358" height="36" rx="8" fill="#34d3990c" stroke="#34d39966" stroke-width="1"/>
+    <text x="725" y="324" text-anchor="middle" font-size="12.5" fill="#34d399">分钟级完成一个模型的量化</text>
+  </g>
+</svg>

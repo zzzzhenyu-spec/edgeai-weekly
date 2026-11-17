@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-label="逐通道等价缩放变换动图">
+  <defs>
+    <linearGradient id="et-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/><stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+    <marker id="et-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#5f7194"/>
+    </marker>
+  </defs>
+  <rect width="960" height="360" fill="url(#et-bg)" rx="14"/>
+  <text x="480" y="40" text-anchor="middle" font-size="15.5" font-weight="700" fill="#e8ecf6" font-family="sans-serif">互逆旋钮：X÷s 与 W×s，输出一个 bit 都不变</text>
+
+  <!-- 左：激活通道条（j=2 金色离群，动画缩小） -->
+  <text x="170" y="78" text-anchor="middle" font-size="13.5" font-weight="700" fill="#fbbf24" font-family="sans-serif">激活 X（第 j 通道 ÷ s）</text>
+  <line x1="80" y1="212" x2="260" y2="212" stroke="#5f7194" stroke-width="1.4"/>
+  <rect x="96" y="178" width="20" height="34" fill="#fbbf2455"/>
+  <rect x="126" y="170" width="20" height="42" fill="#fbbf2455"/>
+  <rect x="156" y="132" width="20" height="80" fill="#fbbf24">
+    <animate attributeName="height" values="80;34;34;80" keyTimes="0;0.35;0.75;1" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="132;178;178;132" keyTimes="0;0.35;0.75;1" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="186" y="174" width="20" height="38" fill="#fbbf2455"/>
+  <rect x="216" y="166" width="20" height="46" fill="#fbbf2455"/>
+  <text x="170" y="236" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">离群被压平</text>
+
+  <!-- 中：权重矩阵，第 j 列动画增强 -->
+  <text x="475" y="78" text-anchor="middle" font-size="13.5" font-weight="700" fill="#22d3ee" font-family="sans-serif">权重 W（第 j 列 × s）</text>
+  <g fill="#22d3ee22" stroke="#22d3ee88" stroke-width="0.8">
+    <rect x="365" y="100" width="34" height="24"/><rect x="365" y="128" width="34" height="24"/><rect x="365" y="156" width="34" height="24"/><rect x="365" y="184" width="34" height="24"/>
+    <rect x="433" y="100" width="34" height="24"/><rect x="433" y="128" width="34" height="24"/><rect x="433" y="156" width="34" height="24"/><rect x="433" y="184" width="34" height="24"/>
+    <rect x="501" y="100" width="34" height="24"/><rect x="501" y="128" width="34" height="24"/><rect x="501" y="156" width="34" height="24"/><rect x="501" y="184" width="34" height="24"/>
+  </g>
+  <g fill="#fbbf24" stroke="#fbbf24" stroke-width="1.2">
+    <rect x="399" y="100" width="34" height="24"/><rect x="399" y="128" width="34" height="24"/><rect x="399" y="156" width="34" height="24"/><rect x="399" y="184" width="34" height="24"/>
+  </g>
+  <rect x="399" y="100" width="34" height="108" fill="#fbbf24" opacity="0.15">
+    <animate attributeName="opacity" values="0.08;0.55;0.55;0.08" keyTimes="0;0.35;0.75;1" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="416" y="236" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">命门列被放大</text>
+
+  <line x1="268" y1="160" x2="356" y2="160" stroke="#5f7194" stroke-width="1.6" marker-end="url(#et-arrow)"/>
+
+  <!-- 右：输出不变 -->
+  <text x="762" y="78" text-anchor="middle" font-size="13.5" font-weight="700" fill="#34d399" font-family="sans-serif">输出 Y</text>
+  <rect x="662" y="120" width="200" height="88" rx="12" fill="#34d39910" stroke="#34d399" stroke-width="1.6">
+    <animate attributeName="stroke-opacity" values="0.35;1;0.35" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="762" y="156" text-anchor="middle" font-size="15" font-weight="700" fill="#34d399" font-family="sans-serif">逐元素不变</text>
+  <text x="762" y="182" text-anchor="middle" font-size="12" fill="#b6c0d6" font-family="sans-serif">浮点下精确相等</text>
+  <line x1="541" y1="160" x2="654" y2="160" stroke="#5f7194" stroke-width="1.6" marker-end="url(#et-arrow)"/>
+
+  <!-- 底部公式 -->
+  <rect x="150" y="268" width="660" height="62" rx="10" fill="#ffffff06" stroke="#ffffff22" stroke-width="1"/>
+  <text x="480" y="294" text-anchor="middle" font-size="14" fill="#e8ecf6" font-family="monospace">Y = W·X = ( W · diag(s) ) · ( diag(s)⁻¹ · X )</text>
+  <text x="480" y="318" text-anchor="middle" font-size="12" fill="#99a5bf" font-family="sans-serif">s 逐通道取值 → 量化难度在两边重新分配，输出不动</text>
+</svg>
