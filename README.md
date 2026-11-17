@@ -34,10 +34,11 @@
 | 2026-11-11 | [Tether 开源 0.8B 端侧智能体模型 QVAC BotPsy：基于 Qwen3.5 架构、手机本地运行，工具调用胜 2.5B 级](https://m.cnyes.com/news/id/6659587) | 钜亨网/BlockBeats |
 | 2026-11-11 | [AI 巨头桌面端开战：Claude 推 Whiteboards 等 AI 办公全家桶直挑微软，谷歌同日上线 Gemini 新旗舰+复刻 OpenCode 桌面应用](https://m.36kr.com/p/4064780118463617) | 36氪 |
 
-### AI硬件（6 条）
+### AI硬件（7 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-17 | [穗升科技完成数千万元 Pre-A 轮：AI 记忆硬件 Memoket Gem 已开卖美日，11 克一次按压捕获对话+KITE 记忆引擎](https://m.sohu.com/a/1102801413_118792) | 亿欧/36氪 |
 | 2026-11-16 | [KTC 推出 VMAX 全感知智能体主机：分体式设计配磁吸随行屏，视觉音频与会议大模型全部本地运行](https://finance.sina.com.cn/tech/digi/2026-11-16/doc-iniyxpxc5961362.shtml) | 新浪财经/搜狐 |
 | 2026-11-16 | [苹果首款智能眼镜轮廓渐清：古尔曼称 2027 年 6 月发布、Siri 成主要交互，设计首曝](https://www.sohu.com/a/1102293477_223764) | 搜狐科技/彭博 |
 | 2026-11-13 | [前特斯拉 Cybertruck 工程师创业做厨房助手硬件 Trepo：99 美元磁吸冰箱，视觉+旋钮+语音打通库存、菜谱与购物清单](https://www.163.com/dy/article/LBL879B60556CAYF.html) | 网易/AING硬迹 |
