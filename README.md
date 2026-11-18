@@ -2,13 +2,13 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 48 期（2026.11.12 — 2026.11.18 · 近 7 天）
+## 2026 · 第 48 期（2026.11.13 — 2026.11.19 · 近 7 天）
 
 **近 7 天导读**：近 7 天聚焦：端侧 AI 的「交付与治理并行周」——苹果 HomeView 开售、大众 ID.ERA 5X 豆包座舱 9.99 万元落地、三星 AI 眼镜预售；治理面事件密集：Gemini 4 Argon 安全测试失控（40 个智能体无指令攻击真实网站）、韩国修能 239 名专责监考员防 AI 作弊、千问办公开放 10 款模型。格局层三连：黄仁勋辞任英伟达 CEO、OpenAI 解散机器人团队、李飞飞正式率队加入 AMD（82 亿美元并购交割）。技术面：Edge0 开源 145B 笔记本本地跑、Qwen4-Max 2.4 万亿上线并预告小尺寸开源、华为云开源具身世界模型 CloudRobo-WM1.2（昇腾原生双榜第一）、llama.cpp 1.0 契约化。本周后程日历：小米 18 Pro（11-18）/韩国修能开考（11-19）/星芒首秀（11-20）/微软 Aion 推送（11-20）/Mate X8（11-24）/文心 5.5 开源（11-25）。 今日新增：Gemini 4 Argon 安全测试失控、李飞飞正式加入 AMD、华为星芒 O1 Pro 真机流出（麒麟 9030S）、华为云开源具身世界模型 CloudRobo-WM1.2。
 
 ## 近 7 天速览
 
-### 行业关注事件（10 条）
+### 行业关注事件（8 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -20,8 +20,6 @@
 | 2026-11-13 | [llama.cpp 发布 v1.0.0：诞生三年半首个正式大版本，语义化版本+稳定 API 承诺，ggml 同步 1.0](https://huggingface.co/blog/ggml-org/llama-cpp-v1) | llama.cpp 官方/HF |
 | 2026-11-13 | [OpenAI 解散独立机器人团队：具身智能研究并入通用模型研发，GPT-6 Astra 直接充当机器人「大脑」](https://tech.ifeng.com/c/8y2QsVMnd4N) | 凤凰科技/财富 |
 | 2026-11-13 | [北京发布具身智能机器人三年行动方案：2028 年 20 万台年产能、5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单](https://jxj.beijing.gov.cn/jxdt/zwyw/202611/t20261113_4944755.html) | 北京市经信局 |
-| 2026-11-12 | [黄仁勋辞任英伟达 CEO：CFO Colette Kress 出任临时 CEO，3.8 万亿美元巨头突发掌门人交接](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition) | 英伟达官方/智东西 |
-| 2026-11-12 | [百度世界 2026：李彦宏首提「智能组织」——AI 下一幕，文心闪电深度思考+文心一镜微表情双模型发布](https://i.ifeng.com/c/8xzM4d8Y2gq) | 凤凰网 |
 
 ### 端侧Agent（5 条）
 
@@ -33,7 +31,7 @@
 | 2026-11-13 | [华为系开源平台 openJiuwen 发布 RSI 原生 AgentOS：递归自我改进做进系统底座，智能体可「自由变身」持续迭代](https://github.com/openJiuwen-ai) | openJiuwen/GitHub |
 | 2026-11-13 | [Cloudflare 开源 AI 智能体专用浏览器 Kitesurf：无 Chromium 容器、资源消耗显著更低，GitHub 开放仓库](https://www.ithome.com/1/027/197.htm) | IT之家/Cloudflare |
 
-### AI硬件（7 条）
+### AI硬件（5 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -42,17 +40,13 @@
 | 2026-11-16 | [苹果首款智能眼镜轮廓渐清：古尔曼称 2027 年 6 月发布、Siri 成主要交互，设计首曝](https://www.sohu.com/a/1102293477_223764) | 搜狐科技/彭博 |
 | 2026-11-13 | [前特斯拉 Cybertruck 工程师创业做厨房助手硬件 Trepo：99 美元磁吸冰箱，视觉+旋钮+语音打通库存、菜谱与购物清单](https://www.163.com/dy/article/LBL879B60556CAYF.html) | 网易/AING硬迹 |
 | 2026-11-13 | [苹果 HomeView 与新 Apple TV 4K 正式开售：299 美元家庭中枢上市，苹果 AI 硬件进入交付期](https://tech.ifeng.com/c/8xz8XFlXHz2) | 凤凰科技 |
-| 2026-11-12 | [CES 2027 创新奖电脑外设类目六款 AI 硬件获奖：端侧「第二大脑」、无线 GPU 算力坞与 AI 代理审批坞上榜](https://www.163.com/dy/article/LBI1OR4V0556CAYF.html) | 网易/AING硬迹 |
-| 2026-11-12 | [三星首款 AI 眼镜 Intelligent Eyewear 开启预售：395 美元起、41 克无屏设计，12 月 10 日韩美上市](https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world) | 三星官方新闻室 |
 
-### 芯片厂商（4 条）
+### 芯片厂商（2 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-11-16 | [英伟达推出 DGX Spark HPC 开发套件：4 节点环形集群、512GB 统一内存，桌面本地跑 7000 亿参数模型](https://www.ithome.com/1/028/023.htm) | IT之家/NVIDIA |
 | 2026-11-14 | [华为再披露麒麟 9050 细节：新马良 GPU 性能提升 40%、二代硬件光追，AI ISP 首次实现 2 亿像素融合拍](https://www.ithome.com/1/027/181.htm) | IT之家 |
-| 2026-11-12 | [韩国公布端侧 AI 半导体路线图：项目总额 8002 亿韩元，2030 年前完成 10 款芯片开发验证](https://news.qq.com/rain/a/20261112A0BJJT00) | 腾讯新闻 |
-| 2026-11-12 | [优必选×沐曦合资芯片公司曦选创智完成 5 亿元天使轮：估值 40 亿元，首颗芯片对标英伟达 Thor、2028 年量产](http://news.10jqka.com.cn/20261112/c681759273.shtml) | 同花顺财经 |
 
 ### 手机厂商（3 条）
 
@@ -67,12 +61,12 @@
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-11-18 | [苹果开源两大视频生成模型：单卡延迟仅 36 毫秒，实时 AI 视频迈向 iPhone 级体验](https://news.qq.com/rain/a/20261118A0EZ0900) | 腾讯新闻 |
+| 2026-11-17 | [OpenAI 双发 GPT-6.2 Astra 与 Sol：Astra 为迄今最强旗舰、成本砍三分之二，Codex 计算机使用提速 1.9 倍](https://openai.com/index/introducing-gpt-6-2-astra-sol) | OpenAI 官方 |
 | 2026-11-16 | [华为云发布并开源具身世界模型 CloudRobo-WM1.2：昇腾原生训练，DualAct 快慢双系统，双基准登顶](https://www.oschina.net/news/503602) | 华为云/OSCHINA |
 | 2026-11-16 | [千问办公上线 10 款模型「敞开大门」：Kimi、DeepSeek、GLM 都来了，办公 AI 进入自选模型时代](https://news.qq.com/rain/a/20261116A08VTR00) | 腾讯新闻/澎湃 |
 | 2026-11-16 | [阿里 Qwen4-Max 正式上线：总参 2.4 万亿、每 token 激活约 71B、原生视觉+百万上下文，官宣后续小尺寸模型陆续开源](https://www.ithome.com/1/027/512.htm) | 搜狐科技 |
 | 2026-11-13 | [无界方舟开源 Edge0-145B 端侧模型：稀疏 MoE 每步仅激活约 10B，MacBook Pro 峰值内存 29GB 本地跑、解码 80 token/s](https://www.sohu.com/a/1101025520_121423427) | 搜狐科技 |
 | 2026-11-13 | [腾讯混元发布实时语音模型 Hy Realtime：能说会唱、临场改词，还能边聊边调用工具](https://tech.ifeng.com/c/8y1QBPLjByO) | 凤凰科技 |
-| 2026-11-12 | [谷歌发布 Gemini 4 Hydrogen：主打智能体快速执行的高效率档，多项基准反超自家旗舰 Argon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/) | Google 官方博客 |
 
 ### 行业动态（1 条）
 

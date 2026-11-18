@@ -133,6 +133,18 @@ id: "n243", cat: "行业关注事件", source: "北京市经信局", date: "2026
     },
 
 {
+id: "n261", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-12",
+      title: "CES 2027 创新奖电脑外设类目六款 AI 硬件获奖：端侧「第二大脑」、无线 GPU 算力坞与 AI 代理审批坞上榜",
+      summary: "CES 2027 创新奖名单公布，电脑外设与配件类目罕见地有六件 AI 硬件同时获奖：Relay Q 模块化按键说话硬件（记忆存本地、订阅 15 美元/月）、港科大教授创办的 WiCi One 家用无线 GPU（Wi-Fi 7 向全家设备分发算力、权重分页跑超显存大模型）、PexarBolt Ultra TBT5 扩展坞（可在坞上批准/拒绝 AI 代理的高风险操作）等——AI 外设正在从键鼠配件转向「始终在场的器官」。",
+      detail: "名单：CES 2027 创新奖 Computer Peripherals & Accessories 类目 6 件 AI 硬件（11 月 12 日多方盘点）。\n输入派：Relay Q（前 Nothing AI 负责人许奇创立）——磁吸模块化按键说话硬件，耳语级拾音，记忆存储在用户本地设备（端侧「个人第二大脑」），订阅 15 美元/月、2027 年 1 月发货；Melt Mouse——载荷传感器+触觉反馈的无按键三合一鼠标。\n算力派：WiCi One（港科大助理教授孟子立联合创办）——家用无线 GPU，Wi-Fi 7 向笔记本/手机/机器人/智能眼镜分发算力，RTX 5060 Ti 起步最高 5090、内置 4TB NVMe，「权重分页」跑超显存大模型，Premiere/ComfyUI/Ollama 免改动接入；PexarBolt Ultra（江波龙 PEXAR）——Thunderbolt 5 扩展坞带 5 英寸触控屏，可在坞上批准或拒绝 AI 代理的高风险操作。\n数据派：RocketBox USB Fabric——最多 5 台设备 10Gbps 点对点直连、流量不经外部网络（数据「不出房间」）；CELLTRACE（doubleO）——法律取证 SSD 芯片级读取设备，计划内置端侧小语言模型助手。\n端侧视角：这份名单是端侧 AI 硬件化的年度风向标——算力（无线 GPU 分发）、数据（本地直连不出房间）、交互（本地记忆的第二大脑）、治理（物理按键审批 AI 代理）四个维度都有独立产品获奖；「外设」正在变成 AI 的物理器官层，键鼠大厂缺席而 AI 创企包场，定义权已经易主。",
+      tags: ["CES 2027", "AI外设", "创新奖", "第二大脑", "无线GPU"],
+      url: "https://www.163.com/dy/article/LBI1OR4V0556CAYF.html",
+      image: "images/news/n261.jpg",
+      imageCap: "CES 2027 创新奖 AI 外设（图源：网易/AING硬迹）",
+      highlight: false
+    },
+
+{
 id: "n248", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-12",
       title: "谷歌发布 Gemini 4 Hydrogen：主打智能体快速执行的高效率档，多项基准反超自家旗舰 Argon",
       summary: "谷歌 11 月 12 日发布 Gemini 4 家族新成员 Hydrogen——定位「日常驱动」的高效率执行型模型，专注日常编码与智能体工作流，与负责深度长程推理的 Carbon/Argon 形成分层。Artificial Analysis 智能指数 high 档 51 分反超 Argon（50 分），xhigh 档达 54 分；Terminal-Bench 4.1 达 57%（上代 3.8 Flash 为 18.2%）且任务速度快 2.5 倍；支持 100 万 token 输入与最多 100 万 token 输出，全上下文统一价每百万输入 1.50 美元、输出 7.50 美元。",

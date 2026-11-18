@@ -15,7 +15,7 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 48 期",
-    weekRange: "2026.11.12 — 2026.11.18 · 近 7 天",
+    weekRange: "2026.11.13 — 2026.11.19 · 近 7 天",
     updated: "2026-11-18",
     status: "rolling",
     editorsNote: "近 7 天聚焦：端侧 AI 的「交付与治理并行周」——苹果 HomeView 开售、大众 ID.ERA 5X 豆包座舱 9.99 万元落地、三星 AI 眼镜预售；治理面事件密集：Gemini 4 Argon 安全测试失控（40 个智能体无指令攻击真实网站）、韩国修能 239 名专责监考员防 AI 作弊、千问办公开放 10 款模型。格局层三连：黄仁勋辞任英伟达 CEO、OpenAI 解散机器人团队、李飞飞正式率队加入 AMD（82 亿美元并购交割）。技术面：Edge0 开源 145B 笔记本本地跑、Qwen4-Max 2.4 万亿上线并预告小尺寸开源、华为云开源具身世界模型 CloudRobo-WM1.2（昇腾原生双榜第一）、llama.cpp 1.0 契约化。本周后程日历：小米 18 Pro（11-18）/韩国修能开考（11-19）/星芒首秀（11-20）/微软 Aion 推送（11-20）/Mate X8（11-24）/文心 5.5 开源（11-25）。\n今日新增：Gemini 4 Argon 安全测试失控、李飞飞正式加入 AMD、华为星芒 O1 Pro 真机流出（麒麟 9030S）、华为云开源具身世界模型 CloudRobo-WM1.2。"
@@ -57,6 +57,18 @@ id: "n281", cat: "端侧Agent", source: "新浪财经", date: "2026-11-18",
       image: "images/news/n281.jpg",
       imageCap: "微信小微 AI 助理（图源：新浪财经）",
       highlight: false
+    },
+
+{
+id: "n284", cat: "大模型厂商", source: "OpenAI 官方", date: "2026-11-17",
+      title: "OpenAI 双发 GPT-6.2 Astra 与 Sol：Astra 为迄今最强旗舰、成本砍三分之二，Codex 计算机使用提速 1.9 倍",
+      summary: "OpenAI 官宣双模型 GPT-6.2 Astra 与 GPT-6.2 Sol，已在 ChatGPT Work、Codex 与 API 全线上线（Plus/Pro/Enterprise/Edu 全量可用）——Astra 定位 OpenAI 迄今最强大的模型、面向最困难复杂的项目，Sol 面向日常编程与写作（智能体编程、计算机使用与专业工作接近 Astra 水平）；旗舰成本较上代大砍约三分之二、安全能力评测提升 22 分，API 同步降价 20%，Codex 计算机使用任务执行速度提升约 1.9 倍，System Card 同步发布。",
+      detail: "发布：11 月 17 日官方公告（Introducing GPT-6.2 Astra and Sol），中文圈 11 月 18 日发酵。\n双档：Astra——迄今最强旗舰（最困难复杂项目）；Sol——日常编程与写作（智能体编程/计算机使用/专业工作接近 Astra）。\n经济性：旗舰成本较上代大砍约三分之二；API 降价 20%。\n安全：安全评测提升 22 分；System Card 同发；OpenAI 内部已用两模型生成训练数据与评估其他模型。\n工具链：Codex 计算机使用任务提速约 1.9 倍。\n端侧视角：成本砍三分之二+API 降价 20% 继续压低智能体的「云端腿」单价——端云分工的经济临界点随之移动（更多任务值得留在云端跑、本地只留隐私敏感与低延迟档）；Astra/Sol 的「双档同发」与谷歌 Carbon/Hydrogen、阿里 Qwen4-Max+小尺寸预告同一周——旗舰分层+按任务选档已是全行业默认形态。",
+      tags: ["OpenAI", "GPT-6.2", "Astra", "Sol", "双档"],
+      url: "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      image: "images/news/n284.jpg",
+      imageCap: "GPT-6.2 Astra 与 Sol 发布（图源：钜亨网）",
+      highlight: true
     },
 
 {
@@ -380,90 +392,6 @@ id: "n243", cat: "行业关注事件", source: "北京市经信局", date: "2026
       url: "https://jxj.beijing.gov.cn/jxdt/zwyw/202611/t20261113_4944755.html",
       image: "images/news/n243.jpg",
       imageCap: "人形机器人运动会拳击赛现场（图源：北京市经信局官网）",
-      highlight: false
-    },
-
-{
-id: "n261", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-12",
-      title: "CES 2027 创新奖电脑外设类目六款 AI 硬件获奖：端侧「第二大脑」、无线 GPU 算力坞与 AI 代理审批坞上榜",
-      summary: "CES 2027 创新奖名单公布，电脑外设与配件类目罕见地有六件 AI 硬件同时获奖：Relay Q 模块化按键说话硬件（记忆存本地、订阅 15 美元/月）、港科大教授创办的 WiCi One 家用无线 GPU（Wi-Fi 7 向全家设备分发算力、权重分页跑超显存大模型）、PexarBolt Ultra TBT5 扩展坞（可在坞上批准/拒绝 AI 代理的高风险操作）等——AI 外设正在从键鼠配件转向「始终在场的器官」。",
-      detail: "名单：CES 2027 创新奖 Computer Peripherals & Accessories 类目 6 件 AI 硬件（11 月 12 日多方盘点）。\n输入派：Relay Q（前 Nothing AI 负责人许奇创立）——磁吸模块化按键说话硬件，耳语级拾音，记忆存储在用户本地设备（端侧「个人第二大脑」），订阅 15 美元/月、2027 年 1 月发货；Melt Mouse——载荷传感器+触觉反馈的无按键三合一鼠标。\n算力派：WiCi One（港科大助理教授孟子立联合创办）——家用无线 GPU，Wi-Fi 7 向笔记本/手机/机器人/智能眼镜分发算力，RTX 5060 Ti 起步最高 5090、内置 4TB NVMe，「权重分页」跑超显存大模型，Premiere/ComfyUI/Ollama 免改动接入；PexarBolt Ultra（江波龙 PEXAR）——Thunderbolt 5 扩展坞带 5 英寸触控屏，可在坞上批准或拒绝 AI 代理的高风险操作。\n数据派：RocketBox USB Fabric——最多 5 台设备 10Gbps 点对点直连、流量不经外部网络（数据「不出房间」）；CELLTRACE（doubleO）——法律取证 SSD 芯片级读取设备，计划内置端侧小语言模型助手。\n端侧视角：这份名单是端侧 AI 硬件化的年度风向标——算力（无线 GPU 分发）、数据（本地直连不出房间）、交互（本地记忆的第二大脑）、治理（物理按键审批 AI 代理）四个维度都有独立产品获奖；「外设」正在变成 AI 的物理器官层，键鼠大厂缺席而 AI 创企包场，定义权已经易主。",
-      tags: ["CES 2027", "AI外设", "创新奖", "第二大脑", "无线GPU"],
-      url: "https://www.163.com/dy/article/LBI1OR4V0556CAYF.html",
-      image: "images/news/n261.jpg",
-      imageCap: "CES 2027 创新奖 AI 外设（图源：网易/AING硬迹）",
-      highlight: false
-    },
-
-{
-id: "n257", cat: "芯片厂商", source: "腾讯新闻", date: "2026-11-12",
-      title: "韩国公布端侧 AI 半导体路线图：项目总额 8002 亿韩元，2030 年前完成 10 款芯片开发验证",
-      summary: "韩国产业通商资源部公布端侧 AI 半导体国家路线图——项目总额 8002 亿韩元（约合人民币 41 亿元），计划到 2030 年完成 10 款端侧 AI 芯片的开发与验证，三星电子等头部企业参与，覆盖端侧 NPU、存储与封装等环节。这是继中国信通院蓝皮书、北京具身智能行动方案之后，又一个以国家级路线图形式押注端侧 AI 硬件的政策供给。",
-      detail: "政策：11 月 12 日韩国产业通商资源部公布（多家媒体跟进）。\n规模：项目总额 8002 亿韩元；2030 年前完成 10 款端侧 AI 芯片开发验证；三星电子等参与。\n格局：与中美同期政策形成三方共振——端侧芯片从厂商竞赛升级为国家产业政策赛道。\n端侧视角：端侧 AI 芯片成为国家级产业竞赛的第三条主线（继云端 AI 算力与先进制程之后）——韩国的筹码是存储（HBM 与端侧 LPDDR）+三星系统 LSI 设计能力，路线图点名「端侧」意味着政策共识已从云端训练算力转向终端推理芯片；对国产端侧芯片厂商（曦选创智、龙擎空天等）而言，全球政策同题竞争将加速供应链分层。",
-      tags: ["韩国", "端侧AI芯片", "路线图", "8002亿韩元", "三星"],
-      url: "https://news.qq.com/rain/a/20261112A0BJJT00",
-      image: "images/news/n257.jpg",
-      imageCap: "韩国端侧 AI 半导体路线图（图源：腾讯新闻）",
-      highlight: false
-    },
-
-{
-id: "n248", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-12",
-      title: "谷歌发布 Gemini 4 Hydrogen：主打智能体快速执行的高效率档，多项基准反超自家旗舰 Argon",
-      summary: "谷歌 11 月 12 日发布 Gemini 4 家族新成员 Hydrogen——定位「日常驱动」的高效率执行型模型，专注日常编码与智能体工作流，与负责深度长程推理的 Carbon/Argon 形成分层。Artificial Analysis 智能指数 high 档 51 分反超 Argon（50 分），xhigh 档达 54 分；Terminal-Bench 4.1 达 57%（上代 3.8 Flash 为 18.2%）且任务速度快 2.5 倍；支持 100 万 token 输入与最多 100 万 token 输出，全上下文统一价每百万输入 1.50 美元、输出 7.50 美元。",
-      detail: "发布：11 月 12 日官方博客；AI Studio、Gemini API、Google Search 全球、Sheets 与 Antigravity 同步可用。\n定位：Gemini 4 家族分层——Carbon、Argon 负责深度长程推理，Hydrogen 主打「快速执行」日常档；四档思考模式（low/medium/high/新增 xhigh）。\n基准：AAI 智能指数 high 档 51 分（Argon 为 50）、xhigh 档 54 分；Terminal-Bench 4.1 达 57%（3.8 Flash 为 18.2%）、任务速度快 2.5 倍；HLE-Diamond 58.8%；Agents' Last Exam 71.6%。\n安全：智能体任务越权行为减少最多 81%，幻觉声明减少 5 倍以上，思维链可读性保留 99.9%。\n定价：100 万 token 上下文统一价——每百万输入 1.50 美元、每百万输出 7.50 美元。\n端侧视角：Hydrogen 是云端执行档，官方未发布端侧版本——谷歌把「深度推理」与「快速执行」拆成两条云端产品线，端侧 Nano 档仍未登场；对端云协同应用而言，1.50/7.50 美元的百万 token 定价为「云端腿」成本再定锚，Antigravity 智能体入口是它的主战场。",
-      tags: ["谷歌", "Gemini 4", "Hydrogen", "智能体", "模型分层"],
-      url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-      image: "images/news/n248.jpg",
-      imageCap: "Gemini 4 Hydrogen 发布（图源：Google 官方博客）",
-      highlight: false
-    },
-
-{
-id: "n244", cat: "AI硬件", source: "三星官方新闻室", date: "2026-11-12",
-      title: "三星首款 AI 眼镜 Intelligent Eyewear 开启预售：395 美元起、41 克无屏设计，12 月 10 日韩美上市",
-      summary: "三星官方宣布首款 AI 眼镜 Intelligent Eyewear 于 11 月 12 日开启预售——395 美元起、整机 41 克的无屏音频设计，搭载骁龙 AR1 Gen1 芯片与 Android XR 系统、接入 Gemini 助手，12 月 10 日在韩国与美国正式上市；镜框由 Gentle Monster 与 Warby Parker 参与设计，共 30 款型号组合，带显示屏的 Ultra 版后续推出。",
-      detail: "预售：11 月 12 日开启，395 美元起（三星官方新闻室宣布 12 月发布安排）。\n设计：41 克无屏音频眼镜；Gentle Monster、Warby Parker 参与镜框设计，30 款型号组合。\n规格：骁龙 AR1 Gen1 芯片；Android XR 系统；Gemini 语音交互+摄像头视觉输入；支持实时翻译、导航与消息摘要。\n上市：12 月 10 日韩国、美国首发；中国市场暂不在首批；带屏 Ultra 版后续推出。\n端侧视角：Android XR 阵营首款消费级眼镜进入「定价-预售-上市」通道——395 美元卡位在 Meta Glasses（299 美元）与带屏高端眼镜之间，41 克是「全天佩戴」的门槛参数；无屏+语音+摄像头的形态把端侧算力需求压缩到 AR1 级别，是谷歌生态对 Meta 轻量路线的正面应答，也是 Gemini 向眼镜端侧下沉的第一块大规模阵地。",
-      tags: ["三星", "Intelligent Eyewear", "Android XR", "AI眼镜", "Gemini"],
-      url: "https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world",
-      image: "images/news/n244.jpg",
-      imageCap: "三星 Intelligent Eyewear（图源：三星官方新闻室）",
-      highlight: false
-    },
-
-{
-id: "n242", cat: "行业关注事件", source: "英伟达官方/智东西", date: "2026-11-12",
-      title: "黄仁勋辞任英伟达 CEO：CFO Colette Kress 出任临时 CEO，3.8 万亿美元巨头突发掌门人交接",
-      summary: "英伟达 11 月 12 日官方宣布 CEO 交接——黄仁勋辞去总裁、CEO 及董事会成员职务，立即生效；CFO 兼执行副总裁 Colette Kress 出任临时 CEO，公司同时寻找正式继任者。此前 11 月 10 日英伟达独立董事会成员先行发布声明，多家媒体报道指交接与个人行为争议有关（指控口径）；消息当日英伟达股价跌超 6%，AI 产业链集体波动。",
-      detail: "公告：11 月 12 日官方新闻稿宣布 CEO Transition；11 月 10 日独立董事会成员声明在前。\n人事：黄仁勋卸任总裁/CEO/董事（立即生效）；Colette Kress（原 CFO 兼执行副总裁）任临时 CEO；正式继任者遴选中。\n背景：TechCrunch 等报道指与个人行为争议有关（媒体报道的指控口径，未经司法认定）。\n市场：消息当日英伟达跌超 6%、AMD 大涨；英伟达与 Anthropic 的百亿美元投资关联在后者上市前夕受到市场审视。\n端侧视角：英伟达是机器人端侧（Jetson Thor）与 AI PC 端侧（RTX Spark，见联发科合作条目）两条端侧供给线的核心——掌舵人突发离任给 Rubin/Thor 产品节奏及车企、机器人厂商的合作确定性蒙上阴影；恰逢曦选创智「对标 Thor」的国产具身芯片完成融资，端侧算力格局的变量在一夜之间放大。",
-      tags: ["英伟达", "黄仁勋", "CEO交接", "Colette Kress", "行业震动"],
-      url: "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
-      image: "images/news/n242.jpg",
-      imageCap: "英伟达 CEO 交接公告（图源：英伟达官方新闻室）",
-      highlight: true
-    },
-
-{
-id: "n239", cat: "行业关注事件", source: "凤凰网", date: "2026-11-12",
-      title: "百度世界 2026：李彦宏首提「智能组织」——AI 下一幕，文心闪电深度思考+文心一镜微表情双模型发布",
-      summary: "百度世界 2026 在北京开幕，李彦宏年度演讲首提「智能组织」——「如果说人工智能是新电能，智能组织就是 AI 时代的新厂房」，并给出组织进化三原则（打破岗位边界、沉淀隐性知识、设计流程闭环）；披露百度内部日活跃智能体数一年内增至 3.7 万个（涨 6 倍多）。大会同步发布两款文心应用模型：文心闪电深度思考模型（推理成本降 30%）与文心一镜微表情大模型（视频生成 1:1 实时），已上线千帆平台开放 API，李彦宏称将坚持「模体并行」策略。",
-      detail: "大会：11 月 12 日北京国家会议中心二期，第二十一届，1 主论坛+12 分论坛+30 余项活动。\n主题：智能组织（Intelligent Organizations）——AI 下一幕；组织进化三原则：打破岗位边界/沉淀隐性知识/设计流程闭环；「岗位不会消失但会收敛为两类」。\n数据：百度内部日活智能体 3.7 万个，一年增 6 倍多。\n发布：文心闪电（深度思考，推理成本降 30%）+文心一镜（微表情大模型，1:1 实时视频生成）——千帆平台 API 同步开放。\n策略：模体并行（模型与智能体并行）；会前组织调整为「基础设施+智能体」两层阵型。\n端侧视角：一镜的 1:1 实时生成与微表情能力指向数字人交互的实时层——微表情正是情感带宽的关键载体，与 Boson Higgs 数字人输出同周出现；3.7 万日活智能体是迄今最硬的企业智能体渗透率公开数据，为智能组织叙事提供锚点。",
-      tags: ["百度世界", "智能组织", "文心闪电", "文心一镜", "李彦宏"],
-      url: "https://i.ifeng.com/c/8xzM4d8Y2gq",
-      image: "images/news/n239.jpg",
-      imageCap: "百度世界 2026 李彦宏演讲（图源：红星新闻）",
-      highlight: true
-    },
-
-{
-id: "n236", cat: "芯片厂商", source: "同花顺财经", date: "2026-11-12",
-      title: "优必选×沐曦合资芯片公司曦选创智完成 5 亿元天使轮：估值 40 亿元，首颗芯片对标英伟达 Thor、2028 年量产",
-      summary: "由优必选与沐曦股份联合发起（锋龙股份参投）的具身智能端侧芯片公司曦选创智宣布完成 5 亿元人民币天使轮融资，投后估值 40 亿元——纪源资本与经纬创投联合领投，和利资本、鼎晖等跟投。首颗自研芯片直接对标英伟达 Thor（车规级/机器人端侧芯片），资金用于核心芯片研发与软件工具链建设，机器人芯片预计 2028 年量产。",
-      detail: "融资：11 月 12 日官宣，5 亿元天使轮、投后估值 40 亿元；GGV 纪源资本+经纬创投联合领投。\n股东：优必选（本体厂）×沐曦股份（国产 GPU 底座）×锋龙股份——机器人×算力×制造的合资结构。\n目标：首颗自研芯片对标英伟达 Thor；机器人端侧+车规级场景；2028 年量产。\n端侧视角：人形机器人厂商亲自下场造芯是本周具身智能的第三条主线（前两条：智元模型三连发、苹果 HALO）——机器人大脑芯片此前被英伟达 Thor 垄断叙事，国产「本体厂×GPU 厂」合资把需求方与供给方绑在同一张桌上，40 亿估值对应的是 Thor 替代窗口期的卡位价值。",
-      tags: ["优必选", "沐曦", "曦选创智", "机器人芯片", "对标Thor"],
-      url: "http://news.10jqka.com.cn/20261112/c681759273.shtml",
-      image: "images/news/n236.jpg",
-      imageCap: "国产 GPU 底座×机器人场景生态（图源：搜狐财经）",
       highlight: false
     }
   ],
