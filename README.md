@@ -21,20 +21,22 @@
 | 2026-11-13 | [OpenAI 解散独立机器人团队：具身智能研究并入通用模型研发，GPT-6 Astra 直接充当机器人「大脑」](https://tech.ifeng.com/c/8y2QsVMnd4N) | 凤凰科技/财富 |
 | 2026-11-13 | [北京发布具身智能机器人三年行动方案：2028 年 20 万台年产能、5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单](https://jxj.beijing.gov.cn/jxdt/zwyw/202611/t20261113_4944755.html) | 北京市经信局 |
 
-### 端侧Agent（5 条）
+### 端侧Agent（6 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-18 | [openJiuwen 推出 AgentOS「Harnessless」开发范式：免自建脚手架，直接复用单 Agent 与蜂群能力](https://m.sohu.com/a/1103168310_129720) | 搜狐科技 |
 | 2026-11-18 | [腾讯 WorkBuddy 日活破 1000 万：成为中国大模型日均 Token 用量最高的 AI 产品](https://www.sohu.com/a/1103270823_123055741) | 搜狐科技 |
 | 2026-11-18 | [微信「小微」日活达 3000 万：官方预告部分推理任务未来将在设备端运行](https://finance.sina.com.cn/tech/digi/2026-11-18/doc-inizehkz6841176.shtml) | 新浪财经 |
 | 2026-11-16 | [开源鸿蒙轻 AI「越影」方案发布：1 块主板+6 款扩展板，让百亿「哑终端」IoT 设备跨入轻智能](https://tech.china.com/articles/20261116/202611161979249.html) | 中华网科技/海思 |
 | 2026-11-13 | [华为系开源平台 openJiuwen 发布 RSI 原生 AgentOS：递归自我改进做进系统底座，智能体可「自由变身」持续迭代](https://github.com/openJiuwen-ai) | openJiuwen/GitHub |
 | 2026-11-13 | [Cloudflare 开源 AI 智能体专用浏览器 Kitesurf：无 Chromium 容器、资源消耗显著更低，GitHub 开放仓库](https://www.ithome.com/1/027/197.htm) | IT之家/Cloudflare |
 
-### AI硬件（5 条）
+### AI硬件（6 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-19 | [极米记得 AI 记忆眼镜 G1 与手环 L1 搭载物奇微 WQ7036：国产低功耗 AI 音频芯片进入记忆硬件供应链](https://m.sohu.com/a/1103261925_121960420) | 搜狐科技 |
 | 2026-11-17 | [穗升科技完成数千万元 Pre-A 轮：AI 记忆硬件 Memoket Gem 已开卖美日，11 克一次按压捕获对话+KITE 记忆引擎](https://m.sohu.com/a/1102801413_118792) | 亿欧/36氪 |
 | 2026-11-16 | [KTC 推出 VMAX 全感知智能体主机：分体式设计配磁吸随行屏，视觉音频与会议大模型全部本地运行](https://finance.sina.com.cn/tech/digi/2026-11-16/doc-iniyxpxc5961362.shtml) | 新浪财经/搜狐 |
 | 2026-11-16 | [苹果首款智能眼镜轮廓渐清：古尔曼称 2027 年 6 月发布、Siri 成主要交互，设计首曝](https://www.sohu.com/a/1102293477_223764) | 搜狐科技/彭博 |
@@ -56,10 +58,11 @@
 | 2026-11-15 | [小米 18 Pro 海外公布背屏适配：谷歌地图、Spotify、Gemini 等首批支持，11 月 18 日香港发布](https://ezone.hk/article/20117600/) | ezone/小米 |
 | 2026-11-15 | [华为 Mate X8 折叠屏外观公布：余承东官宣「就要来了」，屏幕、拍照、性能三线新突破](https://www.sohu.com/a/1101872178_163726) | 搜狐科技 |
 
-### 大模型厂商（7 条）
+### 大模型厂商（8 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-18 | [微软发布决策模型 Microsoft-Decision-1.1：速度提升 2 倍、准确率登顶，比 GPT-Sol 快 50 倍便宜 79%](https://m.sohu.com/a/1103264978_115978) | 搜狐科技/微软 Ignite |
 | 2026-11-18 | [苹果开源两大视频生成模型：单卡延迟仅 36 毫秒，实时 AI 视频迈向 iPhone 级体验](https://news.qq.com/rain/a/20261118A0EZ0900) | 腾讯新闻 |
 | 2026-11-17 | [OpenAI 双发 GPT-6.2 Astra 与 Sol：Astra 为迄今最强旗舰、成本砍三分之二，Codex 计算机使用提速 1.9 倍](https://openai.com/index/introducing-gpt-6-2-astra-sol) | OpenAI 官方 |
 | 2026-11-16 | [华为云发布并开源具身世界模型 CloudRobo-WM1.2：昇腾原生训练，DualAct 快慢双系统，双基准登顶](https://www.oschina.net/news/503602) | 华为云/OSCHINA |
