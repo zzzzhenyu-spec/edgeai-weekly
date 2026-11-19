@@ -78,9 +78,9 @@
 |------|------|------|
 | 2026-11-13 | [大众 ID.ERA 5X 上市 9.99 万元起：行业首发豆包大模型 2.0 上车，联发科 8676 座舱芯片+地平线征程 6H 420TOPS](https://app.xinhuanet.com/news/article.html?articleId=20261113e85d7b5d0be34606b4117b6d7dd1730c) | 新华网/腾讯新闻 |
 
-## 科研前沿（10 篇）
+## 科研前沿（11 篇）
 
-- **arXiv 新作跟踪（10 篇，预印本）**：[Metal Sandbox: Isolated Execution and Command Scheduling f…](https://arxiv.org/abs/2611.17294)；[Acoustic Respiratory Phase Detection on Mobile Devices](https://arxiv.org/abs/2611.16710)；[An Open-Architecture Dual-Core STM32-Based Neural Interfac…](https://arxiv.org/abs/2611.15942)；[EngineAgent: Agentizing On-Device LLM Inference Engines wi…](https://arxiv.org/abs/2611.14356)；[Mobile AI Factory: Building Specialized Language Models fo…](https://arxiv.org/abs/2611.13509)；[HandsOnAid: Building and Evaluating an Offline First-Aid A…](https://arxiv.org/abs/2611.14059)；[Compute Regeneration through Re-Productization: Reorganizi…](https://arxiv.org/abs/2611.11698)；[UMLoad: Fast On-Demand Model Loading on Unified Memory Arc…](https://arxiv.org/abs/2611.04253)；[MedPsy: State-of-the-Art Small Medical Language Models for…](https://arxiv.org/abs/2611.02011)；[Compression Technique Interactions in Small Language Model…](https://arxiv.org/abs/2611.00464)
+- **arXiv 新作跟踪（11 篇，预印本）**：[LMMR: Learned Multigranular Memory Retrieval for Small Lan…](https://arxiv.org/abs/2611.22425)；[Building Fully On-Device GUI Agents with Mobile NPUs](https://arxiv.org/abs/2611.20772)；[Nemotron 3.5 Bolt E4B 4GB: An Open and Efficient Small Lan…](https://arxiv.org/abs/2611.20771)；[Metal Sandbox: Isolated Execution and Command Scheduling f…](https://arxiv.org/abs/2611.17294)；[Acoustic Respiratory Phase Detection on Mobile Devices](https://arxiv.org/abs/2611.16710)；[An Open-Architecture Dual-Core STM32-Based Neural Interfac…](https://arxiv.org/abs/2611.15942)；[EngineAgent: Agentizing On-Device LLM Inference Engines wi…](https://arxiv.org/abs/2611.14356)；[Mobile AI Factory: Building Specialized Language Models fo…](https://arxiv.org/abs/2611.13509)；[HandsOnAid: Building and Evaluating an Offline First-Aid A…](https://arxiv.org/abs/2611.14059)；[Compute Regeneration through Re-Productization: Reorganizi…](https://arxiv.org/abs/2611.11698)；[Compression Technique Interactions in Small Language Model…](https://arxiv.org/abs/2611.00464)
 
 ## 页面板块
 

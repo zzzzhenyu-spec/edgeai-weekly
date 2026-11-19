@@ -444,6 +444,36 @@ id: "n243", cat: "行业关注事件", source: "北京市经信局", date: "2026
   ],
 papers: [
     {
+      id: "p15", group: "recent", cat: "端侧智能体", date: "2026-11-17",
+      title: "LMMR: Learned Multigranular Memory Retrieval for Small Language Model Agents",
+      authors: "LMMR Team 等",
+      venue: "arXiv:2611.22425", level: "预印本",
+      summary: "小语言模型智能体的内存预算装不下多跳问题所需的记忆——相关事实散落在记录里，周边文本耗尽宝贵的空间。LMMR 提出可学习的多粒度记忆检索：同时决定「读下一个来源」与「读它多少」——把段落与句子片段链接回原始来源，并为同一缺失证据配对多个视图，让小模型在有限上下文里精准取材。",
+      detail: "问题：小模型 Agent 的记忆空间装不下多跳问答所需上下文。\n方法：LMMR——学习「选哪个来源+读多少」的多粒度检索；段落/句子片段链接原始来源；同证据多视图配对。\n端侧视角：记忆检索是端侧智能体的核心瓶颈——与 Memoket（硬件记忆）、智元 LIFE（可塑性记忆）同向但解决的是「读」侧：硬件负责记全、LMMR 负责读准，端侧记忆栈的学术拼图。",
+      tags: ["记忆检索", "小模型智能体", "多粒度", "上下文预算"],
+      url: "https://arxiv.org/abs/2611.22425"
+    },
+    {
+      id: "p16", group: "recent", cat: "端侧智能体", date: "2026-11-16",
+      title: "Building Fully On-Device GUI Agents with Mobile NPUs",
+      authors: "NPU GUI Agents Team 等",
+      venue: "arXiv:2611.20772", level: "预印本",
+      summary: "手机 GUI 智能体大多仍依赖云端模型或远程推理——重复通信延迟、隐私暴露与网络依赖是三大痛点。本文在手机 NPU 上构建完全端侧的 GUI 智能体：现代智能手机 NPU 为全端侧 LLM 推理提供了理想基座，但直接部署常规 GUI 智能体流水线会遇到算子与内存约束——论文给出面向 NPU 的管线重构方案，让「自动操作手机」全程在设备内完成。",
+      detail: "问题：GUI 智能体云端依赖——通信延迟/隐私/网络可用性。\n方案：面向手机 NPU 重构 GUI 智能体流水线（算子适配+内存约束下的管线重设计）。\n端侧视角：GUI 智能体是端侧 Super App 级应用——屏幕理解+动作生成双负载对 NPU 利用率的工程答卷；与 WorkBuddy 千万日活、微信小微预告设备端推理同周，端侧智能体的「最后一公里」（本地 GUI 操作）有了学术基线。",
+      tags: ["GUI智能体", "手机NPU", "全端侧", "管线重构"],
+      url: "https://arxiv.org/abs/2611.20772"
+    },
+    {
+      id: "p14", group: "recent", cat: "推理与系统", date: "2026-11-16",
+      title: "Nemotron 3.5 Bolt E4B 4GB: An Open and Efficient Small Language Model for Fast Conversational Agents",
+      authors: "NVIDIA Nemotron Team 等",
+      venue: "arXiv:2611.20771", level: "预印本",
+      summary: "英伟达发布开源小语言模型 Nemotron 3.5 Bolt E4B 4GB——基于 Gemma-4-E4B-it 后训练，针对「每 GB 内存的智能与速度」优化，面向快速对话智能体：继承 Gemma 对话能力并强化多轮工具调用、指令遵循与输入接地，为本地语音/设备助手、交互人设与嵌入式环境设计——与 RTX Spark 生态（本地跑 Nemotron 3 Ultra）形成「PC 大档+小档」双线。",
+      detail: "模型：Nemotron 3.5 Bolt E4B 4GB（基于 Gemma-4-E4B-it 后训练，开放权重）。\n优化：每 GB 内存的智能与速度（4GB 内存档）——多轮工具调用/指令遵循/输入 grounding 强化。\n定位：本地语音助手、交互人设、嵌入式设备。\n端侧视角：英伟达的开源端侧双线成型——RTX Spark 跑 Nemotron 3 Ultra（PC 重档）、Bolt E4B 4GB 面向 4GB 内存小档（嵌入式/语音助手），「按内存分档」的产品化思路与 Astra/Sol 的任务分层同一哲学。",
+      tags: ["英伟达", "Nemotron", "4GB", "对话智能体", "开源"],
+      url: "https://arxiv.org/abs/2611.20771"
+    },
+    {
       id: "p11", group: "recent", cat: "推理与系统", date: "2026-11-12",
       title: "Metal Sandbox: Isolated Execution and Command Scheduling for GPU Coding Agents on Apple Silicon",
       authors: "Haozhe Wang 等",
@@ -512,26 +542,6 @@ papers: [
       detail: "方法：再产品化（re-productization）——保留计算核心、重构产品形态与系统组织。\n案例：32GB Jetson AGX Xavier 驱动的多语言服务机器人 GEdgeBot，源码级盘点算力与能力面。\n端侧视角：端侧算力的生命周期管理——退役不等于报废，为边缘硬件的循环利用提供了系统方法论。",
       tags: ["硬件再利用", "Jetson", "服务机器人", "可持续计算"],
       url: "https://arxiv.org/abs/2611.11698"
-    },
-    {
-      id: "p5", group: "recent", cat: "推理与系统", date: "2026-11-03",
-      title: "UMLoad: Fast On-Demand Model Loading on Unified Memory Architecture",
-      authors: "UMLoad Team 等",
-      venue: "arXiv:2611.04253", level: "预印本",
-      summary: "按需模型加载主导着交互式端侧 AI 的响应延迟——统一内存架构（UMA）本应让加载近乎免费（权重放在 GPU 已可见的内存），但现有框架仍沿用分立 GPU 时代的加载流程。UMLoad 在系统层解耦框架逻辑分配与物理放置，将统一内存上的模型加载显著加速。",
-      detail: "问题：交互式端侧 AI 首响延迟被按需加载权重主导；UMA 设备（手机 SoC/统一内存 PC）上框架仍走分立 GPU 加载路径，效率浪费巨大。\n方法：系统级加载加速器——解耦逻辑分配与物理放置，面向 UMA 重构加载流。\n端侧视角：多模型常驻切换（手机助手+Agent 工作流）时代，加载速度就是冷启动体验——UMLoad 补上了统一内存架构缺失的系统层。",
-      tags: ["统一内存", "模型加载", "延迟优化", "系统层"],
-      url: "https://arxiv.org/abs/2611.04253"
-    },
-    {
-      id: "p6", group: "recent", cat: "能效与评测", date: "2026-11-01",
-      title: "MedPsy: State-of-the-Art Small Medical Language Models for Efficient Edge Deployment",
-      authors: "MedPsy Team 等",
-      venue: "arXiv:2611.02011", level: "预印本",
-      summary: "最强开源医疗 LLM 太大无法私有部署到边缘设备，紧凑医疗模型在知识密集任务上又差距明显——MedPsy 构建了边缘内存预算内的小型医疗模型系列，并直面推理模型长思维链带来的串行解码、端到端延迟、能耗与 KV 缓存压力问题，在同尺寸取得领先。",
-      detail: "矛盾：推理型小模型产出长思维链，串行解码拖高延迟与能耗、KV 缓存挤占内存——边缘部署的双重约束。\n贡献：边缘内存预算内同尺寸最优的医疗小模型系列。\n端侧视角：医疗是端侧隐私的最强动机场景——「推理预算」与「内存预算」同时受限下的模型设计，为所有端侧推理模型提供了样板。",
-      tags: ["医疗小模型", "边缘部署", "KV缓存", "推理预算"],
-      url: "https://arxiv.org/abs/2611.02011"
     },
     {
       id: "p8", group: "recent", cat: "能效与评测", date: "2026-10-30",
