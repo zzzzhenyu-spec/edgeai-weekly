@@ -145,6 +145,18 @@ id: "n261", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-12",
     },
 
 {
+id: "n293", cat: "AI硬件", source: "Google 官方博客/IT之家", date: "2026-11-12",
+      title: "谷歌开放首款 Gemini 智能眼镜预订：395 美元起、三星制造，Warby Parker×Gentle Monster 九款 12 月 10 日开售",
+      summary: "谷歌 11 月 12 日官宣首款 Gemini 智能眼镜开启预订——Warby Parker 三款 395 美元起、Gentle Monster 六款 449 美元起共九款，三星制造、搭载 Android XR：12MP 超广角摄录、无显示屏的音频优先架构、约 41g、9 小时续航配可补能 7 次的充电盒，Gemini 助手/逐向导航/70+ 语言翻译/视觉引导全上镜。12 月 10 日美韩正式开售；「双向隐私」设计（录制指示灯防遮挡、旁观者人脸自动模糊、数据即删）成产品级卖点。AI 眼镜四强争霸（Meta/三星/谷歌/苹果 2027）正式落子。",
+      detail: "官宣：11 月 12 日 Google 官方博客开放预订（中文报道潮 11 月 13 日，快科技/IT之家/映维网 20 余条）。\n产品：两个合作品牌系列共九款——Warby Parker 3 款（Alden/Reid/Wren，松林/鞍褐/墨黑三色）395 美元起；Gentle Monster 6 款（暗红/粉/灰/黄等）449 美元起。\n硬件：三星制造，Android XR 系统；12MP 超广角摄像头（HDR+防抖）；无显示屏、开放式扬声器音频优先架构；约 41g；9 小时续航，充电盒可补能 7 次。\n能力：Gemini 助手、Maps 逐向导航、70+ 语言实时翻译、Guided Vision 视觉引导，并与 Aira 合作实时视觉解说。\n隐私：录制指示灯被遮挡即无法拍摄；旁观者人脸自动模糊；数据即删——「双向隐私」写入服务条款，把 AI 眼镜最大社会争议做进硬件机制。\n销售：预订即开，12 月 10 日美韩开售；Gentle Monster 版 11 月 18 日已售罄。\n端侧视角：Android XR 阵营首个消费级眼镜落子——与 Meta Ray-Ban 系、三星（预售数小时售罄）、苹果（传 2027）构成四强争霸；无屏+摄录+语音架构下端侧算力聚焦视觉/语音实时理解；旁观者隐私的硬件级处理是行业首例，正值韩国高考 AI 眼镜作弊争议风口，产品与社会议题同步引爆。",
+      tags: ["谷歌", "Gemini", "智能眼镜", "Android XR", "三星"],
+      url: "https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order",
+      image: "images/news/n293.jpg",
+      imageCap: "Gemini 智能眼镜 Warby Parker（左）与 Gentle Monster（右）系列（图源：Google 官方博客）",
+      highlight: false
+    },
+
+{
 id: "n264", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-13",
       title: "前特斯拉 Cybertruck 工程师创业做厨房助手硬件 Trepo：99 美元磁吸冰箱，视觉+旋钮+语音打通库存、菜谱与购物清单",
       summary: "YC 2026 秋季批次创企 Trepo 推出首款厨房智能硬件 Kitchen Assistant——预售价 99 美元、磁吸冰箱门的桌面设备，配备朝下视觉摄像头、实体旋转旋钮与麦克风：扫购物小票、拍冰箱或把食材放到摄像头下即自动录入库存，系统按现有食材推荐菜谱并标注已有/缺少项，一键生成全家实时共享的购物清单——把「有什么食材、做什么饭、缺什么买」打通成闭环，做饭全程不用碰手机。",
