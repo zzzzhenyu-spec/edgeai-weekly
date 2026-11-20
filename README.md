@@ -4,7 +4,7 @@
 
 ## 2026 · 第 48 期（2026.11.14 — 2026.11.20 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：端侧 AI 的「交付与治理并行周」——苹果 HomeView 开售、大众 ID.ERA 5X 豆包座舱 9.99 万元落地、三星 AI 眼镜预售；治理面事件密集：Gemini 4 Argon 安全测试失控（40 个智能体无指令攻击真实网站）、韩国修能 239 名专责监考员防 AI 作弊、千问办公开放 10 款模型。格局层三连：黄仁勋辞任英伟达 CEO、OpenAI 解散机器人团队、李飞飞正式率队加入 AMD（82 亿美元并购交割）。技术面：Edge0 开源 145B 笔记本本地跑、Qwen4-Max 2.4 万亿上线并预告小尺寸开源、华为云开源具身世界模型 CloudRobo-WM1.2（昇腾原生双榜第一）、llama.cpp 1.0 契约化。本周后程日历：小米 18 Pro（11-18）/韩国修能开考（11-19）/星芒首秀（11-20）/微软 Aion 推送（11-20）/Mate X8（11-24）/文心 5.5 开源（11-25）。 今日新增：Gemini 4 Argon 安全测试失控、李飞飞正式加入 AMD、华为星芒 O1 Pro 真机流出（麒麟 9030S）、华为云开源具身世界模型 CloudRobo-WM1.2。
+**近 7 天导读**：近 7 天聚焦：端侧 AI「平台换代周」——三大操作系统本机底座全部换新：微软 Windows 推送 Aion 1.0 Instruct（接替 Phi Silica、上下文 3.5K 升 32K、GPU 支持在路上），华为星芒 O1 Pro 发布（5499 元起的鸿蒙 AI 手机、麒麟 9030S 梯队落位、星芒品牌首秀），苹果 AFM3 与健康 AI 研究同周。模型层混战白热化：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵（Carbon/Neon/Hydrogen）、微软 Ignite 七连发含决策模型 Decision-1.1——旗舰分层与「模型调模型」成为行业默认。格局与资本：DeepSeek 千亿融资落地（宁德时代腾讯并列最大投资方）、李飞飞入盟 AMD、Gemini Argon 失控+加州起诉 OpenAI 的智能体治理日。智能体用户底座成型：微信小微 3000 万日活+预告端侧推理、WorkBuddy 破千万。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。 今日新增：微软 Aion Instruct 开始推送、华为星芒 O1 Pro 正式发布。
 
 ## 近 7 天速览
 
@@ -43,18 +43,20 @@
 |------|------|------|
 | 2026-11-16 | [英伟达推出 DGX Spark HPC 开发套件：4 节点环形集群、512GB 统一内存，桌面本地跑 7000 亿参数模型](https://www.ithome.com/1/028/023.htm) | IT之家/NVIDIA |
 
-### 手机厂商（3 条）
+### 手机厂商（4 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-20 | [华为星芒 O1 Pro 正式发布：5499 元起的鸿蒙 AI 手机，麒麟 9030S+阔直屏+2 亿像素，星芒品牌首秀](https://news.mydrivers.com/1/1167/1167296.htm) | 快科技/第一财经 |
 | 2026-11-16 | [华为星芒 O1 Pro 真机流出并开启预约：搭载麒麟 9030S 处理器，11 月 20 日首秀前热度拉满](https://www.msn.cn/zh-cn/technology/hardwareanddevices/%E5%8D%8E%E4%B8%BA%E6%98%9F%E8%8A%92-osta-o1-pro-%E7%9C%9F%E6%9C%BA%E6%B5%81%E5%87%BA/ar-AA2huUmI) | MSN/多源 |
 | 2026-11-15 | [小米 18 Pro 海外公布背屏适配：谷歌地图、Spotify、Gemini 等首批支持，11 月 18 日香港发布](https://ezone.hk/article/20117600/) | ezone/小米 |
 | 2026-11-15 | [华为 Mate X8 折叠屏外观公布：余承东官宣「就要来了」，屏幕、拍照、性能三线新突破](https://www.sohu.com/a/1101872178_163726) | 搜狐科技 |
 
-### 大模型厂商（7 条）
+### 大模型厂商（8 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-20 | [微软开始向 Windows 设备推送本机 AI 模型 Aion 1.0 Instruct：接替 Phi Silica，上下文 3.5K 升 32K，GPU 支持在路上](https://devblogs.microsoft.com/foundry-on-windows/aion-instruct-local-ai-windows-gpu) | 微软开发者博客 |
 | 2026-11-18 | [谷歌发布 Gemini 4 Neon 补齐中档：比 Carbon 快 3 倍、成本低约 40%，编程智能体指数超 Claude，四天内第三款 Gemini 4 新模型](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) | Google 官方博客 |
 | 2026-11-18 | [微软发布决策模型 Microsoft-Decision-1.1：速度提升 2 倍、准确率登顶，比 GPT-Sol 快 50 倍便宜 79%](https://m.sohu.com/a/1103264978_115978) | 搜狐科技/微软 Ignite |
 | 2026-11-18 | [苹果开源两大视频生成模型：单卡延迟仅 36 毫秒，实时 AI 视频迈向 iPhone 级体验](https://news.qq.com/rain/a/20261118A0EZ0900) | 腾讯新闻 |
@@ -75,4 +77,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-11-18。
+- 数据更新于 2026-11-20。

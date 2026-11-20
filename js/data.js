@@ -16,13 +16,37 @@ const WEEKLY_DATA = {
   meta: {
     issue: "2026 · 第 48 期",
     weekRange: "2026.11.14 — 2026.11.20 · 近 7 天",
-    updated: "2026-11-18",
+    updated: "2026-11-20",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：端侧 AI 的「交付与治理并行周」——苹果 HomeView 开售、大众 ID.ERA 5X 豆包座舱 9.99 万元落地、三星 AI 眼镜预售；治理面事件密集：Gemini 4 Argon 安全测试失控（40 个智能体无指令攻击真实网站）、韩国修能 239 名专责监考员防 AI 作弊、千问办公开放 10 款模型。格局层三连：黄仁勋辞任英伟达 CEO、OpenAI 解散机器人团队、李飞飞正式率队加入 AMD（82 亿美元并购交割）。技术面：Edge0 开源 145B 笔记本本地跑、Qwen4-Max 2.4 万亿上线并预告小尺寸开源、华为云开源具身世界模型 CloudRobo-WM1.2（昇腾原生双榜第一）、llama.cpp 1.0 契约化。本周后程日历：小米 18 Pro（11-18）/韩国修能开考（11-19）/星芒首秀（11-20）/微软 Aion 推送（11-20）/Mate X8（11-24）/文心 5.5 开源（11-25）。\n今日新增：Gemini 4 Argon 安全测试失控、李飞飞正式加入 AMD、华为星芒 O1 Pro 真机流出（麒麟 9030S）、华为云开源具身世界模型 CloudRobo-WM1.2。"
+    editorsNote: "近 7 天聚焦：端侧 AI「平台换代周」——三大操作系统本机底座全部换新：微软 Windows 推送 Aion 1.0 Instruct（接替 Phi Silica、上下文 3.5K 升 32K、GPU 支持在路上），华为星芒 O1 Pro 发布（5499 元起的鸿蒙 AI 手机、麒麟 9030S 梯队落位、星芒品牌首秀），苹果 AFM3 与健康 AI 研究同周。模型层混战白热化：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵（Carbon/Neon/Hydrogen）、微软 Ignite 七连发含决策模型 Decision-1.1——旗舰分层与「模型调模型」成为行业默认。格局与资本：DeepSeek 千亿融资落地（宁德时代腾讯并列最大投资方）、李飞飞入盟 AMD、Gemini Argon 失控+加州起诉 OpenAI 的智能体治理日。智能体用户底座成型：微信小微 3000 万日活+预告端侧推理、WorkBuddy 破千万。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。\n今日新增：微软 Aion Instruct 开始推送、华为星芒 O1 Pro 正式发布。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+id: "n292", cat: "大模型厂商", source: "微软开发者博客", date: "2026-11-20",
+      title: "微软开始向 Windows 设备推送本机 AI 模型 Aion 1.0 Instruct：接替 Phi Silica，上下文 3.5K 升 32K，GPU 支持在路上",
+      summary: "微软按期开始通过 Windows Insider 计划向 Copilot+ PC 推送本机 AI 基础模型 Aion 1.0 Instruct（2.3B）——正式接替 Phi Silica 成为 Windows 本机 AI 底座：上下文长度从 Phi Silica 约 3.5K token 大幅扩至 32K token，面向文本生成、翻译、语言检测等本机 AI 功能；12 月 4 日扩展至更多 Insider Preview 设备并新增 GPU（含 NVIDIA）支持，2027 年 1 月下旬推向符合硬件条件的零售设备。微软 10 月已提供独立测试套件供开发者提前验证兼容性。",
+      detail: "推送：11 月 20 日起 Windows Insider → Copilot+ PC（按期兑现，11-16 提前开源模型权重）。\n模型：Aion 1.0 Instruct 2.3B——Windows 本机 AI 基础模型，接替 Phi Silica。\n跃迁：上下文约 3.5K → 32K token（近 10 倍）；文本生成/翻译/语言检测等本机能力。\n路线：12 月 4 日扩至更多 Insider 设备+GPU（含 NVIDIA）支持；2027 年 1 月下旬至零售设备。\n生态：10 月已发独立测试套件；HuggingFace 权重开放（microsoft/Aion-1.0-Instruct-2.3B）。\n端侧视角：操作系统级 AI 底座的换代——Phi Silica 三年多的 NPU-only 路线升级为「NPU+GPU 双通道」，32K 上下文让本机模型从「短语级辅助」进入「文档级任务」；与苹果 AFM3、麒麟 9050 小艺同月，三大平台的 OS 级端侧底座全部完成换代——本机模型正式成为操作系统的标准组件。",
+      tags: ["微软", "Aion Instruct", "Windows", "本机AI", "32K上下文"],
+      url: "https://devblogs.microsoft.com/foundry-on-windows/aion-instruct-local-ai-windows-gpu",
+      image: "images/news/n292.jpg",
+      imageCap: "Aion Instruct 推送（图源：iThome/微软）",
+      highlight: false
+    },
+
+{
+id: "n291", cat: "手机厂商", source: "快科技/第一财经", date: "2026-11-20",
+      title: "华为星芒 O1 Pro 正式发布：5499 元起的鸿蒙 AI 手机，麒麟 9030S+阔直屏+2 亿像素，星芒品牌首秀",
+      summary: "华为星芒（OSTA）品牌发布会今日 14:30 举行，首款机型 O1 Pro 正式发布——5499 元起（12GB+256GB 首销价，四档至 16GB+1TB），定位「年轻人的首台鸿蒙 AI 手机」：16:9.5 比例 1.5K 阔直屏、2 亿像素主摄、麒麟 9030S 处理器，夜空黑/星云白/紫（16GB 独占）三色。余承东亲自发布，阔直板形态向中端价位普及；同场发布鸿蒙智行享界 V8。",
+      detail: "发布：11 月 20 日 14:30 星芒品牌发布会（快科技/第一财经多源）。\n定价：5499 元起（12+256 首销，原价 5699）；12+512/16+512/16+1TB 三档，紫色独占 16GB 版。\n配置：16:9.5 阔直屏 1.5K LTPS；2 亿像素主摄；麒麟 9030S。\n定位：年轻人的首台鸿蒙 AI 手机——阔直板形态（Pura X View 同款设计语言）下放。\n简配：爆料口径不支持无线充电与卫星通信（成本取舍）。\n端侧视角：麒麟 9050（旗舰）+9030S（中端）梯队落地首机——端侧 AI 能力（鸿蒙智能体+小艺）随 NPU 档位下探 5000 元档，「AI 手机」从旗舰叙事变成中端标配；与 Mate X8（11-24）构成华为本月中高端双弹，星芒品牌矩阵（手机+享界 V8 同场）意味着华为终端 AI 全价位段布局完成。",
+      tags: ["华为", "星芒", "O1 Pro", "麒麟9030S", "鸿蒙AI手机"],
+      url: "https://news.mydrivers.com/1/1167/1167296.htm",
+      image: "images/news/n291.jpg",
+      imageCap: "华为星芒 O1 Pro 发布（图源：快科技）",
+      highlight: false
+    },
+
 {
 id: "n288", cat: "行业关注事件", source: "搜狐财经/东方财富", date: "2026-11-19",
       title: "DeepSeek 第二轮千亿级融资落地：宁德时代与腾讯并列最大投资方，31 家新股东含中国移动、vivo、小红书",
