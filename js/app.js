@@ -851,9 +851,27 @@
     var host = $("gh-panel");
     if (!host) return;
     var html = "";
+    var T = (typeof GH_TRENDING !== "undefined") ? GH_TRENDING : window.GH_TRENDING;
+    if (T && T.repos && T.repos.length) {
+      var isW = T.mode === "weekly";
+      html += '<div class="gh-head"><h4>GitHub · 本周全站涨星 Top 10</h4>' +
+        '<span class="gh-updated">' + (isW
+          ? "每日刷新 · 基线 " + esc((T.baseline || "").slice(5))
+          : "建设中 · " + esc((T.readyFrom || "").slice(5)) + " 起出完整周榜") + "</span></div>" +
+        '<div class="gh-list">' + T.repos.map(function (r, i) {
+          var dot = GH_LANG_COLORS[i % GH_LANG_COLORS.length];
+          var badge = isW ? '<em class="gh-new">周 +' + esc(ghStars(r.weekly)) + "</em>" : "";
+          return '<a class="gh-repo gh-tw" href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
+            '<div class="gh-name"><b>' + esc(r.name) + "</b>" + badge +
+            '<span class="gh-count">★ ' + esc(ghStars(r.stars)) + "</span></div>" +
+            "<p>" + esc(r.desc || "—") + "</p>" +
+            '<div class="gh-meta"><i style="background:' + dot + '"></i>' + esc(r.lang || "—") +
+            "<span>" + (isW ? "近 7 天涨星" : "建设期 · 总星排序") + "</span></div></a>";
+        }).join("") + "</div>";
+    }
     var G = (typeof GH_REPOS !== "undefined") ? GH_REPOS : window.GH_REPOS;
     if (G && G.repos && G.repos.length) {
-      html += '<div class="gh-head"><h4>GitHub · 高星新仓库（近 120 天）</h4>' +
+      html += '<div class="gh-head gh-head2"><h4>GitHub · 高星新仓库（近 120 天）</h4>' +
         '<span class="gh-updated">每日刷新 · ' + esc((G.updated || "").slice(5)) + "</span></div>" +
         '<div class="gh-list">' + G.repos.map(function (r, i) {
           var dot = GH_LANG_COLORS[i % GH_LANG_COLORS.length];

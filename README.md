@@ -2,7 +2,7 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 48 期（2026.11.14 — 2026.11.20 · 近 7 天）
+## 2026 · 第 48 期（2026.11.15 — 2026.11.21 · 近 7 天）
 
 **近 7 天导读**：近 7 天聚焦：端侧 AI「平台换代周」——三大操作系统本机底座全部换新：微软 Windows 推送 Aion 1.0 Instruct（接替 Phi Silica、上下文 3.5K 升 32K、GPU 支持在路上），华为星芒 O1 Pro 发布（5499 元起的鸿蒙 AI 手机、麒麟 9030S 梯队落位、星芒品牌首秀），苹果 AFM3 与健康 AI 研究同周。模型层混战白热化：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵（Carbon/Neon/Hydrogen）、微软 Ignite 七连发含决策模型 Decision-1.1——旗舰分层与「模型调模型」成为行业默认。格局与资本：DeepSeek 千亿融资落地（宁德时代腾讯并列最大投资方）、李飞飞入盟 AMD、Gemini Argon 失控+加州起诉 OpenAI 的智能体治理日。智能体用户底座成型：微信小微 3000 万日活+预告端侧推理、WorkBuddy 破千万。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。 今日新增：微软 Aion Instruct 开始推送、华为星芒 O1 Pro 正式发布；补录谷歌首款 Gemini 智能眼镜预订（11 月 12 日官宣、395 美元起，12 月 10 日美韩开售）。
 
@@ -28,7 +28,7 @@
 | 2026-11-18 | [微信「小微」日活达 3000 万：官方预告部分推理任务未来将在设备端运行](https://finance.sina.com.cn/tech/digi/2026-11-18/doc-inizehkz6841176.shtml) | 新浪财经 |
 | 2026-11-16 | [开源鸿蒙轻 AI「越影」方案发布：1 块主板+6 款扩展板，让百亿「哑终端」IoT 设备跨入轻智能](https://tech.china.com/articles/20261116/202611161979249.html) | 中华网科技/海思 |
 
-### AI硬件（5 条）
+### AI硬件（4 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -36,7 +36,6 @@
 | 2026-11-17 | [穗升科技完成数千万元 Pre-A 轮：AI 记忆硬件 Memoket Gem 已开卖美日，11 克一次按压捕获对话+KITE 记忆引擎](https://m.sohu.com/a/1102801413_118792) | 亿欧/36氪 |
 | 2026-11-16 | [KTC 推出 VMAX 全感知智能体主机：分体式设计配磁吸随行屏，视觉音频与会议大模型全部本地运行](https://finance.sina.com.cn/tech/digi/2026-11-16/doc-iniyxpxc5961362.shtml) | 新浪财经/搜狐 |
 | 2026-11-16 | [苹果首款智能眼镜轮廓渐清：古尔曼称 2027 年 6 月发布、Siri 成主要交互，设计首曝](https://www.sohu.com/a/1102293477_223764) | 搜狐科技/彭博 |
-| 2026-11-14 | [谷歌开放首款 Gemini 智能眼镜预订：395 美元起、三星制造，Warby Parker×Gentle Monster 九款 12 月 10 日开售](https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order) | Google 官方博客/IT之家 |
 
 ### 芯片厂商（1 条）
 
@@ -78,4 +77,4 @@
 
 - 每周更新，数据窗口严格为运行日往前 7 天；来源仅简体中文与英文；
 - 论文收录标准：SCI 二区以上期刊 / CCF-B 以上会议；arXiv 新作以预印本标记跟踪（DBLP 核对 venue）；
-- 数据更新于 2026-11-20。
+- 数据更新于 2026-11-21。

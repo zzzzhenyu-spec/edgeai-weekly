@@ -15,8 +15,8 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 48 期",
-    weekRange: "2026.11.14 — 2026.11.20 · 近 7 天",
-    updated: "2026-11-20",
+    weekRange: "2026.11.15 — 2026.11.21 · 近 7 天",
+    updated: "2026-11-21",
     status: "rolling",
     editorsNote: "近 7 天聚焦：端侧 AI「平台换代周」——三大操作系统本机底座全部换新：微软 Windows 推送 Aion 1.0 Instruct（接替 Phi Silica、上下文 3.5K 升 32K、GPU 支持在路上），华为星芒 O1 Pro 发布（5499 元起的鸿蒙 AI 手机、麒麟 9030S 梯队落位、星芒品牌首秀），苹果 AFM3 与健康 AI 研究同周。模型层混战白热化：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵（Carbon/Neon/Hydrogen）、微软 Ignite 七连发含决策模型 Decision-1.1——旗舰分层与「模型调模型」成为行业默认。格局与资本：DeepSeek 千亿融资落地（宁德时代腾讯并列最大投资方）、李飞飞入盟 AMD、Gemini Argon 失控+加州起诉 OpenAI 的智能体治理日。智能体用户底座成型：微信小微 3000 万日活+预告端侧推理、WorkBuddy 破千万。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。\n今日新增：微软 Aion Instruct 开始推送、华为星芒 O1 Pro 正式发布；补录谷歌首款 Gemini 智能眼镜预订（11 月 12 日官宣、395 美元起，12 月 10 日美韩开售）。"
   },
@@ -33,7 +33,7 @@ id: "n292", cat: "大模型厂商", source: "微软开发者博客", date: "2026
       image: "images/news/n292.jpg",
       imageCap: "Aion Instruct 推送（图源：iThome/微软）",
       highlight: false
-    },
+    },,
 
 {
 id: "n291", cat: "手机厂商", source: "快科技/第一财经", date: "2026-11-20",
@@ -45,7 +45,7 @@ id: "n291", cat: "手机厂商", source: "快科技/第一财经", date: "2026-1
       image: "images/news/n291.jpg",
       imageCap: "华为星芒 O1 Pro 发布（图源：快科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n288", cat: "行业关注事件", source: "搜狐财经/东方财富", date: "2026-11-19",
@@ -57,7 +57,7 @@ id: "n288", cat: "行业关注事件", source: "搜狐财经/东方财富", date
       image: "images/news/n288.jpg",
       imageCap: "DeepSeek 第二轮融资落地（图源：搜狐财经）",
       highlight: false
-    },
+    },,
 
 {
 id: "n287", cat: "AI硬件", source: "搜狐科技", date: "2026-11-19",
@@ -69,7 +69,7 @@ id: "n287", cat: "AI硬件", source: "搜狐科技", date: "2026-11-19",
       image: "images/news/n287.jpg",
       imageCap: "极米记得 G1/L1 与物奇微芯片（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-18",
@@ -81,7 +81,7 @@ id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-1
       image: "images/news/n290.jpg",
       imageCap: "Gemini 4 Neon 发布（图源：Google 官方博客）",
       highlight: false
-    },
+    },,
 
 {
 id: "n286", cat: "大模型厂商", source: "搜狐科技/微软 Ignite", date: "2026-11-18",
@@ -93,7 +93,7 @@ id: "n286", cat: "大模型厂商", source: "搜狐科技/微软 Ignite", date: 
       image: "images/news/n286.jpg",
       imageCap: "Microsoft-Decision-1.1（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n285", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-18",
@@ -105,7 +105,7 @@ id: "n285", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-18",
       image: "images/news/n285.jpg",
       imageCap: "openJiuwen Harnessless 范式（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n283", cat: "大模型厂商", source: "腾讯新闻", date: "2026-11-18",
@@ -117,7 +117,7 @@ id: "n283", cat: "大模型厂商", source: "腾讯新闻", date: "2026-11-18",
       image: "images/news/n283.jpg",
       imageCap: "苹果开源视频生成模型（图源：腾讯新闻）",
       highlight: false
-    },
+    },,
 
 {
 id: "n282", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-18",
@@ -129,7 +129,7 @@ id: "n282", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-18",
       image: "images/news/n282.jpg",
       imageCap: "WorkBuddy 日活破千万（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n281", cat: "端侧Agent", source: "新浪财经", date: "2026-11-18",
@@ -141,7 +141,7 @@ id: "n281", cat: "端侧Agent", source: "新浪财经", date: "2026-11-18",
       image: "images/news/n281.jpg",
       imageCap: "微信小微 AI 助理（图源：新浪财经）",
       highlight: false
-    },
+    },,
 
 {
 id: "n284", cat: "大模型厂商", source: "OpenAI 官方", date: "2026-11-17",
@@ -153,7 +153,7 @@ id: "n284", cat: "大模型厂商", source: "OpenAI 官方", date: "2026-11-17",
       image: "images/news/n284.jpg",
       imageCap: "GPT-6.2 Astra 与 Sol 发布（图源：钜亨网）",
       highlight: true
-    },
+    },,
 
 {
 id: "n280", cat: "AI硬件", source: "亿欧/36氪", date: "2026-11-17",
@@ -165,7 +165,7 @@ id: "n280", cat: "AI硬件", source: "亿欧/36氪", date: "2026-11-17",
       image: "images/news/n280.jpg",
       imageCap: "Memoket Gem 记忆可穿戴（图源：Memoket 官网）",
       highlight: false
-    },
+    },,
 
 {
 id: "n277", cat: "行业关注事件", source: "凤凰科技/东方财富", date: "2026-11-17",
@@ -177,7 +177,7 @@ id: "n277", cat: "行业关注事件", source: "凤凰科技/东方财富", date
       image: "images/news/n277.jpg",
       imageCap: "加州总检察长起诉 OpenAI（图源：新浪科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n275", cat: "行业关注事件", source: "腾讯新闻", date: "2026-11-17",
@@ -189,7 +189,7 @@ id: "n275", cat: "行业关注事件", source: "腾讯新闻", date: "2026-11-17
       image: "images/news/n275.jpg",
       imageCap: "李飞飞与苏姿丰同框（图源：腾讯新闻）",
       highlight: false
-    },
+    },,
 
 {
 id: "n274", cat: "行业关注事件", source: "凤凰科技/Trajectory Labs", date: "2026-11-17",
@@ -201,7 +201,7 @@ id: "n274", cat: "行业关注事件", source: "凤凰科技/Trajectory Labs", d
       image: "images/news/n274.jpg",
       imageCap: "Gemini 4 Argon 安全测试（图源：凤凰科技）",
       highlight: true
-    },
+    },,
 
 {
 id: "n279", cat: "AI硬件", source: "新浪财经/搜狐", date: "2026-11-16",
@@ -213,7 +213,7 @@ id: "n279", cat: "AI硬件", source: "新浪财经/搜狐", date: "2026-11-16",
       image: "images/news/n279.jpg",
       imageCap: "KTC VMAX 智能体主机（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n278", cat: "芯片厂商", source: "IT之家/NVIDIA", date: "2026-11-16",
@@ -225,7 +225,7 @@ id: "n278", cat: "芯片厂商", source: "IT之家/NVIDIA", date: "2026-11-16",
       image: "images/news/n278.jpg",
       imageCap: "DGX Spark 集群（图源：NVIDIA 官网）",
       highlight: false
-    },
+    },,
 
 {
 id: "n276", cat: "手机厂商", source: "MSN/多源", date: "2026-11-16",
@@ -237,7 +237,7 @@ id: "n276", cat: "手机厂商", source: "MSN/多源", date: "2026-11-16",
       image: "images/news/n276.jpg",
       imageCap: "星芒 O1 Pro 产品规划渲染（图源：Techritual）",
       highlight: false
-    },
+    },,
 
 {
 id: "n273", cat: "大模型厂商", source: "华为云/OSCHINA", date: "2026-11-16",
@@ -249,7 +249,7 @@ id: "n273", cat: "大模型厂商", source: "华为云/OSCHINA", date: "2026-11-
       image: "images/news/n273.jpg",
       imageCap: "CloudRobo 具身世界模型（图源：新浪财经）",
       highlight: false
-    },
+    },,
 
 {
 id: "n271", cat: "端侧Agent", source: "中华网科技/海思", date: "2026-11-16",
@@ -261,7 +261,7 @@ id: "n271", cat: "端侧Agent", source: "中华网科技/海思", date: "2026-11
       image: "images/news/n271.jpg",
       imageCap: "开源鸿蒙轻 AI 越影方案（图源：中华网科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n270", cat: "大模型厂商", source: "腾讯新闻/澎湃", date: "2026-11-16",
@@ -273,7 +273,7 @@ id: "n270", cat: "大模型厂商", source: "腾讯新闻/澎湃", date: "2026-1
       image: "images/news/n270.jpg",
       imageCap: "千问办公上线 10 款模型（图源：腾讯新闻）",
       highlight: false
-    },
+    },,
 
 {
 id: "n269", cat: "行业关注事件", source: "新浪财经/韩联社", date: "2026-11-16",
@@ -285,7 +285,7 @@ id: "n269", cat: "行业关注事件", source: "新浪财经/韩联社", date: "
       image: "images/news/n269.jpg",
       imageCap: "韩国高考防 AI 眼镜作弊备战（图源：搜狐/新浪财经）",
       highlight: false
-    },
+    },,
 
 {
 id: "n268", cat: "AI硬件", source: "搜狐科技/彭博", date: "2026-11-16",
@@ -297,7 +297,7 @@ id: "n268", cat: "AI硬件", source: "搜狐科技/彭博", date: "2026-11-16",
       image: "images/news/n268.jpg",
       imageCap: "苹果智能眼镜设计曝光（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n265", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-16",
@@ -309,7 +309,7 @@ id: "n265", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-16",
       image: "images/news/n265.jpg",
       imageCap: "Qwen4-Max 上线（图源：搜狐科技）",
       highlight: false
-    },
+    },,
 
 {
 id: "n267", cat: "行业关注事件", source: "Apple 官方", date: "2026-11-15",
@@ -321,7 +321,7 @@ id: "n267", cat: "行业关注事件", source: "Apple 官方", date: "2026-11-15
       image: "images/news/n267.jpg",
       imageCap: "Apple Health AI Usage Study（图源：Apple Newsroom）",
       highlight: false
-    },
+    },,
 
 {
 id: "n259", cat: "手机厂商", source: "ezone/小米", date: "2026-11-15",
@@ -333,7 +333,7 @@ id: "n259", cat: "手机厂商", source: "ezone/小米", date: "2026-11-15",
       image: "images/news/n259.jpg",
       imageCap: "小米 18 Pro 背屏形态（图源：ezone）",
       highlight: false
-    },
+    },,
 
 {
 id: "n258", cat: "手机厂商", source: "搜狐科技", date: "2026-11-15",
@@ -346,18 +346,6 @@ id: "n258", cat: "手机厂商", source: "搜狐科技", date: "2026-11-15",
       imageCap: "华为 Mate X8 外观（图源：搜狐科技）",
       highlight: false
     },
-
-{
-id: "n293", cat: "AI硬件", source: "Google 官方博客/IT之家", date: "2026-11-14",
-      title: "谷歌开放首款 Gemini 智能眼镜预订：395 美元起、三星制造，Warby Parker×Gentle Monster 九款 12 月 10 日开售",
-      summary: "谷歌 11 月 12 日官宣首款 Gemini 智能眼镜开启预订——Warby Parker 三款 395 美元起、Gentle Monster 六款 449 美元起共九款，三星制造、搭载 Android XR：12MP 超广角摄录、无显示屏的音频优先架构、约 41g、9 小时续航配可补能 7 次的充电盒，Gemini 助手/逐向导航/70+ 语言翻译/视觉引导全上镜。12 月 10 日美韩正式开售；「双向隐私」设计（录制指示灯防遮挡、旁观者人脸自动模糊、数据即删）成产品级卖点。AI 眼镜四强争霸（Meta/三星/谷歌/苹果 2027）正式落子。",
-      detail: "官宣：11 月 12 日 Google 官方博客开放预订（中文报道潮 11 月 13 日，快科技/IT之家/映维网 20 余条）。\n产品：两个合作品牌系列共九款——Warby Parker 3 款（Alden/Reid/Wren，松林/鞍褐/墨黑三色）395 美元起；Gentle Monster 6 款（暗红/粉/灰/黄等）449 美元起。\n硬件：三星制造，Android XR 系统；12MP 超广角摄像头（HDR+防抖）；无显示屏、开放式扬声器音频优先架构；约 41g；9 小时续航，充电盒可补能 7 次。\n能力：Gemini 助手、Maps 逐向导航、70+ 语言实时翻译、Guided Vision 视觉引导，并与 Aira 合作实时视觉解说。\n隐私：录制指示灯被遮挡即无法拍摄；旁观者人脸自动模糊；数据即删——「双向隐私」写入服务条款，把 AI 眼镜最大社会争议做进硬件机制。\n销售：预订即开，12 月 10 日美韩开售；Gentle Monster 版 11 月 18 日已售罄。\n端侧视角：Android XR 阵营首个消费级眼镜落子——与 Meta Ray-Ban 系、三星（预售数小时售罄）、苹果（传 2027）构成四强争霸；无屏+摄录+语音架构下端侧算力聚焦视觉/语音实时理解；旁观者隐私的硬件级处理是行业首例，正值韩国高考 AI 眼镜作弊争议风口，产品与社会议题同步引爆。",
-      tags: ["谷歌", "Gemini", "智能眼镜", "Android XR", "三星"],
-      url: "https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order",
-      image: "images/news/n293.jpg",
-      imageCap: "Gemini 智能眼镜 Warby Parker（左）与 Gentle Monster（右）系列（图源：Google 官方博客）",
-      highlight: false
-    }
   ],
 papers: [
     {
