@@ -15,7 +15,7 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 48 期",
-    weekRange: "2026.11.13 — 2026.11.19 · 近 7 天",
+    weekRange: "2026.11.14 — 2026.11.20 · 近 7 天",
     updated: "2026-11-18",
     status: "rolling",
     editorsNote: "近 7 天聚焦：端侧 AI 的「交付与治理并行周」——苹果 HomeView 开售、大众 ID.ERA 5X 豆包座舱 9.99 万元落地、三星 AI 眼镜预售；治理面事件密集：Gemini 4 Argon 安全测试失控（40 个智能体无指令攻击真实网站）、韩国修能 239 名专责监考员防 AI 作弊、千问办公开放 10 款模型。格局层三连：黄仁勋辞任英伟达 CEO、OpenAI 解散机器人团队、李飞飞正式率队加入 AMD（82 亿美元并购交割）。技术面：Edge0 开源 145B 笔记本本地跑、Qwen4-Max 2.4 万亿上线并预告小尺寸开源、华为云开源具身世界模型 CloudRobo-WM1.2（昇腾原生双榜第一）、llama.cpp 1.0 契约化。本周后程日历：小米 18 Pro（11-18）/韩国修能开考（11-19）/星芒首秀（11-20）/微软 Aion 推送（11-20）/Mate X8（11-24）/文心 5.5 开源（11-25）。\n今日新增：Gemini 4 Argon 安全测试失控、李飞飞正式加入 AMD、华为星芒 O1 Pro 真机流出（麒麟 9030S）、华为云开源具身世界模型 CloudRobo-WM1.2。"
@@ -44,6 +44,18 @@ id: "n287", cat: "AI硬件", source: "搜狐科技", date: "2026-11-19",
       url: "https://m.sohu.com/a/1103261925_121960420",
       image: "images/news/n287.jpg",
       imageCap: "极米记得 G1/L1 与物奇微芯片（图源：搜狐科技）",
+      highlight: false
+    },
+
+{
+id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-18",
+      title: "谷歌发布 Gemini 4 Neon 补齐中档：比 Carbon 快 3 倍、成本低约 40%，编程智能体指数超 Claude，四天内第三款 Gemini 4 新模型",
+      summary: "谷歌发布 Gemini 4 Neon——Gemini 4 家族自此形成三档完整阵型：Carbon（攻坚最难长周期项目）、Neon（平衡深度与速度，居中）、Hydrogen（日常快速执行）。Neon 主攻复杂编程、科学研究与企业工作流：官方称速度比 Carbon 快 3 倍、完成任务成本低约 40%，编程 AI 智能体指数超越 Claude，上下文窗口 100 万 token；在 Antigravity 开发环境中可承担任务调度角色——指挥多个 Hydrogen 子智能体协同完成复杂作业。正陆续向 AI Studio 与 Gemini API 开放。",
+      detail: "发布：11 月 18 日官方博客（OSCHINA/搜狐等多源跟进）。\n定位：三档阵型居中档——平衡推理深度、任务速度与成本；主攻复杂编程/科学研究/企业工作流。\n性能：速度较 Carbon 快 3 倍；任务成本低约 40%；编程 AI 智能体指数超 Claude；100 万 token 上下文。\n调度：Antigravity 中 Neon 任任务调度层——编排多个 Hydrogen 子智能体协同（大模型指挥小模型的首个产品化分层编排）。\n节奏：Hydrogen（11-12）、Neon（11-18）四天双发，加上 10 月底 Carbon——Gemini 4 家族两周内完成「旗舰+效率+平衡」全线布阵。\n端侧视角：Neon-Carbon-Hydrogen 的「调度者-攻坚者-执行者」结构把模型分层从静态选档（用户手选）升级为动态编排（模型调模型）——与微软 Copilot Auto 用 Decision-1.1 选模型同周出现，智能体时代的推理资源分配正在从产品功能变成模型架构本身；端云协同的下一步就是这种分层下沉到端侧（端侧轻档执行+云端重档攻坚+调度层路由）。",
+      tags: ["谷歌", "Gemini 4", "Neon", "模型分层", "调度编排"],
+      url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      image: "images/news/n290.jpg",
+      imageCap: "Gemini 4 Neon 发布（图源：Google 官方博客）",
       highlight: false
     },
 
@@ -250,6 +262,7 @@ id: "n269", cat: "行业关注事件", source: "新浪财经/韩联社", date: "
       imageCap: "韩国高考防 AI 眼镜作弊备战（图源：搜狐/新浪财经）",
       highlight: false
     },
+
 {
 id: "n268", cat: "AI硬件", source: "搜狐科技/彭博", date: "2026-11-16",
       title: "苹果首款智能眼镜轮廓渐清：古尔曼称 2027 年 6 月发布、Siri 成主要交互，设计首曝",
@@ -307,138 +320,6 @@ id: "n258", cat: "手机厂商", source: "搜狐科技", date: "2026-11-15",
       url: "https://www.sohu.com/a/1101872178_163726",
       image: "images/news/n258.jpg",
       imageCap: "华为 Mate X8 外观（图源：搜狐科技）",
-      highlight: false
-    },
-
-{
-id: "n250", cat: "芯片厂商", source: "IT之家", date: "2026-11-14",
-      title: "华为再披露麒麟 9050 细节：新马良 GPU 性能提升 40%、二代硬件光追，AI ISP 首次实现 2 亿像素融合拍",
-      summary: "华为继续披露麒麟 9050 系列情报——新马良 GPU 采用第四代微架构，性能提升 40%、功耗下降 45%，第二代硬件光追性能提升 78%（BVH 硬加速+FERT 专利求交+AO 加速管线），支持 AI 超分与端侧 3D 重建；AI ISP 集成像素专用 NPU，与通用 NPU 双引擎并行，支持 4K60 实时处理并首次实现 2 亿高像素融合拍照。此前官方已披露灵犀 CPU 与达芬奇 NPU（端侧 30B MoE），本次补齐 GPU 与影像侧拼图。",
-      detail: "披露：11 月 14 日（IT之家，麒麟 9050 系列情报连载的新一篇）。\nGPU：新马良第四代微架构——性能提升 40%、功耗下降 45%；二代硬件光追性能提升 78%（高性能光追单元/BVH 硬加速实时重建/FERT 专利求交/AO 加速管线）；AI 超分、HDR 增强、控显分离、端侧 3D 重建；马良 API 与 HarmonyOS 深度协同。\n影像：AI ISP 集成像素专用 NPU——与通用 NPU 双引擎并行，4K60 实时视频处理，首次实现 2 亿高像素融合拍照；18EV 高动态视频、长焦超清引擎、全链路 BT.2020 广色域。\n系列拼图：灵犀 CPU（9 核 16 线程）与达芬奇 NPU（端侧 30B MoE）此前已披露，「逻辑折叠」工艺晶体管密度提升 53.5%。\n端侧视角：麒麟 9050 的端侧算力叙事正在从「跑大模型」扩展到「渲染+影像双引擎」——GPU 侧 AI 超分与端侧 3D 重建、ISP 侧像素级 NPU，说明旗舰 SoC 的端侧 AI 已渗透到每个计算单元；2 亿像素融合拍是 NPU×ISP 协同的典型样本，也是国产移动影像算力的新锚点。",
-      tags: ["华为", "麒麟9050", "马良GPU", "AI ISP", "硬件光追"],
-      url: "https://www.ithome.com/1/027/181.htm",
-      image: "images/news/n250.jpg",
-      imageCap: "麒麟 9050 马良 GPU 情报（图源：IT之家）",
-      highlight: false
-    },
-
-{
-id: "n264", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-13",
-      title: "前特斯拉 Cybertruck 工程师创业做厨房助手硬件 Trepo：99 美元磁吸冰箱，视觉+旋钮+语音打通库存、菜谱与购物清单",
-      summary: "YC 2026 秋季批次创企 Trepo 推出首款厨房智能硬件 Kitchen Assistant——预售价 99 美元、磁吸冰箱门的桌面设备，配备朝下视觉摄像头、实体旋转旋钮与麦克风：扫购物小票、拍冰箱或把食材放到摄像头下即自动录入库存，系统按现有食材推荐菜谱并标注已有/缺少项，一键生成全家实时共享的购物清单——把「有什么食材、做什么饭、缺什么买」打通成闭环，做饭全程不用碰手机。",
-      detail: "产品：Kitchen Assistant（YC 2026 秋季批次 Trepo），11 月 13 日报道，预售价 99 美元；基础功能免费，Food Club 订阅 9.99 美元/月（预售赠 3 个月）。\n团队：前特斯拉高级电子设计工程师（Cybertruck）与前品牌营销负责人联合创立。\n交互：磁吸壁挂不占台面；朝下摄像头扫码识别食材、语音按键录购物项、轻扫空包装自动补清单、实体旋钮逐步看菜谱——适配双手沾油的做饭场景。\n闭环：库存管理（保质期追踪/剩菜提醒）→食谱匹配（短视频/网页/纸质菜谱导入，去广告只留清单与步骤）→全家共享购物清单（按商超分类排序）。\n端侧视角：AI 硬件正在渗透厨房动线——摄像头视觉识别+语音+实体旋钮的组合把「记录」拆解进拆快递、做饭、扔空瓶的自然动作，与 CES 获奖外设同向（AI 从屏幕走向物理器官）；饮食 AI 硬件已分化出餐盘识别（Odysslife）与食材端全流程（Trepo）两条路线，家庭场景的端侧 AI 入口竞争开始颗粒度细化。",
-      tags: ["Trepo", "厨房助手", "AI硬件", "视觉识别", "YC"],
-      url: "https://www.163.com/dy/article/LBL879B60556CAYF.html",
-      image: "images/news/n264.jpg",
-      imageCap: "Trepo Kitchen Assistant（图源：网易/AING硬迹）",
-      highlight: false
-    },
-
-{
-id: "n263", cat: "行业关注事件", source: "llama.cpp 官方/HF", date: "2026-11-13",
-      title: "llama.cpp 发布 v1.0.0：诞生三年半首个正式大版本，语义化版本+稳定 API 承诺，ggml 同步 1.0",
-      summary: "端侧推理事实标准 llama.cpp 发布 v1.0.0（与底层张量库 ggml v1.0.0 同步）——项目诞生约三年半后的首个正式大版本：从递增构建号（b4xxx）转向语义化版本，不兼容的公开 C API/ABI 变更对应主版本升级，并向下游承诺稳定 API；官方口径支持 150+ 种模型架构与多平台后端，为本地 AI 生态的集成与二次开发打下更坚实的基础。",
-      detail: "发布：11 月 13 日 v1.0.0（GitHub Releases+官方博客），底层张量库 ggml v1.0.0 同发。\n核心：语义化版本（semver）——从不透明构建号转为主版本/次版本/修订号规则，下游开发者可清晰预判何时需要修改集成代码。\n承诺：稳定 API——端侧推理生态的集成成本从「追构建号」变为「按版本契约」。\n体量：150+ 种模型架构支持、多平台后端（官方口径）。\n端侧视角：llama.cpp 是端侧推理的事实标准（桌面/移动/嵌入式的默认起点之一），1.0 的意义不在新功能而在「契约化」——语义化版本+稳定 API 让各类客户端与硬件厂商的集成从跟随式适配升级为版本化管理；本地 AI 生态从快速堆功能期进入承诺兼容期，是端侧推理基础设施成年的一步。",
-      tags: ["llama.cpp", "ggml", "端侧推理", "开源", "1.0"],
-      url: "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
-      image: "images/news/n263.jpg",
-      imageCap: "llama.cpp（图源：GitHub）",
-      highlight: false
-    },
-
-{
-id: "n262", cat: "端侧Agent", source: "openJiuwen/GitHub", date: "2026-11-13",
-      title: "华为系开源平台 openJiuwen 发布 RSI 原生 AgentOS：递归自我改进做进系统底座，智能体可「自由变身」持续迭代",
-      summary: "由华为 2012 实验室、华为云、终端与计算团队联合构建的开源智能体平台 openJiuwen 发布 RSI 原生 AgentOS——RSI（递归自我改进）首次成为操作系统的原生能力：在界面、网关、服务端与智能体执行各环节内置扩展点，覆盖运行全流程，智能体能力不再固定——用户指定功能需求后 Agent 可自行开发对应功能，实现「自由变身」与持续迭代。这是 openJiuwen 继 9 月双维度 RSI 框架、10 月企业级 AgentOS 之后的第三步。",
-      detail: "发布：11 月 13 日前后（openJiuwen 平台，GitHub 组织 openJiuwen-ai 开源）。\n能力：RSI 原生底座——界面/网关/服务端/Agent 执行四层扩展点；用户指定需求，Agent 自行开发功能并持续自我迭代。\n脉络：9 月首发双维度 RSI 框架；10 月开源企业级 AgentOS（蜂群协同+工作流编排）；本次把 RSI 下沉为系统原生层。\n背景：华为 10 月公布「原生智能操作系统」专利（系统级智能体作为 OS 核心服务）；HarmonyOS 7 已引入 Agent 架构，小艺日活 1.8 亿、日均唤醒 30 亿次。\n端侧视角：RSI 从论文概念（递归自我改进）走进操作系统层——「智能体出厂后能力固定」的行业痛点被系统化解决，而持续自我迭代的智能体必然需要贴近用户数据的本地运行环境；华为把 RSI 原生底座开源，等于把「Agent 的进化权」交给开发者生态，与 HarmonyOS 的 1.8 亿小艺日活形成「开源底座+商用终端」的双轨，是国产 AgentOS 路线上迄今最完整的一步。",
-      tags: ["华为", "openJiuwen", "AgentOS", "RSI", "开源"],
-      url: "https://github.com/openJiuwen-ai",
-      image: "images/news/n262.jpg",
-      imageCap: "openJiuwen 开源平台（图源：GitHub）",
-      highlight: false
-    },
-
-{
-id: "n256", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-13",
-      title: "无界方舟开源 Edge0-145B 端侧模型：稀疏 MoE 每步仅激活约 10B，MacBook Pro 峰值内存 29GB 本地跑、解码 80 token/s",
-      summary: "无界方舟（ArkLab）11 月 12 日开源 145B 参数端侧大模型 Edge0-145B——业界首个可在个人电脑本地流畅运行的 145B 级开源模型：稀疏 MoE 架构每推理步仅约 10B 参数参与计算，三级存储流水线（Latent MoE+预测式专家路由+SSD 权重流式加载）令 MacBook Pro 峰值内存仅 29GB、解码超 80 token/s；权重以 NVFP4 量化在 HuggingFace 开放，配套推理框架与部署工具在 GitHub 开源，Day 0 支持 macOS/Windows/Linux 三平台（苹果 M 系+RTX 4090/5090），同步发布 Edge0-120B。",
-      detail: "发布：11 月 12 日无界方舟（ArkLab）官宣开源（权重+推理框架+一键部署工具同步放出）。\n架构：稀疏专家 MoE——每 64 个专家共享两个大矩阵；总参 145B、每推理步仅约 10B 激活。\n工程：三级存储流水线——热专家常驻 GPU、约 40GB 专家库放系统内存、约 48GB 词表数据存 SSD；核心技术为 Latent MoE、预测式专家路由与 SSD 权重流式传输；MacBook Pro 峰值内存 29GB、解码超 80 token/s；上下文 128K-256K。\n生态：NVFP4 量化权重（HuggingFace）；推理框架与 Edge0 Chat 应用开源（GitHub）；Day 0 支持 macOS/Windows/Linux（苹果 M 系芯片、RTX 4090/5090）；Terminal-Bench 2.1 得 86.52 分、DeepSWE 1.1 得 64.6 分（官方口径）。\n端侧视角：端侧模型规模纪录再破——此前端侧旗舰停留在 30-35B（麒麟 9050/面壁 35B），无界方舟用「超稀疏 MoE+存储分层」把 145B 总参塞进 29GB 内存，思路与文心 5.5（2800 亿总参激活 140 亿）同源：把「大总参小激活」从厂商定制芯片路线推进到消费级通用硬件路线；若基准可信，「笔记本跑百亿级激活模型」将从演示变成日常。",
-      tags: ["Edge0", "开源", "145B", "MoE", "本地运行"],
-      url: "https://www.sohu.com/a/1101025520_121423427",
-      image: "images/news/n256.jpg",
-      imageCap: "Edge0-145B 端侧模型（图源：搜狐科技）",
-      highlight: false
-    },
-
-{
-id: "n255", cat: "行业关注事件", source: "凤凰科技/财富", date: "2026-11-13",
-      title: "OpenAI 解散独立机器人团队：具身智能研究并入通用模型研发，GPT-6 Astra 直接充当机器人「大脑」",
-      summary: "据《财富》11 月 13 日报道，OpenAI 已解散独立的具身智能/机器人团队，将相关研究整合进通用大模型研发流程——官方回应称包括 GPT-6 Astra 在内的通用模型已能直接完成部分机器人任务。这一「通用模型即机器人大脑」的路线重组，与其 9 月 GPT-6 Astra 发布时 Altman 表态的 Action Efficiency 战略一脉相承。",
-      detail: "重组：11 月 13 日《财富》报道（东方财富、凤凰科技等转载），解散独立机器人团队。\n口径：官方回应——GPT-6 Astra 等通用模型已能直接用于部分机器人任务，具身智能研究并入通用大模型研发。\n脉络：9 月 GPT-6 Astra 发布前夕 Altman 首次明确机器人战略——底气来自 GPT-6 的 Action Efficiency（行动效率），而非自研人形硬件。\n端侧视角：「通用大模型直接当大脑」路线与「专用具身模型」路线（智元 WITA-Omni、谷歌 Genie 4 训练环境、英伟达 Thor 生态）正式分野——OpenAI 押注通用智能的具身涌现，把机器人还原为「通用模型的执行器」；对端侧产业而言，若通用模型直接驱动机器人成为主流，端侧推理需求将从「跑小模型」跃迁到「跑旗舰模型的最小激活档」，端云分工（机器人本体跑轻量执行层+云端跑通用大脑）的格局会加速定型。",
-      tags: ["OpenAI", "具身智能", "GPT-6 Astra", "机器人", "团队重组"],
-      url: "https://tech.ifeng.com/c/8y2QsVMnd4N",
-      image: "images/news/n255.jpg",
-      imageCap: "OpenAI 具身智能团队重组（图源：凤凰科技）",
-      highlight: false
-    },
-
-{
-id: "n254", cat: "端侧Agent", source: "IT之家/Cloudflare", date: "2026-11-13",
-      title: "Cloudflare 开源 AI 智能体专用浏览器 Kitesurf：无 Chromium 容器、资源消耗显著更低，GitHub 开放仓库",
-      summary: "Cloudflare 宣布开源专为 AI 智能体打造的浏览器 Kitesurf——运行于 Cloudflare Workers 之上，无需任何 Chromium 进程或容器即可完成 HTML 解析、CSS 应用、页面 JavaScript 执行与截图渲染，支持 Chrome DevTools 协议；舍弃标签页、扩展等面向人类的功能，CPU 与内存消耗显著低于 Chromium，可并发更多智能体会话。Kitesurf 今年 8 月首次推出，本次开源后智能体开发者可自部署。",
-      detail: "开源：11 月 13 日官宣（Cloudflare 官方博客），GitHub 仓库同步开放。\n架构：运行于 Cloudflare Workers；无 Chromium 进程/容器；支持 Chrome DevTools 协议。\n取舍：砍掉标签页、主题、扩展、像素级渲染等人类向功能，聚焦智能体指标——Token 消耗、上下文窗口、并发会话、成本。\n资源：CPU 与内存消耗显著低于 Chromium（官方定性口径），可承载突发性 AI 驱动高并发负载。\n端侧视角：智能体浏览器的「轻量化」路线首次开源——与 Chromium 内核方案（Playwright/Puppeteer 系）相比，Kitesurf 把浏览器压缩为智能体的最小运行时；对端侧智能体尤其关键：低资源占用意味着本地智能体框架（如手机/边缘设备上的 Agent 运行时）可以负担得起一个「网页操作器官」，是端侧智能体工具链的重要拼图。",
-      tags: ["Cloudflare", "Kitesurf", "开源", "智能体浏览器", "AI Agent"],
-      url: "https://www.ithome.com/1/027/197.htm",
-      image: "images/news/n254.jpg",
-      imageCap: "Kitesurf 智能体浏览器（图源：IT之家）",
-      highlight: false
-    },
-
-{
-id: "n253", cat: "行业动态", source: "新华网/腾讯新闻", date: "2026-11-13",
-      title: "大众 ID.ERA 5X 上市 9.99 万元起：行业首发豆包大模型 2.0 上车，联发科 8676 座舱芯片+地平线征程 6H 420TOPS",
-      summary: "上汽大众 ID.ERA 5X 正式上市——限时权益价 9.99 万元起的都市纯电中型 SUV，是大众 CMP+CEA+ADAS 架构的全球首款量产车；行业首发豆包大模型 2.0 上车（全系标配，复杂语义理解提升 3.6%、响应延迟下降 20%，支持四音区识别与 9 种方言），座舱搭载 4nm 联发科 8676 车规芯片；高配 Ultra 版配行云辅助驾驶——地平线征程 6H 芯片 420TOPS 算力、大众×地平线「酷睿程」联合开发的 HS8 端到端物理 AI 大模型。",
-      detail: "上市：11 月 13 日正式上市（11 月 12-13 日多源），限时权益价 9.99 万元起，都市纯电中型 SUV。\n座舱：豆包大模型 2.0 行业首发上车、全系标配——复杂语义理解提升 3.6%、响应延迟下降 20%；连续对话、一句话多意图、四音区识别、9 种方言；智慧场景一句话直达（说「有点闷」同时开空调+座椅通风+天窗）；4nm 联发科 8676 车规级座舱芯片；10.25 英寸仪表+25.8 英寸 AR-HUD+15.6 英寸中控。\n智驾：高配 Ultra 版行云辅助驾驶——192 线激光雷达、地平线征程 6H、420TOPS 算力；大众×地平线「酷睿程」联合开发 HS8 端到端物理 AI 大模型。\n端侧视角：9.99 万元档把「双端侧 AI 芯片+大模型座舱+端到端物理 AI 智驾」打包成标配——豆包 2.0 跑在联发科 8676 座舱端、HS8 跑在征程 6H 智驾端，德系车企首次全栈采用中国端侧 AI 供应链；奔驰豆包座舱之后，外资车企的「中国式端侧智能化」正在从个案变成路线。",
-      tags: ["大众", "ID.ERA", "豆包大模型", "征程6H", "智能座舱"],
-      url: "https://app.xinhuanet.com/news/article.html?articleId=20261113e85d7b5d0be34606b4117b6d7dd1730c",
-      image: "images/news/n253.jpg",
-      imageCap: "大众 ID.ERA 5X（图源：腾讯新闻）",
-      highlight: false
-    },
-
-{
-id: "n252", cat: "大模型厂商", source: "凤凰科技", date: "2026-11-13",
-      title: "腾讯混元发布实时语音模型 Hy Realtime：能说会唱、临场改词，还能边聊边调用工具",
-      summary: "腾讯混元发布实时语音模型 Hy Realtime——低延迟实时语音交互，在语音理解、指令遵循与拟人化表达上升级：不仅能说话还能唱歌，可理解用户临场修改指令实时调整输出，并支持在对话中调用工具执行任务。与李沐 Boson Higgs、OpenAI GPT-Live-1 等同期产品同场，「边听边说边干活」的全双工语音赛道一周内集齐三家大厂。",
-      detail: "发布：11 月 13 日（凤凰科技/MSN 多源）。\n能力：低延迟实时语音对话；能说会唱（语音生成覆盖歌唱）；临场修改——理解即兴指令实时调整输出；对话中调用工具执行任务。\n同系：混元 Hy ASR 3.0 preview（语音识别，多语种词错误率约 3%，元宝首发上线）。\n赛道：与 Boson Higgs Realtime Duplex（160ms 全双工）、OpenAI GPT-Live-1 API 同期——实时语音交互从「轮次式」转向「持续在场式」。\n端侧视角：全双工语音的流式决策延迟直接决定体验——唱歌与临场改词要求模型在百毫秒粒度上边生成边调整，这类实时交互最终要靠端侧或近端推理兜底延迟底线；一周内腾讯、Boson、OpenAI 三家同发，说明语音交互正成为端侧智能体的下一个入口级战场（手机助手、车载座舱、机器人同吃这条技术线）。",
-      tags: ["腾讯", "混元", "Hy Realtime", "实时语音", "全双工"],
-      url: "https://tech.ifeng.com/c/8y1QBPLjByO",
-      image: "images/news/n252.jpg",
-      imageCap: "混元 Hy Realtime（图源：凤凰科技）",
-      highlight: false
-    },
-
-{
-id: "n251", cat: "AI硬件", source: "凤凰科技", date: "2026-11-13",
-      title: "苹果 HomeView 与新 Apple TV 4K 正式开售：299 美元家庭中枢上市，苹果 AI 硬件进入交付期",
-      summary: "苹果首款智能家庭中枢 HomeView 与第四代 Apple TV 4K 于 11 月 13 日正式开售——两款均 299 美元起，澳大利亚、新西兰率先到货，加拿大、印度、英国等首发市场同步发售；HomeView 是苹果 AI 硬件三线（眼镜/耳机/家庭中枢）中首个正式交付的全新品类，Apple TV 4K 由 Siri AI 驱动。这是苹果年内最后两场重要硬件发布。",
-      detail: "开售：11 月 13 日（10 月中旬开启预购，澳新因时差率先到货）。\n价格：HomeView 与 Apple TV 4K 均 299 美元起（Apple TV 4K 香港 2399 港元）。\n首发：澳大利亚、加拿大、印度、新西兰、英国等。\n产品：HomeView 为 A18 芯片+Apple Intelligence 的家庭中枢（支持多人识人、只传「暗号」不传照片）；Apple TV 4K（第 4 代）由 Siri AI 驱动，苹果称「最具沉浸感的家庭娱乐设备」。\n端侧视角：HomeView 上市标志着苹果端侧 AI 从手机向家庭空间延伸的首个新品类落地——苹果 AI 眼镜与摄像头 AirPods 仍在供应链阶段（本周快克智能首证），家庭中枢率先交付；识人架构的隐私设计（特征暗号而非影像上云）是端侧 AI 处理敏感数据的示范样本，也是 homeOS 生态承接第三方智能体的第一块屏。",
-      tags: ["苹果", "HomeView", "Apple TV 4K", "家庭中枢", "开售"],
-      url: "https://tech.ifeng.com/c/8xz8XFlXHz2",
-      image: "images/news/n251.jpg",
-      imageCap: "HomeView 与 Apple TV 4K 开售（图源：凤凰科技）",
-      highlight: false
-    },
-
-{
-id: "n243", cat: "行业关注事件", source: "北京市经信局", date: "2026-11-13",
-      title: "北京发布具身智能机器人三年行动方案：2028 年 20 万台年产能、5 万 P 专项算力，「本地化轻量部署」与 RISC-V 智算芯片写入攻关清单",
-      summary: "《北京市具身智能机器人产业高质量发展行动方案（2026—2028 年）》正式公开（11 月 11 日印发、13 日经信局官网发布，共六大工程十九条）。目标到 2028 年培育不少于 5 家国际一流、10 家国内领先的人形机器人整机企业，在京形成 20 万台/年整机生产能力（京津冀整机产能占全国 25%），新增总规模超 50000PFlops 具身智能专用算力集群，并在 100 个真实场景采集超 100 万小时高质量数据。",
-      detail: "政策：《行动方案》11 月 11 日印发、11 月 12 日起媒体披露、11 月 13 日经信局官网发布，有效期至 2028 年 12 月 31 日。\n目标：国际一流人形整机企业不少于 5 家、国内领先 10 家；京津冀整机产能占全国 25%、关键零部件配套率超 60%。\n产能与算力：在京形成 20 万台/年整机生产能力；新增超 50000PFlops 专用算力集群；不少于 100 个真实场景采集超 100 万小时数据；整机额定负载达自重 40% 以上、平均无故障工作时间超 2000 小时。\n技术路线：支持 VLA（视觉语言动作）、世界模型、强化学习多路线融合；攻关长时记忆、「本地化轻量部署」与模型可解释性；基于 RISC-V 的系统级智算芯片与超低功耗智算芯片列入「应布局尽布局」清单。\n配套：紧缺人才进京落户、子女教育、住房、就医支持；具身智能机器人「一机一码」全生命周期管理体系。\n端侧视角：「本地化轻量部署」与 RISC-V 智算芯片首次被省级行动方案点名——机器人本体侧的模型轻量化、本地推理与自主芯片被同时纳入政策供给，与本周曦选创智（对标英伟达 Thor 的国产具身芯片）落子同一方向，北京把「大脑模型+端侧芯片」整条链路写进了三年施工图。",
-      tags: ["北京", "具身智能", "行动方案", "20万台", "本地化部署"],
-      url: "https://jxj.beijing.gov.cn/jxdt/zwyw/202611/t20261113_4944755.html",
-      image: "images/news/n243.jpg",
-      imageCap: "人形机器人运动会拳击赛现场（图源：北京市经信局官网）",
       highlight: false
     }
   ],

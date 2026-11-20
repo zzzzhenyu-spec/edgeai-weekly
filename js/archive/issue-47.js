@@ -145,6 +145,42 @@ id: "n261", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-12",
     },
 
 {
+id: "n264", cat: "AI硬件", source: "网易/AING硬迹", date: "2026-11-13",
+      title: "前特斯拉 Cybertruck 工程师创业做厨房助手硬件 Trepo：99 美元磁吸冰箱，视觉+旋钮+语音打通库存、菜谱与购物清单",
+      summary: "YC 2026 秋季批次创企 Trepo 推出首款厨房智能硬件 Kitchen Assistant——预售价 99 美元、磁吸冰箱门的桌面设备，配备朝下视觉摄像头、实体旋转旋钮与麦克风：扫购物小票、拍冰箱或把食材放到摄像头下即自动录入库存，系统按现有食材推荐菜谱并标注已有/缺少项，一键生成全家实时共享的购物清单——把「有什么食材、做什么饭、缺什么买」打通成闭环，做饭全程不用碰手机。",
+      detail: "产品：Kitchen Assistant（YC 2026 秋季批次 Trepo），11 月 13 日报道，预售价 99 美元；基础功能免费，Food Club 订阅 9.99 美元/月（预售赠 3 个月）。\n团队：前特斯拉高级电子设计工程师（Cybertruck）与前品牌营销负责人联合创立。\n交互：磁吸壁挂不占台面；朝下摄像头扫码识别食材、语音按键录购物项、轻扫空包装自动补清单、实体旋钮逐步看菜谱——适配双手沾油的做饭场景。\n闭环：库存管理（保质期追踪/剩菜提醒）→食谱匹配（短视频/网页/纸质菜谱导入，去广告只留清单与步骤）→全家共享购物清单（按商超分类排序）。\n端侧视角：AI 硬件正在渗透厨房动线——摄像头视觉识别+语音+实体旋钮的组合把「记录」拆解进拆快递、做饭、扔空瓶的自然动作，与 CES 获奖外设同向（AI 从屏幕走向物理器官）；饮食 AI 硬件已分化出餐盘识别（Odysslife）与食材端全流程（Trepo）两条路线，家庭场景的端侧 AI 入口竞争开始颗粒度细化。",
+      tags: ["Trepo", "厨房助手", "AI硬件", "视觉识别", "YC"],
+      url: "https://www.163.com/dy/article/LBL879B60556CAYF.html",
+      image: "images/news/n264.jpg",
+      imageCap: "Trepo Kitchen Assistant（图源：网易/AING硬迹）",
+      highlight: false
+    },
+
+{
+id: "n263", cat: "行业关注事件", source: "llama.cpp 官方/HF", date: "2026-11-13",
+      title: "llama.cpp 发布 v1.0.0：诞生三年半首个正式大版本，语义化版本+稳定 API 承诺，ggml 同步 1.0",
+      summary: "端侧推理事实标准 llama.cpp 发布 v1.0.0（与底层张量库 ggml v1.0.0 同步）——项目诞生约三年半后的首个正式大版本：从递增构建号（b4xxx）转向语义化版本，不兼容的公开 C API/ABI 变更对应主版本升级，并向下游承诺稳定 API；官方口径支持 150+ 种模型架构与多平台后端，为本地 AI 生态的集成与二次开发打下更坚实的基础。",
+      detail: "发布：11 月 13 日 v1.0.0（GitHub Releases+官方博客），底层张量库 ggml v1.0.0 同发。\n核心：语义化版本（semver）——从不透明构建号转为主版本/次版本/修订号规则，下游开发者可清晰预判何时需要修改集成代码。\n承诺：稳定 API——端侧推理生态的集成成本从「追构建号」变为「按版本契约」。\n体量：150+ 种模型架构支持、多平台后端（官方口径）。\n端侧视角：llama.cpp 是端侧推理的事实标准（桌面/移动/嵌入式的默认起点之一），1.0 的意义不在新功能而在「契约化」——语义化版本+稳定 API 让各类客户端与硬件厂商的集成从跟随式适配升级为版本化管理；本地 AI 生态从快速堆功能期进入承诺兼容期，是端侧推理基础设施成年的一步。",
+      tags: ["llama.cpp", "ggml", "端侧推理", "开源", "1.0"],
+      url: "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      image: "images/news/n263.jpg",
+      imageCap: "llama.cpp（图源：GitHub）",
+      highlight: false
+    },
+
+{
+id: "n262", cat: "端侧Agent", source: "openJiuwen/GitHub", date: "2026-11-13",
+      title: "华为系开源平台 openJiuwen 发布 RSI 原生 AgentOS：递归自我改进做进系统底座，智能体可「自由变身」持续迭代",
+      summary: "由华为 2012 实验室、华为云、终端与计算团队联合构建的开源智能体平台 openJiuwen 发布 RSI 原生 AgentOS——RSI（递归自我改进）首次成为操作系统的原生能力：在界面、网关、服务端与智能体执行各环节内置扩展点，覆盖运行全流程，智能体能力不再固定——用户指定功能需求后 Agent 可自行开发对应功能，实现「自由变身」与持续迭代。这是 openJiuwen 继 9 月双维度 RSI 框架、10 月企业级 AgentOS 之后的第三步。",
+      detail: "发布：11 月 13 日前后（openJiuwen 平台，GitHub 组织 openJiuwen-ai 开源）。\n能力：RSI 原生底座——界面/网关/服务端/Agent 执行四层扩展点；用户指定需求，Agent 自行开发功能并持续自我迭代。\n脉络：9 月首发双维度 RSI 框架；10 月开源企业级 AgentOS（蜂群协同+工作流编排）；本次把 RSI 下沉为系统原生层。\n背景：华为 10 月公布「原生智能操作系统」专利（系统级智能体作为 OS 核心服务）；HarmonyOS 7 已引入 Agent 架构，小艺日活 1.8 亿、日均唤醒 30 亿次。\n端侧视角：RSI 从论文概念（递归自我改进）走进操作系统层——「智能体出厂后能力固定」的行业痛点被系统化解决，而持续自我迭代的智能体必然需要贴近用户数据的本地运行环境；华为把 RSI 原生底座开源，等于把「Agent 的进化权」交给开发者生态，与 HarmonyOS 的 1.8 亿小艺日活形成「开源底座+商用终端」的双轨，是国产 AgentOS 路线上迄今最完整的一步。",
+      tags: ["华为", "openJiuwen", "AgentOS", "RSI", "开源"],
+      url: "https://github.com/openJiuwen-ai",
+      image: "images/news/n262.jpg",
+      imageCap: "openJiuwen 开源平台（图源：GitHub）",
+      highlight: false
+    },
+
+{
 id: "n248", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-12",
       title: "谷歌发布 Gemini 4 Hydrogen：主打智能体快速执行的高效率档，多项基准反超自家旗舰 Argon",
       summary: "谷歌 11 月 12 日发布 Gemini 4 家族新成员 Hydrogen——定位「日常驱动」的高效率执行型模型，专注日常编码与智能体工作流，与负责深度长程推理的 Carbon/Argon 形成分层。Artificial Analysis 智能指数 high 档 51 分反超 Argon（50 分），xhigh 档达 54 分；Terminal-Bench 4.1 达 57%（上代 3.8 Flash 为 18.2%）且任务速度快 2.5 倍；支持 100 万 token 输入与最多 100 万 token 输出，全上下文统一价每百万输入 1.50 美元、输出 7.50 美元。",
