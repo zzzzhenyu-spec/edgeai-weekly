@@ -301,6 +301,18 @@ news: [
     },
 
 {
+      id: "n299", cat: "端侧Agent", source: "Apple Developer News/Neoteo", date: "2026-11-03",
+      title: "苹果把 Siri AI 开放给所有开发者：App Intents 接入第三方应用，一次语音可触发多动作「App Skills」",
+      summary: "苹果通过开发者新闻官方宣布 Siri AI 向所有开发者开放——新的 Developer Preview 让任意应用接入 Siri AI：集成经由 App Intents 框架（基于语言模型训练的可识别结构 Schema）完成，第三方应用获得被 Siri AI 直接调用的能力；「App Skills」支持一句语音请求触发多个应用动作。新版 Siri AI 于 6 月 WWDC 首发后，这是苹果智能体生态从系统内置走向第三方开发者的关键一步。",
+      detail: "官宣：11 月 3 日 Apple Developer News（iOS 26.3 Developer Preview 体系）。\n接入：App Intents 框架——应用通过 Schema（语言模型可识别的结构）暴露能力给 Siri AI/Apple Intelligence。\n能力：App Skills——单次语音请求串联多个应用动作；第三方应用与 Siri AI 的双向协同。\n脉络：新版 Siri AI 6 月 WWDC 发布（「能力更强、更对话化、跨产品深度集成」）；本次开放开发者层。\n端侧视角：苹果智能体的「应用层毛细血管」打通——Siri AI 从苹果自研技能长尾到第三方 App 全覆盖，App Intents 的 Schema 化接口本质是把「应用功能」翻译成语言模型可调用的端侧工具；与同周 Siri 直调千问（国行线）合看，苹果智能体的模型层与动作层在同一周双双扩张，端侧 Agent 的系统级标准化先于跨厂商标准落地。",
+      tags: ["苹果", "Siri AI", "App Intents", "智能体", "开发者"],
+      url: "https://developer.apple.com/news/?id=gdk2umrf",
+      image: "images/news/n299.jpg",
+      imageCap: "Siri AI 开发者预览（图源：Apple Developer News）",
+      highlight: false
+    },
+
+{
       id: "n185", cat: "芯片厂商", source: "雷峰网", date: "2026-11-04",
       title: "后摩智能完成数十亿元 B 轮融资：端侧大模型 AI 芯片进入规模化兑现期，M50 已以 10W 功耗跑出 160 TOPS",
       summary: "后摩智能低调完成数十亿元 B 轮融资——端侧大模型 AI 芯片创业公司中融资规模最大的一笔。其 M50 芯片以 10W 功耗跑出 160 TOPS 算力（存算一体架构），已搭载于联想开天首款信创 AI 主机（力擎 LQ50 NPU）；本轮融资标志着端侧大模型 AI 芯片从技术验证期进入规模化兑现期——厂商开始从「芯片出货」走向「Token 生产」。",

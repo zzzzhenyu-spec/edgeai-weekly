@@ -2,9 +2,9 @@
 
 > 每周只收**最近 7 天**的端侧 AI / AI 硬件 / 科研论文动态 ｜ [在线阅读](https://zzzzhenyu-spec.github.io/edgeai-weekly/)
 
-## 2026 · 第 48 期（2026.11.16 — 2026.11.22 · 近 7 天）
+## 2026 · 第 48 期（2026.11.16 — 2026.11.22）
 
-**近 7 天导读**：近 7 天聚焦：端侧 AI「平台换代周」——三大操作系统本机底座全部换新：微软 Windows 推送 Aion 1.0 Instruct（接替 Phi Silica、上下文 3.5K 升 32K、GPU 支持在路上），华为星芒 O1 Pro 发布（5499 元起的鸿蒙 AI 手机、麒麟 9030S 梯队落位、星芒品牌首秀），苹果 AFM3 与健康 AI 研究同周。模型层混战白热化：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵（Carbon/Neon/Hydrogen）、微软 Ignite 七连发含决策模型 Decision-1.1——旗舰分层与「模型调模型」成为行业默认。格局与资本：DeepSeek 千亿融资落地（宁德时代腾讯并列最大投资方）、李飞飞入盟 AMD、Gemini Argon 失控+加州起诉 OpenAI 的智能体治理日。智能体用户底座成型：微信小微 3000 万日活+预告端侧推理、WorkBuddy 破千万。AI 能力地标：Anthropic 数学家宣称 Claude 辅助证明黎曼猜想（1700 万行 Lean 代码、陶哲轩称验证需时间）。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。 近两日新增：星芒 O1 Pro 首销战报（16GB 版全平台售罄、国补 4999 元起）、GPT-6.2 Astra 具身评测成功率翻倍（Ember-0 基准 19.6%→41.2%）、Claude 辅助黎曼猜想证明宣布。
+**近 7 天导读**：本期聚焦：端侧 AI 完成一次「平台级换代」——操作系统底座：微软向 Windows 推送本机模型 Aion 1.0 Instruct（上下文 3.5K 升 32K、GPU 支持在路上），苹果把 Siri AI 经 App Intents 开放给全部第三方开发者，华为星芒 O1 Pro 发布即售罄（5499 元起、麒麟 9030S）把 AI 手机打進中端价位。模型与能力：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵，Astra 在双臂具身基准成功率翻倍（19.6%→41.2%）；Anthropic 数学家以 1700 万行 Lean 代码宣布 Claude 辅助证明黎曼猜想、与一份写了 12 年的 940 页人类手稿同场竞速。硬件与存储：谷歌首款 Gemini 智能眼镜开放预订（395 美元起、12 月 10 日开售）凑齐四强争霸，群联展示内建 NPU 的智能 SSD——算力颗粒度下沉到存储介质。资本与格局：DeepSeek 千亿融资落地 31 家产业资本入局、Anthropic 813 亿美元创纪录 IPO。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。
 
 ## 近 7 天速览
 
@@ -28,10 +28,11 @@
 | 2026-11-18 | [微信「小微」日活达 3000 万：官方预告部分推理任务未来将在设备端运行](https://finance.sina.com.cn/tech/digi/2026-11-18/doc-inizehkz6841176.shtml) | 新浪财经 |
 | 2026-11-16 | [开源鸿蒙轻 AI「越影」方案发布：1 块主板+6 款扩展板，让百亿「哑终端」IoT 设备跨入轻智能](https://tech.china.com/articles/20261116/202611161979249.html) | 中华网科技/海思 |
 
-### AI硬件（4 条）
+### AI硬件（5 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-22 | [群联公布内建 NPU 与 64GB 内存的「智能 SSD」设计：PyTorch/vLLM/llama.cpp 直接在盘上跑，数据搬运省百倍](https://www.techspot.com/news/114653-phison-shows-ssd-design-npu-64gb-memory-runs.html) | Tom's Hardware/TechSpot |
 | 2026-11-19 | [极米记得 AI 记忆眼镜 G1 与手环 L1 搭载物奇微 WQ7036：国产低功耗 AI 音频芯片进入记忆硬件供应链](https://m.sohu.com/a/1103261925_121960420) | 搜狐科技 |
 | 2026-11-17 | [穗升科技完成数千万元 Pre-A 轮：AI 记忆硬件 Memoket Gem 已开卖美日，11 克一次按压捕获对话+KITE 记忆引擎](https://m.sohu.com/a/1102801413_118792) | 亿欧/36氪 |
 | 2026-11-16 | [KTC 推出 VMAX 全感知智能体主机：分体式设计配磁吸随行屏，视觉音频与会议大模型全部本地运行](https://finance.sina.com.cn/tech/digi/2026-11-16/doc-iniyxpxc5961362.shtml) | 新浪财经/搜狐 |
@@ -49,7 +50,7 @@
 |------|------|------|
 | 2026-11-21 | [华为星芒 O1 Pro 首销战报：16GB 版全平台售罄，国补后 4999 元起，总经理回应定价争议「在便宜和创新之间选创新」](https://news.mydrivers.com/1/1167/1167469.htm) | 快科技/界面新闻 |
 | 2026-11-20 | [华为星芒 O1 Pro 正式发布：5499 元起的鸿蒙 AI 手机，麒麟 9030S+阔直屏+2 亿像素，星芒品牌首秀](https://news.mydrivers.com/1/1167/1167296.htm) | 快科技/第一财经 |
-| 2026-11-16 | [华为星芒 O1 Pro 真机流出并开启预约：搭载麒麟 9030S 处理器，11 月 20 日首秀前热度拉满](https://www.msn.cn/zh-cn/technology/hardwareanddevices/%E5%8D%8E%E4%B8%BA%E6%98%9F%E8%8A%92-osta-o1-pro-%E7%9C%9F%E6%9C%BA%E6%B5%81%E5%87%BA/ar-AA2huUmI) | MSN/多源 |
+| 2026-11-16 | [华为星芒 O1 Pro 真机流出并开启预约：搭载麒麟 9030S 处理器，11 月 20 日首秀前热度拉满](https://news.mydrivers.com/1/1166/1166311.htm) | 快科技/IT之家 |
 
 ### 大模型厂商（9 条）
 

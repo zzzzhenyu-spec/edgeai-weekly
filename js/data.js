@@ -15,14 +15,26 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 48 期",
-    weekRange: "2026.11.16 — 2026.11.22 · 近 7 天",
+    weekRange: "2026.11.16 — 2026.11.22",
     updated: "2026-11-22",
-    status: "rolling",
-    editorsNote: "近 7 天聚焦：端侧 AI「平台换代周」——三大操作系统本机底座全部换新：微软 Windows 推送 Aion 1.0 Instruct（接替 Phi Silica、上下文 3.5K 升 32K、GPU 支持在路上），华为星芒 O1 Pro 发布（5499 元起的鸿蒙 AI 手机、麒麟 9030S 梯队落位、星芒品牌首秀），苹果 AFM3 与健康 AI 研究同周。模型层混战白热化：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵（Carbon/Neon/Hydrogen）、微软 Ignite 七连发含决策模型 Decision-1.1——旗舰分层与「模型调模型」成为行业默认。格局与资本：DeepSeek 千亿融资落地（宁德时代腾讯并列最大投资方）、李飞飞入盟 AMD、Gemini Argon 失控+加州起诉 OpenAI 的智能体治理日。智能体用户底座成型：微信小微 3000 万日活+预告端侧推理、WorkBuddy 破千万。AI 能力地标：Anthropic 数学家宣称 Claude 辅助证明黎曼猜想（1700 万行 Lean 代码、陶哲轩称验证需时间）。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。\n近两日新增：星芒 O1 Pro 首销战报（16GB 版全平台售罄、国补 4999 元起）、GPT-6.2 Astra 具身评测成功率翻倍（Ember-0 基准 19.6%→41.2%）、Claude 辅助黎曼猜想证明宣布。"
+    status: "final",
+    editorsNote: "本期聚焦：端侧 AI 完成一次「平台级换代」——操作系统底座：微软向 Windows 推送本机模型 Aion 1.0 Instruct（上下文 3.5K 升 32K、GPU 支持在路上），苹果把 Siri AI 经 App Intents 开放给全部第三方开发者，华为星芒 O1 Pro 发布即售罄（5499 元起、麒麟 9030S）把 AI 手机打進中端价位。模型与能力：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵，Astra 在双臂具身基准成功率翻倍（19.6%→41.2%）；Anthropic 数学家以 1700 万行 Lean 代码宣布 Claude 辅助证明黎曼猜想、与一份写了 12 年的 940 页人类手稿同场竞速。硬件与存储：谷歌首款 Gemini 智能眼镜开放预订（395 美元起、12 月 10 日开售）凑齐四强争霸，群联展示内建 NPU 的智能 SSD——算力颗粒度下沉到存储介质。资本与格局：DeepSeek 千亿融资落地 31 家产业资本入局、Anthropic 813 亿美元创纪录 IPO。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+id: "n298", cat: "AI硬件", source: "Tom's Hardware/TechSpot", date: "2026-11-22",
+      title: "群联公布内建 NPU 与 64GB 内存的「智能 SSD」设计：PyTorch/vLLM/llama.cpp 直接在盘上跑，数据搬运省百倍",
+      summary: "群联电子（Phison）披露计算存储新设计——SSD 内置 NPU 与最高 64GB 高速内存（带宽达 130 GB/s），AI 工作负载直接在硬盘上运行，不依赖主机 CPU/GPU：盘上可直跑 PyTorch、vLLM 与 llama.cpp 等主流框架，官方称数据搬运量最高降低百倍（计算发生在数据所在处）。计算存储正把「端侧 AI」的边界从 SoC 推进到存储介质本身。",
+      detail: "披露：群联计算存储设计（Tom's Hardware/TechSpot 11 月 22 日报道）。\n硬件：SSD 内建 NPU+最高 64GB 高速内存（带宽至 130 GB/s）——AI 推理在盘内完成，不占用主机算力。\n软件：盘上直接运行 PyTorch、vLLM、llama.cpp 等主流 AI 框架与推理引擎。\n效率：官方口径数据搬运量最高降低百倍——「数据不动、计算就位」，绕开存储与 CPU/GPU 间的搬运瓶颈。\n第二设计：pSLC 缓存+QLC 容量单控制器合并（分层存储一体化）。\n背景：延续群联 aiDAPTIVCache（Pascari 企业盘降低 AI 训练成本）路线。\n端侧视角：这是「端侧算力颗粒度」的又一次下沉——此前是手机/PC/眼镜，现在连存储介质都开始长出 NPU：对大模型本地部署的意义在于绕开内存墙（权重直接在盘上推理，64GB 缓存已超过多数端侧设备的统一内存），存储厂商正式加入端侧 AI 芯片竞争；同周炬芯存内计算 NPU 量产落地——存算一体正从论文走进货架。",
+      tags: ["群联", "计算存储", "NPU", "智能SSD", "存算一体"],
+      url: "https://www.techspot.com/news/114653-phison-shows-ssd-design-npu-64gb-memory-runs.html",
+      image: "images/news/n298.jpg",
+      imageCap: "群联 PCIe Gen6 SSD 样品 E3.S/E1.S 规格（图源：Tom's Hardware）",
+      highlight: false
+    },
+
 {
 id: "n294", cat: "手机厂商", source: "快科技/界面新闻", date: "2026-11-21",
       title: "华为星芒 O1 Pro 首销战报：16GB 版全平台售罄，国补后 4999 元起，总经理回应定价争议「在便宜和创新之间选创新」",
@@ -264,12 +276,12 @@ id: "n278", cat: "芯片厂商", source: "IT之家/NVIDIA", date: "2026-11-16",
     },
 
 {
-id: "n276", cat: "手机厂商", source: "MSN/多源", date: "2026-11-16",
+id: "n276", cat: "手机厂商", source: "快科技/IT之家", date: "2026-11-16",
       title: "华为星芒 O1 Pro 真机流出并开启预约：搭载麒麟 9030S 处理器，11 月 20 日首秀前热度拉满",
       summary: "华为全新 AI 子品牌星芒（OSTA）首款手机 O1 Pro 真机照片流出——消息称搭载麒麟 9030S 处理器，定位鸿蒙 AI 手机；华为终端同步官宣 11 月 17 日 10:08 开启 0 元预约，距 11 月 20 日星芒品牌首秀仅三天。星芒与 Mate X8（11 月 24 日发布）、MateBook Fold S 组成本月华为端侧 AI 硬件密集发布矩阵。",
       detail: "流出：11 月 16 日真机照曝光（多源，热度 dom=3）。\n预约：11 月 17 日 10:08 华为终端官宣开启 0 元预约（多源）。\n配置：麒麟 9030S 处理器（麒麟家族新成员，定位低于 9050 旗舰档）；定位鸿蒙 AI 手机。\n节点：11 月 20 日星芒品牌首秀发布会（与小米 18 Pro 香港发布同日）。\n矩阵：华为本月端侧密集期——星芒首秀（11-20）/Mate X8 发布会（11-24）/MateBook Fold S 预订中。\n端侧视角：麒麟 9030S 意味着麒麟平台完成「旗舰 9050+中端 9030S」的梯队布局——端侧 AI 能力随 NPU 档位下放中端价位段，星芒若把「AI 手机」做成中端标配叙事，将直接改变该价位段的 AI 竞争规则；11 月 20 日发布会是本周端侧日历的第一个大节点。",
       tags: ["华为", "星芒", "O1 Pro", "麒麟9030S", "AI手机"],
-      url: "https://www.msn.cn/zh-cn/technology/hardwareanddevices/%E5%8D%8E%E4%B8%BA%E6%98%9F%E8%8A%92-osta-o1-pro-%E7%9C%9F%E6%9C%BA%E6%B5%81%E5%87%BA/ar-AA2huUmI",
+      url: "https://news.mydrivers.com/1/1166/1166311.htm",
       image: "images/news/n276.jpg",
       imageCap: "星芒 O1 Pro 产品规划渲染（图源：Techritual）",
       highlight: false

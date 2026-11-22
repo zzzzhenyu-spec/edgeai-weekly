@@ -12,7 +12,7 @@ window.GH_FRAMEWORKS = {
       "one": "阿里轻量级端侧推理引擎，CV 与 LLM 通吃",
       "intro": "阿里开源的深度学习推理引擎，覆盖手机、嵌入式与 IoT 全场景，自带模型转换、量化与训练压缩工具链。\n端侧视角：既能跑传统 CV 模型也支持端侧大模型推理（MNN-LLM），安卓/iOS/离线场景一把梭，是国产端侧部署的头部选择。\n适合想在国内移动生态做本地推理的工程团队。",
       "url": "https://github.com/alibaba/MNN",
-      "stars": 16589,
+      "stars": 16591,
       "lang": "C++",
       "pushed": "2026-11-20",
       "updates": [
@@ -45,7 +45,7 @@ window.GH_FRAMEWORKS = {
       "one": "手机端 CV 推理事实标准之一，无第三方依赖",
       "intro": "腾讯优图开源的手机端前向推理框架，零第三方依赖、包体小，CPU 指令级优化极深。\n端侧视角：移动端 CV 模型部署（检测/分割/超分）的老牌事实标准，与 MNN 同为国产端侧双雄；对 LLM 支持弱，定位偏传统 CV。\n适合对包体与 CPU 兼容性敏感的移动端 CV 项目。",
       "url": "https://github.com/Tencent/ncnn",
-      "stars": 24085,
+      "stars": 24086,
       "lang": "C++",
       "pushed": "2026-11-21",
       "updates": [
@@ -134,7 +134,7 @@ window.GH_FRAMEWORKS = {
       "one": "华为昇思，Lite 子模块覆盖端侧与 NPU 亲和",
       "intro": "华为开源的深度学习框架，MindSpore Lite 子模块负责端侧推理，对麒麟 NPU 与昇腾硬件亲和最好。\n端侧视角：鸿蒙/麒麟设备上做本地推理的首选链路，训练-压缩-端侧部署一体化；小艺等系统级能力的工程底座之一。\n适合面向华为/鸿蒙生态的端侧 AI 团队。",
       "url": "https://github.com/mindspore-ai/mindspore",
-      "stars": 4729,
+      "stars": 4730,
       "lang": "C++",
       "pushed": "2026-10-28",
       "updates": []
@@ -180,7 +180,7 @@ window.GH_FRAMEWORKS = {
       "one": "PyTorch 官方端侧运行时，torch.export 直达设备",
       "intro": "PyTorch 官方的端侧部署运行时：torch.export 导出模型，经 Ahead-of-Time 编译落到移动/嵌入式设备，与 Qualcomm QNN、Core ML 等后端委托打通。\n端侧视角：研究侧 PyTorch 模型「原样」上端侧的最短路径，量化与算子下沉持续演进。\n适合模型在 PyTorch 训练、要下到手机/可穿戴的团队。",
       "url": "https://github.com/pytorch/executorch",
-      "stars": 5187,
+      "stars": 5188,
       "lang": "Python",
       "pushed": "2026-11-22",
       "updates": [
@@ -212,7 +212,7 @@ window.GH_FRAMEWORKS = {
       "one": "苹果官方 Apple silicon 本地推理框架",
       "intro": "苹果机器学习团队开源的数组计算框架与 LLM 推理栈，为统一内存架构设计，CPU/GPU 可混用同一块内存。\n端侧视角：Mac 本地大模型生态的事实基建之一（mlx-lm 之上长出 LM Studio 等产品），Apple silicon 跑大模型的「官方答案」。\n适合在 Mac 生态做本地推理与模型移植的工程师。",
       "url": "https://github.com/ml-explore/mlx",
-      "stars": 29237,
+      "stars": 29242,
       "lang": "C++",
       "pushed": "2026-11-22",
       "updates": [
@@ -258,9 +258,9 @@ window.GH_FRAMEWORKS = {
       "one": "Intel 端侧引擎，CPU/iGPU/NPU 一套 API",
       "intro": "Intel 的端侧推理与优化工具套件，一套 API 调度 x86 CPU、核显与 NPU，模型优化器负责转换与量化。\n端侧视角：AI PC（酷睿 Ultra NPU）与边缘盒子的官方路线，Windows/Linux 本地部署英特尔多核场景几乎默认选它。\n适合面向 AI PC 与 Intel 边缘硬件的应用。",
       "url": "https://github.com/openvinotoolkit/openvino",
-      "stars": 11960,
+      "stars": 12014,
       "lang": "C++",
-      "pushed": "2026-11-21",
+      "pushed": "2026-11-22",
       "updates": [
         {
           "v": "2026.4.1",
@@ -289,26 +289,26 @@ window.GH_FRAMEWORKS = {
       "one": "本地 LLM 推理事实标准，GGUF 量化生态源头",
       "intro": "Georgi Gerganov 发起的纯 C/C++ 大模型推理引擎，GGML/GGUF 量化格式的源头，CPU 也能跑大模型，日常小版本日更。\n端侧视角：本地大模型开源生态的地基——Ollama 等主流本地运行时底层都用它；新模型社区支持几乎第一时间到位。\n适合一切想离线跑 LLM 的设备与场景。",
       "url": "https://github.com/ggml-org/llama.cpp",
-      "stars": 135948,
+      "stars": 136031,
       "lang": "C++",
       "pushed": "2026-11-22",
       "updates": [
         {
-          "v": "b12627",
+          "v": "b12631",
           "d": "2026-11-22",
           "notes": [
-            "server : fit non-causal batches in one ubatch (32713)",
+            "webgpu : update GDN supports_op check (32782)",
             "Website:",
             "<https://llama.app>"
           ]
         },
         {
-          "v": "b12626",
+          "v": "b12629",
           "d": "2026-11-22",
           "notes": [
-            "vulkan : fix memset for unaligned ranges for non-UMA devices (32725)",
-            "See https://github.com/ggml-org/llama.cpp/pull/32574",
-            "Website:"
+            "opencl: add coopmat GEMM for Adreno 850 (Q4_0, Q5_0, Q8_0, Q4_K, Q5_K, Q6_K) (32686)",
+            "* opencl: add Q4_0 coopmat GEMM for Adreno 850",
+            "Assisted-by: Claude Opus 5.5"
           ]
         }
       ]
@@ -323,9 +323,9 @@ window.GH_FRAMEWORKS = {
       "one": "深度学习编译器，模型编译到各类端侧硬件",
       "intro": "Apache 顶级的深度学习编译器框架，把模型编译优化到 CPU/GPU/NPU 等各类硬件后端。\n端侧视角：编译器路线的端侧部署重镇——MLC LLM 即基于 TVM 把大模型编译上手机/浏览器；自动调优（auto-tuning）是它的独门能力。\n适合需要为新硬件/长尾硬件适配模型性能的团队。",
       "url": "https://github.com/apache/tvm",
-      "stars": 13919,
+      "stars": 13920,
       "lang": "Python",
-      "pushed": "2026-11-20",
+      "pushed": "2026-11-22",
       "updates": [
         {
           "v": "v0.27.0.post1",
@@ -353,10 +353,19 @@ window.GH_FRAMEWORKS = {
       "one": "端侧离线语音识别/合成框架",
       "intro": "Next-gen Kaldi 系的端侧语音框架，支持流式/离线 ASR、TTS、说话人识别，模型走 ONNX、无需联网服务。\n端侧视角：设备本地语音交互（眼镜/耳机/IoT）常用底座，跨安卓/iOS/Linux/嵌入式，配套模型生态完整。\n适合做离线语音助手与实时字幕类应用。",
       "url": "https://github.com/k2-fsa/sherpa-onnx",
-      "stars": 16083,
+      "stars": 16093,
       "lang": "C++",
-      "pushed": "2026-11-21",
+      "pushed": "2026-11-22",
       "updates": [
+        {
+          "v": "v2.0.3",
+          "d": "2026-11-22",
+          "notes": [
+            "* wespeaker: remove the no-op Pad before AveragePool in CAM++ models (4201) by @developper…",
+            "* Cluster only embeddings with enough clean speech in speaker diarization by @Jamarlli in …",
+            "* Fix publishing nuget packages by @csukuangfj in https://github.com/k2-fsa/sherpa-onnx/pu…"
+          ]
+        },
         {
           "v": "v2.0.2",
           "d": "2026-11-19",
@@ -364,15 +373,6 @@ window.GH_FRAMEWORKS = {
             "* Fix modified_beam_search dropping speech for NeMo TDT models by @Hugo0 in https://github…",
             "* Support per-stream language candidates for Whisper by @Ngoroth in https://github.com/k2-…",
             "* Add an optional QNN HTP performance mode by @matiaslin in https://github.com/k2-fsa/sher…"
-          ]
-        },
-        {
-          "v": "react-fa",
-          "d": "2026-11-16",
-          "notes": [
-            "Static web apps (WASM) for the sherpa-onnx forced-alignment web app.",
-            "One app per model — unzip and serve the directory with any static",
-            "HTTP server."
           ]
         }
       ]
@@ -387,7 +387,7 @@ window.GH_FRAMEWORKS = {
       "one": "Whisper 的 C/C++ 端侧移植，本地听写标配",
       "intro": "OpenAI Whisper 语音识别的纯 C/C++ 移植，量化后可在手机与笔记本上实时转写。\n端侧视角：本地听写/会议转写/字幕类应用的默认选择之一，与 llama.cpp 同社区同工程风格。\n适合一切需要离线语音转文字的端侧应用。",
       "url": "https://github.com/ggml-org/whisper.cpp",
-      "stars": 55408,
+      "stars": 55424,
       "lang": "C++",
       "pushed": "2026-11-20",
       "updates": [
@@ -417,7 +417,7 @@ window.GH_FRAMEWORKS = {
       "one": "谷歌端侧 CV/多模态管线框架",
       "intro": "Google 的跨平台端侧 ML 管线框架，内置人脸/手势/姿态等大量成品方案，图式编排（Graph）组装多模型流水线。\n端侧视角：安卓端 CV 能力（相机特效、手势交互）最常用的现成积木，也逐步接入 LLM/多模态任务。\n适合要快速集成成熟端侧 CV 能力的应用。",
       "url": "https://github.com/google-ai-edge/mediapipe",
-      "stars": 37776,
+      "stars": 37779,
       "lang": "C++",
       "pushed": "2026-11-22",
       "updates": [
@@ -541,7 +541,7 @@ window.GH_REPOS = {
     {
       "name": "morluto/rea",
       "url": "https://github.com/morluto/rea",
-      "stars": 472966,
+      "stars": 473439,
       "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "lang": "TypeScript",
       "pushed": "2026-11-22",
@@ -551,7 +551,7 @@ window.GH_REPOS = {
     {
       "name": "deepseek-ai/deepseek-harness",
       "url": "https://github.com/deepseek-ai/deepseek-harness",
-      "stars": 285153,
+      "stars": 285353,
       "desc": "DeepSeek Harness: Everything is a Plugin.",
       "lang": "TypeScript",
       "pushed": "2026-11-22",
@@ -560,16 +560,16 @@ window.GH_REPOS = {
     {
       "name": "Ebony-Vinyl/dsh-our-free-model",
       "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
-      "stars": 83228,
+      "stars": 83602,
       "desc": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
       "lang": "JavaScript",
-      "pushed": "2026-11-21",
+      "pushed": "2026-11-22",
       "intro_cn": "dsh 免登录插件：装上即用 DeepSeek V4.1 Flash、Kimi K3 等模型，无需注册或填 API Key。"
     },
     {
       "name": "yetone/magpie",
       "url": "https://github.com/yetone/magpie",
-      "stars": 39821,
+      "stars": 39924,
       "desc": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "lang": "Go",
       "pushed": "2026-11-22",
@@ -578,7 +578,7 @@ window.GH_REPOS = {
     {
       "name": "hypit-ai/hypit",
       "url": "https://github.com/hypit-ai/hypit",
-      "stars": 30980,
+      "stars": 31042,
       "desc": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
       "lang": "TypeScript",
       "pushed": "2026-11-20",
@@ -587,7 +587,7 @@ window.GH_REPOS = {
     {
       "name": "ccch1mneyyy/dsh-Go",
       "url": "https://github.com/ccch1mneyyy/dsh-Go",
-      "stars": 29701,
+      "stars": 29965,
       "desc": "dsh-go — DeepSeek Harness 装进口袋：手机本机运行，也能遥控你的电脑。",
       "lang": "Dart",
       "pushed": "2026-11-22",
@@ -596,16 +596,16 @@ window.GH_REPOS = {
     {
       "name": "milind-soni/OpenMausBot",
       "url": "https://github.com/milind-soni/OpenMausBot",
-      "stars": 26557,
+      "stars": 26676,
       "desc": "Open-source Grok Bot alternative with a virtual machine that bots can use",
       "lang": "TypeScript",
-      "pushed": "2026-11-21",
+      "pushed": "2026-11-22",
       "intro_cn": "开源 Grok Bot 替代品：内置虚拟机，机器人可执行任意任务"
     },
     {
       "name": "lexmount/moli",
       "url": "https://github.com/lexmount/moli",
-      "stars": 24212,
+      "stars": 24229,
       "desc": "Best headless browser for AI agents. Lite, Fast, High-Compatibility. Built in Rust",
       "lang": "Rust",
       "pushed": "2026-11-22",
@@ -614,7 +614,7 @@ window.GH_REPOS = {
     {
       "name": "google/elephant-goldfish-model",
       "url": "https://github.com/google/elephant-goldfish-model",
-      "stars": 21945,
+      "stars": 22014,
       "desc": "Open-source plugin for designing and reviewing software with agents",
       "lang": "Python",
       "pushed": "2026-11-21",
@@ -623,7 +623,7 @@ window.GH_REPOS = {
     {
       "name": "lemomo-ai/lemo-opuscar",
       "url": "https://github.com/lemomo-ai/lemo-opuscar",
-      "stars": 19552,
+      "stars": 19701,
       "desc": "A toolbox of film styles made in code for Claude Code: 99 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By Lemomo. · 一套用代码做片的风格工具箱：99 种现成风格，也能做出你自己的",
       "lang": "JavaScript",
       "pushed": "2026-11-20",
@@ -632,7 +632,7 @@ window.GH_REPOS = {
     {
       "name": "google/artemis",
       "url": "https://github.com/google/artemis",
-      "stars": 17873,
+      "stars": 17882,
       "desc": "ARTEMIS turns natural-language instructions into reliable Android automation. It automates end-to-end workflows, captures logs, and integrates seamlessly with AI coding assistants such as Antigravity, Codex, and Claude Code.  It also achieves 99%+ success rate on AndroidWorld Benchmark.",
       "lang": "Python",
       "pushed": "2026-10-01",
@@ -641,16 +641,16 @@ window.GH_REPOS = {
     {
       "name": "BaaRai/ARTEX",
       "url": "https://github.com/BaaRai/ARTEX",
-      "stars": 15306,
+      "stars": 15638,
       "desc": "ARTEX - AI autonomous penetration testing system (English translation; upstream: Autumn-27/ARTEX, AGPL-3.0)",
       "lang": "Go",
-      "pushed": "2026-11-21",
-      "intro_cn": ""
+      "pushed": "2026-11-22",
+      "intro_cn": "AI 自主渗透测试系统（英文训练数据）——安全方向的智能体化工具，自动化红队演练。"
     },
     {
       "name": "CopilotKit/OpenBot",
       "url": "https://github.com/CopilotKit/OpenBot",
-      "stars": 13151,
+      "stars": 13169,
       "desc": "The open, self-hostable alternative to closed AI bots. Production-ready, fully customizable, and plugs into every stack: any agent, any model, any tool.",
       "lang": "TypeScript",
       "pushed": "2026-11-22",
@@ -665,7 +665,7 @@ window.GH_TRENDING = {
     {
       "name": "codecrafters-io/build-your-own-x",
       "url": "https://github.com/codecrafters-io/build-your-own-x",
-      "stars": 564496,
+      "stars": 564616,
       "weekly": null,
       "desc": "Master programming by recreating your favorite technologies from scratch.",
       "lang": "Markdown"
@@ -673,7 +673,7 @@ window.GH_TRENDING = {
     {
       "name": "sindresorhus/awesome",
       "url": "https://github.com/sindresorhus/awesome",
-      "stars": 540595,
+      "stars": 540806,
       "weekly": null,
       "desc": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I ha",
       "lang": ""
@@ -681,7 +681,7 @@ window.GH_TRENDING = {
     {
       "name": "public-apis/public-apis",
       "url": "https://github.com/public-apis/public-apis",
-      "stars": 500669,
+      "stars": 500741,
       "weekly": null,
       "desc": "A collective list of free APIs",
       "lang": "Python"
@@ -689,7 +689,7 @@ window.GH_TRENDING = {
     {
       "name": "morluto/rea",
       "url": "https://github.com/morluto/rea",
-      "stars": 472965,
+      "stars": 473439,
       "weekly": null,
       "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "lang": "TypeScript"
@@ -697,7 +697,7 @@ window.GH_TRENDING = {
     {
       "name": "freeCodeCamp/freeCodeCamp",
       "url": "https://github.com/freeCodeCamp/freeCodeCamp",
-      "stars": 459454,
+      "stars": 459464,
       "weekly": null,
       "desc": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free",
       "lang": "TypeScript"
@@ -705,7 +705,7 @@ window.GH_TRENDING = {
     {
       "name": "EbookFoundation/free-programming-books",
       "url": "https://github.com/EbookFoundation/free-programming-books",
-      "stars": 402045,
+      "stars": 402066,
       "weekly": null,
       "desc": ":books: Freely available programming books",
       "lang": "Python"
@@ -713,7 +713,7 @@ window.GH_TRENDING = {
     {
       "name": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
-      "stars": 394999,
+      "stars": 395027,
       "weekly": null,
       "desc": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
       "lang": "TypeScript"
@@ -721,7 +721,7 @@ window.GH_TRENDING = {
     {
       "name": "donnemartin/system-design-primer",
       "url": "https://github.com/donnemartin/system-design-primer",
-      "stars": 378747,
+      "stars": 378777,
       "weekly": null,
       "desc": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
       "lang": "Python"
@@ -729,7 +729,7 @@ window.GH_TRENDING = {
     {
       "name": "nilbuild/developer-roadmap",
       "url": "https://github.com/nilbuild/developer-roadmap",
-      "stars": 372521,
+      "stars": 372540,
       "weekly": null,
       "desc": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
       "lang": "TypeScript"
@@ -737,7 +737,7 @@ window.GH_TRENDING = {
     {
       "name": "jwasham/coding-interview-university",
       "url": "https://github.com/jwasham/coding-interview-university",
-      "stars": 364751,
+      "stars": 364778,
       "weekly": null,
       "desc": "A complete computer science study plan to become a software engineer.",
       "lang": ""
