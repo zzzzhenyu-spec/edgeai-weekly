@@ -866,7 +866,7 @@
             '<span class="gh-count">★ ' + esc(ghStars(r.stars)) + "</span></div>" +
             "<p>" + esc(r.desc || "—") + "</p>" +
             '<div class="gh-meta"><i style="background:' + dot + '"></i>' + esc(r.lang || "—") +
-            "<span>" + (isW ? "近 7 天涨星" : "建设期 · 总星排序") + "</span></div></a>";
+            "<span>" + (isW ? "近 7 天涨星 · AI 相关" : "建设期 · AI 相关高星") + "</span></div></a>";
         }).join("") + "</div>";
     }
     var G = (typeof GH_REPOS !== "undefined") ? GH_REPOS : window.GH_REPOS;
