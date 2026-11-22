@@ -13,6 +13,18 @@ WEEKLY_ARCHIVE[47] = {
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
 {
+id: "n267", cat: "行业关注事件", source: "Apple 官方", date: "2026-11-15",
+      title: "苹果启动健康 AI 使用研究：最多 20 万美国成人参与，联手 OpenEvidence 临床 AI，数据不用于训练",
+      summary: "苹果官方宣布启动健康 AI 使用研究（Apple Health AI Usage Study）——最多 20 万名 21 岁以上美国成人参与，需 iPhone 15 Pro 或更新机型（iOS 26+，Apple Intelligence 门槛），研究用户如何与对话式健康 AI 互动：信任度、回答质量、理解程度与日常健康行为，以及 AI 是否帮助用户更好地准备就诊；与临床 AI 公司 OpenEvidence 合作（引文来自 NEJM/JAMA/Nature 等同行评审来源），可选共享 HealthKit 数据，研究数据明确不用于训练 AI 模型。",
+      detail: "官宣：11 月 15 日 Apple Newsroom。\n规模：最多 20 万名美国成人（21 岁以上）；iPhone 15 Pro 或更新+iOS 26 以上——Apple Intelligence 硬件门槛首次成为大规模研究准入条件。\n对象：对话式健康 AI 的信任、回答质量、理解与日常健康行为；是否帮助用户准备就诊。\n合作：OpenEvidence 临床 AI（NEJM/JAMA/Nature 引文源）；回答附同行评审引用链接。\n隐私：可选共享 HealthKit 指标（静息心率/活动/睡眠/化验结果）；研究数据不用于训练 AI 模型；安全护栏标记令人担忧的提问并建议联系医生。\n端侧视角：这是苹果首次把「Apple Intelligence 设备门槛」用作大规模健康研究的筛选器——20 万人规模的端侧 AI 健康交互数据集将直接指导健康 AI 的产品设计；「数据不训练模型+可选共享」的口径延续了苹果端侧隐私叙事，与 HomeView 识人「只传暗号」同一设计哲学。",
+      tags: ["苹果", "健康AI", "Apple Intelligence", "OpenEvidence", "研究"],
+      url: "https://www.apple.com/newsroom/2026/11/apple-launches-research-study-to-explore-the-use-of-ai-for-health/",
+      image: "images/news/n267.jpg",
+      imageCap: "Apple Health AI Usage Study（图源：Apple Newsroom）",
+      highlight: false
+    },
+
+{
 id: "n259", cat: "手机厂商", source: "ezone/小米", date: "2026-11-15",
       title: "小米 18 Pro 海外公布背屏适配：谷歌地图、Spotify、Gemini 等首批支持，11 月 18 日香港发布",
       summary: "小米海外公布 18 Pro 系列背屏适配进展——谷歌地图、Spotify、Gemini 等应用首批支持背屏显示与操作，这是小米 18 Pro 首配背屏形态的关键生态准备；该机将于 11 月 18 日在香港发布并开售，主打「实用 AI 玩法」的背屏交互成为小米全新手机形态的核心卖点。",

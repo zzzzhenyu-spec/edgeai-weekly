@@ -15,10 +15,10 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 48 期",
-    weekRange: "2026.11.15 — 2026.11.21 · 近 7 天",
-    updated: "2026-11-21",
+    weekRange: "2026.11.16 — 2026.11.22 · 近 7 天",
+    updated: "2026-11-22",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：端侧 AI「平台换代周」——三大操作系统本机底座全部换新：微软 Windows 推送 Aion 1.0 Instruct（接替 Phi Silica、上下文 3.5K 升 32K、GPU 支持在路上），华为星芒 O1 Pro 发布（5499 元起的鸿蒙 AI 手机、麒麟 9030S 梯队落位、星芒品牌首秀），苹果 AFM3 与健康 AI 研究同周。模型层混战白热化：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵（Carbon/Neon/Hydrogen）、微软 Ignite 七连发含决策模型 Decision-1.1——旗舰分层与「模型调模型」成为行业默认。格局与资本：DeepSeek 千亿融资落地（宁德时代腾讯并列最大投资方）、李飞飞入盟 AMD、Gemini Argon 失控+加州起诉 OpenAI 的智能体治理日。智能体用户底座成型：微信小微 3000 万日活+预告端侧推理、WorkBuddy 破千万。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。\n今日新增：星芒 O1 Pro 首销战报（16GB 版全平台售罄、国补 4999 元起）、GPT-6.2 Astra 具身评测成功率翻倍（Ember-0 基准 19.6%→41.2% 首破打结与 T 恤展开）。"
+    editorsNote: "近 7 天聚焦：端侧 AI「平台换代周」——三大操作系统本机底座全部换新：微软 Windows 推送 Aion 1.0 Instruct（接替 Phi Silica、上下文 3.5K 升 32K、GPU 支持在路上），华为星芒 O1 Pro 发布（5499 元起的鸿蒙 AI 手机、麒麟 9030S 梯队落位、星芒品牌首秀），苹果 AFM3 与健康 AI 研究同周。模型层混战白热化：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵（Carbon/Neon/Hydrogen）、微软 Ignite 七连发含决策模型 Decision-1.1——旗舰分层与「模型调模型」成为行业默认。格局与资本：DeepSeek 千亿融资落地（宁德时代腾讯并列最大投资方）、李飞飞入盟 AMD、Gemini Argon 失控+加州起诉 OpenAI 的智能体治理日。智能体用户底座成型：微信小微 3000 万日活+预告端侧推理、WorkBuddy 破千万。AI 能力地标：Anthropic 数学家宣称 Claude 辅助证明黎曼猜想（1700 万行 Lean 代码、陶哲轩称验证需时间）。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。\n近两日新增：星芒 O1 Pro 首销战报（16GB 版全平台售罄、国补 4999 元起）、GPT-6.2 Astra 具身评测成功率翻倍（Ember-0 基准 19.6%→41.2%）、Claude 辅助黎曼猜想证明宣布。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -57,7 +57,7 @@ id: "n292", cat: "大模型厂商", source: "微软开发者博客", date: "2026
       image: "images/news/n292.jpg",
       imageCap: "Aion Instruct 推送（图源：iThome/微软）",
       highlight: false
-    },,
+    },
 
 {
 id: "n291", cat: "手机厂商", source: "快科技/第一财经", date: "2026-11-20",
@@ -69,7 +69,19 @@ id: "n291", cat: "手机厂商", source: "快科技/第一财经", date: "2026-1
       image: "images/news/n291.jpg",
       imageCap: "华为星芒 O1 Pro 发布（图源：快科技）",
       highlight: false
-    },,
+    },
+
+{
+id: "n297", cat: "行业关注事件", source: "机器之心/搜狐科技", date: "2026-11-20",
+      title: "Anthropic 数学家宣称在 Claude 辅助下证明黎曼猜想：1700 万行 Lean 代码通过形式化验证，陶哲轩称「验证仍需时间」",
+      summary: "11 月 20 日，Anthropic 数学家 Levent Alpöge（34 岁）在个人网站发文，宣称在 Claude 帮助下找到黎曼猜想的证明，且方法可推广至广义与扩展黎曼猜想。他没有提交传统论文，而是直接公布整套 Lean 形式化证明——14 个压缩文件、约 1700 万行代码（折合超过 25 万页）另附 4 页说明，据报已通过 Lean 逐步机器验证。陶哲轩初步分析认为证明用到朗兰兹纲领与算术几何成果，但验证仍需时间；「机器验完了，人还没读懂」成为数学界这个黑色星期五的注脚。",
+      detail: "宣布：11 月 20 日 Alpöge 个人网站发文（时点在 Anthropic 11 月 19 日上市次日）。\n形式：无传统论文——14 个压缩文件、约 1700 万行 Lean 代码（折合超 25 万页）+4 页说明；声称已通过 Lean 形式化逐步验证。\n范围：黎曼猜想本体，方法声称可推广至广义黎曼猜想（GRH）与扩展黎曼猜想。\n评审：陶哲轩博客初步分析（用到朗兰兹纲领+算术几何），明确「验证仍需时间」；距数学界正式承认还差四步——命题一致性核验、机器独立验证、人类读懂论证、同行广泛审查。\n背景：今年 8 月 Anthropic 内部实验中非数学专业员工让 Claude 直接攻黎曼猜想未成功；本次是数学家与模型协作路线的首个候选成果。\n反应：学界复杂——「人类提供直觉、机器填平天堑」的范式转变论 vs 25 万页超出人类审阅能力的认知困境；多位菲尔兹奖得主发声。\n端侧视角：这场事件有一条被忽视的端侧线——Lean 证明产物完全公开，任何人都可以把这 1700 万行代码下载到自己的笔记本上独立复现验证，形式化验证的「可本地复现性」是它区别于纯口头 AI 突破的关键；生成证明的超长推理链依赖云端旗舰模型，而验证可以在本地完成——「云端生成、本地验证」正在成为 AI 产物的新信任分工。25 万页超出人类审阅能力、机器验证成为唯一可行通路，也预示 Lean 类形式化工具链将在 AI 时代基建化。",
+      tags: ["黎曼猜想", "Claude", "Lean", "形式化验证", "Anthropic"],
+      url: "https://m.sohu.com/a/1104301381_610300",
+      image: "images/news/n297.jpg",
+      imageCap: "Alpöge 宣布原文（图源：机器之心）",
+      highlight: true
+    },
 
 {
 id: "n288", cat: "行业关注事件", source: "搜狐财经/东方财富", date: "2026-11-19",
@@ -81,7 +93,7 @@ id: "n288", cat: "行业关注事件", source: "搜狐财经/东方财富", date
       image: "images/news/n288.jpg",
       imageCap: "DeepSeek 第二轮融资落地（图源：搜狐财经）",
       highlight: false
-    },,
+    },
 
 {
 id: "n287", cat: "AI硬件", source: "搜狐科技", date: "2026-11-19",
@@ -93,7 +105,7 @@ id: "n287", cat: "AI硬件", source: "搜狐科技", date: "2026-11-19",
       image: "images/news/n287.jpg",
       imageCap: "极米记得 G1/L1 与物奇微芯片（图源：搜狐科技）",
       highlight: false
-    },,
+    },
 
 {
 id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-18",
@@ -105,7 +117,7 @@ id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-1
       image: "images/news/n290.jpg",
       imageCap: "Gemini 4 Neon 发布（图源：Google 官方博客）",
       highlight: false
-    },,
+    },
 
 {
 id: "n286", cat: "大模型厂商", source: "搜狐科技/微软 Ignite", date: "2026-11-18",
@@ -117,7 +129,7 @@ id: "n286", cat: "大模型厂商", source: "搜狐科技/微软 Ignite", date: 
       image: "images/news/n286.jpg",
       imageCap: "Microsoft-Decision-1.1（图源：搜狐科技）",
       highlight: false
-    },,
+    },
 
 {
 id: "n285", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-18",
@@ -129,7 +141,7 @@ id: "n285", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-18",
       image: "images/news/n285.jpg",
       imageCap: "openJiuwen Harnessless 范式（图源：搜狐科技）",
       highlight: false
-    },,
+    },
 
 {
 id: "n283", cat: "大模型厂商", source: "腾讯新闻", date: "2026-11-18",
@@ -141,7 +153,7 @@ id: "n283", cat: "大模型厂商", source: "腾讯新闻", date: "2026-11-18",
       image: "images/news/n283.jpg",
       imageCap: "苹果开源视频生成模型（图源：腾讯新闻）",
       highlight: false
-    },,
+    },
 
 {
 id: "n282", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-18",
@@ -153,7 +165,7 @@ id: "n282", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-18",
       image: "images/news/n282.jpg",
       imageCap: "WorkBuddy 日活破千万（图源：搜狐科技）",
       highlight: false
-    },,
+    },
 
 {
 id: "n281", cat: "端侧Agent", source: "新浪财经", date: "2026-11-18",
@@ -165,7 +177,7 @@ id: "n281", cat: "端侧Agent", source: "新浪财经", date: "2026-11-18",
       image: "images/news/n281.jpg",
       imageCap: "微信小微 AI 助理（图源：新浪财经）",
       highlight: false
-    },,
+    },
 
 {
 id: "n284", cat: "大模型厂商", source: "OpenAI 官方", date: "2026-11-17",
@@ -177,7 +189,7 @@ id: "n284", cat: "大模型厂商", source: "OpenAI 官方", date: "2026-11-17",
       image: "images/news/n284.jpg",
       imageCap: "GPT-6.2 Astra 与 Sol 发布（图源：钜亨网）",
       highlight: true
-    },,
+    },
 
 {
 id: "n280", cat: "AI硬件", source: "亿欧/36氪", date: "2026-11-17",
@@ -189,7 +201,7 @@ id: "n280", cat: "AI硬件", source: "亿欧/36氪", date: "2026-11-17",
       image: "images/news/n280.jpg",
       imageCap: "Memoket Gem 记忆可穿戴（图源：Memoket 官网）",
       highlight: false
-    },,
+    },
 
 {
 id: "n277", cat: "行业关注事件", source: "凤凰科技/东方财富", date: "2026-11-17",
@@ -201,7 +213,7 @@ id: "n277", cat: "行业关注事件", source: "凤凰科技/东方财富", date
       image: "images/news/n277.jpg",
       imageCap: "加州总检察长起诉 OpenAI（图源：新浪科技）",
       highlight: false
-    },,
+    },
 
 {
 id: "n275", cat: "行业关注事件", source: "腾讯新闻", date: "2026-11-17",
@@ -213,7 +225,7 @@ id: "n275", cat: "行业关注事件", source: "腾讯新闻", date: "2026-11-17
       image: "images/news/n275.jpg",
       imageCap: "李飞飞与苏姿丰同框（图源：腾讯新闻）",
       highlight: false
-    },,
+    },
 
 {
 id: "n274", cat: "行业关注事件", source: "凤凰科技/Trajectory Labs", date: "2026-11-17",
@@ -225,7 +237,7 @@ id: "n274", cat: "行业关注事件", source: "凤凰科技/Trajectory Labs", d
       image: "images/news/n274.jpg",
       imageCap: "Gemini 4 Argon 安全测试（图源：凤凰科技）",
       highlight: true
-    },,
+    },
 
 {
 id: "n279", cat: "AI硬件", source: "新浪财经/搜狐", date: "2026-11-16",
@@ -237,7 +249,7 @@ id: "n279", cat: "AI硬件", source: "新浪财经/搜狐", date: "2026-11-16",
       image: "images/news/n279.jpg",
       imageCap: "KTC VMAX 智能体主机（图源：搜狐科技）",
       highlight: false
-    },,
+    },
 
 {
 id: "n278", cat: "芯片厂商", source: "IT之家/NVIDIA", date: "2026-11-16",
@@ -249,7 +261,7 @@ id: "n278", cat: "芯片厂商", source: "IT之家/NVIDIA", date: "2026-11-16",
       image: "images/news/n278.jpg",
       imageCap: "DGX Spark 集群（图源：NVIDIA 官网）",
       highlight: false
-    },,
+    },
 
 {
 id: "n276", cat: "手机厂商", source: "MSN/多源", date: "2026-11-16",
@@ -261,7 +273,7 @@ id: "n276", cat: "手机厂商", source: "MSN/多源", date: "2026-11-16",
       image: "images/news/n276.jpg",
       imageCap: "星芒 O1 Pro 产品规划渲染（图源：Techritual）",
       highlight: false
-    },,
+    },
 
 {
 id: "n273", cat: "大模型厂商", source: "华为云/OSCHINA", date: "2026-11-16",
@@ -273,7 +285,7 @@ id: "n273", cat: "大模型厂商", source: "华为云/OSCHINA", date: "2026-11-
       image: "images/news/n273.jpg",
       imageCap: "CloudRobo 具身世界模型（图源：新浪财经）",
       highlight: false
-    },,
+    },
 
 {
 id: "n271", cat: "端侧Agent", source: "中华网科技/海思", date: "2026-11-16",
@@ -285,7 +297,7 @@ id: "n271", cat: "端侧Agent", source: "中华网科技/海思", date: "2026-11
       image: "images/news/n271.jpg",
       imageCap: "开源鸿蒙轻 AI 越影方案（图源：中华网科技）",
       highlight: false
-    },,
+    },
 
 {
 id: "n270", cat: "大模型厂商", source: "腾讯新闻/澎湃", date: "2026-11-16",
@@ -297,7 +309,7 @@ id: "n270", cat: "大模型厂商", source: "腾讯新闻/澎湃", date: "2026-1
       image: "images/news/n270.jpg",
       imageCap: "千问办公上线 10 款模型（图源：腾讯新闻）",
       highlight: false
-    },,
+    },
 
 {
 id: "n269", cat: "行业关注事件", source: "新浪财经/韩联社", date: "2026-11-16",
@@ -309,7 +321,7 @@ id: "n269", cat: "行业关注事件", source: "新浪财经/韩联社", date: "
       image: "images/news/n269.jpg",
       imageCap: "韩国高考防 AI 眼镜作弊备战（图源：搜狐/新浪财经）",
       highlight: false
-    },,
+    },
 
 {
 id: "n268", cat: "AI硬件", source: "搜狐科技/彭博", date: "2026-11-16",
@@ -321,7 +333,7 @@ id: "n268", cat: "AI硬件", source: "搜狐科技/彭博", date: "2026-11-16",
       image: "images/news/n268.jpg",
       imageCap: "苹果智能眼镜设计曝光（图源：搜狐科技）",
       highlight: false
-    },,
+    },
 
 {
 id: "n265", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-16",
@@ -332,42 +344,6 @@ id: "n265", cat: "大模型厂商", source: "搜狐科技", date: "2026-11-16",
       url: "https://www.ithome.com/1/027/512.htm",
       image: "images/news/n265.jpg",
       imageCap: "Qwen4-Max 上线（图源：搜狐科技）",
-      highlight: false
-    },,
-
-{
-id: "n267", cat: "行业关注事件", source: "Apple 官方", date: "2026-11-15",
-      title: "苹果启动健康 AI 使用研究：最多 20 万美国成人参与，联手 OpenEvidence 临床 AI，数据不用于训练",
-      summary: "苹果官方宣布启动健康 AI 使用研究（Apple Health AI Usage Study）——最多 20 万名 21 岁以上美国成人参与，需 iPhone 15 Pro 或更新机型（iOS 26+，Apple Intelligence 门槛），研究用户如何与对话式健康 AI 互动：信任度、回答质量、理解程度与日常健康行为，以及 AI 是否帮助用户更好地准备就诊；与临床 AI 公司 OpenEvidence 合作（引文来自 NEJM/JAMA/Nature 等同行评审来源），可选共享 HealthKit 数据，研究数据明确不用于训练 AI 模型。",
-      detail: "官宣：11 月 15 日 Apple Newsroom。\n规模：最多 20 万名美国成人（21 岁以上）；iPhone 15 Pro 或更新+iOS 26 以上——Apple Intelligence 硬件门槛首次成为大规模研究准入条件。\n对象：对话式健康 AI 的信任、回答质量、理解与日常健康行为；是否帮助用户准备就诊。\n合作：OpenEvidence 临床 AI（NEJM/JAMA/Nature 引文源）；回答附同行评审引用链接。\n隐私：可选共享 HealthKit 指标（静息心率/活动/睡眠/化验结果）；研究数据不用于训练 AI 模型；安全护栏标记令人担忧的提问并建议联系医生。\n端侧视角：这是苹果首次把「Apple Intelligence 设备门槛」用作大规模健康研究的筛选器——20 万人规模的端侧 AI 健康交互数据集将直接指导健康 AI 的产品设计；「数据不训练模型+可选共享」的口径延续了苹果端侧隐私叙事，与 HomeView 识人「只传暗号」同一设计哲学。",
-      tags: ["苹果", "健康AI", "Apple Intelligence", "OpenEvidence", "研究"],
-      url: "https://www.apple.com/newsroom/2026/11/apple-launches-research-study-to-explore-the-use-of-ai-for-health/",
-      image: "images/news/n267.jpg",
-      imageCap: "Apple Health AI Usage Study（图源：Apple Newsroom）",
-      highlight: false
-    },,
-
-{
-id: "n259", cat: "手机厂商", source: "ezone/小米", date: "2026-11-15",
-      title: "小米 18 Pro 海外公布背屏适配：谷歌地图、Spotify、Gemini 等首批支持，11 月 18 日香港发布",
-      summary: "小米海外公布 18 Pro 系列背屏适配进展——谷歌地图、Spotify、Gemini 等应用首批支持背屏显示与操作，这是小米 18 Pro 首配背屏形态的关键生态准备；该机将于 11 月 18 日在香港发布并开售，主打「实用 AI 玩法」的背屏交互成为小米全新手机形态的核心卖点。",
-      detail: "适配：11 月 15 日海外公布，谷歌地图、Spotify、Gemini 等首批适配背屏。\n发布：11 月 18 日香港发布并开售（ezone/HK01 多源）。\n形态：小米 18 Pro 首配背屏——小米全新手机形态，背屏主打实用 AI 玩法。\n端侧视角：背屏正在成为旗舰机的「第二交互面」——Gemini 入列首批适配意味着背屏不只显示通知，而是承载完整 AI 助手入口；小米把形态创新（背屏）与 AI 入口（Gemini 适配）绑定营销，是国产旗舰在硬件同质化下用「AI+新形态」寻找差异化的样本，11 月 18 日发布会的背屏 AI 实机演示值得跟踪。",
-      tags: ["小米", "18 Pro", "背屏", "Gemini", "折叠形态"],
-      url: "https://ezone.hk/article/20117600/",
-      image: "images/news/n259.jpg",
-      imageCap: "小米 18 Pro 背屏形态（图源：ezone）",
-      highlight: false
-    },,
-
-{
-id: "n258", cat: "手机厂商", source: "搜狐科技", date: "2026-11-15",
-      title: "华为 Mate X8 折叠屏外观公布：余承东官宣「就要来了」，屏幕、拍照、性能三线新突破",
-      summary: "华为公布 Mate X8 折叠屏旗舰外观，余承东官宣新机「就要来了」，并宣布屏幕、拍照、性能均有新突破——这是 Mate X 系列走过第八年的新一代旗舰，预计搭载麒麟新一代平台，发布窗口临近。同期华为 AI 硬件线密集预热：星芒子品牌（聚焦 AI 手机）官宣、MateBook Fold S 小折叠电脑已开启预订。",
-      detail: "公布：11 月 15 日外观公布+余承东官宣（多源）。\n节点：Mate X 系列第八年；屏幕、拍照、性能三线新突破（官方口径，规格待发布会）。\n同期：华为 OSTA 星芒子品牌官宣聚焦 AI 手机（11 月 20 日首秀预热）；MateBook Fold S 鸿蒙小折叠电脑开启预订。\n端侧视角：华为正在把「折叠旗舰+AI 子品牌+鸿蒙 AI 电脑」组成端侧 AI 硬件矩阵同步推进——Mate X8 大概率首发新一代麒麟端侧平台（麒麟 9050 系列情报本周连续披露），星芒 11 月 20 日首秀与 Mate X8 发布窗口前后脚，华为端侧 AI 的「品牌-芯片-形态」三线合围正在本月完成布局。",
-      tags: ["华为", "Mate X8", "折叠屏", "余承东", "麒麟"],
-      url: "https://www.sohu.com/a/1101872178_163726",
-      image: "images/news/n258.jpg",
-      imageCap: "华为 Mate X8 外观（图源：搜狐科技）",
       highlight: false
     },
   ],
