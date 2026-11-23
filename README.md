@@ -4,7 +4,7 @@
 
 ## 2026 · 第 49 期（2026.11.17 — 2026.11.23 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：端侧 AI 完成一次「平台级换代」——操作系统底座：微软向 Windows 推送本机模型 Aion 1.0 Instruct（上下文 3.5K 升 32K、GPU 支持在路上），苹果把 Siri AI 经 App Intents 开放给全部第三方开发者，华为星芒 O1 Pro 发布即售罄（5499 元起、麒麟 9030S）把 AI 手机打進中端价位。模型与能力：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵，Astra 在双臂具身基准成功率翻倍（19.6%→41.2%）；Anthropic 数学家以 1700 万行 Lean 代码宣布 Claude 辅助证明黎曼猜想、与一份写了 12 年的 940 页人类手稿同场竞速。硬件与存储：谷歌首款 Gemini 智能眼镜开放预订（395 美元起、12 月 10 日开售）凑齐四强争霸，群联展示内建 NPU 的智能 SSD——算力颗粒度下沉到存储介质。资本与格局：DeepSeek 千亿融资落地 31 家产业资本入局、Anthropic 813 亿美元创纪录 IPO。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。
+**近 7 天导读**：近 7 天聚焦：端侧模型「循环架构周」——穆拉蒂 Thinking Machines 开源 Inkling 2 Mini（26.4B 循环 MoE、约 20GB 内存笔记本可离线跑、智能体编码同级 SOTA），智谱 GLM-5.4 上线 Coding Plan（国内首款 Loop Transformer、新增视觉、3 万亿参数 GLM-5.5 预告 12 月），蚂蚁医疗 AI 五连发全部开源且支持本地部署（LingSante 五款+阿福同款）——「循环换参数效率+垂直全开源本地跑」成为端侧新共识。OS 与硬件：微软 Aion Instruct 推送（32K 上下文）、星芒 O1 Pro 发布即售罄（国补 4999 元起）、群联智能 SSD 把 NPU 装进存储介质；GPT-6.2 Astra 具身评测翻倍（19.6%→41.2%）与 Claude 辅助黎曼猜想证明（1700 万行 Lean 代码）同场竞速 940 页人类手稿。AI 眼镜四强落子：谷歌 Gemini 眼镜预订 395 美元起。前瞻：Mate X8 发布会（11-24）明日 14:30、文心 5.5 开源（11-25）。 今日新增：智谱 GLM-5.4 上线 Coding Plan、蚂蚁医疗 AI 五连发开源；补收 Inkling 2 Mini（11 月 21 日开源，图源今晚补齐）。
 
 ## 近 7 天速览
 
@@ -41,10 +41,13 @@
 | 2026-11-21 | [华为星芒 O1 Pro 首销战报：16GB 版全平台售罄，国补后 4999 元起，总经理回应定价争议「在便宜和创新之间选创新」](https://news.mydrivers.com/1/1167/1167469.htm) | 快科技/界面新闻 |
 | 2026-11-20 | [华为星芒 O1 Pro 正式发布：5499 元起的鸿蒙 AI 手机，麒麟 9030S+阔直屏+2 亿像素，星芒品牌首秀](https://news.mydrivers.com/1/1167/1167296.htm) | 快科技/第一财经 |
 
-### 大模型厂商（6 条）
+### 大模型厂商（9 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-23 | [智谱 GLM-5.4 上线 Coding Plan：国内首款 Loop Transformer 架构模型，新增视觉能力，GLM-5.5（3 万亿参数）预告 12 月](https://tech.ifeng.com/c/8yHj18d4QMM) | 凤凰科技/智谱社区 |
+| 2026-11-23 | [蚂蚁医疗健康 AI 五连发：LingSante 系列开源+支持本地部署，「阿福同款」医疗大模型让一台电脑解锁专业医疗 AI](https://www.qbitai.com/2026/11/512017.html) | 量子位 |
+| 2026-11-21 | [穆拉蒂 Thinking Machines 开源 Inkling 2 Mini：26.4B 循环架构 MoE，约 20GB 内存笔记本可离线跑，智能体编码达同级 SOTA](https://m.sohu.com/a/1104506413_121423427) | 智东西/HuggingFace |
 | 2026-11-21 | [GPT-6.2 Astra 具身评测成功率翻倍：Ember-0 双臂基准 16 项任务 19.6%→41.2%，首破「打结」与「展开 T 恤」](https://www.qbitai.com/2026/11/511779.html) | 量子位/XDOF |
 | 2026-11-20 | [微软开始向 Windows 设备推送本机 AI 模型 Aion 1.0 Instruct：接替 Phi Silica，上下文 3.5K 升 32K，GPU 支持在路上](https://devblogs.microsoft.com/foundry-on-windows/aion-instruct-local-ai-windows-gpu) | 微软开发者博客 |
 | 2026-11-18 | [谷歌发布 Gemini 4 Neon 补齐中档：比 Carbon 快 3 倍、成本低约 40%，编程智能体指数超 Claude，四天内第三款 Gemini 4 新模型](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) | Google 官方博客 |

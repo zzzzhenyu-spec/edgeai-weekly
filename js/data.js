@@ -18,11 +18,35 @@ const WEEKLY_DATA = {
     weekRange: "2026.11.17 — 2026.11.23 · 近 7 天",
     updated: "2026-11-23",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：端侧 AI 完成一次「平台级换代」——操作系统底座：微软向 Windows 推送本机模型 Aion 1.0 Instruct（上下文 3.5K 升 32K、GPU 支持在路上），苹果把 Siri AI 经 App Intents 开放给全部第三方开发者，华为星芒 O1 Pro 发布即售罄（5499 元起、麒麟 9030S）把 AI 手机打進中端价位。模型与能力：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵，Astra 在双臂具身基准成功率翻倍（19.6%→41.2%）；Anthropic 数学家以 1700 万行 Lean 代码宣布 Claude 辅助证明黎曼猜想、与一份写了 12 年的 940 页人类手稿同场竞速。硬件与存储：谷歌首款 Gemini 智能眼镜开放预订（395 美元起、12 月 10 日开售）凑齐四强争霸，群联展示内建 NPU 的智能 SSD——算力颗粒度下沉到存储介质。资本与格局：DeepSeek 千亿融资落地 31 家产业资本入局、Anthropic 813 亿美元创纪录 IPO。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。"
+    editorsNote: "近 7 天聚焦：端侧模型「循环架构周」——穆拉蒂 Thinking Machines 开源 Inkling 2 Mini（26.4B 循环 MoE、约 20GB 内存笔记本可离线跑、智能体编码同级 SOTA），智谱 GLM-5.4 上线 Coding Plan（国内首款 Loop Transformer、新增视觉、3 万亿参数 GLM-5.5 预告 12 月），蚂蚁医疗 AI 五连发全部开源且支持本地部署（LingSante 五款+阿福同款）——「循环换参数效率+垂直全开源本地跑」成为端侧新共识。OS 与硬件：微软 Aion Instruct 推送（32K 上下文）、星芒 O1 Pro 发布即售罄（国补 4999 元起）、群联智能 SSD 把 NPU 装进存储介质；GPT-6.2 Astra 具身评测翻倍（19.6%→41.2%）与 Claude 辅助黎曼猜想证明（1700 万行 Lean 代码）同场竞速 940 页人类手稿。AI 眼镜四强落子：谷歌 Gemini 眼镜预订 395 美元起。前瞻：Mate X8 发布会（11-24）明日 14:30、文心 5.5 开源（11-25）。\n今日新增：智谱 GLM-5.4 上线 Coding Plan、蚂蚁医疗 AI 五连发开源；补收 Inkling 2 Mini（11 月 21 日开源，图源今晚补齐）。",
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+id: "n300", cat: "大模型厂商", source: "凤凰科技/智谱社区", date: "2026-11-23",
+      title: "智谱 GLM-5.4 上线 Coding Plan：国内首款 Loop Transformer 架构模型，新增视觉能力，GLM-5.5（3 万亿参数）预告 12 月",
+      summary: "智谱 GLM-5.4 已上线 Coding Plan 订阅体系——由智谱全球站负责人李子玄在社区宣布（官方正式发布尚待官宣）：模型名 glm-5.4 即可直接调用，为国内首款 Loop Transformer（循环 Transformer）架构模型，官方称「过去三个月同时激进地 Scaling Loop 和模型大小」；新增视觉能力并进一步提升泛 Coding 性能，V2/V3 与团队版用户使用额度提升至 1.5 倍且每周更新。另据多源报道，3 万亿参数旗舰 GLM-5.5 预计 12 月发布；智谱港股盘中涨超 4%。",
+      detail: "宣布：11 月 23 日智谱全球站负责人李子玄社区宣布（正式发布会口径待官宣）。\n架构：Loop Transformer——国内首款循环架构模型；「同时激进地 Scaling Loop 和模型大小」。\n能力：新增视觉能力；泛 Coding 性能提升。\n接入：模型名 glm-5.4 直接调用；Coding Plan 订阅体系上线。\n额度：V2/V3/团队版使用额度 1.5 倍（较 GLM-5.3 增 50%），每周更新。\n后续：GLM-5.5（3 万亿参数旗舰）预计 12 月发布；港股（02513）盘中涨超 4%。\n端侧视角：循环架构（同一组层多次复用换深度）正从研究路线变成产品路线——Thinking Machines 的 Inkling 2 Mini 与商汤 Loop-9B 同周落地后，智谱把 Loop Transformer 带进国产旗舰序列，意味着「用循环换参数效率」的共识在扩大：同等显存预算下更深的计算、更小的权重，正是端侧与本地部署最吃的能力方向；Coding Plan 先行也延续了编程订阅这一当前最确定的变现面。",
+      tags: ["智谱", "GLM-5.4", "Loop Transformer", "Coding Plan", "视觉能力"],
+      url: "https://tech.ifeng.com/c/8yHj18d4QMM",
+      image: "images/news/n300.jpg",
+      imageCap: "GLM-5.4 上线公告（图源：智谱社区/凤凰科技）",
+      highlight: false
+    },
+
+{
+id: "n301", cat: "大模型厂商", source: "量子位", date: "2026-11-23",
+      title: "蚂蚁医疗健康 AI 五连发：LingSante 系列开源+支持本地部署，「阿福同款」医疗大模型让一台电脑解锁专业医疗 AI",
+      summary: "蚂蚁集团一次性发布医疗健康 AI 五连发——LingSante 系列五款产品（air-VL/flash/Live/Pulse/MedGuard）全部开源并支持本地部署，覆盖视觉语言、轻量快速、长程实时、脉冲监测与医疗安全防线五类场景；「阿福同款」医疗大模型宣布开源，全球医生用一台电脑即可解锁专业医疗 AI 能力，开源、本地部署与中医「望闻问切」多模态能力全部到位。",
+      detail: "发布：11 月 23 日蚂蚁医疗健康 AI 五连发（量子位报道）。\n家族：LingSante 五款——air-VL（视觉语言）/flash（轻量快速）/Live（长程实时）/Pulse（监测）/MedGuard（医疗安全防线）。\n开源：五款全部开源；「阿福同款」医疗大模型（支付宝 AI 健康管家阿福背后的模型）开放权重。\n部署：支持本地部署——「全球医生一台电脑解锁专业医疗 AI」。\n多模态：中医「望闻问切」全流程多模态能力。\n端侧视角：医疗是数据最敏感、最能兑现「本地部署」价值的行业——蚂蚁把五件套全部开源且可本地跑，等于把医院内网场景的基础设施免费铺到位（MedGuard 安全防线单独成件也呼应了医疗合规刚需）；与「阿福同款」开源合看，这是国产大厂迄今最完整的垂直行业开源+端侧部署组合拳，医疗 AI 的普惠门槛被一次性拉到消费级硬件。",
+      tags: ["蚂蚁", "医疗AI", "LingSante", "开源", "本地部署"],
+      url: "https://www.qbitai.com/2026/11/512017.html",
+      image: "images/news/n301.jpg",
+      imageCap: "LingSante 系列五款产品（图源：量子位）",
+      highlight: false
+    },
+
 {
 id: "n298", cat: "AI硬件", source: "Tom's Hardware/TechSpot", date: "2026-11-22",
       title: "群联公布内建 NPU 与 64GB 内存的「智能 SSD」设计：PyTorch/vLLM/llama.cpp 直接在盘上跑，数据搬运省百倍",
@@ -32,6 +56,18 @@ id: "n298", cat: "AI硬件", source: "Tom's Hardware/TechSpot", date: "2026-11-2
       url: "https://www.techspot.com/news/114653-phison-shows-ssd-design-npu-64gb-memory-runs.html",
       image: "images/news/n298.jpg",
       imageCap: "群联 PCIe Gen6 SSD 样品 E3.S/E1.S 规格（图源：Tom's Hardware）",
+      highlight: false
+    },
+
+{
+id: "n302", cat: "大模型厂商", source: "智东西/HuggingFace", date: "2026-11-21",
+      title: "穆拉蒂 Thinking Machines 开源 Inkling 2 Mini：26.4B 循环架构 MoE，约 20GB 内存笔记本可离线跑，智能体编码达同级 SOTA",
+      summary: "Thinking Machines Lab（前 OpenAI CTO 米拉·穆拉蒂联合创办）开源 Inkling 2 Mini——总参数 26.4B、激活 3.4B 的 MoE+循环 Transformer 混合架构（24 层分四模块、中间两模块每 token 运行三次），内存占用约 20GB，消费级笔记本/台式机可离线运行（有人已在 MacBook Pro 上离线构建飞行模拟器）；NVFP4 精度训练、专家从 384 剪枝至 128。智能体编码能力达同级 SOTA（DeepSWE v1.1 得分 48.2%、Vals Index v2.2 得分 46.5%），超过 Qwen3.8-27B 等同级模型；HuggingFace 开放权重+模型卡，另发布可变循环（1-5 次）研究模型。",
+      detail: "发布：11 月 21 日（Thinking Machines Lab，HuggingFace 权重+模型卡公开）。\n架构：总参 26.4B/激活 3.4B，每 token 有 5.4B 权重激活值——MoE+循环 Transformer：24 层分四个模块，中间两个模块每个 token 循环运行三次；注意力残差+门电路机制。\n训练：4 位 NVFP4 精度；专家从 384 剪枝至 128。\n本地：内存占用约 20GB，消费级笔记本/台式机离线可跑；32GB 内存 Mac 可经 Ollama 运行；实测 96GB M5 Ultra Mac Studio 速度优异。\n成绩：DeepSWE v1.1 得分 48.2%、Vals Index v2.2 得分 46.5%——同级 SOTA，超 Qwen3.8-27B；FrontierCode v2.0 领先、Terminal-Bench 4.0 与 Qwen3.8-27B 打平；多轮对话与复杂约束指令跟随弱于对手。\n附发：TML-d24-varloop-research 可变循环（1-5 次）研究模型同步开源。\n端侧视角：「一份权重、可变深度」是循环架构给端侧的最大红利——推理时按任务难度选择循环次数，等于用同一个 20GB 模型覆盖快慢双档，正对应端侧设备算力/电量双预算的现实约束；穆拉蒂团队把旗舰实验室的架构创新直接开源成笔记本可跑的权重，与 llama.cpp 生态（Ollama 一条命令拉起）无缝衔接——「研究前沿」与「本地可用」之间第一次几乎没有时差。",
+      tags: ["Thinking Machines", "Inkling 2 Mini", "循环架构", "开源", "本地部署"],
+      url: "https://m.sohu.com/a/1104506413_121423427",
+      image: "images/news/n302.jpg",
+      imageCap: "Inkling 2 Mini 开源（图源：智东西）",
       highlight: false
     },
 
