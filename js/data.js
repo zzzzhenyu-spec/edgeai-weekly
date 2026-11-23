@@ -68,7 +68,7 @@ id: "n302", cat: "大模型厂商", source: "智东西/HuggingFace", date: "2026
       url: "https://m.sohu.com/a/1104506413_121423427",
       image: "images/news/n302.jpg",
       imageCap: "Inkling 2 Mini 开源（图源：智东西）",
-      highlight: false
+      highlight: true
     },
 
 {
@@ -140,7 +140,7 @@ id: "n288", cat: "行业关注事件", source: "搜狐财经/东方财富", date
       url: "https://m.sohu.com/a/1103776190_163278",
       image: "images/news/n288.jpg",
       imageCap: "DeepSeek 第二轮融资落地（图源：搜狐财经）",
-      highlight: false
+      highlight: true
     },
 
 {
