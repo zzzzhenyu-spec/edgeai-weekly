@@ -212,7 +212,7 @@ id: "n277", cat: "行业关注事件", source: "凤凰科技/东方财富", date
       tags: ["OpenAI", "加州诉讼", "智能体失控", "公共妨害", "监管"],
       url: "https://tech.ifeng.com/c/8y7OQAcEtr3",
       image: "images/news/n277.jpg",
-      imageCap: "加州总检察长起诉 OpenAI（图源：新浪科技）",
+      imageCap: "加州总检察长起诉 OpenAI（图源：环球时报/腾讯新闻）", /* 2026-11-24 换图勘误：原图为新浪二维码占位图，改用加州总检察长起诉发布会的新闻照片，图源随之订正 */
       highlight: false
     },
 
