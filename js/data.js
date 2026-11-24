@@ -15,8 +15,8 @@ const WEEKLY_DATA = {
 
   meta: {
     issue: "2026 · 第 49 期",
-    weekRange: "2026.11.18 — 2026.11.24 · 近 7 天",
-    updated: "2026-11-24",
+    weekRange: "2026.11.19 — 2026.11.25 · 近 7 天",
+    updated: "2026-11-25",
     status: "rolling",
     editorsNote: "近 7 天聚焦：端侧模型「循环架构周」落地三连——Thinking Machines 开源 Inkling 2 Mini（26.4B 循环 MoE、约 20GB 内存笔记本可离线跑、智能体编码同级 SOTA），智谱 GLM-5.4 上线 Coding Plan（国内首款 Loop Transformer），「用循环换参数效率」成为端侧新共识。硬件大日：华为 Mate X8 发布（12999 元起、麒麟 9050 Pro 逻辑折叠芯片、晶体管密度+30%），机械革命首发 RTX Spark 桌面 AI 主机（128GB 统一内存本地跑 2500 亿参数、49999 元）——「本地跑千亿参数」第一次有了开箱即买的整机。谷歌向开发者开放世界模型 Genie 4（键盘操控延迟 0.2 秒、约 6 美元/分钟），中汽中心推出国内首个智能座舱 AI 分级（C1-C5）。Claude 辅助黎曼猜想证明（1700 万行 Lean 代码）与人类手稿同场竞速，DeepSeek 千亿融资落地，蚂蚁医疗 AI 五连发全开源可本地部署。前瞻：文心 5.5 全量开源（11-25）。\n今日新增：华为 Mate X8 发布、机械革命 RTX Spark AI 主机、谷歌 Genie 4 开发者开放、中汽中心座舱 AI 分级。",
   },
@@ -200,78 +200,6 @@ id: "n287", cat: "AI硬件", source: "搜狐科技", date: "2026-11-19",
       url: "https://m.sohu.com/a/1103261925_121960420",
       image: "images/news/n287.jpg",
       imageCap: "极米记得 G1/L1 与物奇微芯片（图源：搜狐科技）",
-      highlight: false
-    },
-
-{
-id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-18",
-      title: "谷歌发布 Gemini 4 Neon 补齐中档：比 Carbon 快 3 倍、成本低约 40%，编程智能体指数超 Claude，四天内第三款 Gemini 4 新模型",
-      summary: "谷歌发布 Gemini 4 Neon——Gemini 4 家族自此形成三档完整阵型：Carbon（攻坚最难长周期项目）、Neon（平衡深度与速度，居中）、Hydrogen（日常快速执行）。Neon 主攻复杂编程、科学研究与企业工作流：官方称速度比 Carbon 快 3 倍、完成任务成本低约 40%，编程 AI 智能体指数超越 Claude，上下文窗口 100 万 token；在 Antigravity 开发环境中可承担任务调度角色——指挥多个 Hydrogen 子智能体协同完成复杂作业。正陆续向 AI Studio 与 Gemini API 开放。",
-      detail: "发布：11 月 18 日官方博客（OSCHINA/搜狐等多源跟进）。\n定位：三档阵型居中档——平衡推理深度、任务速度与成本；主攻复杂编程/科学研究/企业工作流。\n性能：速度较 Carbon 快 3 倍；任务成本低约 40%；编程 AI 智能体指数超 Claude；100 万 token 上下文。\n调度：Antigravity 中 Neon 任任务调度层——编排多个 Hydrogen 子智能体协同（大模型指挥小模型的首个产品化分层编排）。\n节奏：Hydrogen（11-12）、Neon（11-18）四天双发，加上 10 月底 Carbon——Gemini 4 家族两周内完成「旗舰+效率+平衡」全线布阵。\n端侧视角：Neon-Carbon-Hydrogen 的「调度者-攻坚者-执行者」结构把模型分层从静态选档（用户手选）升级为动态编排（模型调模型）——与微软 Copilot Auto 用 Decision-1.1 选模型同周出现，智能体时代的推理资源分配正在从产品功能变成模型架构本身；端云协同的下一步就是这种分层下沉到端侧（端侧轻档执行+云端重档攻坚+调度层路由）。",
-      tags: ["谷歌", "Gemini 4", "Neon", "模型分层", "调度编排"],
-      url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
-      image: "images/news/n290.jpg",
-      imageCap: "Gemini 4 Neon 发布（图源：Google 官方博客）",
-      highlight: false
-    },
-
-{
-id: "n286", cat: "大模型厂商", source: "搜狐科技/微软 Ignite", date: "2026-11-18",
-      title: "微软发布决策模型 Microsoft-Decision-1.1：速度提升 2 倍、准确率登顶，比 GPT-Sol 快 50 倍便宜 79%",
-      summary: "微软 Ignite 大会发布决策模型 Microsoft-Decision-1.1——相比前代智能性与校准能力更强，运算速度提升 2 倍以上、成本更低、准确率登顶；该模型负责智能体日常高频「小决定」（请求路由、分类、排序、流程控制），官方称比 GPT-Sol 6.1 快 50 倍、便宜 79%，已有约 4000 家企业客户使用，并在 Copilot Cowork 的 Auto 功能中为任务不同步骤选择合适的模型与推理强度。",
-      detail: "发布：11 月 18 日微软 Ignite 大会（模型 7 连发之一）。\n性能：较前代速度快 2 倍以上、准确率登顶、校准更精准、成本更低；官方口径较 GPT-Sol 6.1 快 50 倍、便宜 79%。\n分工：决策模型专管智能体高频小决定（路由/分类/排序/流程控制）——与生成模型分工。\n落地：约 4000 家企业客户；Copilot Cowork Auto 功能用其为任务各步骤选模型与推理强度。\n端侧视角：决策模型品类（TypeSafe Jev 首创）正成为智能体架构的标配层——「重生成用旗舰、轻判断用决策模型」的分层与端侧「重任务云端、轻任务本地」是同一个经济逻辑的两面；微软把决策模型直接嵌进 Copilot 的模型路由（Auto 选档），等于给「推理强度按需分配」上了工业级实现——端云分层路由的行业范本。",
-      tags: ["微软", "决策模型", "Decision-1.1", "Ignite", "智能体路由"],
-      url: "https://m.sohu.com/a/1103264978_115978",
-      image: "images/news/n286.jpg",
-      imageCap: "Microsoft-Decision-1.1（图源：搜狐科技）",
-      highlight: false
-    },
-
-{
-id: "n285", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-18",
-      title: "openJiuwen 推出 AgentOS「Harnessless」开发范式：免自建脚手架，直接复用单 Agent 与蜂群能力",
-      summary: "华为系开源平台 openJiuwen 依托 AgentOS 推出 Harnessless 开发范式——开发者无需自建 Harness（脚手架），直接复用平台已有的 Agent 能力（单智能体与 JiuwenSwarm 蜂群）快速构建智能体原生应用：蜂群架构内置 SwarmFlow 可控协同（按自然语言需求自动生成角色、协作规则与流程的 Swarm Skill），Hyper-Agent 支持共享工作空间内的资料与工具复用，后续任务可按权限复用文件与产物。",
-      detail: "发布：11 月 18 日（Harnessless 开发范式，搜狐科技/多源）。\n范式：免 Harness——开发者不自建脚手架，复用平台已有单 Agent 与蜂群能力；应用构建从「搭框架」变为「组合能力」。\n蜂群：JiuwenSwarm（5 月开源）内置 SwarmFlow——自然语言生成 Swarm Skill（角色/协作规则/流程）；支持个人助手、编码、集群三种形态。\n复用：Hyper-Agent 共享工作空间——资料复用+工具执行（日程/会议/群公告 CLI），产物按权限复用。\n端侧视角：与 RSI 原生 AgentOS（自我迭代）构成完整闭环——迭代能力由系统给、协作能力按需复用，开发者只剩「定义任务」这一层；「能力复用」范式与智元 LIFE 的技能复用（37.5%→65.8%）思路一致：具身与软件智能体都在从「每次从零构建」转向「沉淀可复用能力库」，这是智能体工程效率的下一个战场。",
-      tags: ["openJiuwen", "Harnessless", "蜂群", "能力复用", "AgentOS"],
-      url: "https://m.sohu.com/a/1103168310_129720",
-      image: "images/news/n285.jpg",
-      imageCap: "openJiuwen Harnessless 范式（图源：搜狐科技）",
-      highlight: false
-    },
-
-{
-id: "n283", cat: "大模型厂商", source: "腾讯新闻", date: "2026-11-18",
-      title: "苹果开源两大视频生成模型：单卡延迟仅 36 毫秒，实时 AI 视频迈向 iPhone 级体验",
-      summary: "苹果开源两个视频生成模型——单卡运行延迟仅 36 毫秒，核心技术秘籍（实时流式生成架构）还宣称能给别家模型提速，实时 AI 视频生成正走向 iPhone 级设备体验；这是苹果继 AFM 端侧模型之后又一次生态级开源，视频生成的实时化把生成式 AI 推向端侧设备的最后一块重计算场景。",
-      detail: "开源：11 月 18 日（腾讯新闻等多源）。\n性能：单卡延迟仅 36 毫秒——实时级视频生成；技术秘籍可迁移给别家模型提速。\n意义：苹果在端侧模型（AFM 系列）之后的又一次生态级开源，视频生成是端侧最重的计算场景。\n端侧视角：36ms 单卡延迟意味着视频生成从「云渲染」跨入「本地实时」——苹果持续用开源把端侧 AI 的能力下限抬到行业可用水平，与 Edge0（145B 文本）、llama.cpp（1.0 契约化）同月，端侧生态在文本/推理/视频三线全部齐平云端体验的下限。",
-      tags: ["苹果", "开源", "视频生成", "36毫秒", "实时AI"],
-      url: "https://news.qq.com/rain/a/20261118A0EZ0900",
-      image: "images/news/n283.jpg",
-      imageCap: "苹果开源视频生成模型（图源：腾讯新闻）",
-      highlight: false
-    },
-
-{
-id: "n282", cat: "端侧Agent", source: "搜狐科技", date: "2026-11-18",
-      title: "腾讯 WorkBuddy 日活破 1000 万：成为中国大模型日均 Token 用量最高的 AI 产品",
-      summary: "腾讯 WorkBuddy 日活跃用户数突破 1000 万，成为中国大语言模型日均 Token 用量最高的 AI 产品——从手机远程控制电脑起家的桌面智能体，如今成为国内智能体产品的用户规模标杆；此前腾讯 Q3 财报披露其云收入同比增长 35%，WorkBuddy 生态从工具走向平台（支持跨设备数据迁移、接入第三方模型）。",
-      detail: "里程碑：11 月 18 日披露日活破 1000 万（搜狐科技/多源）。\n口径：中国大语言模型日均 Token 用量最高的 AI 产品。\n脉络：手机遥控电脑起家→桌面智能体→跨设备迁移+多模型开放。\n财报：腾讯 Q3 云收入同比增长 35%（WorkBuddy 为重要驱动）。\n端侧视角：桌面智能体的用户规模天花板被验证——千万日活意味着智能体从尝鲜工具变成日常生产力；Token 用量第一的口径说明重任务仍在云端，但「跨设备迁移+多模型」的组合正在为端云分工铺路，与千问办公开放 10 模型、豆包工作第三方接入构成办公智能体三强格局。",
-      tags: ["腾讯", "WorkBuddy", "1000万日活", "Token第一", "桌面智能体"],
-      url: "https://www.sohu.com/a/1103270823_123055741",
-      image: "images/news/n282.jpg",
-      imageCap: "WorkBuddy 日活破千万（图源：搜狐科技）",
-      highlight: false
-    },
-
-{
-id: "n281", cat: "端侧Agent", source: "新浪财经", date: "2026-11-18",
-      title: "微信「小微」日活达 3000 万：官方预告部分推理任务未来将在设备端运行",
-      summary: "微信披露私人 AI 助理「小微」日活跃用户数已达 3000 万——成为国内用户规模最大的 AI 助理之一；官方同时预告未来部分推理任务将在设备端运行，意味着微信生态的端侧推理路线图首次明确。作为月活 14 亿的超级 App 内嵌 AI 助理，小微的规模与端侧化预告对国产端侧推理生态是双重信号。",
-      detail: "披露：11 月 18 日（新浪财经）。\n规模：小微日活 3000 万——国内最大 AI 助理之一。\n预告：未来部分推理任务在设备端运行——微信生态的端侧推理路线图首次明确。\n端侧视角：微信把「部分推理任务上设备端」写进路线图是端侧推理迄今最大规模的商用信号——14 亿月活 App 的哪怕 10% 轻任务本地化，都会催生对端侧推理框架（MNN/NCNN 一类国产栈）的巨大需求；与 WorkBuddy 千万日活同日披露，国内智能体的用户底座与端侧化时间表同日双落地。",
-      tags: ["微信", "小微", "3000万日活", "端侧推理", "路线图"],
-      url: "https://finance.sina.com.cn/tech/digi/2026-11-18/doc-inizehkz6841176.shtml",
-      image: "images/news/n281.jpg",
-      imageCap: "微信小微 AI 助理（图源：新浪财经）",
       highlight: false
     }
   ],

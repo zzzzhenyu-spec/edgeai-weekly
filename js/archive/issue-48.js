@@ -49,6 +49,18 @@ id: "n296", cat: "大模型厂商", source: "量子位/XDOF", date: "2026-11-21"
     },
 
 {
+id: "n302", cat: "大模型厂商", source: "智东西/HuggingFace", date: "2026-11-21",
+      title: "穆拉蒂 Thinking Machines 开源 Inkling 2 Mini：26.4B 循环架构 MoE，约 20GB 内存笔记本可离线跑，智能体编码达同级 SOTA",
+      summary: "Thinking Machines Lab（前 OpenAI CTO 米拉·穆拉蒂联合创办）开源 Inkling 2 Mini——总参数 26.4B、激活 3.4B 的 MoE+循环 Transformer 混合架构（24 层分四模块、中间两模块每 token 运行三次），内存占用约 20GB，消费级笔记本/台式机可离线运行（有人已在 MacBook Pro 上离线构建飞行模拟器）；NVFP4 精度训练、专家从 384 剪枝至 128。智能体编码能力达同级 SOTA（DeepSWE v1.1 得分 48.2%、Vals Index v2.2 得分 46.5%），超过 Qwen3.8-27B 等同级模型；HuggingFace 开放权重+模型卡，另发布可变循环（1-5 次）研究模型。",
+      detail: "发布：11 月 21 日（Thinking Machines Lab，HuggingFace 权重+模型卡公开）。\n架构：总参 26.4B/激活 3.4B，每 token 有 5.4B 权重激活值——MoE+循环 Transformer：24 层分四个模块，中间两个模块每个 token 循环运行三次；注意力残差+门电路机制。\n训练：4 位 NVFP4 精度；专家从 384 剪枝至 128。\n本地：内存占用约 20GB，消费级笔记本/台式机离线可跑；32GB 内存 Mac 可经 Ollama 运行；实测 96GB M5 Ultra Mac Studio 速度优异。\n成绩：DeepSWE v1.1 得分 48.2%、Vals Index v2.2 得分 46.5%——同级 SOTA，超 Qwen3.8-27B；FrontierCode v2.0 领先、Terminal-Bench 4.0 与 Qwen3.8-27B 打平；多轮对话与复杂约束指令跟随弱于对手。\n附发：TML-d24-varloop-research 可变循环（1-5 次）研究模型同步开源。\n端侧视角：「一份权重、可变深度」是循环架构给端侧的最大红利——推理时按任务难度选择循环次数，等于用同一个 20GB 模型覆盖快慢双档，正对应端侧设备算力/电量双预算的现实约束；穆拉蒂团队把旗舰实验室的架构创新直接开源成笔记本可跑的权重，与 llama.cpp 生态（Ollama 一条命令拉起）无缝衔接——「研究前沿」与「本地可用」之间第一次几乎没有时差。",
+      tags: ["Thinking Machines", "Inkling 2 Mini", "循环架构", "开源", "本地部署"],
+      url: "https://m.sohu.com/a/1104506413_121423427",
+      image: "images/news/n302.jpg",
+      imageCap: "Inkling 2 Mini 开源（图源：智东西）",
+      highlight: false
+    },
+
+{
 id: "n292", cat: "大模型厂商", source: "微软开发者博客", date: "2026-11-20",
       title: "微软开始向 Windows 设备推送本机 AI 模型 Aion 1.0 Instruct：接替 Phi Silica，上下文 3.5K 升 32K，GPU 支持在路上",
       summary: "微软按期开始通过 Windows Insider 计划向 Copilot+ PC 推送本机 AI 基础模型 Aion 1.0 Instruct（2.3B）——正式接替 Phi Silica 成为 Windows 本机 AI 底座：上下文长度从 Phi Silica 约 3.5K token 大幅扩至 32K token，面向文本生成、翻译、语言检测等本机 AI 功能；12 月 4 日扩展至更多 Insider Preview 设备并新增 GPU（含 NVIDIA）支持，2027 年 1 月下旬推向符合硬件条件的零售设备。微软 10 月已提供独立测试套件供开发者提前验证兼容性。",
@@ -82,6 +94,42 @@ id: "n297", cat: "行业关注事件", source: "机器之心/搜狐科技", date
       image: "images/news/n297.jpg",
       imageCap: "Alpöge 宣布原文（图源：机器之心）",
       highlight: true
+    },
+
+{
+id: "n306", cat: "行业关注事件", source: "搜狐汽车/观点网", date: "2026-11-20",
+      title: "中汽中心推出国内首个智能座舱 AI 分级评价体系：C1 规则响应到 C5 全域智能五级，覆盖八大能力九大场景",
+      summary: "中国汽车技术研究中心发布国内首个汽车智能座舱 AI 能力分级评价体系——把座舱 AI 划分为 C1 规则响应、C2 场景辅助、C3 主动服务、C4 自主协同、C5 全域智能五个等级，评价维度覆盖感知、执行、自主、进化等八大能力和智慧出行、情感陪伴、健康关怀等九大用车场景，把主观的座舱体验转化为可量化指标。调查显示 20 万元以上国产新能源汽车的座舱 AI 搭载率已超 90%，分级体系为消费者购车提供了横向可比的参照。",
+      detail: "发布：中汽中心（11 月 20 日多方报道），国内首个智能座舱 AI 能力分级评价体系。\n分级：C1 规则响应座舱（至少具备感知、规划等能力）→ C2 场景辅助 → C3 主动服务 → C4 自主协同 → C5 全域智能。\n维度：感知/执行/自主/进化等八大能力与行为属性；智慧出行/情感陪伴/健康关怀等九大用车场景。\n背景：20 万元以上国产新能源车座舱 AI 搭载率超 90%——分级把主观体验变成可量化、可横向比较的指标。\n端侧视角：座舱是端侧 AI 算力最大的车载出口，但「智能座舱」长期是营销话术——C1-C5 分级第一次给了公共度量衡，直接效果是压缩「贴牌智能」的水分空间；对芯片与模型供应商意味着分级考评将成为车规端侧算力的新标书门槛，与手机端侧跑分类似，评测体系先于用户感知成型。",
+      tags: ["中汽中心", "智能座舱", "AI分级", "C1-C5", "评价体系"],
+      url: "https://www.sohu.com/a/1103929994_121345914",
+      image: "images/news/n306.jpg",
+      imageCap: "智能座舱 AI 分级评价体系发布（图源：搜狐汽车）",
+      highlight: false
+    },
+
+{
+id: "n305", cat: "AI硬件", source: "智东西/IT之家", date: "2026-11-19",
+      title: "机械革命首发英伟达 RTX Spark 桌面 AI 主机「大师之路 X10」：128GB 统一内存本地跑 2500 亿参数模型，顶配 49999 元",
+      summary: "机械革命在 11 月 19 日杭州发布会推出基于 NVIDIA RTX Spark 平台的桌面 AI 主机「大师之路 X10」——Blackwell GPU（6144 CUDA 核心）+ 20 核 Grace CPU + 最高 128GB 统一内存、1 PFLOP AI 算力，1.25L 机身预装 Windows：NVIDIA 官方标称支持 1200 亿参数模型与 100 万 token 上下文，机械革命宣称旗舰配置可本地运行 2500 亿参数模型，覆盖本地大模型、智能体、图像/视频生成与微调。旗舰版（128GB+2TB）49999 元、专业版（64GB+1TB）32999 元，已上京东开售——游戏本厂商转战端侧 AI 的标志性一步。",
+      detail: "发布：11 月 19 日杭州发布会亮相并京东开售（智东西/IT之家，11-23 池内持续发酵）。\n硬件：NVIDIA RTX Spark 平台——Blackwell GPU 6144 CUDA 核心、20 核 Grace CPU、最高 128GB 统一内存、1 PFLOP AI 算力、万兆以太网、1.25L 紧凑机身、Windows 系统。\n能力：NVIDIA 官方标称 1200 亿参数模型+100 万 token 上下文；机械革命宣称旗舰配置本地可跑 2500 亿参数模型；覆盖本地大模型/智能体/图像视频生成/微调。\n定价：旗舰版（128GB+2TB）49999 元；专业版（64GB+1TB）32999 元。\n端侧视角：RTX Spark 是英伟达把数据中心级统一内存架构压进桌面形态的产品线，机械革命首发意味着「本地跑千亿参数」第一次有了开箱即买的消费级整机；游戏本厂商集体转战端侧 AI 主机，AI PC 的上限被从「办公智能」抬到「个人算力工作站」——49999 元的定价则把它锚定在开发者/极客市场而非大众消费。",
+      tags: ["机械革命", "RTX Spark", "AI主机", "统一内存", "本地大模型"],
+      url: "https://zhidx.com/p/612222.html",
+      image: "images/news/n305.jpg",
+      imageCap: "机械革命×NVIDIA 发布会（图源：智东西）",
+      highlight: false
+    },
+
+{
+id: "n303", cat: "大模型厂商", source: "C114/搜狐科技", date: "2026-11-19",
+      title: "谷歌向开发者开放世界模型 Genie 4：一句话生成可探索世界、键盘操控延迟 0.2 秒，视频生成约 6 美元/分钟",
+      summary: "谷歌 11 月 19 日正式向开发者开放 Genie 4 世界模型——经 Gemini API（Interactions API 多轮交互接口）与 Google AI Studio 接入：一句话即可创建可探索的虚拟世界并以键盘实时操控，720p/24fps 连续世界生成并同步原生音频（环境音/音效/角色对话），键盘操控延迟低至 0.2 秒；交互中可用文字指令动态改变天气、光照、物体与场景事件，世界状态由 Gemini 推理保持连贯。视频生成计价约 6.05 美元/分钟，定位交互体验与游戏原型开发——开发者首个可构建的实时世界模型。",
+      detail: "开放：11 月 19 日经 Gemini API（Interactions API）与 Google AI Studio 开放（10 月 27 日 DeepMind 发布 Genie 4 本体）。\n能力：一句话创建可探索虚拟世界；720p/24fps 连续生成+原生同步音频；键盘操控延迟低至 0.2 秒；文字指令动态修改天气/光照/物体/场景事件，世界状态由 Gemini 保持连贯。\n计价：视频生成约 6.05 美元/分钟；AI Ultra 订阅者可直接使用，Pro 订阅者候补。\n定位：交互体验、游戏原型开发——开发者首个可构建的实时世界模型。\n端侧视角：世界模型从论文演示走向按分钟计价的 API 商品——0.2 秒操控延迟把「可交互性」而非「生成质量」立为第一指标，这恰是具身智能训练与游戏原型的共同刚需；对端侧的间接意义在于：廉价的合成交互环境会成为机器人与智能体训练数据的下一座矿，而训练侧的丰沛环境数据最终反哺端侧策略模型的落地（与 Astra 具身评测、WALL-API 预训练同周，具身智能的「环境层」基建在加速）。",
+      tags: ["谷歌", "Genie 4", "世界模型", "Gemini API", "实时交互"],
+      url: "https://www.c114.net.cn/ainews/149575.html",
+      image: "images/news/n303.jpg",
+      imageCap: "Genie 4 开发者开放（图源：谷歌/搜狐科技）",
+      highlight: false
     },
 
 {
