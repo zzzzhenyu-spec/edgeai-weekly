@@ -4,7 +4,7 @@
 
 ## 2026 · 第 49 期（2026.11.19 — 2026.11.25 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：端侧模型「循环架构周」落地三连——Thinking Machines 开源 Inkling 2 Mini（26.4B 循环 MoE、约 20GB 内存笔记本可离线跑、智能体编码同级 SOTA），智谱 GLM-5.4 上线 Coding Plan（国内首款 Loop Transformer），「用循环换参数效率」成为端侧新共识。硬件大日：华为 Mate X8 发布（12999 元起、麒麟 9050 Pro 逻辑折叠芯片、晶体管密度+30%），机械革命首发 RTX Spark 桌面 AI 主机（128GB 统一内存本地跑 2500 亿参数、49999 元）——「本地跑千亿参数」第一次有了开箱即买的整机。谷歌向开发者开放世界模型 Genie 4（键盘操控延迟 0.2 秒、约 6 美元/分钟），中汽中心推出国内首个智能座舱 AI 分级（C1-C5）。Claude 辅助黎曼猜想证明（1700 万行 Lean 代码）与人类手稿同场竞速，DeepSeek 千亿融资落地，蚂蚁医疗 AI 五连发全开源可本地部署。前瞻：文心 5.5 全量开源（11-25）。 今日新增：华为 Mate X8 发布、机械革命 RTX Spark AI 主机、谷歌 Genie 4 开发者开放、中汽中心座舱 AI 分级。
+**近 7 天导读**：近 7 天聚焦：百度如期兑现承诺，文心 5.5 Flash Preview 全量开源（280B MoE、Apache 2.0 可商用，HuggingFace 与 ModelScope 同步上架，支持 vLLM/SGLang 部署）——国产旗舰开源权重再添一档。端侧模型「循环架构」落地三连：Inkling 2 Mini（26.4B 循环 MoE、约 20GB 内存笔记本离线跑）、智谱 GLM-5.4 Coding Plan（国内首款 Loop Transformer），「用循环换参数效率」渐成共识。硬件侧：华为 Mate X8（麒麟 9050 Pro 逻辑折叠芯片）、机械革命 RTX Spark 主机（128GB 统一内存本地跑 2500 亿参数）开卖；迈特芯 MEGA188 3D-TPU 回片点亮（3D 堆叠 DRAM 峰值带宽 600GB/s、5W 下跑 Qwen3-8B 达 80 TPS），与群联「智能 SSD」同周——算力正向存储层下沉。特斯拉 FSD V15 开始推送，车机换上世界模型缩小版 Reality View 实景视图；另有谷歌 Genie 4 开发者开放、中汽中心座舱 AI 分级（C1-C5）、Claude 辅助黎曼猜想证明（1700 万行 Lean 代码）、蚂蚁医疗 AI 五连发开源。 今日新增：文心 5.5 全量开源、特斯拉 FSD V15 推送、迈特芯 MEGA188 点亮。
 
 ## 近 7 天速览
 
@@ -16,13 +16,20 @@
 | 2026-11-20 | [Anthropic 数学家宣称在 Claude 辅助下证明黎曼猜想：1700 万行 Lean 代码通过形式化验证，陶哲轩称「验证仍需时间」](https://m.sohu.com/a/1104301381_610300) | 机器之心/搜狐科技 |
 | 2026-11-19 | [DeepSeek 第二轮千亿级融资落地：宁德时代与腾讯并列最大投资方，31 家新股东含中国移动、vivo、小红书](https://m.sohu.com/a/1103776190_163278) | 搜狐财经/东方财富 |
 
-### AI硬件（3 条）
+### AI硬件（4 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
 | 2026-11-22 | [群联公布内建 NPU 与 64GB 内存的「智能 SSD」设计：PyTorch/vLLM/llama.cpp 直接在盘上跑，数据搬运省百倍](https://www.techspot.com/news/114653-phison-shows-ssd-design-npu-64gb-memory-runs.html) | Tom's Hardware/TechSpot |
+| 2026-11-21 | [特斯拉 FSD V15 开始推送：车机换上「世界模型缩小版」Reality View 实景视图，马斯克称效果像在玩 GTA](https://m.sohu.com/a/110553429_236796) | 搜狐科技/腾讯新闻 |
 | 2026-11-19 | [机械革命首发英伟达 RTX Spark 桌面 AI 主机「大师之路 X10」：128GB 统一内存本地跑 2500 亿参数模型，顶配 49999 元](https://zhidx.com/p/612222.html) | 智东西/IT之家 |
 | 2026-11-19 | [极米记得 AI 记忆眼镜 G1 与手环 L1 搭载物奇微 WQ7036：国产低功耗 AI 音频芯片进入记忆硬件供应链](https://m.sohu.com/a/1103261925_121960420) | 搜狐科技 |
+
+### 芯片厂商（1 条）
+
+| 日期 | 要闻 | 来源 |
+|------|------|------|
+| 2026-11-19 | [迈特芯 MEGA188 3D-TPU 回片点亮：3D 堆叠 DRAM 峰值带宽 600GB/s，5W 下跑 Qwen3-8B 达 80 TPS](https://tech.ifeng.com/c/8yCpGlDh0Qv) | 凤凰科技/搜狐科技 |
 
 ### 手机厂商（3 条）
 
@@ -32,10 +39,11 @@
 | 2026-11-21 | [华为星芒 O1 Pro 首销战报：16GB 版全平台售罄，国补后 4999 元起，总经理回应定价争议「在便宜和创新之间选创新」](https://news.mydrivers.com/1/1167/1167469.htm) | 快科技/界面新闻 |
 | 2026-11-20 | [华为星芒 O1 Pro 正式发布：5499 元起的鸿蒙 AI 手机，麒麟 9030S+阔直屏+2 亿像素，星芒品牌首秀](https://news.mydrivers.com/1/1167/1167296.htm) | 快科技/第一财经 |
 
-### 大模型厂商（6 条）
+### 大模型厂商（7 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
+| 2026-11-25 | [百度如期全量开源文心 5.5 Flash Preview：280B MoE Apache 2.0 可商用，HuggingFace 与 ModelScope 同步上架](https://www.oschina.net/news/503792) | 百度官方/开源中国 |
 | 2026-11-23 | [智谱 GLM-5.4 上线 Coding Plan：国内首款 Loop Transformer 架构模型，新增视觉能力，GLM-5.5（3 万亿参数）预告 12 月](https://tech.ifeng.com/c/8yHj18d4QMM) | 凤凰科技/智谱社区 |
 | 2026-11-23 | [蚂蚁医疗健康 AI 五连发：LingSante 系列开源+支持本地部署，「阿福同款」医疗大模型让一台电脑解锁专业医疗 AI](https://www.qbitai.com/2026/11/512017.html) | 量子位 |
 | 2026-11-21 | [穆拉蒂 Thinking Machines 开源 Inkling 2 Mini：26.4B 循环架构 MoE，约 20GB 内存笔记本可离线跑，智能体编码达同级 SOTA](https://m.sohu.com/a/1104506413_121423427) | 智东西/HuggingFace |

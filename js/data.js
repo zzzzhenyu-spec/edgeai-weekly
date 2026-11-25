@@ -18,11 +18,23 @@ const WEEKLY_DATA = {
     weekRange: "2026.11.19 — 2026.11.25 · 近 7 天",
     updated: "2026-11-25",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：端侧模型「循环架构周」落地三连——Thinking Machines 开源 Inkling 2 Mini（26.4B 循环 MoE、约 20GB 内存笔记本可离线跑、智能体编码同级 SOTA），智谱 GLM-5.4 上线 Coding Plan（国内首款 Loop Transformer），「用循环换参数效率」成为端侧新共识。硬件大日：华为 Mate X8 发布（12999 元起、麒麟 9050 Pro 逻辑折叠芯片、晶体管密度+30%），机械革命首发 RTX Spark 桌面 AI 主机（128GB 统一内存本地跑 2500 亿参数、49999 元）——「本地跑千亿参数」第一次有了开箱即买的整机。谷歌向开发者开放世界模型 Genie 4（键盘操控延迟 0.2 秒、约 6 美元/分钟），中汽中心推出国内首个智能座舱 AI 分级（C1-C5）。Claude 辅助黎曼猜想证明（1700 万行 Lean 代码）与人类手稿同场竞速，DeepSeek 千亿融资落地，蚂蚁医疗 AI 五连发全开源可本地部署。前瞻：文心 5.5 全量开源（11-25）。\n今日新增：华为 Mate X8 发布、机械革命 RTX Spark AI 主机、谷歌 Genie 4 开发者开放、中汽中心座舱 AI 分级。",
+    editorsNote: "近 7 天聚焦：百度如期兑现承诺，文心 5.5 Flash Preview 全量开源（280B MoE、Apache 2.0 可商用，HuggingFace 与 ModelScope 同步上架，支持 vLLM/SGLang 部署）——国产旗舰开源权重再添一档。端侧模型「循环架构」落地三连：Inkling 2 Mini（26.4B 循环 MoE、约 20GB 内存笔记本离线跑）、智谱 GLM-5.4 Coding Plan（国内首款 Loop Transformer），「用循环换参数效率」渐成共识。硬件侧：华为 Mate X8（麒麟 9050 Pro 逻辑折叠芯片）、机械革命 RTX Spark 主机（128GB 统一内存本地跑 2500 亿参数）开卖；迈特芯 MEGA188 3D-TPU 回片点亮（3D 堆叠 DRAM 峰值带宽 600GB/s、5W 下跑 Qwen3-8B 达 80 TPS），与群联「智能 SSD」同周——算力正向存储层下沉。特斯拉 FSD V15 开始推送，车机换上世界模型缩小版 Reality View 实景视图；另有谷歌 Genie 4 开发者开放、中汽中心座舱 AI 分级（C1-C5）、Claude 辅助黎曼猜想证明（1700 万行 Lean 代码）、蚂蚁医疗 AI 五连发开源。\n今日新增：文心 5.5 全量开源、特斯拉 FSD V15 推送、迈特芯 MEGA188 点亮。",
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+id: "n307", cat: "大模型厂商", source: "百度官方/开源中国", date: "2026-11-25",
+      title: "百度如期全量开源文心 5.5 Flash Preview：280B MoE Apache 2.0 可商用，HuggingFace 与 ModelScope 同步上架",
+      summary: "百度按 11 月 11 日发布会承诺的期限（11 月 25 日）正式开源文心 5.5 Flash Preview 完整权重——总参数 280B、每 token 激活 14B 的 MoE 架构，上下文 100 万 token，Apache 2.0 协议可免费商用；HuggingFace 与 ModelScope 同步上架（baidu/ERNIE-5.5-Flash-Preview），支持 vLLM/SGLang 部署。这是基于已开源基座 ERNIE 5.5 Flash-Base（33.5 万亿 token 预训练）的首个后训练版本，主打代码生成、工具使用、3D 建模与多模态；开源社区榜单已将其列为第二大开源模型。",
+      detail: "开源：11 月 25 日按期兑现 11-11 承诺（当日上线千帆 API，承诺两周期内开放权重）。\n规格：总参数 280B（2800 亿）、每 token 激活 14B——MoE 稀疏架构；上下文 100 万 token。\n基座：ERNIE 5.5 Flash-Base，33.5 万亿 token 从零预训练；本版为其首个后训练版本。\n能力：代码生成、工具使用、3D 建模、知识工作与内容创作；API 限时五折（输入 1-2 元/百万 token）。\n渠道：HuggingFace 与 ModelScope 同步上架 baidu/ERNIE-5.5-Flash-Preview；支持 vLLM/SGLang 主流推理框架，可本地部署与二次开发；开源社区榜单位列第二。\n端侧视角：280B 总参的 MoE 全量开源把「可商用国产旗舰权重」的门槛再抬一档——14B 激活意味着消费级多卡即可跑推理，与 DeepSeek、GLM 系构成国产开源第一梯队；对端侧的直接意义在工具链：vLLM/SGLang 原生支持让「下载即部署」路径继续标准化，而工具调用强化正是端侧智能体最缺的能力拼图，百度的领域微调方向也给社区二创留了口子。",
+      tags: ["百度", "文心5.5", "开源", "MoE", "Apache 2.0"],
+      url: "https://www.oschina.net/news/503792",
+      image: "images/news/n307.jpg",
+      imageCap: "ERNIE 5.5 Flash Preview 上架（图源：ModelScope）",
+      highlight: true
+    },
+
 {
 id: "n304", cat: "手机厂商", source: "雷峰网/凤凰科技", date: "2026-11-24",
       title: "华为 Mate X8 发布：12999 元起全系麒麟 9050 Pro「逻辑折叠」芯片，18:08 开启预售，12 月上市",
@@ -68,6 +80,18 @@ id: "n298", cat: "AI硬件", source: "Tom's Hardware/TechSpot", date: "2026-11-2
       url: "https://www.techspot.com/news/114653-phison-shows-ssd-design-npu-64gb-memory-runs.html",
       image: "images/news/n298.jpg",
       imageCap: "群联 PCIe Gen6 SSD 样品 E3.S/E1.S 规格（图源：Tom's Hardware）",
+      highlight: false
+    },
+
+{
+id: "n309", cat: "AI硬件", source: "搜狐科技/腾讯新闻", date: "2026-11-21",
+      title: "特斯拉 FSD V15 开始推送：车机换上「世界模型缩小版」Reality View 实景视图，马斯克称效果像在玩 GTA",
+      summary: "特斯拉开始向首批用户推送 FSD（Supervised）V15，最受关注的新功能是 Tesla Reality View——车机屏幕放弃传统 3D 建模，改为实时生成的实景视图：整合多路模型信号，端到端呈现车辆周围道路环境与 FSD 的规划动作（转弯路线、停车位置），连路面转向箭头、室内停车场顶棚结构都能识别，马斯克形容「像在玩 GTA」。他解释车上跑的是特斯拉近像素级还原世界模型的缩小版，以全新 Universal Vision Encoder 为核心喂给「驾驶者」与「绘图者」两个模型；受 AI4 算力限制主要面向 AI4 硬件车型，预计 12 月扩大推送范围。",
+      detail: "推送：FSD（Supervised）V15 向首批用户开放，预计 12 月扩大更新范围。\n新界面：Tesla Reality View——车机不再显示传统 3D 建模，改为实时生成的实景视图，将多路模型信号整合为端到端可视化画面，同步显示 FSD 规划动作（即将转弯的路线、停车位置等）；可识别路面转向箭头、室内停车场顶棚结构等细节，马斯克称效果「像在玩 GTA」。\n技术：特斯拉自去年起拥有接近像素级还原的世界模型（此前主要用于生成合成训练数据），车上 Reality View 跑的是其缩小版；架构以全新 Universal Vision Encoder（UVE）视觉编码器为核心，喂给「驾驶者」与「绘图者」两个 AI 模型，基于当前视频共享对下一步的预测。\n范围：受 AI4 车型算力限制，目前主要推向 AI4 硬件车型。\n其他：测速照相自动减速、自行车架模式（Bike Rack Mode）、全新视觉编码器。\n端侧视角：车机是端侧 AI 最大的屏幕之一，Reality View 的意义不在「炫」而在信任界面——端到端模型不可解释，实时实景渲染等于把世界模型的内部预测「翻译」给乘客看，这是端到端自动驾驶规模化必须补的界面课；同时「AI4 算力不够就吃不上新功能」再次证明端侧算力就是功能边界，世界模型上车的下一步竞争是渲染成本与推理预算的平衡。",
+      tags: ["特斯拉", "FSD V15", "世界模型", "车机", "Reality View"],
+      url: "https://m.sohu.com/a/110553429_236796",
+      image: "images/news/n309.jpg",
+      imageCap: "FSD V15 车机 Reality View 实景视图（图源：搜狐科技）",
       highlight: false
     },
 
@@ -153,6 +177,18 @@ id: "n297", cat: "行业关注事件", source: "机器之心/搜狐科技", date
       image: "images/news/n297.jpg",
       imageCap: "Alpöge 宣布原文（图源：机器之心）",
       highlight: true
+    },
+
+{
+id: "n308", cat: "芯片厂商", source: "凤凰科技/搜狐科技", date: "2026-11-19",
+      title: "迈特芯 MEGA188 3D-TPU 回片点亮：3D 堆叠 DRAM 峰值带宽 600GB/s，5W 下跑 Qwen3-8B 达 80 TPS",
+      summary: "国内端侧 LLM 芯片企业迈特芯（MetaChip）宣布 MEGA188 成功回片点亮——分布式 TPU 计算单元与 3D DRAM 结合，采用三维堆叠与混合键合工艺，可集成 2/4/8GB 三种容量内存，峰值带宽 600GB/s；支持 5W 低功耗模式，Qwen3-8B 实测推理速度 80 TPS。芯片定位端侧大模型推理、适配多种终端设备——3D 堆叠把计算单元与内存的数据通路缩短到混合键合的微米级距离，是绕开「内存墙」的主要工艺路线之一。",
+      detail: "点亮：迈特芯宣布 MEGA188 成功实现回片点亮（凤凰科技 11 月 20 日报道，事件日 11 月 19 日）。\n架构：3D-TPU——分布式 TPU 计算单元+3D DRAM，三维堆叠与混合键合工艺。\n内存：可集成 2/4/8GB 三种容量规格，峰值内存带宽 600GB/s。\n实测：支持 5W 低功耗模式，Qwen3-8B 推理速度 80 TPS。\n定位：端侧 LLM 芯片，适配多种终端设备；迈特芯为国内端侧 LLM 芯片企业。\n端侧视角：5W 功耗预算内跑 8B 模型 80 TPS，是「每瓦 token 数」维度的端侧新锚点——瓶颈从来不是算力而是带宽：3D 堆叠 DRAM 把权重搬运距离压到微米级，等于在工艺层直接拆内存墙；与同周群联「智能 SSD」（盘上 NPU）、炬芯存内计算 NPU 量产互相印证——算力正在向存储/内存层下沉，「存算一体」从论文关键词变成货架上的产品参数。",
+      tags: ["迈特芯", "3D-TPU", "MEGA188", "存算一体", "内存墙"],
+      url: "https://tech.ifeng.com/c/8yCpGlDh0Qv",
+      image: "images/news/n308.jpg",
+      imageCap: "迈特芯 MEGA188 3D-TPU 芯片（图源：搜狐科技）",
+      highlight: false
     },
 
 {
