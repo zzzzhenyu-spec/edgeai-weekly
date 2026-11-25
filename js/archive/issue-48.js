@@ -157,6 +157,18 @@ id: "n287", cat: "AI硬件", source: "搜狐科技", date: "2026-11-19",
     },
 
 {
+id: "n308", cat: "芯片厂商", source: "凤凰科技/搜狐科技", date: "2026-11-19",
+      title: "迈特芯 MEGA188 3D-TPU 回片点亮：3D 堆叠 DRAM 峰值带宽 600GB/s，5W 下跑 Qwen3-8B 达 80 TPS",
+      summary: "国内端侧 LLM 芯片企业迈特芯（MetaChip）宣布 MEGA188 成功回片点亮——分布式 TPU 计算单元与 3D DRAM 结合，采用三维堆叠与混合键合工艺，可集成 2/4/8GB 三种容量内存，峰值带宽 600GB/s；支持 5W 低功耗模式，Qwen3-8B 实测推理速度 80 TPS。芯片定位端侧大模型推理、适配多种终端设备——3D 堆叠把计算单元与内存的数据通路缩短到混合键合的微米级距离，是绕开「内存墙」的主要工艺路线之一。",
+      detail: "点亮：迈特芯宣布 MEGA188 成功实现回片点亮（凤凰科技 11 月 20 日报道，事件日 11 月 19 日）。\n架构：3D-TPU——分布式 TPU 计算单元+3D DRAM，三维堆叠与混合键合工艺。\n内存：可集成 2/4/8GB 三种容量规格，峰值内存带宽 600GB/s。\n实测：支持 5W 低功耗模式，Qwen3-8B 推理速度 80 TPS。\n定位：端侧 LLM 芯片，适配多种终端设备；迈特芯为国内端侧 LLM 芯片企业。\n端侧视角：5W 功耗预算内跑 8B 模型 80 TPS，是「每瓦 token 数」维度的端侧新锚点——瓶颈从来不是算力而是带宽：3D 堆叠 DRAM 把权重搬运距离压到微米级，等于在工艺层直接拆内存墙；与同周群联「智能 SSD」（盘上 NPU）、炬芯存内计算 NPU 量产互相印证——算力正在向存储/内存层下沉，「存算一体」从论文关键词变成货架上的产品参数。",
+      tags: ["迈特芯", "3D-TPU", "MEGA188", "存算一体", "内存墙"],
+      url: "https://tech.ifeng.com/c/8yCpGlDh0Qv",
+      image: "images/news/n308.jpg",
+      imageCap: "迈特芯 MEGA188 3D-TPU 芯片（图源：搜狐科技）",
+      highlight: false
+    },
+
+{
 id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-18",
       title: "谷歌发布 Gemini 4 Neon 补齐中档：比 Carbon 快 3 倍、成本低约 40%，编程智能体指数超 Claude，四天内第三款 Gemini 4 新模型",
       summary: "谷歌发布 Gemini 4 Neon——Gemini 4 家族自此形成三档完整阵型：Carbon（攻坚最难长周期项目）、Neon（平衡深度与速度，居中）、Hydrogen（日常快速执行）。Neon 主攻复杂编程、科学研究与企业工作流：官方称速度比 Carbon 快 3 倍、完成任务成本低约 40%，编程 AI 智能体指数超越 Claude，上下文窗口 100 万 token；在 Antigravity 开发环境中可承担任务调度角色——指挥多个 Hydrogen 子智能体协同完成复杂作业。正陆续向 AI Studio 与 Gemini API 开放。",
