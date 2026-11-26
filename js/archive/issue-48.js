@@ -7,7 +7,7 @@ WEEKLY_ARCHIVE[48] = {
     weekRange: "2026.11.16 — 2026.11.22",
     updated: "2026-11-22",
     status: "final",
-    editorsNote: "本期聚焦：端侧 AI 完成一次「平台级换代」——操作系统底座：微软向 Windows 推送本机模型 Aion 1.0 Instruct（上下文 3.5K 升 32K、GPU 支持在路上），苹果把 Siri AI 经 App Intents 开放给全部第三方开发者，华为星芒 O1 Pro 发布即售罄（5499 元起、麒麟 9030S）把 AI 手机打進中端价位。模型与能力：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵，Astra 在双臂具身基准成功率翻倍（19.6%→41.2%）；Anthropic 数学家以 1700 万行 Lean 代码宣布 Claude 辅助证明黎曼猜想、与一份写了 12 年的 940 页人类手稿同场竞速。硬件与存储：谷歌首款 Gemini 智能眼镜开放预订（395 美元起、12 月 10 日开售）凑齐四强争霸，群联展示内建 NPU 的智能 SSD——算力颗粒度下沉到存储介质。资本与格局：DeepSeek 千亿融资落地 31 家产业资本入局、Anthropic 813 亿美元创纪录 IPO。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。"
+    editorsNote: "本期聚焦：端侧 AI 完成一次「平台级换代」——操作系统底座：微软向 Windows 推送本机模型 Aion 1.0 Instruct（上下文 3.5K 升 32K、GPU 支持在路上），苹果把 Siri AI 经 App Intents 开放给全部第三方开发者，华为星芒 O1 Pro 发布即售罄（5499 元起、麒麟 9030S）把 AI 手机打進中端价位。模型与能力：OpenAI 双发 GPT-6.2 Astra/Sol、谷歌 Gemini 4 三档齐阵，Astra 在双臂具身基准成功率翻倍（19.6%→41.2%）；Anthropic 数学家以 1700 万行 Lean 代码宣布 Claude 辅助证明黎曼猜想、与一份写了 12 年的 940 页人类手稿同场竞速。硬件与存储：谷歌首款 Gemini 智能眼镜开放预订（395 美元起、12 月 10 日开售）凑齐四强争霸，群联展示内建 NPU 的智能 SSD——算力颗粒度下沉到存储介质。资本与格局：DeepSeek 千亿融资落地 31 家产业资本入局、Anthropic 813 亿美元创纪录 IPO。前瞻：Mate X8（11-24）/文心 5.5 开源（11-25）。补录勘误（11-27）：迈特芯 MEGA188 3D-TPU 点亮（11-18）、机械革命首发 RTX Spark 桌面 AI 主机大师之路 X10（11-19）补入本期。"
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
@@ -229,6 +229,18 @@ id: "n338", cat: "端侧Agent", source: "TechCrunch/彭博社", date: "2026-11-1
     },
 
 {
+id: "n340", cat: "AI硬件", source: "智东西/腾讯新闻", date: "2026-11-19",
+      title: "机械革命首发英伟达 RTX Spark 桌面 AI 主机大师之路 X10：1PFLOPS 本地算力、128GB 统一内存流畅跑 252B 模型，顶配 49999 元",
+      summary: "机械革命 11 月 19 日在杭州发布全球首批英伟达 RTX Spark 桌面 AI 主机「大师之路 X10」——1.25L 机身内本地 AI 算力达 1PFLOPS（FP4 理论峰值）、配 128GB 高速统一内存，最高支持 252B 模型本地流畅运行；旗舰版 128GB+2TB 售 49999 元、专业版 64GB+1TB 售 32999 元。同场发布 AI SSD：4-bit 精度下本地可跑模型从 35B 提到 397B、模型总耗时减少约 57%，可对机械革命全系笔记本原位替换。",
+      detail: "发布：11 月 19 日杭州发布会（智东西现场报道），全球首批 RTX Spark 桌面 AI 主机之一。\n规格：1.25L 机身（高 5.1 厘米）、英伟达 RTX Spark 芯片、FP4 理论峰值 1PFLOPS、128GB 高速统一内存；最高支持 252B 模型流畅运行、125B 级模型本地部署，主打企业私域 AI（数据不出端），创始人潘春节称「不是卖一个小盒子，而是卖一整套本地 AI 能力」。\n价格：旗舰版 128GB+2TB 49999 元；专业版 64GB+1TB 32999 元。\nAI SSD：4-bit 精度下本地可跑模型从 35B 提到 397B，模型总耗时减少约 57%，改善 Agent 长任务与跨会话记忆体验，可对全系游戏本/轻薄本原位替换。\n生态：对主流大模型 Day-0 支持；智能体侧已适配 Qoder、千问办公、WorkBuddy。\n端侧视角：游戏本厂商转型的样本——机械革命自述从 PC 厂商转向「端侧 AI 能力提供者」（其 AI PC 为首批国标 L3 智能等级认证产品）；RTX Spark 桌面形态把「统一内存跑两千亿级参数」拉进 5 万元档的企业桌面，与 DGX Spark 开发套件形成开发者/企业两档市场。",
+      tags: ["机械革命", "RTX Spark", "大师之路X10", "AI主机", "统一内存"],
+      url: "https://zhidx.com/p/612222.html",
+      image: "images/news/n340.jpg",
+      imageCap: "机械革命大师之路 X10 桌面 AI 主机（图源：腾讯新闻）",
+      highlight: false
+    },
+
+{
 id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-18",
       title: "谷歌发布 Gemini 4 Neon 补齐中档：比 Carbon 快 3 倍、成本低约 40%，编程智能体指数超 Claude，四天内第三款 Gemini 4 新模型",
       summary: "谷歌发布 Gemini 4 Neon——Gemini 4 家族自此形成三档完整阵型：Carbon（攻坚最难长周期项目）、Neon（平衡深度与速度，居中）、Hydrogen（日常快速执行）。Neon 主攻复杂编程、科学研究与企业工作流：官方称速度比 Carbon 快 3 倍、完成任务成本低约 40%，编程 AI 智能体指数超越 Claude，上下文窗口 100 万 token；在 Antigravity 开发环境中可承担任务调度角色——指挥多个 Hydrogen 子智能体协同完成复杂作业。正陆续向 AI Studio 与 Gemini API 开放。",
@@ -297,6 +309,18 @@ id: "n281", cat: "端侧Agent", source: "新浪财经", date: "2026-11-18",
       url: "https://finance.sina.com.cn/tech/digi/2026-11-18/doc-inizehkz6841176.shtml",
       image: "images/news/n281.jpg",
       imageCap: "微信小微 AI 助理（图源：新浪财经）",
+      highlight: false
+    },
+
+{
+id: "n339", cat: "芯片厂商", source: "凤凰网科技/东方财富", date: "2026-11-18",
+      title: "迈特芯国产 3D-TPU 芯片 MEGA188 成功点亮：3D DRAM 堆叠 600GB/s 带宽，5W 功耗跑 3B~120B 模型",
+      summary: "深圳端侧 AI 芯片公司迈特芯 11 月 18 日发布会宣布 MEGA188 成功回片点亮——首创 3D 分布式 TPU 架构，把分布式 TPU 计算单元与 3D DRAM 堆叠深度融合以缩短数据搬运距离，直指端侧大模型推理的「内存墙」；芯片集成 2/4/8GB 内存、峰值带宽 600GB/s，5W 低功耗下 token 速率超 80tps，已跑通 3B~120B 主流模型，采用全国产成熟制程与三维堆叠混合键合工艺，向量产迈出关键一步。",
+      detail: "点亮：11 月 18 日发布会官宣 MEGA188 回片点亮（凤凰网科技/东方财富等多源）。\n架构：3D 分布式 TPU——摒弃传统 NPU 设计范式，分布式 TPU 计算单元与 3D DRAM 堆叠垂直集成、缩短数据搬运距离，缓解大模型推理下沉终端时的内存墙瓶颈。\n规格：集成 2/4/8GB 内存、峰值内存带宽 600GB/s；5W 低功耗模式、端侧 token 速率目标超 80tps；已跑通 3B~120B 主流模型。\n工艺：全国产成熟制程，三维堆叠与混合键合；入选 2026 年度「中国芯」IC 风云榜候选。\n端侧视角：端侧推理的两堵墙——内存墙与功耗墙，MEGA188 用「计算单元贴着内存长」的 3D 堆叠正面打第一堵，600GB/s 带宽配 5W/80tps 是端侧跑十亿到千亿参数的工程化解法；回片点亮到量产仍是长跑，跟踪流片良率与首批落地场景。",
+      tags: ["迈特芯", "MEGA188", "3D-TPU", "端侧芯片", "内存墙"],
+      url: "https://tech.ifeng.com/c/8yCpGlDh0Qv",
+      image: "images/news/n339.jpg",
+      imageCap: "迈特芯 MEGA188 3D-TPU 芯片（图源：凤凰网科技）",
       highlight: false
     },
 
