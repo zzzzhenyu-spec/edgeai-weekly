@@ -205,6 +205,18 @@ id: "n330", cat: "芯片厂商", source: "搜狐科技/凤凰科技", date: "202
     },
 
 {
+id: "n334", cat: "AI硬件", source: "华硕官方/Notebookcheck", date: "2026-11-19",
+      title: "华硕 ProArt GR1X 迷你主机供货：RTX Spark 1 Petaflop 端侧算力＋128GB 统一内存，可本地跑 120B 大模型",
+      summary: "华硕宣布 ProArt GR1X 迷你主机正式供货：约 150 毫米见方的紧凑机身搭载 NVIDIA RTX Spark 平台，AI 性能最高 1 Petaflop、128GB 统一内存，可运行 120B 参数大模型、渲染 90GB 以上 3D 场景与 4K AI 视频生成；标配 10GbE 万兆网口与两个 M.2 插槽，面向本地智能体 AI 与内容创作场景。",
+      detail: "节奏：9 月 2 日 IFA 2026 亮相，10 月 8 日与 ProArt P14/P16 同场开启预购，11 月 19 日前后宣布正式供货。\n硬件：约 150mm 见方；NVIDIA RTX Spark；AI 性能最高 1 Petaflop；128GB 统一内存；10GbE 万兆以太网；两个 M.2 插槽。\n能力：本地运行 120B 参数大模型、渲染 90GB+ 3D 场景、4K AI 视频生成——面向本地/智能体 AI 与内容创作。\n端侧视角：GR1X 把「桌面级智能体主机」做进了 15 厘米见方——与机械革命大师之路 X10（128GB 统一内存 49999 元）同场竞速，RTX Spark 生态的第一波桌面化产品到齐；「能本地跑 120B」正在成为迷你主机的新规格语言。（用户对账点名后核华硕官方新闻稿补录。）",
+      tags: ["华硕", "ProArt GR1X", "RTX Spark", "迷你主机", "128GB"],
+      url: "https://press.asus.com/news/press-releases/asus-announces-availability-proart-gr1x-rtx-spark-mini-pc",
+      image: "images/news/n334.jpg",
+      imageCap: "ProArt GR1X 迷你主机（图源：华硕官方）",
+      highlight: false
+    },
+
+{
 id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-18",
       title: "谷歌发布 Gemini 4 Neon 补齐中档：比 Carbon 快 3 倍、成本低约 40%，编程智能体指数超 Claude，四天内第三款 Gemini 4 新模型",
       summary: "谷歌发布 Gemini 4 Neon——Gemini 4 家族自此形成三档完整阵型：Carbon（攻坚最难长周期项目）、Neon（平衡深度与速度，居中）、Hydrogen（日常快速执行）。Neon 主攻复杂编程、科学研究与企业工作流：官方称速度比 Carbon 快 3 倍、完成任务成本低约 40%，编程 AI 智能体指数超越 Claude，上下文窗口 100 万 token；在 Antigravity 开发环境中可承担任务调度角色——指挥多个 Hydrogen 子智能体协同完成复杂作业。正陆续向 AI Studio 与 Gemini API 开放。",

@@ -46,6 +46,17 @@ WEEKLY_ARCHIVE[42] = {
       highlight: false
     },
     {
+      id: "n333", cat: "AI硬件", source: "华硕官方/快科技", date: "2026-10-08",
+      title: "华硕 ProArt 创14 RTX Spark 发布：号称全球首款智能体 PC，1 Petaflop 端侧算力最高 128GB 统一内存",
+      summary: "10 月 8 日华硕发布 ProArt 创14（P14）RTX Spark——号称全球首款面向创作者的智能体 PC：搭载 NVIDIA RTX Spark N1X 超级芯片，本地 AI 算力最高 1 Petaflop，至高 128GB 高频统一内存（另有 64GB 版），依托完整 CUDA 技术栈可本地搭建、微调与运行 AI 模型；约 1.48kg 的 14 英寸机身、2.8K 屏，10 月 16 日开售。同系 ProArt P16 与迷你主机 GR1X 同场亮相。",
+      detail: "发布：10 月 8 日发布并开启预约，10 月 16 日开售（京东 12 期免息）。\n定位：全球首款面向创作者的智能体 PC（Agentic PC）。\n硬件：NVIDIA RTX Spark N1X 超级芯片；本地 AI 算力最高 1 Petaflop；至高 128GB 高频统一内存（64GB 版可选）；约 1.48kg、14 英寸 2.8K 屏；完整 CUDA 技术栈。\n能力：本地搭建/微调/运行 AI 模型，支撑多轨剪辑、实时 AI 渲染等创作工作流。\n价格：大陆售价未直接公布；台湾地区 ProArt P14/P16 建议售价 NT$169,999/179,999 起，128GB 版率先预购。\n同场：ProArt P16 与迷你主机 GR1X（RTX Spark，后于 11 月供货）。\n端侧视角：RTX Spark 平台的第一波「智能体 PC」落地——「智能体电脑」的产品定义（本地跑大模型+常驻 Agent）开始从英伟达的参考设计变成 OEM 的货架商品；128GB 统一内存把「本地跑百亿到千亿参数」写进创作本规格表，AI PC 的竞争单位从 NPU TOPS 悄悄换成了内存容量。（本期勘误补录：10 月发布当时漏收，用户对账点名后核华硕官方新闻稿补入。）",
+      tags: ["华硕", "ProArt创14", "RTX Spark", "智能体PC", "统一内存"],
+      url: "https://press.asus.com/news/press-releases/asus-proart-rtx-spark-p16-p14-ai-pcs",
+      image: "images/archive/issue-42/n333.jpg",
+      imageCap: "ProArt P14/P16 与 GR1X（图源：华硕官方）",
+      highlight: false
+    },
+    {
       id: "n68", cat: "端侧Agent", source: "TechCrunch（编译）", date: "2026-10-08",
       title: "Google AI Edge Foresight 发布：全程离线的 Mac 会议笔记应用，EmbeddingGemma 2 驱动对标 Granola",
       summary: "Google 推出 Mac 应用 AI Edge Foresight——完全离线运行，用端侧 EmbeddingGemma 2（740M 参数）跨应用捕获会议笔记（含线下会议）；类 Granola 的分屏设计（速记 + AI 笔记），支持实时转写、上传文档构建本地知识库并实时问答，聊天助手由 Gemma 4 驱动——本地优先智能体应用的旗舰样本。",
