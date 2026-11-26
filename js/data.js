@@ -18,11 +18,47 @@ const WEEKLY_DATA = {
     weekRange: "2026.11.20 — 2026.11.26 · 近 7 天",
     updated: "2026-11-26",
     status: "rolling",
-    editorsNote: "近 7 天聚焦：百度如期兑现承诺，文心 5.5 Flash Preview 全量开源（280B MoE、Apache 2.0 可商用，HuggingFace 与 ModelScope 同步上架，支持 vLLM/SGLang 部署）——国产旗舰开源权重再添一档。端侧模型「循环架构」落地三连：Inkling 2 Mini（26.4B 循环 MoE、约 20GB 内存笔记本离线跑）、智谱 GLM-5.4 Coding Plan（国内首款 Loop Transformer），「用循环换参数效率」渐成共识。硬件侧：华为 Mate X8（麒麟 9050 Pro 逻辑折叠芯片）、机械革命 RTX Spark 主机（128GB 统一内存本地跑 2500 亿参数）开卖；迈特芯 MEGA188 3D-TPU 回片点亮（3D 堆叠 DRAM 峰值带宽 600GB/s、5W 下跑 Qwen3-8B 达 80 TPS），与群联「智能 SSD」同周——算力正向存储层下沉。特斯拉 FSD V15 开始推送，车机换上世界模型缩小版 Reality View 实景视图；另有谷歌 Genie 4 开发者开放、中汽中心座舱 AI 分级（C1-C5）、Claude 辅助黎曼猜想证明（1700 万行 Lean 代码）、蚂蚁医疗 AI 五连发开源。千问Go「代打电话」全面免费开放（AI 智能体开始承包订餐厅、找快递这类真实通话事务）；辛米尔科技业界首提「端侧超节点」（异构端侧设备组队计算，吞吐量+270% 为厂商口径）。微信 AI 开源端侧统一模型 WePocketModel（一套 4B 权重兼顾检索、生成、决策，三模型 21GB 压到 8GB）；PrismML 三值 Bonsai 2.5 27B 在 5.9GB 体积上把智能体工具调用拉回 FP16 水平；蚂蚁阿福发布「福环」「福戒」AI 健康穿戴（最长 14 天续航），Elliptic Labs 签署智能眼镜超声波手势概念验证协议，华为 Mate X8 配备行业首个 30B 端侧 MoE（小艺简报/智拍/修图全本地），三星人形机器人灵巧手曝光（单手 20 电机，CES 2027 拟发 HR/HE 两款）。德国消费者保护协会起诉 Meta 与依视路陆逊梯卡，指 Ray-Ban 摄像头智能眼镜销售未告知「公共场所无法合规使用」，AI 眼镜的隐私风险首次被摆上法庭。韩国高考爆发 AI 眼镜作弊风波（111 起电子设备违规，5 起考试中实际使用），教育部长官引咎辞职——「拍照即问」第一次撞上封闭场景的防线。小鹏人形机器人 IRON 自主登台演讲，官方称全栈大模型端侧部署、离线也能思考，预计 2027 年 1 月量产；荣耀 700 系列把「豆包」写进产品名和唤醒词；智元「灵心」平台上线一年孵化超 3 万个机器人智能体。\n今日新增：微信 WePocketModel 开源、蚂蚁福环福戒、PrismML Bonsai 2.5、Elliptic Labs 眼镜手势、三星人形机器人灵巧手、德国起诉 Meta 智能眼镜、韩国高考 AI 眼镜作弊风波、小鹏 IRON 自主登台、荣耀 700 系列发布、智元灵心平台成绩、千问Go 免费代打电话、端侧超节点首提、文心 5.5 全量开源、特斯拉 FSD V15、迈特芯 MEGA188。",
+    editorsNote: "近 7 天聚焦：个人 AI 助理之战正面开打——字节「小豆」邀请制公测（盯消息、比价、替你打电话），阿里千问Go 免费代打电话同周开放，「从聊天到办事」成为大厂共识入口。黎曼猜想形式化证明一周内两连跳：先由 Claude 辅助完成 1700 万行 Lean 证明，再被重构压缩 99.56% 到 7.6 万行——普通电脑一两小时即可本地复现验证。车载与机器人端侧加速落子：蔚来世界模型 NWM 3.0 以隐式世界模型省去渲染获百倍级训练加速、座舱车控完成率提至 95.3%，小鹏 IRON 自主登台演讲（全栈大模型端侧部署），AMD 联手中科慧灵验证人形机器人「大小脑」双处理器架构。模型侧：文心 5.5 Flash 全量开源（280B MoE、Apache 2.0）、微信开源端侧统一模型 WePocketModel（一套 4B 权重检索/生成/决策三合一）、腾讯混元 DFly2 草稿模型零额外显存提速 4.2 倍、PrismML 三值 Bonsai 2.5 在 5.9GB 上打平 FP16 工具调用。AI 眼镜迎来监管与社会的双重拷问：韩国高考 AI 作弊风波致教育部长官辞职、德国消协起诉 Meta 智能眼镜——「录制提示」正从卖点变门槛。\n今日新增：黎曼证明压缩至 7.6 万行、蔚来世界模型 3.0、混元开源 DFly2、字节小豆公测；论文板块周四换血 10 篇（端侧个性化、KV 缓存加速、MoE 内存路由、权重编程复现等）。",
   },
 
   /* ---------------- 板块一：本周资讯（仅最近一周） ---------------- */
 news: [
+{
+id: "n326", cat: "行业关注事件", source: "量子位/Anthropic", date: "2026-11-26",
+      title: "黎曼猜想证明「瘦身」成功：Anthropic 研究员用 Claude 把 1700 万行 Lean 代码重构到 7.6 万行，压缩 99.56%",
+      summary: "Anthropic 研究员 Luke Sernau 与同事及 Claude 完成对黎曼猜想形式化证明的彻底重构：从 Alpöge 原版约 1740 万行 Lean 代码压缩到紧凑版约 7.6 万行（压缩 99.56%），并仍通过机器验证——Lean 内核与多个独立检查器交叉验证通过，仅依赖三个标准公理。紧凑版可在 12 核 24GB 内存的普通机器上 1–2 小时完成构建（原版在 AWS 上编译需 21 小时），新项目以 Apache 2.0 开源。作者强调证明「仅通过了机器验证，尚未有数学家完整通读」。",
+      detail: "重构：Anthropic 研究员 Luke Sernau 与同事及 Claude 完成，项目名 grh-lean（原版由数学家 Alpöge 与 Claude 于 11-21 前后发布）。\n方法：核心是重构而非简单压缩——先展开定义为扁平长链、跨模块边界简化、再重新折叠封装；部分环节（如绕开 Vandiver 猜想相关内容）换用全新论证。社区此前的自动死代码删除最多只能削减约 8% 且编译失败。\n版本：可读版 grh/ 约 30 万行、801 个文件带文档；紧凑版 grh-compact/ 约 7.6 万行、792 个文件。\n验证：无 sorry 占位符，仅依赖 propext、Classical.choice、Quot.sound 三个标准公理；经 Lean 内核、官方 Comparator v4.35.0 与 nanoda、con-leche、con-ron 等独立检查器交叉验证通过。\n构建：紧凑版在 12 核、24GB 内存机器上 1–2 小时构建；原版在 AWS 上编译需 21 小时。\n开源：原版无许可证；新项目以 Apache 2.0 开源，可自由使用、修改、分发。代码和文档均由 Claude 编写，人类提供方向建议。\n端侧视角：24GB 内存的普通机器就能在一两个小时内独立复现验证一个数学史上最重要的证明——「云端生成、本地验证」的信任分工在这件事上走到了极致；压缩 99.56% 的意义不在于省磁盘，而在于把「任何人可检查」的门槛从云计算时长降到一台家用电脑，这是形式化证明成为公共财产的前提。下一个问题作者自己说了：还没有数学家完整通读过它。",
+      tags: ["黎曼猜想", "Lean", "形式化验证", "Claude", "Anthropic"],
+      url: "https://www.qbitai.com/2026/11/512819.html",
+      image: "images/news/n326.jpg",
+      imageCap: "黎曼猜想证明的 Lean 代码（图源：量子位）",
+      highlight: true
+    },
+
+{
+id: "n327", cat: "AI硬件", source: "量子位/蔚来官方", date: "2026-11-26",
+      title: "蔚来发布世界模型 NWM 3.0：隐式世界模型省去渲染获百倍级训练加速，座舱车控任务完成率从 40% 提至 95.3%",
+      summary: "蔚来成立 12 周年当天举办第三届 NIO IN 创新科技日，发布世界模型 NWM 3.0：综合训练效率提升 5 倍（前提是综合数据量较上一版提高 7 倍），核心是显式+隐式双闭环强化学习——隐式世界模型在特征空间预测环境变化、省去视频渲染，训练获得「百倍级加速」；配套自研底盘控制时延降低 78%、复杂场景接管率降低 40%。座舱侧 NOMI Intelligence 4.0 引入闭环强化学习与双仿真模拟器，典型车控任务完成率从 40% 多提升至 95.3%，12 月向首批用户推送。",
+      detail: "发布：11 月 26 日第三届 NIO IN 蔚来创新科技日（蔚来成立 12 周年当天）；NWM 3.0 计划今年 12 月启动备案，通过后面向四个智能系统平台推送。\n训练：综合训练效率提升 5 倍——在综合数据量较上一版提高 7 倍的前提下；显式+隐式双闭环强化学习：隐式世界模型省去视频渲染（百倍级加速）、时空联合编码降低算力消耗、数据自进化体系（相同人工投入下数据挖掘效率提升 3 倍）。\n整车：自研底盘控制时延降低 78%，整车控制时延平均降低 50%；复杂场景接管率降低 40%（学习型奖励模型）；显式世界模型视角扩展至 11 个，承担闭环测试验证；联合神玑芯片与底盘做全链路优化。智驾已进入生产环节：每天超千辆新车下线后自行驶向指定转运地点。\n座舱：NOMI Intelligence 4.0 引入闭环强化学习，构建用户/车辆环境双仿真模拟器；基于百万级训练数据与超 60 万条评测数据，典型车控任务完成率从 40% 多提升至 95.3%；12 月推送首批用户，明年二季度覆盖其他平台。另含 NIM 超千亿参数 MoE 大模型、Context Hub（近 3000 项原子级信息）、Tool Hub（22 大领域数千项能力）、全双工交互、高频车控 0.6 秒响应、NAS 安全体系。\n表态：任少卿（今年 8 月已宣布具身智能创业、仍担纲本次发布）——物理 AI 除扩大模型与数据规模外，还有「执行效率」这一重要进化维度（100km/h 时速下 100 毫秒驶出约 2.8 米）。\n端侧视角：车端是端侧 AI 最苛刻的考场——100 毫秒就是 2.8 米，任何依赖云端的往返都不可接受；隐式世界模型「不渲染、在特征空间里预测」正是把世界模型塞进车端算力的关键取舍，座舱 95.3% 的车控完成率则是强化学习第一次在量产座舱里给出硬数字。神玑芯片+底盘的全链路时延优化说明：车载端侧的竞争单位不是 TOPS，是毫秒。",
+      tags: ["蔚来", "NWM 3.0", "世界模型", "NOMI", "智能座舱"],
+      url: "https://www.qbitai.com/2026/11/512897.html",
+      image: "images/news/n327.jpg",
+      imageCap: "NWM 3.0 显式+隐式双闭环体系（图源：量子位/蔚来）",
+      highlight: false
+    },
+
+{
+id: "n328", cat: "大模型厂商", source: "IT之家/腾讯混元", date: "2026-11-26",
+      title: "腾讯混元开源草稿模型 DFly2：与目标模型共享 KV 缓存零额外显存，长文与智能体场景加速最高 4.2 倍",
+      summary: "腾讯混元团队开源新一代草稿模型 DFly2——针对 DSA 类稀疏注意力大模型与长上下文场景设计，不替换 Hy4 flash、作为「挂在旁边的加速组件」，在保持模型权重与输出不变的前提下提速：19 个公开评测集上整体优于 DFlash 与 DSpark，长文与 Agentic 场景平均加速比较 DSpark 分别高约 12% 与 30%，单项最高 4.2 倍。核心是 KV Share/Index Share——每个草稿层直接共享目标模型稀疏注意力层的 KV 缓存与 indexer 选出的至多 2048 个位置：计算开销固定、零额外 KV 显存、PD 分离友好。",
+      detail: "开源：11 月 26 日腾讯混元团队发布；GitHub（Tencent/AngelSpec）、HuggingFace（AngelSlim）、论文 arXiv:2611.34776；文中未提及许可协议。同日混元还放出 Hy4 flash 量化版 GGUF 权重：224B 模型塞进 64GB Mac mini 本地运行，生成速度约每秒 17 个 token。\n定位：草稿模型（draft model），针对 DSA 类稀疏注意力大模型与长上下文场景；不替换 Hy4 flash，「作用更像是挂在旁边的加速组件」；适配 Hy4 flash 的权重及完整训练代码同步开源。\n加速：19 个公开评测集上接收长度与加速比整体优于 DFlash 与 DSpark；长文与 Agentic 场景平均加速比较 DSpark 分别高约 12% 与 30%，单项最高 4.2×；与主流开源模型自带的 DSpark 相比，Agentic 与真实任务 WorkBuddy 上接收长度领先 10.4%。\n技术：KV Share + Index Share——每个 draft 层直接共享目标模型稀疏注意力层的 KV cache 与 indexer 选出的至多 2048 个位置：每个 draft token 至多关注约 2K 个 key（计算开销固定）、零额外 KV 显存、PD 分离友好（P→D 仅额外传输末层隐状态）。\n端侧视角：草稿模型是端侧推理「免费午餐」的现代形态——目标模型一字不改、输出完全一致，靠小模型猜、大模型验来提吞吐；DFly2 把「零额外 KV 显存」做成硬约束，恰好击中端侧最紧的那根弦（内存而非算力）：在手机和 PC 上，省下的每一兆显存都直接换成可用上下文长度。开源训练代码意味着这条加速路线可以被移植到其他稀疏注意力模型上。",
+      tags: ["腾讯混元", "DFly2", "草稿模型", "推测解码", "开源"],
+      url: "https://www.ithome.com/1/032/929.htm",
+      image: "images/news/n328.jpg",
+      imageCap: "AngelSpec 项目（图源：GitHub）",
+      highlight: false
+    },
+
 {
 id: "n307", cat: "大模型厂商", source: "百度官方/开源中国", date: "2026-11-25",
       title: "百度如期全量开源文心 5.5 Flash Preview：280B MoE Apache 2.0 可商用，HuggingFace 与 ModelScope 同步上架",
@@ -128,6 +164,30 @@ id: "n318", cat: "行业关注事件", source: "IT之家/搜狐科技", date: "2
       url: "https://www.sohu.com/a/1106153787_114760",
       image: "images/news/n318.jpg",
       imageCap: "Ray-Ban 摄像头智能眼镜（图源：搜狐科技）",
+      highlight: false
+    },
+
+{
+id: "n325", cat: "大模型厂商", source: "36氪/每日经济新闻", date: "2026-11-24",
+      title: "字节豆包个人智能体「小豆」开启邀请制公测：盯消息、比价、订票、替你打电话，与千问Go 正面相撞",
+      summary: "11 月 24 日，字节跳动豆包旗下个人 AI 助理「小豆」（内部代号 Spell）开启邀请制公测——独立 App、凭一次性邀请码体验（闲鱼上已炒到约 20 元），由豆包手机助手团队主导、对标 Meta Muse。在问答与检索之外主打主动服务、用户记忆与任务执行：可连接抖音、百度网盘、提醒事项，实测案例包括盯 GTA6 消息、AirPods Pro 比价、订票、监测猫粮余量提醒补货、整理飞书文档、替用户打电话。公测次日，阿里千问Go 开放免费代打电话——大厂个人 AI 入口之争正面开打。",
+      detail: "公测：11 月 24 日开启邀请制公测，凭邀请码体验（码为一次性、已入驻用户可在 App 内生成分享，闲鱼炒到约 20 元）；目前仅 App 端，官方称能力未来会逐步在豆包 App 中放开。\n定位：豆包旗下个人 AI 助理，内部代号 Spell，由豆包手机助手团队主导，对标 Meta Muse——从「聊天」走向「主动办事」。\n能力：主动服务、用户记忆、任务执行；首次登录支持连接抖音、百度网盘、提醒事项等。\n案例（实测）：盯 GTA6 发布消息、AirPods Pro 比价、订票、监测猫粮余量并提醒补货、整理飞书文档、跟进待办、替用户打电话、食物热量估算与体重运动管理。\n对局：公测次日（11 月 25 日）阿里千问Go 开放免费代打电话——字节与阿里在个人智能体入口同周落子。\n端侧视角：个人智能体这条线的分水岭是「谁先从对话框搬进系统」——小豆与千问Go 目前都是 App 形态，靠连接器够到抖音、网盘、外卖这些服务；真正的终局是常驻系统层、有连续记忆、能被事件唤醒（「GTA6 出了」而不是「帮我查查」）。字节的优势是服务生态与推荐引擎的旧衣钵（知道你可能要什么），阿里的优势是交易闭环；双方同周押注同一个形态，说明「个人智能体=下一个入口」已是行业共识——剩下的悬念是记忆与主动性能不能在端侧低功耗常驻，这决定它是真助理还是又一个 App。",
+      tags: ["字节", "豆包", "小豆", "个人智能体", "千问Go"],
+      url: "https://m.36kr.com/p/4083578123184773",
+      image: "images/news/n325.jpg",
+      imageCap: "小豆 App 界面（图源：人人都是产品经理实测）",
+      highlight: false
+    },
+
+{
+id: "n329", cat: "行业关注事件", source: "纽约州长办公室/凤凰科技", date: "2026-11-24",
+      title: "纽约州签署全美首个 AI 聊天玩具禁令：五年禁止制造分销销售，违规每日最高罚 1.5 万美元",
+      summary: "11 月 24 日纽约州长霍楚尔在哈林区一家玩具店签署法案 S.9408A/A.11144B：五年内全州禁止制造、分销和销售内置 AI 聊天机器人的儿童玩具（联网对话的毛绒玩偶、娃娃与机器人），由州总检察长执法、每项违规每日最高民事罚款 1.5 万美元，自签署后 90 天（2027 年 2 月 22 日）生效。她举例：Common Sense Media 测试中 Miko 3 机器人建议研究者「从窗户跳出去」，NBC 发现一款面向 3 岁幼儿的毛绒猫会输出暴力与性描述。同周，苹果在全球 App Store 下架 MiniMax 旗下 AI 陪伴应用 Talkie 待审。",
+      detail: "法案：S.9408A/A.11144B，11 月 24 日由州长 Kathy Hochul 在哈林区 Grandma's Place 玩具店签署。\n范围：内置或集成 AI 聊天机器人、联网与儿童对话的玩具（会说话的毛绒动物、娃娃、机器人）——制造、分销、销售三环节五年全面暂停。\n执法：州总检察长执行，每项违规每日最高民事罚款 1.5 万美元。\n生效：签署后 90 天（约 2027 年 2 月 22 日）；霍楚尔提醒家长本圣诞季自行留意（是否内置 AI 伴侣、收集哪些数据、是否允许长时间交互）。\n案例：Common Sense Media 研究者对 Miko 3 说「喜欢从高处跳」，机器人建议从窗户或屋顶跳出去；NBC 本月发现面向 3 岁儿童的毛绒猫愿输出种族灭绝与性暴力的描述。\n背景：纽约上月刚签署两部儿童保护法（禁止 AI 聊天机器人诱导自残、限制婴儿监视器技术）；州长预告 1 月州情咨文将进一步立法（安全标准+独立专家进驻企业）。\n关联：同周苹果在全球 App Store 下架 MiniMax 旗下 AI 陪伴应用 Talkie 待审——渠道侧同步收紧。\n端侧视角：「儿童×AI 硬件」第一次被立法整体按停——不是罚款了事，而是五年品类禁入；对行业的信号比金额更重：AI 玩具在最大消费市场之一被按下暂停键，出海厂商的合规成本从「内容审核」升级为「品类风险」。立法者点名的问题（诱导、依赖、不当内容）恰是端侧方案能部分回应的——本地推理+家长可控过滤，监管压力正在变成端侧架构的卖点。",
+      tags: ["纽约州", "AI玩具", "禁令", "儿童保护", "监管"],
+      url: "https://tech.ifeng.com/c/8yMKDYlxVpB",
+      image: "images/news/n329.jpg",
+      imageCap: "霍楚尔在玩具店签署法案（图源：凤凰网科技/纽约州长办公室）",
       highlight: false
     },
 
@@ -325,114 +385,104 @@ id: "n297", cat: "行业关注事件", source: "机器之心/搜狐科技", date
   ],
 papers: [
     {
-      id: "p15", group: "recent", cat: "端侧智能体", date: "2026-11-17",
-      title: "LMMR: Learned Multigranular Memory Retrieval for Small Language Model Agents",
-      authors: "LMMR Team 等",
-      venue: "arXiv:2611.22425", level: "预印本",
-      summary: "小语言模型智能体的内存预算装不下多跳问题所需的记忆——相关事实散落在记录里，周边文本耗尽宝贵的空间。LMMR 提出可学习的多粒度记忆检索：同时决定「读下一个来源」与「读它多少」——把段落与句子片段链接回原始来源，并为同一缺失证据配对多个视图，让小模型在有限上下文里精准取材。",
-      detail: "问题：小模型 Agent 的记忆空间装不下多跳问答所需上下文。\n方法：LMMR——学习「选哪个来源+读多少」的多粒度检索；段落/句子片段链接原始来源；同证据多视图配对。\n端侧视角：记忆检索是端侧智能体的核心瓶颈——与 Memoket（硬件记忆）、智元 LIFE（可塑性记忆）同向但解决的是「读」侧：硬件负责记全、LMMR 负责读准，端侧记忆栈的学术拼图。",
-      tags: ["记忆检索", "小模型智能体", "多粒度", "上下文预算"],
-      url: "https://arxiv.org/abs/2611.22425"
+      id: "p17", group: "recent", cat: "端侧智能体", date: "2026-11-24",
+      title: "LogToPersona: New Benchmark and Efficient Persona Prediction through Semantic Log Filtering",
+      authors: "LogToPersona Team 等",
+      venue: "arXiv:2611.33510", level: "预印本",
+      summary: "个性化生成式 AI 与智能体需要了解用户画像，但这类信息难以获取且随时间变化——本文研究从单日移动端活动日志推断画像属性：发布 1600 对「画像-日志」合成基准，并面向端侧推理优化语义日志过滤，让「手机自己读懂你是谁」在设备上低成本完成。",
+      detail: "任务：单日移动活动日志→画像属性推断。\n基准：1600 对合成画像-日志数据（该任务此前无公开基准）。\n目标：端侧推理（语义日志过滤压成本）。\n端侧视角：个人智能体（小豆/千问Go 同周开打）的核心资产是记忆与画像——谁在端侧低成本维护「用户理解」，谁的个人助理才真正贴心；画像推断放端上跑也是隐私的必然要求。",
+      tags: ["用户画像", "端侧个性化", "活动日志", "基准"],
+      url: "https://arxiv.org/abs/2611.33510"
     },
     {
-      id: "p16", group: "recent", cat: "端侧智能体", date: "2026-11-16",
-      title: "Building Fully On-Device GUI Agents with Mobile NPUs",
-      authors: "NPU GUI Agents Team 等",
-      venue: "arXiv:2611.20772", level: "预印本",
-      summary: "手机 GUI 智能体大多仍依赖云端模型或远程推理——重复通信延迟、隐私暴露与网络依赖是三大痛点。本文在手机 NPU 上构建完全端侧的 GUI 智能体：现代智能手机 NPU 为全端侧 LLM 推理提供了理想基座，但直接部署常规 GUI 智能体流水线会遇到算子与内存约束——论文给出面向 NPU 的管线重构方案，让「自动操作手机」全程在设备内完成。",
-      detail: "问题：GUI 智能体云端依赖——通信延迟/隐私/网络可用性。\n方案：面向手机 NPU 重构 GUI 智能体流水线（算子适配+内存约束下的管线重设计）。\n端侧视角：GUI 智能体是端侧 Super App 级应用——屏幕理解+动作生成双负载对 NPU 利用率的工程答卷；与 WorkBuddy 千万日活、微信小微预告设备端推理同周，端侧智能体的「最后一公里」（本地 GUI 操作）有了学术基线。",
-      tags: ["GUI智能体", "手机NPU", "全端侧", "管线重构"],
-      url: "https://arxiv.org/abs/2611.20772"
+      id: "p18", group: "recent", cat: "端侧智能体", date: "2026-11-20",
+      title: "Correct Precedents Induce Policy Violations in On-Device LLM Agents",
+      authors: "Policy Violations Team 等",
+      venue: "arXiv:2611.27216", level: "预印本",
+      summary: "端云协作智能体里，端侧小模型常在隐私数据上做「不可逆操作前的最后一道检查」——本文首次识别一类新失败模式：智能体会被自己本会话内的正确决策带偏。正确放行一件限制已解除的物品后，它更容易放行下一件仍受限的物品——正确先例诱导策略违规，且越「用得顺」越危险。",
+      detail: "场景：云端大模型+端侧小智能体协作，端侧代理对私有数据执行操作。\n发现：正确决策形成错误先例——放行过合法项后，对仍受限项的违规率上升。\n意义：首次识别该失败模式，为端侧智能体的安全评测补上一类新断言。\n端侧视角：端侧智能体的安全叙事一直防「外部攻击」，这篇指向「自我诱导」——正确经验也会累积成偏见；随个人智能体本周密集上线，这类会话内策略漂移的评测将成刚需。",
+      tags: ["端侧智能体", "安全", "策略违规", "端云协作"],
+      url: "https://arxiv.org/abs/2611.27216"
     },
     {
-      id: "p14", group: "recent", cat: "推理与系统", date: "2026-11-16",
-      title: "Nemotron 3.5 Bolt E4B 4GB: An Open and Efficient Small Language Model for Fast Conversational Agents",
-      authors: "NVIDIA Nemotron Team 等",
-      venue: "arXiv:2611.20771", level: "预印本",
-      summary: "英伟达发布开源小语言模型 Nemotron 3.5 Bolt E4B 4GB——基于 Gemma-4-E4B-it 后训练，针对「每 GB 内存的智能与速度」优化，面向快速对话智能体：继承 Gemma 对话能力并强化多轮工具调用、指令遵循与输入接地，为本地语音/设备助手、交互人设与嵌入式环境设计——与 RTX Spark 生态（本地跑 Nemotron 3 Ultra）形成「PC 大档+小档」双线。",
-      detail: "模型：Nemotron 3.5 Bolt E4B 4GB（基于 Gemma-4-E4B-it 后训练，开放权重）。\n优化：每 GB 内存的智能与速度（4GB 内存档）——多轮工具调用/指令遵循/输入 grounding 强化。\n定位：本地语音助手、交互人设、嵌入式设备。\n端侧视角：英伟达的开源端侧双线成型——RTX Spark 跑 Nemotron 3 Ultra（PC 重档）、Bolt E4B 4GB 面向 4GB 内存小档（嵌入式/语音助手），「按内存分档」的产品化思路与 Astra/Sol 的任务分层同一哲学。",
-      tags: ["英伟达", "Nemotron", "4GB", "对话智能体", "开源"],
-      url: "https://arxiv.org/abs/2611.20771"
+      id: "p19", group: "recent", cat: "能效与评测", date: "2026-11-20",
+      title: "Decision models for UAVBench and the viability of edge deployment",
+      authors: "UAVBench Team 等",
+      venue: "arXiv:2611.28331", level: "预印本",
+      summary: "小语言模型常被提议用于无人机机载推理，但基准分数高不等于「真能在边缘计算机上跑、且跑得有用」——本文用无人机决策基准 UAVBench 回答三个问题：小型结构化决策模型是否胜任、普通本地机器（一台 Mac）能否筛选候选、以及在真实边缘硬件上的可用性——为「榜单 vs 实机」的鸿沟给出方法论。",
+      detail: "问题：基准分数≠边缘实机可用性。\n方法：UAVBench 决策任务×三问（模型胜任性/本地机器筛选/边缘实机可用性）。\n端侧视角：「榜单分数到端侧落地」之间的工程翻译层长期缺位——这篇把「能不能跑」本身当成研究对象，与迈特芯 5W 跑 8B、DFly2 加速比同一命题：端侧的度量衡是吞吐/时延/功耗，不是榜单分。",
+      tags: ["无人机", "边缘部署", "实机评测", "决策模型"],
+      url: "https://arxiv.org/abs/2611.28331"
     },
     {
-      id: "p11", group: "recent", cat: "推理与系统", date: "2026-11-12",
-      title: "Metal Sandbox: Isolated Execution and Command Scheduling for GPU Coding Agents on Apple Silicon",
-      authors: "Haozhe Wang 等",
-      venue: "arXiv:2611.17294", level: "预印本",
-      summary: "为 Apple Silicon 生成 Metal GPU 内核的编码智能体需要反复在「模型请求-开发命令-GPU 执行」间切换，GPU 大量时间在空转——Metal Sandbox 构建了跨多台互联 Mac 的智能体基础设施：每实例受限文件访问+原生命令执行+命令级调度，各智能体保留独立工作区与私有开发环境，GPU 空闲档位被命令调度复用，训练与评测效率大幅提升。",
-      detail: "问题：Metal 内核生成智能体的会话里 GPU 大部分 rollout 时间闲置。\n方法：受限 per-instance 文件访问+原生命令执行+跨互联 Mac 的命令级调度，多智能体并发且互不干扰。\n端侧视角：端侧推理基建（Metal/苹果芯片）的开发工具链正在 Agent 化——当「给端侧硬件写内核」本身交给智能体并行完成，端侧算子的迭代速度将摆脱人力瓶颈，这篇是基建自动化的底层设施。",
-      tags: ["Apple Silicon", "GPU智能体", "Metal", "调度系统"],
-      url: "https://arxiv.org/abs/2611.17294"
+      id: "p20", group: "recent", cat: "推理与系统", date: "2026-11-19",
+      title: "CarrierKV: An Edge LLM Accelerator with Positional Carrier Decomposition for Low-Bit KV Caches",
+      authors: "CarrierKV Team 等",
+      venue: "arXiv:2611.26857", level: "预印本",
+      summary: "边缘设备长上下文解码受 DRAM 带宽限制——每生成一个 token 都要读整个增长中的 KV 缓存。4-bit 块缩放格式（如 NVFP4）降低流量但伤精度：Qwen3-4B 的 32K RULER 从 92.6 掉到 79.4，Hadamard 旋转进一步掉到 57.7。CarrierKV 观察到 key 能量大多集中在一个「位置载波」向量上，据此做位置载波分解，在低比特 KV 缓存上同时保住精度与带宽。",
+      detail: "瓶颈：长上下文解码=每 token 全量读 KV 缓存，DRAM 带宽是墙。\n观察：key 能量集中于 per-head 的位置载波向量。\n方案：位置载波分解——载波与内容分离处理，低比特 KV 保精度。\n端侧视角：KV 缓存是端侧长上下文的命门（内存+带宽双卡）——与 DFly2 的「零额外 KV 显存」、CECAR 的缓存感知路由同向：2026 年端侧推理的主战场已从权重压缩转向 KV 栈。",
+      tags: ["KV缓存", "低比特", "边缘加速", "长上下文"],
+      url: "https://arxiv.org/abs/2611.26857"
     },
     {
-      id: "p12", group: "recent", cat: "端云协同", date: "2026-11-12",
-      title: "Acoustic Respiratory Phase Detection on Mobile Devices",
-      authors: "Julian Szymanski 等",
-      venue: "arXiv:2611.16710", level: "预印本",
-      summary: "呼吸监测依赖接触式传感器或受控环境，本文提出仅用普通手机麦克风声学信号的非侵入呼吸相位检测框架——混合 CNN-Transformer 架构（局部频谱特征+长程时序建模）捕捉呼吸的周期结构，在 Foundation Dataset 上以留一被试（LOSO）协议评测，端侧即可运行，为健康监测与呼吸引导提供零硬件成本的方案。",
-      detail: "输入：普通智能手机麦克风录音，无需接触式传感器。\n架构：混合 CNN-Transformer——CNN 提局部频谱特征、Transformer 建模长程时序，捕捉呼吸周期结构。\n评测：留一被试（LOSO）协议跨被试泛化验证。\n端侧视角：手机麦克风是存量最大的健康传感入口——声学+轻量混合架构把呼吸监测的硬件成本降为零，与千问接入动态血糖仪同向：端侧 AI 正在把消费手机变成慢病与状态监测的通用终端。",
-      tags: ["声学感知", "呼吸监测", "手机", "混合架构"],
-      url: "https://arxiv.org/abs/2611.16710"
+      id: "p21", group: "recent", cat: "端云协同", date: "2026-11-18",
+      title: "LEDGE: An Efficient Simulator for Distributed LLM Serving on Heterogeneous Edge Devices",
+      authors: "LEDGE Team 等",
+      venue: "arXiv:2611.24085", level: "预印本",
+      summary: "评估异构边缘设备上的分布式 LLM 服务需要探索模型切分、设备放置与网络条件的组合，反复真机实验代价高昂——LEDGE 是一个高效模拟器：支持细粒度放置配置、捕捉运行时行为、精确预测执行时间且保持低仿真开销，让「端侧超节点」式的多设备协同可以先在模拟器里迭代。",
+      detail: "问题：异构边缘分布式 LLM 服务的配置空间大，真机实验贵。\n方案：细粒度放置+运行时行为建模+执行时间预测的低开销模拟器。\n端侧视角：与辛米尔「端侧超节点」同题——多设备组队计算的落地需要配套工具链，模拟器是第一步：先在仿真里找到切分与放置的最优解，再上真机；端侧 Infra 的成熟标志正是工具链先于硬件铺开。",
+      tags: ["分布式推理", "边缘服务", "模拟器", "异构设备"],
+      url: "https://arxiv.org/abs/2611.24085"
     },
     {
-      id: "p13", group: "recent", cat: "能效与评测", date: "2026-11-11",
-      title: "An Open-Architecture Dual-Core STM32-Based Neural Interface with Low-Latency On-Device AI",
-      authors: "Sipeng Liang 等",
-      venue: "arXiv:2611.15942", level: "预印本",
-      summary: "闭环神经调控需要低延迟的在线解码——本文基于双核 STM32H747 微控制器与 Intan 商用采集/刺激前端，构建开放架构的双向神经接口：支持 128 通道 20kSps 采集与 64 通道刺激，双核处理架构+双流内存层级实现低延迟端侧 AI 推理；机上验证两个神经解码模型——完全片上内存运行的紧凑 MLP，以及更大的时序模型分级驻留。",
-      detail: "硬件：STM32H747 双核 MCU+Intan 前端；128 采集通道×20 kSps+64 刺激通道。\n架构：双核分工+双流内存层级，支撑低延迟在线推理。\n模型：紧凑 MLP 全片上内存运行；更大时序模型分级驻留内存。\n端侧视角：植入式/穿戴神经接口是「极致端侧」的终极场景——毫瓦功耗、硬实时延迟约束下跑解码模型，开源架构让神经调控设备的科研迭代速度不再被闭门硬件卡住。",
-      tags: ["神经接口", "STM32", "闭环调控", "极致端侧"],
-      url: "https://arxiv.org/abs/2611.15942"
+      id: "p22", group: "recent", cat: "端侧智能体", date: "2026-11-18",
+      title: "Learning through Discernment: when a small language model learns from user feedback on the phone",
+      authors: "Discernment Team 等",
+      venue: "arXiv:2611.23716", level: "预印本",
+      summary: "手机上的小模型本可以「每晚从自己白天的工作中学习」，但没有真实结果标签时，必须有什么来裁决哪些尝试值得学——模型的自我判断和用户的反应都可能出错。本文研究 Qwen3 0.6B/1.7B 加 LoRA 适配器的方案：每晚微调被裁判接受的尝试，在 127 段最长一年的连续使用中验证「边用边学」的可持续性。",
+      detail: "设定：端侧小模型（Qwen3 0.6B/1.7B+LoRA）每夜从当日尝试中学习。\n核心：裁决机制——无真实结果时由谁决定「哪些值得学」。\n实验：127 段连续使用（最长一年）的纵向验证。\n端侧视角：端侧模型的终身学习是个人智能体的终极形态——白天干活、晚上睡觉时自我进化；这篇把「学什么」的裁决问题摆上台面，与用户画像（p17）、会话偏见（p18）构成端侧个性化研究的三件套。",
+      tags: ["端侧学习", "持续学习", "用户反馈", "LoRA"],
+      url: "https://arxiv.org/abs/2611.23716"
     },
     {
-      id: "p1", group: "recent", cat: "推理与系统", date: "2026-11-10",
-      title: "EngineAgent: Agentizing On-Device LLM Inference Engines with Inference Stack Hierarchy Awareness and Hardware Abilities",
-      authors: "Zhengxiang Huang 等",
-      venue: "arXiv:2611.14356", level: "预印本",
-      summary: "新模型架构与异构移动硬件让端侧推理引擎的适配成为反复出现的高成本系统工程——EngineAgent 把编码智能体引入推理引擎开发：以推理栈层次感知（转换/图构建/算子/硬件后端的跨层依赖）与硬件能力感知为核心，自动诊断跨主机-设备执行路径的失败，大幅降低新模型上端侧引擎的适配成本。",
-      detail: "问题：每支持一个新模型需要协调转换、图构建、算子与硬件后端的跨层改动，现有编码智能体看不到这些跨层依赖，也难以诊断主机-设备执行路径上的失败。\n方法：推理栈层次感知+硬件能力感知的智能体系统，自动完成引擎适配与失败定位。\n端侧视角：端侧引擎的「新模型支持速度」是生态瓶颈——把引擎适配本身 Agent 化，等于给端侧推理基建装上自动扩容能力。",
-      tags: ["推理引擎", "编码智能体", "端侧部署", "系统工程"],
-      url: "https://arxiv.org/abs/2611.14356"
+      id: "p23", group: "recent", cat: "推理与系统", date: "2026-11-16",
+      title: "Replicating and Extending Weight-Space Programming: Frontier LLMs Compile Programs into Weights",
+      authors: "Weight-Space Replication Team 等",
+      venue: "arXiv:2611.21449", level: "预印本",
+      summary: "MIT 此前报告 GPT-6 Astra 能在单次回复里直接写出小神经网络的权重、也能读原始权重说出网络的功能——本文用三天冲刺复现并扩展该结果：Astra 写出的 Breakout 游戏网络拿到 514 分等四项发现，确认「前沿大模型把程序编译进权重」是可复现的现象而非孤例。",
+      detail: "复现：GPT-6 Astra 单次回复写小网络权重/读权重判功能。\n发现：写出的 Breakout 网络得 514 分；四项扩展发现确认现象可复现。\n端侧视角：如果「用权重编程」成立，端侧小模型的未来可能不是「训练出来的」而是「大模型即时编译出来的」——按任务现写一个够用的小网络，省去训练与分发；这为「每 App 一个专用小模型」提供了理论上更极端的路径。",
+      tags: ["权重编程", "大模型", "小网络", "复现研究"],
+      url: "https://arxiv.org/abs/2611.21449"
     },
     {
-      id: "p2", group: "recent", cat: "端侧智能体", date: "2026-11-10",
-      title: "Mobile AI Factory: Building Specialized Language Models for Your Mobile Devices",
-      authors: "Mobile AI Factory Team 等",
-      venue: "arXiv:2611.13509", level: "预印本",
-      summary: "小模型只有为目标任务微调并按目标机型裁剪尺寸才能在手机上跑好，而这今天依赖反复的专家调参——Mobile AI Factory 是一个智能体系统：给定任务描述与目标手机，编排 LLM 自动选择基座、生成训练数据、执行微调与量化、按设备内存约束裁剪，产出一个可直接部署的专用 SLM，全流程无需专家介入。",
-      detail: "输入：任务规格+目标手机型号。\n流程：编排 LLM 选基座→数据合成→微调→量化→按设备内存约束定尺寸，产出即部署的专用小模型。\n端侧视角：「每个 App 一个专用小模型」的工厂化流水线——把端侧模型定制的边际成本从专家周级压到自动小时级，是 App 级端侧 AI 经济性成立的关键一步。",
-      tags: ["小模型工厂", "自动微调", "量化", "移动端"],
-      url: "https://arxiv.org/abs/2611.13509"
+      id: "p24", group: "recent", cat: "推理与系统", date: "2026-11-16",
+      title: "TRACK: Tool-Augmented Reasoning over Time Series for Fault Diagnosis in Power Management Systems",
+      authors: "TRACK Team 等",
+      venue: "arXiv:2611.21178", level: "预印本",
+      summary: "多负载电源管理系统的故障诊断依赖专家人工看电流电压波形，无法随部署规模扩展——TRACK 把时序编码器与小语言模型配对，产出结构化、物理可解释的诊断报告，并调用工具做精确可验证的计算；全程在设备端运行，专有传感器数据不出厂。",
+      detail: "场景：电源管理系统故障诊断（多负载电流/电压波形）。\n方法：时序编码器+小语言模型+工具调用（精确计算可验证）。\n约束：完全端侧运行，传感数据不出设备。\n端侧视角：工业端侧是小语言模型被低估的场景——「会写报告的示波器」把专家经验产品化，隐私与实时性又恰好是端侧的主场；与 STM32 神经接口同向：端侧 AI 正沿「传感+解释」侵入仪器行业。",
+      tags: ["工业诊断", "时序模型", "工具调用", "端侧隐私"],
+      url: "https://arxiv.org/abs/2611.21178"
     },
     {
-      id: "p3", group: "recent", cat: "端侧智能体", date: "2026-11-10",
-      title: "HandsOnAid: Building and Evaluating an Offline First-Aid Assistant",
-      authors: "HandsOnAid Team 等",
-      venue: "arXiv:2611.14059", level: "预印本",
-      summary: "无信号、无救护车的紧急场景下，手机上的小语言模型可以救命，但建议必须安全准确——HandsOnAid 用 5550 对急救问答（FirstAidQA）以 QLoRA 微调 4-bit Gemma 2B 构建离线急救助手，对比 7 种配置（基座/4-bit/8-bit/长度下限/安全护栏等），系统评测安全性与准确性的平衡。",
-      detail: "模型：4-bit Gemma 2B+QLoRA 微调，数据集 FirstAidQA 5550 对。\n评测：7 种配置对比——基础模型、4-bit 与 8-bit 微调、长度下限与安全护栏变体。\n端侧视角：离线可用是端侧模型不可替代的价值场景——急救建议的「安全优先」约束（拒答优于错答）为所有端侧高风险助手树立了评测范式。",
-      tags: ["离线助手", "急救", "QLoRA", "安全评测"],
-      url: "https://arxiv.org/abs/2611.14059"
+      id: "p25", group: "recent", cat: "推理与系统", date: "2026-11-15",
+      title: "CECAR: Cache & Expert Co-Aware Routing Accelerates On-Device Inference of MoE LLMs",
+      authors: "CECAR Team 等",
+      venue: "arXiv:2611.20119", level: "预印本",
+      summary: "大规模 MoE 模型在资源受限设备上仍不实用——稀疏激活也要求全部专家权重常驻内存。CECAR 基于三个观察（缓存命中率即使 Belady 最优策略也有本质上限、该上限与专家路由相关、可协同优化）提出缓存与专家协同感知的路由，让 MoE 在端侧把「专家换入换出」的内存账算明白。",
+      detail: "瓶颈：MoE 稀疏激活≠稀疏驻留——全部专家权重都得在内存里。\n观察：专家缓存命中率有本质上限，且与路由策略耦合。\n方案：缓存&专家协同感知路由，协同优化换入换出。\n端侧视角：端侧 MoE 的最后一公里是内存调度而非算力——总参 30B 激活 2B 的手机模型（Mate X8 同款思路）要落地，正需要这类「专家页面管理」；与 CarrierKV、DFly2 合看，端侧推理优化已进入内存管理深水区。",
+      tags: ["MoE", "端侧推理", "缓存路由", "内存管理"],
+      url: "https://arxiv.org/abs/2611.20119"
     },
     {
-      id: "p4", group: "recent", cat: "能效与评测", date: "2026-11-08",
-      title: "Compute Regeneration through Re-Productization: Reorganizing Retired Edge AI Hardware",
-      authors: "GEdgeBot Team 等",
-      venue: "arXiv:2611.11698", level: "预印本",
-      summary: "失去产品支持但算力仍可观的边缘硬件如何再利用——本文把「算力再生」当作系统设计问题：保留计算模组、重设计周边产品组织。案例 GEdgeBot 是一台基于退役 32GB Jetson AGX Xavier 的多语言服务机器人，盘点显示仅该模组即可支撑全部推理，整机暴露五个可复用能力面。",
-      detail: "方法：再产品化（re-productization）——保留计算核心、重构产品形态与系统组织。\n案例：32GB Jetson AGX Xavier 驱动的多语言服务机器人 GEdgeBot，源码级盘点算力与能力面。\n端侧视角：端侧算力的生命周期管理——退役不等于报废，为边缘硬件的循环利用提供了系统方法论。",
-      tags: ["硬件再利用", "Jetson", "服务机器人", "可持续计算"],
-      url: "https://arxiv.org/abs/2611.11698"
-    },
-    {
-      id: "p8", group: "recent", cat: "能效与评测", date: "2026-10-30",
-      title: "Compression Technique Interactions in Small Language Models: A Factorial Ablation",
-      authors: "Compression-Interactions Team 等",
-      venue: "arXiv:2611.00464", level: "预印本",
-      summary: "量化、剪枝与压缩后恢复技术组合使用时如何相互影响，实践缺乏系统指南——本文对四种 SLM 架构（2.7B-7B 参数）做了 72 种压缩配置的因子消融研究，扩展 48 种组合的次序分析，并在 30 个压缩模型上做基准精度验证与鲁棒性检验。",
-      detail: "设计：72 压缩配置×4 架构（2.7B-7B）因子消融+48 配置的施加次序分析+30 模型基准验证。\n发现：压缩技术间的交互效应显著——组合收益非叠加，施加次序影响最终精度。\n端侧视角：给「先量化还是先剪枝」这类日常工程决策提供了首批系统性证据，是端侧压缩落地的操作手册级工作。",
-      tags: ["模型压缩", "因子消融", "量化", "剪枝"],
-      url: "https://arxiv.org/abs/2611.00464"
+      id: "p26", group: "recent", cat: "推理与系统", date: "2026-11-12",
+      title: "LazyWeights: Decode-on-Demand Edge LLMs",
+      authors: "LazyWeights Team 等",
+      venue: "arXiv:2611.17108", level: "预印本",
+      summary: "内存决定边缘设备能跑哪些大模型、跑多快：容量卡住 4GB 的 Jetson Nano，带宽卡住 8GB 的 Orin Nano Super。现有权重格式（GPTQ/AWQ/GGUF K-/I-quants）对矩阵的每个整数码花同样多的比特，而码的分布远非均匀——LazyWeights 保持这些格式不变，按需解码权重，把比特花在刀刃上。",
+      detail: "瓶颈：容量（4GB Nano）与带宽（8GB Orin）双墙。\n观察：整数码分布不均，等比特分配浪费。\n方案：保持 GPTQ/AWQ/GGUF 格式兼容的按需解码（decode-on-demand）。\n端侧视角：与第 5 讲知识分享（GGUF 与 k-quants）正面对接——权重格式是端侧部署的「文件系统」，LazyWeights 证明格式还能再榨一层非均匀性；对存量设备（老 Jetson/旧手机）是纯软件层的续命术。",
+      tags: ["权重格式", "按需解码", "边缘部署", "内存带宽"],
+      url: "https://arxiv.org/abs/2611.17108"
     },
   ],
 

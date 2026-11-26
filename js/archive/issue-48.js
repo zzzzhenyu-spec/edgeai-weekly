@@ -193,6 +193,18 @@ id: "n321", cat: "行业关注事件", source: "Anthropic 官方/CNBC", date: "2
     },
 
 {
+id: "n330", cat: "芯片厂商", source: "搜狐科技/凤凰科技", date: "2026-11-19",
+      title: "安谋科技官宣国内首颗 FP4 端侧 SoC 即将量产：基于「周易」X3 NPU 架构，同场发布 Cortex-M42",
+      summary: "ICCAD-Expo 2026（11 月 19 日北京开幕）高峰论坛上，安谋科技 CEO 陈锋宣布基于「周易」X3 NPU 架构打造的国内首颗支持 FP4 数据格式的端侧 SoC 即将量产，下一代 X3-pro 蓄势待发；同场发布面向成本敏感端侧 AI 市场的 Arm Cortex-M42 处理器——与星辰 300 平台的 Cortex-M52 计算性能相近，面积减小 10%、功耗降低 15%，并推出「星辰 100e」「星辰 300」两款 AIoT 原型验证平台与「AI Arm CHINA」战略。",
+      detail: "场合：ICCAD-Expo 2026 于 11 月 19 日在北京开幕，安谋科技 CEO 陈锋发表《Agentic AI 时代，算力价值重塑与产业新机遇》主旨演讲。\nFP4：国内首颗支持 FP4 数据格式的端侧 SoC 即将量产，内核基于「周易」X3 NPU 架构。\n谱系：X3 于 2025 年 11 月发布——专为端侧大模型设计，AIGC 能力较上代提升 10 倍、8–80 FP8 TFLOPS 算力、单 Core 带宽 256GB/s、Prefill 算力利用率 72%；已在汽车、IoT、手机三大领域落地，X3-pro 待发。\nCortex-M42：瞄准成本敏感端侧 AI 市场并纳入 Arm 全球产品线；特定条件下与 Cortex-M52 计算性能相近，面积减小 10%、功耗降低 15%。\n配套：「星辰 100e」「星辰 300」AIoT 原型验证平台；「AI Arm CHINA」战略——连接 Arm 全球生态、深耕本土创新，覆盖 IP、计算子系统、设计服务的产品矩阵。\n观点：陈锋称 Agentic AI 时代「CPU 杀回来了」——CPU 价值回归、CPU+NPU+GPU 异构协同日益重要。\n端侧视角：FP4 从「模型格式之争」下沉到「芯片原生支持」——NPU 直接吃 FP4 权重后，4-bit 推理不再是量化技巧而是硬件能力；Prefill 利用率 72% 与 256GB/s 单核带宽说明端侧 NPU 的竞赛项是带宽而非峰值 TOPS。国产端侧 SoC 第一次在数据格式代际上与全球同步。",
+      tags: ["安谋科技", "FP4", "周易X3", "Cortex-M42", "端侧NPU"],
+      url: "https://www.sohu.com/a/1103674082_166680",
+      image: "images/news/n330.jpg",
+      imageCap: "陈锋 ICCAD 2026 演讲现场（图源：搜狐科技）",
+      highlight: false
+    },
+
+{
 id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-18",
       title: "谷歌发布 Gemini 4 Neon 补齐中档：比 Carbon 快 3 倍、成本低约 40%，编程智能体指数超 Claude，四天内第三款 Gemini 4 新模型",
       summary: "谷歌发布 Gemini 4 Neon——Gemini 4 家族自此形成三档完整阵型：Carbon（攻坚最难长周期项目）、Neon（平衡深度与速度，居中）、Hydrogen（日常快速执行）。Neon 主攻复杂编程、科学研究与企业工作流：官方称速度比 Carbon 快 3 倍、完成任务成本低约 40%，编程 AI 智能体指数超越 Claude，上下文窗口 100 万 token；在 Antigravity 开发环境中可承担任务调度角色——指挥多个 Hydrogen 子智能体协同完成复杂作业。正陆续向 AI Studio 与 Gemini API 开放。",
