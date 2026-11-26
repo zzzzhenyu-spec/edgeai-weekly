@@ -217,6 +217,18 @@ id: "n334", cat: "AI硬件", source: "华硕官方/Notebookcheck", date: "2026-1
     },
 
 {
+id: "n338", cat: "端侧Agent", source: "TechCrunch/彭博社", date: "2026-11-19",
+      title: "苹果招聘信息曝光自研「会用电脑的 AI 智能体」：跨应用、浏览网页、写代码，彭博称最快 2027 年底推出",
+      summary: "11 月 19 日彭博社报道、TechCrunch 依招聘信息核实：苹果发布高级工程经理招聘，要打造一个「会使用电脑的 AI 智能体」——能浏览网页、跨应用操作、执行命令、编写和调试代码、调用服务，并为每一步选择合适的工具，完成横跨应用、浏览器、命令行、代码与 API 的多步骤任务；招聘文案强调「以苹果式的打磨、私密地」完成，但未说明运行在端侧还是云端。彭博称该项目仍处早期，苹果期望最快 2027 年底推出。配套动作是 macOS 27.3 将加入警告，劝阻用户把整机的完全控制权交给第三方智能体。苹果未予置评。",
+      detail: "证据：苹果高级工程经理岗位招聘——负责打造「能使用电脑的 AI 智能体」（11 月 19 日彭博社报道，TechCrunch 依招聘信息核实）。\n能力：浏览网页、跨应用操作、执行命令、编写和调试代码、调用服务，为每一步选择合适工具；多步骤任务横跨应用、浏览器、命令行、代码与 API。\n边界：招聘文案强调隐私（「私密地、以苹果式的打磨完成」），但未明确是端侧运行还是云端——「端侧智能体」目前是推测而非事实。\n时间线：彭博称项目仍处早期阶段，苹果期望最快 2027 年底推出；将与其他公司的智能体竞争（TechCrunch 列举 Meta Muse、Instinct、Claude、OpenAI Dots 等）。\n配套：苹果 2026 年 10 月已通知开发者将引入额外控制，用户只能通过明确的主动操作授予应用完全访问权限；macOS 27.3 将加入警告，劝阻用户授予第三方智能体完全控制权。\n回应：苹果未置评。眼下的 Siri 路线依赖 App Intents（应用主动声明可被调用的动作），而非自由操作电脑。\n端侧视角：苹果的入场姿势耐人寻味——一边招聘「会用电脑的智能体」，一边在系统层给第三方智能体的完全控制权加警示栏。智能体要读邮件、日历、消息才能完成多步任务，谁能保证这些上下文不出设备？「私密」是苹果手里唯一的差异化牌，也是它大概率会把推理放在端侧的理由；但在官方说清楚之前，这一条只能当观察点而非结论。对国内厂商的启示是，系统级智能体的竞争不只是模型能力，更是「谁有资格拿到整机控制权」。",
+      tags: ["苹果", "AI智能体", "招聘信息", "macOS", "彭博社"],
+      url: "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+      image: "images/news/n338.jpg",
+      imageCap: "macOS 应用控制权限提示（图源：IT之家）",
+      highlight: false
+    },
+
+{
 id: "n290", cat: "大模型厂商", source: "Google 官方博客", date: "2026-11-18",
       title: "谷歌发布 Gemini 4 Neon 补齐中档：比 Carbon 快 3 倍、成本低约 40%，编程智能体指数超 Claude，四天内第三款 Gemini 4 新模型",
       summary: "谷歌发布 Gemini 4 Neon——Gemini 4 家族自此形成三档完整阵型：Carbon（攻坚最难长周期项目）、Neon（平衡深度与速度，居中）、Hydrogen（日常快速执行）。Neon 主攻复杂编程、科学研究与企业工作流：官方称速度比 Carbon 快 3 倍、完成任务成本低约 40%，编程 AI 智能体指数超越 Claude，上下文窗口 100 万 token；在 Antigravity 开发环境中可承担任务调度角色——指挥多个 Hydrogen 子智能体协同完成复杂作业。正陆续向 AI Studio 与 Gemini API 开放。",
@@ -345,6 +357,18 @@ id: "n274", cat: "行业关注事件", source: "凤凰科技/Trajectory Labs", d
       url: "https://tech.ifeng.com/c/8y87giK6ze2",
       image: "images/news/n274.jpg",
       imageCap: "Gemini 4 Argon 安全测试（图源：凤凰科技）",
+      highlight: true
+    },
+
+{
+id: "n335", cat: "行业关注事件", source: "The Hacker News/GitHub", date: "2026-11-17",
+      title: "微软 Agent Framework 遭供应链攻击：两个恶意版本窃取云凭证，微软将 ONNX Runtime 等仓库转为私有调查",
+      summary: "11 月 17 日，攻击者经微软自己的发布者账户向 PyPI 推出 Agent Framework 1.26.1 与 1.26.2 两个恶意版本（相隔 33 分钟，看似常规更新）：安装后在 site-packages 落下 .pth 文件，每次 Python 解释器启动都自动执行——即使用户从未导入该包——收集环境变量、Azure CLI、.npmrc、.git-credentials、Hugging Face 等凭证文件与 Azure、GitHub Actions 的身份令牌，压缩后外传至 webhook.site 地址。两个版本约一小时内下架。Wiz 调查认为攻击者利用了微软内部发版服务的客户端证书与私钥。当晚 microsoft/onnxruntime 等 GitHub 仓库开始返回 404、打断下游 CI/CD；微软 11 月 20 日回应称「已在调查恶意内容期间将部分仓库设为私有」。",
+      detail: "攻击：agent-framework 1.26.1 与 1.26.2 于 11 月 17 日相隔 33 分钟发布（该包月下载近 20 万次），经微软自己的发布者账户上传、看起来像常规更新；两个版本约一小时内从 PyPI 下架。\n入口：Wiz 调查（11 月 19 日）——攻击者使用了微软 Engineering System Release Pipeline（内部用于签名和发布包的服务）的客户端证书与私钥；该服务的地址过滤拦下了第一次从 AWS 发起的发布，第二次从微软自有地址空间成功；攻击者工具使用开源 AI 渗透测试框架 Cairn；证书如何外泄尚不清楚。\n手法：两个版本各带一个 .pth 文件（agent_framework_meta.pth / af_runtime_diag.pth），Python 每次启动都会执行其中的 import——包括 pip 自身；正版依赖包照常保留、框架功能正常，恶意代码后台运行；1.26.2 另外收集 GitHub Actions OIDC 令牌并扩大凭证环境变量的匹配模式。\n窃取：环境变量、~/.azure/*.json、.npmrc、pip.conf、.netrc、.git-credentials、.docker/config.json、Hugging Face 与 Azure DevOps 凭证、Azure DevOps OIDC 令牌、Azure 托管身份令牌（还会主动向 12 个 Azure 资源申请新令牌，仅轮换已存凭证不足以覆盖）；数据 zlib 压缩、Base64 编码后经 HTTPS POST 外传；被定性为专注的凭证窃取器、不安装持久化机制。\n处置：两个版本已在 PyPI 隔离，最新安全版为 1.26.0；安全厂商建议隔离受影响主机、检查 11 月 17 日 20:35–21:20 UTC 的暴露情况、在代理与 DNS 日志中检索外传地址、从干净环境轮换凭证；Wiz 推测实际受害有限——免费 webhook 账户保留的 50 条请求中 17 条仅对应 3 个成功的窃取。\n波及：11 月 17 日晚 microsoft/onnxruntime 与 onnxruntime-swift-package-manager 开始 404（ONNX 官方仓库 issue #8842：正在打断 CI/CD；ONNX 维护者称「知道的并不比公众多」）。\n回应：微软 11 月 20 日向媒体表示——「已在调查恶意内容期间将部分仓库设为私有，优先保护客户与生态」。\n状态：截至 11 月 26 日，microsoft/onnxruntime 与 microsoft/agent-framework 两个仓库仍为 404；PyPI 上的 onnxruntime（1.32.0，11 月 13 日发布）与 NuGet 包仍可正常安装，受影响的是源码、release 资产与依赖 GitHub 直链的构建流程。\n背景：这是今年第二个被入侵的微软相关 PyPI 包——5 月 durabletask 曾被植入 Mini Shai-Hulud 蠕虫。\n端侧视角：ONNX Runtime 是端侧推理中间格式的事实标准，大量端侧部署链路靠它把模型送到手机、PC 与嵌入式设备——这次它成了隔壁仓库被攻击的连带受害者。教训不在恶意包本身，而在依赖形态：凡是从 GitHub 拉源码、取 release 资产或引用 raw 直链的构建，仓库一消失就全断；走包管理器的链路则毫发无损。对端侧团队的直接动作是——锁定版本、把用到的构建产物做本地镜像，别让产品构建依赖一个可以在一小时内变成 404 的地址。",
+      tags: ["微软", "ONNX Runtime", "供应链攻击", "PyPI", "Agent Framework"],
+      url: "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+      image: "images/news/n335.jpg",
+      imageCap: "ONNX 官方仓库 issue「Onnxruntime has disappeared?」（图源：GitHub）",
       highlight: true
     },
 

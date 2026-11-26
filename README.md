@@ -4,11 +4,11 @@
 
 ## 2026 · 第 49 期（2026.11.20 — 2026.11.26 · 近 7 天）
 
-**近 7 天导读**：近 7 天聚焦：个人 AI 助理之战正面开打——字节「小豆」邀请制公测（盯消息、比价、替你打电话），阿里千问Go 免费代打电话同周开放，「从聊天到办事」成为大厂共识入口。黎曼猜想形式化证明一周内两连跳：先由 Claude 辅助完成 1700 万行 Lean 证明，再被重构压缩 99.56% 到 7.6 万行——普通电脑一两小时即可本地复现验证。车载与机器人端侧加速落子：蔚来世界模型 NWM 3.0 以隐式世界模型省去渲染获百倍级训练加速、座舱车控完成率提至 95.3%，小鹏 IRON 自主登台演讲（全栈大模型端侧部署），AMD 联手中科慧灵验证人形机器人「大小脑」双处理器架构。模型侧：文心 5.5 Flash 全量开源（280B MoE、Apache 2.0）、微信开源端侧统一模型 WePocketModel（一套 4B 权重检索/生成/决策三合一）、腾讯混元 DFly2 草稿模型零额外显存提速 4.2 倍、PrismML 三值 Bonsai 2.5 在 5.9GB 上打平 FP16 工具调用。AI 眼镜迎来监管与社会的双重拷问：韩国高考 AI 作弊风波致教育部长官辞职、德国消协起诉 Meta 智能眼镜——「录制提示」正从卖点变门槛。 今日新增：黎曼证明压缩至 7.6 万行、蔚来世界模型 3.0、混元开源 DFly2 与 Hy4 flash 量化权重（224B 进 64GB Mac mini）、字节小豆公测、鸿蒙终端破亿与元OS 架构、纽约 AI 玩具禁令；论文板块周四换血 10 篇（端侧个性化、KV 缓存加速、MoE 内存路由、权重编程复现等）。
+**近 7 天导读**：近 7 天聚焦：个人 AI 助理之战正面开打——字节「小豆」邀请制公测（盯消息、比价、替你打电话），阿里千问Go 免费代打电话同周开放，「从聊天到办事」成为大厂共识入口。黎曼猜想形式化证明一周内两连跳：先由 Claude 辅助完成 1700 万行 Lean 证明，再被重构压缩 99.56% 到 7.6 万行——普通电脑一两小时即可本地复现验证。车载与机器人端侧加速落子：蔚来世界模型 NWM 3.0 以隐式世界模型省去渲染获百倍级训练加速、座舱车控完成率提至 95.3%，小鹏 IRON 自主登台演讲（全栈大模型端侧部署），AMD 联手中科慧灵验证人形机器人「大小脑」双处理器架构。特斯拉 FSD V15 的统一视觉编码器用数百万条互联网视频预训练、同时服务汽车与 Optimus；马斯克确认 AI5 芯片（算力 12 倍于 AI4、内存 96GB）优先给 Optimus，汽车留在「够用」的 AI4。模型侧：文心 5.5 Flash 全量开源（280B MoE、Apache 2.0）、微信开源端侧统一模型 WePocketModel（一套 4B 权重检索/生成/决策三合一）、腾讯混元 DFly2 草稿模型零额外显存提速 4.2 倍、PrismML 三值 Bonsai 2.5 在 5.9GB 上打平 FP16 工具调用。AI 眼镜迎来监管与社会的双重拷问：韩国高考 AI 作弊风波致教育部长官辞职、德国消协起诉 Meta 智能眼镜——「录制提示」正从卖点变门槛；IDC 预测 2027 年具备本地 AI 推理能力的智能眼镜占比升至 50%，NPU 迎来标配化。 今日新增：黎曼证明压缩至 7.6 万行、蔚来世界模型 3.0、混元开源 DFly2 与 Hy4 flash 量化权重（224B 进 64GB Mac mini）、字节小豆公测、鸿蒙终端破亿与元OS 架构、纽约 AI 玩具禁令、IDC 2027 智能眼镜洞察、特斯拉 AI5 芯片优先给 Optimus；论文板块周四换血 10 篇（端侧个性化、KV 缓存加速、MoE 内存路由、权重编程复现等）。
 
 ## 近 7 天速览
 
-### 行业关注事件（10 条）
+### 行业关注事件（11 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -19,11 +19,12 @@
 | 2026-11-24 | [德国消费者保护协会起诉 Meta 与依视路陆逊梯卡：Ray-Ban 摄像头智能眼镜销售未告知「公共场所无法合规使用」](https://www.sohu.com/a/1106153787_114760) | IT之家/搜狐科技 |
 | 2026-11-24 | [纽约州签署全美首个 AI 聊天玩具禁令：五年禁止制造分销销售，违规每日最高罚 1.5 万美元](https://tech.ifeng.com/c/8yMKDYlxVpB) | 纽约州长办公室/凤凰科技 |
 | 2026-11-24 | [辛米尔科技业界首提「端侧超节点」：数据中心超节点架构下沉端侧，异构设备组队计算吞吐量提升 270%](https://www.qbitai.com/2026/11/512362.html) | 量子位/机器之心 |
+| 2026-11-24 | [IDC 发布 2027 中国智能眼镜十大洞察：具备本地 AI 推理能力的产品占比将升至 50%，NPU 迎来标配化](https://www.ithome.com/1/031/553.htm) | IDC 官方/IT之家 |
 | 2026-11-22 | [韩国高考 AI 眼镜作弊风波：111 起电子设备违规，教育部长官崔教振引咎辞职](https://news.qq.com/rain/a/20261124A0CJT300) | 腾讯新闻/凤凰网科技 |
 | 2026-11-20 | [中汽中心推出国内首个智能座舱 AI 分级评价体系：C1 规则响应到 C5 全域智能五级，覆盖八大能力九大场景](https://www.sohu.com/a/1103929994_121345914) | 搜狐汽车/观点网 |
 | 2026-11-20 | [Anthropic 数学家宣称在 Claude 辅助下证明黎曼猜想：1700 万行 Lean 代码通过形式化验证，陶哲轩称「验证仍需时间」](https://m.sohu.com/a/1104301381_610300) | 机器之心/搜狐科技 |
 
-### AI硬件（6 条）
+### AI硬件（7 条）
 
 | 日期 | 要闻 | 来源 |
 |------|------|------|
@@ -32,7 +33,8 @@
 | 2026-11-25 | [小鹏科技日：人形机器人 IRON 自主登台双语演讲，三颗图灵 AI 芯片 2250 TOPS 支撑全栈大模型端侧部署](https://auto.sina.com.cn/jishu/2026-11-25/detail-inizxxye8572247.shtml) | 小鹏官网/新浪汽车 |
 | 2026-11-23 | [蚂蚁阿福发布首批 AI 健康穿戴「福环」「福戒」：手环+戒指最长 14 天续航，AI 生成健康报告](https://m.sohu.com/a/1105140656_114760) | 界面新闻/搜狐科技 |
 | 2026-11-22 | [群联公布内建 NPU 与 64GB 内存的「智能 SSD」设计：PyTorch/vLLM/llama.cpp 直接在盘上跑，数据搬运省百倍](https://www.techspot.com/news/114653-phison-shows-ssd-design-npu-64gb-memory-runs.html) | Tom's Hardware/TechSpot |
-| 2026-11-21 | [特斯拉 FSD V15 开始推送：车机换上「世界模型缩小版」Reality View 实景视图，马斯克称效果像在玩 GTA](https://m.sohu.com/a/110553429_236796) | 搜狐科技/腾讯新闻 |
+| 2026-11-22 | [马斯克确认特斯拉 AI5 芯片优先给 Optimus：算力约 AI4 的 12 倍、内存约 96GB，汽车继续用 AI4](https://news.qq.com/rain/a/20261125A046S600) | 快科技/IT之家 |
+| 2026-11-21 | [特斯拉 FSD V15 推送：统一视觉编码器用数百万条互联网视频预训练，同时服务 FSD、Robotaxi 与 Optimus](https://news.qq.com/rain/a/20261123A05DDI00) | 腾讯新闻/搜狐科技 |
 
 ### 手机厂商（4 条）
 
@@ -62,7 +64,7 @@
 
 ## 科研前沿（10 篇）
 
-- **arXiv 新作跟踪（10 篇，预印本）**：[LogToPersona: New Benchmark and Efficient Persona Predicti…](https://arxiv.org/abs/2611.33510)；[Correct Precedents Induce Policy Violations in On-Device L…](https://arxiv.org/abs/2611.27216)；[Decision models for UAVBench and the viability of edge dep…](https://arxiv.org/abs/2611.28331)；[CarrierKV: An Edge LLM Accelerator with Positional Carrier…](https://arxiv.org/abs/2611.26857)；[LEDGE: An Efficient Simulator for Distributed LLM Serving …](https://arxiv.org/abs/2611.24085)；[Learning through Discernment: when a small language model …](https://arxiv.org/abs/2611.23716)；[Replicating and Extending Weight-Space Programming: Fronti…](https://arxiv.org/abs/2611.21449)；[TRACK: Tool-Augmented Reasoning over Time Series for Fault…](https://arxiv.org/abs/2611.21178)；[CECAR: Cache & Expert Co-Aware Routing Accelerates On-Devi…](https://arxiv.org/abs/2611.20119)；[LazyWeights: Decode-on-Demand Edge LLMs](https://arxiv.org/abs/2611.17108)
+- **arXiv 新作跟踪（10 篇，预印本）**：[LogToPersona: New Benchmark and Efficient Persona Predicti…](https://arxiv.org/abs/2611.33510)；[Correct Precedents Induce Policy Violations in On-Device L…](https://arxiv.org/abs/2611.27216)；[Decision models for UAVBench and the viability of edge dep…](https://arxiv.org/abs/2611.28331)；[CarrierKV: An Edge LLM Accelerator with Positional Carrier…](https://arxiv.org/abs/2611.26857)；[LEDGE: An Efficient Simulator for Distributed LLM Serving …](https://arxiv.org/abs/2611.24085)；[Learning through Discernment: when a small language model …](https://arxiv.org/abs/2611.23716)；[TRACK: Tool-Augmented Reasoning over Time Series for Fault…](https://arxiv.org/abs/2611.21178)；[CECAR: Cache & Expert Co-Aware Routing Accelerates On-Devi…](https://arxiv.org/abs/2611.20119)；[LazyWeights: Decode-on-Demand Edge LLMs](https://arxiv.org/abs/2611.17108)；[TQIR: Trellis Quantization with Integer Reconstruction for…](https://arxiv.org/abs/2611.15231)
 
 ## 页面板块
 
