@@ -12,6 +12,10 @@
     return;
   }
   var $ = function (id) { return document.getElementById(id); };
+  /* 发布版本号: 公开站的脚本/样式引用带 ?v=(站内 js/css 内容一变即变, 发布时写入);
+   * 动态加载的归档期与知识讲义沿用同一个号, 否则浏览器会拿缓存里的旧归档。file:// 本地无此参数 */
+  var VER = ((document.currentScript && document.currentScript.src.match(/[?&]v=([^&]+)/)) || [])[1] || "";
+  function withVer(url) { return VER ? url + "?v=" + VER : url; }
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -1017,7 +1021,7 @@
     if (kLessonLocks[no]) { kLessonLocks[no].push(cb); return; }
     kLessonLocks[no] = [cb];
     var s = document.createElement("script");
-    s.src = "knowledge/lessons/lesson-" + (no < 10 ? "0" + no : no) + ".js";
+    s.src = withVer("knowledge/lessons/lesson-" + (no < 10 ? "0" + no : no) + ".js");
     s.onload = function () {
       K_LESSONS = window.KNOWLEDGE_LESSONS || {};
       var cbs = kLessonLocks[no] || [];
@@ -1081,7 +1085,7 @@
     if (issueLocks[no]) return;
     issueLocks[no] = true;
     var s = document.createElement("script");
-    s.src = "js/archive/issue-" + no + ".js";
+    s.src = withVer("js/archive/issue-" + no + ".js");
     s.onload = function () { issueLocks[no] = false; apply((window.WEEKLY_ARCHIVE || {})[no]); };
     s.onerror = function () { issueLocks[no] = false; if (issueSel) issueSel.value = String(shownNo); };
     document.head.appendChild(s);
