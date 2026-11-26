@@ -212,7 +212,7 @@ WEEKLY_ARCHIVE[41] = {
     },
     {
       id: "p6", group: "recent", cat: "端云协同", date: "2026-09-14",
-      title: "CIDERS: Cloud-Edge LLM Collaborative Learning via Accelerating Personalized Bilevel Optimization",
+      title: "Cloud-Edge LLM Collaborative Learning via Accelerating Personalized Bilevel Optimization",
       authors: "Victor H. Chen, Hairui Yu, Stella K. Chung, Hong Yan",
       venue: "arXiv:2609.15664", level: "预印本",
       summary: "首次将云-边 LLM 协作形式化为个性化双层优化：上层优化边缘个性化、下层管理云端知识迁移；压缩边缘路径上数学推理 3.1×、代码生成 1.7× 提升。",

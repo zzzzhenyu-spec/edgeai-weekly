@@ -593,7 +593,7 @@ papers: [
     {
       id: "p1", group: "recent", cat: "推理与系统", date: "2026-10-20",
       title: "CovNav: Conformal Prediction-Guided Adaptive Inference for Object Goal Navigation",
-      authors: "CovNav Team 等",
+      authors: "Pengying Wu, Zhejia Wen, Kang Ding 等",
       venue: "arXiv:2610.27677", level: "预印本",
       summary: "目标物体导航（ObjectNav）中云端大模型有时延与隐私风险、端侧小模型推理质量不足——CovNav 用共形预测（Conformal Prediction）引导自适应推理，按导航场景动态决定何时调用更强的模型能力，在未见环境中以空间常识（物体共现）引导智能体找到目标。",
       detail: "背景：具身智能体要在未见过的环境里执行「找到一个床」这类目标导航，依赖物体共现等空间常识——大模型编码了这种常识，但部署在机器人上暴露质量与效率的取舍：云端模型带来时延与隐私风险，端侧小模型能力受限。\n方法：CovNav 以共形预测为引导机制做自适应推理——为导航决策提供统计意义上的置信边界，动态调节推理投入。\n端侧视角：共形预测给「小模型何时够用、何时必须升级」提供了有理论保证的判据，是端云协同导航从启发式走向可校准路线的代表性工作。",
@@ -603,7 +603,7 @@ papers: [
     {
       id: "p2", group: "recent", cat: "安全与隐私", date: "2026-10-20",
       title: "Context-Aware Prompt Injection Detection via Small Language Models in RAG Pipelines: nokast-secureRAG",
-      authors: "nokast Team 等",
+      authors: "Abhishek Rai",
       venue: "arXiv:2610.28364", level: "预印本",
       summary: "本地 RAG 系统面临间接提示注入与检索投毒——检索内容中的恶意指令被误当可信输入。nokast-secureRAG 用约 0.5B 参数的小语言模型充当检索与生成之间的「语义防火墙」：联合评估用户查询与检索上下文，对内容分类拦截，全程可在端侧运行。",
       detail: "背景：本地检索增强生成（RAG）让端侧个性化推理成为可能，但检索到的内容可能夹带恶意指令（间接提示注入、检索投毒），被生成侧误信执行。\n方法：约 0.5B 参数小语言模型作为语义防火墙插在检索与生成之间——联合考察用户查询与检索上下文的语义关系，对是否存在注入意图做上下文感知分类。\n端侧视角：安全层也要端侧化——0.5B 量级说明「语义防火墙」可随主模型常驻设备本地，端侧 RAG 的安全闭环不依赖云端审查。",
@@ -613,7 +613,7 @@ papers: [
     {
       id: "p3", group: "recent", cat: "安全与隐私", date: "2026-10-19",
       title: "LLMs Prompted for Legal Context Refuse More: Overrefusal from Small On-Premises LLMs in Criminal Legal Context",
-      authors: "Legal NLP Group 等",
+      authors: "Anastasiia Kucherenko, Francois Brouchoud, Dimitri Percia David 等",
       venue: "arXiv:2610.26211", level: "预印本",
       summary: "保密要求推动法律从业者转向本地小模型处理案卷（摘要/翻译/改写），但遵循提示规范自报身份（「我是律师…」）的习惯带来意外代价——此类「权威框架」会令模型在刑事法律语境中选择性拒答更多；过度拒答正成为端侧小模型落地的隐性质量税。",
       detail: "背景：法律行业的保密要求使小型本地 LLM 成为日常任务（摘要、翻译、改写）的选择，案件数据不出内网。\n发现：用户按提示工程惯例声明角色（如「我是一名律师」）反而提高模型在刑事语境中的拒答率——权威框架触发选择性拒答，正常的法律工作流被频繁打断。\n端侧视角：本地部署解决了数据保密，却把云端侧的内容策略压缩进小模型——「过度拒答」是端侧小模型进入专业领域时被低估的行为缺陷，需要在模型与提示层同时校准。",
@@ -623,7 +623,7 @@ papers: [
     {
       id: "p4", group: "recent", cat: "推理与系统", date: "2026-10-19",
       title: "MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration",
-      authors: "Architecture Lab 等",
+      authors: "Zijun Zhao, Ruichu Ao, Stef Cuyckens 等",
       venue: "arXiv:2610.26083", level: "预印本",
       summary: "块缩放量化格式（OCP MX、NVFP4）已是 LLM 推理的高效数据格式，但共享缩放、权重与激活格式的组合设计空间从未被系统刻画——本文以软硬件协同设计探索该空间，寻找精度-硅面积的帕累托最优配置，并给出与 NPU 集成的张量核设计。",
       detail: "背景：块缩放量化格式被广泛采用，但其设计空间（共享缩放位宽、权重与激活格式的组合）缺乏系统探索，精度与硅开销的联合权衡此前未被标定，真正的帕累托最优配置不明。\n方法：软硬件协同设计探索——在设计空间上系统评估精度与硬件代价，刻画帕累托前沿，并给出可集成 NPU 的类 MX 张量核实现。\n端侧视角：为端侧推理芯片的下一代张量核给出格式选型依据——在 NPU 面积与功耗约束下选择「够准且最省」的量化组合，是端侧算力持续下沉（本周 Synaptics SR200 同题）的学术侧支点。",
@@ -633,7 +633,7 @@ papers: [
     {
       id: "p5", group: "recent", cat: "端侧智能体", date: "2026-10-17",
       title: "Muse Glimmer 30B: An On-Device Agentic Model",
-      authors: "Meta 等",
+      authors: "Arash Ebrahim Abtahizadeh, Muna Aghamelu, Adil Ahmed 等",
       venue: "arXiv:2610.24628", level: "预印本",
       summary: "Meta 开源 30B 参数的因果语言模型 Muse Glimmer（带感知编码器），专为消费级硬件上的自主智能体任务打造——把多步推理、可靠工具使用与失败恢复整合进单一模型，可完全本地运行无需云端，接受文本与图像输入、输出文本。",
       detail: "定位：开源 30B 参数模型+感知编码器，面向消费设备本地运行的智能体——多步推理、可靠工具调用与失败恢复一体化，不依赖云端基础设施。\n输入输出：文本与图像输入、文本输出；权重开放下载。\n端侧视角：30B 是「工作站/高端手机可承载」的端侧智能体量级——Meta 在开放权重侧（Muse Spark Open 816B 之后）补上智能体专型号，与本周 Muse 下月登陆 Meta 眼镜的财报叙事同源：模型-终端-订阅的端侧生态全栈正在成形。",
@@ -643,7 +643,7 @@ papers: [
     {
       id: "p6", group: "recent", cat: "端侧智能体", date: "2026-10-17",
       title: "MedPAO-Assist: Edge-Deployable, Modality-Aware Agentic AI for Radiology Report Structuring",
-      authors: "MedPAO Team 等",
+      authors: "Shrish Shrinath Vaidya, Minmini Selvam, Ganapathy Krishnamurthi",
       venue: "arXiv:2610.26913", level: "预印本",
       summary: "放射报告结构化长期被专有云端模型或需要高端 GPU 的大模型垄断，与临床对数据隐私和离线运行的要求冲突——MedPAO-Assist 是边缘可部署的智能体框架，按模态感知组织放射报告结构化流程，把医疗 AI 推回院内边缘。",
       detail: "背景：LLM 做放射报告结构化要么用专有云模型、要么用需高端 GPU 的开源大模型——临床工作流要求数据隐私与离线运行，这是落地瓶颈。\n方案：MedPAO-Assist 边缘可部署智能体框架，模态感知（modality-aware）地组织结构化生成流程，适配影像科的环境约束。\n端侧视角：医疗是端侧 AI 的高价值刚需场景（隐私+离线+合规三重约束），智能体化（而非单纯小模型化）是边缘医疗应用的新形态。",
@@ -653,7 +653,7 @@ papers: [
     {
       id: "p7", group: "recent", cat: "安全与隐私", date: "2026-10-16",
       title: "From Billion-Scale to Million-Scale Language Models: Operational Capabilities for Embedded Post-Exploitation",
-      authors: "Security Research Group 等",
+      authors: "Gabriel Hortea, Simon Pietro Romano, Juan Tapiador 等",
       venue: "arXiv:2610.23534", level: "预印本",
       summary: "百万参数级超紧凑语言模型（SLM）因计算足迹极小，被视为未来「自主恶意软件」的候选载体——在连接受限、时延与隐私（攻击者视角）约束无法使用云端推理的场景下，本文系统评估超紧凑模型在入侵后渗透阶段的可运作能力。",
       detail: "背景：SLM 在资源受限环境的价值正在被安全研究双面审视——同样的特性（低算力、离线、难审计）也使其可能成为自主恶意软件的推理引擎，而后渗透阶段的实际能力此前缺乏系统刻画。\n工作：面向嵌入式后渗透场景，评估百万参数级模型在无云端依赖时可支撑的操作能力边界。\n端侧视角：这是端侧模型能力的「压力测试反面样本」——小模型能做的，恶意负载同样能做；端侧安全体系（本期的语义防火墙、TEE 保护）需要与端侧模型能力同步演进，攻防两侧共用同一条小型化技术曲线。",
@@ -663,7 +663,7 @@ papers: [
     {
       id: "p8", group: "recent", cat: "推理与系统", date: "2026-10-16",
       title: "FederatedBytes: Tokenizer-Free, Byte-Level Small Language Models for Efficient Multimodal Federated Learning",
-      authors: "FederatedBytes Team 等",
+      authors: "Ali Sarabadani, Massimo Piccardi, Mehran Abolhasan 等",
       venue: "arXiv:2610.22906", level: "预印本",
       summary: "联邦学习可在保护各端本地数据隐私的前提下汇总全局模型，但计算与通信开销阻碍其服务 NLP 与多模态负载——FederatedBytes 提出无分词器的字节级小语言模型，直接处理字节级文本与多模态数据，大幅降低联邦训练的通信与计算负担。",
       detail: "背景：联邦学习（FL）让分布式客户端在不共享本地数据的前提下共建全局模型，隐私友好；但传统 NLP 管线的重计算与重通信使其难以覆盖当代工作负载。\n方法：字节级（tokenizer-free）小语言模型——绕开词表不一致问题（各端分词器差异是 FL 的隐性障碍），直接以字节为单位处理文本与多模态数据。\n端侧视角： tokenizer-free 是「同一模型在异构端侧设备间可联邦演化」的前提——字节数据天然对齐，端侧众设备协同训练的工程门槛随之下降。",
@@ -672,8 +672,8 @@ papers: [
     },
     {
       id: "p9", group: "recent", cat: "推理与系统", date: "2026-10-15",
-      title: "MemLLM: End-to-end In-Storage Acceleration of On-device RAG using Precomputed KV Caches",
-      authors: "MemLLM Team 等",
+      title: "MemLLM: End-to-end In-Storage Acceleration of On-device Retrieval-Augmented Generation using Precomputed KV Caches",
+      authors: "Seungkwan Kang, Hyungseok Ko, Heemin Kim 等",
       venue: "arXiv:2610.22579", level: "预印本",
       summary: "端侧 RAG 的长上下文预填（prefill）是主要瓶颈——离线预计算 KV 缓存虽省算力，但数 GB 缓存在设备窄互连上形成 I/O 墙；MemLLM 用存内计算（in-storage）端到端加速预计算 KV 缓存的读取与注入，让「外置记忆」真正可在端侧跑起来。",
       detail: "背景：边缘设备上的 RAG 支持个性化推理且保隐私，但其长度不对称性使预填阶段成为瓶颈；服务器侧预计算 KV 缓存的方案搬到端侧后，多 GB 缓存经窄互连搬运形成严重 I/O 墙。\n方法：MemLLM 端到端存内加速——把预计算 KV 缓存的消费过程下沉到存储介质内部，绕开主互连搬运。\n端侧视角：与本期资讯侧的 KV 缓存压缩线（架构级压缩）互补——压缩让缓存变小，存内计算让缓存的读取不再走「总线」，两条路线共同拆端侧长上下文的 I/O 墙。",

@@ -234,7 +234,7 @@ WEEKLY_ARCHIVE[42] = {
     },
     {
       id: "p6", group: "recent", cat: "端侧智能体", date: "2026-10-04",
-      title: "G-CARB: Graph-Localized Conformal Agent Risk Budget for Compositional Safety",
+      title: "G-CARB: Graph-Localized Conformal Agent Risk Budget for Compositional Harm",
       authors: "Zijun Yu 等",
       venue: "arXiv:2610.05563", level: "预印本",
       summary: "为小模型智能体的跨工具调用安全提出「共形风险预算」：用已发生损害的账本校准何时叫停智能体，G-CARB 沿可观测依赖（私有读取→外发动作）选择评分证据，无需额外模型推理——在 AgentDojo 上以一半的评分输入改进了自主任务完成率。",
@@ -254,7 +254,7 @@ WEEKLY_ARCHIVE[42] = {
     },
     {
       id: "p8", group: "recent", cat: "推理与系统", date: "2026-10-02",
-      title: "EdgeAgent: Orchestrating On-Device LLM Inference for End-User Multi-Agent Workflows",
+      title: "EdgeAgent: Orchestrating On-Device LLM inference for End-User Multi-Agent Systems on CPU-GPU Unified Memory Architectures",
       authors: "Yuhai Long 等",
       venue: "arXiv:2610.03394", level: "预印本",
       summary: "面向边缘统一内存（UMA）与多智能体负载的跨层推理系统：零拷贝 UMA 感知张量并行充分吃满 CPU+GPU、按序列可预测性动态分配投机解码草稿预算、异步挂起-让出机制应对工具停顿——解决多智能体碎片化执行下的硬件利用率问题。",
@@ -274,7 +274,7 @@ WEEKLY_ARCHIVE[42] = {
     },
     {
       id: "p10", group: "recent", cat: "能效与评测", date: "2026-09-29",
-      title: "IronLLM: Forging Compact Edge-Native Language Models for Real-Time Embodied Use",
+      title: "IronLLM: Forging Compact Edge-Native Language Models for Real-Time Embodied Intelligence",
       authors: "Changdi Yang 等",
       venue: "arXiv:2609.36860", level: "预印本",
       summary: "654M 参数的端侧原生语言模型 IronLLM-0.6B：混合注意力 + X-MTP 多 token 预测（免 KV 回放、免回滚草稿）带来 1.48 倍解码加速；6.2 万亿 token 预训练 + 多域在线策略蒸馏，性能对标 Qwen3.5-0.8B 与 MiniCPM5-1B。",

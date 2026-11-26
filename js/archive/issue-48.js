@@ -508,7 +508,7 @@ papers: [
     {
       id: "p15", group: "recent", cat: "端侧智能体", date: "2026-11-17",
       title: "LMMR: Learned Multigranular Memory Retrieval for Small Language Model Agents",
-      authors: "LMMR Team 等",
+      authors: "Pengfeng Song, Yunkai Zhuang, Liye Shi",
       venue: "arXiv:2611.22425", level: "预印本",
       summary: "小语言模型智能体的内存预算装不下多跳问题所需的记忆——相关事实散落在记录里，周边文本耗尽宝贵的空间。LMMR 提出可学习的多粒度记忆检索：同时决定「读下一个来源」与「读它多少」——把段落与句子片段链接回原始来源，并为同一缺失证据配对多个视图，让小模型在有限上下文里精准取材。",
       detail: "问题：小模型 Agent 的记忆空间装不下多跳问答所需上下文。\n方法：LMMR——学习「选哪个来源+读多少」的多粒度检索；段落/句子片段链接原始来源；同证据多视图配对。\n端侧视角：记忆检索是端侧智能体的核心瓶颈——与 Memoket（硬件记忆）、智元 LIFE（可塑性记忆）同向但解决的是「读」侧：硬件负责记全、LMMR 负责读准，端侧记忆栈的学术拼图。",
@@ -518,17 +518,17 @@ papers: [
     {
       id: "p16", group: "recent", cat: "端侧智能体", date: "2026-11-16",
       title: "Building Fully On-Device GUI Agents with Mobile NPUs",
-      authors: "NPU GUI Agents Team 等",
+      authors: "Zhe Dong, Guanyu Cai, Yuchen Jiang 等",
       venue: "arXiv:2611.20772", level: "预印本",
-      summary: "手机 GUI 智能体大多仍依赖云端模型或远程推理——重复通信延迟、隐私暴露与网络依赖是三大痛点。本文在手机 NPU 上构建完全端侧的 GUI 智能体：现代智能手机 NPU 为全端侧 LLM 推理提供了理想基座，但直接部署常规 GUI 智能体流水线会遇到算子与内存约束——论文给出面向 NPU 的管线重构方案，让「自动操作手机」全程在设备内完成。",
-      detail: "问题：GUI 智能体云端依赖——通信延迟/隐私/网络可用性。\n方案：面向手机 NPU 重构 GUI 智能体流水线（算子适配+内存约束下的管线重设计）。\n端侧视角：GUI 智能体是端侧 Super App 级应用——屏幕理解+动作生成双负载对 NPU 利用率的工程答卷；与 WorkBuddy 千万日活、微信小微预告设备端推理同周，端侧智能体的「最后一公里」（本地 GUI 操作）有了学术基线。",
-      tags: ["GUI智能体", "手机NPU", "全端侧", "管线重构"],
+      summary: "手机 GUI 智能体大多仍依赖云端模型或远程推理——重复通信延迟、隐私暴露与网络依赖是三大痛点。直接把常规 GUI 智能体流水线搬到手机 NPU 上效率很低：这类负载是典型的长输入、短输出，常规智能体却把大量时间花在自回归推理与动作生成上，而手机 NPU 做 prompt 预填的吞吐远高于逐 token 解码；动态变化的上下文又与静态编译的 NPU 运行时所需的固定上下文配置相冲突。论文提出以预填为中心的推理架构 DroidPrefill，让「自动操作手机」全程在设备内完成。",
+      detail: "问题：GUI 智能体的云端依赖——通信延迟、隐私、网络可用性。\n低效根源：GUI 智能体推理是长输入、短输出负载，常规智能体却把大量时间花在自回归推理与动作生成上，而手机 NPU 的预填吞吐远高于逐 token 解码；动态变化的智能体上下文又与静态编译运行时要求的固定上下文配置相冲突。\n方案：DroidPrefill——以预填为中心的推理架构，用「以预填为中心的推理」减少不必要的自回归解码，用「高效上下文管理」在固定的编译上下文预算内保住决策关键信息。\n成绩（论文口径）：商用手机上与自回归基线 T3A+ 的受控对比，每步推理延迟最多降低 85.0%，任务成功率最多提升 24.6%。\n端侧视角：GUI 智能体是端侧 Super App 级应用——屏幕理解+动作生成双负载对 NPU 利用率的工程答卷；与 WorkBuddy 千万日活、微信小微预告设备端推理同周，端侧智能体的「最后一公里」（本地 GUI 操作）有了学术基线。",
+      tags: ["GUI智能体", "手机NPU", "全端侧", "预填优先"],
       url: "https://arxiv.org/abs/2611.20772"
     },
     {
       id: "p14", group: "recent", cat: "推理与系统", date: "2026-11-16",
       title: "Nemotron 3.5 Bolt E4B 4GB: An Open and Efficient Small Language Model for Fast Conversational Agents",
-      authors: "NVIDIA Nemotron Team 等",
+      authors: "NVIDIA 等",
       venue: "arXiv:2611.20771", level: "预印本",
       summary: "英伟达发布开源小语言模型 Nemotron 3.5 Bolt E4B 4GB——基于 Gemma-4-E4B-it 后训练，针对「每 GB 内存的智能与速度」优化，面向快速对话智能体：继承 Gemma 对话能力并强化多轮工具调用、指令遵循与输入接地，为本地语音/设备助手、交互人设与嵌入式环境设计——与 RTX Spark 生态（本地跑 Nemotron 3 Ultra）形成「PC 大档+小档」双线。",
       detail: "模型：Nemotron 3.5 Bolt E4B 4GB（基于 Gemma-4-E4B-it 后训练，开放权重）。\n优化：每 GB 内存的智能与速度（4GB 内存档）——多轮工具调用/指令遵循/输入 grounding 强化。\n定位：本地语音助手、交互人设、嵌入式设备。\n端侧视角：英伟达的开源端侧双线成型——RTX Spark 跑 Nemotron 3 Ultra（PC 重档）、Bolt E4B 4GB 面向 4GB 内存小档（嵌入式/语音助手），「按内存分档」的产品化思路与 Astra/Sol 的任务分层同一哲学。",
@@ -577,8 +577,8 @@ papers: [
     },
     {
       id: "p2", group: "recent", cat: "端侧智能体", date: "2026-11-10",
-      title: "Mobile AI Factory: Building Specialized Language Models for Your Mobile Devices",
-      authors: "Mobile AI Factory Team 等",
+      title: "Mobile AI Factory: Building Specialized Language Models for Your Mobile Device",
+      authors: "Evan Li, Krishna Deshpande, Wen Cheng 等",
       venue: "arXiv:2611.13509", level: "预印本",
       summary: "小模型只有为目标任务微调并按目标机型裁剪尺寸才能在手机上跑好，而这今天依赖反复的专家调参——Mobile AI Factory 是一个智能体系统：给定任务描述与目标手机，编排 LLM 自动选择基座、生成训练数据、执行微调与量化、按设备内存约束裁剪，产出一个可直接部署的专用 SLM，全流程无需专家介入。",
       detail: "输入：任务规格+目标手机型号。\n流程：编排 LLM 选基座→数据合成→微调→量化→按设备内存约束定尺寸，产出即部署的专用小模型。\n端侧视角：「每个 App 一个专用小模型」的工厂化流水线——把端侧模型定制的边际成本从专家周级压到自动小时级，是 App 级端侧 AI 经济性成立的关键一步。",
@@ -588,7 +588,7 @@ papers: [
     {
       id: "p3", group: "recent", cat: "端侧智能体", date: "2026-11-10",
       title: "HandsOnAid: Building and Evaluating an Offline First-Aid Assistant",
-      authors: "HandsOnAid Team 等",
+      authors: "Rezwan Islam Salvi, Saiyma Sittul Muna, Mushfiqur Rahman Mushfique",
       venue: "arXiv:2611.14059", level: "预印本",
       summary: "无信号、无救护车的紧急场景下，手机上的小语言模型可以救命，但建议必须安全准确——HandsOnAid 用 5550 对急救问答（FirstAidQA）以 QLoRA 微调 4-bit Gemma 2B 构建离线急救助手，对比 7 种配置（基座/4-bit/8-bit/长度下限/安全护栏等），系统评测安全性与准确性的平衡。",
       detail: "模型：4-bit Gemma 2B+QLoRA 微调，数据集 FirstAidQA 5550 对。\n评测：7 种配置对比——基础模型、4-bit 与 8-bit 微调、长度下限与安全护栏变体。\n端侧视角：离线可用是端侧模型不可替代的价值场景——急救建议的「安全优先」约束（拒答优于错答）为所有端侧高风险助手树立了评测范式。",
@@ -597,8 +597,8 @@ papers: [
     },
     {
       id: "p4", group: "recent", cat: "能效与评测", date: "2026-11-08",
-      title: "Compute Regeneration through Re-Productization: Reorganizing Retired Edge AI Hardware",
-      authors: "GEdgeBot Team 等",
+      title: "Compute Regeneration through Re-Productization: Reorganizing Retired Edge AI Silicon into a Delivered Multilingual Service Robot",
+      authors: "Hongyu Luo, Sun Tie, John Wang",
       venue: "arXiv:2611.11698", level: "预印本",
       summary: "失去产品支持但算力仍可观的边缘硬件如何再利用——本文把「算力再生」当作系统设计问题：保留计算模组、重设计周边产品组织。案例 GEdgeBot 是一台基于退役 32GB Jetson AGX Xavier 的多语言服务机器人，盘点显示仅该模组即可支撑全部推理，整机暴露五个可复用能力面。",
       detail: "方法：再产品化（re-productization）——保留计算核心、重构产品形态与系统组织。\n案例：32GB Jetson AGX Xavier 驱动的多语言服务机器人 GEdgeBot，源码级盘点算力与能力面。\n端侧视角：端侧算力的生命周期管理——退役不等于报废，为边缘硬件的循环利用提供了系统方法论。",
@@ -608,7 +608,7 @@ papers: [
     {
       id: "p8", group: "recent", cat: "能效与评测", date: "2026-10-30",
       title: "Compression Technique Interactions in Small Language Models: A Factorial Ablation",
-      authors: "Compression-Interactions Team 等",
+      authors: "Bhushit Nema, Siddharth Krishnamurthy, Anjali Kadiyala",
       venue: "arXiv:2611.00464", level: "预印本",
       summary: "量化、剪枝与压缩后恢复技术组合使用时如何相互影响，实践缺乏系统指南——本文对四种 SLM 架构（2.7B-7B 参数）做了 72 种压缩配置的因子消融研究，扩展 48 种组合的次序分析，并在 30 个压缩模型上做基准精度验证与鲁棒性检验。",
       detail: "设计：72 压缩配置×4 架构（2.7B-7B）因子消融+48 配置的施加次序分析+30 模型基准验证。\n发现：压缩技术间的交互效应显著——组合收益非叠加，施加次序影响最终精度。\n端侧视角：给「先量化还是先剪枝」这类日常工程决策提供了首批系统性证据，是端侧压缩落地的操作手册级工作。",

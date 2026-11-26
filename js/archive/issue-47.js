@@ -632,8 +632,8 @@ papers: [
     },
     {
       id: "p2", group: "recent", cat: "端侧智能体", date: "2026-11-10",
-      title: "Mobile AI Factory: Building Specialized Language Models for Your Mobile Devices",
-      authors: "Mobile AI Factory Team 等",
+      title: "Mobile AI Factory: Building Specialized Language Models for Your Mobile Device",
+      authors: "Evan Li, Krishna Deshpande, Wen Cheng 等",
       venue: "arXiv:2611.13509", level: "预印本",
       summary: "小模型只有为目标任务微调并按目标机型裁剪尺寸才能在手机上跑好，而这今天依赖反复的专家调参——Mobile AI Factory 是一个智能体系统：给定任务描述与目标手机，编排 LLM 自动选择基座、生成训练数据、执行微调与量化、按设备内存约束裁剪，产出一个可直接部署的专用 SLM，全流程无需专家介入。",
       detail: "输入：任务规格+目标手机型号。\n流程：编排 LLM 选基座→数据合成→微调→量化→按设备内存约束定尺寸，产出即部署的专用小模型。\n端侧视角：「每个 App 一个专用小模型」的工厂化流水线——把端侧模型定制的边际成本从专家周级压到自动小时级，是 App 级端侧 AI 经济性成立的关键一步。",
@@ -643,7 +643,7 @@ papers: [
     {
       id: "p3", group: "recent", cat: "端侧智能体", date: "2026-11-10",
       title: "HandsOnAid: Building and Evaluating an Offline First-Aid Assistant",
-      authors: "HandsOnAid Team 等",
+      authors: "Rezwan Islam Salvi, Saiyma Sittul Muna, Mushfiqur Rahman Mushfique",
       venue: "arXiv:2611.14059", level: "预印本",
       summary: "无信号、无救护车的紧急场景下，手机上的小语言模型可以救命，但建议必须安全准确——HandsOnAid 用 5550 对急救问答（FirstAidQA）以 QLoRA 微调 4-bit Gemma 2B 构建离线急救助手，对比 7 种配置（基座/4-bit/8-bit/长度下限/安全护栏等），系统评测安全性与准确性的平衡。",
       detail: "模型：4-bit Gemma 2B+QLoRA 微调，数据集 FirstAidQA 5550 对。\n评测：7 种配置对比——基础模型、4-bit 与 8-bit 微调、长度下限与安全护栏变体。\n端侧视角：离线可用是端侧模型不可替代的价值场景——急救建议的「安全优先」约束（拒答优于错答）为所有端侧高风险助手树立了评测范式。",
@@ -652,8 +652,8 @@ papers: [
     },
     {
       id: "p4", group: "recent", cat: "能效与评测", date: "2026-11-08",
-      title: "Compute Regeneration through Re-Productization: Reorganizing Retired Edge AI Hardware",
-      authors: "GEdgeBot Team 等",
+      title: "Compute Regeneration through Re-Productization: Reorganizing Retired Edge AI Silicon into a Delivered Multilingual Service Robot",
+      authors: "Hongyu Luo, Sun Tie, John Wang",
       venue: "arXiv:2611.11698", level: "预印本",
       summary: "失去产品支持但算力仍可观的边缘硬件如何再利用——本文把「算力再生」当作系统设计问题：保留计算模组、重设计周边产品组织。案例 GEdgeBot 是一台基于退役 32GB Jetson AGX Xavier 的多语言服务机器人，盘点显示仅该模组即可支撑全部推理，整机暴露五个可复用能力面。",
       detail: "方法：再产品化（re-productization）——保留计算核心、重构产品形态与系统组织。\n案例：32GB Jetson AGX Xavier 驱动的多语言服务机器人 GEdgeBot，源码级盘点算力与能力面。\n端侧视角：端侧算力的生命周期管理——退役不等于报废，为边缘硬件的循环利用提供了系统方法论。",
@@ -663,7 +663,7 @@ papers: [
     {
       id: "p5", group: "recent", cat: "推理与系统", date: "2026-11-03",
       title: "UMLoad: Fast On-Demand Model Loading on Unified Memory Architecture",
-      authors: "UMLoad Team 等",
+      authors: "Zimeng Wang, Jinrong Yang, Rong Chen",
       venue: "arXiv:2611.04253", level: "预印本",
       summary: "按需模型加载主导着交互式端侧 AI 的响应延迟——统一内存架构（UMA）本应让加载近乎免费（权重放在 GPU 已可见的内存），但现有框架仍沿用分立 GPU 时代的加载流程。UMLoad 在系统层解耦框架逻辑分配与物理放置，将统一内存上的模型加载显著加速。",
       detail: "问题：交互式端侧 AI 首响延迟被按需加载权重主导；UMA 设备（手机 SoC/统一内存 PC）上框架仍走分立 GPU 加载路径，效率浪费巨大。\n方法：系统级加载加速器——解耦逻辑分配与物理放置，面向 UMA 重构加载流。\n端侧视角：多模型常驻切换（手机助手+Agent 工作流）时代，加载速度就是冷启动体验——UMLoad 补上了统一内存架构缺失的系统层。",
@@ -673,7 +673,7 @@ papers: [
     {
       id: "p6", group: "recent", cat: "能效与评测", date: "2026-11-01",
       title: "MedPsy: State-of-the-Art Small Medical Language Models for Efficient Edge Deployment",
-      authors: "MedPsy Team 等",
+      authors: "Davide Vitabile, Alexandro Buffa, Akshay Nambiar 等",
       venue: "arXiv:2611.02011", level: "预印本",
       summary: "最强开源医疗 LLM 太大无法私有部署到边缘设备，紧凑医疗模型在知识密集任务上又差距明显——MedPsy 构建了边缘内存预算内的小型医疗模型系列，并直面推理模型长思维链带来的串行解码、端到端延迟、能耗与 KV 缓存压力问题，在同尺寸取得领先。",
       detail: "矛盾：推理型小模型产出长思维链，串行解码拖高延迟与能耗、KV 缓存挤占内存——边缘部署的双重约束。\n贡献：边缘内存预算内同尺寸最优的医疗小模型系列。\n端侧视角：医疗是端侧隐私的最强动机场景——「推理预算」与「内存预算」同时受限下的模型设计，为所有端侧推理模型提供了样板。",
@@ -683,7 +683,7 @@ papers: [
     {
       id: "p8", group: "recent", cat: "能效与评测", date: "2026-10-30",
       title: "Compression Technique Interactions in Small Language Models: A Factorial Ablation",
-      authors: "Compression-Interactions Team 等",
+      authors: "Bhushit Nema, Siddharth Krishnamurthy, Anjali Kadiyala",
       venue: "arXiv:2611.00464", level: "预印本",
       summary: "量化、剪枝与压缩后恢复技术组合使用时如何相互影响，实践缺乏系统指南——本文对四种 SLM 架构（2.7B-7B 参数）做了 72 种压缩配置的因子消融研究，扩展 48 种组合的次序分析，并在 30 个压缩模型上做基准精度验证与鲁棒性检验。",
       detail: "设计：72 压缩配置×4 架构（2.7B-7B）因子消融+48 配置的施加次序分析+30 模型基准验证。\n发现：压缩技术间的交互效应显著——组合收益非叠加，施加次序影响最终精度。\n端侧视角：给「先量化还是先剪枝」这类日常工程决策提供了首批系统性证据，是端侧压缩落地的操作手册级工作。",

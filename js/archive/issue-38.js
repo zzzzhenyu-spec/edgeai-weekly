@@ -110,7 +110,7 @@ WEEKLY_ARCHIVE[38] = {
     },
     {
       id: "p2", group: "recent", cat: "端云协同", date: "2026-09-14",
-      title: "CIDERS: Cloud-Edge LLM Collaborative Learning via Accelerating Personalized Bilevel Optimization",
+      title: "Cloud-Edge LLM Collaborative Learning via Accelerating Personalized Bilevel Optimization",
       authors: "Victor H. Chen, Hairui Yu, Stella K. Chung, Hong Yan",
       venue: "arXiv:2609.15664", level: "预印本",
       summary: "首次将云-边 LLM 协作形式化为个性化双层优化：上层优化边缘个性化、下层管理云端知识迁移；压缩边缘路径上数学推理 3.1×、代码生成 1.7× 提升。",
@@ -201,7 +201,7 @@ WEEKLY_ARCHIVE[38] = {
     {
       id: "p11", group: "published", cat: "推理与系统", date: "2024-01-01",
       title: "LLM in a Flash: Efficient Large Language Model Inference with Limited Memory",
-      authors: "Keivan Alizadeh Sharifi, Iman Mirzadeh 等（Apple）",
+      authors: "Keivan Alizadeh, Iman Mirzadeh, Dmitry Belenko 等（Apple）",
       venue: "ICLR 2024", level: "顶会",
       summary: "苹果经典工作：利用激活稀疏性与投影层「闪存驻留」，把超过可用 DRAM 的大模型推理搬到手机上，是端侧大模型存储卸载路线的奠基之作。",
       detail: "核心思想：不把整个模型装进 DRAM，而是把大部分权重留在闪存（NAND），推理时利用激活稀疏性只读取需要的行，并通过「锚点 + 投影」进一步压缩需要搬运的数据量。\n该方法使超出 DRAM 容量的 LLM 能在移动设备上高效运行，直接影响了 Apple Intelligence 的端侧推理栈，也是后续所有端侧「存储卸载」研究（如本周 LeanStream）的对照基线。",
@@ -210,8 +210,8 @@ WEEKLY_ARCHIVE[38] = {
     },
     {
       id: "p12", group: "published", cat: "推理与系统", date: "2024-01-01",
-      title: "PowerInfer: Fast Large Language Model Inference with Consumer-grade GPUs",
-      authors: "Yixin Song, Zeyu Mi, Haotian Xie 等（上海交大 IPADS）",
+      title: "PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU",
+      authors: "Yixin Song, Zeyu Mi, Haotong Xie 等（上海交大 IPADS）",
       venue: "MLSys 2024", level: "系统顶会",
       summary: "利用 LLM 推理的激活局部性，热神经元驻 GPU、冷神经元留 CPU，消费级 GPU 上最高 11.7× 加速；后续 PowerInfer-2 把该路线带上手机，首次在智能手机跑超百亿参数模型。",
       detail: "观察到 LLM 推理中少量「热」神经元贡献大部分激活，PowerInfer 构建 GPU-CPU 混合推理引擎：自适应划分并缓存热神经元于 GPU、冷神经元留 CPU，配合细粒度流水线隐藏通信。\n在 RTX 4090 等消费级 GPU 上相对 llama.cpp 最高 11.69× 加速。其手机端后续工作 PowerInfer-2（2024）通过异构神经网络计算与细粒度权重复用，首次在智能手机上运行超百亿参数模型，是端侧大模型系统化的标志性成果。",
@@ -219,34 +219,34 @@ WEEKLY_ARCHIVE[38] = {
       url: "https://arxiv.org/abs/2312.12456"
     },
     {
-      id: "p13", group: "published", cat: "安全与隐私", date: "2025-01-01",
-      title: "ArrowCloak: TEE-Shielded LLM Partitioning with Obfuscation",
-      authors: "ArrowCloak 作者团队",
+      id: "p13", group: "published", cat: "安全与隐私", date: "2025-08-13",
+      title: "Game of Arrows: On the (In-)Security of Weight Obfuscation for On-Device TEE-Shielded LLM Partition Algorithms",
+      authors: "Pengli Wang, Bingyou Dong, Yifeng Cai 等",
       venue: "USENIX Security 2025", level: "CCF-A",
-      summary: "TEE 保护的端侧 LLM 推理：以代数混淆变换把计算密集层安全卸载到 GPU、仅轻量运算留在 TEE，兼顾模型知识产权保护与性能。",
-      detail: "TEE（可信执行环境）算力有限，难以承载 LLM 全量计算；ArrowCloak 属于「TEE-Shielded LLM Partition」路线的代表：对计算密集层施加可证明的混淆变换后卸载到不受信的 GPU，敏感轻量运算保留在 TEE 内，在保护权重知识产权的同时显著快于纯 TEE 执行。\n注意：本周预印本《Understanding the Security Boundary…》提出的 Collapse 攻击揭示了此类方案的共性漏洞，ArrowCloak 亦在其列，建议关注后续修补版本。",
-      tags: ["TEE", "混淆", "USENIX Sec'25"],
-      url: "https://www.usenix.org/conference/usenixsecurity25"
+      summary: "「TEE 保护的端侧大模型切分」把轻量层留在设备 TEE 内、重计算卸载到不可信 GPU，并用轻量混淆保护卸载出去的权重。论文指出现有方案共有的弱点——混淆后向量的方向相似性，并提出攻击 ArrowMatch 与防御 ArrowCloak：在 4 个代表性大模型、7 个数据集、5 种混淆方案上，ArrowMatch 全部破解、私有权重恢复准确率超过 98%；ArrowCloak 用轻量的矩阵-向量乘法保护向量方向。",
+      detail: "路线：TSLP（TEE-Shielded LLM Partition）——轻量层在用户设备的 TEE 内运行、计算密集部分卸载到不可信 GPU，对卸载的权重做轻量混淆。\n攻击：ArrowMatch——比较混淆后的模型权重与公开预训练权重的方向距离，利用方向相似性恢复私有权重。\n战果：4 个代表性大模型 × 7 个数据集 × 5 种混淆方案，现有轻量混淆方案全部被破解，私有权重恢复准确率超过 98%。\n防御：ArrowCloak——以轻量的矩阵-向量乘法保护向量方向与私有权重。\n性能：论文口径，抗 ArrowMatch 的能力较现有最优方案高 6.5 倍、方向距离扩大 900 倍以上；在真实 Intel SGX 设备上，相对「整个模型放进 TEE」的基线总开销降低 2.83 倍。\n发表：USENIX Security 2025，论文集第 279–298 页。\n端侧视角：「重活外包、要害留在 TEE」是大模型在端侧保护知识产权的主流做法——TEE 算力有限，整个模型放进去跑不动。ArrowMatch 说明混淆够不够强不能凭直觉：拿公开预训练权重当参照就能反推出私有权重。ArrowCloak 把防线落在向量方向上，代价只是一次矩阵-向量乘法。做端侧模型保护的团队值得拿它对照自查：你的混淆方案挡不挡得住拿公开底模做参照的攻击者。",
+      tags: ["TEE", "权重混淆", "USENIX Sec'25"],
+      url: "https://www.usenix.org/conference/usenixsecurity25/presentation/wang-pengli"
     },
     {
-      id: "p14", group: "published", cat: "安全与隐私", date: "2025-01-01",
-      title: "TSQP: Efficient and Secure LLM Inference through TEE-based Spatial Quantization Partitioning",
-      authors: "TSQP 作者团队",
+      id: "p14", group: "published", cat: "安全与隐私", date: "2025-05-12",
+      title: "TSQP: Safeguarding Real-Time Inference for Quantization Neural Networks on Edge Devices",
+      authors: "Yu Sun, Gaojian Xiong, Jianhua Liu 等",
       venue: "IEEE S&P 2025", level: "CCF-A",
-      summary: "面向量化 LLM 的 TEE 防护：将推理按空间切分，敏感计算保留 TEE、量化等重负载卸载 GPU，兼顾安全与效率；与 ArrowCloak 同属 TSLP 路线。",
-      detail: "与 ArrowCloak 同属「TEE-Shielded LLM Partition」技术路线，面向量化 LLM 场景：把推理图按空间切分，TEE 内执行安全敏感部分，计算繁重的量化运算卸载到 GPU 加速，以更小的 TEE 开销换取可用的端侧推理性能。\n本周 Collapse 攻击同样指出其特定架构实现存在可利用的攻击面，是评估该类方案安全边界时的重要参照。",
+      summary: "面向边缘设备上量化神经网络（QNN）实时推理的 TEE 保护方案：TSQP（TEE-Shielded QNN Partition）把关键的再量化尺度留在 TEE 内，8 位矩阵运算卸载到 TEE 之外，在保护模型机密性的同时保住实时性；论文称其为首个面向 QNN 的 TEE 保护安全推理方法。官方开源实现基于 Intel SGX 与 Gramine。",
+      detail: "对象：边缘设备上量化神经网络（QNN）的实时推理——TSQP 即 TEE-Shielded QNN Partition。\n思路：把关键的再量化尺度留在 TEE 内保护，8 位矩阵运算卸载到 TEE 之外执行，以此兼顾模型机密性与实时性。\n定位：论文称是首个面向 QNN 的 TEE 保护安全推理方法。\n实现：官方开源代码基于 Intel SGX 与 Gramine，推理在普通环境与 TEE 两侧分开运行，实验覆盖精度、延迟、完整性与模型机密性。\n发表：IEEE S&P 2025，论文集第 2114–2132 页。\n端侧视角：量化是端侧推理的默认选项，而「量化模型的知识产权藏在哪里」此前少有人正面回答——TSQP 的答案是把再量化尺度这件小东西锁进 TEE、把占体积的 8 位运算放出去，用很小的 TEE 开销换模型机密性。同团队后来的 LoRO 把 TEE 保护推理推进到了大模型。",
       tags: ["TEE", "量化", "IEEE S&P'25"],
-      url: "https://sp2025.ieee-security.org"
+      url: "https://github.com/D1aoBoomm/TSQP"
     },
     {
-      id: "p15", group: "published", cat: "安全与隐私", date: "2025-01-01",
-      title: "LoRO: Low-Rank Obfuscation for TEE-Assisted DNN/LLM Inference on Untrusted GPUs",
-      authors: "LoRO 作者团队",
+      id: "p15", group: "published", cat: "安全与隐私", date: "2025-12-02",
+      title: "LoRO: Real-Time on-Device Secure Inference for LLMs via TEE-Based Low Rank Obfuscation",
+      authors: "Gaojian Xiong, Yu Sun, Jianhua Liu 等",
       venue: "NeurIPS 2025", level: "CCF-A",
-      summary: "以低秩（low-rank）变换为混淆原语保护端侧模型权重知识产权的 TEE-GPU 协同推理方案，低秩结构带来更小的 TEE 内计算与通信开销。",
-      detail: "LoRO 用低秩变换作为核心混淆原语：在卸载到不可信 GPU 的计算中隐藏权重信息，同时低秩结构使 TEE 内的计算与通信开销显著降低，保持端侧可接受的延迟。\n作为 NeurIPS 2025 发表的 TSLP 代表方案，其低秩原语组合同样被本周 Collapse 攻击证明存在可利用的安全边界，值得与 O_ext 新原语对照阅读。",
-      tags: ["低秩混淆", "TEE", "NeurIPS'25"],
-      url: "https://neurips.cc"
+      summary: "面向端侧实时安全推理的大模型 TEE 保护方案：作者指出现有 TEE 模型保护存在统计弱点，并用「带先验的模型窃取攻击」加以演示；LoRO 用稠密掩码隐藏参数，靠两项设计把开销压下来——低秩掩码以低秩因子生成稠密掩码，因子复用让少量共享因子为每一层生成掩码，安全内存需求从 GB 级降到数十 MB。论文口径：平均推理延迟为无保护时的 1.49 倍（纯 TEE 保护推理为 112 倍），无精度损失、无需重训、不改架构。",
+      detail: "问题：现有基于 TEE 的模型保护存在统计弱点——作者用「带先验的模型窃取攻击」（Model Stealing Attack with Prior）演示。\n掩码：LoRO 用稠密掩码隐藏参数。\n低秩掩码：以低秩因子生成稠密掩码，在保住模型机密性的同时大幅降低 TEE 内的计算复杂度。\n因子复用：少量共享的「基石因子」为每一层生成掩码，安全内存需求从 GB 级降到数十 MB，避开安全内存换页带来的大延迟。\n效果（论文口径）：平均推理延迟为无保护时的 1.49 倍，纯 TEE 保护推理为 112 倍；无精度损失、无需重训、不改模型架构。\n发表：NeurIPS 2025 主会。\n端侧视角：大模型跑在端侧，权重就是厂商最值钱的资产；TEE 护得住权重却慢得没法用（112 倍延迟），LoRO 的价值在于把保护成本压到 1.49 倍——关键是别让安全内存装不下：每层的掩码用少数共享因子现场生成，GB 级的占用变成数十 MB。与同团队的 TSQP（量化神经网络版本）一样，这条路线押的是「要害很小、重活在外」。",
+      tags: ["TEE", "低秩掩码", "NeurIPS'25"],
+      url: "https://papers.nips.cc/paper_files/paper/2025/hash/1b86cf4b15cd83b6520d851eb7298228-Abstract-Conference.html"
     }
   ],
 

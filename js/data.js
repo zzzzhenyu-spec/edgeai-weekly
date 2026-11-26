@@ -387,7 +387,7 @@ papers: [
     {
       id: "p17", group: "recent", cat: "端侧智能体", date: "2026-11-24",
       title: "LogToPersona: New Benchmark and Efficient Persona Prediction through Semantic Log Filtering",
-      authors: "LogToPersona Team 等",
+      authors: "Ahmed Alajrami, Ondrej Bohdal, Seokwoo Song 等",
       venue: "arXiv:2611.33510", level: "预印本",
       summary: "个性化生成式 AI 与智能体需要了解用户画像，但这类信息难以获取且随时间变化——本文研究从单日移动端活动日志推断画像属性：发布 1600 对「画像-日志」合成基准，并面向端侧推理优化语义日志过滤，让「手机自己读懂你是谁」在设备上低成本完成。",
       detail: "任务：单日移动活动日志→画像属性推断。\n基准：1600 对合成画像-日志数据（该任务此前无公开基准）。\n目标：端侧推理（语义日志过滤压成本）。\n端侧视角：个人智能体（小豆/千问Go 同周开打）的核心资产是记忆与画像——谁在端侧低成本维护「用户理解」，谁的个人助理才真正贴心；画像推断放端上跑也是隐私的必然要求。",
@@ -397,7 +397,7 @@ papers: [
     {
       id: "p18", group: "recent", cat: "端侧智能体", date: "2026-11-20",
       title: "Correct Precedents Induce Policy Violations in On-Device LLM Agents",
-      authors: "Policy Violations Team 等",
+      authors: "Chong Tian, Yu Wang, Steve Liu 等",
       venue: "arXiv:2611.27216", level: "预印本",
       summary: "端云协作智能体里，端侧小模型常在隐私数据上做「不可逆操作前的最后一道检查」——本文首次识别一类新失败模式：智能体会被自己本会话内的正确决策带偏。正确放行一件限制已解除的物品后，它更容易放行下一件仍受限的物品——正确先例诱导策略违规，且越「用得顺」越危险。",
       detail: "场景：云端大模型+端侧小智能体协作，端侧代理对私有数据执行操作。\n发现：正确决策形成错误先例——放行过合法项后，对仍受限项的违规率上升。\n意义：首次识别该失败模式，为端侧智能体的安全评测补上一类新断言。\n端侧视角：端侧智能体的安全叙事一直防「外部攻击」，这篇指向「自我诱导」——正确经验也会累积成偏见；随个人智能体本周密集上线，这类会话内策略漂移的评测将成刚需。",
@@ -407,7 +407,7 @@ papers: [
     {
       id: "p19", group: "recent", cat: "能效与评测", date: "2026-11-20",
       title: "Decision models for UAVBench and the viability of edge deployment",
-      authors: "UAVBench Team 等",
+      authors: "Matthew Michelson, Goran Muric, Adrien Bibal 等",
       venue: "arXiv:2611.28331", level: "预印本",
       summary: "小语言模型常被提议用于无人机机载推理，但基准分数高不等于「真能在边缘计算机上跑、且跑得有用」——本文用无人机决策基准 UAVBench 回答三个问题：小型结构化决策模型是否胜任、普通本地机器（一台 Mac）能否筛选候选、以及在真实边缘硬件上的可用性——为「榜单 vs 实机」的鸿沟给出方法论。",
       detail: "问题：基准分数≠边缘实机可用性。\n方法：UAVBench 决策任务×三问（模型胜任性/本地机器筛选/边缘实机可用性）。\n端侧视角：「榜单分数到端侧落地」之间的工程翻译层长期缺位——这篇把「能不能跑」本身当成研究对象，与迈特芯 5W 跑 8B、DFly2 加速比同一命题：端侧的度量衡是吞吐/时延/功耗，不是榜单分。",
@@ -416,8 +416,8 @@ papers: [
     },
     {
       id: "p20", group: "recent", cat: "推理与系统", date: "2026-11-19",
-      title: "CarrierKV: An Edge LLM Accelerator with Positional Carrier Decomposition for Low-Bit KV Caches",
-      authors: "CarrierKV Team 等",
+      title: "CarrierKV: An Edge LLM Accelerator with Positional Carrier Decomposition for Low-Bit KV Cache",
+      authors: "Junyi Luo, Xinting Jiang, Ruichen Qi 等",
       venue: "arXiv:2611.26857", level: "预印本",
       summary: "边缘设备长上下文解码受 DRAM 带宽限制——每生成一个 token 都要读整个增长中的 KV 缓存。4-bit 块缩放格式（如 NVFP4）降低流量但伤精度：Qwen3-4B 的 32K RULER 从 92.6 掉到 79.4，Hadamard 旋转进一步掉到 57.7。CarrierKV 观察到 key 能量大多集中在一个「位置载波」向量上，据此做位置载波分解，在低比特 KV 缓存上同时保住精度与带宽。",
       detail: "瓶颈：长上下文解码=每 token 全量读 KV 缓存，DRAM 带宽是墙。\n观察：key 能量集中于 per-head 的位置载波向量。\n方案：位置载波分解——载波与内容分离处理，低比特 KV 保精度。\n端侧视角：KV 缓存是端侧长上下文的命门（内存+带宽双卡）——与 DFly2 的「零额外 KV 显存」、CECAR 的缓存感知路由同向：2026 年端侧推理的主战场已从权重压缩转向 KV 栈。",
@@ -427,7 +427,7 @@ papers: [
     {
       id: "p21", group: "recent", cat: "端云协同", date: "2026-11-18",
       title: "LEDGE: An Efficient Simulator for Distributed LLM Serving on Heterogeneous Edge Devices",
-      authors: "LEDGE Team 等",
+      authors: "Zihao Wang, Ye Tian, Tajana Rosing 等",
       venue: "arXiv:2611.24085", level: "预印本",
       summary: "评估异构边缘设备上的分布式 LLM 服务需要探索模型切分、设备放置与网络条件的组合，反复真机实验代价高昂——LEDGE 是一个高效模拟器：支持细粒度放置配置、捕捉运行时行为、精确预测执行时间且保持低仿真开销，让「端侧超节点」式的多设备协同可以先在模拟器里迭代。",
       detail: "问题：异构边缘分布式 LLM 服务的配置空间大，真机实验贵。\n方案：细粒度放置+运行时行为建模+执行时间预测的低开销模拟器。\n端侧视角：与辛米尔「端侧超节点」同题——多设备组队计算的落地需要配套工具链，模拟器是第一步：先在仿真里找到切分与放置的最优解，再上真机；端侧 Infra 的成熟标志正是工具链先于硬件铺开。",
@@ -436,8 +436,8 @@ papers: [
     },
     {
       id: "p22", group: "recent", cat: "端侧智能体", date: "2026-11-18",
-      title: "Learning through Discernment: when a small language model learns from user feedback on the phone",
-      authors: "Discernment Team 等",
+      title: "Learning through Discernment: when a small language model learns from user feedback on the job, and when it decays",
+      authors: "Sirisilp Kongsilp",
       venue: "arXiv:2611.23716", level: "预印本",
       summary: "手机上的小模型本可以「每晚从自己白天的工作中学习」，但没有真实结果标签时，必须有什么来裁决哪些尝试值得学——模型的自我判断和用户的反应都可能出错。本文研究 Qwen3 0.6B/1.7B 加 LoRA 适配器的方案：每晚微调被裁判接受的尝试，在 127 段最长一年的连续使用中验证「边用边学」的可持续性。",
       detail: "设定：端侧小模型（Qwen3 0.6B/1.7B+LoRA）每夜从当日尝试中学习。\n核心：裁决机制——无真实结果时由谁决定「哪些值得学」。\n实验：127 段连续使用（最长一年）的纵向验证。\n端侧视角：端侧模型的终身学习是个人智能体的终极形态——白天干活、晚上睡觉时自我进化；这篇把「学什么」的裁决问题摆上台面，与用户画像推断（LogToPersona）、会话内策略漂移（Correct Precedents）两项工作构成端侧个性化研究的三件套。",
@@ -446,8 +446,8 @@ papers: [
     },
     {
       id: "p24", group: "recent", cat: "推理与系统", date: "2026-11-16",
-      title: "TRACK: Tool-Augmented Reasoning over Time Series for Fault Diagnosis in Power Management Systems",
-      authors: "TRACK Team 等",
+      title: "TRACK: Tool-Augmented Reasoning over Time Series for Fault Diagnosis in Power Management System",
+      authors: "Erkan Bayram, Debanjan Ghosh, Li Zhu 等",
       venue: "arXiv:2611.21178", level: "预印本",
       summary: "多负载电源管理系统的故障诊断依赖专家人工看电流电压波形，无法随部署规模扩展——TRACK 把时序编码器与小语言模型配对，产出结构化、物理可解释的诊断报告，并调用工具做精确可验证的计算；全程在设备端运行，专有传感器数据不出厂。",
       detail: "场景：电源管理系统故障诊断（多负载电流/电压波形）。\n方法：时序编码器+小语言模型+工具调用（精确计算可验证）。\n约束：完全端侧运行，传感数据不出设备。\n端侧视角：工业端侧是小语言模型被低估的场景——「会写报告的示波器」把专家经验产品化，隐私与实时性又恰好是端侧的主场；与 STM32 神经接口同向：端侧 AI 正沿「传感+解释」侵入仪器行业。",
@@ -457,17 +457,17 @@ papers: [
     {
       id: "p25", group: "recent", cat: "推理与系统", date: "2026-11-15",
       title: "CECAR: Cache & Expert Co-Aware Routing Accelerates On-Device Inference of MoE LLMs",
-      authors: "CECAR Team 等",
+      authors: "Byeongju Kim, Hoonki Lee, Byungjun Kim 等",
       venue: "arXiv:2611.20119", level: "预印本",
-      summary: "大规模 MoE 模型在资源受限设备上仍不实用——稀疏激活也要求全部专家权重常驻内存。CECAR 基于三个观察（缓存命中率即使 Belady 最优策略也有本质上限、该上限与专家路由相关、可协同优化）提出缓存与专家协同感知的路由，让 MoE 在端侧把「专家换入换出」的内存账算明白。",
-      detail: "瓶颈：MoE 稀疏激活≠稀疏驻留——全部专家权重都得在内存里。\n观察：专家缓存命中率有本质上限，且与路由策略耦合。\n方案：缓存&专家协同感知路由，协同优化换入换出。\n端侧视角：端侧 MoE 的最后一公里是内存调度而非算力——总参 30B 激活 2B 的手机模型（Mate X8 同款思路）要落地，正需要这类「专家页面管理」；与 CarrierKV、DFly2 合看，端侧推理优化已进入内存管理深水区。",
+      summary: "大规模 MoE 模型在资源受限设备上仍不实用——稀疏激活也要求全部专家权重常驻内存。CECAR 基于三个观察（专家缓存命中率即使按 Belady 最优策略也有本质上界、该上界撑不起低延迟端侧推理、只凭「在不在缓存」做路由会引发路由不稳定）提出缓存与专家协同感知的路由：用机器学习缓存策略预测每个专家的预期复用距离，优先路由到复用距离小的专家。论文口径：Qwen3-30B-A3B 在仅 16GB 显存的消费级 GPU 上达到每秒 12.5 token（非常驻专家从 SSD 读取），较常规 MoE 推理提速 4.5 倍，解码速度超过把整个模型全部驻留内存的基线。",
+      detail: "瓶颈：MoE 稀疏激活≠稀疏驻留——全部专家权重都得在内存里。\n观察：专家缓存命中率有本质上界（Belady 最优策略亦然）、该上界撑不起低延迟端侧推理、只凭「在不在缓存」做路由会引发路由不稳定。\n方案：缓存&专家协同感知路由——用机器学习缓存策略预测各专家的预期复用距离，优先路由并执行复用距离小的专家。\n成绩（论文口径）：Qwen3-30B-A3B、16GB 显存的消费级 GPU、每秒 12.5 token、较常规 MoE 推理提速 4.5 倍；解码速度超过把整个模型全部驻留内存的基线。\n端侧视角：端侧 MoE 的最后一公里是内存调度而非算力——总参 30B 激活 2B 的手机模型（Mate X8 同款思路）要落地，正需要这类「专家页面管理」；与 CarrierKV、DFly2 合看，端侧推理优化已进入内存管理深水区。",
       tags: ["MoE", "端侧推理", "缓存路由", "内存管理"],
       url: "https://arxiv.org/abs/2611.20119"
     },
     {
       id: "p26", group: "recent", cat: "推理与系统", date: "2026-11-12",
       title: "LazyWeights: Decode-on-Demand Edge LLMs",
-      authors: "LazyWeights Team 等",
+      authors: "Arnab Sanyal, Gourav Datta, Sandeep P. Chinchali",
       venue: "arXiv:2611.17108", level: "预印本",
       summary: "内存决定边缘设备能跑哪些大模型、跑多快：容量卡住 4GB 的 Jetson Nano，带宽卡住 8GB 的 Orin Nano Super。现有权重格式（GPTQ/AWQ/GGUF K-/I-quants）对矩阵的每个整数码花同样多的比特，而码的分布远非均匀——LazyWeights 保持这些格式不变，按需解码权重，把比特花在刀刃上。",
       detail: "瓶颈：容量（4GB Nano）与带宽（8GB Orin）双墙。\n观察：整数码分布不均，等比特分配浪费。\n方案：保持 GPTQ/AWQ/GGUF 格式兼容的按需解码（decode-on-demand）。\n端侧视角：与第 5 讲知识分享（GGUF 与 k-quants）正面对接——权重格式是端侧部署的「文件系统」，LazyWeights 证明格式还能再榨一层非均匀性；对存量设备（老 Jetson/旧手机）是纯软件层的续命术。",
