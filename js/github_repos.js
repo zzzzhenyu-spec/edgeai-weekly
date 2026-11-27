@@ -1,6 +1,6 @@
 /* 自动生成: scripts/fetch_github.py (勿手改) · 端侧框架精选(curated, 星标实时) + 近120天高星新仓库(端侧相关,置顶除外) + 本周全站涨星Top10 */
 window.GH_FRAMEWORKS = {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "frameworks": [
     {
       "repo": "alibaba/MNN",
@@ -12,9 +12,9 @@ window.GH_FRAMEWORKS = {
       "one": "阿里轻量级端侧推理引擎，CV 与 LLM 通吃",
       "intro": "阿里开源的深度学习推理引擎，覆盖手机、嵌入式与 IoT 全场景，自带模型转换、量化与训练压缩工具链。\n端侧视角：既能跑传统 CV 模型也支持端侧大模型推理（MNN-LLM），安卓/iOS/离线场景一把梭，是国产端侧部署的头部选择。\n适合想在国内移动生态做本地推理的工程团队。",
       "url": "https://github.com/alibaba/MNN",
-      "stars": 16623,
+      "stars": 16632,
       "lang": "C++",
-      "pushed": "2026-11-25",
+      "pushed": "2026-11-27",
       "updates": [
         {
           "v": "3.6.2",
@@ -45,7 +45,7 @@ window.GH_FRAMEWORKS = {
       "one": "手机端 CV 推理事实标准之一，无第三方依赖",
       "intro": "腾讯优图开源的手机端前向推理框架，零第三方依赖、包体小，CPU 指令级优化极深。\n端侧视角：移动端 CV 模型部署（检测/分割/超分）的老牌事实标准，与 MNN 同为国产端侧双雄；对 LLM 支持弱，定位偏传统 CV。\n适合对包体与 CPU 兼容性敏感的移动端 CV 项目。",
       "url": "https://github.com/Tencent/ncnn",
-      "stars": 24100,
+      "stars": 24102,
       "lang": "C++",
       "pushed": "2026-11-26",
       "updates": [
@@ -134,9 +134,9 @@ window.GH_FRAMEWORKS = {
       "one": "华为昇思，Lite 子模块覆盖端侧与 NPU 亲和",
       "intro": "华为开源的深度学习框架，MindSpore Lite 子模块负责端侧推理，对麒麟 NPU 与昇腾硬件亲和最好。\n端侧视角：鸿蒙/麒麟设备上做本地推理的首选链路，训练-压缩-端侧部署一体化；小艺等系统级能力的工程底座之一。\n适合面向华为/鸿蒙生态的端侧 AI 团队。",
       "url": "https://github.com/mindspore-ai/mindspore",
-      "stars": 4727,
+      "stars": 0,
       "lang": "C++",
-      "pushed": "2026-10-28",
+      "pushed": "2026-11-26",
       "updates": []
     },
     {
@@ -149,9 +149,9 @@ window.GH_FRAMEWORKS = {
       "one": "原 TensorFlow Lite，安卓端侧部署事实标准",
       "intro": "Google 的端侧推理运行时（原 TensorFlow Lite），支持 NNAPI/GPU/加速器委托，安卓装机量最大的端侧推理框架。\n端侧视角：安卓系统级 AI 能力（ML Kit、AICore 之外的自研路径）绕不开的基础设施；模型经 TFLite Converter 转换与量化。\n适合安卓端任何轻量级本地模型部署。",
       "url": "https://github.com/google-ai-edge/LiteRT",
-      "stars": 3620,
+      "stars": 3621,
       "lang": "C++",
-      "pushed": "2026-11-26",
+      "pushed": "2026-11-27",
       "updates": [
         {
           "v": "v2.4.0",
@@ -180,9 +180,9 @@ window.GH_FRAMEWORKS = {
       "one": "PyTorch 官方端侧运行时，torch.export 直达设备",
       "intro": "PyTorch 官方的端侧部署运行时：torch.export 导出模型，经 Ahead-of-Time 编译落到移动/嵌入式设备，与 Qualcomm QNN、Core ML 等后端委托打通。\n端侧视角：研究侧 PyTorch 模型「原样」上端侧的最短路径，量化与算子下沉持续演进。\n适合模型在 PyTorch 训练、要下到手机/可穿戴的团队。",
       "url": "https://github.com/pytorch/executorch",
-      "stars": 5195,
+      "stars": 5197,
       "lang": "Python",
-      "pushed": "2026-11-26",
+      "pushed": "2026-11-27",
       "updates": [
         {
           "v": "v1.6.0",
@@ -212,9 +212,9 @@ window.GH_FRAMEWORKS = {
       "one": "苹果官方 Apple silicon 本地推理框架",
       "intro": "苹果机器学习团队开源的数组计算框架与 LLM 推理栈，为统一内存架构设计，CPU/GPU 可混用同一块内存。\n端侧视角：Mac 本地大模型生态的事实基建之一（mlx-lm 之上长出 LM Studio 等产品），Apple silicon 跑大模型的「官方答案」。\n适合在 Mac 生态做本地推理与模型移植的工程师。",
       "url": "https://github.com/ml-explore/mlx",
-      "stars": 29292,
+      "stars": 29304,
       "lang": "C++",
-      "pushed": "2026-11-26",
+      "pushed": "2026-11-27",
       "updates": [
         {
           "v": "v0.32.5",
@@ -260,9 +260,9 @@ window.GH_FRAMEWORKS = {
       "one": "Intel 端侧引擎，CPU/iGPU/NPU 一套 API",
       "intro": "Intel 的端侧推理与优化工具套件，一套 API 调度 x86 CPU、核显与 NPU，模型优化器负责转换与量化。\n端侧视角：AI PC（酷睿 Ultra NPU）与边缘盒子的官方路线，Windows/Linux 本地部署英特尔多核场景几乎默认选它。\n适合面向 AI PC 与 Intel 边缘硬件的应用。",
       "url": "https://github.com/openvinotoolkit/openvino",
-      "stars": 12679,
+      "stars": 12842,
       "lang": "C++",
-      "pushed": "2026-11-26",
+      "pushed": "2026-11-27",
       "updates": [
         {
           "v": "2026.4.1",
@@ -291,26 +291,26 @@ window.GH_FRAMEWORKS = {
       "one": "本地 LLM 推理事实标准，GGUF 量化生态源头",
       "intro": "Georgi Gerganov 发起的纯 C/C++ 大模型推理引擎，GGML/GGUF 量化格式的源头，CPU 也能跑大模型，日常小版本日更。\n端侧视角：本地大模型开源生态的地基——Ollama 等主流本地运行时底层都用它；新模型社区支持几乎第一时间到位。\n适合一切想离线跑 LLM 的设备与场景。",
       "url": "https://github.com/ggml-org/llama.cpp",
-      "stars": 136303,
+      "stars": 136427,
       "lang": "C++",
-      "pushed": "2026-11-26",
+      "pushed": "2026-11-27",
       "updates": [
         {
-          "v": "b12755",
+          "v": "v1.1.0",
           "d": "2026-11-26",
           "notes": [
-            "model : add hy_v4_flash on the DSA iSWA cache (32960)",
-            "* model : add hy_v4_flash on the DSA iSWA cache",
-            "Tencent Hy4 flash is a hy_v4 trunk (iHC, gated MLA, sinks) with"
+            "llama.cpp v1.1.0 adds the Inkling 2 family (base, Mini and DSpark), Domyn Edge 4B, Zaya1 8…",
+            "API changes",
+            "llama.h: deprecate the old llama_batch API in favour of llama_batch_ext and llama_process …"
           ]
         },
         {
-          "v": "b12754",
-          "d": "2026-11-26",
+          "v": "b12803",
+          "d": "2026-11-27",
           "notes": [
-            "ggml-openvino: fix CI op tests and improve KV cache decode (33002)",
-            "* ggml-openvino: write back consumed in-place nodes of op-test graphs",
-            "On the naive path every node of an op-test graph is a model output,"
+            "bailingmoe3 : fuse ssm_conv + silu and remove redundant copies (33081)",
+            "* bailingmoe3 : apply silu before reshape to enable fused conv kernel",
+            "* bailingmoe3 : avoid redundant copies before attention output projection"
           ]
         }
       ]
@@ -325,7 +325,7 @@ window.GH_FRAMEWORKS = {
       "one": "深度学习编译器，模型编译到各类端侧硬件",
       "intro": "Apache 顶级的深度学习编译器框架，把模型编译优化到 CPU/GPU/NPU 等各类硬件后端。\n端侧视角：编译器路线的端侧部署重镇——MLC LLM 即基于 TVM 把大模型编译上手机/浏览器；自动调优（auto-tuning）是它的独门能力。\n适合需要为新硬件/长尾硬件适配模型性能的团队。",
       "url": "https://github.com/apache/tvm",
-      "stars": 13924,
+      "stars": 13925,
       "lang": "Python",
       "pushed": "2026-11-24",
       "updates": [
@@ -355,9 +355,9 @@ window.GH_FRAMEWORKS = {
       "one": "端侧离线语音识别/合成框架",
       "intro": "Next-gen Kaldi 系的端侧语音框架，支持流式/离线 ASR、TTS、说话人识别，模型走 ONNX、无需联网服务。\n端侧视角：设备本地语音交互（眼镜/耳机/IoT）常用底座，跨安卓/iOS/Linux/嵌入式，配套模型生态完整。\n适合做离线语音助手与实时字幕类应用。",
       "url": "https://github.com/k2-fsa/sherpa-onnx",
-      "stars": 16240,
+      "stars": 16267,
       "lang": "C++",
-      "pushed": "2026-11-24",
+      "pushed": "2026-11-27",
       "updates": [
         {
           "v": "v2.0.3",
@@ -389,9 +389,9 @@ window.GH_FRAMEWORKS = {
       "one": "Whisper 的 C/C++ 端侧移植，本地听写标配",
       "intro": "OpenAI Whisper 语音识别的纯 C/C++ 移植，量化后可在手机与笔记本上实时转写。\n端侧视角：本地听写/会议转写/字幕类应用的默认选择之一，与 llama.cpp 同社区同工程风格。\n适合一切需要离线语音转文字的端侧应用。",
       "url": "https://github.com/ggml-org/whisper.cpp",
-      "stars": 55527,
+      "stars": 55567,
       "lang": "C++",
-      "pushed": "2026-11-25",
+      "pushed": "2026-11-26",
       "updates": [
         {
           "v": "v1.9.6",
@@ -419,9 +419,9 @@ window.GH_FRAMEWORKS = {
       "one": "谷歌端侧 CV/多模态管线框架",
       "intro": "Google 的跨平台端侧 ML 管线框架，内置人脸/手势/姿态等大量成品方案，图式编排（Graph）组装多模型流水线。\n端侧视角：安卓端 CV 能力（相机特效、手势交互）最常用的现成积木，也逐步接入 LLM/多模态任务。\n适合要快速集成成熟端侧 CV 能力的应用。",
       "url": "https://github.com/google-ai-edge/mediapipe",
-      "stars": 37857,
+      "stars": 37882,
       "lang": "C++",
-      "pushed": "2026-11-25",
+      "pushed": "2026-11-26",
       "updates": [
         {
           "v": "v1.2.3",
@@ -453,7 +453,7 @@ window.GH_FRAMEWORKS = {
       "one": "Core ML 模型转换与量化工具链",
       "intro": "苹果官方的 Core ML 模型转换/量化/优化工具，PyTorch 与 TF 模型经它变成 iOS 可用的 .mlmodel/mlpackage。\n端侧视角：iOS 端侧部署的必经之路——神经网络压缩（palettization/剪枝）与 ANE 适配都在这条链上。\n适合任何要把模型塞进 iPhone/iPad 的团队。",
       "url": "https://github.com/apple/coremltools",
-      "stars": 5459,
+      "stars": 5461,
       "lang": "Python",
       "pushed": "2026-09-30",
       "updates": [
@@ -483,7 +483,7 @@ window.GH_FRAMEWORKS = {
       "one": "瑞芯微 NPU 工具链，RK 系端侧盒子入口",
       "intro": "瑞芯微官方的 NPU 模型转换/量化/部署工具链，把 ONNX/PyTorch 模型编译为 RK3588/RK3576 等芯片的 NPU 指令。\n端侧视角：国产端侧开发板与盒子（AI 盒子、机器人、边缘小主机）跑本地模型的主流硬件入口之一。\n适合用 RK 系硬件做本地推理的极客与边缘设备团队。",
       "url": "https://github.com/airockchip/rknn-toolkit2",
-      "stars": 3577,
+      "stars": 3580,
       "lang": "C",
       "pushed": "2026-10-20",
       "updates": [
@@ -538,40 +538,40 @@ window.GH_FRAMEWORKS = {
   ]
 };
 window.GH_REPOS = {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "repos": [
     {
       "name": "morluto/rea",
       "url": "https://github.com/morluto/rea",
-      "stars": 478655,
+      "stars": 479994,
       "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "lang": "TypeScript",
-      "pushed": "2026-11-26",
+      "pushed": "2026-11-27",
       "pinned": true,
       "intro_cn": "用智能体做逆向工程：从 App 行为到原生二进制都能自动分析，接入 Ghidra 等反编译器与 MCP 协议——安全研究 × AI Agent 的爆款（编辑置顶：创建于 2026-04，超出 120 天新建窗口故不在搜索榜内）。"
     },
     {
       "name": "Edge0-AI/Edge0",
       "url": "https://github.com/Edge0-AI/Edge0",
-      "stars": 12301,
+      "stars": 10696,
       "desc": "Device-native foundation models: 145B on a laptop, 35B on a phone. Latent MoE, SSD-streamed weights, a router that predicts loads a step ahead. Mac, iPhone, Android, Windows.",
       "lang": "C++",
-      "pushed": "2026-11-25",
+      "pushed": "2026-11-26",
       "intro_cn": "设备原生基座模型：145B 参数跑在笔记本上、35B 跑在手机上——Latent MoE 架构、权重从 SSD 流式加载、提前一步预测负载的路由，覆盖 Mac、iPhone、Android、Windows，是端侧大模型工程路线的高星新项目。"
     },
     {
       "name": "wangzan101/Mika",
       "url": "https://github.com/wangzan101/Mika",
-      "stars": 10015,
+      "stars": 10088,
       "desc": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
       "lang": "Kotlin",
-      "pushed": "2026-11-26",
+      "pushed": "2026-11-27",
       "intro_cn": "安卓端侧 AI 智能体：在手机本地运行，自动操作 App 与网页替你把事办成——on-device Agent（端侧推理 + 界面操作）方向的爆款。"
     },
     {
       "name": "ARahim3/DigUp",
       "url": "https://github.com/ARahim3/DigUp",
-      "stars": 6546,
+      "stars": 6561,
       "desc": "Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMind's EmbeddingGemma 2.",
       "lang": "Swift",
       "pushed": "2026-10-26",
@@ -580,16 +580,16 @@ window.GH_REPOS = {
     {
       "name": "simplexai-labs/linger",
       "url": "https://github.com/simplexai-labs/linger",
-      "stars": 4715,
+      "stars": 4920,
       "desc": "Linger is An Open-Source Personal Agent That Runs Fully on Your PC.  We aim to break Big Tech’s grip on AI by bringing powerful local AI to everyday computers through efficient model–harness co-design, so everyone can run their own.",
       "lang": "TypeScript",
-      "pushed": "2026-11-26",
+      "pushed": "2026-11-27",
       "intro_cn": "完全跑在你自己 PC 上的开源个人智能体：靠「模型 × 智能体框架」协同设计，把强大的本地 AI 带进普通电脑，让人人都能自建——不依赖云端大模型的本地 Agent 路线。"
     },
     {
       "name": "AhmadHassan-BTed/MotionShot",
       "url": "https://github.com/AhmadHassan-BTed/MotionShot",
-      "stars": 4618,
+      "stars": 4616,
       "desc": "Camera app that freezes fast motion sequences into a single stroboscopic photo; powered by on-device computer vision, 2D stabilization, and manual exposure controls",
       "lang": "Kotlin",
       "pushed": "2026-08-05",
@@ -598,16 +598,16 @@ window.GH_REPOS = {
     {
       "name": "mw00/project-maya",
       "url": "https://github.com/mw00/project-maya",
-      "stars": 3360,
-      "desc": "Run GLM-5.3 (744B), DeepSeek-V4.1-Flash (748B), MiniMax-M3.1-Flash (428B), GLM-5.3-Flash (321B), Hy4-Flash (220B) and Inkling 2 Mini (26B) on your own GPUs - from 8 GB of VRAM, NVIDIA and AMD, one dashboard, OpenAI- and Anthropic-compatible API.",
+      "stars": 3409,
+      "desc": "Run GLM-5.3 (744B), DeepSeek-V4.1-Flash (748B), MiniMax-M3.1-Flash (428B), GLM-5.3-Flash (321B), Hy4-Flash (220B), Ling-3.2-air (128B) and Inkling 2 Mini (26B) on your own GPUs - from 8 GB of VRAM, NVIDIA and AMD, one dashboard, OpenAI- and Anthropic-compatible API.",
       "lang": "Cuda",
-      "pushed": "2026-11-25",
+      "pushed": "2026-11-27",
       "intro_cn": "在自己的 GPU 上跑 GLM-5.3（744B）、DeepSeek-V4.1-Flash（748B）、MiniMax-M3.1-Flash（428B）等千亿级模型：8 GB 显存起步，NVIDIA 与 AMD 都支持，一个面板管理并提供 OpenAI / Anthropic 兼容接口——本地推理跑超大 MoE 模型的代表项目。"
     },
     {
       "name": "incoai/splash",
       "url": "https://github.com/incoai/splash",
-      "stars": 2807,
+      "stars": 2889,
       "desc": "A local inference engine for Apple silicon, built around the model.",
       "lang": "C++",
       "pushed": "2026-11-25",
@@ -616,7 +616,7 @@ window.GH_REPOS = {
     {
       "name": "iamajmeena/neonclipping",
       "url": "https://github.com/iamajmeena/neonclipping",
-      "stars": 2634,
+      "stars": 2734,
       "desc": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).",
       "lang": "Python",
       "pushed": "2026-11-24",
@@ -625,7 +625,7 @@ window.GH_REPOS = {
     {
       "name": "timoncool/YuE2-Studio",
       "url": "https://github.com/timoncool/YuE2-Studio",
-      "stars": 2541,
+      "stars": 2568,
       "desc": "Local AI song generator with an editable score — YuE2 on your GPU: full songs with vocals, sheet music, covers, exact replay. Native Windows app, no Python, installer with auto-update.",
       "lang": "Rust",
       "pushed": "2026-11-26",
@@ -634,25 +634,25 @@ window.GH_REPOS = {
     {
       "name": "leemysw/yovoice",
       "url": "https://github.com/leemysw/yovoice",
-      "stars": 2353,
+      "stars": 2374,
       "desc": "Open-source local AI audio & music studio for macOS & Windows. TTS, voice cloning, songs with lyrics, and multi-track scores — 100% offline, zero API fees.",
       "lang": "TypeScript",
-      "pushed": "2026-11-26",
+      "pushed": "2026-11-27",
       "intro_cn": "macOS / Windows 上的开源本地 AI 音频与音乐工作室：语音合成、声音克隆、带歌词的歌曲、多轨乐谱，100% 离线、零 API 费用——端侧语音与音乐生成的一体化桌面应用。"
     },
     {
       "name": "jesdga95/basalt",
       "url": "https://github.com/jesdga95/basalt",
-      "stars": 2125,
+      "stars": 2197,
       "desc": "Local inference engine optimized for NVIDIA Blackwell",
       "lang": "C++",
-      "pushed": "2026-11-25",
+      "pushed": "2026-11-27",
       "intro_cn": "针对 NVIDIA Blackwell 架构优化的本地推理引擎（C++）——本地大模型推理的新引擎之一；仓库描述与 topics 较简，细节以其 README 为准。"
     },
     {
       "name": "StartLuxLabs/StartLux-Decision",
       "url": "https://github.com/StartLuxLabs/StartLux-Decision",
-      "stars": 1795,
+      "stars": 1796,
       "desc": "Open decision models from 0.8B to 27B: a calibrated probability for every option in one pass, and a short thought only when unsure. Engine for vLLM, llama.cpp and MLX.",
       "lang": "Python",
       "pushed": "2026-10-23",
@@ -661,89 +661,89 @@ window.GH_REPOS = {
   ]
 };
 window.GH_TRENDING = {
-  "updated": "2026-11-26",
-  "mode": "building",
+  "updated": "2026-11-27",
+  "mode": "weekly",
   "repos": [
+    {
+      "name": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "stars": 140816,
+      "weekly": 9654,
+      "desc": "Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex). Available o",
+      "lang": "TypeScript"
+    },
     {
       "name": "morluto/rea",
       "url": "https://github.com/morluto/rea",
-      "stars": 478652,
-      "weekly": null,
+      "stars": 479994,
+      "weekly": 8334,
       "desc": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "lang": "TypeScript"
     },
     {
-      "name": "openclaw/openclaw",
-      "url": "https://github.com/openclaw/openclaw",
-      "stars": 395238,
-      "weekly": null,
-      "desc": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
+      "name": "Ebony-Vinyl/dsh-our-free-model",
+      "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+      "stars": 88383,
+      "weekly": 6143,
+      "desc": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install ",
+      "lang": "JavaScript"
+    },
+    {
+      "name": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "stars": 211074,
+      "weekly": 5667,
+      "desc": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through on",
       "lang": "TypeScript"
     },
     {
       "name": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
-      "stars": 326740,
-      "weekly": null,
+      "stars": 327602,
+      "weekly": 4666,
       "desc": "An agentic skills framework & software development methodology that works.",
       "lang": "Shell"
     },
     {
+      "name": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "stars": 199442,
+      "weekly": 3738,
+      "desc": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "lang": "JavaScript"
+    },
+    {
       "name": "affaan-m/ECC",
       "url": "https://github.com/affaan-m/ECC",
-      "stars": 310793,
-      "weekly": null,
+      "stars": 311380,
+      "weekly": 3468,
       "desc": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first dev",
       "lang": "JavaScript"
     },
     {
-      "name": "deepseek-ai/deepseek-harness",
-      "url": "https://github.com/deepseek-ai/deepseek-harness",
-      "stars": 287152,
-      "weekly": null,
-      "desc": "DeepSeek Harness: Everything is a Plugin.",
+      "name": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "stars": 90969,
+      "weekly": 3451,
+      "desc": "Open-source AI video editor: edit your own footage, or create and remake any video with Claude Code, Codex or ",
       "lang": "TypeScript"
     },
     {
-      "name": "NousResearch/hermes-agent",
-      "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": 266147,
-      "weekly": null,
-      "desc": "The agent that grows with you",
+      "name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "stars": 201113,
+      "weekly": 3003,
+      "desc": "Public repository for Agent Skills",
       "lang": "Python"
     },
     {
-      "name": "multica-ai/andrej-karpathy-skills",
-      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
-      "stars": 235745,
-      "weekly": null,
-      "desc": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM co",
-      "lang": ""
-    },
-    {
-      "name": "anomalyco/opencode",
-      "url": "https://github.com/anomalyco/opencode",
-      "stars": 229230,
-      "weekly": null,
-      "desc": "The open source coding agent.",
-      "lang": "TypeScript"
-    },
-    {
-      "name": "n8n-io/n8n",
-      "url": "https://github.com/n8n-io/n8n",
-      "stars": 212167,
-      "weekly": null,
-      "desc": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, ",
-      "lang": "TypeScript"
-    },
-    {
-      "name": "firecrawl/firecrawl",
-      "url": "https://github.com/firecrawl/firecrawl",
-      "stars": 210187,
-      "weekly": null,
-      "desc": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through on",
+      "name": "deepseek-ai/deepseek-harness",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "stars": 287710,
+      "weekly": 2951,
+      "desc": "DeepSeek Harness: Everything is a Plugin.",
       "lang": "TypeScript"
     }
   ],
-  "readyFrom": "2026-12-02"
+  "baseline": "2026-11-21"
 };
