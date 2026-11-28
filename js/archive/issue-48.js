@@ -61,6 +61,18 @@ id: "n302", cat: "大模型厂商", source: "智东西/HuggingFace", date: "2026
     },
 
 {
+id: "n309", cat: "AI硬件", source: "腾讯新闻/搜狐科技", date: "2026-11-21",
+      title: "特斯拉 FSD V15 推送：统一视觉编码器用数百万条互联网视频预训练，同时服务 FSD、Robotaxi 与 Optimus",
+      summary: "当地时间 11 月 21 日特斯拉向首批用户推送 FSD（Supervised）V15.0.1——最大变化在视觉底座：全新统一视觉编码器用数百万条互联网视频预训练，把 7 路摄像头的原始像素压缩成特征表示，同时服务于 FSD、Robotaxi 与人形机器人 Optimus 三条产品线；特斯拉称关键场景的人工干预率改善 25 倍（未披露基准里程与统计口径）。配套的 Tesla Reality View 车机实景视图由视频生成模型在车端实时生成，马斯克形容「像在玩 GTA」。野村证券认为这是在打通汽车与机器人的视觉系统、构建跨产品数据飞轮，同时提醒视觉数据替代不了物理交互数据。",
+      detail: "推送：FSD（Supervised）V15.0.1，当地时间 11 月 21 日向首批用户开放（EAP 用户），预计 12 月扩大范围。\n视觉底座：全新统一视觉编码器用数百万条互联网视频预训练，将 7 路摄像头的原始像素压缩为特征表示供下游网络使用——同一编码器同时服务 FSD、Robotaxi 与人形机器人 Optimus（特斯拉发布说明）。\n效果：关键场景人工干预率改善 25 倍（官方口径；未披露基准里程与统计条件）。\n车机界面：Tesla Reality View——视频生成模型直接部署在车端，从车顶虚拟摄像机视角实时生成三维环境画面，显示车道线、车辆、行人、转向意图与转弯路线；马斯克称「像在玩 GTA」，约占单个 TRIP 加速器一半算力；受 AI4 算力限制目前主要面向 AI4 车型。博主实测偶有轻微延迟、FSD 状态下不能指定停车位。\n其他：导航路线选择、停车位置推荐、坑洼与积水识别、学校区域限速与恶劣天气控速。\n第三方：野村证券解读为「共享数据飞轮」——打通汽车与机器人视觉、扩大训练数据来源；同时提醒视觉数据缺力反馈、无效片段多，复杂任务单步 95% 准确率连乘 79 步后整体成功率仅约 1.7%。\n端侧视角：一个视觉底座喂三条产品线，是「端侧模型复用」目前最激进的工程样本——互联网视频学到的通用视觉表征被同时搬进汽车与机器人，省下的不只是训练成本，更是车端每天行驶数据反哺机器人的通道；但野村的算术同样成立：视觉能看会不等于手会做，机器人缺的是力与交互数据。Reality View 则是另一条端侧信号——车端实时跑视频生成模型，说明车载算力已够「边开边画」。",
+      tags: ["特斯拉", "FSD V15", "统一视觉编码器", "Optimus", "Reality View"],
+      url: "https://news.qq.com/rain/a/20261123A05DDI00",
+      image: "images/news/n309.jpg",
+      imageCap: "FSD V15 车机 Reality View 实景视图（图源：搜狐科技）",
+      highlight: false
+    },
+
+{
 id: "n292", cat: "大模型厂商", source: "微软开发者博客", date: "2026-11-20",
       title: "微软开始向 Windows 设备推送本机 AI 模型 Aion 1.0 Instruct：接替 Phi Silica，上下文 3.5K 升 32K，GPU 支持在路上",
       summary: "微软按期开始通过 Windows Insider 计划向 Copilot+ PC 推送本机 AI 基础模型 Aion 1.0 Instruct（2.3B）——正式接替 Phi Silica 成为 Windows 本机 AI 底座：上下文长度从 Phi Silica 约 3.5K token 大幅扩至 32K token，面向文本生成、翻译、语言检测等本机 AI 功能；12 月 4 日扩展至更多 Insider Preview 设备并新增 GPU（含 NVIDIA）支持，2027 年 1 月下旬推向符合硬件条件的零售设备。微软 10 月已提供独立测试套件供开发者提前验证兼容性。",
@@ -105,6 +117,18 @@ id: "n306", cat: "行业关注事件", source: "搜狐汽车/观点网", date: "
       url: "https://www.sohu.com/a/1103929994_121345914",
       image: "images/news/n306.jpg",
       imageCap: "智能座舱 AI 分级评价体系发布（图源：搜狐汽车）",
+      highlight: false
+    },
+
+{
+id: "n347", cat: "AI硬件", source: "Engadget/Android Authority", date: "2026-11-20",
+      title: "Nothing 定档 12 月 8 日发布首款「AI 原生设备」：无屏设计的 Ear Note AI 耳机，充电盒录音、AI 转写",
+      summary: "Nothing 官方确认 12 月 8 日发布其首款「AI 原生设备」——此前 CEO 裴宇（Carl Pei）11 月 4 日撰文预告的「无屏生产力设备」。曝光的 Ear Note 为 AI 耳机形态：充电盒内置麦克风可独立录音、支持 AI 转写，机身无屏幕，配备 Talk 键、录音键与红色 LED 指示；官方称其体验「无法在手机上复制」、无需配套 App。Nothing 同时预告后续还有 AI 眼镜与耳机产品线。名称与售价尚未公布。",
+      detail: "官宣：11 月 20 日确认 12 月 8 日发布（technology.org 等报道）；CEO 裴宇 11 月 4 日长文预告「无屏生产力设备」。\n产品：Ear Note AI 耳机——充电盒内置麦克风、可独立录音并 AI 转写；机身无屏幕；Talk 键、录音键、红色 LED 指示灯（预热物料口径）。\n定位：AI 原生设备，官方称体验「无法在手机上复制」、无需 App；名称与价格未公布。\n路线：Nothing 预告后续将推出 AI 眼镜与更多耳机产品（Android Authority 口径）。\n媒体观感：Engadget 评价其造型「像两支电子烟粘在一起」。\n端侧视角：继 AI Pin、Rabbit R1 之后，「无屏 AI 硬件」的第二波尝试换掉了激进的替代叙事——Nothing 把 AI 塞进耳机的充电盒里，录音转写这件高频小事先做扎实，再用 12 月 8 日留出悬念；红色 LED 与实体键延续了它一贯的「让人知道设备在工作」的显性设计，恰好踩在隐私监管的准入方向上。",
+      tags: ["Nothing", "AI耳机", "无屏设备", "Ear Note", "AI原生硬件"],
+      url: "https://www.androidauthority.com/nothing-ai-hardware-december-8-teaser-3737727",
+      image: "images/news/n347.jpg",
+      imageCap: "Nothing AI 设备预热物料（图源：Engadget）",
       highlight: false
     },
 
